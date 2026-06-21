@@ -1,0 +1,593 @@
+--- Audit Started at 2026-06-12 02:39:38 ---
+
+Processing Batch 151/229 (Index 750 to 755)
+Batch 151 saved successfully. Total cumulative updates: 0
+
+Processing Batch 152/229 (Index 755 to 760)
+  [UPDATE] 'die Reihe' (ID: 758): theme: 'Alltag (Zeit, Zahlen, Familie)' -> 'Alltag', example_de: 'Wer ist jetzt an der Reihe?' -> 'Ich habe Karten für das Konzert. Wir sitzen in der dritten Reihe. Wer ist jetzt an der Reihe?', example_en: 'Whose turn is it now?' -> 'I have tickets for the concert. We are sitting in the third row. Whose turn is it now?'
+  [UPDATE] 'die Reinigung' (ID: 759): theme: 'Einkaufen' -> 'Alltag'
+Batch 152 saved successfully. Total cumulative updates: 2
+
+Processing Batch 153/229 (Index 760 to 765)
+  [UPDATE] 'die Reise' (ID: 761): example_de: 'Wir machen eine Reise nach Österreich.' -> 'Wir machen eine Reise nach Österreich. Ich mache nächste Woche eine Geschäftsreise.', example_en: 'We are taking a trip to Austria.' -> 'We are taking a trip to Austria. I am going on a business trip next week.'
+  [UPDATE] 'das Reisebüro' (ID: 762): example_de: 'Wir buchen die Reise im Reisebüro.' -> 'Wir organisieren eine Rundreise durch Deutschland. Wir buchen die Reise im Reisebüro.', example_en: 'We are booking the trip at the travel agency.' -> 'We are organizing a round trip through Germany. We are booking the trip at the travel agency.'
+  [UPDATE] 'der Reiseführer' (ID: 763): example_de: 'Ich kaufe mir einen Reiseführer von Berlin.' -> 'Ich kaufe mir einen Reiseführer von Berlin. Unser Reiseführer heißt Robert und ist sehr sympathisch.', example_en: 'I am buying a travel guide for Berlin.' -> 'I am buying a travel guide for Berlin. Our travel guide is named Robert and is very nice.'
+Batch 153 saved successfully. Total cumulative updates: 5
+
+Processing Batch 154/229 (Index 765 to 770)
+  [UPDATE] 'die Reparatur' (ID: 769): theme: 'Dienstleistungen' -> 'Alltag'
+Batch 154 saved successfully. Total cumulative updates: 6
+
+Processing Batch 155/229 (Index 770 to 775)
+  [UPDATE] 'reservieren' (ID: 771): example_de: 'Reservieren Sie bitte ein Doppelzimmer.' -> 'Reservieren Sie bitte ein Doppelzimmer. Ich möchte gern einen Tisch für fünf Personen reservieren.', example_en: 'Please reserve a double room.' -> 'Please reserve a double room. I would like to reserve a table for five people.'
+  [UPDATE] 'der Rest' (ID: 772): theme: 'Alltag (Zeit, Zahlen, Familie)' -> 'Alltag', example_de: 'Hier sind 50 Euro. Den Rest gebe ich dir später.' -> 'Hier sind 50 Euro. Den Rest gebe ich dir später. Es ist noch ein Rest Suppe da. Möchtest du noch?', example_en: 'Here are 50 euros. I will give you the rest later.' -> 'Here are 50 euros. I will give you the rest later. There is still some soup left. Would you like some more?'
+  [UPDATE] 'das Rezept' (ID: 774): theme: 'Gesundheit' -> 'Alltag', example_de: 'Dieses Medikament gibt es nur auf Rezept.' -> 'Dieser Kuchen schmeckt super! Kannst du mir bitte das Rezept geben? Dieses Medikament gibt es nur auf Rezept.', example_en: 'This medicine is only available on prescription.' -> 'This cake tastes great! Can you please give me the recipe? This medicine is only available on prescription.'
+Batch 155 saved successfully. Total cumulative updates: 9
+
+Processing Batch 156/229 (Index 775 to 780)
+  [UPDATE] 'richtig' (ID: 776): theme: 'Lernen' -> 'Alltag', example_de: 'Habe ich das richtig verstanden?' -> 'Habe ich das richtig verstanden? Das ist richtig.', example_en: 'Did I understand that correctly?' -> 'Did I understand that correctly? That is correct.'
+  [UPDATE] 'riechen' (ID: 777): example_de: 'Diese Blumen riechen gut.' -> 'Diese Blumen riechen gut. Hier riecht es nach Fisch.', example_en: 'These flowers smell good.' -> 'These flowers smell good. It smells like fish here.'
+Batch 156 saved successfully. Total cumulative updates: 11
+
+Processing Batch 157/229 (Index 780 to 785)
+  [UPDATE] 'romantisch' (ID: 781): example_de: 'Dieser Film ist sehr romantisch.' -> 'Dieser Film ist sehr romantisch. Meine Freundin ist total romantisch.', example_en: 'This movie is very romantic.' -> 'This movie is very romantic. My girlfriend is totally romantic.'
+  [UPDATE] 'rufen' (ID: 784): theme: 'Gesundheit' -> 'Alltag', example_de: 'Wir müssen einen Arzt rufen.' -> 'Rufst du bitte die Kinder. Das Essen ist fertig. Wir müssen einen Arzt rufen.', example_en: 'We have to call a doctor.' -> 'Please call the children. The food is ready. We have to call a doctor.'
+  [UPDATE] 'die Ruhe' (ID: 785): theme: 'Gesundheit' -> 'Alltag', example_de: 'Meine Großmutter ist krank. Sie braucht viel Ruhe.' -> 'Ruhe, bitte! Hier in der Bibliothek darf man nicht laut sprechen. Meine Großmutter ist krank. Sie braucht viel Ruhe.', example_en: 'My grandmother is sick. She needs a lot of rest.' -> 'Quiet, please! You must not speak loudly here in the library. My grandmother is sick. She needs a lot of rest.'
+Batch 157 saved successfully. Total cumulative updates: 14
+
+Processing Batch 158/229 (Index 785 to 790)
+  [UPDATE] 'ruhig' (ID: 786): theme: 'Reise' -> 'Alltag', example_de: 'Ich möchte ein ruhiges Zimmer.' -> 'Ich möchte ein ruhiges Zimmer. Nachts ist es hier in der Straße sehr ruhig. Du kannst ruhig rauchen.', example_en: 'I would like a quiet room.' -> 'I would like a quiet room. At night it is very quiet here in the street. You can go ahead and smoke.'
+  [UPDATE] 'rund' (ID: 787): theme: 'Alltag (Zeit, Zahlen, Familie)' -> 'Alltag', example_de: 'Unser Wohnzimmertisch ist rund.' -> 'Unser Wohnzimmertisch ist rund. Bis Berlin sind es noch rund 80 Kilometer.', example_en: 'Our living room table is round.' -> 'Our living room table is round. It is still around 80 kilometers to Berlin.'
+Batch 158 saved successfully. Total cumulative updates: 16
+
+Processing Batch 159/229 (Index 790 to 795)
+  [UPDATE] 'die Sache' (ID: 791): example_de: 'Ihr könnt eure Sachen im Hotel lassen.' -> 'Ihr könnt eure Sachen im Hotel lassen. Nimm deine Sachen und komm! Das ist meine Sache.', example_en: 'You can leave your things in the hotel.' -> 'You can leave your things in the hotel. Take your things and come! That is my business.'
+  [UPDATE] 'sagen' (ID: 793): example_de: 'Entschuldigung! Was haben Sie gesagt?' -> 'Entschuldigung, was haben Sie gesagt? Wie sagt man „sorry“ auf Deutsch? Sag mal, wie geht es dir denn?', example_en: 'Excuse me, what did you say?' -> 'Excuse me, what did you say? How do you say 'sorry' in German? Tell me, how are you?'
+  [UPDATE] 'der Salat' (ID: 794): example_de: 'Möchten Sie zum Fisch einen Salat?' -> 'Wie schmeckt dir der Salat? Möchten Sie zum Fisch einen Salat?', example_en: 'Would you like a salad with the fish?' -> 'How does the salad taste to you? Would you like a salad with the fish?'
+  [UPDATE] 'das Salz' (ID: 795): example_de: 'Gib mir bitte mal das Salz!' -> 'Entschuldigung, kann ich bitte Salz haben?', example_en: 'Please give me the salt!' -> 'Excuse me, can I please have some salt?'
+Batch 159 saved successfully. Total cumulative updates: 20
+
+Processing Batch 160/229 (Index 795 to 800)
+  [UPDATE] 'sammeln' (ID: 796): example_de: 'Mein Bruder sammelt Briefmarken.' -> 'Peter sammelt Briefmarken. Im Herbst sammeln wir im Wald bunte Blätter.', example_en: 'My brother collects stamps.' -> 'Peter collects stamps. In the autumn we gather colorful leaves in the forest.'
+  [UPDATE] 'der Satz' (ID: 797): theme: 'Lernen' -> 'Ausbildung'
+  [UPDATE] 'sauber' (ID: 798): theme: 'Wohnen' -> 'Alltag'
+  [UPDATE] 'sauer' (ID: 799): theme: 'Essen' -> 'Alltag', example_de: 'Die Äpfel sind mir zu sauer.' -> 'Zitronen sind mir zu sauer. Was ist los? – Ich bin sauer. Ich muss am Wochenende zu Hause bleiben und darf nicht mit meinen Freunden ins Kino gehen.', example_en: 'The apples are too sour for me.' -> 'Lemons are too sour for me. What is the matter? – I am angry. I have to stay at home on the weekend and am not allowed to go to the cinema with my friends.'
+  [UPDATE] 'schade' (ID: 800): example_de: 'Schade, dass du nicht mitkommen kannst.' -> 'Schade, dass du nicht kommen kannst.', example_en: 'It is a pity that you cannot come along.' -> 'It is a pity that you cannot come.'
+Batch 160 saved successfully. Total cumulative updates: 25
+
+Processing Batch 161/229 (Index 800 to 805)
+  [UPDATE] 'schaffen' (ID: 801): example_de: 'Kannst du mir helfen, die Party vorzubereiten? Ich schaffe das nicht allein.' -> 'Kannst du mir helfen, die Party vorzubereiten? Ich schaffe das nicht allein. Geschafft! Das Projekt ist endlich fertig.', example_en: 'Can you help me prepare the party? I cannot manage it alone.' -> 'Can you help me prepare the party? I cannot manage it alone. Done! The project is finally finished.'
+  [UPDATE] 'der Schalter' (ID: 802): theme: 'Dienstleistungen' -> 'Alltag', example_de: 'Briefmarken bekommen Sie am Schalter 3.' -> 'Gehen Sie bitte zum Schalter drei! Der Lichtschalter ist neben der Tür.', example_en: 'You get stamps at counter 3.' -> 'Please go to counter three! The light switch is next to the door.'
+  [UPDATE] 'scharf' (ID: 803): theme: 'Essen' -> 'Alltag', example_de: 'Bei uns zu Hause essen wir immer sehr scharf.' -> 'Die Suppe ist mir zu scharf. Pass auf! Das Messer ist sehr scharf.', example_en: 'At our home we always eat very spicy food.' -> 'The soup is too spicy for me. Watch out! The knife is very sharp.'
+  [UPDATE] 'scheinen' (ID: 804): example_de: 'Gestern hat es geregnet. Heute scheint wieder die Sonne.' -> 'Die Sonne scheint.', example_en: 'Yesterday it rained. Today the sun is shining again.' -> 'The sun is shining.'
+  [UPDATE] 'schenken' (ID: 805): example_de: 'Wir wollen dir zum Geburtstag etwas schenken.' -> 'Was schenken wir Michael zum Geburtstag?', example_en: 'We want to give you something for your birthday.' -> 'What are we giving Michael for his birthday?'
+Batch 161 saved successfully. Total cumulative updates: 30
+
+Processing Batch 162/229 (Index 805 to 810)
+  [UPDATE] 'die Schere' (ID: 806): example_de: 'Die Schere hier schneidet schlecht. Hast du noch eine andere?' -> 'Die Schere schneidet nicht gut. Hast du eine andere?', example_en: 'The scissors here cut poorly. Do you have another pair?' -> 'The scissors do not cut well. Do you have another pair?'
+  [UPDATE] 'schicken' (ID: 807): example_de: 'Schick mir doch eine E-Mail.' -> 'Bitte schicken Sie mir eine E-Mail. Ich schicke dir den Brief nach Hause.', example_en: 'Send me an e-mail.' -> 'Please send me an e-mail. I am sending you the letter home.'
+  [UPDATE] 'das Schiff' (ID: 808): example_de: 'Sind Sie mit dem Schiff oder mit dem Flugzeug gekommen?' -> 'Wir fahren mit dem Schiff von Basel nach Köln.', example_en: 'Did you come by ship or by airplane?' -> 'We are traveling by ship from Basel to Cologne.'
+  [UPDATE] 'das Schild' (ID: 809): example_de: 'Kannst du lesen, was dort auf dem Schild steht?' -> 'Haben Sie das Schild nicht gesehen?', example_en: 'Can you read what it says on the sign there?' -> 'Did you not see the sign?'
+  [UPDATE] 'schimpfen' (ID: 810): example_de: 'Der Arzt hat mit mir geschimpft, weil ich zu wenig Sport mache.' -> 'Warum schimpfst du denn so laut? – Ich ärgere mich über mein Auto. Alle schimpfen über/auf das Wetter.', example_en: 'The doctor scolded me because I do not do enough sports.' -> 'Why are you complaining so loudly? – I am annoyed about my car. Everyone complains about the weather.'
+Batch 162 saved successfully. Total cumulative updates: 35
+
+Processing Batch 163/229 (Index 810 to 815)
+  [UPDATE] 'schlafen' (ID: 812): theme: 'Gesundheit' -> 'Alltag', example_de: 'Ich schlafe meistens acht Stunden.' -> 'Ich schlafe meistens acht Stunden. Haben Sie gut geschlafen? Gute Nacht! Schlaf gut und träum süß!', example_en: 'I usually sleep for eight hours.' -> 'I usually sleep for eight hours. Did you sleep well? Good night! Sleep well and have sweet dreams!'
+  [UPDATE] 'schlecht' (ID: 813): example_de: 'Das Wetter ist schlecht. Wir haben schon seit einer Woche schlechtes Wetter.' -> 'Das Wetter ist schlecht. Wir haben schon seit einer Woche schlechtes Wetter. Mir ist schlecht! Mir geht es schlecht. Ich habe Fieber.', example_en: 'The weather is bad. We have had bad weather for a week already.' -> 'The weather is bad. We have had bad weather for a week already. I feel sick! I am feeling bad. I have a fever.'
+  [UPDATE] 'schließen' (ID: 814): example_de: 'Bitte schließen Sie die Tür.' -> 'Bitte schließen Sie die Tür. Wir müssen uns beeilen, die Bank schließt um 18 Uhr.', example_en: 'Please close the door.' -> 'Please close the door. We have to hurry, the bank closes at 6 p.m.'
+Batch 163 saved successfully. Total cumulative updates: 38
+
+Processing Batch 164/229 (Index 815 to 820)
+  [UPDATE] 'das Schloss' (ID: 816): example_de: 'Am Wochenende besichtigen wir Schloss Neuschwanstein.' -> 'Am Wochenende besichtigen wir Schloss Neuschwanstein. An unserer Tür ist das Schloss kaputt.', example_en: 'On the weekend we are visiting Neuschwanstein Castle.' -> 'On the weekend we are visiting Neuschwanstein Castle. The lock on our door is broken.'
+  [UPDATE] 'der Schluss' (ID: 817): theme: 'Alltag (Zeit, Zahlen, Familie)' -> 'Alltag', example_de: 'Ich muss jetzt Schluss machen. Bis bald!' -> 'Zum Schluss nochmals herzlichen Dank. Ich muss jetzt Schluss machen. Bis bald!', example_en: 'I have to finish now. See you soon!' -> 'Finally, many thanks again. I have to finish now. See you soon!'
+  [UPDATE] 'der Schlüssel' (ID: 818): example_de: 'Ich finde meinen Schlüssel nicht.' -> 'Ich gebe Ihnen noch den Zimmerschlüssel. Ich finde meinen Schlüssel nicht.', example_en: 'I cannot find my key.' -> 'I will give you the room key. I cannot find my key.'
+  [UPDATE] 'schmecken' (ID: 819): example_de: 'Schmeckt dir die Suppe?' -> 'Schmeckt dir die Suppe? Hat es Ihnen geschmeckt? Schmeckt's?', example_en: 'Does the soup taste good to you?' -> 'Does the soup taste good to you? Did it taste good to you? Does it taste good?'
+  [UPDATE] 'der Schmerz' (ID: 820): example_de: 'Ich habe Bauchschmerzen.' -> 'Haben Sie Schmerzen? Ich habe Bauchschmerzen.', example_en: 'I have a stomach ache.' -> 'Do you have any pain? I have a stomach ache.'
+Batch 164 saved successfully. Total cumulative updates: 43
+
+Processing Batch 165/229 (Index 820 to 825)
+  [UPDATE] 'der Schnee' (ID: 822): example_de: 'Im Februar gibt es oft viel Schnee.' -> 'In den Bergen liegt viel Schnee.', example_en: 'There is often a lot of snow in February.' -> 'There is a lot of snow in the mountains.'
+  [UPDATE] 'schneiden (sich)' (ID: 823): example_de: 'Hast du ein Pflaster? Ich habe mich geschnitten.' -> 'Das Messer schneidet nicht gut. Wer schneidet dir die Haare? Aua! Ich habe mich geschnitten!', example_en: 'Do you have a band-aid? I cut myself.' -> 'The knife does not cut well. Who cuts your hair? Ouch! I cut myself!'
+  [UPDATE] 'schneien' (ID: 824): example_de: 'Heute Nacht hat es geschneit.' -> 'Morgen schneit es.', example_en: 'It snowed last night.' -> 'It will snow tomorrow.'
+Batch 165 saved successfully. Total cumulative updates: 46
+
+Processing Batch 166/229 (Index 825 to 830)
+  [UPDATE] 'die Schokolade' (ID: 826): example_de: 'Ich habe eine Tafel Schokolade gegessen.' -> 'Julia liebt Schokolade.', example_en: 'I ate a bar of chocolate.' -> 'Julia loves chocolate.'
+  [UPDATE] 'schon' (ID: 827): theme: 'Alltag (Zeit, Zahlen, Familie)' -> 'Alltag', example_de: 'Ist das Essen schon fertig?' -> 'Ist das Essen schon fertig? Ich wohne schon seit fünf Jahren in Freiburg.', example_en: 'Is the food already finished?' -> 'Is the food already finished? I have been living in Freiburg for five years already.'
+  [UPDATE] 'der Schrank' (ID: 828): example_de: 'Die Handtücher liegen im Schrank.' -> 'Die Gläser stehen im Schrank. Legst du bitte die Handtücher in den Schrank?', example_en: 'The towels are in the cupboard.' -> 'The glasses are in the cupboard. Could you please put the towels in the cupboard?'
+  [UPDATE] 'der Schrank' (ID: 829): example_de: 'Die Handtücher liegen im Schrank.' -> 'Die Gläser stehen im Schrank. Legst du bitte die Handtücher in den Schrank?', example_en: 'The towels are in the cupboard.' -> 'The glasses are in the cupboard. Could you please put the towels in the cupboard?'
+  [UPDATE] 'schrecklich' (ID: 830): example_de: 'Ich finde dieses Kleid schrecklich.' -> 'Ich finde ihren Rock schrecklich. Er sieht furchtbar aus! Ich finde den Film schrecklich. Er macht mir Angst.', example_en: 'I find this dress terrible.' -> 'I find her skirt terrible. It looks awful! I find the movie terrible. It scares me.'
+Batch 166 saved successfully. Total cumulative updates: 51
+
+Processing Batch 167/229 (Index 830 to 835)
+  [UPDATE] 'schriftlich' (ID: 832): example_de: 'Sie müssen sich schriftlich anmelden.' -> 'Sie müssen sich schriftlich anmelden. Die schriftliche Prüfung dauert 70 Minuten.', example_en: 'You have to register in writing.' -> 'You have to register in writing. The written exam lasts 70 minutes.'
+  [UPDATE] 'der Schuh' (ID: 833): example_de: 'Zieh die Schuhe aus!' -> 'Zieh die Schuhe aus! Die neuen Schuhe sind mir zu eng. Sie drücken.', example_en: 'Take off the shoes!' -> 'Take off the shoes! The new shoes are too tight for me. They pinch.'
+  [UPDATE] 'die Schule' (ID: 834): example_de: 'Meine Tochter geht schon in die Schule.' -> 'Meine Tochter geht schon in die Schule. Die Schule ist gleich hier um die Ecke.', example_en: 'My daughter already goes to school.' -> 'My daughter already goes to school. The school is right around the corner.'
+  [UPDATE] 'schwach' (ID: 835): example_de: 'Ich fühle mich sehr schwach.' -> 'Er ist krank und schwach. Ich fühle mich sehr schwach. Die Tabletten sind zu schwach. Sie helfen nicht.', example_en: 'I feel very weak.' -> 'He is sick and weak. I feel very weak. The pills are too weak. They do not help.'
+Batch 167 saved successfully. Total cumulative updates: 55
+
+Processing Batch 168/229 (Index 835 to 840)
+  [UPDATE] 'schwer' (ID: 838): theme: 'Alltag (Zeit, Zahlen, Familie)' -> 'Alltag', example_de: 'Wie schwer ist das Paket?' -> 'Wie schwer ist das Paket? Das ist eine schwere Arbeit.', example_en: 'How heavy is the package?' -> 'How heavy is the package? That is hard work.'
+  [UPDATE] 'schwierig' (ID: 839): theme: 'Lernen' -> 'Ausbildung'
+Batch 168 saved successfully. Total cumulative updates: 57
+
+Processing Batch 169/229 (Index 840 to 845)
+  [UPDATE] 'schön' (ID: 843): example_de: 'Das Bild ist sehr schön.' -> 'Schöne Ferien! Das Bild ist sehr schön. Schön, dass du kommst.', example_en: 'The picture is very beautiful.' -> 'Have a nice holiday! The picture is very beautiful. Nice that you are coming.'
+  [UPDATE] 'der Schüler' (ID: 844): theme: 'Lernen' -> 'Ausbildung'
+  [UPDATE] 'der See' (ID: 845): example_de: 'Morgen fahren wir mal an einen See schwimmen.' -> 'Morgen fahren wir mal an einen See schwimmen. Komm, wir fahren an den Bodensee.', example_en: 'Tomorrow we will go swimming at a lake.' -> 'Tomorrow we will go swimming at a lake. Come, let's drive to Lake Constance.'
+Batch 169 saved successfully. Total cumulative updates: 60
+
+Processing Batch 170/229 (Index 845 to 850)
+  [UPDATE] 'die See' (ID: 846): example_de: 'Die See ist heute ruhig.' -> 'Die See ist heute ruhig. Wir machen Urlaub an der Nordsee.', example_en: 'The sea is calm today.' -> 'The sea is calm today. We are taking a vacation at the North Sea.'
+  [UPDATE] 'sehen' (ID: 847): example_de: 'Ich habe Lisa lange nicht gesehen. Ist sie im Urlaub?' -> 'Ich kann dich nicht sehen. Möchtest du einen Film sehen? Ich habe Lisa lange nicht gesehen. Ist sie im Urlaub? Darf ich mal Ihren Ausweis sehen?', example_en: 'I have not seen Lisa for a long time. Is she on vacation?' -> 'I cannot see you. Would you like to see a movie? I have not seen Lisa for a long time. Is she on vacation? May I see your ID?'
+  [UPDATE] 'sehr' (ID: 849): theme: 'Alltag (Zeit, Zahlen, Familie)' -> 'Alltag', example_de: 'Das Wetter ist heute sehr schön.' -> 'Ich habe mich sehr über Ihren Besuch gefreut. Hier ist Ihr Essen. - Danke sehr. Das Wetter ist heute sehr schön.', example_en: 'The weather is very nice today.' -> 'I was very happy about your visit. Here is your food. - Thank you very much. The weather is very nice today.'
+  [UPDATE] 'die Seife' (ID: 850): theme: 'Gesundheit' -> 'Alltag'
+Batch 170 saved successfully. Total cumulative updates: 64
+
+Processing Batch 171/229 (Index 850 to 855)
+  [UPDATE] 'sein' (ID: 851): theme: 'Alltag (Zeit, Zahlen, Familie)' -> 'Alltag', example_de: 'Mir ist kalt.' -> 'Das sind meine Kollegen. Mir ist kalt. Ich bin dreiundzwanzig.', example_en: 'I am cold.' -> 'Those are my colleagues. I am cold. I am twenty-three.'
+  [UPDATE] 'seit' (ID: 853): theme: 'Alltag (Zeit, Zahlen, Familie)' -> 'Alltag', example_de: 'Ich wohne seit drei Jahren in Köln.' -> 'Ich wohne seit drei Jahren in Köln. Seit ich in Deutschland wohne, lerne ich Deutsch.', example_en: 'I have been living in Cologne for three years.' -> 'I have been living in Cologne for three years. Since I have been living in Germany, I have been learning German.'
+  [UPDATE] 'die Seite' (ID: 854): theme: 'Lernen' -> 'Ausbildung', example_de: 'Öffnen Sie das Kursbuch auf Seite 20.' -> 'Öffnen Sie das Kursbuch auf Seite 20. Das ist die Bachstraße. Mein Haus ist auf der linken Seite.', example_en: 'Open the coursebook to page 20.' -> 'Open the coursebook to page 20. That is Bachstraße. My house is on the left side.'
+Batch 171 saved successfully. Total cumulative updates: 67
+
+Processing Batch 172/229 (Index 855 to 860)
+  [UPDATE] 'die Sendung' (ID: 856): example_de: 'Welche Sendungen schaust du gern an? - Ich mag Sportsendungen.' -> 'Welche Sendungen schaust du gern an? – Ich mag Sportsendungen. Diese Sendung ist nicht für Jugendliche unter 18 Jahren.', example_en: 'Which programs do you like to watch? - I like sports programs.' -> 'Which programs do you like to watch? – I like sports programs. This program is not for young people under 18 years of age.'
+  [UPDATE] 'der Service' (ID: 857): example_de: 'Ich bin mit dem Service in der Werkstatt sehr zufrieden.' -> 'Ich bin mit dem Service in der Werkstatt sehr zufrieden. Rufst du beim Pizza-Service an?', example_en: 'I am very satisfied with the service in the garage.' -> 'I am very satisfied with the service in the garage. Are you calling the pizza service?'
+  [UPDATE] 'setzen (sich)' (ID: 858): example_de: 'Darf ich mich zu Ihnen setzen?' -> 'Setz dich doch!', example_en: 'May I sit with you?' -> 'Go ahead and sit down!'
+  [UPDATE] 'sich ausruhen' (ID: 860): example_de: 'Er ruht sich nach der Arbeit immer aus.' -> 'Ruh dich erst mal aus! Du bist sicher müde. Er ruht sich nach der Arbeit immer aus.', example_en: 'He always rests after work.' -> 'Rest first! You are surely tired. He always rests after work.'
+Batch 172 saved successfully. Total cumulative updates: 71
+
+Processing Batch 173/229 (Index 860 to 865)
+  [UPDATE] 'sich bedanken' (ID: 861): theme: 'Ausbildung & Lernen' -> 'Alltag'
+  [UPDATE] 'sich beeilen' (ID: 862): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'sich beschweren' (ID: 863): theme: 'Ausbildung & Lernen' -> 'Alltag', example_de: 'Mein Nachbar beschwert sich immer über unsere Kinder, wenn sie im Garten spielen.' -> 'Hier ist es zu laut. Wo können wir uns beschweren? Mein Nachbar beschwert sich immer über unsere Kinder, wenn sie im Garten spielen.', example_en: 'My neighbor always complains about our children when they play in the garden.' -> 'It is too loud here. Where can we complain? My neighbor always complains about our children when they play in the garden.'
+  [UPDATE] 'sich bewerben' (ID: 864): theme: 'Arbeit & Beruf' -> 'Beruf', example_de: 'Ich möchte mich um diese Stelle bewerben.' -> 'Ich möchte mich um diese Stelle bewerben. Kannst du mir bei meiner Bewerbung helfen?', example_en: 'I would like to apply for this position.' -> 'I would like to apply for this position. Can you help me with my application?'
+  [UPDATE] 'sich duschen' (ID: 865): theme: 'Gesundheit & Körper' -> 'Alltag', example_de: 'Ich bade nicht so gern, ich dusche lieber.' -> 'Ich bade nicht so gern, ich dusche lieber. Möchten Sie sich duschen? Das Badezimmer ist dort hinten links.', example_en: 'I don't like taking a bath very much, I prefer to shower.' -> 'I do not like taking a bath very much, I prefer to shower. Would you like to take a shower? The bathroom is back there on the left.'
+Batch 173 saved successfully. Total cumulative updates: 76
+
+Processing Batch 174/229 (Index 865 to 870)
+  [UPDATE] 'sich eintragen' (ID: 866): theme: 'Dienstleistungen & Behörden' -> 'Alltag', example_de: 'Tragen Sie sich bitte in diese Liste ein!' -> 'Tragen Sie sich bitte in diese Liste ein! Sie müssen Ihren Namen und Ihre Adresse eintragen.', example_en: 'Please register yourself on this list!' -> 'Please register on this list! You have to enter your name and your address.'
+  [UPDATE] 'sich entschuldigen' (ID: 867): theme: 'Ausbildung & Lernen' -> 'Alltag', example_de: 'Ich möchte mich bei dir entschuldigen.' -> 'Entschuldigen Sie bitte! Ich möchte mich bei dir entschuldigen.', example_en: 'I would like to apologize to you.' -> 'Excuse me, please! I would like to apologize to you.'
+  [UPDATE] 'sich erinnern' (ID: 868): theme: 'Ausbildung & Lernen' -> 'Alltag', example_de: 'Kannst du mich morgen bitte an meinen Arzttermin erinnern?' -> 'Erinnerst du dich an José? - Nein, ich erinnere mich nicht an ihn, tut mir leid. Kannst du mich morgen bitte an meinen Arzttermin erinnern?', example_en: 'Can you please remind me of my doctor's appointment tomorrow?' -> 'Do you remember José? - No, I do not remember him, I am sorry. Can you please remind me of my doctor's appointment tomorrow?'
+  [UPDATE] 'sich freuen' (ID: 869): theme: 'Freizeit & Unterhaltung' -> 'Alltag', example_de: 'Ich freue mich sehr über das Geschenk.' -> 'Zum Geburtstag habe ich ein interessantes Buch bekommen. Ich freue mich sehr über das Geschenk. Die Kinder freuen sich schon auf die Ferien.', example_en: 'I am very happy about the gift.' -> 'For my birthday I received an interesting book. I am very happy about the gift. The children are already looking forward to the holidays.'
+  [UPDATE] 'sich fühlen' (ID: 870): theme: 'Gesundheit & Körper' -> 'Gesundheit', example_de: 'Ich fühle mich heute nicht gut.' -> 'Wie fühlen Sie sich? Ich fühle mich heute nicht gut.', example_en: 'I do not feel well today.' -> 'How do you feel? I do not feel well today.'
+Batch 174 saved successfully. Total cumulative updates: 81
+
+Processing Batch 175/229 (Index 870 to 875)
+  [UPDATE] 'sich informieren (über)' (ID: 871): theme: 'Ausbildung & Lernen' -> 'Ausbildung', example_de: 'Hast du dich über die Prüfung informiert?' -> 'Ich möchte mich vor der Reise über das Land informieren. Hast du dich über die Prüfung informiert?', example_en: 'Have you informed yourself about the exam?' -> 'I would like to inform myself about the country before the trip. Have you informed yourself about the exam?'
+  [UPDATE] 'sich kümmern' (ID: 872): theme: 'Person & Familie' -> 'Alltag', example_de: 'Sie muss sich um ihre Tochter kümmern.' -> 'Sonja kann nicht arbeiten. Sie muss sich um ihre Tochter kümmern. Ich habe jetzt keine Zeit. Ich muss mich um das Essen kümmern.', example_en: 'She has to take care of her daughter.' -> 'Sonja cannot work. She has to take care of her daughter. I do not have time right now. I have to take care of the food.'
+  [UPDATE] 'sich umziehen' (ID: 873): theme: 'Einkaufen & Konsum' -> 'Alltag'
+  [UPDATE] 'sich ärgern' (ID: 874): theme: 'Person & Familie' -> 'Alltag', example_de: 'Warum ärgerst du dich?' -> 'Warum ärgerst du dich? - Ich ärgere mich, weil das Wetter schlecht ist.', example_en: 'Why are you getting angry?' -> 'Why are you getting angry? - I am getting angry because the weather is bad.'
+  [UPDATE] 'sicher' (ID: 875): theme: 'Person & Familie' -> 'Alltag', example_de: 'Dieses Auto ist besonders sicher.' -> 'Dieses Auto ist besonders sicher. Ich bin ganz sicher, dass er kommt. Er ist sicher gleich da.', example_en: 'This car is particularly safe.' -> 'This car is particularly safe. I am completely sure that he is coming. He will surely be there in a moment.'
+Batch 175 saved successfully. Total cumulative updates: 86
+
+Processing Batch 176/229 (Index 875 to 880)
+  [UPDATE] 'singen' (ID: 876): theme: 'Freizeit & Unterhaltung' -> 'Freizeit'
+  [UPDATE] 'die Situation' (ID: 877): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Ich bin in einer schwierigen Situation. Ich weiß nicht, was ich tun soll.' -> 'Ich bin in einer schwierigen Situation. Ich weiß nicht, was ich tun soll. Lesen Sie die Anzeigen und die Aufgaben 11-15. Welche Anzeige passt zu welcher Situation?', example_en: 'I am in a difficult situation. I do not know what I should do.' -> 'I am in a difficult situation. I do not know what I should do. Read the advertisements and tasks 11-15. Which advertisement fits which situation?'
+  [UPDATE] 'sitzen' (ID: 878): theme: 'Gesundheit & Körper' -> 'Alltag', verb_conjugation.perfekt: 'hat gesessen' -> 'hat/ist gesessen'
+  [UPDATE] 'der Ski' (ID: 879): plural: 'die Ski' -> 'die Ski / die Skier', theme: 'Freizeit & Unterhaltung' -> 'Freizeit', example_de: 'Gehen wir am Wochenende Ski fahren?' -> 'Gehen wir am Wochenende Ski fahren? Er kauft sich neue Ski.', example_en: 'Are we going skiing on the weekend?' -> 'Are we going skiing on the weekend? He is buying new skis.'
+  [UPDATE] 'so' (ID: 880): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Fahren Sie bitte nicht so schnell!' -> 'Sie müssen das so machen! Fahren Sie bitte nicht so schnell! Meine Frau ist so groß wie ich. So, das war's/wär's!', example_en: 'Please do not drive so fast!' -> 'You have to do it this way! Please do not drive so fast! My wife is as tall as I am. So, that's it!'
+Batch 176 saved successfully. Total cumulative updates: 91
+
+Processing Batch 177/229 (Index 880 to 885)
+  [UPDATE] 'das Sofa' (ID: 881): theme: 'Wohnen & Haushalt' -> 'Wohnen'
+  [UPDATE] 'sofort' (ID: 882): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Bitte antworten Sie sofort.' -> 'Bitte antworten Sie sofort. Sie können sich ab sofort für den Kurs anmelden.', example_en: 'Please answer immediately.' -> 'Please answer immediately. You can register for the course right away.'
+  [UPDATE] 'sogar' (ID: 883): theme: 'Ausbildung & Lernen' -> 'Alltag', example_de: 'Heute ist es sehr kalt. In den Bergen schneit es sogar.' -> 'Heute ist es sehr kalt. In den Bergen schneit es sogar. Zu meiner Hochzeit kommen viele Gäste. Sogar meine Tante aus Kanada kommt.', example_en: 'Today it is very cold. In the mountains it is even snowing.' -> 'Today it is very cold. In the mountains it is even snowing. Many guests are coming to my wedding. Even my aunt from Canada is coming.'
+  [UPDATE] 'sollen' (ID: 884): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Wann soll ich kommen und was soll ich mitbringen?' -> 'Wann soll ich kommen und was soll ich mitbringen? Und, was hat der Arzt gesagt? – Ich soll drei Tage im Bett bleiben und viel Tee trinken.', example_en: 'When should I come and what should I bring along?' -> 'When should I come and what should I bring along? And, what did the doctor say? – I should stay in bed for three days and drink a lot of tea.'
+  [UPDATE] 'die Sonne' (ID: 885): theme: 'Natur & Umwelt' -> 'Natur'
+Batch 177 saved successfully. Total cumulative updates: 96
+
+Processing Batch 178/229 (Index 885 to 890)
+  [UPDATE] 'sonnig' (ID: 886): theme: 'Natur & Umwelt' -> 'Natur'
+  [UPDATE] 'sonst' (ID: 887): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Beeil dich, sonst kommen wir zu spät!' -> 'Haben Sie sonst noch einen Wunsch? – Nein danke, das ist alles. Beeil dich, sonst kommen wir zu spät! Heute ist der Chef nicht mehr da. Sonst ist er um diese Zeit immer im Büro.', example_en: 'Hurry up, otherwise we will be late!' -> 'Do you have any other wishes? – No thank you, that is all. Hurry up, otherwise we will be late! Today the boss is no longer here. Otherwise he is always in the office at this time.'
+  [UPDATE] 'spannend' (ID: 888): theme: 'Freizeit & Unterhaltung' -> 'Freizeit'
+  [UPDATE] 'sparen' (ID: 889): theme: 'Dienstleistungen & Behörden' -> 'Alltag'
+  [UPDATE] 'spazieren gehen' (ID: 890): theme: 'Freizeit & Unterhaltung' -> 'Freizeit'
+Batch 178 saved successfully. Total cumulative updates: 101
+
+Processing Batch 179/229 (Index 890 to 895)
+  [UPDATE] 'der Spaziergang' (ID: 891): theme: 'Freizeit & Unterhaltung' -> 'Freizeit'
+  [UPDATE] 'der Spaß' (ID: 892): theme: 'Freizeit & Unterhaltung' -> 'Freizeit', example_de: 'Meine Arbeit macht mir Spaß.' -> 'Meine Arbeit macht mir Spaß. Ich will nicht aufräumen. Das macht mir keinen Spaß. Viel Spaß!', example_en: 'My work is fun for me.' -> 'My work is fun for me. I do not want to tidy up. That is no fun for me. Have fun!'
+  [UPDATE] 'speichern' (ID: 893): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'die Speisekarte' (ID: 894): theme: 'Essen & Trinken' -> 'Essen'
+  [UPDATE] 'das Spiel' (ID: 895): theme: 'Freizeit & Unterhaltung' -> 'Freizeit', example_de: 'Monopoly ist ein sehr bekanntes Spiel.' -> 'Welche Kartenspiele kennen Sie? Monopoly ist ein sehr bekanntes Spiel.', example_en: 'Monopoly is a very well-known game.' -> 'Which card games do you know? Monopoly is a very well-known game.'
+Batch 179 saved successfully. Total cumulative updates: 106
+
+Processing Batch 180/229 (Index 895 to 900)
+  [UPDATE] 'spielen' (ID: 896): theme: 'Freizeit & Unterhaltung' -> 'Freizeit', example_de: 'Die Kinder spielen draußen.' -> 'Die Kinder spielen draußen. Spielen Sie Karten? Jakob spielt Klavier.', example_en: 'The children are playing outside.' -> 'The children are playing outside. Do you play cards? Jakob plays the piano.'
+  [UPDATE] 'der Sport' (ID: 897): theme: 'Gesundheit & Körper' -> 'Gesundheit'
+  [UPDATE] 'sportlich' (ID: 898): theme: 'Freizeit & Unterhaltung' -> 'Freizeit'
+  [UPDATE] 'der Sportplatz' (ID: 899): theme: 'Freizeit & Unterhaltung' -> 'Freizeit'
+  [UPDATE] 'die Sprache' (ID: 900): theme: 'Ausbildung & Lernen' -> 'Ausbildung', example_de: 'Welche Sprachen sprichst du?' -> 'Welche Sprachen sprichst du? – Ich spreche Englisch und Spanisch.', example_en: 'Which languages do you speak?' -> 'Which languages do you speak? – I speak English and Spanish.'
+Batch 180 saved successfully. Total cumulative updates: 111
+
+Processing Batch 181/229 (Index 900 to 905)
+  [UPDATE] 'sprechen' (ID: 901): theme: 'Ausbildung & Lernen' -> 'Alltag'
+  [UPDATE] 'die Sprechstunde' (ID: 902): theme: 'Gesundheit & Körper' -> 'Gesundheit'
+  [UPDATE] 'spät' (ID: 903): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'später' (ID: 904): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'die Stadt' (ID: 905): theme: 'Wohnen & Haushalt' -> 'Wohnen'
+Batch 181 saved successfully. Total cumulative updates: 116
+
+Processing Batch 182/229 (Index 905 to 910)
+  [UPDATE] 'der Stadtplan' (ID: 906): theme: 'Reise & Verkehr' -> 'Reise'
+  [UPDATE] 'der Star' (ID: 907): theme: 'Freizeit & Unterhaltung' -> 'Freizeit', example_de: 'Diese Sängerin ist ein Star in Deutschland.' -> 'Diese Sängerin ist ein großer Star in Deutschland.', example_en: 'This singer is a star in Germany.' -> 'This singer is a big star in Germany.'
+  [UPDATE] 'stark' (ID: 908): gender: 'der' -> 'None', theme: 'Gesundheit & Körper' -> 'Gesundheit', example_de: 'Ich habe starke Kopfschmerzen.' -> 'Der Kaffee ist sehr stark. Am späten Nachmittag ist der Verkehr besonders stark. Ich habe starke Kopfschmerzen. Können Sie mir kein stärkeres Mittel verschreiben? Es hat stark geregnet.', example_en: 'I have a severe headache.' -> 'The coffee is very strong. In the late afternoon, traffic is particularly heavy. I have a severe headache. Can you not prescribe me a stronger medication? It rained heavily.'
+  [UPDATE] 'stattfinden' (ID: 909): theme: 'Freizeit & Unterhaltung' -> 'Freizeit'
+  [UPDATE] 'stehen' (ID: 910): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Der Bus steht schon an der Haltestelle.' -> 'Der Bus steht schon an der Haltestelle. Ich bin Verkäuferin. In meinem Beruf muss ich viel stehen. Was steht heute in der Zeitung?', example_en: 'The bus is already standing at the stop.' -> 'The bus is already standing at the stop. I am a saleswoman. In my profession I have to stand a lot. What does it say in the newspaper today?'
+Batch 182 saved successfully. Total cumulative updates: 121
+
+Processing Batch 183/229 (Index 910 to 915)
+  [UPDATE] 'die Stelle' (ID: 911): theme: 'Arbeit & Beruf' -> 'Beruf', example_de: 'Ich habe eine neue Stelle. Ich arbeite jetzt bei Mercedes.' -> 'Ich habe eine neue Stelle. Ich arbeite jetzt bei Mercedes. Wir treffen uns hier an dieser Stelle.', example_en: 'I have a new job. I am now working at Mercedes.' -> 'I have a new job. I am now working at Mercedes. We are meeting here at this place.'
+  [UPDATE] 'stellen' (ID: 912): theme: 'Wohnen & Haushalt' -> 'Alltag'
+  [UPDATE] 'sterben' (ID: 913): theme: 'Gesundheit & Körper' -> 'Gesundheit', example_de: 'Sein Vater ist gestern gestorben.' -> 'Herr Müller kommt heute nicht. Sein Vater ist gestern gestorben.', example_en: 'His father died yesterday.' -> 'Herr Müller is not coming today. His father died yesterday.'
+  [UPDATE] 'der Stiefel' (ID: 914): theme: 'Einkaufen & Konsum' -> 'Einkaufen'
+  [UPDATE] 'der Stift' (ID: 915): theme: 'Arbeit & Beruf' -> 'Alltag', example_de: 'Kannst du mir bitte einen Stift geben?' -> 'Kannst du mir bitte einen Stift geben? - Was brauchst du? Einen Farbstift oder einen Bleistift oder einen Kugelschreiber?', example_en: 'Can you please give me a pen?' -> 'Can you please give me a pen? - What do you need? A colored pencil or a pencil or a ballpoint pen?'
+Batch 183 saved successfully. Total cumulative updates: 126
+
+Processing Batch 184/229 (Index 915 to 920)
+  [UPDATE] 'das Stipendium' (ID: 916): theme: 'Ausbildung & Lernen' -> 'Ausbildung'
+  [UPDATE] 'der Stock' (ID: 917): plural: 'die Stöcke;' -> 'die Stöcke', theme: 'Wohnen & Haushalt' -> 'Wohnen'
+  [UPDATE] 'das Stockwerk' (ID: 918): theme: 'Wohnen & Haushalt' -> 'Wohnen'
+  [UPDATE] 'der Strand' (ID: 919): theme: 'Reise & Verkehr' -> 'Reise'
+  [UPDATE] 'die Straße' (ID: 920): theme: 'Reise & Verkehr' -> 'Reise'
+Batch 184 saved successfully. Total cumulative updates: 131
+
+Processing Batch 185/229 (Index 920 to 925)
+  [UPDATE] 'die Straßenbahn' (ID: 921): theme: 'Reise & Verkehr' -> 'Reise'
+  [UPDATE] 'streiten (sich)' (ID: 922): theme: 'Ausbildung & Lernen' -> 'Alltag'
+  [UPDATE] 'der Stress' (ID: 923): theme: 'Gesundheit & Körper' -> 'Gesundheit'
+  [UPDATE] 'stressig' (ID: 924): theme: 'Arbeit & Beruf' -> 'Beruf'
+  [UPDATE] 'der Student' (ID: 925): theme: 'Ausbildung & Lernen' -> 'Ausbildung', example_de: 'Er ist Student.' -> 'Ich bin Studentin.', example_en: 'He is a university student.' -> 'I am a university student.'
+Batch 185 saved successfully. Total cumulative updates: 136
+
+Processing Batch 186/229 (Index 925 to 930)
+  [UPDATE] 'die Studentin' (ID: 926): theme: 'Ausbildung & Lernen' -> 'Ausbildung'
+  [UPDATE] 'studieren' (ID: 927): theme: 'Ausbildung & Lernen' -> 'Ausbildung'
+  [UPDATE] 'das Studium' (ID: 928): plural: 'die Studien' -> 'None', theme: 'Ausbildung & Lernen' -> 'Ausbildung'
+  [UPDATE] 'der Stuhl' (ID: 929): theme: 'Wohnen & Haushalt' -> 'Wohnen'
+  [UPDATE] 'stören' (ID: 930): theme: 'Ausbildung & Lernen' -> 'Alltag', example_de: 'Darf ich Sie kurz stören?' -> 'Störe ich? Darf ich Sie kurz stören? Mach die Musik leiser! Sie stört mich.', example_en: 'May I disturb you briefly?' -> 'Am I disturbing you? May I disturb you briefly? Turn the music down! It is bothering me.'
+Batch 186 saved successfully. Total cumulative updates: 141
+
+Processing Batch 187/229 (Index 930 to 935)
+  [UPDATE] 'das Stück' (ID: 931): theme: 'Freizeit & Unterhaltung' -> 'Freizeit', example_de: 'Möchten Sie noch ein Stück Kuchen?' -> 'Möchten Sie noch ein Stück Kuchen? Im Theater spielen sie heute das Stück „Romeo und Julia“.', example_en: 'Would you like another piece of cake?' -> 'Would you like another piece of cake? In the theater they are playing the play 'Romeo and Juliet' today.'
+  [UPDATE] 'suchen' (ID: 932): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Wir suchen eine größere Wohnung.' -> 'Suchst du etwas? Ich suche meine Brille. Wir suchen eine größere Wohnung. Wen suchen Sie?', example_en: 'We are looking for a larger apartment.' -> 'Are you looking for something? I am looking for my glasses. We are looking for a larger apartment. Who are you looking for?'
+  [UPDATE] 'super' (ID: 933): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Der Film ist super.' -> 'Der Film ist super. Er kann super tanzen.', example_en: 'The movie is great.' -> 'The movie is great. He can dance great.'
+  [UPDATE] 'der Supermarkt' (ID: 934): gender: 'die' -> 'der', theme: 'Einkaufen & Konsum' -> 'Einkaufen'
+  [UPDATE] 'die Suppe' (ID: 935): theme: 'Essen & Trinken' -> 'Essen'
+Batch 187 saved successfully. Total cumulative updates: 146
+
+Processing Batch 188/229 (Index 935 to 940)
+  [UPDATE] 'surfen' (ID: 936): theme: 'Freizeit & Unterhaltung' -> 'Freizeit', example_de: 'Surfst du oft im Internet?' -> 'Ich möchte gern surfen lernen. Surfst du oft im Internet?', example_en: 'Do you often surf the internet?' -> 'I would like to learn to surf. Do you often surf the internet?', verb_conjugation.perfekt: 'hat gesurft' -> 'hat/ist gesurft'
+  [UPDATE] 'sympathisch' (ID: 937): theme: 'Person & Familie' -> 'Alltag'
+  [UPDATE] 'süß' (ID: 938): gender: 'die' -> 'None', theme: 'Essen & Trinken' -> 'Essen', example_de: 'Ist das deine Tochter? Die ist ja süß!' -> 'Ich finde die Torte zu süß. Ist das deine Tochter? Die ist ja süß!', example_en: 'Is that your daughter? She is so cute!' -> 'I find the cake too sweet. Is that your daughter? She is so cute!'
+  [UPDATE] 'die Süßigkeiten' (ID: 939): theme: 'Essen & Trinken' -> 'Essen', example_de: 'Welche Süßigkeiten isst du am liebsten?' -> 'Welche Süßigkeiten isst du am liebsten? - Schokolade und Eis.', example_en: 'Which sweets do you like to eat the most?' -> 'Which sweets do you like to eat the most? - Chocolate and ice cream.'
+  [UPDATE] 'das Tablet' (ID: 940): theme: 'Dienstleistungen & Behörden' -> 'Alltag', example_de: 'Hast du ein Tablet?' -> 'Hast du ein Tablet? - Nein, ich habe einen Laptop und ein Handy.', example_en: 'Do you have a tablet?' -> 'Do you have a tablet? - No, I have a laptop and a cell phone.'
+Batch 188 saved successfully. Total cumulative updates: 151
+
+Processing Batch 189/229 (Index 940 to 945)
+  [UPDATE] 'die Tablette' (ID: 941): theme: 'Gesundheit & Körper' -> 'Gesundheit'
+  [UPDATE] 'die Tafel' (ID: 942): theme: 'Ausbildung & Lernen' -> 'Ausbildung', example_de: 'Der Lehrer schreibt das neue Wort an die Tafel.' -> 'Der Lehrer schreibt das neue Wort an die Tafel. Am Eingang gibt es Tafeln mit Informationen. Die Infotafel ist am Eingang.', example_en: 'The teacher writes the new word on the board.' -> 'The teacher writes the new word on the board. At the entrance there are boards with information. The information board is at the entrance.'
+  [UPDATE] 'tanzen' (ID: 943): theme: 'Freizeit & Unterhaltung' -> 'Freizeit'
+  [UPDATE] 'die Tasche' (ID: 944): theme: 'Reise & Verkehr' -> 'Alltag', example_de: 'Ich habe die Schlüssel in der Tasche.' -> 'Ich habe die Schlüssel in der Tasche. Ich habe nicht viel Gepäck. Nur eine Tasche.', example_en: 'I have the keys in my pocket.' -> 'I have the keys in my pocket. I do not have much luggage. Only one bag.'
+  [UPDATE] 'das Taschengeld' (ID: 945): theme: 'Person & Familie' -> 'Alltag'
+Batch 189 saved successfully. Total cumulative updates: 156
+
+Processing Batch 190/229 (Index 945 to 950)
+  [UPDATE] 'die Tasse' (ID: 946): theme: 'Essen & Trinken' -> 'Essen'
+  [UPDATE] '(aus)tauschen' (ID: 947): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Können wir unsere Adressen austauschen?' -> 'Können wir bitte die Plätze tauschen? Können wir unsere Adressen austauschen?', example_en: 'Can we exchange our addresses?' -> 'Can we please swap places? Can we exchange our addresses?'
+  [UPDATE] 'das Taxi' (ID: 948): theme: 'Reise & Verkehr' -> 'Reise'
+  [UPDATE] 'das Team' (ID: 949): theme: 'Arbeit & Beruf' -> 'Beruf', example_de: 'Ich arbeite gern in einem Team.' -> 'Ich arbeite gern in einem Team. Welches Fußballteam findest du am besten?', example_en: 'I like working in a team.' -> 'I like working in a team. Which soccer team do you like best?'
+  [UPDATE] 'der Tee' (ID: 950): theme: 'Essen & Trinken' -> 'Essen'
+Batch 190 saved successfully. Total cumulative updates: 161
+
+Processing Batch 191/229 (Index 950 to 955)
+  [UPDATE] 'teilen' (ID: 951): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Wollen wir die Pizza teilen?' -> 'Mein Mann und ich teilen uns die Arbeit. Wollen wir uns eine Pizza teilen? Was machst du mit dem Gewinn? - Ich teile ihn mit meiner Familie.', example_en: 'Do we want to share the pizza?' -> 'My husband and I share the work. Do we want to share a pizza? What are you doing with the winnings? - I am sharing them with my family.'
+  [UPDATE] 'teilnehmen' (ID: 952): theme: 'Freizeit & Unterhaltung' -> 'Freizeit'
+  [UPDATE] 'das Telefon' (ID: 953): theme: 'Ausbildung & Lernen' -> 'Alltag'
+  [UPDATE] 'telefonieren' (ID: 954): theme: 'Ausbildung & Lernen' -> 'Alltag', example_de: 'Ich muss kurz telefonieren.' -> 'Ich muss kurz telefonieren. Mein Mann telefoniert gerade. Können Sie später noch einmal anrufen?', example_en: 'I have to make a quick phone call.' -> 'I have to make a quick phone call. My husband is on the phone right now. Can you call again later?'
+  [UPDATE] 'der Teller' (ID: 955): theme: 'Essen & Trinken' -> 'Essen', example_de: 'Stell die Teller bitte auf den Tisch!' -> 'Stell die Teller bitte auf den Tisch! Möchtest du noch einen Teller Suppe?', example_en: 'Please put the plates on the table!' -> 'Please put the plates on the table! Would you like another plate of soup?'
+Batch 191 saved successfully. Total cumulative updates: 166
+
+Processing Batch 192/229 (Index 955 to 960)
+  [UPDATE] 'das Tennis' (ID: 956): theme: 'Freizeit & Unterhaltung' -> 'Freizeit'
+  [UPDATE] 'der Termin' (ID: 957): theme: 'Gesundheit & Körper' -> 'Alltag', example_de: 'Ich habe heute einen Termin bei meiner Zahnärztin.' -> 'Am besten machen wir sofort einen Termin. Ich habe heute einen Termin bei meiner Zahnärztin.', example_en: 'I have an appointment with my dentist today.' -> 'It is best if we make an appointment right away. I have an appointment with my dentist today.'
+  [UPDATE] 'teuer' (ID: 958): theme: 'Einkaufen & Konsum' -> 'Einkaufen'
+  [UPDATE] 'der Text' (ID: 959): theme: 'Ausbildung & Lernen' -> 'Ausbildung', example_de: 'Lesen Sie bitte den Text.' -> 'Lesen Sie bitte diesen Text.', example_en: 'Please read the text.' -> 'Please read this text.'
+  [UPDATE] 'das Theater' (ID: 960): theme: 'Freizeit & Unterhaltung' -> 'Freizeit'
+Batch 192 saved successfully. Total cumulative updates: 171
+
+Processing Batch 193/229 (Index 960 to 965)
+  [UPDATE] 'das Thema' (ID: 961): theme: 'Ausbildung & Lernen' -> 'Ausbildung', example_de: 'Heute heißt unser Thema: „Essen und Trinken“.' -> 'Wir sprechen heute über das Thema „Essen und Trinken“.', example_en: 'Today our topic is: 'Food and Drink'.' -> 'Today we are talking about the topic 'Food and Drink'.'
+  [UPDATE] 'das Ticket' (ID: 962): theme: 'Reise & Verkehr' -> 'Reise'
+  [UPDATE] 'tief' (ID: 963): theme: 'Natur & Umwelt' -> 'Natur'
+  [UPDATE] 'das Tier' (ID: 964): theme: 'Natur & Umwelt' -> 'Natur', example_de: 'Meine Lieblingstiere sind Katzen.' -> 'Wir dürfen keine Tiere in der Wohnung haben. Meine Lieblingstiere sind Katzen.', example_en: 'My favorite animals are cats.' -> 'We are not allowed to have animals in the apartment. My favorite animals are cats.'
+  [UPDATE] 'der Tipp' (ID: 965): theme: 'Ausbildung & Lernen' -> 'Alltag'
+Batch 193 saved successfully. Total cumulative updates: 176
+
+Processing Batch 194/229 (Index 965 to 970)
+  [UPDATE] 'der Tisch' (ID: 966): theme: 'Wohnen & Haushalt' -> 'Wohnen', example_de: 'Das Essen steht schon auf dem Tisch.' -> 'Das Essen steht schon auf dem Tisch. Die Fotos liegen auf dem Tisch.', example_en: 'The food is already on the table.' -> 'The food is already on the table. The photos are lying on the table.'
+  [UPDATE] 'der Titel' (ID: 967): theme: 'Freizeit & Unterhaltung' -> 'Alltag', example_de: 'Wie heißt der Film? - Ich weiß den Titel nicht mehr.' -> 'Wie heißt der Film? - Ich weiß den Titel nicht mehr. Haben Sie einen Titel? - Ja, Doktor.', example_en: 'What is the movie called? - I do not remember the title.' -> 'What is the movie called? - I do not remember the title. Do you have a title? - Yes, Doctor.'
+  [UPDATE] 'die Toilette' (ID: 968): theme: 'Wohnen & Haushalt' -> 'Wohnen'
+  [UPDATE] 'toll' (ID: 969): theme: 'Person & Familie' -> 'Alltag', example_de: 'Der Urlaub war toll.' -> 'Ich habe mir ein tolles Kleid gekauft. Unser Urlaub war toll.', example_en: 'The vacation was great.' -> 'I bought myself a great dress. Our vacation was great.'
+  [UPDATE] 'die Tomate' (ID: 970): theme: 'Essen & Trinken' -> 'Essen', example_de: 'Die Tomate ist noch grün.' -> 'Die Tomate ist noch grün. Kauf bitte noch Tomaten auf dem Markt.', example_en: 'The tomato is still green.' -> 'The tomato is still green. Please buy some more tomatoes at the market.'
+Batch 194 saved successfully. Total cumulative updates: 181
+
+Processing Batch 195/229 (Index 970 to 975)
+  [UPDATE] 'der Topf' (ID: 971): theme: 'Essen & Trinken' -> 'Essen', example_de: 'Hast du keinen größeren Topf? Ich möchte Kartoffeln kochen.' -> 'Dieses Jahr haben wir keine Töpfe mit Blumen auf dem Balkon. Hast du keinen größeren Topf? Ich möchte Kartoffeln kochen.', example_en: 'Do you not have a larger pot? I want to boil potatoes.' -> 'This year we have no pots with flowers on the balcony. Do you not have a larger pot? I want to boil potatoes.'
+  [UPDATE] 'die Torte' (ID: 972): theme: 'Essen & Trinken' -> 'Essen'
+  [UPDATE] 'tot' (ID: 973): theme: 'Gesundheit & Körper' -> 'Gesundheit'
+  [UPDATE] 'total' (ID: 974): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Der Film ist total langweilig.' -> 'Der Film war total langweilig.', example_en: 'The movie is totally boring.' -> 'The movie was totally boring.'
+  [UPDATE] 'die Tour' (ID: 975): theme: 'Reise & Verkehr' -> 'Reise', example_de: 'Wo kann ich eine Stadttour buchen?' -> 'Wo kann ich eine Stadttour buchen? Wir gehen am Wochenende wandern. Ich kenne eine schöne Tour in den Bergen.', example_en: 'Where can I book a city tour?' -> 'Where can I book a city tour? We are going hiking on the weekend. I know a beautiful tour in the mountains.'
+Batch 195 saved successfully. Total cumulative updates: 186
+
+Processing Batch 196/229 (Index 975 to 980)
+  [UPDATE] 'der Tourist' (ID: 976): theme: 'Reise & Verkehr' -> 'Reise', example_de: 'Im Sommer kommen viele Touristen in diese Stadt.' -> 'Im Sommer kommen viele Touristen in diese Stadt. Es kommen immer mehr Touristen in unsere Stadt.', example_en: 'In summer, many tourists come to this city.' -> 'In summer, many tourists come to this city. More and more tourists are coming to our city.'
+  [UPDATE] 'die Touristin' (ID: 977): theme: 'Reise & Verkehr' -> 'Reise'
+  [UPDATE] 'tragen' (ID: 978): theme: 'Einkaufen & Konsum' -> 'Alltag', example_de: 'Ich kann den Koffer nicht tragen, er ist zu schwer.' -> 'Ich kann den Koffer nicht tragen, er ist zu schwer. Er trägt heute einen blauen Anzug.', example_en: 'I cannot carry the suitcase, it is too heavy.' -> 'I cannot carry the suitcase, it is too heavy. He is wearing a blue suit today.'
+  [UPDATE] 'trainieren' (ID: 979): theme: 'Freizeit & Unterhaltung' -> 'Freizeit'
+  [UPDATE] 'das Training' (ID: 980): theme: 'Freizeit & Unterhaltung' -> 'Freizeit', example_de: 'Das Training ist immer dienstags.' -> 'Das Training ist immer dienstags. Ich gehe jede Woche zum Training.', example_en: 'The training is always on Tuesdays.' -> 'The training is always on Tuesdays. I go to training every week.'
+Batch 196 saved successfully. Total cumulative updates: 191
+
+Processing Batch 197/229 (Index 980 to 985)
+  [UPDATE] 'der Traum' (ID: 981): theme: 'Person & Familie' -> 'Alltag'
+  [UPDATE] 'traurig' (ID: 982): theme: 'Person & Familie' -> 'Alltag'
+  [UPDATE] 'treffen (sich)' (ID: 983): theme: 'Person & Familie' -> 'Alltag', example_de: 'Ich treffe in der Stadt einen Kollegen.' -> 'Wir treffen uns immer freitags.', example_en: 'I am meeting a colleague in the city.' -> 'We always meet on Fridays.'
+  [UPDATE] 'treffen' (ID: 984): theme: 'Freizeit & Unterhaltung' -> 'Alltag', example_de: 'Wir treffen uns immer freitags.' -> 'Ich treffe in der Stadt einen Kollegen.', example_en: 'We always meet on Fridays.' -> 'I am meeting a colleague in the city.'
+  [UPDATE] 'die Treppe' (ID: 985): theme: 'Wohnen & Haushalt' -> 'Wohnen', example_de: 'Ich nehme die Treppe, nicht den Aufzug.' -> 'Ich nehme die Treppe, nicht den Aufzug. Wo ist die Toilette? - Die Treppe hoch und dann links.', example_en: 'I am taking the stairs, not the elevator.' -> 'I am taking the stairs, not the elevator. Where is the toilet? - Up the stairs and then left.'
+Batch 197 saved successfully. Total cumulative updates: 196
+
+Processing Batch 198/229 (Index 985 to 990)
+  [UPDATE] 'trinken' (ID: 986): theme: 'Essen & Trinken' -> 'Essen'
+  [UPDATE] 'trocken' (ID: 987): theme: 'Natur & Umwelt' -> 'Alltag', example_de: 'Die Wäsche ist bald trocken.' -> 'Die Wäsche ist bald trocken. Hoffentlich regnet es bald. Alles ist ganz trocken. Bitte einen trockenen Wein.', example_en: 'The laundry will be dry soon.' -> 'The laundry will be dry soon. Hopefully it will rain soon. Everything is completely dry. A dry wine, please.'
+  [UPDATE] 'träumen' (ID: 988): theme: 'Person & Familie' -> 'Alltag', example_de: 'Ich träume von einem großen Haus mit Garten.' -> 'Ich habe schlecht geträumt. Ich träume von einem großen Haus mit Garten.', example_en: 'I dream of a big house with a garden.' -> 'I had a bad dream. I dream of a big house with a garden.'
+  [UPDATE] 'tschüs' (ID: 989): theme: 'Ausbildung & Lernen' -> 'Alltag'
+  [UPDATE] 'das T-Shirt' (ID: 990): theme: 'Einkaufen & Konsum' -> 'Einkaufen'
+Batch 198 saved successfully. Total cumulative updates: 201
+
+Processing Batch 199/229 (Index 990 to 995)
+  [UPDATE] 'tun' (ID: 991): theme: 'Gesundheit & Körper' -> 'Alltag', example_de: 'Was kann ich für Sie tun?' -> 'Mein Rücken tut weh. Es tut mir leid, ich kann leider nicht kommen. Was kann ich für Sie tun?', example_en: 'What can I do for you?' -> 'My back hurts. I am sorry, unfortunately I cannot come. What can I do for you?'
+  [UPDATE] 'typisch' (ID: 992): theme: 'Dienstleistungen & Behörden' -> 'Alltag', example_de: 'Diese Musik ist typisch für dieses Land.' -> 'Im Hotel gab es typisch deutsches Essen. Er kommt wieder zu spät, das ist typisch. Diese Musik ist typisch für dieses Land.', example_en: 'This music is typical for this country.' -> 'In the hotel there was typical German food. He is late again, that is typical. This music is typical for this country.'
+  [UPDATE] 'die Tür' (ID: 993): theme: 'Wohnen & Haushalt' -> 'Wohnen', example_de: 'Mach bitte die Tür zu!' -> 'Mach bitte die Tür zu! Es zieht.', example_en: 'Please close the door!' -> 'Please close the door! There is a draft.'
+  [UPDATE] 'die Uhr' (ID: 994): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Geht deine Uhr richtig?' -> 'Es ist vier Uhr. Geht deine Uhr richtig?', example_en: 'Is your watch right?' -> 'It is four o'clock. Is your watch right?'
+  [UPDATE] 'um' (ID: 995): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Er kommt um sieben Uhr.' -> 'Er kommt um sieben Uhr. Die Apotheke ist gleich um die Ecke.', example_en: 'He is coming at seven o'clock.' -> 'He is coming at seven o'clock. The pharmacy is right around the corner.'
+Batch 199 saved successfully. Total cumulative updates: 206
+
+Processing Batch 200/229 (Index 995 to 1000)
+  [UPDATE] 'umsteigen' (ID: 996): theme: 'Reise & Verkehr' -> 'Reise'
+  [UPDATE] 'umziehen' (ID: 997): theme: 'Wohnen & Haushalt' -> 'Wohnen'
+  [UPDATE] 'der Umzug' (ID: 998): theme: 'Wohnen & Haushalt' -> 'Wohnen'
+  [UPDATE] 'und' (ID: 999): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Ich habe heute und morgen frei.' -> 'Ich habe heute und morgen frei. Ich kaufe ein und mein Mann kocht.', example_en: 'I have today and tomorrow off.' -> 'I have today and tomorrow off. I am shopping and my husband is cooking.'
+  [UPDATE] 'der Unfall' (ID: 1000): theme: 'Gesundheit & Körper' -> 'Gesundheit', example_de: 'Ich hatte gestern einen Unfall.' -> 'Ich hatte gestern einen Unfall. Wie ist der Unfall passiert?', example_en: 'I had an accident yesterday.' -> 'I had an accident yesterday. How did the accident happen?'
+Batch 200 saved successfully. Total cumulative updates: 211
+
+Processing Batch 201/229 (Index 1000 to 1005)
+  [UPDATE] 'unten' (ID: 1001): theme: 'Wohnen & Haushalt' -> 'Wohnen'
+  [UPDATE] 'unter' (ID: 1002): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'unterhalten (sich)' (ID: 1003): theme: 'Ausbildung & Lernen' -> 'Alltag', example_de: 'Andreas und Nessrin unterhalten sich.' -> 'Andreas und Nessrin unterhalten sich. Wir haben uns über das Fußballspiel unterhalten.', example_en: 'Andreas and Nessrin are talking.' -> 'Andreas and Nessrin are talking. We talked about the soccer game.'
+  [UPDATE] 'unternehmen' (ID: 1004): theme: 'Freizeit & Unterhaltung' -> 'Freizeit'
+  [UPDATE] 'unterschreiben' (ID: 1005): theme: 'Arbeit & Beruf' -> 'Beruf'
+Batch 201 saved successfully. Total cumulative updates: 216
+
+Processing Batch 202/229 (Index 1005 to 1010)
+  [UPDATE] 'untersuchen' (ID: 1006): theme: 'Gesundheit & Körper' -> 'Gesundheit', example_de: 'Der Arzt hat mich untersucht.' -> 'Der Arzt hat mich untersucht. Der Arzt muss dein Bein untersuchen.', example_en: 'The doctor examined me.' -> 'The doctor examined me. The doctor has to examine your leg.'
+  [UPDATE] 'unterwegs sein' (ID: 1007): theme: 'Reise & Verkehr' -> 'Reise'
+  [UPDATE] 'der Urlaub' (ID: 1008): theme: 'Reise & Verkehr' -> 'Reise'
+  [UPDATE] 'verabredet sein' (ID: 1009): theme: 'Freizeit & Unterhaltung' -> 'Freizeit'
+  [UPDATE] 'die Veranstaltung' (ID: 1010): theme: 'Freizeit & Unterhaltung' -> 'Freizeit'
+Batch 202 saved successfully. Total cumulative updates: 221
+
+Processing Batch 203/229 (Index 1010 to 1015)
+  [UPDATE] 'verbieten' (ID: 1011): theme: 'Dienstleistungen & Behörden' -> 'Alltag'
+  [UPDATE] 'verdienen' (ID: 1012): theme: 'Arbeit & Beruf' -> 'Beruf', example_de: 'Ich verdiene 1.500 Euro im Monat.' -> 'Ich verdiene 1.500 Euro im Monat. Er hat den Urlaub wirklich verdient.', example_en: 'I earn 1,500 euros a month.' -> 'I earn 1,500 euros a month. He really deserves the vacation.'
+  [UPDATE] 'der Verein' (ID: 1013): theme: 'Freizeit & Unterhaltung' -> 'Freizeit', example_de: 'Es gibt einen neuen Sportverein in der Stadt.' -> 'Er ist seit vielen Jahren im Verein. Es gibt einen neuen Sportverein in der Stadt.', example_en: 'There is a new sports club in the city.' -> 'He has been in the club for many years. There is a new sports club in the city.'
+  [UPDATE] 'vereinbaren' (ID: 1014): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'vergessen' (ID: 1015): theme: 'Ausbildung & Lernen' -> 'Alltag', example_de: 'Ich habe meine Hausaufgaben vergessen.' -> 'Ich habe meine Hausaufgaben vergessen. Vergiss deinen Arzttermin nicht!', example_en: 'I have forgotten my homework.' -> 'I have forgotten my homework. Do not forget your doctor's appointment!'
+Batch 203 saved successfully. Total cumulative updates: 226
+
+Processing Batch 204/229 (Index 1015 to 1020)
+  [UPDATE] 'vergleichen' (ID: 1016): theme: 'Einkaufen & Konsum' -> 'Einkaufen', example_de: 'Vergleichen Sie die Angebote!' -> 'Vergleichen Sie die Angebote! Können wir die Antworten vergleichen?', example_en: 'Compare the offers!' -> 'Compare the offers! Can we compare the answers?'
+  [UPDATE] 'verkaufen' (ID: 1017): theme: 'Einkaufen & Konsum' -> 'Einkaufen'
+  [UPDATE] 'der Verkehr' (ID: 1018): theme: 'Reise & Verkehr' -> 'Reise'
+  [UPDATE] 'das Verkehrsmittel' (ID: 1019): theme: 'Reise & Verkehr' -> 'Reise'
+  [UPDATE] 'verletzen (sich)' (ID: 1020): theme: 'Gesundheit & Körper' -> 'Gesundheit', example_de: 'Haben Sie sich verletzt?' -> 'Sind Sie verletzt? - Ja, am Bein. Haben Sie sich verletzt?', example_en: 'Did you injure yourself?' -> 'Are you injured? - Yes, on the leg. Did you injure yourself?'
+Batch 204 saved successfully. Total cumulative updates: 231
+
+Processing Batch 205/229 (Index 1020 to 1025)
+  [UPDATE] 'verlieben (sich)' (ID: 1021): theme: 'Person & Familie' -> 'Alltag'
+  [UPDATE] 'verlieren' (ID: 1022): theme: 'Person & Familie' -> 'Alltag', example_de: 'Ich habe meinen Schlüssel verloren.' -> 'Ich habe meinen Schlüssel verloren. Michael hat seine Arbeit verloren. Wir haben das Fußballspiel verloren.', example_en: 'I have lost my key.' -> 'I have lost my key. Michael lost his job. We lost the soccer game.'
+  [UPDATE] 'vermieten' (ID: 1023): theme: 'Wohnen & Haushalt' -> 'Wohnen'
+  [UPDATE] 'der Vermieter' (ID: 1024): theme: 'Wohnen & Haushalt' -> 'Wohnen'
+  [UPDATE] 'die Vermieterin' (ID: 1025): theme: 'Wohnen & Haushalt' -> 'Wohnen', example_de: 'Unsere Vermieterin ist eine sehr nette Frau.' -> 'Unsere Vermieterin ist nett.', example_en: 'Our landlady is a very nice woman.' -> 'Our landlady is nice.'
+Batch 205 saved successfully. Total cumulative updates: 236
+
+Processing Batch 206/229 (Index 1025 to 1030)
+  [UPDATE] 'verpassen' (ID: 1026): theme: 'Reise & Verkehr' -> 'Reise', example_de: 'Ich habe den Zug verpasst.' -> 'Ich habe den Zug verpasst. Ich habe die 12-Uhr-Nachrichten verpasst.', example_en: 'I missed the train.' -> 'I missed the train. I missed the 12 o'clock news.'
+  [UPDATE] 'verreisen' (ID: 1027): theme: 'Reise & Verkehr' -> 'Reise', example_de: 'Verreist ihr in den Ferien?' -> 'Verreist ihr in den Ferien? Frau Doktor Müller ist zurzeit verreist. Sie kommt erst nächste Woche zurück.', example_en: 'Are you traveling during the holidays?' -> 'Are you traveling during the holidays? Dr. Müller is currently away. She is not coming back until next week.'
+  [UPDATE] 'verschieben' (ID: 1028): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'verschieden' (ID: 1029): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Unsere beiden Kinder sind sehr verschieden.' -> 'Unsere beiden Kinder sind sehr verschieden. Wir haben dieses Kleid in verschiedenen Farben.', example_en: 'Our two children are very different.' -> 'Our two children are very different. We have this dress in different colors.'
+  [UPDATE] 'verstehen' (ID: 1030): theme: 'Ausbildung & Lernen' -> 'Alltag', example_de: 'Können Sie mich verstehen?' -> 'Können Sie mich verstehen? Ich verstehe diese Aufgabe nicht.', example_en: 'Can you understand me?' -> 'Can you understand me? I do not understand this task.'
+Batch 206 saved successfully. Total cumulative updates: 241
+
+Processing Batch 207/229 (Index 1030 to 1035)
+  [UPDATE] 'versuchen' (ID: 1031): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Kann ich es auch einmal versuchen?' -> 'Kann ich es auch einmal versuchen? Haben Sie es schon einmal mit diesem Mittel versucht?', example_en: 'Can I also try it once?' -> 'Can I also try it once? Have you already tried it with this remedy?'
+  [UPDATE] 'der Vertrag' (ID: 1032): theme: 'Arbeit & Beruf' -> 'Beruf'
+  [UPDATE] 'viel' (ID: 1033): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Ich habe leider nicht viel Zeit.' -> 'Ich habe leider nicht viel Zeit. Viel Spaß! Im Winter sind viele Leute erkältet.', example_en: 'Unfortunately, I do not have much time.' -> 'Unfortunately, I do not have much time. Have fun! In winter, many people have a cold.'
+  [UPDATE] 'vielleicht' (ID: 1034): theme: 'Person & Familie' -> 'Alltag', example_de: 'Vielleicht bekomme ich diesen Job.' -> 'Vielleicht bekomme ich diesen Job. Er besucht uns vielleicht am Wochenende. Kannst du mir vielleicht ein bisschen Geld leihen?', example_en: 'Maybe I will get this job.' -> 'Maybe I will get this job. He might visit us on the weekend. Can you maybe lend me a little bit of money?'
+  [UPDATE] 'der Vogel' (ID: 1035): theme: 'Natur & Umwelt' -> 'Natur', example_de: 'Morgens singen die Vögel immer laut.' -> 'Nadine mag Vögel. Morgens singen die Vögel immer laut.', example_en: 'In the morning, the birds always sing loudly.' -> 'Nadine likes birds. In the morning, the birds always sing loudly.'
+Batch 207 saved successfully. Total cumulative updates: 246
+
+Processing Batch 208/229 (Index 1035 to 1040)
+  [UPDATE] 'voll' (ID: 1036): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Die Flasche ist noch ganz voll.' -> 'Morgens und abends sind die Züge immer sehr voll. Die Flasche ist noch ganz voll.', example_en: 'The bottle is still completely full.' -> 'In the morning and evening, the trains are always very full. The bottle is still completely full.'
+  [UPDATE] 'der Volleyball' (ID: 1037): theme: 'Freizeit & Unterhaltung' -> 'Freizeit'
+  [UPDATE] 'von' (ID: 1038): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Das Auto von Felix ist kaputt.' -> 'Das Auto von Felix ist kaputt. Er kommt gerade von Köln/von zu Hause. Die Brötchen sind leider von gestern.', example_en: 'Felix's car is broken.' -> 'Felix's car is broken. He is coming straight from Cologne/from home. The bread rolls are unfortunately from yesterday.'
+  [UPDATE] 'vor' (ID: 1039): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Er ist vor einer Stunde gegangen.' -> 'Er ist vor einer Stunde gegangen. Das Auto steht vor der Tür.', example_en: 'He left an hour ago.' -> 'He left an hour ago. The car is parked in front of the door.'
+  [UPDATE] 'vorbei' (ID: 1040): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Kommst du morgen bei mir vorbei?' -> 'Die Linie 8 fährt am Krankenhaus vorbei. Kommst du morgen bei mir vorbei?', example_en: 'Are you coming by my place tomorrow?' -> 'Line 8 drives past the hospital. Are you coming by my place tomorrow?'
+Batch 208 saved successfully. Total cumulative updates: 251
+
+Processing Batch 209/229 (Index 1040 to 1045)
+  [UPDATE] 'vorbereiten' (ID: 1041): theme: 'Ausbildung & Lernen' -> 'Ausbildung', example_de: 'Ich muss mich auf meine Prüfung vorbereiten.' -> 'Morgen mache ich eine Party. Ich muss noch viel dafür vorbereiten. Ich muss mich auf meine Prüfung vorbereiten.', example_en: 'I have to prepare for my exam.' -> 'Tomorrow I am having a party. I still have to prepare a lot for it. I have to prepare for my exam.'
+  [UPDATE] 'vorgestern' (ID: 1042): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'vorher' (ID: 1043): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Vorher muss ich aber noch zur Bank.' -> 'Ich komme mit ins Café. Vorher muss ich aber noch zur Bank.', example_en: 'But beforehand I still have to go to the bank.' -> 'I am coming along to the café. But beforehand I still have to go to the bank.'
+  [UPDATE] 'vorn(e)' (ID: 1044): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'der Vorname' (ID: 1045): theme: 'Dienstleistungen & Behörden' -> 'Alltag'
+Batch 209 saved successfully. Total cumulative updates: 256
+
+Processing Batch 210/229 (Index 1045 to 1050)
+  [UPDATE] 'der Vorschlag' (ID: 1046): theme: 'Ausbildung & Lernen' -> 'Alltag', example_de: 'Was machen wir am Wochenende? Hast du einen guten Vorschlag?' -> 'Was machen wir am Wochenende? Hast du einen guten Vorschlag? - Wir können ins Kino gehen. Was schenken wir Christina zur Hochzeit? - Wir haben doch schon so viele Vorschläge gemacht.', example_en: 'What are we doing on the weekend? Do you have a good suggestion?' -> 'What are we doing on the weekend? Do you have a good suggestion? - We could go to the movies. What are we giving Christina for her wedding? - We have already made so many suggestions.'
+  [UPDATE] 'vorsichtig' (ID: 1047): theme: 'Reise & Verkehr' -> 'Alltag', example_de: 'Du musst vorsichtig fahren, es ist neblig.' -> 'Sei vorsichtig! Du musst vorsichtig fahren, es ist neblig.', example_en: 'You have to drive carefully, it is foggy.' -> 'Be careful! You have to drive carefully, it is foggy.'
+  [UPDATE] 'vorstellen (sich)' (ID: 1048): theme: 'Ausbildung & Lernen' -> 'Alltag', example_de: 'Wir wollen uns kennenlernen. Können Sie sich bitte vorstellen?' -> 'Wir wollen uns kennenlernen. Können Sie sich bitte vorstellen? Darf ich Ihnen meine Frau vorstellen?', example_en: 'We want to get to know each other. Could you please introduce yourself?' -> 'We want to get to know each other. Could you please introduce yourself? May I introduce my wife to you?'
+  [UPDATE] 'vorwärts' (ID: 1049): theme: 'Reise & Verkehr' -> 'Reise'
+  [UPDATE] 'wach' (ID: 1050): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Bist du schon lange wach?' -> 'Bist du schon lange wach? Ich bin noch nicht ganz wach.', example_en: 'Have you been awake for a long time?' -> 'Have you been awake for a long time? I am not completely awake yet.'
+Batch 210 saved successfully. Total cumulative updates: 261
+
+Processing Batch 211/229 (Index 1050 to 1055)
+  [UPDATE] 'der Wagen' (ID: 1051): theme: 'Reise & Verkehr' -> 'Reise', example_de: 'Wo steht Ihr Wagen?' -> 'Wo steht Ihr Wagen? Im zweiten Wagen ist unser Zugrestaurant.', example_en: 'Where is your car?' -> 'Where is your car? Our train restaurant is in the second carriage.'
+  [UPDATE] 'wahr' (ID: 1052): theme: 'Ausbildung & Lernen' -> 'Alltag', example_de: 'Das ist nicht wahr!' -> 'Das ist nicht wahr! Es ist eine wahre Geschichte. Es ist doch schön hier, nicht wahr?', example_en: 'That is not true!' -> 'That is not true! It is a true story. It is nice here, is it not?'
+  [UPDATE] 'wahrscheinlich' (ID: 1053): theme: 'Person & Familie' -> 'Alltag', example_de: 'Wahrscheinlich mache ich im Herbst einen Deutschkurs.' -> 'Wahrscheinlich mache ich im Herbst einen Deutschkurs. Er kommt wahrscheinlich nicht.', example_en: 'I will probably take a German course in the autumn.' -> 'I will probably take a German course in the autumn. He is probably not coming.'
+  [UPDATE] 'der Wald' (ID: 1054): theme: 'Natur & Umwelt' -> 'Natur', example_de: 'Ich gehe gern im Wald spazieren.' -> 'Im Wald ist es ruhig. Ich gehe gern im Wald spazieren.', example_en: 'I like to go for a walk in the forest.' -> 'It is quiet in the forest. I like to go for a walk in the forest.'
+  [UPDATE] 'wandern' (ID: 1055): theme: 'Freizeit & Unterhaltung' -> 'Freizeit'
+Batch 211 saved successfully. Total cumulative updates: 266
+
+Processing Batch 212/229 (Index 1055 to 1060)
+  [UPDATE] 'wann' (ID: 1056): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Wann bist du fertig?' -> 'Wann bist du fertig? Wann kann ich Sie anrufen? Wann sind Sie geboren?', example_en: 'When are you finished?' -> 'When are you finished? When can I call you? When were you born?'
+  [UPDATE] 'warm' (ID: 1057): theme: 'Natur & Umwelt' -> 'Alltag', example_de: 'Hier ist es sehr warm.' -> 'Hier ist es sehr warm. Mittags esse ich oft ein warmes Essen. Ich brauche einen warmen Pullover.', example_en: 'It is very warm here.' -> 'It is very warm here. At noon, I often eat a warm meal. I need a warm sweater.'
+  [UPDATE] 'warten' (ID: 1058): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Können Sie ein paar Minuten warten?' -> 'Können Sie ein paar Minuten warten? Auf wen warten Sie?', example_en: 'Can you wait a few minutes?' -> 'Can you wait a few minutes? Who are you waiting for?'
+  [UPDATE] 'warum' (ID: 1059): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'waschen (sich)' (ID: 1060): theme: 'Gesundheit & Körper' -> 'Alltag', example_de: 'Wo kann ich mir die Hände waschen?' -> 'Wo kann ich mir die Hände waschen? Ich muss morgen waschen.', example_en: 'Where can I wash my hands?' -> 'Where can I wash my hands? I have to wash tomorrow.'
+Batch 212 saved successfully. Total cumulative updates: 271
+
+Processing Batch 213/229 (Index 1060 to 1065)
+  [UPDATE] 'das Wasser' (ID: 1061): theme: 'Essen & Trinken' -> 'Essen', example_de: 'Ein Glas Wasser, bitte.' -> 'Ein Glas Wasser, bitte. Gibt es hier kein warmes Wasser?', example_en: 'A glass of water, please.' -> 'A glass of water, please. Is there no warm water here?'
+  [UPDATE] 'die Webseite' (ID: 1062): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'wechseln' (ID: 1063): theme: 'Reise & Verkehr' -> 'Alltag', example_de: 'Können Sie mir zehn Dollar wechseln?' -> 'Wir müssen den Reifen wechseln. Können Sie mir zehn Dollar wechseln?', example_en: 'Can you change ten dollars for me?' -> 'We have to change the tire. Can you change ten dollars for me?'
+  [UPDATE] 'wecken' (ID: 1064): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'der Weg' (ID: 1065): theme: 'Reise & Verkehr' -> 'Reise', example_de: 'Das ist der kürzeste Weg.' -> 'Das ist der kürzeste Weg. Können Sie mir bitte den Weg zum Flughafen beschreiben?', example_en: 'That is the shortest way.' -> 'That is the shortest way. Can you please describe the way to the airport for me?'
+Batch 213 saved successfully. Total cumulative updates: 276
+
+Processing Batch 214/229 (Index 1065 to 1070)
+  [UPDATE] 'weg sein' (ID: 1066): theme: 'Person & Familie' -> 'Alltag', example_de: 'Herr Meier ist schon weg.' -> 'Meine Brille ist weg. Ich finde sie nicht mehr. Herr Meier ist schon weg.', example_en: 'Mr. Meier is already gone.' -> 'My glasses are gone. I cannot find them anymore. Mr. Meier is already gone.'
+  [UPDATE] 'wegbringen' (ID: 1067): theme: 'Wohnen & Haushalt' -> 'Alltag'
+  [UPDATE] 'weglaufen / wegmachen' (ID: 1068): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Unser Hund ist weggelaufen.' -> 'Unser Hund ist weggelaufen. Kannst du das bitte wegmachen?', example_en: 'Our dog ran away.' -> 'Our dog ran away. Can you please remove that?'
+  [UPDATE] 'wegnehmen / wegwerfen' (ID: 1069): theme: 'Wohnen & Haushalt' -> 'Alltag', example_de: 'Sie können diese Papiere wegwerfen.' -> 'Warum hast du dem Kind den Ball weggenommen? Sie können diese Papiere wegwerfen.', example_en: 'You can throw these papers away.' -> 'Why did you take the ball away from the child? You can throw these papers away.'
+  [UPDATE] 'der Wein' (ID: 1070): theme: 'Essen & Trinken' -> 'Essen'
+Batch 214 saved successfully. Total cumulative updates: 281
+
+Processing Batch 215/229 (Index 1070 to 1075)
+  [UPDATE] 'weinen' (ID: 1071): theme: 'Gesundheit & Körper' -> 'Alltag', example_de: 'Warum weint das Baby?' -> 'Warum weint das Baby? Weine bitte nicht!', example_en: 'Why is the baby crying?' -> 'Why is the baby crying? Please do not cry!'
+  [UPDATE] 'weiterhelfen' (ID: 1072): theme: 'Ausbildung & Lernen' -> 'Alltag'
+  [UPDATE] 'weitermachen' (ID: 1073): theme: 'Arbeit & Beruf' -> 'Alltag'
+  [UPDATE] 'welcher' (ID: 1074): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Welcher Tag ist heute?' -> 'Welcher Tag ist heute? Welchen Kurs möchtest du machen? Welche Bluse nehmen Sie? Welches Buch suchst du?', example_en: 'Which day is today?' -> 'Which day is today? Which course would you like to take? Which blouse are you taking? Which book are you looking for?'
+  [UPDATE] 'die Welt' (ID: 1075): theme: 'Natur & Umwelt' -> 'Natur', example_de: 'Ich möchte gern einmal um die Welt reisen.' -> 'Ich möchte gern einmal um die Welt reisen. Die Studenten kommen aus vielen Ländern. Sie kommen aus der ganzen Welt.', example_en: 'I would like to travel around the world once.' -> 'I would like to travel around the world once. The students come from many countries. They come from all over the world.'
+Batch 215 saved successfully. Total cumulative updates: 286
+
+Processing Batch 216/229 (Index 1075 to 1080)
+  [UPDATE] 'wenigstens' (ID: 1076): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'wer (wen/wem)' (ID: 1077): theme: 'Person & Familie' -> 'Alltag'
+  [UPDATE] 'werden' (ID: 1078): theme: 'Arbeit & Beruf' -> 'Alltag', example_de: 'Mein Sohn will Arzt werden.' -> 'Mein Sohn will Arzt werden. Das Wetter am Wochenende wird gut. Das haben sie im Radio gesagt.', example_en: 'My son wants to become a doctor.' -> 'My son wants to become a doctor. The weather will be good on the weekend. They said that on the radio.'
+  [UPDATE] 'das Wetter' (ID: 1079): theme: 'Natur & Umwelt' -> 'Natur', example_de: 'Wir hatten im Urlaub schlechtes Wetter.' -> 'Heute ist das Wetter gut: Es ist sonnig und warm. Wir hatten im Urlaub schlechtes Wetter.', example_en: 'We had bad weather on vacation.' -> 'Today the weather is good: it is sunny and warm. We had bad weather on vacation.'
+  [UPDATE] 'wie viel' (ID: 1080): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Wie viel kostet diese Hose?' -> 'Wie viel kostet diese Hose? Wie viele Kinder haben Sie?', example_en: 'How much do these pants cost?' -> 'How much do these pants cost? How many children do you have?'
+Batch 216 saved successfully. Total cumulative updates: 291
+
+Processing Batch 217/229 (Index 1080 to 1085)
+  [UPDATE] 'wiederholen' (ID: 1081): theme: 'Ausbildung & Lernen' -> 'Alltag'
+  [UPDATE] 'willkommen' (ID: 1082): theme: 'Ausbildung & Lernen' -> 'Alltag'
+  [UPDATE] 'der Wind' (ID: 1083): theme: 'Natur & Umwelt' -> 'Natur'
+  [UPDATE] 'wissen' (ID: 1084): theme: 'Ausbildung & Lernen' -> 'Alltag', example_de: 'Weißt du, wie der Hausmeister heißt?' -> 'Weißt du, wie der Hausmeister heißt? Woher wissen Sie das?', example_en: 'Do you know what the caretaker's name is?' -> 'Do you know what the caretaker's name is? How do you know that?'
+  [UPDATE] 'der Witz' (ID: 1085): theme: 'Ausbildung & Lernen' -> 'Alltag'
+Batch 217 saved successfully. Total cumulative updates: 296
+
+Processing Batch 218/229 (Index 1085 to 1090)
+  [UPDATE] 'wohnen' (ID: 1086): theme: 'Wohnen & Haushalt' -> 'Wohnen'
+  [UPDATE] 'die Wohnung' (ID: 1087): theme: 'Wohnen & Haushalt' -> 'Wohnen', example_de: 'Haben Sie schon eine neue Wohnung gefunden?' -> 'Haben Sie schon eine neue Wohnung gefunden? Meine Wohnung ist sehr hell.', example_en: 'Have you already found a new apartment?' -> 'Have you already found a new apartment? My apartment is very bright.'
+  [UPDATE] 'die Wolke' (ID: 1088): theme: 'Natur & Umwelt' -> 'Natur'
+  [UPDATE] 'die Wolke' (ID: 1089): theme: 'Natur & Umwelt' -> 'Natur'
+  [UPDATE] 'wollen' (ID: 1090): theme: 'Einkaufen & Konsum' -> 'Alltag'
+Batch 218 saved successfully. Total cumulative updates: 301
+
+Processing Batch 219/229 (Index 1090 to 1095)
+  [UPDATE] 'der Workshop' (ID: 1091): theme: 'Arbeit & Beruf' -> 'Beruf', example_de: 'Das war ein toller Workshop. Ich habe viel gelernt.' -> 'Das war ein toller Workshop. Ich habe viel gelernt. Am Freitag gibt es einen Computer-Workshop in meiner Firma.', example_en: 'That was a great workshop. I learned a lot.' -> 'That was a great workshop. I learned a lot. On Friday there is a computer workshop in my company.'
+  [UPDATE] 'das Wort' (ID: 1092): theme: 'Ausbildung & Lernen' -> 'Alltag', example_de: 'Ich muss das Wort im Wörterbuch suchen.' -> 'Ich kenne das Wort nicht. Ich muss das Wort im Wörterbuch suchen.', example_en: 'I have to look up the word in the dictionary.' -> 'I do not know the word. I have to look up the word in the dictionary.'
+  [UPDATE] 'wunderbar' (ID: 1093): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Wir hatten im Urlaub wunderbares Wetter.' -> 'Diese Schokolade schmeckt wunderbar. Wir hatten im Urlaub wunderbares Wetter.', example_en: 'We had wonderful weather on vacation.' -> 'This chocolate tastes wonderful. We had wonderful weather on vacation.'
+  [UPDATE] 'der Wunsch' (ID: 1094): theme: 'Person & Familie' -> 'Alltag', example_de: 'Was ist dein größter Wunsch?' -> 'Haben Sie noch einen Wunsch? Was ist dein größter Wunsch?', example_en: 'What is your biggest wish?' -> 'Do you have another wish? What is your biggest wish?'
+  [UPDATE] 'die Wurst' (ID: 1095): theme: 'Essen & Trinken' -> 'Essen'
+Batch 219 saved successfully. Total cumulative updates: 306
+
+Processing Batch 220/229 (Index 1095 to 1100)
+  [UPDATE] 'wählen' (ID: 1096): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Wählen Sie bitte ein Getränk.' -> 'Sie können wählen: Als Vorspeise gibt es Suppe oder Salat. Sie müssen erst eine Null wählen. Ich habe diese Partei nicht gewählt.', example_en: 'Please choose a drink.' -> 'You can choose: as an appetizer there is soup or salad. You have to dial a zero first. I did not vote for this party.'
+  [UPDATE] 'die Wäsche' (ID: 1097): theme: 'Einkaufen & Konsum' -> 'Alltag', example_de: 'Ich muss noch Wäsche waschen.' -> 'Ich muss heute noch Wäsche waschen. Kannst du bitte die Wäsche aufhängen?', example_en: 'I still have to wash the laundry.' -> 'I still have to do laundry today. Can you please hang up the laundry?'
+  [UPDATE] 'wünschen' (ID: 1098): theme: 'Person & Familie' -> 'Alltag', example_de: 'Ich wünsche mir eine Kamera zum Geburtstag.' -> 'Ich wünsche Ihnen alles Gute. Was wünschst du dir zum Geburtstag? Wünsch mir Glück!', example_en: 'I wish for a camera for my birthday.' -> 'I wish you all the best. What do you wish for for your birthday? Wish me luck!'
+  [UPDATE] 'die Zahl' (ID: 1099): theme: 'Ausbildung & Lernen' -> 'Alltag', example_de: 'Können Sie die Zahl bitte wiederholen?' -> 'Können Sie die Zahl bitte wiederholen? Die Zahl der Internetnutzer wird immer größer.', example_en: 'Can you please repeat the number?' -> 'Can you please repeat the number? The number of internet users is growing.'
+  [UPDATE] 'zahlen' (ID: 1100): theme: 'Einkaufen & Konsum' -> 'Einkaufen', example_de: 'Entschuldigung, zahlen bitte!' -> 'Herr Ober, zahlen bitte! Ich hatte keinen Fahrschein und musste 60 Euro Strafe zahlen. Wir müssen im nächsten Jahr mehr Steuern zahlen.', example_en: 'Excuse me, I would like to pay please!' -> 'Waiter, the bill please! I did not have a ticket and had to pay a 60 euro fine. We have to pay more taxes next year.'
+Batch 220 saved successfully. Total cumulative updates: 311
+
+Processing Batch 221/229 (Index 1100 to 1105)
+  [UPDATE] 'der Zahn' (ID: 1101): theme: 'Gesundheit & Körper' -> 'Gesundheit'
+  [UPDATE] 'zeichnen' (ID: 1102): theme: 'Freizeit & Unterhaltung' -> 'Freizeit'
+  [UPDATE] 'zeigen' (ID: 1103): theme: 'Ausbildung & Lernen' -> 'Alltag'
+  [UPDATE] 'die Zeit' (ID: 1104): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'die Zeitschrift' (ID: 1105): theme: 'Freizeit & Unterhaltung' -> 'Alltag'
+Batch 221 saved successfully. Total cumulative updates: 316
+
+Processing Batch 222/229 (Index 1105 to 1110)
+  [UPDATE] 'die Zeitung' (ID: 1106): theme: 'Freizeit & Unterhaltung' -> 'Alltag', example_de: 'Wo ist die Zeitung von heute?' -> 'Ich lese manchmal Zeitung. Wo ist die Zeitung von heute?', example_en: 'Where is today's newspaper?' -> 'I sometimes read the newspaper. Where is today's newspaper?'
+  [UPDATE] 'das Zelt' (ID: 1107): theme: 'Reise & Verkehr' -> 'Reise'
+  [UPDATE] 'das Zentrum' (ID: 1108): theme: 'Wohnen & Haushalt' -> 'Alltag', example_de: 'Wir suchen eine möblierte Wohnung, möglichst im Zentrum.' -> 'Der Bahnhof ist im Stadtzentrum. Wohnst du im Zentrum? - Nein, ich wohne nicht direkt in der Stadt.', example_en: 'We are looking for a furnished apartment, preferably in the center.' -> 'The train station is in the city center. Do you live in the center? - No, I do not live directly in the city.'
+  [UPDATE] 'das Zentrum' (ID: 1109): theme: 'Einkaufen & Konsum' -> 'Alltag', example_de: 'Der Bahnhof ist im Stadtzentrum.' -> 'Der Bahnhof ist im Stadtzentrum. Wohnst du im Zentrum? - Nein, ich wohne nicht direkt in der Stadt.', example_en: 'The train station is in the city center.' -> 'The train station is in the city center. Do you live in the center? - No, I do not live directly in the city.'
+  [UPDATE] 'der Zettel' (ID: 1110): theme: 'Arbeit & Beruf' -> 'Alltag', example_de: 'Schreiben Sie Ihre Telefonnummer bitte auf den Zettel.' -> 'Hast du einen Zettel für mich? Ich muss etwas notieren. Schreiben Sie Ihre Telefonnummer bitte auf den Zettel.', example_en: 'Please write your phone number on the piece of paper.' -> 'Do you have a piece of paper for me? I have to note something down. Please write your phone number on the piece of paper.'
+Batch 222 saved successfully. Total cumulative updates: 321
+
+Processing Batch 223/229 (Index 1110 to 1115)
+  [UPDATE] 'das Zeugnis' (ID: 1111): theme: 'Arbeit & Beruf' -> 'Ausbildung'
+  [UPDATE] '(an-)/(aus)ziehen' (ID: 1112): theme: 'Einkaufen & Konsum' -> 'Alltag', example_de: 'Ich ziehe mir eine Jacke an.' -> 'Ich ziehe (mir) eine Jacke an. Er hat sein T-Shirt ausgezogen und ein Hemd angezogen. Die Nachbarn sind am Wochenende ausgezogen.', example_en: 'I am putting on a jacket.' -> 'I am putting on a jacket. He took off his T-shirt and put on a shirt. The neighbors moved out on the weekend.', verb_conjugation.perfekt: 'hat an/ausgezogen' -> 'hat/ist an-/ausgezogen'
+  [UPDATE] 'das Ziel' (ID: 1113): theme: 'Reise & Verkehr' -> 'Alltag', example_de: 'Was ist dein Ziel im Leben?' -> 'John läuft sehr schnell. Er war als erster am Ziel. Was ist dein Ziel im Leben?', example_en: 'What is your goal in life?' -> 'John runs very fast. He was the first at the finish line. What is your goal in life?'
+  [UPDATE] 'das Zimmer' (ID: 1114): theme: 'Wohnen & Haushalt' -> 'Wohnen', example_de: 'Die Wohnung hat drei Zimmer.' -> 'Das Zimmer ist am größten. Mach im Schlafzimmer das Fenster zu! Die Wohnung hat drei Zimmer. Ich habe im Hotel ein Zimmer bestellt.', example_en: 'The apartment has three rooms.' -> 'The room is the largest. Close the window in the bedroom! The apartment has three rooms. I have booked a room in the hotel.'
+  [UPDATE] 'der Zirkus' (ID: 1115): theme: 'Freizeit & Unterhaltung' -> 'Freizeit'
+Batch 223 saved successfully. Total cumulative updates: 326
+
+Processing Batch 224/229 (Index 1115 to 1120)
+  [UPDATE] 'die Zitrone' (ID: 1116): theme: 'Essen & Trinken' -> 'Essen', example_de: 'Ich trinke den Tee mit Zitrone.' -> 'Ich trinke den Tee mit Zitrone. Lucia mag Zitroneneis.', example_en: 'I drink the tea with lemon.' -> 'I drink the tea with lemon. Lucia likes lemon ice cream.'
+  [UPDATE] 'der Zoo' (ID: 1117): theme: 'Natur & Umwelt' -> 'Freizeit'
+  [UPDATE] 'zu' (ID: 1118): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Der Bus fährt zum Bahnhof.' -> 'Der Bus fährt zum Bahnhof. Ich gehe zu Fuß. Ich bin zu Hause. Das Kleid ist mir zu teuer. Ich trinke zum Essen ein Bier.', example_en: 'The bus goes to the train station.' -> 'The bus goes to the train station. I go on foot. I am at home. The dress is too expensive for me. I drink a beer with the meal.'
+  [UPDATE] 'zu sein' (ID: 1119): theme: 'Wohnen & Haushalt' -> 'Alltag'
+  [UPDATE] 'der Zucker' (ID: 1120): theme: 'Essen & Trinken' -> 'Essen'
+Batch 224 saved successfully. Total cumulative updates: 331
+
+Processing Batch 225/229 (Index 1120 to 1125)
+  [UPDATE] 'zuerst' (ID: 1121): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Zuerst müsst ihr die Hausaufgaben machen, dann könnt ihr spielen.' -> 'Wer war zuerst? - Der Herr hier. Zuerst gibt es Mittagessen. Dann könnt ihr Schokolade essen. Zuerst hat mir die Arbeit gar nicht gefallen. Jetzt geht es besser.', example_en: 'First you have to do the homework, then you can play.' -> 'Who was first? - The gentleman here. First there is lunch. Then you can eat chocolate. At first, I did not like the work at all. Now it is going better.'
+  [UPDATE] 'zufrieden' (ID: 1122): theme: 'Person & Familie' -> 'Alltag', example_de: 'Ich bin mit der Wohnung zufrieden.' -> 'Meine Kinder haben heute Zeugnisse bekommen. Ich bin zufrieden. Ich bin mit der Wohnung zufrieden. Sie ist nicht so groß, aber sie hat einen Balkon.', example_en: 'I am satisfied with the apartment.' -> 'My children received their report cards today. I am satisfied. I am satisfied with the apartment. It is not that big, but it has a balcony.'
+  [UPDATE] 'der Zug' (ID: 1123): theme: 'Reise & Verkehr' -> 'Reise', example_de: 'Ich fahre gern mit dem Zug.' -> 'Unser Zug hatte 40 Minuten Verspätung. Ich fahre gern mit dem Zug.', example_en: 'I like traveling by train.' -> 'Our train had a 40-minute delay. I like traveling by train.'
+  [UPDATE] 'zuhören' (ID: 1124): theme: 'Ausbildung & Lernen' -> 'Alltag', example_de: 'Hör mir doch mal zu! Ich rede mit dir.' -> 'Hör mir doch mal zu!', example_en: 'Just listen to me! I am talking to you.' -> 'Just listen to me!'
+  [UPDATE] 'zuletzt' (ID: 1125): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Diese Aufgabe machen wir zuletzt.' -> 'Die Kleider packen wir zuletzt ein. Wir haben uns vor drei Jahren zuletzt gesehen.', example_en: 'We will do this task last.' -> 'We will pack the clothes last. We last saw each other three years ago.'
+Batch 225 saved successfully. Total cumulative updates: 336
+
+Processing Batch 226/229 (Index 1125 to 1130)
+  [UPDATE] 'zum Beispiel' (ID: 1126): theme: 'Ausbildung & Lernen' -> 'Alltag'
+  [UPDATE] 'zumachen' (ID: 1127): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'zurück' (ID: 1128): theme: 'Reise & Verkehr' -> 'Reise', example_de: 'Eine Fahrkarte nach Frankfurt und zurück, bitte.' -> 'Eine Fahrkarte nach Frankfurt und zurück, bitte. Wann kommst du zurück?', example_en: 'A ticket to Frankfurt and back, please.' -> 'A ticket to Frankfurt and back, please. When are you coming back?'
+  [UPDATE] 'zurück-' (ID: 1129): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Fahrt ihr nach der Party zurück nach Hause?' -> 'Fahrt ihr nach der Party zurück nach Hause? Wann muss ich das Buch zurückgeben? Wir gehen wieder zurück. Wann kommst du zurück? Ich habe mein Buch vergessen. Ich laufe schnell nach Hause zurück.', example_en: 'Are you driving back home after the party?' -> 'Are you driving back home after the party? When do I have to return the book? We are going back again. When are you coming back? I forgot my book. I am running quickly back home.'
+  [UPDATE] 'zusammen' (ID: 1130): theme: 'Person & Familie' -> 'Alltag', example_de: 'Wollen wir zusammen essen gehen?' -> 'Wollen wir zusammen essen gehen? Zahlen, bitte. - Zusammen oder getrennt? Das macht zusammen 10 Euro 80.', example_en: 'Do we want to go out to eat together?' -> 'Do we want to go out to eat together? The bill, please. - Together or separately? That makes 10 euros 80 together.'
+Batch 226 saved successfully. Total cumulative updates: 341
+
+Processing Batch 227/229 (Index 1130 to 1135)
+  [UPDATE] 'zwischen' (ID: 1131): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Heidelberg liegt zwischen Frankfurt und Stuttgart.' -> 'Heidelberg liegt zwischen Frankfurt und Stuttgart. Zwischen 8 und 10 Uhr bin ich zu Hause.', example_en: 'Heidelberg is located between Frankfurt and Stuttgart.' -> 'Heidelberg is located between Frankfurt and Stuttgart. Between 8 and 10 o'clock I am at home.'
+  [UPDATE] 'ändern' (ID: 1132): theme: 'Person & Familie' -> 'Alltag', example_de: 'Wie kann ich mein Passwort ändern?' -> 'Das Wetter hat sich geändert. Wie kann ich mein Passwort ändern?', example_en: 'How can I change my password?' -> 'The weather has changed. How can I change my password?'
+  [UPDATE] 'öffnen' (ID: 1133): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Ich öffne die Tür.' -> 'Wann öffnen die Geschäfte? Kannst du bitte das Fenster öffnen? Kannst Du mir helfen? Ich kann die Dose nicht öffnen. Du öffnest die Datei mit einem Doppelklick. Der Laden ist samstags bis 16 Uhr geöffnet.', example_en: 'I open the door.' -> 'When do the shops open? Can you please open the window? Can you help me? I cannot open the can. You open the file with a double click. The shop is open on Saturdays until 4 p.m.'
+  [UPDATE] 'das Öl' (ID: 1134): theme: 'Essen & Trinken' -> 'Essen', example_de: 'Machen wir den Salat mit Öl?' -> 'Es fehlt Öl am Salat. Wir heizen mit Öl. Können Sie bei meinem Auto bitte das Öl kontrollieren?', example_en: 'Are we making the salad with oil?' -> 'Oil is missing on the salad. We heat with oil. Can you please check the oil in my car?'
+  [UPDATE] 'üben' (ID: 1135): theme: 'Ausbildung & Lernen' -> 'Ausbildung'
+Batch 227 saved successfully. Total cumulative updates: 346
+
+Processing Batch 228/229 (Index 1135 to 1140)
+  [UPDATE] 'über' (ID: 1136): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Gehen Sie lieber hier über die Straße.' -> 'Gehen Sie lieber hier über die Straße. Über uns wohnt Familie Schneider. Sind Sie über 18?', example_en: 'You had better cross the street here.' -> 'You had better cross the street here. The Schneider family lives above us. Are you over 18?'
+  [UPDATE] 'überall' (ID: 1137): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'übermorgen' (ID: 1138): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'übernachten' (ID: 1139): theme: 'Reise & Verkehr' -> 'Reise'
+  [UPDATE] 'übersetzen' (ID: 1140): theme: 'Ausbildung & Lernen' -> 'Ausbildung'
+Batch 228 saved successfully. Total cumulative updates: 351
+
+Processing Batch 229/229 (Index 1140 to 1142)
+  [UPDATE] 'die Übersetzung' (ID: 1141): theme: 'Ausbildung & Lernen' -> 'Ausbildung'
+  [UPDATE] 'überweisen' (ID: 1142): theme: 'Dienstleistungen & Behörden' -> 'Alltag', example_de: 'Sie können das Geld auch überweisen.' -> 'Sie können das Geld auch überweisen. Ich überweise dir das Geld.', example_en: 'You can also transfer the money.' -> 'You can also transfer the money. I transfer the money to you.'
+Batch 229 saved successfully. Total cumulative updates: 353
+
+Level A2 complete. Audited: 392, Corrections: 353

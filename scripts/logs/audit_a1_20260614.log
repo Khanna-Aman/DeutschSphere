@@ -1,0 +1,287 @@
+--- Audit Started at 2026-06-14 01:41:43 ---
+
+Processing Batch 94/128 (Index 465 to 470)
+FAILED to process batch 94 at index 465
+--- Audit Started at 2026-06-14 01:48:31 ---
+
+Processing Batch 94/128 (Index 465 to 470)
+  [UPDATE] 'ruhig' (ID: 466): theme: 'Wohnen & Haushalt' -> 'Alltag'
+  [UPDATE] 'der Saft' (ID: 467): theme: 'Essen & Trinken' -> 'Essen'
+  [UPDATE] 'sagen' (ID: 468): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_en: 'Tell me, how are you then?' -> 'Tell me, how are you doing?'
+  [UPDATE] 'der Salat' (ID: 469): theme: 'Essen & Trinken' -> 'Essen'
+  [UPDATE] 'das Salz' (ID: 470): theme: 'Essen & Trinken' -> 'Essen', example_en: 'Waiter, can I have some salt, please?' -> 'Waiter, can I please have some salt?'
+Batch 94 saved successfully. Total cumulative updates: 5
+
+Processing Batch 95/128 (Index 470 to 475)
+  [UPDATE] 'die S-Bahn' (ID: 471): theme: 'Reise & Verkehr' -> 'Alltag', example_en: 'I prefer to take the suburban train.' -> 'I prefer to take the S-Bahn.'
+  [UPDATE] 'der Schalter' (ID: 472): theme: 'Reise & Verkehr' -> 'Alltag'
+  [UPDATE] 'scheinen' (ID: 473): theme: 'Natur & Umwelt' -> 'Alltag'
+  [UPDATE] 'schicken' (ID: 474): theme: 'Dienstleistungen & Behörden' -> 'Alltag', example_en: 'Please send me an email.' -> 'Please send me an e-mail.'
+  [UPDATE] 'das Schild' (ID: 475): theme: 'Reise & Verkehr' -> 'Alltag'
+Batch 95 saved successfully. Total cumulative updates: 10
+
+Processing Batch 96/128 (Index 475 to 480)
+  [UPDATE] 'der Schinken' (ID: 476): theme: 'Essen & Trinken' -> 'Essen'
+  [UPDATE] 'schlafen' (ID: 477): theme: 'Gesundheit & Körper' -> 'Alltag'
+  [UPDATE] 'schlecht' (ID: 478): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Wir haben schlechtes Wetter.' -> 'Mir ist schlecht! Sie sehen schlecht aus. Wir haben schlechtes Wetter.', example_en: 'We have bad weather.' -> 'I feel sick! You look bad. We have bad weather.'
+  [UPDATE] 'schließen' (ID: 479): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'der Schluss' (ID: 480): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Ich muss jetzt Schluss machen.' -> 'Ich muss jetzt Schluss machen. Zum Schluss gibt er uns allen die Hand.', example_en: 'I must finish now.' -> 'I must finish now. At the end he gives everyone his hand.'
+Batch 96 saved successfully. Total cumulative updates: 15
+
+Processing Batch 97/128 (Index 480 to 485)
+  [UPDATE] 'der Schlüssel' (ID: 481): theme: 'Wohnen & Haushalt' -> 'Alltag', example_en: 'I will also give you the room key.' -> 'I will give you the room key.'
+  [UPDATE] 'schmecken' (ID: 482): theme: 'Essen & Trinken' -> 'Essen'
+  [UPDATE] 'schnell' (ID: 483): theme: 'Reise & Verkehr' -> 'Alltag'
+  [UPDATE] 'schon' (ID: 484): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_en: 'Is the food already finished?' -> 'Is the food already ready?'
+  [UPDATE] 'der Schrank' (ID: 485): theme: 'Wohnen & Haushalt' -> 'Wohnen', example_en: 'The glasses are in the cupboard.' -> 'The glasses stand in the cupboard.'
+Batch 97 saved successfully. Total cumulative updates: 20
+
+Processing Batch 98/128 (Index 485 to 490)
+  [UPDATE] 'schreiben' (ID: 486): theme: 'Ausbildung & Lernen' -> 'Alltag', example_en: 'He writes fifty emails every day.' -> 'He writes fifty e-mails every day.'
+  [UPDATE] 'der Schuh' (ID: 487): theme: 'Einkaufen & Konsum' -> 'Kleidung'
+  [UPDATE] 'die Schule' (ID: 488): theme: 'Ausbildung & Lernen' -> 'Schule', example_de: 'Meine Tochter geht schon in die Schule.' -> 'Meine Tochter geht schon in die Schule. Die Schule ist gleich hier um die Ecke.', example_en: 'My daughter already goes to school.' -> 'My daughter already goes to school. The school is right around the corner.'
+  [UPDATE] 'schwer' (ID: 489): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Ist Ihr Gepäck sehr schwer?' -> 'Ist Ihr Gepäck sehr schwer? Das ist eine schwere Arbeit.', example_en: 'Is your luggage very heavy?' -> 'Is your luggage very heavy? That is hard work.'
+  [UPDATE] 'die Schwester' (ID: 490): theme: 'Person & Familie' -> 'Familie'
+Batch 98 saved successfully. Total cumulative updates: 25
+
+Processing Batch 99/128 (Index 490 to 495)
+  [UPDATE] 'das Schwimmbad' (ID: 491): theme: 'Freizeit & Unterhaltung' -> 'Freizeit', example_en: 'Are you coming along to the swimming pool?' -> 'Are you coming to the swimming pool?'
+  [UPDATE] 'schwimmen' (ID: 492): theme: 'Freizeit & Unterhaltung' -> 'Alltag', example_en: 'I swim one kilometer every day.' -> 'I swim a kilometer every day.'
+  [UPDATE] 'schön' (ID: 493): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Das ist sehr schön.' -> 'Schönen Urlaub! Das ist sehr schön.', example_en: 'That is very beautiful.' -> 'Have a nice holiday! That is very beautiful.'
+  [UPDATE] 'der Schüler' (ID: 494): theme: 'Ausbildung & Lernen' -> 'Schule', example_en: 'There are eight female students and five male students in my course.' -> 'In my course there are eight female students and five male students.'
+  [UPDATE] 'der See' (ID: 495): theme: 'Natur & Umwelt' -> 'Alltag', example_en: 'Come on, let's drive to Lake Starnberg.' -> 'Come, we are driving to Lake Starnberg.'
+Batch 99 saved successfully. Total cumulative updates: 30
+
+Processing Batch 100/128 (Index 495 to 500)
+  [UPDATE] 'sehen' (ID: 496): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Ich kann dich nicht sehen.' -> 'Ich kann dich nicht sehen. Ich habe diesen Jungen schon einmal gesehen.', example_en: 'I cannot see you.' -> 'I cannot see you. I have seen this boy once before.'
+  [UPDATE] 'die Sehenswürdigkeit' (ID: 497): theme: 'Reise & Verkehr' -> 'Alltag'
+  [UPDATE] 'sehr' (ID: 498): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Das ist sehr schwer.' -> 'Danke sehr! Das ist sehr schwer.', example_en: 'That is very difficult.' -> 'Thank you very much! That is very heavy.'
+  [UPDATE] 'sein' (ID: 499): theme: 'Person & Familie' -> 'Alltag', example_de: 'Ich bin dreiundzwanzig.' -> 'Herr Müller ist in seinem Zimmer. Mir ist kalt. Ich bin dreiundzwanzig.', example_en: 'I am twenty-three.' -> 'Mr. Müller is in his room. I am cold. I am twenty-three.'
+  [UPDATE] 'seit' (ID: 500): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+Batch 100 saved successfully. Total cumulative updates: 35
+
+Processing Batch 101/128 (Index 500 to 505)
+  [UPDATE] 'selbstständig' (ID: 501): theme: 'Arbeit & Beruf' -> 'Beruf'
+  [UPDATE] 'sich' (ID: 502): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_en: 'You have to register yourself first.' -> 'You must register first.'
+  [UPDATE] 'sich kümmern' (ID: 503): theme: 'Person & Familie' -> 'Familie'
+  [UPDATE] 'sie / Sie' (ID: 504): theme: 'Person & Familie' -> 'Alltag', example_de: 'Wie heißen Sie, bitte?' -> 'Wie heißt sie? Wie heißen Sie, bitte?', example_en: 'What is your name, please?' -> 'What is her name? What is your name, please?'
+  [UPDATE] 'sitzen' (ID: 505): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+Batch 101 saved successfully. Total cumulative updates: 40
+
+Processing Batch 102/128 (Index 505 to 510)
+  [UPDATE] 'so' (ID: 506): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Sie müssen das so machen!' -> 'Sie müssen das so machen! Fahren Sie bitte nicht so schnell!', example_en: 'You have to do it like this!' -> 'You must do it like this! Please do not drive so fast!'
+  [UPDATE] 'das Sofa' (ID: 507): theme: 'Wohnen & Haushalt' -> 'Wohnen'
+  [UPDATE] 'sofort' (ID: 508): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'der Sohn' (ID: 509): theme: 'Person & Familie' -> 'Familie', example_en: 'This is Hans, my son.' -> 'That is Hans, my son.'
+  [UPDATE] 'sollen' (ID: 510): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Soll ich kommen?' -> 'Soll ich kommen? Was soll ich mitbringen?', example_en: 'Should I come?' -> 'Should I come? What should I bring?'
+Batch 102 saved successfully. Total cumulative updates: 45
+
+Processing Batch 103/128 (Index 510 to 515)
+  [UPDATE] 'die Sonne' (ID: 511): theme: 'Natur & Umwelt' -> 'Alltag'
+  [UPDATE] 'die Speisekarte' (ID: 512): theme: 'Essen & Trinken' -> 'Essen'
+  [UPDATE] 'spielen' (ID: 513): theme: 'Freizeit & Unterhaltung' -> 'Freizeit', example_de: 'Die Kinder spielen draußen.' -> 'Die Kinder spielen draußen. Spielen Sie Karten?', example_en: 'The children are playing outside.' -> 'The children play outside. Do you play cards?'
+  [UPDATE] 'der Sport' (ID: 514): theme: 'Freizeit & Unterhaltung' -> 'Freizeit'
+  [UPDATE] 'die Sprache' (ID: 515): theme: 'Ausbildung & Lernen' -> 'Alltag'
+Batch 103 saved successfully. Total cumulative updates: 50
+
+Processing Batch 104/128 (Index 515 to 520)
+  [UPDATE] 'sprechen' (ID: 516): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Kann ich mit Herrn Klein sprechen?' -> 'Kann ich (mit) Herrn Klein sprechen?'
+  [UPDATE] 'spät' (ID: 517): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_en: 'It is already late, I have to go.' -> 'It is already late, I must go.'
+  [UPDATE] 'später' (ID: 518): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'die Stadt' (ID: 519): theme: 'Reise & Verkehr' -> 'Alltag'
+  [UPDATE] 'stehen' (ID: 520): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Der Bus steht schon an der Haltestelle.' -> 'Ich glaube es nicht, aber es steht in der Zeitung. Der Bus steht schon an der Haltestelle.', example_en: 'The bus is already standing at the bus stop.' -> 'I do not believe it, but it says so in the newspaper. The bus is already standing at the bus stop.'
+Batch 104 saved successfully. Total cumulative updates: 55
+
+Processing Batch 105/128 (Index 520 to 525)
+  [UPDATE] 'die Stelle' (ID: 521): theme: 'Arbeit & Beruf' -> 'Beruf'
+  [UPDATE] 'stellen' (ID: 522): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'der Stock' (ID: 523): theme: 'Wohnen & Haushalt' -> 'Wohnen', example_en: 'Our apartment is located on the first floor.' -> 'Our apartment is on the first floor.'
+  [UPDATE] 'die Straße' (ID: 524): theme: 'Wohnen & Haushalt' -> 'Alltag', example_en: 'In which street do you live?' -> 'What street do you live on?'
+  [UPDATE] 'die Straßenbahn' (ID: 525): theme: 'Reise & Verkehr' -> 'Alltag', example_en: 'Where does the tram depart?' -> 'Where does the tram depart from?'
+Batch 105 saved successfully. Total cumulative updates: 60
+
+Processing Batch 106/128 (Index 525 to 530)
+  [UPDATE] 'der Student' (ID: 526): theme: 'Ausbildung & Lernen' -> 'Schule', example_en: 'I am a (female) university student.' -> 'I am a university student.'
+  [UPDATE] 'studieren' (ID: 527): theme: 'Ausbildung & Lernen' -> 'Schule'
+  [UPDATE] 'das Studium' (ID: 528): theme: 'Ausbildung & Lernen' -> 'Schule', example_en: 'University studies begin in October.' -> 'The degree program begins in October.'
+  [UPDATE] 'die Stunde' (ID: 529): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_en: 'I will be back in an hour.' -> 'I am back in an hour.'
+  [UPDATE] 'suchen' (ID: 530): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+Batch 106 saved successfully. Total cumulative updates: 65
+
+Processing Batch 107/128 (Index 530 to 535)
+  [UPDATE] 'tanzen' (ID: 531): theme: 'Freizeit & Unterhaltung' -> 'Freizeit'
+  [UPDATE] 'die Tasche' (ID: 532): theme: 'Einkaufen & Konsum' -> 'Alltag'
+  [UPDATE] 'das Taxi' (ID: 533): theme: 'Reise & Verkehr' -> 'Alltag', example_en: 'There are no more buses today. He is travelling by taxi.' -> 'There is no bus anymore today. He is traveling by taxi.'
+  [UPDATE] 'der Tee' (ID: 534): theme: 'Essen & Trinken' -> 'Essen'
+  [UPDATE] 'der Teil' (ID: 535): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_en: 'Please also read the second part.' -> 'Please read the second part too.'
+Batch 107 saved successfully. Total cumulative updates: 70
+
+Processing Batch 108/128 (Index 535 to 540)
+  [UPDATE] 'das Telefon' (ID: 536): theme: 'Dienstleistungen & Behörden' -> 'Alltag'
+  [UPDATE] 'telefonieren' (ID: 537): theme: 'Dienstleistungen & Behörden' -> 'Alltag'
+  [UPDATE] 'der Termin' (ID: 538): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_en: 'It is best if we make an appointment right away.' -> 'It is best if we make an appointment immediately.'
+  [UPDATE] 'der Test' (ID: 539): theme: 'Ausbildung & Lernen' -> 'Schule'
+  [UPDATE] 'teuer' (ID: 540): theme: 'Einkaufen & Konsum' -> 'Einkaufen'
+Batch 108 saved successfully. Total cumulative updates: 75
+
+Processing Batch 109/128 (Index 540 to 545)
+  [UPDATE] 'der Text' (ID: 541): theme: 'Ausbildung & Lernen' -> 'Schule'
+  [UPDATE] 'das Thema' (ID: 542): theme: 'Ausbildung & Lernen' -> 'Schule', example_en: 'Today we are talking about the topic 'food and drink'.' -> 'We are speaking today about the topic "food and drink".'
+  [UPDATE] 'das Ticket' (ID: 543): theme: 'Reise & Verkehr' -> 'Alltag'
+  [UPDATE] 'der Tisch' (ID: 544): theme: 'Wohnen & Haushalt' -> 'Wohnen'
+  [UPDATE] 'die Tochter' (ID: 545): theme: 'Person & Familie' -> 'Familie', example_en: 'This is my daughter Katharina.' -> 'That is my daughter Katharina.'
+Batch 109 saved successfully. Total cumulative updates: 80
+
+Processing Batch 110/128 (Index 545 to 550)
+  [UPDATE] 'die Toilette' (ID: 546): theme: 'Wohnen & Haushalt' -> 'Alltag'
+  [UPDATE] 'die Tomate' (ID: 547): theme: 'Essen & Trinken' -> 'Essen'
+  [UPDATE] 'tot' (ID: 548): theme: 'Person & Familie' -> 'Alltag'
+  [UPDATE] 'die Treppe' (ID: 549): theme: 'Wohnen & Haushalt' -> 'Alltag'
+  [UPDATE] 'trinken' (ID: 550): theme: 'Essen & Trinken' -> 'Essen'
+Batch 110 saved successfully. Total cumulative updates: 85
+
+Processing Batch 111/128 (Index 550 to 555)
+  [UPDATE] 'tschüss' (ID: 551): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_en: 'Young people mostly say 'bye!' and not 'goodbye'.' -> 'Young people mostly say "bye!" and not "goodbye".'
+  [UPDATE] 'tun' (ID: 552): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Ich habe noch etwas zu tun.' -> 'Ich habe noch etwas zu tun. Was tut Ihr Mann?', example_en: 'I still have something to do.' -> 'I still have something to do. What does your husband do?'
+  [UPDATE] 'die Uhr' (ID: 553): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'um' (ID: 554): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Er kommt um sieben Uhr.' -> 'Er kommt um sieben Uhr. Da kommt er gerade um die Ecke.', example_en: 'He is coming at seven o'clock.' -> 'He is coming at seven o'clock. There he comes right around the corner.'
+  [UPDATE] 'umziehen' (ID: 555): theme: 'Wohnen & Haushalt' -> 'Wohnen'
+Batch 111 saved successfully. Total cumulative updates: 90
+
+Processing Batch 112/128 (Index 555 to 560)
+  [UPDATE] 'und' (ID: 556): theme: 'Gesundheit & Körper' -> 'Alltag', example_de: 'Ich bin krank und liege im Bett.' -> 'Peter und Helmut sind meine Söhne.', example_en: 'I am sick and lying in bed.' -> 'Peter and Helmut are my sons.'
+  [UPDATE] 'und' (ID: 557): theme: 'Person & Familie' -> 'Alltag'
+  [UPDATE] 'unser-' (ID: 558): theme: 'Ausbildung & Lernen' -> 'Alltag'
+  [UPDATE] 'unten' (ID: 559): theme: 'Wohnen & Haushalt' -> 'Wohnen', example_en: 'He lives all the way downstairs in the house.' -> 'He lives right at the bottom of the house.'
+  [UPDATE] 'unter' (ID: 560): theme: 'Wohnen & Haushalt' -> 'Alltag'
+Batch 112 saved successfully. Total cumulative updates: 95
+
+Processing Batch 113/128 (Index 560 to 565)
+  [UPDATE] 'der Unterricht' (ID: 561): theme: 'Ausbildung & Lernen' -> 'Schule', example_en: 'We have class from 8:00 AM to 12:00 PM.' -> 'We have class from 8.00 to 12.00.'
+  [UPDATE] 'unterschreiben' (ID: 562): theme: 'Dienstleistungen & Behörden' -> 'Alltag', example_en: 'Where do I have to sign?' -> 'Where must I sign?'
+  [UPDATE] 'die Unterschrift' (ID: 563): theme: 'Dienstleistungen & Behörden' -> 'Alltag'
+  [UPDATE] 'der Urlaub' (ID: 564): theme: 'Arbeit & Beruf' -> 'Alltag'
+  [UPDATE] 'der Vater' (ID: 565): theme: 'Person & Familie' -> 'Familie'
+Batch 113 saved successfully. Total cumulative updates: 100
+
+Processing Batch 114/128 (Index 565 to 570)
+  [UPDATE] 'verboten' (ID: 566): theme: 'Dienstleistungen & Behörden' -> 'Alltag', example_en: 'Smoking is prohibited here.' -> 'Smoking is forbidden here.'
+  [UPDATE] 'verdienen' (ID: 567): theme: 'Arbeit & Beruf' -> 'Beruf'
+  [UPDATE] 'der Verein' (ID: 568): theme: 'Freizeit & Unterhaltung' -> 'Freizeit'
+  [UPDATE] 'verheiratet' (ID: 569): theme: 'Person & Familie' -> 'Familie'
+  [UPDATE] 'verkaufen' (ID: 570): theme: 'Einkaufen & Konsum' -> 'Einkaufen'
+Batch 114 saved successfully. Total cumulative updates: 105
+
+Processing Batch 115/128 (Index 570 to 575)
+  [UPDATE] 'der Verkäufer' (ID: 571): theme: 'Arbeit & Beruf' -> 'Beruf', example_en: 'My mother is a saleswoman in the department store.' -> 'My mother is a shop assistant in the department store.'
+  [UPDATE] 'vermieten' (ID: 572): theme: 'Wohnen & Haushalt' -> 'Wohnen'
+  [UPDATE] 'der Vermieter' (ID: 573): theme: 'Wohnen & Haushalt' -> 'Wohnen', example_de: 'Unser Vermieter heißt Huber.' -> 'Unser Vermieter heißt Huber. Er wohnt auch hier.', example_en: 'Our landlord's name is Huber.' -> 'Our landlord is called Huber. He lives here too.'
+  [UPDATE] 'verstehen' (ID: 574): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'der Verwandte' (ID: 575): theme: 'Person & Familie' -> 'Familie'
+Batch 115 saved successfully. Total cumulative updates: 110
+
+Processing Batch 116/128 (Index 575 to 580)
+  [UPDATE] 'viel' (ID: 576): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'vielleicht' (ID: 577): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_en: 'Maybe I will come by bus.' -> 'I might come by bus.'
+  [UPDATE] 'von' (ID: 578): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Das Auto von Felix ist kaputt.' -> 'Das Auto von Felix ist kaputt. Er kommt gerade von Köln/von zu Hause.', example_en: 'Felix's car is broken.' -> 'Felix's car is broken. He is just coming from Cologne/from home.'
+  [UPDATE] 'vor' (ID: 579): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Das Auto steht vor der Tür.' -> 'Der Termin war vor einer Stunde. Das Auto steht vor der Tür.', example_en: 'The car is standing in front of the door.' -> 'The appointment was an hour ago. The car is standing in front of the door.'
+  [UPDATE] 'der Vorname' (ID: 580): theme: 'Person & Familie' -> 'Person', example_de: 'Mein Vorname ist Eva.' -> 'Ich heiße Müller, mein Vorname ist Eva.', example_en: 'My first name is Eva.' -> 'My name is Müller, my first name is Eva.'
+Batch 116 saved successfully. Total cumulative updates: 115
+
+Processing Batch 117/128 (Index 580 to 585)
+  [UPDATE] 'die Vorsicht' (ID: 581): theme: 'Reise & Verkehr' -> 'Alltag', example_en: 'Watch out! A car is coming there.' -> 'Careful! A car is coming.'
+  [UPDATE] 'die Vorwahl' (ID: 582): theme: 'Dienstleistungen & Behörden' -> 'Alltag'
+  [UPDATE] 'wandern' (ID: 583): theme: 'Freizeit & Unterhaltung' -> 'Freizeit', example_en: 'We are hiking around Lake Chiemsee.' -> 'We are hiking around the Chiemsee.'
+  [UPDATE] 'wann' (ID: 584): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Wann bist du fertig?' -> 'Wann bist du fertig? Wann kann ich Sie anrufen?', example_en: 'When are you finished?' -> 'When are you ready? When can I call you?'
+  [UPDATE] 'warten' (ID: 585): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Können Sie ein paar Minuten warten?' -> 'Können Sie ein paar Minuten warten? Auf wen warten Sie?', example_en: 'Can you wait a few minutes?' -> 'Can you wait a few minutes? Who are you waiting for?'
+Batch 117 saved successfully. Total cumulative updates: 120
+
+Processing Batch 118/128 (Index 585 to 590)
+  [UPDATE] 'warum' (ID: 586): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'was' (ID: 587): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Was möchten Sie?' -> 'Was ist das? Was möchten Sie?', example_en: 'What would you like?' -> 'What is that? What would you like?'
+  [UPDATE] 'waschen' (ID: 588): theme: 'Gesundheit & Körper' -> 'Alltag', example_de: 'Wo kann ich mir die Hände waschen?' -> 'Wo kann ich mir die Hände waschen? Ich muss morgen waschen.', example_en: 'Where can I wash my hands?' -> 'Where can I wash my hands? I must wash tomorrow.'
+  [UPDATE] 'das Wasser' (ID: 589): theme: 'Essen & Trinken' -> 'Essen'
+  [UPDATE] 'weg sein' (ID: 590): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+Batch 118 saved successfully. Total cumulative updates: 125
+
+Processing Batch 119/128 (Index 590 to 595)
+  [UPDATE] 'wehtun' (ID: 591): theme: 'Gesundheit & Körper' -> 'Alltag', example_en: 'I have to go to the doctor. My leg hurts.' -> 'I must go to the doctor. My leg hurts.'
+  [UPDATE] 'weiblich' (ID: 592): theme: 'Person & Familie' -> 'Person', example_en: 'Please check the box: "female" or "male".' -> 'Please check: "female" or "male".'
+  [UPDATE] 'der Wein' (ID: 593): theme: 'Essen & Trinken' -> 'Essen'
+  [UPDATE] 'weit' (ID: 594): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'weiter' (ID: 595): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_en: 'The bus does not drive any further.' -> 'The bus does not go any further.'
+Batch 119 saved successfully. Total cumulative updates: 130
+
+Processing Batch 120/128 (Index 595 to 600)
+  [UPDATE] 'welch-' (ID: 596): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'die Welt' (ID: 597): theme: 'Natur & Umwelt' -> 'Alltag'
+  [UPDATE] 'wenig' (ID: 598): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Ich habe leider nur wenig verstanden.' -> 'Ich habe leider nur wenig verstanden. Er verdient wenig.', example_en: 'Unfortunately, I understood only a little.' -> 'Unfortunately I only understood a little. He earns little.'
+  [UPDATE] 'wer' (ID: 599): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'werden' (ID: 600): theme: 'Arbeit & Beruf' -> 'Alltag'
+Batch 120 saved successfully. Total cumulative updates: 135
+
+Processing Batch 121/128 (Index 600 to 605)
+  [UPDATE] 'das Wetter' (ID: 601): theme: 'Natur & Umwelt' -> 'Alltag'
+  [UPDATE] 'wichtig' (ID: 602): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'wie' (ID: 603): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Wie heißt du?' -> 'Wie heißt du? Er schreibt wie ein Kind.', example_en: 'What is your name?' -> 'What is your name? He writes like a child.'
+  [UPDATE] 'wie viel' (ID: 604): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'wiederholen' (ID: 605): theme: 'Ausbildung & Lernen' -> 'Alltag'
+Batch 121 saved successfully. Total cumulative updates: 140
+
+Processing Batch 122/128 (Index 605 to 610)
+  [UPDATE] 'das Wiederhören' (ID: 606): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_en: 'We have to finish now. So, goodbye!' -> 'We must finish now. So goodbye!'
+  [UPDATE] 'das Wiedersehen' (ID: 607): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'willkommen' (ID: 608): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_en: 'A warm welcome!' -> 'Welcome!'
+  [UPDATE] 'der Wind' (ID: 609): theme: 'Natur & Umwelt' -> 'Alltag', example_en: 'The wind is coming from the east.' -> 'The wind comes from the east.'
+  [UPDATE] 'wir' (ID: 610): theme: 'Person & Familie' -> 'Alltag'
+Batch 122 saved successfully. Total cumulative updates: 145
+
+Processing Batch 123/128 (Index 610 to 615)
+  [UPDATE] 'wissen' (ID: 611): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'wo' (ID: 612): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Wo waren Sie im Urlaub?' -> 'Wo waren Sie im Urlaub? Wo ist die Post? Wo sind Sie geboren?', example_en: 'Where were you on vacation?' -> 'Where were you on vacation? Where is the post office? Where were you born?'
+  [UPDATE] 'woher' (ID: 613): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'wohin' (ID: 614): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Wohin fährt dieser Bus?' -> 'Wohin fährt dieser Bus? Wohin wollen Sie am Wochenende?', example_en: 'Where does this bus go?' -> 'Where does this bus go? Where do you want to go on the weekend?'
+  [UPDATE] 'wohnen' (ID: 615): theme: 'Wohnen & Haushalt' -> 'Wohnen'
+Batch 123 saved successfully. Total cumulative updates: 150
+
+Processing Batch 124/128 (Index 615 to 620)
+  [UPDATE] 'die Wohnung' (ID: 616): theme: 'Wohnen & Haushalt' -> 'Wohnen'
+  [UPDATE] 'wollen' (ID: 617): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'das Wort' (ID: 618): theme: 'Ausbildung & Lernen' -> 'Alltag'
+  [UPDATE] 'wunderbar' (ID: 619): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'zahlen' (ID: 620): theme: 'Einkaufen & Konsum' -> 'Einkaufen', example_en: 'The bill, please! / Pay, please!' -> 'The bill, please!'
+Batch 124 saved successfully. Total cumulative updates: 155
+
+Processing Batch 125/128 (Index 620 to 625)
+  [UPDATE] 'die Zeit' (ID: 621): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'die Zeitung' (ID: 622): theme: 'Freizeit & Unterhaltung' -> 'Alltag'
+  [UPDATE] 'die Zigarette' (ID: 623): theme: 'Einkaufen & Konsum' -> 'Alltag'
+  [UPDATE] 'das Zimmer' (ID: 624): theme: 'Wohnen & Haushalt' -> 'Wohnen', example_de: 'Die Wohnung hat drei Zimmer.' -> 'Das Zimmer ist groß. Öffne im Schlafzimmer das Fenster, bitte! Die Wohnung hat drei Zimmer. Ich habe ein Zimmer bestellt.', example_en: 'The apartment has three rooms.' -> 'The room is big. Open the window in the bedroom, please! The apartment has three rooms. I have booked a room.'
+  [UPDATE] 'der Zoll' (ID: 625): theme: 'Reise & Verkehr' -> 'Alltag'
+Batch 125 saved successfully. Total cumulative updates: 160
+
+Processing Batch 126/128 (Index 625 to 630)
+  [UPDATE] 'zu' (ID: 626): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Der Bus fährt zum Bahnhof.' -> 'Der Bus fährt zum Bahnhof. Ich gehe zu Fuß. Ich bin zu Hause.', example_en: 'The bus goes to the train station.' -> 'The bus goes to the train station. I am going on foot. I am at home.'
+  [UPDATE] 'zu sein' (ID: 627): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'zufrieden' (ID: 628): theme: 'Person & Familie' -> 'Alltag'
+  [UPDATE] 'der Zug' (ID: 629): theme: 'Reise & Verkehr' -> 'Alltag'
+  [UPDATE] 'zum Beispiel (z. B.)' (ID: 630): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+Batch 126 saved successfully. Total cumulative updates: 165
+
+Processing Batch 127/128 (Index 630 to 635)
+  [UPDATE] 'zurzeit' (ID: 631): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag'
+  [UPDATE] 'zurück' (ID: 632): theme: 'Reise & Verkehr' -> 'Alltag', example_de: 'Wann kommst du zurück?' -> 'Einmal Frankfurt und zurück. Wann kommst du zurück?', example_en: 'When are you coming back?' -> 'Frankfurt and back once. When are you coming back?'
+  [UPDATE] 'zusammen' (ID: 633): theme: 'Person & Familie' -> 'Alltag', example_de: 'Sollen wir zusammen essen gehen?' -> 'Sollen wir zusammen essen gehen? Das macht zusammen 2 Euro 80.', example_en: 'Should we go eat together?' -> 'Should we go eat together? That makes 2 euros 80 together.'
+  [UPDATE] 'zweit-' (ID: 634): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Jeans finden Sie im zweiten Stock.' -> 'Lies bitte auch den zweiten Teil.', example_en: 'You will find jeans on the second floor.' -> 'Please read the second part too.'
+  [UPDATE] 'zwischen' (ID: 635): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_de: 'Heidelberg liegt zwischen Frankfurt und Stuttgart.' -> 'Heidelberg liegt zwischen Frankfurt und Stuttgart. Zwischen 8 und 10 Uhr bin ich zu Hause.', example_en: 'Heidelberg is located between Frankfurt and Stuttgart.' -> 'Heidelberg lies between Frankfurt and Stuttgart. Between 8 and 10 o'clock I am at home.'
+Batch 127 saved successfully. Total cumulative updates: 170
+
+Processing Batch 128/128 (Index 635 to 640)
+  [UPDATE] 'öffnen' (ID: 636): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_en: 'I am opening the door.' -> 'I open the door.'
+  [UPDATE] 'das Öl' (ID: 637): theme: 'Essen & Trinken' -> 'Essen', example_en: 'We are making the salad without oil.' -> 'We make the salad without oil.'
+  [UPDATE] 'über' (ID: 638): theme: 'Zeit, Maße & Basiswortschatz' -> 'Alltag', example_en: 'Cross the street here.' -> 'Go across the street here.'
+  [UPDATE] 'übernachten' (ID: 639): theme: 'Reise & Verkehr' -> 'Alltag'
+  [UPDATE] 'überweisen' (ID: 640): theme: 'Dienstleistungen & Behörden' -> 'Alltag'
+Batch 128 saved successfully. Total cumulative updates: 175
+
+Level A1 complete. Audited: 175, Corrections: 175

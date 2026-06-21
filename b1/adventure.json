@@ -1,0 +1,68 @@
+[
+  {
+    "id": "arzt_b1",
+    "title": "Beim Arzt (Erweitert)",
+    "theme": "Gesundheit & Körper",
+    "difficulty": "B1",
+    "initial_node": "start",
+    "nodes": {
+      "start": {
+        "npc_text": "Guten Tag! Sie kommen wegen Ihrer anhaltenden Magenschmerzen?",
+        "targets": ["weil", "Stress"],
+        "scrambled_chips": ["Ja,", "ich glaube,", "dass ich", "zu viel", "Stress habe,", "weil ich", "viel arbeite."],
+        "correct_syntax": ["Ja,", "ich glaube,", "dass ich", "zu viel", "Stress habe,", "weil ich", "viel arbeite."],
+        "next_node": "lifestyle_advice",
+        "hint": "Both 'dass' and 'weil' introduce subordinate clauses, meaning the conjugated verbs ('habe' and 'arbeite') are sent to the end of their respective clauses."
+      },
+      "lifestyle_advice": {
+        "npc_text": "Stress ist oft der Auslöser. Haben Sie schon Ihre Ernährung umgestellt?",
+        "targets": ["Ernährung", "Gemüse"],
+        "scrambled_chips": ["Ja,", "ich versuche,", "mehr Gemüse", "zu essen,", "aber es ist", "schwierig."],
+        "correct_syntax": ["Ja,", "ich versuche,", "mehr Gemüse", "zu essen,", "aber es ist", "schwierig."],
+        "next_node": "prescription_b1",
+        "hint": "Verbs expressing attempt ('versuchen') trigger an infinitive clause with 'zu': 'mehr Gemüse zu essen'."
+      },
+      "prescription_b1": {
+        "npc_text": "Ich verschreibe Ihnen einen Magenschutz. Wenn es nicht besser wird, machen wir ein Blutbild.",
+        "targets": ["wenn", "Arzt"],
+        "scrambled_chips": ["Alles klar,", "wenn es", "schlimmer wird,", "komme ich", "sofort", "wieder."],
+        "correct_syntax": ["Alles klar,", "wenn es", "schlimmer wird,", "komme ich", "sofort", "wieder."],
+        "next_node": "end",
+        "hint": "When a conditional 'wenn' clause starts a sentence, the main clause immediately follows with its verb in the first position: 'komme ich'."
+      }
+    }
+  },
+  {
+    "id": "bewerbung_b1",
+    "title": "Das Bewerbungsgespräch",
+    "theme": "Arbeit & Beruf",
+    "difficulty": "B1",
+    "initial_node": "start",
+    "nodes": {
+      "start": {
+        "npc_text": "Guten Tag! Erzählen Sie mir bitte, warum Sie sich bei unserer Firma bewerben möchten.",
+        "targets": ["weil", "Erfahrung"],
+        "scrambled_chips": ["Ich bewerbe mich,", "weil ich", "neue Erfahrungen", "sammeln möchte", "und mich", "weiterentwickeln will."],
+        "correct_syntax": ["Ich bewerbe mich,", "weil ich", "neue Erfahrungen", "sammeln möchte", "und mich", "weiterentwickeln will."],
+        "next_node": "strength_question",
+        "hint": "The subordinating conjunction 'weil' kicks the auxiliary/conjugated verbs ('möchte', 'will') to the very end of their respective clauses."
+      },
+      "strength_question": {
+        "npc_text": "Das klingt vielversprechend. Was würden Sie sagen, ist Ihre größte Stärke?",
+        "targets": ["obwohl", "arbeiten"],
+        "scrambled_chips": ["Obwohl ich", "manchmal ungeduldig bin,", "kann ich", "sehr gut", "unter Druck", "arbeiten."],
+        "correct_syntax": ["Obwohl ich", "manchmal ungeduldig bin,", "kann ich", "sehr gut", "unter Druck", "arbeiten."],
+        "next_node": "salary_question",
+        "hint": "The concession clause introduced by 'obwohl' acts as Position 1 for the main sentence. Therefore, the main sentence's verb 'kann' must immediately follow at Position 2."
+      },
+      "salary_question": {
+        "npc_text": "Eine nützliche Eigenschaft. Haben Sie sich schon Gedanken über Ihre Gehaltsvorstellungen gemacht?",
+        "targets": ["hoffen", "verdienen"],
+        "scrambled_chips": ["Ja,", "ich hoffe,", "dass ich", "ein faires", "Gehalt", "verdienen werde."],
+        "correct_syntax": ["Ja,", "ich hoffe,", "dass ich", "ein faires", "Gehalt", "verdienen werde."],
+        "next_node": "end",
+        "hint": "The subordinate clause 'dass ich...' ends with the conjugated verb 'werde', following the infinitive 'verdienen' (double verb end order)."
+      }
+    }
+  }
+]

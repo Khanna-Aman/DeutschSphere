@@ -1,0 +1,33 @@
+{
+  "name": "German Vocabulary Master — A1-B1",
+  "short_name": "German Master",
+  "description": "A zero-dependency, offline-first German vocabulary flashcard SPA covering 3,921 words across CEFR levels A1-B1.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#020617",
+  "background_color": "#020617",
+  "categories": ["education", "utilities"],
+  "lang": "de",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "twemoji_cache/1f393.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

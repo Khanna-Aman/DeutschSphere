@@ -1,0 +1,1341 @@
+/* H3: Google Fonts now loaded via <link> in index.html (non-render-blocking) */
+
+/* Base Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* V3: Progressive enhancement — enables native auto-height transitions in Chromium 129+.
+   Silently ignored (no-op) in Firefox/Safari. Works alongside the CSS Grid accordion. */
+:root {
+  interpolate-size: allow-keywords;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Accordion Transition — CSS Grid trick for real auto-height animation.
+   Replaces the max-height: 2000px magic number. The grid-template-rows
+   0fr→1fr transition animates to the actual content height, eliminating
+   the artificially fast-then-slow easing caused by a 2000px runway. */
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.65s linear(0.083, 0.215, 0.369, 0.523, 0.666, 0.79, 0.889, 0.965, 1.018, 1.052, 1.071, 1.077, 1.075, 1.067, 1.056, 1.045, 1.033, 1.022, 1.014, 1.007, 1.001, 0.998, 0.996, 0.994, 0.994, 0.994, 0.995, 0.996, 0.997, 0.998, 0.999, 0.999, 1, 1, 1, 1, 1, 1), opacity 0.35s ease-out;
+}
+
+.accordion-content > * {
+  overflow: hidden;
+}
+
+.accordion-content.open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.4);
+}
+
+/* Card Glow States */
+.card-glow-der {
+  box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.25), 0 0 20px rgba(59, 130, 246, 0.15);
+  border: 3px solid rgba(59, 130, 246, 0.65) !important;
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.15) 0%, rgba(15, 23, 42, 0.45) 100%) !important;
+}
+.card-glow-der:hover {
+  box-shadow: 0 20px 40px -5px rgba(59, 130, 246, 0.35), 0 0 30px rgba(59, 130, 246, 0.25);
+  border-color: rgba(59, 130, 246, 0.95) !important;
+}
+
+.card-glow-die {
+  box-shadow: 0 10px 30px -10px rgba(236, 72, 153, 0.25), 0 0 20px rgba(236, 72, 153, 0.15);
+  border: 3px solid rgba(236, 72, 153, 0.65) !important;
+  background: linear-gradient(180deg, rgba(236, 72, 153, 0.15) 0%, rgba(15, 23, 42, 0.45) 100%) !important;
+}
+.card-glow-die:hover {
+  box-shadow: 0 20px 40px -5px rgba(236, 72, 153, 0.35), 0 0 30px rgba(236, 72, 153, 0.25);
+  border-color: rgba(236, 72, 153, 0.95) !important;
+}
+
+.card-glow-das {
+  box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.25), 0 0 20px rgba(16, 185, 129, 0.15);
+  border: 3px solid rgba(16, 185, 129, 0.65) !important;
+  background: linear-gradient(180deg, rgba(16, 185, 129, 0.15) 0%, rgba(15, 23, 42, 0.45) 100%) !important;
+}
+.card-glow-das:hover {
+  box-shadow: 0 20px 40px -5px rgba(16, 185, 129, 0.35), 0 0 30px rgba(16, 185, 129, 0.25);
+  border-color: rgba(16, 185, 129, 0.95) !important;
+}
+
+.card-glow-neutral {
+  box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.15), 0 0 15px rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.3) !important;
+}
+.card-glow-neutral:hover {
+  box-shadow: 0 20px 40px -5px rgba(99, 102, 241, 0.25), 0 0 25px rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.6) !important;
+}
+
+/* A11y: Color-blind safe gender pattern indicators (WCAG 1.4.1 Use of Color) */
+.card-glow-der::after,
+.card-glow-die::after,
+.card-glow-das::after {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 1;
+  font-family: 'Outfit', sans-serif;
+}
+.card-glow-der::after {
+  content: '♂ M';
+  color: rgba(59, 130, 246, 0.85);
+}
+.card-glow-die::after {
+  content: '♀ F';
+  color: rgba(236, 72, 153, 0.85);
+}
+.card-glow-das::after {
+  content: '⚬ N';
+  color: rgba(16, 185, 129, 0.85);
+}
+
+/* Shuffle Animation */
+@keyframes shuffle {
+  0% { transform: scale(1) rotate(0deg); }
+  20% { transform: scale(0.93) rotate(-5deg) translateY(-5px); }
+  45% { transform: scale(0.95) rotate(6deg) translateY(10px) translateX(10px); }
+  70% { transform: scale(0.93) rotate(-3deg) translateY(-5px) translateX(-5px); }
+  85% { transform: scale(1.03) rotate(2deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+.shuffle-anim {
+  animation: shuffle 0.65s linear(0.083, 0.215, 0.369, 0.523, 0.666, 0.79, 0.889, 0.965, 1.018, 1.052, 1.071, 1.077, 1.075, 1.067, 1.056, 1.045, 1.033, 1.022, 1.014, 1.007, 1.001, 0.998, 0.996, 0.994, 0.994, 0.994, 0.995, 0.996, 0.997, 0.998, 0.999, 0.999, 1, 1, 1, 1, 1, 1) both;
+}
+
+/* Mesh Background Grid */
+.bg-mesh {
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(236, 72, 153, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.08) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(16, 185, 129, 0.05) 0px, transparent 50%);
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Active sidebar item glow */
+.sidebar-active {
+  background: linear-gradient(90deg, rgba(99, 102, 241, 0.15) 0%, rgba(99, 102, 241, 0.02) 100%);
+  border-left: 3px solid rgb(99, 102, 241);
+}
+
+/* Hotkey tag styles */
+.hotkey-badge {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+/* Cheatcodes Card Styles */
+.cheatcode-card {
+  /* V3: Narrowed from 'all' to only transitioning actual hover-changing properties */
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.cheatcode-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Cheatcodes Gender specific borders */
+.cheatcode-border-die {
+  border-left: 4px solid #ec4899 !important;
+  box-shadow: 0 4px 20px -5px rgba(236, 72, 153, 0.1);
+}
+.cheatcode-border-das {
+  border-left: 4px solid #10b981 !important;
+  box-shadow: 0 4px 20px -5px rgba(16, 185, 129, 0.1);
+}
+.cheatcode-border-der {
+  border-left: 4px solid #3b82f6 !important;
+  box-shadow: 0 4px 20px -5px rgba(59, 130, 246, 0.1);
+}
+.cheatcode-border-verb {
+  border-left: 4px solid #6366f1 !important;
+  box-shadow: 0 4px 20px -5px rgba(99, 102, 241, 0.1);
+}
+.cheatcode-border-adj {
+  border-left: 4px solid #a855f7 !important;
+  box-shadow: 0 4px 20px -5px rgba(168, 85, 247, 0.1);
+}
+
+/* Scrollbar hiding helper */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Hyphenation & Word-breaking for long German words on mobile devices */
+#card-word {
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Card Entry Transitions (Phase 1: Aesthetic Polish) */
+@keyframes slideInRight {
+  from { transform: translateX(24px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-24px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.slide-in-right {
+  animation: slideInRight 0.65s linear(0.083, 0.215, 0.369, 0.523, 0.666, 0.79, 0.889, 0.965, 1.018, 1.052, 1.071, 1.077, 1.075, 1.067, 1.056, 1.045, 1.033, 1.022, 1.014, 1.007, 1.001, 0.998, 0.996, 0.994, 0.994, 0.994, 0.995, 0.996, 0.997, 0.998, 0.999, 0.999, 1, 1, 1, 1, 1, 1) both;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.65s linear(0.083, 0.215, 0.369, 0.523, 0.666, 0.79, 0.889, 0.965, 1.018, 1.052, 1.071, 1.077, 1.075, 1.067, 1.056, 1.045, 1.033, 1.022, 1.014, 1.007, 1.001, 0.998, 0.996, 0.994, 0.994, 0.994, 0.995, 0.996, 0.997, 0.998, 0.999, 0.999, 1, 1, 1, 1, 1, 1) both;
+}
+
+/* Shake Animation for Wrong Answers (Phase 2: Spelling & Quiz feedback) */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-6px); }
+  20%, 40%, 60%, 80% { transform: translateX(6px); }
+}
+
+.shake-anim {
+  animation: shake 0.45s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+/* ==========================================
+   THEME CUSTOMIZATION ENGINE OVERRIDES
+   ========================================== */
+
+/* 🌌 Berlin Cyberpunk Theme */
+body.theme-cyberpunk {
+  background-color: #030308 !important;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(236, 72, 153, 0.16) 0px, transparent 40%),
+    radial-gradient(at 100% 100%, rgba(6, 182, 212, 0.16) 0px, transparent 40%),
+    radial-gradient(at 50% 50%, rgba(147, 51, 234, 0.05) 0px, transparent 50%) !important;
+  color: #f1f5f9 !important;
+}
+body.theme-cyberpunk .glass,
+body.theme-cyberpunk #flashcard,
+body.theme-cyberpunk #quiz-workspace > div,
+body.theme-cyberpunk #quiz-results,
+body.theme-cyberpunk #stats-view > div,
+body.theme-cyberpunk #deck-prefs-dropdown {
+  background: rgba(10, 10, 18, 0.75) !important;
+  border-color: rgba(6, 182, 212, 0.25) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+body.theme-cyberpunk #sidebar {
+  background: rgba(5, 5, 10, 0.96) !important;
+  border-color: rgba(6, 182, 212, 0.3) !important;
+}
+body.theme-cyberpunk select,
+body.theme-cyberpunk input {
+  background-color: rgba(5, 5, 10, 0.9) !important;
+  border-color: rgba(6, 182, 212, 0.3) !important;
+  color: #22d3ee !important; /* cyan-400 */
+}
+body.theme-cyberpunk select:focus,
+body.theme-cyberpunk input:focus {
+  border-color: #f43f5e !important; /* rose-500 */
+  box-shadow: 0 0 12px rgba(244, 63, 94, 0.4) !important;
+}
+body.theme-cyberpunk .sidebar-active {
+  background: linear-gradient(90deg, rgba(236, 72, 153, 0.2) 0%, rgba(236, 72, 153, 0.02) 100%) !important;
+  border-left-color: #ec4899 !important;
+}
+body.theme-cyberpunk .text-white,
+body.theme-cyberpunk .text-slate-100 {
+  color: #ffffff !important;
+}
+body.theme-cyberpunk .text-indigo-400,
+body.theme-cyberpunk .text-indigo-500 {
+  color: #06b6d4 !important; /* cyan */
+}
+
+/* 🌲 Schwarzwald Dark Theme */
+body.theme-schwarzwald {
+  background-color: #040905 !important;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.15) 0px, transparent 45%),
+    radial-gradient(at 100% 100%, rgba(234, 179, 8, 0.1) 0px, transparent 45%),
+    radial-gradient(at 50% 50%, rgba(4, 120, 87, 0.04) 0px, transparent 50%) !important;
+  color: #f0fdf4 !important;
+}
+body.theme-schwarzwald .glass,
+body.theme-schwarzwald #flashcard,
+body.theme-schwarzwald #quiz-workspace > div,
+body.theme-schwarzwald #quiz-results,
+body.theme-schwarzwald #stats-view > div,
+body.theme-schwarzwald #deck-prefs-dropdown {
+  background: rgba(8, 16, 11, 0.75) !important;
+  border-color: rgba(16, 185, 129, 0.25) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+body.theme-schwarzwald #sidebar {
+  background: rgba(4, 10, 7, 0.96) !important;
+  border-color: rgba(16, 185, 129, 0.3) !important;
+}
+body.theme-schwarzwald select,
+body.theme-schwarzwald input {
+  background-color: rgba(4, 10, 7, 0.9) !important;
+  border-color: rgba(16, 185, 129, 0.3) !important;
+  color: #34d399 !important; /* emerald-400 */
+}
+body.theme-schwarzwald select:focus,
+body.theme-schwarzwald input:focus {
+  border-color: #eab308 !important; /* yellow-500 */
+  box-shadow: 0 0 12px rgba(234, 179, 8, 0.4) !important;
+}
+body.theme-schwarzwald .sidebar-active {
+  background: linear-gradient(90deg, rgba(16, 185, 129, 0.2) 0%, rgba(16, 185, 129, 0.02) 100%) !important;
+  border-left-color: #10b981 !important;
+}
+body.theme-schwarzwald .text-indigo-400,
+body.theme-schwarzwald .text-indigo-500 {
+  color: #10b981 !important; /* emerald */
+}
+
+/* 🍺 Oktoberfest Gold Theme */
+body.theme-oktoberfest {
+  background-color: #0b0502 !important;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(217, 119, 6, 0.15) 0px, transparent 45%),
+    radial-gradient(at 100% 100%, rgba(220, 38, 38, 0.12) 0px, transparent 45%),
+    radial-gradient(at 50% 50%, rgba(146, 64, 14, 0.05) 0px, transparent 50%) !important;
+  color: #fffbeb !important;
+}
+body.theme-oktoberfest .glass,
+body.theme-oktoberfest #flashcard,
+body.theme-oktoberfest #quiz-workspace > div,
+body.theme-oktoberfest #quiz-results,
+body.theme-oktoberfest #stats-view > div,
+body.theme-oktoberfest #deck-prefs-dropdown {
+  background: rgba(22, 10, 4, 0.75) !important;
+  border-color: rgba(217, 119, 6, 0.25) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+body.theme-oktoberfest #sidebar {
+  background: rgba(15, 6, 2, 0.96) !important;
+  border-color: rgba(217, 119, 6, 0.3) !important;
+}
+body.theme-oktoberfest select,
+body.theme-oktoberfest input {
+  background-color: rgba(15, 6, 2, 0.9) !important;
+  border-color: rgba(217, 119, 6, 0.3) !important;
+  color: #fbbf24 !important; /* amber-400 */
+}
+body.theme-oktoberfest select:focus,
+body.theme-oktoberfest input:focus {
+  border-color: #dc2626 !important; /* red-600 */
+  box-shadow: 0 0 12px rgba(220, 38, 38, 0.4) !important;
+}
+body.theme-oktoberfest .sidebar-active {
+  background: linear-gradient(90deg, rgba(217, 119, 6, 0.2) 0%, rgba(217, 119, 6, 0.02) 100%) !important;
+  border-left-color: #d97706 !important;
+}
+body.theme-oktoberfest .text-indigo-400,
+body.theme-oktoberfest .text-indigo-500 {
+  color: #f59e0b !important; /* amber */
+}
+
+/* 🏛️ Weimar Classic (Light Theme) */
+body.theme-weimar {
+  background-color: #fcfcf8 !important;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.04) 0px, transparent 40%),
+    radial-gradient(at 100% 100%, rgba(71, 85, 105, 0.04) 0px, transparent 40%) !important;
+  color: #0f172a !important;
+}
+body.theme-weimar .glass,
+body.theme-weimar #flashcard,
+body.theme-weimar #quiz-workspace > div,
+body.theme-weimar #quiz-results,
+body.theme-weimar #stats-view > div,
+body.theme-weimar #deck-prefs-dropdown {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border-color: rgba(203, 213, 225, 0.8) !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+body.theme-weimar #sidebar {
+  background: rgba(248, 250, 252, 0.97) !important;
+  border-color: rgba(226, 232, 240, 0.9) !important;
+  box-shadow: 4px 0 30px rgba(15, 23, 42, 0.04) !important;
+}
+body.theme-weimar select,
+body.theme-weimar input {
+  background-color: #ffffff !important;
+  border-color: rgba(203, 213, 225, 0.9) !important;
+  color: #1e293b !important;
+}
+body.theme-weimar select:focus,
+body.theme-weimar input:focus {
+  border-color: #4f46e5 !important; /* indigo-600 */
+  box-shadow: 0 0 12px rgba(79, 70, 229, 0.15) !important;
+}
+body.theme-weimar .sidebar-active {
+  background: linear-gradient(90deg, rgba(99, 102, 241, 0.08) 0%, rgba(99, 102, 241, 0.01) 100%) !important;
+  border-left-color: #4f46e5 !important;
+}
+body.theme-weimar .text-white:not(button, .bg-indigo-600, .bg-emerald-600, .bg-rose-600, .bg-sky-500, .bg-indigo-500, .bg-emerald-500, .bg-rose-500, .bg-red-600, .bg-violet-600, .level-title, .level-title *),
+body.theme-weimar .text-slate-100:not(button, .bg-indigo-600, .bg-emerald-600, .bg-rose-600, .bg-sky-500, .bg-indigo-500, .bg-emerald-500, .bg-rose-500, .bg-red-600, .bg-violet-600),
+body.theme-weimar .text-slate-200:not(button, .bg-indigo-600, .bg-emerald-600, .bg-rose-600, .bg-sky-500, .bg-indigo-500, .bg-emerald-500, .bg-rose-500, .bg-red-600, .bg-violet-600),
+body.theme-weimar h1:not(.level-title),
+body.theme-weimar h2:not(#current-category-title),
+body.theme-weimar h3,
+body.theme-weimar h4 {
+  color: #0f172a !important;
+}
+body.theme-weimar .text-slate-400,
+body.theme-weimar .text-slate-500 {
+  color: #475569 !important;
+}
+body.theme-weimar .text-indigo-400,
+body.theme-weimar .text-indigo-500 {
+  color: #4f46e5 !important;
+}
+body.theme-weimar .card-glow-neutral {
+  border-color: rgba(148, 163, 184, 0.3) !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05) !important;
+}
+body.theme-weimar #mobile-sidebar-toggle {
+  color: #0f172a !important;
+}
+body.theme-weimar header {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(226, 232, 240, 0.8) !important;
+}
+
+/* Premium Button Contrast & Viewport fixes for Weimar Classic (Light Theme) */
+body.theme-weimar button.bg-indigo-600,
+body.theme-weimar button.bg-indigo-500,
+body.theme-weimar button.bg-emerald-600,
+body.theme-weimar button.bg-emerald-500,
+body.theme-weimar button.bg-rose-600,
+body.theme-weimar button.bg-rose-500,
+body.theme-weimar button.bg-red-600,
+body.theme-weimar button.bg-sky-500,
+body.theme-weimar button.bg-violet-600,
+body.theme-weimar .badge-glow-der,
+body.theme-weimar .badge-glow-die,
+body.theme-weimar .badge-glow-das {
+  color: #ffffff !important;
+}
+body.theme-weimar button.bg-indigo-600 i,
+body.theme-weimar button.bg-indigo-500 i,
+body.theme-weimar button.bg-emerald-600 i,
+body.theme-weimar button.bg-emerald-500 i,
+body.theme-weimar button.bg-rose-600 i,
+body.theme-weimar button.bg-rose-500 i,
+body.theme-weimar button.bg-red-600 i,
+body.theme-weimar button.bg-sky-500 i,
+body.theme-weimar button.bg-violet-600 i {
+  color: #ffffff !important;
+}
+
+/* Secondary Button Morph for Elegant Light Theme Aesthetic */
+body.theme-weimar button.bg-slate-900,
+body.theme-weimar button.bg-slate-950,
+body.theme-weimar button.bg-slate-800,
+body.theme-weimar button[class*="bg-slate-900"],
+body.theme-weimar button[class*="bg-slate-950"] {
+  background-color: #ffffff !important;
+  border: 1px solid rgba(203, 213, 225, 0.9) !important;
+  color: #1e293b !important;
+}
+body.theme-weimar button.bg-slate-900:hover,
+body.theme-weimar button.bg-slate-950:hover,
+body.theme-weimar button.bg-slate-800:hover,
+body.theme-weimar button[class*="bg-slate-900"]:hover,
+body.theme-weimar button[class*="bg-slate-950"]:hover {
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+body.theme-weimar button.bg-slate-900 i,
+body.theme-weimar button.bg-slate-950 i,
+body.theme-weimar button.bg-slate-800 i,
+body.theme-weimar button[class*="bg-slate-900"] i,
+body.theme-weimar button[class*="bg-slate-950"] i {
+  color: #4f46e5 !important; /* Elegant Indigo icons */
+}
+
+/* Restore Gradient Logos and category active states */
+body.theme-weimar .level-title {
+  color: transparent !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+}
+
+/* ==========================================================================
+   DEUTSCH-ABENTEUER (RPG) MODE STYLES
+   ========================================================================== */
+
+.adventure-chip {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  cursor: pointer;
+}
+.adventure-chip:hover {
+  transform: scale(1.05) translateY(-1.5px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.35);
+  border-color: rgba(99, 102, 241, 0.7) !important;
+}
+.adventure-chip:active {
+  transform: scale(0.95);
+}
+.adventure-chip-used {
+  opacity: 0.25;
+  pointer-events: none;
+  transform: scale(0.92);
+}
+
+@keyframes pulseGlowSuccess {
+  0%, 100% { box-shadow: 0 0 15px rgba(16, 185, 129, 0.2); }
+  50% { box-shadow: 0 0 25px rgba(16, 185, 129, 0.4); }
+}
+.adventure-success-pulse {
+  animation: pulseGlowSuccess 2s infinite;
+  border-color: rgba(16, 185, 129, 0.6) !important;
+}
+
+@keyframes pulseGlowError {
+  0%, 100% { box-shadow: 0 0 15px rgba(244, 63, 94, 0.2); }
+  50% { box-shadow: 0 0 25px rgba(244, 63, 94, 0.4); }
+}
+.adventure-error-pulse {
+  animation: pulseGlowError 2s infinite;
+  border-color: rgba(244, 63, 94, 0.6) !important;
+}
+
+/* Theme Support for Weimar (Light Theme) */
+body.theme-weimar #adventure-view h1,
+body.theme-weimar #adventure-view h2,
+body.theme-weimar #adventure-view h3,
+body.theme-weimar #adventure-view h4 {
+  color: #0f172a !important;
+}
+body.theme-weimar #adventure-view .text-slate-100,
+body.theme-weimar #adventure-view .text-slate-200,
+body.theme-weimar #adventure-view .text-slate-300 {
+  color: #334155 !important;
+}
+body.theme-weimar #adventure-view .text-slate-400 {
+  color: #475569 !important;
+}
+body.theme-weimar #adventure-view .text-slate-500 {
+  color: #64748b !important;
+}
+body.theme-weimar #adventure-selector-screen > div,
+body.theme-weimar #adventure-board > div,
+body.theme-weimar #adventure-results {
+  background: rgba(255, 255, 255, 0.88) !important;
+  border-color: rgba(203, 213, 225, 0.8) !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04) !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+}
+body.theme-weimar #adventure-board div.border-b {
+  border-bottom-color: rgba(226, 232, 240, 0.8) !important;
+}
+body.theme-weimar #adventure-dropzone {
+  background-color: rgba(248, 250, 252, 0.6) !important;
+  border-color: rgba(203, 213, 225, 0.9) !important;
+}
+body.theme-weimar #adventure-chips-pool {
+  background-color: rgba(241, 245, 249, 0.4) !important;
+  border-color: rgba(226, 232, 240, 0.8) !important;
+}
+body.theme-weimar .adventure-chip {
+  background-color: #ffffff !important;
+  border-color: rgba(203, 213, 225, 0.9) !important;
+  color: #1e293b !important;
+}
+body.theme-weimar .adventure-chip:hover {
+  background-color: rgba(99, 102, 241, 0.05) !important;
+  border-color: rgba(99, 102, 241, 0.6) !important;
+  color: #4f46e5 !important;
+}
+body.theme-weimar #adventure-feedback {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(203, 213, 225, 0.9) !important;
+}
+
+
+/* --- PHONETIK-SPIEGEL (PHONETIC MIRROR) PREMIUM STYLES --- */
+
+#phonetic-mirror-panel {
+  transition: grid-template-rows 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease-out, margin 0.4s ease-out;
+}
+
+#phonetic-mirror-panel.open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Pulse Ring Animation for recording */
+.phonetic-pulse-active {
+  animation: phonetic-pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  opacity: 1 !important;
+}
+
+@keyframes phonetic-pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(236, 72, 153, 0.7);
+  }
+  70% {
+    transform: scale(1.2);
+    box-shadow: 0 0 0 12px rgba(236, 72, 153, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(236, 72, 153, 0);
+  }
+}
+
+/* Slide in animation for panel reveal */
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Weimar Theme Overrides for Phonetik Panel */
+body.theme-weimar #phonetic-mirror-panel .glass {
+  background: rgba(255, 241, 242, 0.9) !important;
+  border-color: rgba(244, 63, 94, 0.35) !important;
+  box-shadow: 0 15px 30px rgba(244, 63, 94, 0.05) !important;
+}
+body.theme-weimar #phonetic-mirror-panel h3 {
+  color: #0f172a !important;
+}
+body.theme-weimar #phonetic-mirror-panel span,
+body.theme-weimar #phonetic-mirror-panel p {
+  color: #334155 !important;
+}
+body.theme-weimar #phonetic-mirror-panel #phonetic-status-msg {
+  color: #1e293b !important;
+}
+body.theme-weimar #phonetic-mirror-panel #phonetic-feedback-msg {
+  color: #475569 !important;
+}
+body.theme-weimar #phonetic-mirror-panel #phonetic-record-btn {
+  background-color: #ffffff !important;
+  border-color: rgba(244, 63, 94, 0.4) !important;
+  color: #e11d48 !important;
+}
+body.theme-weimar #phonetic-mirror-panel #phonetic-record-btn:hover {
+  background-color: rgba(244, 63, 94, 0.05) !important;
+  border-color: #e11d48 !important;
+  color: #e11d48 !important;
+}
+body.theme-weimar #phonetic-mirror-panel .bg-slate-950\/60,
+body.theme-weimar #phonetic-mirror-panel .bg-slate-950\/50,
+body.theme-weimar #phonetic-mirror-panel .bg-slate-950 {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(226, 232, 240, 0.8) !important;
+}
+
+/* --- PREMIUM DECK PREFERENCES DROPDOWN --- */
+#deck-prefs-dropdown {
+  transform: scale(0.95);
+  transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1), transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Ensure focus-visible focus ring for accessibility navigation */
+#deck-preferences-menu button:focus-visible,
+#deck-control-deck button:focus-visible {
+  outline: 2px solid rgb(99, 102, 241);
+  outline-offset: 2px;
+}
+
+/* --- MOBILE TEXT WRAPPING & HYPHENATION IMPROVEMENTS --- */
+#card-meaning, 
+#card-example-de, 
+#card-example-en, 
+.adventure-chip, 
+#adventure-npc-bubble,
+#phonetic-status-msg,
+#phonetic-feedback-msg {
+  hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+/* --- GRAMMATIK-WEBEREI (GRAMMAR WEAVER) PREMIUM STYLES --- */
+.weaver-chip {
+  cursor: grab;
+  user-select: none;
+  touch-action: none; /* Crucial for touch PointerEvents drag-and-drop */
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.15s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.weaver-chip:active {
+  cursor: grabbing;
+}
+
+.weaver-chip-dragging {
+  cursor: grabbing;
+  transform: scale(1.06) rotate(1.5deg) !important;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.5) !important;
+  z-index: 100 !important;
+  position: fixed !important;
+  pointer-events: none !important; /* Allow mouse pass-through for collision */
+}
+
+/* Base chips - Glowing borders and background */
+.weaver-chip-subject, .weaver-chip-der {
+  border-color: rgba(59, 130, 246, 0.35) !important;
+  background-color: rgba(30, 58, 138, 0.25) !important;
+  color: #93c5fd !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 0 8px rgba(59, 130, 246, 0.15);
+}
+.weaver-chip-die {
+  border-color: rgba(236, 72, 153, 0.35) !important;
+  background-color: rgba(131, 24, 67, 0.25) !important;
+  color: #fbcfe8 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 0 8px rgba(236, 72, 153, 0.15);
+}
+.weaver-chip-das {
+  border-color: rgba(16, 185, 129, 0.35) !important;
+  background-color: rgba(6, 78, 59, 0.25) !important;
+  color: #a7f3d0 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 0 8px rgba(16, 185, 129, 0.15);
+}
+.weaver-chip-conjunction {
+  border-color: rgba(245, 158, 11, 0.35) !important;
+  background-color: rgba(120, 53, 4, 0.25) !important;
+  color: #fde047 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 0 8px rgba(245, 158, 11, 0.15);
+}
+.weaver-chip-verb {
+  border-color: rgba(99, 102, 241, 0.35) !important;
+  background-color: rgba(49, 46, 129, 0.25) !important;
+  color: #c7d2fe !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 0 8px rgba(99, 102, 241, 0.15);
+}
+.weaver-chip-prefix {
+  border-color: rgba(168, 85, 247, 0.35) !important;
+  background-color: rgba(88, 28, 135, 0.25) !important;
+  color: #e9d5ff !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 0 8px rgba(168, 85, 247, 0.15);
+}
+.weaver-chip-other {
+  border-color: rgba(148, 163, 184, 0.25) !important;
+  background-color: rgba(15, 23, 42, 0.4) !important;
+  color: #cbd5e1 !important;
+}
+
+/* Slots on the Weaver Assembly board */
+.weaver-slot {
+  min-height: 46px;
+  min-width: 90px;
+  border: 2px dashed rgba(148, 163, 184, 0.15);
+  background-color: rgba(15, 23, 42, 0.15);
+  border-radius: 0.75rem;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.5rem;
+  vertical-align: middle;
+}
+
+.weaver-slot-active {
+  border-color: rgba(99, 102, 241, 0.5);
+  background-color: rgba(99, 102, 241, 0.08);
+  box-shadow: inset 0 0 10px rgba(99, 102, 241, 0.1), 0 0 12px rgba(99, 102, 241, 0.1);
+  transform: scale(1.02);
+}
+
+.weaver-slot-filled {
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  background-color: transparent;
+}
+
+/* Weimar Light Theme Overrides */
+body.theme-weimar .weaver-chip {
+  background-color: #f8fafc !important;
+  border-width: 1.5px !important;
+  box-shadow: none !important;
+}
+body.theme-weimar .weaver-chip-subject, body.theme-weimar .weaver-chip-der {
+  border-color: #2563eb !important;
+  background-color: #eff6ff !important;
+  color: #1e40af !important;
+}
+body.theme-weimar .weaver-chip-die {
+  border-color: #db2777 !important;
+  background-color: #fdf2f8 !important;
+  color: #9d174d !important;
+}
+body.theme-weimar .weaver-chip-das {
+  border-color: #059669 !important;
+  background-color: #ecfdf5 !important;
+  color: #065f46 !important;
+}
+body.theme-weimar .weaver-chip-conjunction {
+  border-color: #d97706 !important;
+  background-color: #fffbeb !important;
+  color: #854d0e !important;
+}
+body.theme-weimar .weaver-chip-verb {
+  border-color: #4f46e5 !important;
+  background-color: #eef2ff !important;
+  color: #3730a3 !important;
+}
+body.theme-weimar .weaver-chip-prefix {
+  border-color: #9333ea !important;
+  background-color: #faf5ff !important;
+  color: #6b21a8 !important;
+}
+body.theme-weimar .weaver-chip-other {
+  border-color: #64748b !important;
+  background-color: #f8fafc !important;
+  color: #334155 !important;
+}
+body.theme-weimar .weaver-slot {
+  border-color: #cbd5e1 !important;
+  background-color: #f1f5f9 !important;
+}
+body.theme-weimar .weaver-slot-active {
+  border-color: #4f46e5 !important;
+  background-color: #eef2ff !important;
+}
+body.theme-weimar .weaver-slot-filled {
+  border-color: #cbd5e1 !important;
+  background-color: transparent !important;
+}
+
+/* ==========================================================================
+   ACCESSIBILITY: REDUCED MOTION PREFERENCES (M1)
+   Respects OS-level "Reduce motion" setting for vestibular safety.
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .slide-in-right,
+  .slide-in-left,
+  .shuffle-anim,
+  .shake-anim,
+  .adventure-success-pulse,
+  .adventure-error-pulse,
+  .phonetic-pulse-active {
+    animation: none !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .accordion-content {
+    transition: none !important;
+    grid-template-rows: 0fr !important;
+  }
+
+  .accordion-content.open {
+    grid-template-rows: 1fr !important;
+  }
+
+  .weaver-chip {
+    transition: none !important;
+  }
+
+  .adventure-chip {
+    transition: none !important;
+  }
+
+  .cheatcode-card {
+    transition: none !important;
+  }
+
+  .cheatcode-card:hover {
+    transform: none !important;
+  }
+}
+
+/* ============================================
+   F15: Skip Navigation Link
+   ============================================ */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  padding: 0.75rem 1.5rem;
+  background: #4f46e5;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0 0 0.75rem 0.75rem;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid #818cf8;
+  outline-offset: 2px;
+}
+
+/* ============================================
+   F14: Custom Confirm Modal (Glassmorphic)
+   ============================================ */
+.confirm-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9990;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: confirmFadeIn 0.2s ease-out;
+}
+
+.confirm-modal-overlay.hidden {
+  display: none;
+}
+
+.confirm-modal-card {
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  max-width: 28rem;
+  width: 100%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5),
+              0 0 40px rgba(79, 70, 229, 0.05);
+  animation: confirmSlideUp 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes confirmFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes confirmSlideUp {
+  from { opacity: 0; transform: translateY(12px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ============================================
+   F23: Weaver Touch Feedback (iOS Safari)
+   ============================================ */
+#weaver-chips-pool,
+#weaver-dropzone {
+  touch-action: none;
+}
+
+/* ============================================
+   A3: TTS Speaking Visual Indicator
+   ============================================ */
+.tts-speaking {
+  animation: ttsPulse 0.6s ease-in-out infinite alternate;
+  border-color: rgb(99, 102, 241) !important;
+  color: rgb(129, 140, 248) !important;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.3),
+              0 0 24px rgba(99, 102, 241, 0.1);
+}
+
+@keyframes ttsPulse {
+  from { transform: scale(1); box-shadow: 0 0 8px rgba(99, 102, 241, 0.2); }
+  to { transform: scale(1.08); box-shadow: 0 0 18px rgba(99, 102, 241, 0.4); }
+}
+
+/* ============================================
+   B1: Keyboard Key Styling (Shortcut Overlay)
+   ============================================ */
+.kbd-key {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5rem;
+  padding: 0.15rem 0.5rem;
+  font-family: 'Inter', monospace;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: rgb(203, 213, 225);
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3),
+              inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  line-height: 1.3;
+}
+
+/* ============================================
+   V3: CSS Containment for Rendering Isolation
+   Independent components can skip recalculating
+   styles/layout when sibling DOM changes.
+   ============================================ */
+#flashcard {
+  contain: content;
+}
+
+.cheatcode-card {
+  contain: layout style;
+  /* V3: Skip rendering for off-screen cheatcode cards (50+ cards on view) */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 120px;
+}
+
+#quiz-workspace > div {
+  contain: content;
+}
+
+/* ============================================
+   B2: Custom Focus-Visible Outlines
+   ============================================ */
+:focus-visible {
+  outline: 2px solid rgb(99, 102, 241);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible,
+select:focus-visible,
+input:focus-visible {
+  outline: 2px solid rgb(99, 102, 241);
+  outline-offset: 2px;
+  border-radius: inherit;
+}
+
+/* ============================================
+   V3: View Transition API — Route Cross-Fade
+   Progressive enhancement for Chromium 111+,
+   Safari 18+. Silently ignored in Firefox.
+   ============================================ */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 150ms;
+  animation-timing-function: ease-out;
+}
+
+/* Respect reduced-motion: skip view transitions entirely */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+  }
+}
+
+/* ============================================
+   v5.0: Streak System — Fire Animation & Counter
+   ============================================ */
+
+/* Idle streak fire icon — gentle pulse */
+.streak-fire-icon {
+  animation: streakFireIdle 2s ease-in-out infinite;
+}
+
+@keyframes streakFireIdle {
+  0%, 100% { transform: scale(1); filter: brightness(1); }
+  50% { transform: scale(1.1); filter: brightness(1.3); }
+}
+
+/* Active streak counter — pop on update */
+.streak-counter {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease;
+}
+
+.streak-counter.streak-pop {
+  transform: scale(1.4);
+  color: #fbbf24;
+}
+
+/* Streak milestone celebration — burst ring */
+@keyframes streakMilestoneRing {
+  0% { transform: scale(0.5); opacity: 1; box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.6); }
+  70% { transform: scale(1.2); opacity: 0.6; box-shadow: 0 0 20px 10px rgba(249, 115, 22, 0); }
+  100% { transform: scale(1); opacity: 1; box-shadow: none; }
+}
+
+.streak-milestone-burst {
+  animation: streakMilestoneRing 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Streak freeze indicator pulse */
+#streak-freeze-display .fa-snowflake {
+  animation: snowflakePulse 3s ease-in-out infinite;
+}
+
+@keyframes snowflakePulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; transform: rotate(30deg); }
+}
+
+/* ============================================
+   v5.0: PWA Install Banner — Slide Up Animation
+   ============================================ */
+
+.pwa-install-slide-up {
+  animation: pwaSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pwaSlideUp {
+  0% { transform: translateY(100%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* ============================================
+   v5.0: Offline Status Indicator — Slide Down
+   ============================================ */
+
+.offline-slide-down {
+  animation: offlineSlideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes offlineSlideDown {
+  0% { transform: translateY(-100%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* ============================================
+   v5.0: Mobile Touch Target Enforcement
+   Min 44x44px per WCAG 2.2 AA
+   ============================================ */
+
+@media (pointer: coarse) {
+  /* Sidebar nav links */
+  nav[aria-label="Hauptnavigation"] a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  /* Category buttons */
+  #categories-container button {
+    min-height: 44px;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+  }
+
+  /* Quiz answer buttons */
+  .quiz-option-btn {
+    min-height: 48px;
+  }
+
+  /* Flashcard navigation buttons */
+  #prev-btn, #next-btn {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Deck preference toggles */
+  #deck-prefs-dropdown button {
+    min-height: 44px;
+  }
+}
+
+/* ============================================
+   v5.0: FSRS Analytics Panel Styles
+   ============================================ */
+
+#stats-retention-rate,
+#stats-reviews-saved,
+#stats-avg-difficulty,
+#stats-session-time {
+  transition: color 0.5s ease, transform 0.3s ease;
+}
+
+/* Reduced motion: disable all new v5 animations */
+@media (prefers-reduced-motion: reduce) {
+  .streak-fire-icon,
+  #streak-freeze-display .fa-snowflake {
+    animation: none !important;
+  }
+  .streak-counter.streak-pop {
+    transform: none !important;
+  }
+  .pwa-install-slide-up {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+  .offline-slide-down {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+  .particle-container {
+    display: none !important;
+  }
+  .swipe-left, .swipe-right {
+    transform: none !important;
+    opacity: 0 !important;
+  }
+}
+
+/* ============================================
+   v6.0: Premium Particle Burst System
+   ============================================ */
+.particle-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  animation: particle-fly var(--dur, 0.8s) cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+@keyframes particle-fly {
+  0% {
+    transform: translate(-50%, -50%) scale(1) translate(0, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0) translate(var(--dx), var(--dy));
+    opacity: 0;
+  }
+}
+
+/* ============================================
+   v6.0: Mobile Gesture Swipe Animations & Springs
+   ============================================ */
+.drag-touch {
+  transition: none !important;
+  cursor: grabbing !important;
+  user-select: none;
+}
+
+.swipe-left {
+  transition: transform 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease !important;
+  transform: translate(-150vw, var(--drag-y, 0px)) rotate(-25deg) !important;
+  opacity: 0 !important;
+}
+
+.swipe-right {
+  transition: transform 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.4s ease !important;
+  transform: translate(150vw, var(--drag-y, 0px)) rotate(25deg) !important;
+  opacity: 0 !important;
+}
+
+.card-spring-back {
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease !important;
+  transform: translate(0, 0) rotate(0deg) !important;
+}
+
+/* ============================================
+   v6.0: Grammatik-Weberei (Weaver) Hotkey Chips
+   ============================================ */
+.hotkey-indicator {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #1e1b4b;
+  border: 1px solid #4f46e5;
+  color: #a5b4fc;
+  font-size: 8px;
+  font-family: monospace;
+  font-weight: bold;
+  padding: 0px 4px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  pointer-events: none;
+}
+
+/* ============================================
+   v6.0: Suffix Contextual Helper drawer & Glows
+   ============================================ */
+.suffix-glow {
+  text-shadow: 0 0 10px rgba(165, 180, 252, 0.6);
+  color: #a5b4fc !important;
+  border-bottom: 2px dashed rgba(165, 180, 252, 0.4);
+  cursor: help;
+  position: relative;
+}
+
+.suffix-drawer-active {
+  animation: drawerSlideIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes drawerSlideIn {
+  from {
+    transform: translateY(1.5rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,33 @@
+# Python Caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Application Cache
+lucide_cache/
+twemoji_cache/
+
+# OS/System files
+.DS_Store
+Thumbs.db
+
+# IDE and Editor configs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# Local app data / system files
+.gemini/
+
+# Heavy raw resources & media files
+.raw_resources/
+*.pdf
+*.mp3
+
+# Auth & secrets
+cookies.txt
