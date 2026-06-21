@@ -474,7 +474,7 @@ export function renderCard() {
 
   // Suffix Grammar Rules integration
   if (elements.suffixHelperTrigger && elements.suffixDrawer) {
-    const suffixRule = getSuffixRule(card.word);
+    const suffixRule = getSuffixRule(card.word, card.wordClass);
     if (suffixRule) {
       // Show lightbulb trigger
       elements.suffixHelperTrigger.classList.remove('hidden');

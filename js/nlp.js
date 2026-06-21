@@ -30,7 +30,7 @@ function lemmatizeNoun(word) {
 /**
  * Strips common German conjugation suffixes to approximate the infinitive.
  */
-function lemmatizeVerb(word) {
+export function lemmatizeVerb(word) {
   let w = word.toLowerCase();
   
   // Weak past participle: gespielt -> spielen
@@ -349,8 +349,11 @@ function levenshteinDistance(s1, s2) {
  * @param {string} word 
  * @returns {object|null} Suffix rule object or null
  */
-export function getSuffixRule(word) {
+export function getSuffixRule(word, wordClass = null) {
   if (!word) return null;
+  if (wordClass && !['nomen', 'noun'].includes(wordClass.toLowerCase())) {
+    return null;
+  }
   const lower = word.toLowerCase();
 
   // Noun suffix matching (ordered longest to shortest for specificity)

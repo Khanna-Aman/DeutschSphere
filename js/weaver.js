@@ -2,6 +2,7 @@
 
 import { state, elements, safeSetItem, safeGetItem, shuffleArray } from './state.js';
 import { getSharedAudioContext } from './audio.js';
+import { lemmatizeVerb } from './nlp.js';
 
 // Cached weaver slot DOM references (refreshed on each board render)
 let cachedWeaverSlots = [];
@@ -264,7 +265,12 @@ export function analyzeToken(rawWord, idx, allWords, lookup) {
   }
 
   // 5. Lookup database match
-  const match = lookup[lower];
+  let match = lookup[lower];
+  if (!match) {
+    // Fallback: lemmatize conjugated forms back to infinitives (e.g. lerne -> lernen)
+    const verbLemma = lemmatizeVerb(lower);
+    match = lookup[verbLemma];
+  }
   if (match) {
     if (match.wordClass === 'Verb') {
       return { text: rawWord, pos: "weaver-chip-verb" };
@@ -668,8 +674,8 @@ export function submitWeaverSentence() {
   if (constructedWords.length < correctWords.length) {
     playWeaverSound('error');
     if (elements.weaverDropzone) {
-      elements.weaverDropzone.classList.add('shake');
-      setTimeout(() => elements.weaverDropzone.classList.remove('shake'), 500);
+      elements.weaverDropzone.classList.add('shake-anim');
+      setTimeout(() => elements.weaverDropzone.classList.remove('shake-anim'), 500);
     }
     // F19: Show inline visual hint instead of blocking alert
     // Highlight empty slots with a pulsing border
@@ -728,8 +734,8 @@ export function submitWeaverSentence() {
     state.weaver.errorsCount++;
 
     if (elements.weaverDropzone) {
-      elements.weaverDropzone.classList.add('shake');
-      setTimeout(() => elements.weaverDropzone.classList.remove('shake'), 500);
+      elements.weaverDropzone.classList.add('shake-anim');
+      setTimeout(() => elements.weaverDropzone.classList.remove('shake-anim'), 500);
     }
 
     // Reveal error feedback
