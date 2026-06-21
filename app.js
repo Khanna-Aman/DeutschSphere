@@ -6,6 +6,7 @@ import {
   getCategoryIcon,
   trackVisitedLevels,
   sortDeckBySRS,
+  getSRSInfo,
   shuffleArray,
   safeJsonParse,
   safeSetItem,
@@ -533,11 +534,115 @@ function filterDeck(preserveIndex = false) {
   }
 
   if (state.searchQuery) {
-    const query = state.searchQuery.toLowerCase();
-    filtered = filtered.filter(card => 
-      card.word.toLowerCase().includes(query) || 
-      card.meaning.toLowerCase().includes(query)
-    );
+    const rawQuery = state.searchQuery.trim();
+    
+    // Check if RegExp search e.g. /regex/
+    const rxMatch = rawQuery.match(/^\/(.*)\/([gimy]*)$/);
+    if (rxMatch) {
+      try {
+        const pattern = rxMatch[1];
+        const flags = rxMatch[2] || 'i';
+        const regex = new RegExp(pattern, flags);
+        
+        filtered = filtered.filter(card => 
+          regex.test(card.word) || 
+          regex.test(card.meaning) ||
+          (card.exampleDe && regex.test(card.exampleDe)) ||
+          (card.exampleEn && regex.test(card.exampleEn))
+        );
+      } catch (err) {
+        console.error("Invalid regular expression in search:", err);
+        // On invalid regex, fallback to empty array to indicate no matches
+        filtered = [];
+      }
+    } else {
+      // Tokenized multi-category filter search
+      const tokens = rawQuery.toLowerCase().split(/\s+/);
+      const plainTokens = [];
+      const filters = {
+        wordClass: [],
+        gender: [],
+        srs: [],
+        theme: []
+      };
+
+      tokens.forEach(token => {
+        if (token.includes(':')) {
+          const [key, val] = token.split(':', 2);
+          if (key === 'is') {
+            if (val === 'noun' || val === 'nomen') filters.wordClass.push('nomen');
+            else if (val === 'verb') filters.wordClass.push('verb');
+            else if (val === 'adj' || val === 'adjective' || val === 'adjektiv') filters.wordClass.push('adjektiv');
+            else if (val === 'adv' || val === 'adverb') filters.wordClass.push('adverb');
+            else if (val === 'pronoun' || val === 'pronomen') filters.wordClass.push('pronomen');
+            else if (val === 'preposition' || val === 'präposition') filters.wordClass.push('präposition');
+            else if (val === 'conjunction' || val === 'konjunktion') filters.wordClass.push('konjunktion');
+            else filters.wordClass.push(val);
+          } else if (key === 'gender' || key === 'g') {
+            filters.gender.push(val);
+          } else if (key === 'srs') {
+            filters.srs.push(val);
+          } else if (key === 'theme' || key === 't' || key === 'cat' || key === 'category') {
+            filters.theme.push(val);
+          } else {
+            plainTokens.push(token);
+          }
+        } else {
+          plainTokens.push(token);
+        }
+      });
+
+      // Filter by the collected filter lists
+      filtered = filtered.filter(card => {
+        // 1. Word class filter (OR inside wordClass list)
+        if (filters.wordClass.length > 0) {
+          const cardClass = (card.wordClass || '').toLowerCase();
+          if (!filters.wordClass.includes(cardClass)) return false;
+        }
+
+        // 2. Gender filter (OR inside gender list)
+        if (filters.gender.length > 0) {
+          const cardGender = (card.gender || '').toLowerCase();
+          if (!filters.gender.includes(cardGender)) return false;
+        }
+
+        // 3. SRS state filter (OR inside srs list)
+        if (filters.srs.length > 0) {
+          const srsInfo = getSRSInfo(card.id);
+          const matchesSrs = filters.srs.some(val => {
+            if (val === 'due') return srsInfo.isDue && !srsInfo.isNew;
+            if (val === 'new') return srsInfo.isNew;
+            if (val === 'learned' || val === 'review') return !srsInfo.isNew;
+            return false;
+          });
+          if (!matchesSrs) return false;
+        }
+
+        // 4. Theme / Category filter (OR inside theme list)
+        if (filters.theme.length > 0) {
+          const cardCat = (card.category || '').toLowerCase();
+          const matchesTheme = filters.theme.some(val => cardCat.includes(val));
+          if (!matchesTheme) return false;
+        }
+
+        // 5. Plain keyword tokens (AND across all plain keywords)
+        if (plainTokens.length > 0) {
+          const cardWord = card.word.toLowerCase();
+          const cardMeaning = card.meaning.toLowerCase();
+          const cardExDe = (card.exampleDe || '').toLowerCase();
+          const cardExEn = (card.exampleEn || '').toLowerCase();
+
+          return plainTokens.every(keyword => 
+            cardWord.includes(keyword) || 
+            cardMeaning.includes(keyword) ||
+            cardExDe.includes(keyword) ||
+            cardExEn.includes(keyword)
+          );
+        }
+
+        return true;
+      });
+    }
   }
 
   if (state.hideLearned) {
@@ -564,6 +669,7 @@ function filterDeck(preserveIndex = false) {
 
   renderCard();
 }
+
 
 // ==========================================
 // v6.0: AMBIENT SETTINGS & PARTICLE BURST ENGINE
@@ -1035,6 +1141,32 @@ function setupEventListeners() {
       elements.searchInput.focus();
     });
   }
+
+  // Bind Quick-Filter Tag Chips (V6.1)
+  const quickTags = document.querySelectorAll('.search-tag-chip');
+  quickTags.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const tagText = chip.getAttribute('data-tag');
+      const input = elements.searchInput;
+      if (input) {
+        let currentVal = input.value.trim();
+        if (currentVal) {
+          if (!currentVal.toLowerCase().includes(tagText.toLowerCase())) {
+            input.value = currentVal + ' ' + tagText;
+          }
+        } else {
+          input.value = tagText;
+        }
+        state.searchQuery = input.value.trim();
+        if (elements.searchClear) {
+          elements.searchClear.classList.remove('hidden');
+        }
+        filterDeck();
+        input.focus();
+      }
+    });
+  });
+
 
   if (elements.mobileSidebarToggle) elements.mobileSidebarToggle.addEventListener('click', openMobileSidebar);
   if (elements.mobileSidebarClose) elements.mobileSidebarClose.addEventListener('click', closeMobileSidebar);
