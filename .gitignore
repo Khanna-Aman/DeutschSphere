@@ -31,3 +31,7 @@ Thumbs.db
 
 # Auth & secrets
 cookies.txt
+
+# Backup files
+scripts/backups/
+
