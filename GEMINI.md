@@ -76,6 +76,9 @@ When editing files, adding features, or synthesizing datasets inside this projec
 * **No Heavy WASM or Server Runtimes:** For all Natural Language Processing (NLP), lemmatization, and gender extraction, you must build **pure client-side JavaScript algorithms**. Do not use heavy WebAssembly Python binaries (like Pyodide/spaCy-WASM) which balloon the page load size.
 * **Algorithmic Suffix-Stripping:** Use deterministic regex and Suffix-Stripping (Snowball algorithms) directly in ES6. Accuracy is highly prioritized, but not at the expense of a 20MB payload. The NLP engine must remain under 10KB.
 
+### 📁 3.8 Strict Git Versioning & Change Containment
+* **Git Versioning Mandatory:** All major modifications, feature upgrades, and sprint iterations must be systematically committed using local git commands. Clear semantic commit messages and atomic commits help ensure excellent workspace integrity, safe rollbacks, and complete transparency.
+
 ---
 
 ## 🛠️ 4. Current Architecture Blueprint

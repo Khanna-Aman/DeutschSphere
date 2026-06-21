@@ -3,7 +3,7 @@
 import { state, elements, categoryTranslations, getSRSInfo, getCategoryIcon, saveSRSState, shuffleArray, safeSetItem, schedulePersist } from './state.js';
 import { prepareUtterance, speakWord, warmUpTTS, getSharedAudioContext } from './audio.js';
 import { updateOverallStats, unlockAchievement } from './stats.js';
-import { getSuffixRule } from './nlp.js';
+import { getSuffixRule, generateVerbConjugation, generateAdjectiveDeclension } from './nlp.js';
 
 // Module-scoped amplitude smoothing for phonetic waveform (was window.nativeAmp)
 let nativeAmp = 0;
@@ -148,6 +148,9 @@ export function renderCard() {
 
   // Retrieve current card details
   const card = state.currentDeck[state.currentIndex];
+
+  // Collapse grammar matrix drawer instantly when moving between cards
+  collapseGrammarMatrixInstantly();
 
   // Update Progress values
   if (elements.cardIndexIndicator) elements.cardIndexIndicator.textContent = `${state.currentIndex + 1} / ${deckLength}`;
@@ -370,6 +373,141 @@ export function renderCard() {
       elements.cardAntonymContainer.classList.remove('hidden');
     } else {
       elements.cardAntonymContainer.classList.add('hidden');
+    }
+  }
+
+  // Handle Dynamic Grammar Matrix Section (Verb Conjugation / Adjective Declension)
+  if (elements.cardGrammarMatrixContainer && elements.grammarMatrixTableContainer) {
+    const wc = (card.wordClass || '').toLowerCase().trim();
+    if (wc === 'verb' || wc === 'adjektiv' || wc === 'adjective') {
+      elements.cardGrammarMatrixContainer.classList.remove('hidden');
+      
+      if (wc === 'verb') {
+        if (elements.grammarMatrixTitle) {
+          elements.grammarMatrixTitle.textContent = 'Verbkonjugation | Verb Conjugation';
+        }
+        
+        const conj = generateVerbConjugation(card.word);
+        elements.grammarMatrixTableContainer.innerHTML = `
+          <div class="grid grid-cols-2 gap-4 text-xs font-semibold text-slate-200 min-w-[280px]">
+            <div class="bg-slate-900/60 border border-slate-800/80 rounded-xl p-3 shadow-inner">
+              <span class="text-[10px] uppercase text-indigo-400 font-extrabold block mb-2 tracking-wider">Singular</span>
+              <div class="space-y-2">
+                <div class="flex justify-between border-b border-slate-800/40 pb-1.5"><span class="text-slate-400 font-normal">ich</span> <span class="text-indigo-200 notranslate">${conj.ich}</span></div>
+                <div class="flex justify-between border-b border-slate-800/40 pb-1.5"><span class="text-slate-400 font-normal">du</span> <span class="text-indigo-200 notranslate">${conj.du}</span></div>
+                <div class="flex justify-between pb-0.5"><span class="text-slate-400 font-normal">er/sie/es</span> <span class="text-indigo-200 notranslate">${conj.er}</span></div>
+              </div>
+            </div>
+            <div class="bg-slate-900/60 border border-slate-800/80 rounded-xl p-3 shadow-inner">
+              <span class="text-[10px] uppercase text-indigo-400 font-extrabold block mb-2 tracking-wider">Plural</span>
+              <div class="space-y-2">
+                <div class="flex justify-between border-b border-slate-800/40 pb-1.5"><span class="text-slate-400 font-normal">wir</span> <span class="text-indigo-200 notranslate">${conj.wir}</span></div>
+                <div class="flex justify-between border-b border-slate-800/40 pb-1.5"><span class="text-slate-400 font-normal">ihr</span> <span class="text-indigo-200 notranslate">${conj.ihr}</span></div>
+                <div class="flex justify-between pb-0.5"><span class="text-slate-400 font-normal">sie/Sie</span> <span class="text-indigo-200 notranslate">${conj.sie}</span></div>
+              </div>
+            </div>
+          </div>
+        `;
+      } else {
+        // Adjective declension
+        if (elements.grammarMatrixTitle) {
+          elements.grammarMatrixTitle.textContent = 'Adjektivdeklination | Adjective Declension';
+        }
+        
+        const decl = generateAdjectiveDeclension(card.word);
+        let html = `
+          <div class="flex gap-1.5 mb-4 p-1 bg-slate-950/65 border border-slate-800/85 rounded-lg w-full max-w-md mx-auto">
+            <button class="adj-matrix-tab-btn flex-1 py-1.5 px-2.5 rounded-md text-[10px] font-extrabold transition-all text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 uppercase tracking-wider" data-tab="definite">Bestimmt</button>
+            <button class="adj-matrix-tab-btn flex-1 py-1.5 px-2.5 rounded-md text-[10px] font-extrabold transition-all text-slate-400 hover:text-slate-200 border border-transparent uppercase tracking-wider" data-tab="indefinite">Unbestimmt</button>
+            <button class="adj-matrix-tab-btn flex-1 py-1.5 px-2.5 rounded-md text-[10px] font-extrabold transition-all text-slate-400 hover:text-slate-200 border border-transparent uppercase tracking-wider" data-tab="zero">Ohne Artikel</button>
+          </div>
+        `;
+        
+        const types = ['definite', 'indefinite', 'zero'];
+        types.forEach(type => {
+          const scheme = decl[type];
+          const isHidden = type !== 'definite' ? 'hidden' : '';
+          html += `
+            <div id="adj-matrix-table-${type}" class="adj-matrix-table ${isHidden} overflow-x-auto min-w-[340px]">
+              <table class="w-full text-xs font-semibold text-slate-200 border-collapse">
+                <thead>
+                  <tr class="border-b border-slate-800/80">
+                    <th class="py-2 text-left text-indigo-400 uppercase font-extrabold text-[10px] tracking-wider w-1/5">Kasus</th>
+                    <th class="py-2 text-left text-slate-400 font-bold text-[10px] w-1/5">Maskulin (m)</th>
+                    <th class="py-2 text-left text-slate-400 font-bold text-[10px] w-1/5">Feminin (f)</th>
+                    <th class="py-2 text-left text-slate-400 font-bold text-[10px] w-1/5">Neutral (n)</th>
+                    <th class="py-2 text-left text-slate-400 font-bold text-[10px] w-1/5">Plural (p)</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-800/40">
+                  <tr class="hover:bg-indigo-500/5">
+                    <td class="py-2.5 text-slate-400 font-bold uppercase text-[9px] tracking-wider">Nominativ</td>
+                    <td class="py-2.5 text-indigo-200 notranslate">${scheme.nom.m}</td>
+                    <td class="py-2.5 text-indigo-200 notranslate">${scheme.nom.f}</td>
+                    <td class="py-2.5 text-indigo-200 notranslate">${scheme.nom.n}</td>
+                    <td class="py-2.5 text-indigo-200 notranslate">${scheme.nom.p}</td>
+                  </tr>
+                  <tr class="hover:bg-indigo-500/5">
+                    <td class="py-2.5 text-slate-400 font-bold uppercase text-[9px] tracking-wider">Akkusativ</td>
+                    <td class="py-2.5 text-indigo-200 notranslate">${scheme.akk.m}</td>
+                    <td class="py-2.5 text-indigo-200 notranslate">${scheme.akk.f}</td>
+                    <td class="py-2.5 text-indigo-200 notranslate">${scheme.akk.n}</td>
+                    <td class="py-2.5 text-indigo-200 notranslate">${scheme.akk.p}</td>
+                  </tr>
+                  <tr class="hover:bg-indigo-500/5">
+                    <td class="py-2.5 text-slate-400 font-bold uppercase text-[9px] tracking-wider">Dativ</td>
+                    <td class="py-2.5 text-indigo-200 notranslate">${scheme.dat.m}</td>
+                    <td class="py-2.5 text-indigo-200 notranslate">${scheme.dat.f}</td>
+                    <td class="py-2.5 text-indigo-200 notranslate">${scheme.dat.n}</td>
+                    <td class="py-2.5 text-indigo-200 notranslate">${scheme.dat.p}</td>
+                  </tr>
+                  <tr class="hover:bg-indigo-500/5">
+                    <td class="py-2.5 text-slate-400 font-bold uppercase text-[9px] tracking-wider">Genitiv</td>
+                    <td class="py-2.5 text-indigo-200 notranslate">${scheme.gen.m}</td>
+                    <td class="py-2.5 text-indigo-200 notranslate">${scheme.gen.f}</td>
+                    <td class="py-2.5 text-indigo-200 notranslate">${scheme.gen.n}</td>
+                    <td class="py-2.5 text-indigo-200 notranslate">${scheme.gen.p}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          `;
+        });
+        
+        elements.grammarMatrixTableContainer.innerHTML = html;
+        
+        // Setup internal tab event listeners
+        const tabBtns = elements.grammarMatrixTableContainer.querySelectorAll('.adj-matrix-tab-btn');
+        tabBtns.forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent card accordion flip/collapse
+            const targetTab = btn.getAttribute('data-tab');
+            
+            // Toggle active states on buttons
+            tabBtns.forEach(b => {
+              if (b.getAttribute('data-tab') === targetTab) {
+                b.classList.remove('text-slate-400', 'border-transparent');
+                b.classList.add('text-indigo-400', 'bg-indigo-500/10', 'border-indigo-500/20');
+              } else {
+                b.classList.remove('text-indigo-400', 'bg-indigo-500/10', 'border-indigo-500/20');
+                b.classList.add('text-slate-400', 'border-transparent');
+              }
+            });
+            
+            // Toggle active states on tables
+            const tables = elements.grammarMatrixTableContainer.querySelectorAll('.adj-matrix-table');
+            tables.forEach(t => {
+              if (t.id === `adj-matrix-table-${targetTab}`) {
+                t.classList.remove('hidden');
+              } else {
+                t.classList.add('hidden');
+              }
+            });
+          });
+        });
+      }
+    } else {
+      elements.cardGrammarMatrixContainer.classList.add('hidden');
     }
   }
 
@@ -1206,4 +1344,43 @@ export function getLevenshteinDistance(a, b) {
     }
   }
   return prev[a.length];
+}
+
+export function collapseGrammarMatrixInstantly() {
+  if (elements.cardGrammarMatrixDrawer) {
+    elements.cardGrammarMatrixDrawer.style.transition = 'none';
+    elements.cardGrammarMatrixDrawer.style.gridTemplateRows = '0fr';
+    elements.cardGrammarMatrixDrawer.classList.add('opacity-0', 'pointer-events-none');
+    elements.cardGrammarMatrixDrawer.classList.remove('opacity-100');
+    if (elements.grammarMatrixIcon) {
+      elements.grammarMatrixIcon.classList.remove('rotate-180');
+    }
+    // Restore transition on next animation frame
+    requestAnimationFrame(() => {
+      if (elements.cardGrammarMatrixDrawer) {
+        elements.cardGrammarMatrixDrawer.style.transition = '';
+      }
+    });
+  }
+}
+
+export function toggleGrammarMatrix() {
+  if (!elements.cardGrammarMatrixDrawer) return;
+  const isOpen = elements.cardGrammarMatrixDrawer.style.gridTemplateRows === '1fr';
+  
+  if (isOpen) {
+    elements.cardGrammarMatrixDrawer.style.gridTemplateRows = '0fr';
+    elements.cardGrammarMatrixDrawer.classList.add('opacity-0', 'pointer-events-none');
+    elements.cardGrammarMatrixDrawer.classList.remove('opacity-100');
+    if (elements.grammarMatrixIcon) {
+      elements.grammarMatrixIcon.classList.remove('rotate-180');
+    }
+  } else {
+    elements.cardGrammarMatrixDrawer.style.gridTemplateRows = '1fr';
+    elements.cardGrammarMatrixDrawer.classList.remove('opacity-0', 'pointer-events-none');
+    elements.cardGrammarMatrixDrawer.classList.add('opacity-100');
+    if (elements.grammarMatrixIcon) {
+      elements.grammarMatrixIcon.classList.add('rotate-180');
+    }
+  }
 }

@@ -56,7 +56,8 @@ import {
   togglePhoneticMirror,
   closePhoneticMirror,
   togglePhoneticRecording,
-  toggleAccordion
+  toggleAccordion,
+  toggleGrammarMatrix
 } from './js/flashcards.js';
 
 import {
@@ -987,6 +988,13 @@ function setupEventListeners() {
           }
         }
       }
+    });
+  }
+
+  if (elements.cardGrammarMatrixTrigger) {
+    elements.cardGrammarMatrixTrigger.addEventListener('click', (e) => {
+      e.stopPropagation(); // Avoid triggering card toggleAccordion click
+      toggleGrammarMatrix();
     });
   }
 
