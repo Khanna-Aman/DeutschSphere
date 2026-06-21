@@ -78,10 +78,12 @@ When editing files, adding features, or synthesizing datasets inside this projec
 
 ### 📁 3.8 Strict Git Versioning & Change Containment
 * **Git Versioning Mandatory:** All major modifications, feature upgrades, and sprint iterations must be systematically committed using local git commands. Clear semantic commit messages and atomic commits help ensure excellent workspace integrity, safe rollbacks, and complete transparency.
+* **Turn-Ending Commit Enforcement:** Never conclude an execution turn or declare a task complete with outstanding unstaged or uncommitted changes in the working directory. Every single line of code edited must be accounted for in a semantic git commit.
 * **Atomic Commits Per Phase:** Never bundle multiple independent phases or features into a single massive commit. Stage and commit files systematically as soon as a phase is functionally complete and verified.
-* **Descriptive Semantic Prefixes:** Always use professional, precise semantic commit prefixes (e.g., `feat:`, `fix:`, `refactor:`, `docs:`, `perf:`) with a concise, actionable summary of the changes.
+* **Descriptive Semantic Prefixes:** Always use professional, precise semantic commit prefixes (e.g., `feat:`, `fix:`, `refactor:`, `docs:`, `perf:`) with a concise, actionable summary of the changes. Enforce the exact structure: `<type>(<scope>): <short description>` (e.g. `feat(fsrs): add interactive decay graph`).
 * **Commit Verification First:** Ensure the code builds, parses, and loads cleanly in the browser before running a commit. Verify the modified state using the browser agent or checking key routing paths.
-* **Keep History Clean:** Maintain clean staging, never commit temporary or untracked files that aren't part of the core SPA workspace (add them to `.gitignore` if necessary).
+* **Keep History Clean:** Maintain clean staging, never commit temporary or untracked files that aren't part of the core SPA workspace (add them to `.gitignore` if necessary). All background scripts, heavy PDF references, or raw logs must go to Git-ignored directories (e.g., `scripts/backups/`, `scripts/logs/`).
+* **Rollback Resilience:** If an E2E test or visual audit fails, leverage Git's state tracking to isolate the regression rather than commenting out logic or making sloppy manual corrections. Keep the codebase pristine.
 
 ---
 
