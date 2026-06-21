@@ -878,3 +878,41 @@ Processing Batch 393/428 (Index 1960 to 1965)
   [UPDATE] 'die Wahrheit' (ID: 1961): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
   [UPDATE] 'wahrscheinlich' (ID: 1962): theme: 'Person & Familie' -> 'Zeit, Maße & Basiswortschatz'
 Batch 393 saved successfully. Total cumulative updates: 41
+--- Audit Started at 2026-06-21 22:55:29 ---
+
+Processing Batch 394/428 (Index 1965 to 1970)
+  [UPDATE] 'wann' (ID: 1966): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+  [UPDATE] 'warum' (ID: 1969): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+  [UPDATE] 'was' (ID: 1970): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+Batch 394 saved successfully. Total cumulative updates: 3
+
+Processing Batch 395/428 (Index 1970 to 1975)
+  [UPDATE] 'weder … noch' (ID: 1973): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+  [UPDATE] 'weiblich' (ID: 1975): theme: 'Dienstleistungen & Behörden' -> 'Person & Familie'
+Batch 395 saved successfully. Total cumulative updates: 5
+
+Processing Batch 396/428 (Index 1975 to 1980)
+  [UPDATE] 'weil' (ID: 1977): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+Batch 396 saved successfully. Total cumulative updates: 6
+
+Processing Batch 397/428 (Index 1980 to 1985)
+  [UPDATE] 'wenigstens' (ID: 1982): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+  [UPDATE] 'wer' (ID: 1984): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+  [UPDATE] 'die Werbung' (ID: 1985): theme: 'Zeit, Maße & Basiswortschatz' -> 'Einkaufen & Konsum'
+Batch 397 saved successfully. Total cumulative updates: 9
+
+Processing Batch 398/428 (Index 1985 to 1990)
+Batch 398 saved successfully. Total cumulative updates: 9
+
+Processing Batch 399/428 (Index 1990 to 1995)
+  [UPDATE] 'weshalb' (ID: 1993): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+Batch 399 saved successfully. Total cumulative updates: 10
+
+Processing Batch 400/428 (Index 1995 to 2000)
+  [UPDATE] 'widersprechen' (ID: 1998): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+Batch 400 saved successfully. Total cumulative updates: 11
+
+Processing Batch 401/428 (Index 2000 to 2005)
+  [UPDATE] 'wieso' (ID: 2003): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+  [UPDATE] 'willkommen' (ID: 2005): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+Batch 401 saved successfully. Total cumulative updates: 13
