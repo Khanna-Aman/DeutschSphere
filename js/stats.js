@@ -1,7 +1,7 @@
 // js/stats.js — Profile Statistics, Achievements & Backup Module
 
 import { state, elements, ACHIEVEMENTS, getGlobalLearnedCount, getCategoryIcon, getSRSInfo, safeJsonParse, safeSetItem, safeGetItem, getStreakInfo } from './state.js';
-import { fsrs, State as FSRSState } from './fsrs.js';
+import { fsrs, State as FSRSState, Rating } from './fsrs.js';
 import { playAchievementChime } from './audio.js';
 import * as idb from './idb-keyval.js';
 
@@ -1037,6 +1037,29 @@ export function initFSRSDecaySimulator() {
 
   if (!cardSelect || !slider || !stabilityVal || !canvas) return;
 
+  // Local state tracker for the simulated card
+  let simulatedCard = null;
+
+  function loadCardState(cardId) {
+    if (!cardId) {
+      simulatedCard = fsrs.createCard();
+      simulatedCard.stability = 8.0;
+      simulatedCard.state = FSRSState.Review;
+      simulatedCard.lastReview = Date.now() - 1 * 24 * 60 * 60 * 1000;
+      return;
+    }
+    const cardSrs = state.srs[cardId];
+    if (cardSrs) {
+      simulatedCard = { ...cardSrs };
+    } else {
+      const srsInfo = getSRSInfo(cardId);
+      simulatedCard = fsrs.createCard();
+      simulatedCard.stability = srsInfo.stability && srsInfo.stability > 0 ? srsInfo.stability : 8.0;
+      simulatedCard.state = FSRSState.Review;
+      simulatedCard.lastReview = Date.now() - 1 * 24 * 60 * 60 * 1000;
+    }
+  }
+
   // 1. Populate learned cards select
   cardSelect.innerHTML = '';
   
@@ -1056,6 +1079,7 @@ export function initFSRSDecaySimulator() {
     // Default fallback draw
     slider.value = 8;
     stabilityVal.textContent = "8.0 Tage";
+    loadCardState(null);
     drawFSRSDecay(canvas, 8);
   } else {
     // Sort learned cards alphabetically
@@ -1070,10 +1094,9 @@ export function initFSRSDecaySimulator() {
 
     // Load initial first learned card's stability
     const firstId = learnedCardsList[0].id;
-    const srsInfo = getSRSInfo(firstId);
-    // fallback if stability is extremely low/uninitialized
-    const initialStability = srsInfo.stability && srsInfo.stability > 0 ? srsInfo.stability : 8.0;
+    loadCardState(firstId);
     
+    const initialStability = simulatedCard.stability;
     slider.value = Math.min(Math.max(initialStability, 1), 120);
     stabilityVal.textContent = `${Number(initialStability).toFixed(1)} Tage`;
     drawFSRSDecay(canvas, initialStability);
@@ -1083,6 +1106,9 @@ export function initFSRSDecaySimulator() {
   slider.addEventListener('input', (e) => {
     const val = parseFloat(e.target.value);
     stabilityVal.textContent = `${val.toFixed(1)} Tage`;
+    if (simulatedCard) {
+      simulatedCard.stability = val;
+    }
     drawFSRSDecay(canvas, val);
   });
 
@@ -1090,12 +1116,63 @@ export function initFSRSDecaySimulator() {
   cardSelect.addEventListener('change', (e) => {
     const cardId = e.target.value;
     if (!cardId) return;
-    const srsInfo = getSRSInfo(cardId);
-    const initialStability = srsInfo.stability && srsInfo.stability > 0 ? srsInfo.stability : 8.0;
+    loadCardState(cardId);
     
+    const initialStability = simulatedCard.stability;
     slider.value = Math.min(Math.max(initialStability, 1), 120);
     stabilityVal.textContent = `${Number(initialStability).toFixed(1)} Tage`;
     drawFSRSDecay(canvas, initialStability);
+  });
+
+  // 4. Interactive forecast chips event handlers
+  const forecastChips = document.querySelectorAll('.forecast-chip');
+  const ratingColors = {
+    1: 'rgba(239, 68, 68, 0.75)',    // Red for Again
+    2: 'rgba(245, 158, 11, 0.75)',   // Amber for Hard
+    3: 'rgba(99, 102, 241, 0.75)',   // Indigo/Blue for Good
+    4: 'rgba(16, 185, 129, 0.75)'    // Emerald for Easy
+  };
+
+  forecastChips.forEach(chip => {
+    const rating = parseInt(chip.getAttribute('data-rating'));
+    if (!rating) return;
+
+    chip.addEventListener('mouseenter', () => {
+      if (!simulatedCard) return;
+      // Calculate next card state
+      const nextCard = fsrs.reviewCard(simulatedCard, rating);
+      const nextStability = nextCard.stability;
+      const color = ratingColors[rating];
+      
+      // Draw dotted forecast curve
+      drawFSRSDecay(canvas, simulatedCard.stability, nextStability, color);
+    });
+
+    chip.addEventListener('mouseleave', () => {
+      if (!simulatedCard) return;
+      // Revert to current stability decay curve
+      drawFSRSDecay(canvas, simulatedCard.stability);
+    });
+
+    chip.addEventListener('click', () => {
+      if (!simulatedCard) return;
+      
+      // Permanently update simulatedCard state
+      simulatedCard = fsrs.reviewCard(simulatedCard, rating);
+      const nextStability = simulatedCard.stability;
+      
+      // Update UI components
+      slider.value = Math.min(Math.max(nextStability, 1), 120);
+      stabilityVal.textContent = `${Number(nextStability).toFixed(1)} Tage`;
+      
+      // Repaint base curve
+      drawFSRSDecay(canvas, nextStability);
+
+      // Trigger particles on forecast chip click
+      if (window.triggerParticleBurst && state.particleBursts) {
+        window.triggerParticleBurst(15, chip);
+      }
+    });
   });
 }
 
@@ -1104,7 +1181,7 @@ export function initFSRSDecaySimulator() {
  * @param {HTMLCanvasElement} canvas
  * @param {number} stability - Stability parameter (S) in days
  */
-export function drawFSRSDecay(canvas, stability) {
+export function drawFSRSDecay(canvas, stability, forecastStability = null, forecastColor = null) {
   const ctx = canvas.getContext('2d');
   if (!ctx) return;
 
@@ -1224,6 +1301,38 @@ export function drawFSRSDecay(canvas, stability) {
     ctx.strokeStyle = '#fff';
     ctx.lineWidth = 1.5;
     ctx.stroke();
+  }
+
+  // Draw Dotted Forecast Curve if provided
+  if (forecastStability && forecastStability > 0) {
+    ctx.strokeStyle = forecastColor || 'rgba(236, 72, 153, 0.8)';
+    ctx.lineWidth = 2.0;
+    ctx.setLineDash([3, 3]);
+    ctx.shadowBlur = 0; // Disable shadow blur for performance
+
+    ctx.beginPath();
+    for (let xPixel = 0; xPixel <= chartWidth; xPixel++) {
+      const t = (xPixel / chartWidth) * 30; // 30 days window
+      const retention = Math.pow(1 + t / (9 * forecastStability), -1);
+      const yPixel = paddingTop + chartHeight * (1 - retention);
+      
+      if (xPixel === 0) {
+        ctx.moveTo(paddingLeft + xPixel, yPixel);
+      } else {
+        ctx.lineTo(paddingLeft + xPixel, yPixel);
+      }
+    }
+    ctx.stroke();
+    ctx.setLineDash([]); // Reset line dash
+
+    // Draw Right-Aligned text label showing Simulated Stability S
+    ctx.fillStyle = forecastColor || '#ec4899';
+    ctx.font = 'bold 9px monospace';
+    ctx.textAlign = 'right';
+    const finalRetention = Math.pow(1 + 30 / (9 * forecastStability), -1);
+    const finalY = paddingTop + chartHeight * (1 - finalRetention);
+    // Align label cleanly above/below the final curve pixel
+    ctx.fillText(`S = ${Number(forecastStability).toFixed(1)}d`, width - paddingRight, Math.max(paddingTop + 12, Math.min(height - paddingBottom - 4, finalY - 4)));
   }
 }
 

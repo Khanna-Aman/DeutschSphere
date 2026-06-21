@@ -1,7 +1,7 @@
 // js/immersion.js — Immersions-Labor (NLP Engine) UI Logic
 
 import { state, elements, escapeHtml, getGlobalLearnedCount } from './state.js';
-import { analyzeText } from './nlp.js';
+import { analyzeText, getSuffixRule } from './nlp.js';
 import { speakText } from './audio.js';
 
 let immersionResults = [];
@@ -216,6 +216,30 @@ export function openWordExplorer(item) {
       elements.explorerFormsText.textContent = `Artikel (NLP vorhergesagt): ${item.gender.toUpperCase()}`;
     } else {
       elements.explorerFormsContainer.classList.add('hidden');
+    }
+  }
+
+  // Suffix Grammar Rules integration in Word Explorer
+  if (elements.explorerSuffixContainer) {
+    const suffixRule = getSuffixRule(item.lemma);
+    if (suffixRule) {
+      elements.explorerSuffixContainer.classList.remove('hidden');
+      if (elements.explorerSuffixBadge) {
+        elements.explorerSuffixBadge.textContent = suffixRule.badgeText;
+        elements.explorerSuffixBadge.className = "px-1.5 py-0.5 text-[8px] font-extrabold rounded uppercase tracking-wider " + 
+          (suffixRule.gender === 'der' ? 'bg-blue-500/20 text-blue-300' :
+           suffixRule.gender === 'die' ? 'bg-pink-500/20 text-pink-300' :
+           suffixRule.gender === 'das' ? 'bg-emerald-500/20 text-emerald-300' :
+           'bg-amber-500/20 text-amber-300');
+      }
+      if (elements.explorerSuffixTitle) {
+        elements.explorerSuffixTitle.textContent = `Endung: -${suffixRule.suffix}`;
+      }
+      if (elements.explorerSuffixRule) {
+        elements.explorerSuffixRule.textContent = suffixRule.rule;
+      }
+    } else {
+      elements.explorerSuffixContainer.classList.add('hidden');
     }
   }
 

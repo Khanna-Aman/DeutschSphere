@@ -1383,6 +1383,17 @@
               <canvas id="fsrs-decay-canvas" class="w-full h-full block"></canvas>
             </div>
 
+            <!-- Interactive FSRS Rating Forecast chips -->
+            <div class="mt-4 flex flex-col gap-2">
+              <span class="text-[9px] font-black text-slate-500 uppercase tracking-widest block text-center">Review-Rating simulieren (Hover/Klick für Prognose)</span>
+              <div class="flex justify-center gap-1.5 md:gap-3">
+                <button id="forecast-btn-1" class="forecast-chip text-[10px] font-black uppercase px-2.5 py-1.5 rounded-lg border border-red-500/20 bg-red-950/10 text-red-400 hover:bg-red-500/20 hover:border-red-500/40 active:scale-95 transition-all cursor-pointer" data-rating="1">Nochmals (1)</button>
+                <button id="forecast-btn-2" class="forecast-chip text-[10px] font-black uppercase px-2.5 py-1.5 rounded-lg border border-amber-500/20 bg-amber-950/10 text-amber-400 hover:bg-amber-500/20 hover:border-amber-500/40 active:scale-95 transition-all cursor-pointer" data-rating="2">Schwer (2)</button>
+                <button id="forecast-btn-3" class="forecast-chip text-[10px] font-black uppercase px-2.5 py-1.5 rounded-lg border border-indigo-500/20 bg-indigo-950/10 text-indigo-400 hover:bg-indigo-500/20 hover:border-indigo-500/40 active:scale-95 transition-all cursor-pointer" data-rating="3">Gut (3)</button>
+                <button id="forecast-btn-4" class="forecast-chip text-[10px] font-black uppercase px-2.5 py-1.5 rounded-lg border border-emerald-500/20 bg-emerald-950/10 text-emerald-400 hover:bg-emerald-500/20 hover:border-emerald-500/40 active:scale-95 transition-all cursor-pointer" data-rating="4">Einfach (4)</button>
+              </div>
+            </div>
+
             <div class="flex justify-between text-[9px] font-mono text-slate-500/80 mt-2.5">
               <span>R(t) = (1 + t / (9 · S))^-1</span>
               <span>Visualisierter Zeitraum: 30 Tage</span>
@@ -2081,6 +2092,16 @@
         <div id="explorer-forms-container" class="bg-slate-950/40 border border-slate-900 rounded-xl p-4 hidden space-y-2">
           <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block">Grammatische Formen</span>
           <p id="explorer-forms-text" class="text-xs font-semibold text-slate-300 notranslate"></p>
+        </div>
+
+        <!-- Suffix helper integrated inside word explorer -->
+        <div id="explorer-suffix-container" class="bg-amber-500/10 border border-amber-500/20 rounded-xl p-4 hidden space-y-2">
+          <div class="flex items-center justify-between">
+            <span class="text-[9px] font-bold text-amber-400 uppercase tracking-widest block">Grammatik-Tipp (Endung)</span>
+            <span id="explorer-suffix-badge" class="px-1.5 py-0.5 bg-amber-500/20 text-amber-300 text-[8px] font-extrabold rounded uppercase tracking-wider">GENDER</span>
+          </div>
+          <h4 id="explorer-suffix-title" class="text-xs font-bold text-slate-200">Endung: -ung</h4>
+          <p id="explorer-suffix-rule" class="text-[11px] text-slate-400 leading-normal font-medium"></p>
         </div>
 
         <!-- Example Sentences -->

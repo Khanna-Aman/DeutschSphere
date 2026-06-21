@@ -639,7 +639,11 @@ export const elements = {
   explorerAddBtnText: document.getElementById('explorer-add-btn-text'),
   explorerVerifiedBadge: document.getElementById('explorer-verified-badge'),
   explorerGlow: document.getElementById('explorer-glow'),
-  explorerCardGlowBorder: document.getElementById('explorer-card-glow-border')
+  explorerCardGlowBorder: document.getElementById('explorer-card-glow-border'),
+  explorerSuffixContainer: document.getElementById('explorer-suffix-container'),
+  explorerSuffixBadge: document.getElementById('explorer-suffix-badge'),
+  explorerSuffixTitle: document.getElementById('explorer-suffix-title'),
+  explorerSuffixRule: document.getElementById('explorer-suffix-rule')
 };
 
 // Calculate globally marked learned count across level databases
