@@ -8,6 +8,181 @@ import { getSuffixRule, generateVerbConjugation, generateAdjectiveDeclension } f
 // Module-scoped amplitude smoothing for phonetic waveform (was window.nativeAmp)
 let nativeAmp = 0;
 
+// Cybernetic Phoneme Guides for difficult German sounds
+const PHONEME_GUIDES = {
+  'ö': {
+    title: 'Umlaut Ö [ø:] / [œ]',
+    lips: 'Stark gerundet und leicht nach vorne vorgestülpt (wie bei „O“).',
+    tongue: 'Wie beim „E“ (hoch und weit vorne im Mund platziert).',
+    instructions: 'Sprechen Sie ein langes „e“ (wie in „Weg“). Halten Sie die Zunge genau in dieser Position und runden Sie nun Ihre Lippen zu einem engen „O“. So entsteht das perfekte „Ö“!',
+    svg: `<svg viewBox="0 0 100 100" class="w-24 h-24 drop-shadow-[0_0_8px_rgba(244,63,94,0.3)]">
+      <defs>
+        <filter id="glow-pink-o" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glow-cyan-o" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glow-green-o" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+      </defs>
+      <!-- Lips Outer (Pink) -->
+      <ellipse cx="50" cy="50" rx="26" ry="32" fill="none" stroke="#f43f5e" stroke-width="3" filter="url(#glow-pink-o)" />
+      <!-- Lips Inner (Cyan) -->
+      <ellipse cx="50" cy="50" rx="16" ry="22" fill="#020617" stroke="#06b6d4" stroke-width="2.5" filter="url(#glow-cyan-o)" />
+      <!-- Tongue Position (Green) -->
+      <path d="M 38 56 Q 50 44 62 56" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" filter="url(#glow-green-o)" />
+      <!-- Rounding indicators -->
+      <path d="M 20 50 A 30 30 0 0 1 80 50" fill="none" stroke="#64748b" stroke-width="1" stroke-dasharray="3 3" />
+      <path d="M 20 50 A 30 30 0 0 0 80 50" fill="none" stroke="#64748b" stroke-width="1" stroke-dasharray="3 3" />
+    </svg>`
+  },
+  'ü': {
+    title: 'Umlaut Ü [y:] / [ʏ]',
+    lips: 'Sehr eng kreisrund gerundet und stark vorgestülpt (wie beim Pfeifen).',
+    tongue: 'Wie beim „I“ (sehr hoch und ganz weit vorne an den Zähnen).',
+    instructions: 'Sprechen Sie ein langes „i“ (wie in „Sieg“). Lassen Sie die Zunge unverändert in dieser extrem hohen Vorderposition und runden Sie die Lippen fest zu einem ganz engen, kleinen „U“!',
+    svg: `<svg viewBox="0 0 100 100" class="w-24 h-24 drop-shadow-[0_0_8px_rgba(244,63,94,0.3)]">
+      <defs>
+        <filter id="glow-pink-u" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glow-cyan-u" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glow-green-u" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+      </defs>
+      <!-- Tight Lips Outer (Pink) -->
+      <circle cx="50" cy="50" r="20" fill="none" stroke="#f43f5e" stroke-width="3.5" filter="url(#glow-pink-u)" />
+      <!-- Tight Lips Inner (Cyan) -->
+      <circle cx="50" cy="50" r="10" fill="#020617" stroke="#06b6d4" stroke-width="2.5" filter="url(#glow-cyan-u)" />
+      <!-- High Tongue (Green) -->
+      <path d="M 42 50 Q 50 40 58 50" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" filter="url(#glow-green-u)" />
+      <!-- Protrusion arrows -->
+      <path d="M 18 50 L 8 50 M 82 50 L 92 50 M 50 18 L 50 8 M 50 82 L 50 92" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-linecap="round" />
+    </svg>`
+  },
+  'ä': {
+    title: 'Umlaut Ä [ɛ:] / [ɛ]',
+    lips: 'Weit geöffnet und leicht flach entspannt (breiter als bei „A“).',
+    tongue: 'Flach liegend, die Zungenspitze berührt leicht die unteren Schneidezähne.',
+    instructions: 'Öffnen Sie den Mund wie für ein normales „A“. Ziehen Sie nun Ihre Mundwinkel ganz leicht nach außen (ein breites Grinsen simulieren) und heben Sie die Zunge minimal an, um ein offenes „E“ zu formen.',
+    svg: `<svg viewBox="0 0 100 100" class="w-24 h-24 drop-shadow-[0_0_8px_rgba(244,63,94,0.3)]">
+      <defs>
+        <filter id="glow-pink-a" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glow-cyan-a" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glow-green-a" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+      </defs>
+      <!-- Wide Lips Outer (Pink) -->
+      <ellipse cx="50" cy="50" rx="36" ry="22" fill="none" stroke="#f43f5e" stroke-width="3" filter="url(#glow-pink-a)" />
+      <!-- Wide Lips Inner (Cyan) -->
+      <ellipse cx="50" cy="50" rx="28" ry="14" fill="#020617" stroke="#06b6d4" stroke-width="2.5" filter="url(#glow-cyan-a)" />
+      <!-- Flat Tongue (Green) -->
+      <path d="M 28 54 Q 50 50 72 54" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" filter="url(#glow-green-a)" />
+      <!-- Vertical Stretch Indicator -->
+      <path d="M 50 20 L 50 32 M 50 80 L 50 68" fill="none" stroke="#f43f5e" stroke-width="1.5" stroke-linecap="round" />
+    </svg>`
+  },
+  'sch': {
+    title: 'Sibilant SCH [ʃ]',
+    lips: 'Leicht gerundet, nach vorne geschoben und leicht geöffnet.',
+    tongue: 'Zungenseiten liegen am Gaumen an, Zungenmitte bildet eine breite Rinne.',
+    instructions: 'Bringen Sie die Zähne nahe zusammen (ohne sie ganz zu schließen). Formen Sie mit den Lippen ein leichtes Viereck, schieben Sie sie nach vorne und blasen Sie die Luft kraftvoll durch die Mitte aus (Rauschen).',
+    svg: `<svg viewBox="0 0 100 100" class="w-24 h-24 drop-shadow-[0_0_8px_rgba(244,63,94,0.3)]">
+      <defs>
+        <filter id="glow-pink-s" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glow-cyan-s" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+      </defs>
+      <!-- Squared Lips (Pink) -->
+      <rect x="22" y="26" width="56" height="48" rx="14" fill="none" stroke="#f43f5e" stroke-width="3" filter="url(#glow-pink-s)" />
+      <!-- Inner Teeth (Cyan Lines) -->
+      <path d="M 32 44 Q 50 44 68 44" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-dasharray="3 2" />
+      <path d="M 32 54 Q 50 52 68 54" fill="none" stroke="#38bdf8" stroke-width="3.5" stroke-dasharray="3 2" />
+      <!-- Airflow Waves (Violet) -->
+      <path d="M 12 48 Q 18 40 24 48 T 36 48" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M 64 48 Q 70 40 76 48 T 88 48" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-linecap="round" />
+    </svg>`
+  },
+  'ch': {
+    title: 'Frikativ CH [ç] / [x]',
+    lips: 'Leicht geöffnet (Mundwinkel entspannt bis breit auseinander).',
+    tongue: 'Ich-Laut [ç]: Zungenmitte nähert sich dem harten Gaumen. Ach-Laut [x]: Zungenrücken nähert sich dem weichen Gaumen.',
+    instructions: 'Für den „Ich-Laut“ (nach e/i/ä/ö/ü): Flüstern Sie ein langes „jaaaa“ und halten Sie den Reibelaut in der Mitte. Für den „Ach-Laut“ (nach a/o/u): Machen Sie ein leichtes Räuspern im Rachen (wie beim Atmen an eine kalte Scheibe).',
+    svg: `<svg viewBox="0 0 100 100" class="w-24 h-24 drop-shadow-[0_0_8px_rgba(244,63,94,0.3)]">
+      <defs>
+        <filter id="glow-green-c" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glow-cyan-c" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+      </defs>
+      <!-- Profile Roof of Mouth (Slate) -->
+      <path d="M 15 25 Q 45 25 72 42 L 72 75" fill="none" stroke="#64748b" stroke-width="4.5" stroke-linecap="round" />
+      <!-- Tongue Raising in Profile (Green) -->
+      <path d="M 15 78 Q 42 70 54 54 Q 60 48 70 43" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" filter="url(#glow-green-c)" />
+      <!-- Friction Dots Channel (Cyan) -->
+      <path d="M 40 43 Q 48 40 56 42" fill="none" stroke="#06b6d4" stroke-width="2.5" stroke-dasharray="2 3" filter="url(#glow-cyan-c)" />
+      <!-- Arrow indicating airflow -->
+      <path d="M 28 35 L 42 35" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M 38 31 L 42 35 L 38 39" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round" />
+    </svg>`
+  },
+  'r': {
+    title: 'Uvulares R [ʁ] / Vokalisches R [ɐ]',
+    lips: 'Leicht geöffnet und entspannt.',
+    tongue: 'Konsonantisches R: Das Zäpfchen (Uvula) hinten am Gaumensegel vibriert gegen den Zungenrücken.',
+    instructions: 'Für das Reibe-R: Stellen Sie sich vor, Sie gurgeln sanft mit einem Schluck Wasser ganz hinten im Mund. Die Zunge bleibt unten, während die Luft hinten am Gaumensegel ein leicht vibrierendes, weiches Reibegeräusch erzeugt.',
+    svg: `<svg viewBox="0 0 100 100" class="w-24 h-24 drop-shadow-[0_0_8px_rgba(244,63,94,0.3)]">
+      <defs>
+        <filter id="glow-pink-r" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+        <filter id="glow-green-r" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="3" result="blur" />
+          <feComposite in="SourceGraphic" in2="blur" operator="over" />
+        </filter>
+      </defs>
+      <!-- Throat & Palate profile (Slate) -->
+      <path d="M 20 25 Q 55 25 65 52 L 65 80" fill="none" stroke="#64748b" stroke-width="4" stroke-linecap="round" />
+      <!-- Back of Tongue profile (Green) -->
+      <path d="M 20 82 Q 45 78 52 64 Q 56 58 60 82" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" filter="url(#glow-green-r)" />
+      <!-- Vibrating Uvula hanging (Pink) -->
+      <path d="M 58 46 Q 55 52 58 56 Q 61 52 58 46" fill="#f43f5e" stroke="#f43f5e" stroke-width="1.5" filter="url(#glow-pink-r)" />
+      <!-- Vibration ripples (Violet arcs) -->
+      <path d="M 48 56 Q 52 60 56 61" fill="none" stroke="#8b5cf6" stroke-width="1.5" stroke-linecap="round" />
+      <path d="M 45 61 Q 50 67 55 67" fill="none" stroke="#8b5cf6" stroke-width="1" stroke-linecap="round" />
+    </svg>`
+  }
+};
+
 // Toggle the detail accordion
 export function toggleAccordion() {
   if (state.isAccordionOpen) {
@@ -842,6 +1017,11 @@ export function closePhoneticMirror() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
   });
+
+  if (elements.phoneticMouthGuideContainer) {
+    elements.phoneticMouthGuideContainer.innerHTML = '';
+    elements.phoneticMouthGuideContainer.classList.add('hidden');
+  }
 }
 
 export function togglePhoneticRecording() {
@@ -1248,8 +1428,9 @@ export function evaluatePhoneticPronunciation(spokenText) {
     
     let spokenIdx = 0;
     const sourceTokens = targetWordClean.split('');
+    const isCharMatched = new Array(sourceTokens.length).fill(false);
     
-    sourceTokens.forEach(char => {
+    sourceTokens.forEach((char, idx) => {
       const cleanChar = char.toLowerCase();
       const isAlpha = /[a-zäöüß0-9]/i.test(cleanChar);
       
@@ -1270,6 +1451,8 @@ export function evaluatePhoneticPronunciation(spokenText) {
           }
         }
         
+        isCharMatched[idx] = matched;
+        
         if (matched) {
           span.className += ' text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.35)] font-black text-xl scale-105';
         } else {
@@ -1279,6 +1462,106 @@ export function evaluatePhoneticPronunciation(spokenText) {
       
       elements.phoneticMatchedChars.appendChild(span);
     });
+
+    // Detect failed difficult phonemes (ö, ü, ä, ch, sch, r)
+    const failedPhonemes = new Set();
+    const cleanWordLower = targetWordClean.toLowerCase();
+    
+    // Find all 'sch'
+    let index = 0;
+    while ((index = cleanWordLower.indexOf('sch', index)) !== -1) {
+      const failed = !isCharMatched[index] || !isCharMatched[index + 1] || !isCharMatched[index + 2];
+      if (failed) failedPhonemes.add('sch');
+      index += 3;
+    }
+    
+    // Find all 'ch' (not part of 'sch')
+    index = 0;
+    while ((index = cleanWordLower.indexOf('ch', index)) !== -1) {
+      if (index === 0 || cleanWordLower[index - 1] !== 's') {
+        const failed = !isCharMatched[index] || !isCharMatched[index + 1];
+        if (failed) failedPhonemes.add('ch');
+      }
+      index += 2;
+    }
+    
+    // Find all 'ö'
+    index = 0;
+    while ((index = cleanWordLower.indexOf('ö', index)) !== -1) {
+      if (!isCharMatched[index]) failedPhonemes.add('ö');
+      index += 1;
+    }
+    
+    // Find all 'ü'
+    index = 0;
+    while ((index = cleanWordLower.indexOf('ü', index)) !== -1) {
+      if (!isCharMatched[index]) failedPhonemes.add('ü');
+      index += 1;
+    }
+    
+    // Find all 'ä'
+    index = 0;
+    while ((index = cleanWordLower.indexOf('ä', index)) !== -1) {
+      if (!isCharMatched[index]) failedPhonemes.add('ä');
+      index += 1;
+    }
+    
+    // Find all 'r'
+    index = 0;
+    while ((index = cleanWordLower.indexOf('r', index)) !== -1) {
+      if (!isCharMatched[index]) failedPhonemes.add('r');
+      index += 1;
+    }
+
+    // Render Anatomical Mouth Guide if any failed
+    if (elements.phoneticMouthGuideContainer) {
+      if (failedPhonemes.size > 0 && score < 100) {
+        let guidesHTML = `
+          <div class="mt-4 pt-3 border-t border-slate-900 animate-fade-in space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="flex h-2 w-2 relative">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-rose-500"></span>
+              </span>
+              <h5 class="text-[10px] font-extrabold uppercase tracking-widest text-rose-400">Phonetische Hilfestellung | Mouth Positioning Guide</h5>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        `;
+        
+        failedPhonemes.forEach(ph => {
+          const guide = PHONEME_GUIDES[ph];
+          if (guide) {
+            guidesHTML += `
+              <div class="bg-slate-950 border border-slate-900 rounded-lg p-3 flex gap-3 items-center hover:border-pink-500/20 transition-colors duration-300">
+                <div class="flex-shrink-0 flex items-center justify-center bg-slate-900 border border-slate-800 rounded-md p-1">
+                  ${guide.svg}
+                </div>
+                <div class="space-y-1 min-w-0">
+                  <div class="flex items-center gap-1.5 flex-wrap">
+                    <span class="text-xs font-black text-pink-400 font-sans tracking-wide uppercase">${guide.title}</span>
+                    <span class="px-1.5 py-0.5 bg-pink-500/10 border border-pink-500/25 text-pink-400 text-[8px] font-black uppercase tracking-wider rounded">Mundstellung</span>
+                  </div>
+                  <p class="text-[10px] text-slate-300 leading-normal font-medium"><strong class="text-slate-400 font-extrabold uppercase text-[8px] tracking-wider block">Lippen | Lips:</strong> ${guide.lips}</p>
+                  <p class="text-[10px] text-slate-300 leading-normal font-medium"><strong class="text-slate-400 font-extrabold uppercase text-[8px] tracking-wider block">Zunge | Tongue:</strong> ${guide.tongue}</p>
+                  <p class="text-[10px] text-slate-400 leading-normal italic font-medium pt-0.5"><strong class="text-slate-400 font-extrabold uppercase text-[8px] tracking-widest block not-italic">Anleitung:</strong> ${guide.instructions}</p>
+                </div>
+              </div>
+            `;
+          }
+        });
+        
+        guidesHTML += `
+            </div>
+          </div>
+        `;
+        
+        elements.phoneticMouthGuideContainer.innerHTML = guidesHTML;
+        elements.phoneticMouthGuideContainer.classList.remove('hidden');
+      } else {
+        elements.phoneticMouthGuideContainer.innerHTML = '';
+        elements.phoneticMouthGuideContainer.classList.add('hidden');
+      }
+    }
   }
 
   if (elements.phoneticScoreBadge) {

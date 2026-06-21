@@ -579,6 +579,7 @@ export const elements = {
   phoneticScoreBadge: document.getElementById('phonetic-score-badge'),
   phoneticMatchedChars: document.getElementById('phonetic-matched-chars'),
   phoneticFeedbackMsg: document.getElementById('phonetic-feedback-msg'),
+  phoneticMouthGuideContainer: document.getElementById('phonetic-mouth-guide-container'),
   nativeSpecHint: document.getElementById('native-spec-hint'),
   learnerSpecHint: document.getElementById('learner-spec-hint'),
   learnerSpecStatus: document.getElementById('learner-spec-status'),
