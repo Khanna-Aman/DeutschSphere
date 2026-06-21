@@ -14,7 +14,8 @@ import {
   migrateToFSRS,
   startSession,
   initProfileData,
-  reviewCardSRS
+  reviewCardSRS,
+  resetActiveLevelProgress
 } from './js/state.js';
 
 import {
@@ -212,9 +213,8 @@ async function changeLevel(level) {
   // Track visited levels for achievements
   trackVisitedLevels();
   
-  // Reload level-scoped learned cards
-  state.learnedCards = new Set(safeJsonParse(`learned_cards_${level}`, []).map(id => Number(id)));
-  state.srs = safeJsonParse(`srs_state_${level}`, {});
+  // Reload level-scoped learned cards and SRS state asynchronously from IndexedDB
+  await initProfileData();
   migrateToFSRS(); // Auto-migrate Leitner data to FSRS format
   
   // Update UI indicators
@@ -1470,16 +1470,12 @@ function showConfirmModal(message, onConfirm) {
 function resetProgress() {
   showConfirmModal(
     "Möchten Sie Ihren gesamten Lernfortschritt (gelesene/gelernte Karten) wirklich zurücksetzen?",
-    () => {
+    async () => {
       if (state.trainer && state.trainer.active) {
         stopAudioTrainer();
       }
 
-      state.learnedCards.clear();
-      localStorage.removeItem(`learned_cards_${state.currentLevel}`);
-      
-      state.srs = {};
-      localStorage.removeItem(`srs_state_${state.currentLevel}`);
+      await resetActiveLevelProgress();
       
       renderCard();
       updateOverallStats();

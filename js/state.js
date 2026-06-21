@@ -706,6 +706,21 @@ export function getGlobalLearnedCount() {
   return totalCount;
 }
 
+export function getLearnedCountForLevel(level) {
+  if (level === state.currentLevel) {
+    return state.learnedCards.size;
+  }
+  return learnedCountCache.get(level) || 0;
+}
+
+export async function resetActiveLevelProgress() {
+  state.learnedCards.clear();
+  state.srs = {};
+  await idb.del(`learned_cards_${state.currentLevel}`);
+  await idb.del(`srs_state_${state.currentLevel}`);
+  updateLearnedCacheForActiveLevel();
+}
+
 // Track visited levels to trigger achievement badge
 export function trackVisitedLevels() {
   let visited = safeJsonParse('visited_levels', []);
