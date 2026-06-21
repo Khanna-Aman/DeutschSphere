@@ -111,6 +111,7 @@ try:
         print("Creating Desktop Browser context (1440x900)...")
         context_desktop = browser.new_context(viewport={"width": 1440, "height": 900})
         page = context_desktop.new_page()
+        page.add_init_script("localStorage.setItem('visited_intro', 'true');")
         
         # Attach error interceptors
         page.on("console", handle_console_message)

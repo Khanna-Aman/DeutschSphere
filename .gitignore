@@ -34,4 +34,5 @@ cookies.txt
 
 # Backup files
 scripts/backups/
+scripts/logs/
 
