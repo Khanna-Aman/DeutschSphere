@@ -927,3 +927,18 @@ Batch 403 saved successfully. Total cumulative updates: 14
 Processing Batch 404/428 (Index 2015 to 2020)
   [UPDATE] 'der Witz' (ID: 2017): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
 Batch 404 saved successfully. Total cumulative updates: 15
+
+Processing Batch 405/428 (Index 2020 to 2025)
+Batch 405 saved successfully. Total cumulative updates: 15
+
+Processing Batch 406/428 (Index 2025 to 2030)
+  [UPDATE] 'wollen' (ID: 2027): theme: 'Einkaufen & Konsum' -> 'Zeit, Maße & Basiswortschatz'
+  [UPDATE] 'das Wort' (ID: 2028): plural: 'die Worte' -> 'die Wörter'
+  [UPDATE] 'worum' (ID: 2030): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+Batch 406 saved successfully. Total cumulative updates: 18
+
+Processing Batch 407/428 (Index 2030 to 2035)
+  [UPDATE] 'worüber' (ID: 2031): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+  [UPDATE] 'das Wunder' (ID: 2033): theme: 'Person & Familie' -> 'Zeit, Maße & Basiswortschatz'
+  [UPDATE] 'der Wunsch' (ID: 2035): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+Batch 407 saved successfully. Total cumulative updates: 21
