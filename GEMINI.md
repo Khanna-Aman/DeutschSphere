@@ -146,4 +146,4 @@ This section acts as our live implementation and audit ledger for the premium V6
 - **[x] Keyboard Navigation**: Bind keys `1-9` to select scrambled word-chips, `Enter` to submit, and `Backspace` to undo across both Weaver (`#/weaver`) and Adventure (`#/adventure`) paths in `app.js`.
 - **[x] Suffix Grammar & Interactive Overlays**: Add inline suffix lightbulb drawers on flashcards and click-to-explore overlays inside `js/immersion.js`.
 - **[x] FSRS Spaced Repetition Decay Simulator & Forecaster**: Draw decay curves $R(t) = \left(1 + \frac{t}{9 \cdot S}\right)^{-1}$ on HTML5 Canvas and wire interactive `.forecast-chip` mouseenter/mouseleave/click simulation.
-- **[ ] Base64 Sync & Mobile Swipes**: Implement swipe actions on flashcards and IndexedDB Base64 backup serialization inside `js/state.js` and `js/stats.js`.
+- **[x] Base64 Sync & Mobile Swipes**: Implement swipe actions on flashcards and IndexedDB Base64 backup serialization inside `js/state.js` and `js/stats.js`.

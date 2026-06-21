@@ -130,7 +130,7 @@ Persisted via `localStorage.current_theme`. Each theme fully overrides: body bac
 - [x] Responsive Design (mobile sidebar, touch targets)
 - [x] Bilingual UI (German + English)
 - [x] JSON Backup Export/Import
-- [ ] E2E Test Suite (Playwright) — not yet implemented
+- [x] E2E Test Suite (Playwright) — fully implemented via `scripts/e2e_comprehensive_tests.py`
 
 ### ⚠️ Known Gaps
 - [x] B1 SVG images — **Complete (pipeline run, ~2,000+ SVGs generated)**
@@ -169,17 +169,17 @@ Persisted via `localStorage.current_theme`. Each theme fully overrides: body bac
 - [x] **Cheatcodes Encoding Fix**: Fixed 56 double-encoded UTF-8 sequences + added `sanitizeGermanEncoding()` safety net
 - [ ] **More Adventure Scenarios**: Add 3-5 additional branching dialogues per level
 - [x] **Enhanced FSRS Timeline**: FSRS-5 retention analytics, 7-day review forecast in stats view
-- [ ] **v6.0 Hyper-Premium Upgrades**: Active development sprint for premium student suite:
+- [x] **v6.0 Hyper-Premium Upgrades**: Active development sprint for premium student suite:
   - [x] Establishment of V6.0 Core Directives & Rules (`GEMINI.md`)
   - [x] Service Worker module precaching of ESM modules (`sw.js` precaches `js/nlp.js`, `js/immersion.js`, `idb-keyval.js`)
   - [x] Kölner Phonetik algorithms & inline suffix parser rules (`js/nlp.js`)
   - [x] Custom settings toggles in "Einstellungen" dropdown (SFX volume slider, Synthesized vs. Acoustic chimes, Toggle particle bursts)
   - [x] Lightweight, non-blocking CSS/JS-driven full-screen particle burst engine
-  - [ ] Interactive click-to-explore Immersions-Labor grid (inspect parsed lemmas, load CEFR level, FSRS state, TTS voice, quick-add cards)
-  - [ ] Inline suffix lightbulb grammar guides on flashcards and quiz views
-  - [ ] Spaced Repetition deck rating hotkeys (`1-4`) and mobile-responsive kinetic swipe-to-rate gestures
+  - [x] Interactive click-to-explore Immersions-Labor grid (inspect parsed lemmas, load CEFR level, FSRS state, TTS voice, quick-add cards)
+  - [x] Inline suffix lightbulb grammar guides on flashcards and quiz views
+  - [x] Spaced Repetition deck rating hotkeys (`1-4`) and mobile-responsive kinetic swipe-to-rate gestures
   - [x] Scrambled word-chip hotkeys (`1-9` + `Enter`) for Grammar Weaver and Deutsch-Abenteuer RPG views
-  - [ ] Copy-pasteable Base64 compressed IndexedDB progress backup sync keys
+  - [x] Copy-pasteable Base64 compressed IndexedDB progress backup sync keys
 
 ### Medium-Term
 - [ ] **PDF Flashcard Export**: Client-side PDF generation for printable flashcard sheets

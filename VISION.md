@@ -98,15 +98,15 @@ The A1-B1 German Vocabulary Master is a **fully functional, feature-rich SPA** w
 - [x] Cross-references parsed text against user's IndexedDB FSRS profile
 - [x] Zero-dependency, offline-first design
 
-### Phase 11: Hyper-Premium V6.0 Sprint (In Progress)
+### Phase 11: Hyper-Premium V6.0 Sprint (Completed)
 - [x] **Service Worker Complete Caching**: Added missing core modules (`js/nlp.js`, `js/immersion.js`, `js/idb-keyval.js`) to precached `APP_SHELL`
-- [ ] **Kölner Phonetik Engine**: Match spoken pronunciation by German sound rather than spelling
-- [ ] **Mouth & Tongue Positioning Guides**: Rich visual guide panels for complex German phonemes (`ö`, `ü`, `ä`, `ch`, `sch`, `r`)
-- [ ] **Interactive Immersions click-to-explore**: Instantly inspect parsed words, load CEFR status, TTS pronunciation, and quick-add as custom cards
-- [ ] **Inline Suffix Grammar Helpers**: Suffix detection (e.g., `-ung`, `-heit`) rendering inline drawers matching words to gender rules
-- [ ] **Encrypted Base64 Sync Keys**: Copy-pasteable sync profile keys to bridge FSRS progress profiles cross-device
-- [ ] **Dual Touch & Key-Index Navigation**: Touch swipes for flashcard rating combined with `1-9`/`Enter` chip selections in Weaver/RPG
-- [ ] **Settings Preference Customization**: Sliders for audio SFX volume and toggles for synthesized/acoustic chimes and particle bursts
+- [x] **Kölner Phonetik Engine**: Match spoken pronunciation by German sound rather than spelling
+- [x] **Mouth & Tongue Positioning Guides**: Rich visual guide panels for complex German phonemes (`ö`, `ü`, `ä`, `ch`, `sch`, `r`)
+- [x] **Interactive Immersions click-to-explore**: Instantly inspect parsed words, load CEFR status, TTS pronunciation, and quick-add as custom cards
+- [x] **Inline Suffix Grammar Helpers**: Suffix detection (e.g., `-ung`, `-heit`) rendering inline drawers matching words to gender rules
+- [x] **Encrypted Base64 Sync Keys**: Copy-pasteable sync profile keys to bridge FSRS progress profiles cross-device
+- [x] **Dual Touch & Key-Index Navigation**: Touch swipes for flashcard rating combined with `1-9`/`Enter` chip selections in Weaver/RPG
+- [x] **Settings Preference Customization**: Sliders for audio SFX volume and toggles for synthesized/acoustic chimes and particle bursts
 
 
 ### Cross-Cutting Concerns
