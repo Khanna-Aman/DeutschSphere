@@ -916,3 +916,14 @@ Processing Batch 401/428 (Index 2000 to 2005)
   [UPDATE] 'wieso' (ID: 2003): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
   [UPDATE] 'willkommen' (ID: 2005): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
 Batch 401 saved successfully. Total cumulative updates: 13
+
+Processing Batch 402/428 (Index 2005 to 2010)
+  [UPDATE] 'winken' (ID: 2007): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+Batch 402 saved successfully. Total cumulative updates: 14
+
+Processing Batch 403/428 (Index 2010 to 2015)
+Batch 403 saved successfully. Total cumulative updates: 14
+
+Processing Batch 404/428 (Index 2015 to 2020)
+  [UPDATE] 'der Witz' (ID: 2017): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+Batch 404 saved successfully. Total cumulative updates: 15
