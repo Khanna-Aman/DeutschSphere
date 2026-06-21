@@ -942,3 +942,87 @@ Processing Batch 407/428 (Index 2030 to 2035)
   [UPDATE] 'das Wunder' (ID: 2033): theme: 'Person & Familie' -> 'Zeit, Maße & Basiswortschatz'
   [UPDATE] 'der Wunsch' (ID: 2035): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
 Batch 407 saved successfully. Total cumulative updates: 21
+
+Processing Batch 408/428 (Index 2035 to 2040)
+Batch 408 saved successfully. Total cumulative updates: 21
+
+Processing Batch 409/428 (Index 2040 to 2045)
+Batch 409 saved successfully. Total cumulative updates: 21
+
+Processing Batch 410/428 (Index 2045 to 2050)
+Batch 410 saved successfully. Total cumulative updates: 21
+
+Processing Batch 411/428 (Index 2050 to 2055)
+  [UPDATE] 'die Zeile' (ID: 2051): theme: 'Freizeit & Unterhaltung' -> 'Ausbildung & Lernen'
+  [UPDATE] 'der Zeitpunkt' (ID: 2053): plural: 'None' -> 'die Zeitpunkte'
+Batch 411 saved successfully. Total cumulative updates: 23
+
+Processing Batch 412/428 (Index 2055 to 2060)
+  [UPDATE] 'zentral' (ID: 2057): theme: 'Einkaufen & Konsum' -> 'Wohnen & Haushalt'
+  [UPDATE] 'das Zertifikat' (ID: 2059): theme: 'Arbeit & Beruf' -> 'Ausbildung & Lernen'
+  [UPDATE] 'der Zettel' (ID: 2060): theme: 'Arbeit & Beruf' -> 'Ausbildung & Lernen'
+Batch 412 saved successfully. Total cumulative updates: 26
+
+Processing Batch 413/428 (Index 2060 to 2065)
+Batch 413 saved successfully. Total cumulative updates: 26
+
+Processing Batch 414/428 (Index 2065 to 2070)
+  [UPDATE] 'der Zivilstand' (ID: 2070): theme: 'Dienstleistungen & Behörden' -> 'Person & Familie'
+Batch 414 saved successfully. Total cumulative updates: 27
+
+Processing Batch 415/428 (Index 2070 to 2075)
+  [UPDATE] 'der Zoo' (ID: 2073): theme: 'Natur & Umwelt' -> 'Freizeit & Unterhaltung'
+Batch 415 saved successfully. Total cumulative updates: 28
+
+Processing Batch 416/428 (Index 2075 to 2080)
+Batch 416 saved successfully. Total cumulative updates: 28
+
+Processing Batch 417/428 (Index 2080 to 2085)
+  [UPDATE] 'zugänglich' (ID: 2084): theme: 'Reise & Verkehr' -> 'Wohnen & Haushalt'
+Batch 417 saved successfully. Total cumulative updates: 29
+
+Processing Batch 418/428 (Index 2085 to 2090)
+Batch 418 saved successfully. Total cumulative updates: 29
+
+Processing Batch 419/428 (Index 2090 to 2095)
+  [UPDATE] 'zumindest' (ID: 2091): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+Batch 419 saved successfully. Total cumulative updates: 30
+
+Processing Batch 420/428 (Index 2095 to 2100)
+  [UPDATE] 'zustimmen' (ID: 2100): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+Batch 420 saved successfully. Total cumulative updates: 31
+
+Processing Batch 421/428 (Index 2100 to 2105)
+  [UPDATE] 'die Zustimmung' (ID: 2101): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+  [UPDATE] 'zwar' (ID: 2104): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+Batch 421 saved successfully. Total cumulative updates: 33
+
+Processing Batch 422/428 (Index 2105 to 2110)
+  [UPDATE] 'der Zweifel' (ID: 2106): theme: 'Person & Familie' -> 'Zeit, Maße & Basiswortschatz'
+Batch 422 saved successfully. Total cumulative updates: 34
+
+Processing Batch 423/428 (Index 2110 to 2115)
+  [UPDATE] 'die Änderung' (ID: 2112): theme: 'Person & Familie' -> 'Zeit, Maße & Basiswortschatz'
+Batch 423 saved successfully. Total cumulative updates: 35
+
+Processing Batch 424/428 (Index 2115 to 2120)
+Batch 424 saved successfully. Total cumulative updates: 35
+
+Processing Batch 425/428 (Index 2120 to 2125)
+Batch 425 saved successfully. Total cumulative updates: 35
+
+Processing Batch 426/428 (Index 2125 to 2130)
+Batch 426 saved successfully. Total cumulative updates: 35
+
+Processing Batch 427/428 (Index 2130 to 2135)
+  [UPDATE] 'übertreiben' (ID: 2133): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+  [UPDATE] 'die Überzeugung' (ID: 2135): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+Batch 427 saved successfully. Total cumulative updates: 37
+
+Processing Batch 428/428 (Index 2135 to 2139)
+  [UPDATE] 'üblich' (ID: 2136): theme: 'Freizeit & Unterhaltung' -> 'Zeit, Maße & Basiswortschatz'
+  [UPDATE] 'übrig' (ID: 2137): theme: 'Essen & Trinken' -> 'Zeit, Maße & Basiswortschatz'
+  [UPDATE] 'übrigens' (ID: 2138): theme: 'Ausbildung & Lernen' -> 'Zeit, Maße & Basiswortschatz'
+Batch 428 saved successfully. Total cumulative updates: 40
+
+Level B1 complete. Audited: 174, Corrections: 40
