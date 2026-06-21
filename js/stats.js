@@ -1,6 +1,6 @@
 // js/stats.js — Profile Statistics, Achievements & Backup Module
 
-import { state, elements, ACHIEVEMENTS, getGlobalLearnedCount, getCategoryIcon, getSRSInfo, safeJsonParse, safeSetItem, safeGetItem, getStreakInfo } from './state.js';
+import { state, elements, ACHIEVEMENTS, getGlobalLearnedCount, getLearnedCountForLevel, getCategoryIcon, getSRSInfo, safeJsonParse, safeSetItem, safeGetItem, getStreakInfo } from './state.js';
 import { fsrs, State as FSRSState, Rating } from './fsrs.js';
 import { playAchievementChime } from './audio.js';
 import * as idb from './idb-keyval.js';
@@ -220,8 +220,7 @@ export function initStatsView() {
   // 3. Render and animate multi-level progress rings (A1, A2, B1)
   ['a1', 'a2', 'b1'].forEach(lvl => {
     const lvlTotal = CEFR_LEVEL_TOTALS[lvl];
-    const lvlLearnedList = safeJsonParse(`learned_cards_${lvl}`, []);
-    const lvlLearned = lvlLearnedList.length;
+    const lvlLearned = getLearnedCountForLevel(lvl);
     const lvlPct = lvlTotal > 0 ? Math.round((lvlLearned / lvlTotal) * 100) : 0;
     
     // Dynamic DOM bindings
@@ -1082,13 +1081,13 @@ export function initFSRSDecaySimulator() {
     loadCardState(null);
     drawFSRSDecay(canvas, 8);
   } else {
-    // Sort learned cards alphabetically
-    learnedCardsList.sort((a, b) => a.german.localeCompare(b.german));
+    // Sort learned cards alphabetically by German headword
+    learnedCardsList.sort((a, b) => a.word.localeCompare(b.word));
 
     learnedCardsList.forEach(c => {
       const opt = document.createElement('option');
       opt.value = c.id;
-      opt.textContent = `${c.german} — ${c.english}`;
+      opt.textContent = `${c.word} — ${c.meaning}`;
       cardSelect.appendChild(opt);
     });
 
