@@ -1963,6 +1963,134 @@
     </div>
   </div>
 
+  <!-- F15: Bilingual Help & Introduction Modal -->
+  <div id="help-modal-overlay" class="confirm-modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="help-modal-title">
+    <div class="confirm-modal-card max-w-[42rem] max-h-[85vh] flex flex-col p-0 relative overflow-hidden backdrop-blur-xl bg-slate-950/85 border border-slate-800/80 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+      <!-- Gradient Header Header -->
+      <div class="p-6 pb-4 border-b border-slate-800/60 flex items-center justify-between bg-gradient-to-r from-slate-950/40 via-indigo-950/10 to-slate-950/40 shrink-0">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-lg">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div>
+            <h3 id="help-modal-title" class="font-display font-black text-lg text-white">Hilfe & Einführung</h3>
+            <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Help & System Introduction</span>
+          </div>
+        </div>
+        <button id="help-modal-close" class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-white flex items-center justify-center text-sm transition-all active:scale-95 cursor-pointer">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Scrollable Help Body -->
+      <div class="p-6 overflow-y-auto space-y-6 flex-1 text-slate-300 scrollbar-thin">
+        
+        <!-- Intro Banner -->
+        <div class="bg-indigo-500/5 border border-indigo-500/10 rounded-xl p-4 flex gap-3">
+          <i class="fa-solid fa-circle-info text-indigo-400 text-lg shrink-0 mt-0.5 animate-pulse"></i>
+          <div class="space-y-1">
+            <p class="text-xs font-semibold leading-relaxed text-slate-200">
+              Willkommen beim <strong>A1-B1 Deutsch Vokabelmeister</strong>! Diese Plattform vereint klinische Gedächtniswissenschaft mit interaktiven Lernmodulen.
+            </p>
+            <p class="text-[11px] leading-relaxed text-slate-400 font-medium">
+              Welcome to the <strong>A1-B1 German Vocabulary Master</strong>! This platform marries clinical memory science with interactive game boards.
+            </p>
+          </div>
+        </div>
+
+        <!-- 1. FSRS-5 -->
+        <div class="space-y-2">
+          <div class="flex items-center gap-2 border-b border-slate-900 pb-1">
+            <span class="text-indigo-400 text-sm font-bold">01.</span>
+            <h4 class="font-bold text-slate-200 text-sm">FSRS-5 Spaced Repetition | FSRS-5 Spaced Repetition</h4>
+          </div>
+          <p class="text-xs leading-relaxed text-slate-300">
+            Jede Karteikarte nutzt den wissenschaftlich erprobten <strong>FSRS-5 (Free Spaced Repetition Scheduler)</strong> Algorithmus. Bewerten Sie Ihren Abruferfolg mit vier Tasten: <strong>Nochmal (Again)</strong>, <strong>Schwer (Hard)</strong>, <strong>Gut (Good)</strong>, oder <strong>Einfach (Easy)</strong>. Das System berechnet das nächste optimale Intervall dynamisch.
+          </p>
+          <p class="text-[11px] leading-relaxed text-slate-400 font-medium">
+            Every card utilizes the state-of-the-art <strong>FSRS-5</strong> algorithm. Rate your memory recall using four options: <strong>Again</strong>, <strong>Hard</strong>, <strong>Good</strong>, or <strong>Easy</strong>. The scheduler calculates your stability and optimal review intervals dynamically.
+          </p>
+        </div>
+
+        <!-- 2. Desktop Hotkeys -->
+        <div class="space-y-2">
+          <div class="flex items-center gap-2 border-b border-slate-900 pb-1">
+            <span class="text-indigo-400 text-sm font-bold">02.</span>
+            <h4 class="font-bold text-slate-200 text-sm">Tastenkombinationen | Keyboard Hotkeys</h4>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+            <div class="bg-slate-950/40 border border-slate-900 p-3 rounded-xl space-y-1.5">
+              <span class="text-[10px] font-bold text-indigo-400 uppercase tracking-wider block">Karteikarten | Flashcards</span>
+              <ul class="space-y-1 text-[11px] text-slate-300 font-medium">
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">Leertaste</kbd> Karte umdrehen (Flip card)</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">1</kbd> - <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">4</kbd> Bewertung abgeben (Rate 1-4)</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">A</kbd> Audio vorlesen (TTS Playback)</li>
+              </ul>
+            </div>
+            <div class="bg-slate-950/40 border border-slate-900 p-3 rounded-xl space-y-1.5">
+              <span class="text-[10px] font-bold text-indigo-400 uppercase tracking-wider block">Spiele | Interactive Modes</span>
+              <ul class="space-y-1 text-[11px] text-slate-300 font-medium">
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">1</kbd> - <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">9</kbd> Wort-Chip auswählen (Select chip)</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">Enter</kbd> Antwort einreichen (Submit)</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">Backspace</kbd> Letzte Wahl löschen (Undo)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. NLP Explorer -->
+        <div class="space-y-2">
+          <div class="flex items-center gap-2 border-b border-slate-900 pb-1">
+            <span class="text-indigo-400 text-sm font-bold">03.</span>
+            <h4 class="font-bold text-slate-200 text-sm">Interaktives Immersions-Labor | Interactive NLP Lab</h4>
+          </div>
+          <p class="text-xs leading-relaxed text-slate-300">
+            Im <strong>Immersions-Labor</strong> können Sie jeden Beispielsatz zerlegen. Klicken Sie auf ein beliebiges Wort im Textgitter, um dessen grammatikalische Wortart (POS), den FSRS-Fortschritt und das TTS-Audio zu untersuchen. Sie können unbekannte Wörter mit einem Klick in Ihr eigens Deck importieren!
+          </p>
+          <p class="text-[11px] leading-relaxed text-slate-400 font-medium">
+            In the <strong>Immersion Lab</strong>, click any parsed word token in the text grid to reveal its CEFR status, active FSRS spacing logs, voice TTS, and instantly add it as a custom review card!
+          </p>
+        </div>
+
+        <!-- 4. Interactive Arenas -->
+        <div class="space-y-2">
+          <div class="flex items-center gap-2 border-b border-slate-900 pb-1">
+            <span class="text-indigo-400 text-sm font-bold">04.</span>
+            <h4 class="font-bold text-slate-200 text-sm">Grammatik-Weaver & Rollenspiel | Grammar Weaver & RPG</h4>
+          </div>
+          <p class="text-xs leading-relaxed text-slate-300">
+            Bauen Sie Sätze im <strong>Grammar Weaver</strong> mithilfe farbcodierter Wortchips (Nomen in rot, Verben in indigo). Erleben Sie realistische Alltagsgespräche im <strong>RPG-Abenteuer</strong>. Falsche Worteingaben lösen visuelle Fehler-Rüttel-Gesten aus, um Ihr Unterbewusstsein zu trainieren.
+          </p>
+          <p class="text-[11px] leading-relaxed text-slate-400 font-medium">
+            Construct sentences in <strong>Grammar Weaver</strong> with syntactic chip highlights (Nouns in pink, Verbs in indigo). Roleplay situations in the <strong>RPG Adventure</strong>, where mistakes trigger physical shake animations for tactile feedback.
+          </p>
+        </div>
+
+        <!-- Suffix Guide Drawer -->
+        <div class="space-y-2">
+          <div class="flex items-center gap-2 border-b border-slate-900 pb-1">
+            <span class="text-indigo-400 text-sm font-bold">05.</span>
+            <h4 class="font-bold text-slate-200 text-sm">Endungs-Grammatik | Suffix Suffix Contextualization</h4>
+          </div>
+          <p class="text-xs leading-relaxed text-slate-300">
+            Das System parst Wortendungen (z.B. <code class="text-indigo-400">-ung</code>, <code class="text-indigo-400">-heit</code>) bei Nomen und rendert automatisch einen inline Glühbirnen-Tipp mit der passenden Geschlechterregel (z.B. <code class="text-pink-400">die</code> für <code class="text-indigo-400">-ung</code>). Adjektive und Verben sind vor diesen Regeln geschützt.
+          </p>
+          <p class="text-[11px] leading-relaxed text-slate-400 font-medium">
+            The parser detects noun suffixes (e.g. <code class="text-indigo-400">-ung</code>, <code class="text-indigo-400">-heit</code>) and renders context drawers for gender matching (e.g. <code class="text-pink-400">die</code> for <code class="text-indigo-400">-ung</code>). Adjectives/verbs are isolated from rule pollution.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Footer Buttons -->
+      <div class="p-4 border-t border-slate-800/60 bg-slate-950/50 flex justify-end shrink-0">
+        <button id="help-modal-ack" class="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-black transition-all shadow-lg shadow-indigo-600/20 active:scale-95 cursor-pointer">
+          Verstanden! | Got it!
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- B1: Keyboard Shortcut Overlay -->
   <div id="shortcut-overlay" class="confirm-modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="shortcut-overlay-title">
     <div class="confirm-modal-card max-w-[34rem]">
@@ -2128,6 +2256,11 @@
 
   <!-- Global Particle Burst Container -->
   <div id="particle-container" class="fixed inset-0 pointer-events-none z-[60] overflow-hidden"></div>
+
+  <!-- Floating Action Help Button (FAB) -->
+  <button id="help-fab" class="fixed bottom-6 right-6 w-14 h-14 bg-slate-900/80 border border-slate-700/60 hover:border-indigo-500 hover:shadow-[0_0_15px_rgba(99,102,241,0.4)] text-indigo-400 hover:text-indigo-300 rounded-full flex items-center justify-center shadow-2xl backdrop-blur-md z-[55] cursor-pointer transition-all hover:scale-110 active:scale-95 group animate-bounce" title="Hilfe & Einführung | Help & Introduction (Hot-key: ?)">
+    <i class="fa-solid fa-question text-xl transition-transform group-hover:rotate-12"></i>
+  </button>
 
   <!-- App Script -->
   <script type="module" src="./app.js"></script>
