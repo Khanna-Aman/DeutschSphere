@@ -126,18 +126,25 @@ document.addEventListener('visibilitychange', () => {
 // Category English Translations
 export const categoryTranslations = {
   'All': 'All Categories',
-  'Person & Familie': 'Personal Details & Family',
-  'Wohnen & Haushalt': 'Living & Housing/Household',
-  'Gesundheit & Körper': 'Health & Body',
-  'Natur & Umwelt': 'Nature & Environment',
-  'Reise & Verkehr': 'Travel & Transport',
-  'Essen & Trinken': 'Food & Drink',
-  'Einkaufen & Konsum': 'Shopping & Consumption',
-  'Dienstleistungen & Behörden': 'Services & Authorities',
-  'Ausbildung & Lernen': 'Education & Learning',
-  'Arbeit & Beruf': 'Work & Profession',
-  'Freizeit & Unterhaltung': 'Leisure & Entertainment',
-  'Zeit, Maße & Basiswortschatz': 'Time, Measurements & Basic Vocabulary'
+  'Person, Familie & Beziehungen': 'Person, Family & Relationships',
+  'Gefühle, Charakter & Meinung': 'Feelings, Character & Opinion',
+  'Wohnen, Haus & Haushalt': 'Housing, Home & Household',
+  'Gesundheit, Körper & Pflege': 'Health, Body & Care',
+  'Natur, Umwelt & Tiere': 'Nature, Environment & Animals',
+  'Reise, Verkehr & Mobilität': 'Travel, Traffic & Mobility',
+  'Essen, Kochen & Restaurant': 'Food, Cooking & Restaurant',
+  'Einkaufen, Geld & Konsum': 'Shopping, Money & Consumption',
+  'Ausbildung, Schule & Studium': 'Education, School & University',
+  'Arbeit, Beruf & Karriere': 'Work, Profession & Career',
+  'Freizeit, Hobbys & Unterhaltung': 'Leisure, Hobbies & Entertainment',
+  'Kommunikation, Medien & Sprache': 'Communication, Media & Language',
+  'Staat, Gesellschaft & Dokumente': 'State, Society & Documents',
+  'Grammatik, Pronomen & Struktur': 'Grammar, Pronouns & Structure',
+  'Zahlen, Maße & Mengen': 'Numbers, Measurements & Quantities',
+  'Uhrzeit, Datum & Kalender': 'Time, Date & Calendar',
+  'Allgemeine Aktivitäten & Verben': 'General Activities & Verbs',
+  'Eigenschaften & Adjektive': 'Properties & Adjectives',
+  'Basiswortschatz & Floskeln': 'Basic Vocabulary & Phrases'
 };
 
 // Achievement Badge Definitions
@@ -252,6 +259,7 @@ export const ACHIEVEMENTS = [
 // Central Reactive Application State
 export const state = {
   currentLevel: safeGetItem('current_level', 'a2'), // Active CEFR Level ('a1', 'a2', 'b1')
+  visitedIntro: safeGetItem('visited_intro', 'false') === 'true', // Has the visitor completed the intro tour modal?
   allCards: [],          // Raw normalized vocabulary elements
   antonymIndex: null,    // Map<lowercaseCleanWord, card> for O(1) antonym lookup (built during data load)
   filteredCards: [],     // Cards filtered by active category + search text
@@ -526,6 +534,10 @@ export const elements = {
   soundStyleBtn: document.getElementById('sound-style-btn'),
   soundStyleText: document.getElementById('sound-style-text'),
   particlesBtn: document.getElementById('particles-btn'),
+  helpModalOverlay: document.getElementById('help-modal-overlay'),
+  helpModalClose: document.getElementById('help-modal-close'),
+  helpModalAck: document.getElementById('help-modal-ack'),
+  helpFab: document.getElementById('help-fab'),
 
   // Pomodoro Focus-Booster
   pomodoroDuration: document.getElementById('pomodoro-duration'),
@@ -733,20 +745,27 @@ export function trackVisitedLevels() {
 // Category icon map helper
 export function getCategoryIcon(category) {
   const icons = {
-    'Person & Familie': 'fa-user-group',
-    'Wohnen & Haushalt': 'fa-house-chimney',
-    'Gesundheit & Körper': 'fa-heart-pulse',
-    'Natur & Umwelt': 'fa-leaf',
-    'Reise & Verkehr': 'fa-plane-departure',
-    'Essen & Trinken': 'fa-utensils',
-    'Einkaufen & Konsum': 'fa-cart-shopping',
-    'Dienstleistungen & Behörden': 'fa-building-columns',
-    'Ausbildung & Lernen': 'fa-graduation-cap',
-    'Arbeit & Beruf': 'fa-briefcase',
-    'Freizeit & Unterhaltung': 'fa-gamepad',
-    'Zeit, Maße & Basiswortschatz': 'fa-calendar-days'
+    'Person, Familie & Beziehungen': 'fa-user-group',
+    'Gefühle, Charakter & Meinung': 'fa-face-laugh-beam',
+    'Wohnen, Haus & Haushalt': 'fa-house-chimney',
+    'Gesundheit, Körper & Pflege': 'fa-heart-pulse',
+    'Natur, Umwelt & Tiere': 'fa-leaf',
+    'Reise, Verkehr & Mobilität': 'fa-plane-departure',
+    'Essen, Kochen & Restaurant': 'fa-utensils',
+    'Einkaufen, Geld & Konsum': 'fa-cart-shopping',
+    'Ausbildung, Schule & Studium': 'fa-graduation-cap',
+    'Arbeit, Beruf & Karriere': 'fa-briefcase',
+    'Freizeit, Hobbys & Unterhaltung': 'fa-gamepad',
+    'Kommunikation, Medien & Sprache': 'fa-comments',
+    'Staat, Gesellschaft & Dokumente': 'fa-scale-balanced',
+    'Grammatik, Pronomen & Struktur': 'fa-language',
+    'Zahlen, Maße & Mengen': 'fa-calculator',
+    'Uhrzeit, Datum & Kalender': 'fa-clock',
+    'Allgemeine Aktivitäten & Verben': 'fa-bolt',
+    'Eigenschaften & Adjektive': 'fa-tags',
+    'Basiswortschatz & Floskeln': 'fa-comment-dots'
   };
-  return icons[category] || 'fa-graduation-cap';
+  return icons[category] || 'fa-folder';
 }
 
 // Save active SRS state to localStorage (debounced to prevent main-thread blocking)

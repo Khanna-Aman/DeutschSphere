@@ -254,18 +254,25 @@ function getConsolidatedCategory(rawTheme, word, wordClass, meaning) {
   
   // Quick exact match short-circuit for physically canonicalized datasets
   const canonicalCategories = [
-    'Person & Familie',
-    'Wohnen & Haushalt',
-    'Gesundheit & Körper',
-    'Natur & Umwelt',
-    'Reise & Verkehr',
-    'Essen & Trinken',
-    'Einkaufen & Konsum',
-    'Dienstleistungen & Behörden',
-    'Ausbildung & Lernen',
-    'Arbeit & Beruf',
-    'Freizeit & Unterhaltung',
-    'Zeit, Maße & Basiswortschatz'
+    'Person, Familie & Beziehungen',
+    'Gefühle, Charakter & Meinung',
+    'Wohnen, Haus & Haushalt',
+    'Gesundheit, Körper & Pflege',
+    'Natur, Umwelt & Tiere',
+    'Reise, Verkehr & Mobilität',
+    'Essen, Kochen & Restaurant',
+    'Einkaufen, Geld & Konsum',
+    'Ausbildung, Schule & Studium',
+    'Arbeit, Beruf & Karriere',
+    'Freizeit, Hobbys & Unterhaltung',
+    'Kommunikation, Medien & Sprache',
+    'Staat, Gesellschaft & Dokumente',
+    'Grammatik, Pronomen & Struktur',
+    'Zahlen, Maße & Mengen',
+    'Uhrzeit, Datum & Kalender',
+    'Allgemeine Aktivitäten & Verben',
+    'Eigenschaften & Adjektive',
+    'Basiswortschatz & Floskeln'
   ];
   
   const exactMatch = canonicalCategories.find(cat => cat.toLowerCase() === t_raw.toLowerCase());
@@ -278,98 +285,160 @@ function getConsolidatedCategory(rawTheme, word, wordClass, meaning) {
   const m = (meaning || '').toLowerCase().trim();
   const wc = (wordClass || '').toLowerCase().trim();
 
-  // Helper matching lists
-  const foodKeywords = ['essen', 'trink', 'küche', 'gemüse', 'obst', 'kochen', 'restaurant', 'gastronomie', 'ernährung', 'nahrung', 'speise', 'mahlzeit', 'bäckerei', 'bier', 'fleisch', 'fisch', 'banane', 'gemuese', 'wein', 'kaffee', 'tee', 'frühstück', 'mittagessen', 'abendessen', 'lecker', 'hung', 'durst'];
-  const healthKeywords = ['gesund', 'körper', 'arzt', 'ärzt', 'krank', 'apotheke', 'fieber', 'bad', 'pflege', 'medizin', 'schmerz', 'unfall', 'klinik', 'spital', 'husten', 'schnupfen', 'tablette', 'rezept', 'therapie', 'verletz', 'blut', 'auge', 'ohr', 'mund', 'zahn', 'kopf', 'bein', 'arm', 'hand', 'fuß', 'bauch', 'herz', 'körperpflege', 'koerperpflege'];
-  const travelKeywords = ['reisen', 'reise', 'verkehr', 'bahn', 'zug', 'bus', 'flug', 'auto', 'fahrrad', 'schiff', 'ticket', 'fahrkarte', 'hotel', 'touris', 'pension', 'urlaub', 'gepäck', 'koffer', 'bahnhof', 'flughafen', 'abfahrt', 'ankunft', 'stau', 'strasse', 'straße', 'kreuzung', 'ampel', 'gleis', 'reisebüro', 'ausflug', 'landkarte', 'plan', 'ticket', 'pass', 'visum'];
-  const shopKeywords = ['einkauf', 'konsum', 'laden', 'geschäft', 'preis', 'bezahl', 'kauf', 'geld', 'euro', 'cent', 'billig', 'teuer', 'kosten', 'rabatt', 'angebot', 'supermarkt', 'markt', 'tasche', 'kleidung', 'kleid', 'hose', 'schuh', 'hemd', 'jacke', 'mantel', 'rock', 'anzug', 'material', 'stoff', 'leder', 'wolle', 'seide', 'baumwolle', 'plastik', 'metall', 'holz', 'glas', 'papier'];
-  const workKeywords = ['arbeit', 'beruf', 'firma', 'job', 'karriere', 'kollege', 'büro', 'bewerb', 'chef', 'angestellte', 'meister', 'kolleg', 'werkstatt', 'fabrik', 'gehalt', 'lohn', 'vertrag', 'kündig', 'streik', 'arbeitsplatz', 'arbeitslos', 'überstunde', 'lebenslauf', 'praktikum', 'gehalt', 'berufstätig'];
-  const educationKeywords = ['schule', 'lernen', 'ausbildung', 'stud', 'universität', 'uni', 'klasse', 'unterricht', 'sprache', 'buch', 'bücher', 'bucht', 'bildung', 'lehrer', 'schüler', 'schueler', 'prüfung', 'pruefung', 'aufgabe', 'hausaufgabe', 'fehler', 'kurs', 'zeugnis', 'diplom', 'fach', 'mathematik', 'rechnen', 'schreiben', 'lesen', 'vokabel', 'wörterbuch'];
-  const homeKeywords = ['wohn', 'haus', 'zimmer', 'möbel', 'miete', 'einricht', 'haushalt', 'werkzeug', 'architekt', 'gebäude', 'gebaeude', 'küche', 'bad', 'balkon', 'garten', 'tisch', 'stuhl', 'bett', 'schrank', 'regal', 'sofa', 'lampe', 'tür', 'fenster', 'schlüssel', 'heizung', 'strom', 'wasser', 'nachbar', 'vermieter'];
-  const natureKeywords = ['natur', 'umwelt', 'wetter', 'klima', 'tier', 'pflanze', 'sauber', 'erde', 'garten', 'landschaft', 'wind', 'regen', 'schnee', 'sonne', 'temperatur', 'grad', 'himmel', 'stern', 'mond', 'wald', 'berg', 'see', 'meer', 'fluss', 'baum', 'blume', 'katze', 'hund', 'vogel', 'pferd', 'kuh', 'sauberkeit', 'schmutz', 'müll', 'abfall'];
-  const leisureKeywords = ['freizeit', 'unterhalt', 'spiel', 'sport', 'hobby', 'musik', 'film', 'kino', 'museum', 'kunst', 'kultur', 'literatur', 'lesen', 'fest', 'feier', 'geburtstag', 'tanzen', 'singen', 'theater', 'konzert', 'ausstellung', 'malen', 'foto', 'kamera', 'fernseher', 'radio', 'schach', 'fussball', 'fußball', 'schwimmen', 'wandern', 'reisen', 'urlaub'];
-  const servicesKeywords = ['dienst', 'behörde', 'amt', 'ämter', 'polizei', 'post', 'telekom', 'bank', 'finanz', 'steuer', 'recht', 'politik', 'staat', 'gesellschaft', 'sicherheit', 'notfall', 'notfälle', 'notfaelle', 'arzt', 'krankenhaus', 'feuerwehr', 'rathaus', 'konsulat', 'botschaft', 'ausweis', 'formular', 'unterschrift', 'gebühr', 'geld', 'konto', 'überweisen', 'karte', 'brief', 'paket', 'stempel', 'telefon', 'handy', 'internet', 'computer', 'e-mail', 'mail', 'anwalt', 'gericht', 'gesetz', 'versicherung'];
-  const familyKeywords = ['person', 'familie', 'freund', 'kind', 'eltern', 'partner', 'beziehung', 'charakter', 'gefühl', 'gefuehl', 'identität', 'alter', 'aussehen', 'kommunikation', 'begrüß', 'begruess', 'meinung', 'gedanke', 'denken', 'entscheid', 'heirat', 'hochzeit', 'mann', 'frau', 'bruder', 'schwester', 'mutter', 'vater', 'sohn', 'tochter', 'onkel', 'tante', 'nichte', 'neffe', 'großeltern', 'oma', 'opa', 'enkel', 'geburt', 'tod', 'sterben', 'leben', 'liebe', 'hass', 'wut', 'angst', 'freude', 'glück', 'trauer', 'streit', 'gespräch', 'diskussion', 'sagen', 'sprechen', 'erzählen', 'fragen', 'antworten', 'verstehen'];
+  // Clean articles and parenthesis for clean checks
+  let w_clean = w.replace(/^(der|die|das)\s+/, '');
+  w_clean = w_clean.replace(/\s*\(.*?\)\s*/g, '').trim();
 
-  // Let's do an exact match test for common composite/split themes
-  if (t.includes('essen') || t.includes('trink') || t.includes('koche') || t.includes('gemüse') || t.includes('obst') || t.includes('restaurant') || t.includes('küche')) {
-    return 'Essen & Trinken';
-  }
-  if (t.includes('gesund') || t.includes('körper') || t.includes('arzt') || t.includes('krank') || t.includes('apotheke') || t.includes('pflege') || t.includes('schmerz') || t.includes('bad')) {
-    return 'Gesundheit & Körper';
-  }
-  if (t.includes('reise') || t.includes('verkehr') || t.includes('hotel') || t.includes('flug') || t.includes('zug') || t.includes('bahn') || t.includes('auto') || t.includes('fahrrad') || t.includes('schiff')) {
-    return 'Reise & Verkehr';
-  }
-  if (t.includes('einkauf') || t.includes('laden') || t.includes('geschäft') || t.includes('preis') || t.includes('bezahl') || t.includes('kleidung') || t.includes('kleid') || t.includes('hose') || t.includes('schuh') || t.includes('ware')) {
-    return 'Einkaufen & Konsum';
-  }
-  if (t.includes('arbeit') || t.includes('beruf') || t.includes('job') || t.includes('firma') || t.includes('kolleg') || t.includes('büro')) {
-    return 'Arbeit & Beruf';
-  }
-  if (t.includes('schule') || t.includes('lernen') || t.includes('ausbildung') || t.includes('stud') || t.includes('uni') || t.includes('klasse') || t.includes('unterricht') || t.includes('bildung') || t.includes('sprache')) {
-    return 'Ausbildung & Lernen';
-  }
-  if (t.includes('wohn') || t.includes('haus') || t.includes('zimmer') || t.includes('möbel') || t.includes('miete') || t.includes('haushalt') || t.includes('werkzeug') || t.includes('gebäude') || t.includes('einricht')) {
-    return 'Wohnen & Haushalt';
-  }
-  if (t.includes('natur') || t.includes('umwelt') || t.includes('wetter') || t.includes('klima') || t.includes('tier') || t.includes('pflanze') || t.includes('garten') || t.includes('sauber') || t.includes('sauberkeit')) {
-    return 'Natur & Umwelt';
-  }
-  if (t.includes('freizeit') || t.includes('unterhalt') || t.includes('spiel') || t.includes('sport') || t.includes('hobby') || t.includes('musik') || t.includes('film') || t.includes('kino') || t.includes('kunst') || t.includes('kultur') || t.includes('fest') || t.includes('literatur') || t.includes('lesen')) {
-    return 'Freizeit & Unterhaltung';
-  }
-  if (t.includes('amt') || t.includes('ämter') || t.includes('behörde') || t.includes('polizei') || t.includes('post') || t.includes('telekom') || t.includes('bank') || t.includes('finanz') || t.includes('steuer') || t.includes('recht') || t.includes('politik') || t.includes('dienst') || t.includes('sicherheit') || t.includes('notfall')) {
-    return 'Dienstleistungen & Behörden';
-  }
-  if (t.includes('person') || t.includes('familie') || t.includes('kind') || t.includes('eltern') || t.includes('partner') || t.includes('beziehung') || t.includes('charakter') || t.includes('gefühl') || t.includes('kommunikation') || t.includes('meinung') || t.includes('gedanke') || t.includes('denken')) {
-    return 'Person & Familie';
-  }
+  // Strict grammatical, structural, and temporal lists (exact matches)
+  const grammarExactDe = new Set([
+    'ich', 'du', 'er', 'sie', 'es', 'wir', 'ihr', 'mein', 'dein', 'sein', 'unser', 'euer', 'ihre', 'ihrer', 'ihres',
+    'in', 'an', 'auf', 'bei', 'mit', 'zu', 'von', 'nach', 'aus', 'für', 'fuer', 'gegen', 'ohne', 'um', 'durch', 'über', 'ueber', 'unter', 'vor', 'hinter', 'neben', 'zwischen',
+    'und', 'oder', 'aber', 'weil', 'dass', 'wenn', 'denn', 'als', 'da', 'der', 'die', 'das', 'ein', 'eine', 'einen', 'einem', 'eines', 'einer',
+    'welche', 'welcher', 'welches', 'dieser', 'diese', 'dieses', 'wer', 'was', 'wie', 'wo', 'wann', 'warum', 'weshalb', 'deshalb', 'trotzdem', 'obwohl',
+    'nicht', 'nichts', 'nur', 'kein', 'keine', 'doch', 'gar', 'etwas', 'jemand', 'niemand', 'man', 'sich', 'mich', 'dich', 'uns', 'euch', 'ihnen', 'ihm', 'ihn'
+  ]);
 
-  // Handle specific money/buying contexts in raw theme text
-  if (t.includes('geld') || t.includes('bank') || t.includes('finanz') || t.includes('bezahl') || t.includes('preis')) {
-    if (t.includes('bank') || t.includes('finanz')) return 'Dienstleistungen & Behörden';
-    return 'Einkaufen & Konsum';
+  const numbersExactDe = new Set([
+    'null', 'eins', 'zwei', 'drei', 'vier', 'fünf', 'fuenf', 'sechs', 'sieben', 'acht', 'neun', 'zehn',
+    'elf', 'zwölf', 'dreizehn', 'vierzehn', 'fünfzehn', 'sechzehn', 'siebzehn', 'achtzehn', 'neunzehn', 'zwanzig',
+    'dreißig', 'dreissig', 'vierzig', 'fünfzig', 'sechzig', 'siebzig', 'achtzig', 'neunzig', 'hundert', 'tausend', 'million', 'milliarde',
+    'erste', 'zweite', 'dritte', 'vierte', 'hälfte', 'haelfte', 'viertel', 'wenig', 'viel', 'mehr', 'manch', 'einige', 'all', 'ganz', 'beide', 'beides'
+  ]);
+
+  const timeExactDe = new Set([
+    'uhr', 'jahr', 'monat', 'woche', 'tag', 'sekunde', 'minute', 'stunde', 'quartal', 'zeitraum', 'saison', 'dauer',
+    'spät', 'spaet', 'früh', 'frueh', 'jetzt', 'dann', 'danach', 'heute', 'gestern', 'morgen', 'bald', 'sofort', 'später', 'spaeter', 'pünktlich', 'puenktlich',
+    'immer', 'nie', 'oft', 'selten', 'manchmal', 'damals', 'generation', 'mal', 'einmal', 'zweimal', 'dreimal', 'oftmals', 'stündlich', 'stuendlich',
+    'täglich', 'taeglich', 'wöchentlich', 'woechentlich', 'monatlich', 'jährlich', 'jaehrlich', 'frühling', 'sommer', 'herbst', 'winter',
+    'montag', 'dienstag', 'mittwoch', 'donnerstag', 'freitag', 'samstag', 'sonntag', 'wochenende',
+    'januar', 'februar', 'märz', 'maerz', 'april', 'mai', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'dezember',
+    'alltag', 'alltäglich', 'alltaeglich', 'zeit', 'uhrzeit', 'datum', 'kalender'
+  ]);
+
+  // German Stems (prefix-boundary match, e.g. \bess matches essen, esszimmer)
+  const foodDe = ['ess', 'trink', 'küch', 'kuech', 'gemüs', 'gemues', 'obst', 'koch', 'restaur', 'gastro', 'speis', 'mahl', 'bäck', 'baeck', 'bier', 'fleisch', 'fisch', 'banan', 'wein', 'kaff', 'tee', 'supp', 'back', 'frühstück', 'fruehstück', 'salat', 'käse', 'kaese', 'wurst', 'milch', 'kartoffel', 'teller', 'gabel', 'messer', 'löffel', 'loeffel', 'becher', 'tasse', 'glas', 'speisekarte', 'zucker', 'salz', 'pfeffer', 'nudeln', 'reis', 'rind', 'schwein', 'braten'];
+  const healthDe = ['gesund', 'körper', 'koerper', 'arzt', 'ärzt', 'aerzt', 'krank', 'apotheke', 'fieber', 'bad', 'pflege', 'medizin', 'schmerz', 'unfall', 'klinik', 'spital', 'husten', 'schnupfen', 'tablette', 'rezept', 'therapie', 'verletz', 'blut', 'auge', 'ohr', 'mund', 'zahn', 'kopf', 'bein', 'arm', 'hand', 'fuß', 'fuss', 'bauch', 'herz', 'patient', 'praxis', 'medikament', 'pflaster', 'verband', 'salbe', 'spritze', 'impfung', 'schwanger', 'geburt'];
+  const travelDe = ['reis', 'verkehr', 'bahn', 'zug', 'bus', 'flug', 'auto', 'fahrrad', 'schiff', 'ticket', 'fahrkart', 'hotel', 'touris', 'pension', 'urlaub', 'gepäck', 'gepaeck', 'koffer', 'bahnhof', 'flughafen', 'abfahrt', 'ankunft', 'stau', 'strass', 'straße', 'kreuzung', 'ampel', 'gleis', 'ausflug', 'landkart', 'plan', 'pass', 'visum', 'strand', 'ferien', 'meer', 'see', 'berge', 'wandern', 'camping', 'zelt', 'buchen', 'reservier', 'abflieg', 'landen', 'verspät', 'verspaet', 'linie', 'haltestell', 'umsteig', 'einsteig', 'aussteig', 'tanken', 'tankstell'];
+  const shopDe = ['einkauf', 'konsum', 'laden', 'geschäft', 'geschaeft', 'preis', 'bezahl', 'kauf', 'geld', 'euro', 'cent', 'billig', 'teuer', 'kosten', 'rabatt', 'angebot', 'supermarkt', 'markt', 'tasche', 'kleidung', 'kleid', 'hose', 'schuh', 'hemd', 'jacke', 'mantel', 'rock', 'anzug', 'material', 'stoff', 'leder', 'wolle', 'seide', 'baumwolle', 'plastik', 'metall', 'holz', 'glas', 'papier', 'verkäufer', 'verkaeufer', 'kunde', 'kassier', 'kasse', 'tüte', 'tuete', 'quittung', 'garantie', 'umtausch', 'reduzier'];
+  const workDe = ['arbeit', 'beruf', 'firma', 'job', 'karriere', 'kolleg', 'büro', 'buero', 'bewerb', 'chef', 'angestellt', 'meister', 'werkstatt', 'fabrik', 'gehalt', 'lohn', 'vertrag', 'kündig', 'kuendig', 'streik', 'arbeitsplatz', 'arbeitslos', 'überstunde', 'ueberstunde', 'lebenslauf', 'praktikum', 'leiter', 'direktor', 'kollegen'];
+  const educationDe = ['schul', 'lern', 'ausbildung', 'stud', 'universität', 'universitaet', 'uni', 'klass', 'unterricht', 'sprache', 'buch', 'bücher', 'buecher', 'bucht', 'bildung', 'lehr', 'schüler', 'schueler', 'prüfung', 'pruefung', 'aufgabe', 'hausaufgabe', 'fehler', 'kurs', 'zeugnis', 'diplom', 'fach', 'mathemat', 'rechn', 'schreib', 'les', 'vokabel', 'wörterbuch', 'woerterbuch', 'lehrerin', 'lektion', 'semester', 'schularbeit', 'student', 'professor', 'zertifikat'];
+  const homeDe = ['wohn', 'haus', 'zimmer', 'möbel', 'moebel', 'miet', 'einricht', 'haushalt', 'werkzeug', 'architekt', 'gebäude', 'gebaeude', 'tisch', 'stuhl', 'bett', 'schrank', 'regal', 'sofa', 'lampe', 'tür', 'tuer', 'fenster', 'schlüssel', 'schluessel', 'heizung', 'strom', 'wasser', 'nachbar', 'vermiet', 'einzieh', 'auszieg', 'umzieh', 'keller', 'dach', 'wand', 'boden', 'balkon', 'terrasse'];
+  const natureDe = ['natur', 'umwelt', 'wetter', 'klima', 'tier', 'pflanze', 'sauber', 'erde', 'garten', 'landschaft', 'wind', 'regen', 'schnee', 'sonne', 'temperatur', 'grad', 'himmel', 'stern', 'mond', 'wald', 'berg', 'see', 'meer', 'fluss', 'baum', 'blume', 'katze', 'hund', 'vogel', 'pferd', 'kuh', 'sauberkeit', 'schmutz', 'müll', 'muell', 'abfall', 'luft', 'umweltschutz', 'recycling', 'hitze', 'kälte', 'kaelte', 'gewitter', 'sturm', 'wolke', 'nebel'];
+  const leisureDe = ['freizeit', 'unterhalt', 'spiel', 'sport', 'hobby', 'musik', 'film', 'kino', 'museum', 'kunst', 'kultur', 'literatur', 'lesen', 'fest', 'feier', 'geburtstag', 'tanz', 'sing', 'theater', 'konzert', 'ausstellung', 'mal', 'foto', 'kamera', 'fernseher', 'radio', 'schach', 'fussball', 'fußball', 'schwimm', 'wandern', 'sportplatz', 'mannschaft', 'verein', 'turnier', 'gewinn', 'verlier', 'party', 'instrument', 'gitarre', 'klavier', 'fotografier'];
+  const familyDe = ['person', 'familie', 'freund', 'kind', 'eltern', 'partner', 'beziehung', 'heirat', 'hochzeit', 'mann', 'frau', 'bruder', 'schwe', 'mutter', 'vater', 'sohn', 'tocht', 'onkel', 'tant', 'nich', 'nef', 'großel', 'grossel', 'oma', 'opa', 'enkel', 'baby', 'mensch', 'leute', 'mitglieder', 'geschwister', 'verwandte', 'ehe', 'scheidung', 'alleinerziehend'];
+  const emotionDe = ['charakter', 'gefühl', 'gefuehl', 'identität', 'identitaet', 'alter', 'aussehen', 'meinung', 'gedanke', 'denk', 'entscheid', 'lieb', 'hass', 'wut', 'angst', 'freud', 'glück', 'glueck', 'trau', 'streit', 'gespräch', 'gespraech', 'diskussion', 'traurig', 'froh', 'wütend', 'wuetend', 'ängstlich', 'aengstlich', 'stolz', 'schüchtern', 'schuechtern', 'höflich', 'hoeflich', 'nett', 'freundlich', 'sympathisch', 'böse', 'boese', 'dumm', 'klug', 'faul', 'fleißig', 'fleissig', 'ehrlich', 'geduldig', 'nervös', 'nervoes', 'zufrieden', 'unzufrieden', 'persönlichkeit', 'persoenlichkeit', 'hoffen', 'glauben', 'fühlen', 'fuehlen', 'weinen', 'lachen', 'lächeln', 'laecheln', 'meinen', 'empfehl'];
+  const communicationDe = ['kommunikation', 'begrüß', 'begruess', 'sag', 'sprech', 'erzähl', 'erzaehl', 'frag', 'antwort', 'versteh', 'telefon', 'handy', 'computer', 'internet', 'e-mail', 'mail', 'anruf', 'brief', 'paket', 'nachricht', 'neuigkeit', 'mobiltelefon', 'netzwerk', 'smartphone', 'tastatur', 'bildschirm', 'datei', 'daten', 'online', 'web', 'apparat', 'tv', 'radio', 'kamera', 'video', 'cd', 'dvd', 'mp3', 'display', 'kabel', 'taste', 'drucker', 'kopier', 'speicher', 'programm', 'digital', 'techn', 'medien', 'anrufen', 'telefonieren', 'reden', 'diskutieren', 'erklären', 'erklaeren', 'vorlesen', 'buchstabieren', 'post', 'stempel', 'plakat', 'zettel', 'zeitung', 'zeitschrift', 'magazin', 'sender', 'empfänger', 'empfaenger', 'anrede', 'grüßen', 'gruessen', 'danken', 'bitten'];
+  const documentsDe = ['amt', 'ämter', 'aemter', 'behörde', 'behoerde', 'polizei', 'telekom', 'bank', 'finanz', 'steuer', 'recht', 'politik', 'staat', 'gesellschaft', 'sicherheit', 'notfall', 'notfälle', 'notfaelle', 'feuerwehr', 'rathaus', 'konsulat', 'botschaft', 'ausweis', 'formular', 'unterschrift', 'gebühr', 'gebuehr', 'konto', 'überweisen', 'ueberweisen', 'anwalt', 'gericht', 'gesetz', 'versicherung', 'visum', 'pass', 'zertifikat', 'diplom', 'bestätigung', 'bestaetigung', 'bescheinigung', 'erlaubnis', 'vertrag', 'dokument', 'urkunde', 'antrag', 'anmeldung', 'abmeldung', 'registrier', 'genehmig', 'zoll', 'grenze', 'soldat', 'militär', 'militaer', 'krieg', 'frieden', 'richter', 'staatsanwalt', 'parlament', 'gesetzgeb', 'verfassung', 'partei', 'abgeordnet', 'minister', 'bürger', 'buerger', 'wahl', 'wähler', 'waehler', 'demokratie'];
+
+  // English Keywords (prefix-boundary match on English, e.g. \bfood matches food, foodie)
+  const foodEn = ['food', 'drink', 'eat', 'cook', 'kitchen', 'vegetable', 'fruit', 'restaurant', 'bakery', 'beer', 'meat', 'fish', 'banana', 'wine', 'coffee', 'tea', 'soup', 'bake', 'breakfast', 'lunch', 'dinner', 'salad', 'cheese', 'sausage', 'milk', 'potato', 'plate', 'fork', 'knife', 'spoon', 'cup', 'glass', 'menu', 'sugar', 'salt', 'pepper', 'oil', 'vinegar', 'meal', 'pasta', 'rice', 'beef', 'pork', 'chicken', 'bill', 'receipt'];
+  const healthEn = ['health', 'body', 'doctor', 'ill', 'sick', 'pharmacy', 'fever', 'bath', 'care', 'medicine', 'pain', 'accident', 'clinic', 'hospital', 'cough', 'cold', 'pill', 'prescription', 'recipe', 'therapy', 'injur', 'blood', 'eye', 'ear', 'mouth', 'tooth', 'teeth', 'head', 'leg', 'arm', 'hand', 'foot', 'feet', 'stomach', 'heart', 'patient', 'practice', 'medication', 'plaster', 'bandage', 'ointment', 'injection', 'vaccin', 'pregnant', 'birth', 'die', 'dead', 'death'];
+  const travelEn = ['travel', 'traffic', 'train', 'bus', 'flight', 'fly', 'car', 'bicycle', 'bike', 'ship', 'boat', 'ticket', 'hotel', 'touris', 'pension', 'holiday', 'vacation', 'luggage', 'baggage', 'suitcas', 'station', 'airport', 'depart', 'arriv', 'stau', 'jam', 'street', 'road', 'crossing', 'intersection', 'light', 'platform', 'excursion', 'map', 'passport', 'visa', 'beach', 'sea', 'mountain', 'hike', 'hiking', 'camp', 'tent', 'book', 'reserv', 'delay', 'punctual', 'on time', 'schedule', 'timetable', 'line', 'stop', 'change', 'get in', 'get off', 'fuel', 'gas station'];
+  const shopEn = ['shop', 'consum', 'store', 'price', 'pay', 'buy', 'money', 'euro', 'cent', 'cheap', 'expensive', 'cost', 'discount', 'offer', 'supermarket', 'market', 'bag', 'cloth', 'dress', 'pant', 'shoe', 'shirt', 'jacket', 'coat', 'skirt', 'suit', 'material', 'fabric', 'leather', 'wool', 'silk', 'cotton', 'plastic', 'metal', 'wood', 'glass', 'paper', 'seller', 'customer', 'cashier', 'cash register', 'bill', 'receipt', 'guarantee', 'exchange', 'reduced', 'special offer'];
+  const workEn = ['work', 'job', 'profession', 'career', 'colleague', 'office', 'apply', 'application', 'boss', 'employee', 'employer', 'master', 'workshop', 'factory', 'salary', 'wage', 'contract', 'resign', 'dismiss', 'strike', 'workplace', 'unemploy', 'overtime', 'resume', 'cv', 'internship', 'manager', 'director', 'lead'];
+  const educationEn = ['school', 'learn', 'educat', 'stud', 'universit', 'college', 'class', 'teach', 'student', 'pupil', 'exam', 'test', 'task', 'exercise', 'homework', 'mistake', 'error', 'course', 'certificate', 'diploma', 'subject', 'math', 'calculat', 'write', 'read', 'vocab', 'dictionar', 'lesson', 'semester', 'term', 'professor', 'grade', 'mark'];
+  const homeEn = ['live', 'house', 'room', 'furnitur', 'rent', 'household', 'tool', 'architect', 'build', 'table', 'chair', 'bed', 'cabinet', 'cupboard', 'shelf', 'shelves', 'sofa', 'couch', 'lamp', 'door', 'window', 'key', 'heat', 'electric', 'power', 'water', 'neighbor', 'landlord', 'flat', 'apartment', 'kitchen', 'bathroom', 'balcony', 'terrace', 'cellar', 'basement', 'roof', 'wall', 'floor', 'move in', 'move out', 'move house'];
+  const natureEn = ['natur', 'environ', 'weather', 'climat', 'animal', 'plant', 'clean', 'earth', 'garden', 'landscap', 'wind', 'rain', 'snow', 'sun', 'temperatur', 'degree', 'sky', 'star', 'moon', 'forest', 'wood', 'mountain', 'lake', 'sea', 'ocean', 'river', 'tree', 'flower', 'cat', 'dog', 'bird', 'horse', 'cow', 'dirt', 'garbage', 'trash', 'waste', 'pollution', 'recycl', 'heat', 'cold', 'thunder', 'storm', 'cloud', 'fog'];
+  const leisureEn = ['leisure', 'entertain', 'game', 'play', 'sport', 'hobby', 'music', 'film', 'movie', 'cinema', 'museum', 'art', 'cultur', 'literatur', 'read', 'festival', 'party', 'celebrat', 'birthday', 'dance', 'sing', 'theat', 'concert', 'exhibit', 'paint', 'photo', 'camera', 'tv', 'television', 'radio', 'chess', 'soccer', 'football', 'swim', 'hike', 'stadium', 'team', 'club', 'tournament', 'win', 'lose', 'instrument', 'guitar', 'piano'];
+  const familyEn = ['person', 'family', 'friend', 'child', 'parent', 'partner', 'relation', 'marry', 'marriag', 'wedding', 'man', 'men', 'woman', 'women', 'brother', 'sister', 'mother', 'father', 'son', 'daughter', 'uncle', 'tante', 'niece', 'nephew', 'grandparent', 'grandma', 'grandpa', 'grandson', 'granddaught', 'baby', 'human', 'people', 'member', 'sibling', 'relative', 'divorce'];
+  const emotionEn = ['charact', 'feel', 'emotion', 'identit', 'age', 'look', 'opinion', 'thought', 'think', 'decid', 'decision', 'love', 'hate', 'anger', 'angry', 'fear', 'afraid', 'joy', 'happy', 'happine', 'sad', 'grief', 'quarrel', 'argu', 'fight', 'discuss', 'proud', 'shy', 'polite', 'nice', 'kind', 'friendly', 'sympathetic', 'bad', 'stupid', 'clever', 'smart', 'lazy', 'diligent', 'honest', 'patient', 'nervous', 'satisfied', 'disappointed', 'personality', 'hope', 'believe', 'cry', 'laugh', 'smile', 'mean', 'recommend'];
+  const communicationEn = ['communicat', 'greet', 'say', 'speak', 'talk', 'tell', 'ask', 'answer', 'reply', 'understand', 'conversation', 'telephone', 'phone', 'cell phone', 'mobile', 'computer', 'laptop', 'internet', 'e-mail', 'email', 'mail', 'call', 'letter', 'parcel', 'package', 'message', 'news', 'network', 'smartphone', 'keyboard', 'screen', 'monitor', 'file', 'data', 'online', 'web', 'device', 'tv', 'radio', 'camera', 'video', 'cd', 'dvd', 'mp3', 'display', 'cable', 'button', 'key', 'printer', 'copi', 'memor', 'storag', 'program', 'digital', 'techn', 'media', 'post', 'stamp', 'poster', 'note', 'newspaper', 'journal', 'magazin', 'broadcast', 'sender', 'receiver', 'salutation', 'thank', 'please'];
+  const documentsEn = ['office', 'authorit', 'police', 'post', 'telecom', 'bank', 'financ', 'tax', 'law', 'legal', 'polit', 'state', 'societ', 'security', 'emergenc', 'fire brigade', 'city hall', 'rathaus', 'consulat', 'embassy', 'id card', 'identification', 'form', 'sign', 'signature', 'fee', 'account', 'transfer', 'card', 'lawyer', 'attorney', 'court', 'insur', 'visa', 'passport', 'certificat', 'diploma', 'confirm', 'contract', 'document', 'deed', 'request', 'register', 'zoll', 'custom', 'border', 'soldier', 'militar', 'war', 'peace', 'judge', 'parliament', 'constitut', 'party', 'minister', 'citizen', 'vote', 'voter', 'democrac'];
+
+  // 1. Structural & Grammatical checks FIRST (so they don't get swept into semantic categories accidentally)
+  if (['pronoun', 'preposition', 'conjunction', 'article', 'adverb'].includes(wc) || grammarExactDe.has(w_clean)) {
+    return 'Grammatik, Pronomen & Struktur';
   }
-
-  // Handle specific time/date contexts in raw theme text
-  if (t.includes('zeit') || t.includes('datum') || t.includes('uhr') || t.includes('zahl') || t.includes('maß') || t.includes('menge')) {
-    if (t.includes('freizeit')) return 'Freizeit & Unterhaltung';
-    return 'Zeit, Maße & Basiswortschatz';
+  
+  if (wc === 'number' || numbersExactDe.has(w_clean) || m.includes('number') || m.includes('numeral') || m.includes('measure') || m.includes('unit ') || m.includes('quantity') || ['grad', 'kilo', 'meter', 'liter', 'gramm', 'portion', 'paar', 'stück', 'teil', 'größe', 'prozent', 'tonne', 'gewicht', 'länge', 'breite', 'höhe', 'tiefe'].includes(w_clean)) {
+    return 'Zahlen, Maße & Mengen';
   }
-
-  // Fallback keyword search on German word / English meaning / wordClass
-  const matchAny = (list, words) => words.some(word => list.some(item => word.includes(item)));
-  const searchTerms = [w, m];
-
-  if (matchAny(foodKeywords, searchTerms)) return 'Essen & Trinken';
-  if (matchAny(healthKeywords, searchTerms)) return 'Gesundheit & Körper';
-  if (matchAny(travelKeywords, searchTerms)) return 'Reise & Verkehr';
-  if (matchAny(shopKeywords, searchTerms)) return 'Einkaufen & Konsum';
-  if (matchAny(workKeywords, searchTerms)) return 'Arbeit & Beruf';
-  if (matchAny(educationKeywords, searchTerms)) return 'Ausbildung & Lernen';
-  if (matchAny(homeKeywords, searchTerms)) return 'Wohnen & Haushalt';
-  if (matchAny(natureKeywords, searchTerms)) return 'Natur & Umwelt';
-  if (matchAny(leisureKeywords, searchTerms)) return 'Freizeit & Unterhaltung';
-  if (matchAny(servicesKeywords, searchTerms)) return 'Dienstleistungen & Behörden';
-  if (matchAny(familyKeywords, searchTerms)) return 'Person & Familie';
-
-  // Base fallback categories based on word characteristics (Time, Numbers, Grammar / Basic Vocab)
-  const numbers = ['null', 'eins', 'zwei', 'drei', 'vier', 'fünf', 'sechs', 'sieben', 'acht', 'neun', 'zehn', 'elf', 'zwölf', 'dreizehn', 'vierzehn', 'fünfzehn', 'sechzehn', 'siebzehn', 'achtzehn', 'neunzehn', 'zwanzig', 'dreißig', 'vierzig', 'fünfzig', 'sechzig', 'siebzig', 'achtzig', 'neunzig', 'hundert', 'tausend', 'million', 'milliarde', 'erste', 'zweite', 'dritte', 'vierte'];
-  const datesTime = ['januar', 'februar', 'märz', 'maerz', 'april', 'mai', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'dezember', 'montag', 'dienstag', 'mittwoch', 'donnerstag', 'freitag', 'samstag', 'sonntag', 'wochenende', 'uhr', 'minute', 'sekunde', 'stunde', 'jahr', 'monat', 'woche', 'tag', 'morgen', 'vormittag', 'mittag', 'nachmittag', 'abend', 'nacht', 'heute', 'gestern', 'morgen', 'früh', 'spät', 'datum', 'zeit'];
-
-  if (wc === 'number' || numbers.some(num => w === num) || m.includes('number') || m.includes('numeral')) {
-    return 'Zeit, Maße & Basiswortschatz';
-  }
-  if (datesTime.some(dt => w.includes(dt) || m.includes(dt)) || t.includes('zeit') || t.includes('datum')) {
-    return 'Zeit, Maße & Basiswortschatz';
-  }
-  if (wc === 'pronoun' || wc === 'preposition' || wc === 'conjunction' || wc === 'article' || wc === 'adverb') {
-    return 'Zeit, Maße & Basiswortschatz';
+  
+  if (timeExactDe.has(w_clean) || ['uhr', 'jahr', 'monat', 'woche', 'tag', 'sekunde', 'minute', 'stunde', 'quartal', 'zeitraum', 'spät', 'früh', 'jetzt', 'dann', 'danach', 'heute', 'gestern', 'morgen', 'bald', 'sofort', 'später', 'pünktlich', 'puenktlich', 'dauer'].includes(w_clean)) {
+    return 'Uhrzeit, Datum & Kalender';
   }
 
-  // Ultimate fallback to Zeit, Maße & Basiswortschatz
-  return 'Zeit, Maße & Basiswortschatz';
+  // Helper match functions
+  const matchDe = (stems) => {
+    for (const stem of stems) {
+      if (stem === 'auto' && w_clean.startsWith('autor')) continue;
+      if (stem === 'pass' && (w_clean.startsWith('passier') || w_clean.startsWith('passen') || w_clean.startsWith('passend'))) continue;
+      const re = new RegExp('\\b' + stem.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'));
+      if (re.test(w_clean)) return true;
+    }
+    return false;
+  };
+
+  const matchEn = (keywords) => {
+    for (const kw of keywords) {
+      const re = new RegExp('\\b' + kw.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&') + '\\b');
+      if (re.test(m)) return true;
+    }
+    return false;
+  };
+
+  // 2. Match Specific Themes/Keywords with high priority
+  if (matchDe(communicationDe) || matchEn(communicationEn)) return 'Kommunikation, Medien & Sprache';
+  if (matchDe(documentsDe) || matchEn(documentsEn)) return 'Staat, Gesellschaft & Dokumente';
+  if (matchDe(emotionDe) || matchEn(emotionEn)) return 'Gefühle, Charakter & Meinung';
+  if (matchDe(foodDe) || matchEn(foodEn)) return 'Essen, Kochen & Restaurant';
+  if (matchDe(healthDe) || matchEn(healthEn)) return 'Gesundheit, Körper & Pflege';
+  if (matchDe(travelDe) || matchEn(travelEn)) return 'Reise, Verkehr & Mobilität';
+  if (matchDe(shopDe) || matchEn(shopEn)) return 'Einkaufen, Geld & Konsum';
+  if (matchDe(workDe) || matchEn(workEn)) return 'Arbeit, Beruf & Karriere';
+  if (matchDe(educationDe) || matchEn(educationEn)) return 'Ausbildung, Schule & Studium';
+  if (matchDe(homeDe) || matchEn(homeEn)) return 'Wohnen, Haus & Haushalt';
+  if (matchDe(natureDe) || matchEn(natureEn)) return 'Natur, Umwelt & Tiere';
+  if (matchDe(leisureDe) || matchEn(leisureEn)) return 'Freizeit, Hobbys & Unterhaltung';
+  if (matchDe(familyDe) || matchEn(familyEn)) return 'Person, Familie & Beziehungen';
+
+  // 3. Direct Map Mapping based on raw themes
+  const tMapping = {
+    'person & familie': 'Person, Familie & Beziehungen',
+    'person, familie & beziehungen': 'Person, Familie & Beziehungen',
+    'gefühle, charakter & meinung': 'Gefühle, Charakter & Meinung',
+    'wohnen & haushalt': 'Wohnen, Haus & Haushalt',
+    'wohnen, haus & haushalt': 'Wohnen, Haus & Haushalt',
+    'gesundheit & körper': 'Gesundheit, Körper & Pflege',
+    'gesundheit, körper & pflege': 'Gesundheit, Körper & Pflege',
+    'natur & umwelt': 'Natur, Umwelt & Tiere',
+    'natur, umwelt & tiere': 'Natur, Umwelt & Tiere',
+    'reise & verkehr': 'Reise, Verkehr & Mobilität',
+    'reise, verkehr & mobilität': 'Reise, Verkehr & Mobilität',
+    'essen & trinken': 'Essen, Kochen & Restaurant',
+    'essen, kochen & restaurant': 'Essen, Kochen & Restaurant',
+    'einkaufen & konsum': 'Einkaufen, Geld & Konsum',
+    'einkaufen, geld & konsum': 'Einkaufen, Geld & Konsum',
+    'dienstleistungen & behörden': 'Staat, Gesellschaft & Dokumente',
+    'staat, gesellschaft & dokumente': 'Staat, Gesellschaft & Dokumente',
+    'ausbildung & lernen': 'Ausbildung, Schule & Studium',
+    'ausbildung, schule & studium': 'Ausbildung, Schule & Studium',
+    'arbeit & beruf': 'Arbeit, Beruf & Karriere',
+    'arbeit, beruf & karriere': 'Arbeit, Beruf & Karriere',
+    'freizeit & unterhaltung': 'Freizeit, Hobbys & Unterhaltung',
+    'freizeit, hobbys & unterhaltung': 'Freizeit, Hobbys & Unterhaltung',
+    'medien, technik & digitales': 'Kommunikation, Medien & Sprache',
+    'kommunikation, medien & sprache': 'Kommunikation, Medien & Sprache',
+    'gesellschaft, recht & staat': 'Staat, Gesellschaft & Dokumente',
+    'allgemeine aktivitäten & verben': 'Allgemeine Aktivitäten & Verben',
+    'eigenschaften & adjektive': 'Eigenschaften & Adjektive',
+    'basiswortschatz & floskeln': 'Basiswortschatz & Floskeln'
+  };
+
+  const mappedCat = tMapping[t];
+  if (mappedCat) {
+    return mappedCat;
+  }
+
+  // 4. Falling back to Word Class
+  if (wc.includes('verb')) {
+    return 'Allgemeine Aktivitäten & Verben';
+  }
+  if (wc.includes('adjektiv') || wc.includes('adj') || wc.includes('adjective')) {
+    return 'Eigenschaften & Adjektive';
+  }
+
+  return 'Basiswortschatz & Floskeln';
 }
 
 async function fetchData() {
@@ -1500,6 +1569,60 @@ function toggleShortcutOverlay() {
   }
 }
 
+function toggleHelpModal() {
+  const overlay = document.getElementById('help-modal-overlay');
+  if (!overlay) return;
+  if (overlay.classList.contains('hidden')) {
+    overlay.classList.remove('hidden');
+    const closeBtn = document.getElementById('help-modal-close');
+    if (closeBtn) requestAnimationFrame(() => closeBtn.focus());
+  } else {
+    overlay.classList.add('hidden');
+  }
+}
+
+function initHelpModal() {
+  const helpFab = document.getElementById('help-fab');
+  const closeBtn = document.getElementById('help-modal-close');
+  const ackBtn = document.getElementById('help-modal-ack');
+  const overlay = document.getElementById('help-modal-overlay');
+
+  if (helpFab) {
+    helpFab.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleHelpModal();
+    });
+  }
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleHelpModal();
+    });
+  }
+  if (ackBtn) {
+    ackBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (overlay) overlay.classList.add('hidden');
+      if (!state.visitedIntro) {
+        state.visitedIntro = true;
+        safeSetItem('visited_intro', 'true');
+      }
+    });
+  }
+  if (overlay) {
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) toggleHelpModal();
+    });
+  }
+
+  // Trigger modal on first-time visit automatically after data loads
+  if (!state.visitedIntro && overlay) {
+    setTimeout(() => {
+      overlay.classList.remove('hidden');
+    }, 1500);
+  }
+}
+
 // ==========================================
 // C1: SWIPE GESTURE HANDLER FOR FLASHCARDS
 // ==========================================
@@ -1616,6 +1739,16 @@ function handleKeyboardShortcuts(e) {
     return;
   }
 
+  // B1: Dismiss help modal overlay on Escape
+  const helpOverlay = document.getElementById('help-modal-overlay');
+  if (helpOverlay && !helpOverlay.classList.contains('hidden')) {
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      toggleHelpModal();
+      return;
+    }
+  }
+
   // B1: Dismiss shortcut overlay on Escape
   const shortcutOverlay = document.getElementById('shortcut-overlay');
   if (shortcutOverlay && !shortcutOverlay.classList.contains('hidden')) {
@@ -1724,10 +1857,10 @@ function handleKeyboardShortcuts(e) {
     }
   }
 
-  // B1: ? key toggles keyboard shortcut overlay (works on ALL routes)
-  if (e.key === '?') {
+  // B1: ? or / key toggles Help & Intro Modal (works on ALL routes)
+  if (e.key === '?' || e.key === '/') {
     e.preventDefault();
-    toggleShortcutOverlay();
+    toggleHelpModal();
     return;
   }
 
@@ -2034,6 +2167,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initPomodoroFocusBooster();
   initShortcutsToggle();
   trackVisitedLevels();
+  initHelpModal();
 
   fetchData();
   setupEventListeners();
