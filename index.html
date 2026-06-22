@@ -2258,10 +2258,16 @@
   <!-- Global Particle Burst Container -->
   <div id="particle-container" class="fixed inset-0 pointer-events-none z-[60] overflow-hidden"></div>
 
+  <!-- Global Fullscreen Lottie Micro-Animation Layer -->
+  <div id="lottie-container" class="fixed inset-0 pointer-events-none z-[58] flex items-center justify-center overflow-hidden"></div>
+
   <!-- Floating Action Help Button (FAB) -->
   <button id="help-fab" class="fixed bottom-6 right-6 w-14 h-14 bg-slate-900/80 border border-slate-700/60 hover:border-indigo-500 hover:shadow-[0_0_15px_rgba(99,102,241,0.4)] text-indigo-400 hover:text-indigo-300 rounded-full flex items-center justify-center shadow-2xl backdrop-blur-md z-[55] cursor-pointer transition-all hover:scale-110 active:scale-95 group animate-bounce" title="Hilfe & Einführung | Help & Introduction (Hot-key: ?)">
     <i class="fa-solid fa-question text-xl transition-transform group-hover:rotate-12"></i>
   </button>
+
+  <!-- Premium Lottie Player Library via CDN (Cacheable) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" defer></script>
 
   <!-- App Script -->
   <script type="module" src="./app.js"></script>

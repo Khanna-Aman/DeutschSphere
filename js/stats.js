@@ -41,11 +41,14 @@ export function unlockAchievement(id) {
     toast.classList.remove('translate-y-[150%]', 'opacity-0');
     toast.classList.add('translate-y-0', 'opacity-100');
     
-    // Trigger cascading celebratory particle bursts
+    // Trigger cascading celebratory particle bursts and premium animations
     if (typeof window.triggerParticleBurst === 'function') {
       window.triggerParticleBurst(window.innerWidth / 2, window.innerHeight / 3);
       setTimeout(() => window.triggerParticleBurst(window.innerWidth / 3, window.innerHeight / 2), 200);
       setTimeout(() => window.triggerParticleBurst(window.innerWidth * 2 / 3, window.innerHeight / 2), 400);
+    }
+    if (typeof window.triggerPremiumAnimation === 'function') {
+      window.triggerPremiumAnimation('achievement');
     }
     
     setTimeout(() => {

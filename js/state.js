@@ -1245,5 +1245,198 @@ export function shuffleArray(array) {
   return array;
 }
 
+// Global high-performance Canvas-based Star-Glitter Particle Burst Engine
+window.triggerParticleBurst = function(x, y) {
+  // Check user preference toggle
+  if (state.particleBursts === false) return;
+  const container = document.getElementById('particle-container');
+  if (!container) return;
+
+  const canvas = document.createElement('canvas');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  canvas.className = "absolute inset-0 pointer-events-none";
+  container.appendChild(canvas);
+
+  const ctx = canvas.getContext('2d');
+  const particles = [];
+  const colors = ['#3b82f6', '#6366f1', '#ec4899', '#10b981', '#f59e0b', '#a855f7'];
+
+  // Spawn 24 high-fidelity particles
+  for (let i = 0; i < 24; i++) {
+    const angle = Math.random() * Math.PI * 2;
+    const speed = Math.random() * 5 + 3;
+    particles.push({
+      x: x || window.innerWidth / 2,
+      y: y || window.innerHeight / 2,
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed - (Math.random() * 2), // slight upward bias
+      size: Math.random() * 5 + 3,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      alpha: 1,
+      decay: Math.random() * 0.02 + 0.015,
+      gravity: 0.12,
+      rotation: Math.random() * Math.PI,
+      rotSpeed: (Math.random() - 0.5) * 0.1
+    });
+  }
+
+  function drawStar(ctx, cx, cy, spikes, outerRadius, innerRadius) {
+    let rot = Math.PI / 2 * 3;
+    let x = cx;
+    let y = cy;
+    let step = Math.PI / spikes;
+
+    ctx.beginPath();
+    ctx.moveTo(cx, cy - outerRadius);
+    for (let i = 0; i < spikes; i++) {
+      x = cx + Math.cos(rot) * outerRadius;
+      y = cy + Math.sin(rot) * outerRadius;
+      ctx.lineTo(x, y);
+      rot += step;
+
+      x = cx + Math.cos(rot) * innerRadius;
+      y = cy + Math.sin(rot) * innerRadius;
+      ctx.lineTo(x, y);
+      rot += step;
+    }
+    ctx.lineTo(cx, cy - outerRadius);
+    ctx.closePath();
+    ctx.fill();
+  }
+
+  function animate() {
+    if (particles.length === 0) {
+      canvas.remove();
+      return;
+    }
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (let i = particles.length - 1; i >= 0; i--) {
+      const p = particles[i];
+      p.x += p.vx;
+      p.y += p.vy;
+      p.vy += p.gravity;
+      p.alpha -= p.decay;
+      p.rotation += p.rotSpeed;
+
+      if (p.alpha <= 0) {
+        particles.splice(i, 1);
+        continue;
+      }
+
+      ctx.save();
+      ctx.globalAlpha = p.alpha;
+      ctx.fillStyle = p.color;
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.rotation);
+
+      // Draw a beautiful 4-pointed sparkle star
+      drawStar(ctx, 0, 0, 4, p.size, p.size / 2.5);
+      
+      ctx.restore();
+    }
+
+    requestAnimationFrame(animate);
+  }
+
+  requestAnimationFrame(animate);
+};
+
+// Global Fullscreen Lottie Micro-Animation Milestones Player (Dynamic Fallback & Offline Caching Safe)
+window.triggerPremiumAnimation = function(type) {
+  const container = document.getElementById('lottie-container');
+  if (!container) return;
+
+  // Clear previous animations
+  container.innerHTML = '';
+  container.classList.remove('pointer-events-none');
+
+  // Trigger volume-scaled Web Audio chimes and haptics based on type
+  import('./audio.js').then(audio => {
+    if (type === 'streak') {
+      audio.playSuccessArpeggio();
+      if (navigator.vibrate) navigator.vibrate([50, 100, 50]);
+    } else if (type === 'level-complete') {
+      audio.playSuccessArpeggio();
+      if (navigator.vibrate) navigator.vibrate([100, 50, 100, 50, 200]);
+    } else if (type === 'achievement') {
+      audio.playAchievementChime();
+      if (navigator.vibrate) navigator.vibrate(100);
+    }
+  }).catch(e => console.warn('[Sensory] Could not load audio chimes dynamically:', e));
+
+  // Determine if file protocol (file://) is active to bypass CORS fetch restrictions on local file opens
+  const isLocalFile = window.location.protocol === 'file:';
+
+  if (typeof lottie === 'undefined' || isLocalFile) {
+    console.log('[Lottie] Using high-performance Canvas-based fullscreen fallback.');
+    triggerFullscreenFallback(type);
+    return;
+  }
+
+  // Map to local pre-cached JSON assets
+  const localPaths = {
+    'streak': './lottie/streak.json',
+    'level-complete': './lottie/level-complete.json',
+    'achievement': './lottie/achievement.json'
+  };
+
+  try {
+    const anim = lottie.loadAnimation({
+      container: container,
+      renderer: 'svg',
+      loop: false,
+      autoplay: true,
+      path: localPaths[type] || localPaths['achievement']
+    });
+
+    anim.onComplete = () => {
+      container.innerHTML = '';
+      container.classList.add('pointer-events-none');
+    };
+
+    // Auto-dismiss safety backup
+    setTimeout(() => {
+      container.innerHTML = '';
+      container.classList.add('pointer-events-none');
+    }, 4500);
+
+  } catch (e) {
+    console.warn('[Lottie] Path load failed, launching fallback rendering:', e);
+    triggerFullscreenFallback(type);
+  }
+
+  // Custom fullscreen canvas fallback rendering for 100% offline-ready environments
+  function triggerFullscreenFallback(animType) {
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+
+    if (animType === 'level-complete' || animType === 'achievement') {
+      // Trigger multiple massive starburst waves
+      for (let offset = 0; offset < 600; offset += 150) {
+        setTimeout(() => {
+          window.triggerParticleBurst(w / 4 + Math.random() * (w / 2), h / 3 + Math.random() * (h / 3));
+        }, offset);
+      }
+    } else if (animType === 'streak') {
+      // Spark flame bursts rising upwards
+      const steps = 6;
+      for (let i = 0; i < steps; i++) {
+        setTimeout(() => {
+          window.triggerParticleBurst(w / 2 + (Math.random() - 0.5) * 120, h / 2 - (i * 40));
+        }, i * 80);
+      }
+    }
+
+    // Dismiss layer
+    setTimeout(() => {
+      container.innerHTML = '';
+      container.classList.add('pointer-events-none');
+    }, 2000);
+  }
+};
+
 
 

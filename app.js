@@ -228,7 +228,23 @@ export async function fetchData() {
     
     renderSidebarCategories();
     window.dispatchEvent(new CustomEvent('srs:card-updated'));
-    
+
+    // Trigger lazy background pre-caching for generated level images
+    if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+      const imageUrls = state.allCards
+        .map(c => c.image_path || c.image)
+        .filter(img => !!img)
+        .map(img => `./${level}/${img}`);
+      
+      if (imageUrls.length > 0) {
+        navigator.serviceWorker.controller.postMessage({
+          type: 'PRECACHE_RESOURCES',
+          urls: imageUrls
+        });
+        console.log(`[SW Cache] Sent ${imageUrls.length} level ${level} image assets for lazy pre-caching.`);
+      }
+    }
+
     elements.loaderOverlay.classList.add('opacity-0');
     setTimeout(() => elements.loaderOverlay.classList.add('hidden'), 500);
 

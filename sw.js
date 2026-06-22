@@ -27,7 +27,10 @@ const APP_SHELL = [
   './js/idb-keyval.js',
   './manifest.json',
   './icon-192.png',
-  './icon-512.png'
+  './icon-512.png',
+  './lottie/streak.json',
+  './lottie/level-complete.json',
+  './lottie/achievement.json'
 ];
 
 // Install: precache core app shell
@@ -77,8 +80,8 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Strategy 2: CACHE-FIRST for SVG/image assets (Twemoji, illustrations)
-  if (url.pathname.endsWith('.svg') || url.pathname.endsWith('.png') || url.pathname.endsWith('.jpg')) {
+  // Strategy 2: CACHE-FIRST for SVG/image assets (Twemoji, WebP illustrations)
+  if (url.pathname.endsWith('.svg') || url.pathname.endsWith('.png') || url.pathname.endsWith('.jpg') || url.pathname.endsWith('.webp')) {
     event.respondWith(
       caches.open(DATA_CACHE).then(cache => {
         return cache.match(event.request).then(cached => {
@@ -135,3 +138,25 @@ self.addEventListener('fetch', (event) => {
     })
   );
 });
+
+// Dynamic background pre-caching message router
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'PRECACHE_RESOURCES') {
+    const urls = event.data.urls || [];
+    event.waitUntil(
+      caches.open(DATA_CACHE).then(cache => {
+        return Promise.all(
+          urls.map(url => {
+            return cache.match(url).then(cached => {
+              if (cached) return; // already in cache
+              return cache.add(url).catch(err => {
+                console.warn('[SW] Dynamic background precache failed for URL:', url, err);
+              });
+            });
+          })
+        );
+      })
+    );
+  }
+});
+

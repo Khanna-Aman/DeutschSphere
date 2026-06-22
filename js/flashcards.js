@@ -420,7 +420,8 @@ export function renderCard() {
   }
 
   // Ensure card image container is visible and loads Twemoji illustration if enabled
-  if (state.showImages && card.image) {
+  const activeImage = card.image_path || card.image;
+  if (state.showImages && activeImage) {
     if (elements.cardImageContainer) {
       elements.cardImageContainer.style.display = '';
       elements.cardImageContainer.classList.remove('hidden');
@@ -435,7 +436,7 @@ export function renderCard() {
     if (elements.cardImage) {
       elements.cardImage.classList.add('hidden');
       elements.cardImage.classList.add('opacity-0');
-      elements.cardImage.src = state.currentLevel + '/' + card.image;
+      elements.cardImage.src = state.currentLevel + '/' + activeImage;
       elements.cardImage.onload = () => {
         elements.cardImage.classList.remove('hidden');
         elements.cardImage.classList.remove('opacity-0');

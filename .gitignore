@@ -31,8 +31,11 @@ Thumbs.db
 
 # Auth & secrets
 cookies.txt
+.env
+.env.local
 
 # Backup files
 scripts/backups/
 scripts/logs/
+
 
