@@ -153,7 +153,23 @@ METAPHOR_MAP = {
     "daneben": "A bright red 3D toy sphere floating snugly directly beside a slightly larger green 3D toy sphere on a glowing baseline grid, illustrating 'next to it', front-and-center",
     "dank": "A spectacular 3D pink glass heart with gold metallic ribbon wrapping around it, surrounded by glowing warm fairy lights, representing heartfelt thanks, front-and-center",
     "danke": "A beautiful, stylized 3D golden trophy cup with a warm smiling face emoji, surrounded by colorful confetti, representing gratitude, front-and-center",
-    "danken": "A spectacular, warm 3D handshake between a glowing blue hand and a glowing pink hand, floating in mid-air, representing thanking someone, front-and-center"
+    "danken": "A spectacular, warm 3D handshake between a glowing blue hand and a glowing pink hand, floating in mid-air, representing thanking someone, front-and-center",
+    "dann": "A glowing green arrow linking one polished 3D block to another in a timeline sequence, representing logical next step or sequential transition, front-and-center",
+    "datum": "A magnificent 3D desk calendar with pages turning, showing a big glossy red circle around a single date, with floating golden stars, front-and-center",
+    "dauern": "A beautiful, translucent 3D clock face with glowing golden hands spinning slowly, trailing a soft trail of golden dust in a pitch-black studio void, representing duration and time elapsed, front-and-center",
+    "dein-": "A cute 3D hand warmly presenting or gifting a beautifully wrapped blue present with a big bow to the viewer, representing ownership or gift, front-and-center",
+    "denn": "Two beautiful interlocking, glowing neon gear wheels rotating in perfect harmony, representing causal connection, front-and-center",
+    "dich": "A glowing 3D arrow pointing directly at a beautiful, smiling 3D character, highlighting 'you', front-and-center",
+    "dies-": "A cute, glossy 3D hand with a pointing finger indicating a specific, brightly glowing red block among several grey blocks, representing 'this one', front-and-center",
+    "dir": "A beautiful, stylized 3D gift box floating forward, open with glowing star shapes flowing towards the viewer, representing giving or offering to you, front-and-center",
+    "disco": "A gorgeous, highly-detailed 3D disco ball with shimmering glass mirror facets reflecting bright pink and cyan neon spotlights, floating suspended, front-and-center, 100% disco essence",
+    "doktor": "A stylized 3D medical stethoscope with a glowing heartbeat pattern in the center, and a tiny red medical cross icon next to it, front-and-center, 100% doctor essence",
+    "doppelzimmer": "A beautifully arranged modern hotel room with two identical luxury single beds side-by-side, decorated with cozy pink duvets, floating in mid-air, front-and-center",
+    "dorf": "A charming miniature 3D village scene with small warm cottages with smoking chimneys, green trees, and tiny cobbled paths, floating suspended, front-and-center, 100% village essence",
+    "draußen": "A beautiful 3D park bench sitting under a leafy green tree with glowing sunshine and small white clouds, representing being outdoors, front-and-center",
+    "drucken": "A sleek 3D computer printer dynamically sliding out a freshly printed document showing a beautiful colorful bar chart, with glowing accents, front-and-center",
+    "drucker": "An elegant, highly-detailed 3D desk printer made of glossy white and chrome plastic, with a neat stack of paper loaded and a glowing status light, front-and-center, 100% printer essence",
+    "drücken": "A bold, bright red 3D button made of glossy enamel, being pressed down by a cute, polished 3D hand, representing pressing or pushing, front-and-center"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

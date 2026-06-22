@@ -2032,8 +2032,10 @@
     "antonym": "die Margarine",
     "example_de": "Für mich bitte ein Brötchen mit Butter und Käse.",
     "example_en": "A bread roll with butter and cheese for me, please.",
-    "image": "images/card_106.svg",
-    "id": 106
+    "image": "images/card_106.webp",
+    "id": 106,
+    "image_tier": "B",
+    "image_path": "images/card_106.webp"
   },
   {
     "german": "die Bäckerei",
@@ -2048,8 +2050,10 @@
     "antonym": null,
     "example_de": "Ich geh mal schnell zur Bäckerei.",
     "example_en": "I am going quickly to the bakery.",
-    "image": "images/card_107.svg",
-    "id": 107
+    "image": "images/card_107.webp",
+    "id": 107,
+    "image_tier": "B",
+    "image_path": "images/card_107.webp"
   },
   {
     "german": "böse",
@@ -2067,8 +2071,10 @@
     "antonym": "lieb",
     "example_de": "Sie ist böse auf mich.",
     "example_en": "She is angry at me.",
-    "image": "images/card_108.svg",
-    "id": 108
+    "image": "images/card_108.webp",
+    "id": 108,
+    "image_tier": "B",
+    "image_path": "images/card_108.webp"
   },
   {
     "german": "das Café",
@@ -2083,8 +2089,10 @@
     "antonym": null,
     "example_de": "Sollen wir uns im Café treffen?",
     "example_en": "Should we meet in the café?",
-    "image": "images/card_109.svg",
-    "id": 109
+    "image": "images/card_109.webp",
+    "id": 109,
+    "image_tier": "B",
+    "image_path": "images/card_109.webp"
   },
   {
     "german": "die CD",
@@ -2099,8 +2107,10 @@
     "antonym": null,
     "example_de": "Bring bitte deine Lieblings-CD mit.",
     "example_en": "Please bring your favorite CD.",
-    "image": "images/card_110.svg",
-    "id": 110
+    "image": "images/card_110.webp",
+    "id": 110,
+    "image_tier": "B",
+    "image_path": "images/card_110.webp"
   },
   {
     "german": "der Chef",
@@ -2115,8 +2125,10 @@
     "antonym": "der Angestellte",
     "example_de": "Wir haben eine neue Chefin.",
     "example_en": "We have a new female boss.",
-    "image": "images/card_111.svg",
-    "id": 111
+    "image": "images/card_111.webp",
+    "id": 111,
+    "image_tier": "B",
+    "image_path": "images/card_111.webp"
   },
   {
     "german": "der Computer",
@@ -2131,8 +2143,10 @@
     "antonym": null,
     "example_de": "Wann bekommst du deinen neuen Computer?",
     "example_en": "When do you get your new computer?",
-    "image": "images/card_112.svg",
-    "id": 112
+    "image": "images/card_112.webp",
+    "id": 112,
+    "image_tier": "B",
+    "image_path": "images/card_112.webp"
   },
   {
     "german": "da",
@@ -2147,8 +2161,10 @@
     "antonym": "weg",
     "example_de": "Da hinten ist er ja. Wir sprechen gerade über Paul. Da kommt er ja gerade. Ich nehme das da. Ist Herr Klein schon da?",
     "example_en": "There he is in the back. We are just talking about Paul. Here he comes right now. I will take that there. Is Mr. Klein already here?",
-    "image": "images/card_113.svg",
-    "id": 113
+    "image": "images/card_113.webp",
+    "id": 113,
+    "image_tier": "B",
+    "image_path": "images/card_113.webp"
   },
   {
     "german": "die Dame",
@@ -2163,8 +2179,10 @@
     "antonym": "der Herr",
     "example_de": "Damen (an der Toilette) Sehr geehrte Damen und Herren!",
     "example_en": "Ladies (at the toilet) Dear ladies and gentlemen!",
-    "image": "images/card_114.svg",
-    "id": 114
+    "image": "images/card_114.webp",
+    "id": 114,
+    "image_tier": "B",
+    "image_path": "images/card_114.webp"
   },
   {
     "german": "daneben",
@@ -2179,8 +2197,10 @@
     "antonym": null,
     "example_de": "Du kennst doch die Post. Daneben ist die Bank.",
     "example_en": "You know the post office. Next to it is the bank.",
-    "image": "images/card_115.svg",
-    "id": 115
+    "image": "images/card_115.webp",
+    "id": 115,
+    "image_tier": "B",
+    "image_path": "images/card_115.webp"
   },
   {
     "german": "der Dank",
@@ -2195,8 +2215,10 @@
     "antonym": null,
     "example_de": "Vielen Dank! Herzlichen Dank!",
     "example_en": "Many thanks! Thank you very much!",
-    "image": "images/card_116.svg",
-    "id": 116
+    "image": "images/card_116.webp",
+    "id": 116,
+    "image_tier": "B",
+    "image_path": "images/card_116.webp"
   },
   {
     "german": "danke",
@@ -2211,8 +2233,10 @@
     "antonym": "bitte",
     "example_de": "Soll ich Ihnen helfen? - Nein, danke!",
     "example_en": "Should I help you? - No, thank you!",
-    "image": "images/card_117.svg",
-    "id": 117
+    "image": "images/card_117.webp",
+    "id": 117,
+    "image_tier": "B",
+    "image_path": "images/card_117.webp"
   },
   {
     "german": "danken",
@@ -2231,8 +2255,10 @@
     "antonym": null,
     "example_de": "Ich danke Ihnen für die Einladung.",
     "example_en": "I thank you for the invitation.",
-    "image": "images/card_118.svg",
-    "id": 118
+    "image": "images/card_118.webp",
+    "id": 118,
+    "image_tier": "B",
+    "image_path": "images/card_118.webp"
   },
   {
     "german": "dann",
@@ -2247,8 +2273,10 @@
     "antonym": "zuerst",
     "example_de": "Ich muss noch schnell zur Post, dann komme ich.",
     "example_en": "I still have to go quickly to the post office, then I am coming.",
-    "image": "images/card_119.svg",
-    "id": 119
+    "image": "images/card_119.webp",
+    "id": 119,
+    "image_tier": "B",
+    "image_path": "images/card_119.webp"
   },
   {
     "german": "das Datum",
@@ -2263,8 +2291,10 @@
     "antonym": null,
     "example_de": "Bitte schreiben Sie noch das Datum auf das Formular.",
     "example_en": "Please also write the date on the form.",
-    "image": "images/card_120.svg",
-    "id": 120
+    "image": "images/card_120.webp",
+    "id": 120,
+    "image_tier": "B",
+    "image_path": "images/card_120.webp"
   },
   {
     "german": "dauern",
@@ -2283,8 +2313,10 @@
     "antonym": null,
     "example_de": "Wie lange dauert der Film?",
     "example_en": "How long does the film last?",
-    "image": "images/card_121.svg",
-    "id": 121
+    "image": "images/card_121.webp",
+    "id": 121,
+    "image_tier": "B",
+    "image_path": "images/card_121.webp"
   },
   {
     "german": "dein-",
@@ -2299,8 +2331,10 @@
     "antonym": "mein-",
     "example_de": "Ist das dein Auto? Ist das deins?",
     "example_en": "Is that your car? Is that yours?",
-    "image": "images/card_122.svg",
-    "id": 122
+    "image": "images/card_122.webp",
+    "id": 122,
+    "image_tier": "B",
+    "image_path": "images/card_122.webp"
   },
   {
     "german": "denn",
@@ -2315,8 +2349,10 @@
     "antonym": null,
     "example_de": "Ich kann nicht kommen, denn ich bin krank.",
     "example_en": "I cannot come, because I am sick.",
-    "image": "images/card_123.svg",
-    "id": 123
+    "image": "images/card_123.webp",
+    "id": 123,
+    "image_tier": "B",
+    "image_path": "images/card_123.webp"
   },
   {
     "german": "dich",
@@ -2331,8 +2367,10 @@
     "antonym": "mich",
     "example_de": "Die Blumen sind für dich.",
     "example_en": "The flowers are for you.",
-    "image": "images/card_124.svg",
-    "id": 124
+    "image": "images/card_124.webp",
+    "id": 124,
+    "image_tier": "B",
+    "image_path": "images/card_124.webp"
   },
   {
     "german": "dies-",
@@ -2347,8 +2385,10 @@
     "antonym": "jen-",
     "example_de": "Ich nehme lieber diesen Kuchen.",
     "example_en": "I prefer to take this cake.",
-    "image": "images/card_125.svg",
-    "id": 125
+    "image": "images/card_125.webp",
+    "id": 125,
+    "image_tier": "B",
+    "image_path": "images/card_125.webp"
   },
   {
     "german": "dir",
@@ -2363,8 +2403,10 @@
     "antonym": "mir",
     "example_de": "Gefallen dir die Blumen?",
     "example_en": "Do you like the flowers?",
-    "image": "images/card_126.svg",
-    "id": 126
+    "image": "images/card_126.webp",
+    "id": 126,
+    "image_tier": "B",
+    "image_path": "images/card_126.webp"
   },
   {
     "german": "die Disco",
@@ -2379,8 +2421,10 @@
     "antonym": null,
     "example_de": "Heute abend gehen wir in die Disco tanzen.",
     "example_en": "Tonight we are going dancing in the disco.",
-    "image": "images/card_127.svg",
-    "id": 127
+    "image": "images/card_127.webp",
+    "id": 127,
+    "image_tier": "B",
+    "image_path": "images/card_127.webp"
   },
   {
     "german": "der Doktor",
@@ -2395,8 +2439,10 @@
     "antonym": "der Patient",
     "example_de": "Meine Tochter ist krank. Wir gehen zum Doktor.",
     "example_en": "My daughter is sick. We are going to the doctor.",
-    "image": "images/card_128.svg",
-    "id": 128
+    "image": "images/card_128.webp",
+    "id": 128,
+    "image_tier": "B",
+    "image_path": "images/card_128.webp"
   },
   {
     "german": "das Doppelzimmer",
@@ -2411,8 +2457,10 @@
     "antonym": "das Einzelzimmer",
     "example_de": "Wollen Sie ein Doppelzimmer oder ein Einzelzimmer?",
     "example_en": "Do you want a double room or a single room?",
-    "image": "images/card_129.svg",
-    "id": 129
+    "image": "images/card_129.webp",
+    "id": 129,
+    "image_tier": "B",
+    "image_path": "images/card_129.webp"
   },
   {
     "german": "das Dorf",
@@ -2427,8 +2475,10 @@
     "antonym": "die Stadt",
     "example_de": "Meine Familie lebt in einem Dorf.",
     "example_en": "My family lives in a village.",
-    "image": "images/card_130.svg",
-    "id": 130
+    "image": "images/card_130.webp",
+    "id": 130,
+    "image_tier": "B",
+    "image_path": "images/card_130.webp"
   },
   {
     "german": "draußen",
@@ -2443,8 +2493,10 @@
     "antonym": "drinnen",
     "example_de": "Wollen wir draußen sitzen?",
     "example_en": "Do we want to sit outside?",
-    "image": "images/card_131.svg",
-    "id": 131
+    "image": "images/card_131.webp",
+    "id": 131,
+    "image_tier": "B",
+    "image_path": "images/card_131.webp"
   },
   {
     "german": "drucken",
@@ -2463,8 +2515,10 @@
     "antonym": null,
     "example_de": "Bitte drucke das Formular für mich.",
     "example_en": "Please print the form for me.",
-    "image": "images/card_132.svg",
-    "id": 132
+    "image": "images/card_132.webp",
+    "id": 132,
+    "image_tier": "B",
+    "image_path": "images/card_132.webp"
   },
   {
     "german": "der Drucker",
@@ -2479,8 +2533,10 @@
     "antonym": null,
     "example_de": "Mein Drucker ist kaputt.",
     "example_en": "My printer is broken.",
-    "image": "images/card_133.svg",
-    "id": 133
+    "image": "images/card_133.webp",
+    "id": 133,
+    "image_tier": "B",
+    "image_path": "images/card_133.webp"
   },
   {
     "german": "drücken",
@@ -2499,8 +2555,10 @@
     "antonym": "ziehen",
     "example_de": "Drück hier, dann geht der Computer an.",
     "example_en": "Press here, then the computer turns on.",
-    "image": "images/card_134.svg",
-    "id": 134
+    "image": "images/card_134.webp",
+    "id": 134,
+    "image_tier": "B",
+    "image_path": "images/card_134.webp"
   },
   {
     "german": "durch",
@@ -2515,8 +2573,10 @@
     "antonym": null,
     "example_de": "Am besten gehen Sie durch die Breite Straße.",
     "example_en": "It is best to go through the Breite Straße.",
-    "image": "images/card_135.svg",
-    "id": 135
+    "image": "images/card_135.webp",
+    "id": 135,
+    "image_tier": "B",
+    "image_path": "images/card_135.webp"
   },
   {
     "german": "die Durchsage",
