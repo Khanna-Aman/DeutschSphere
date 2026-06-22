@@ -157,20 +157,22 @@ def generate_metaphor_prompt(word_de, word_en, word_class):
     else:
         # Dynamic fallback prompts based on word classes
         if word_class == "Nomen":
-            metaphor = f"A beautiful, detailed, colorful 3D claymation model representing '{word_en}'"
+            metaphor = f"a beautiful, detailed, colorful 3D claymation model representing the object {word_en}"
         elif word_class == "Verb":
             clean_verb = re.sub(r'^to\s+', '', word_en.lower()).strip()
-            metaphor = f"A friendly, stylized 3D clay character dynamically performing the action of '{clean_verb}' in a cute cartoon scene"
+            metaphor = f"a friendly, stylized 3D clay character dynamically performing the action of {clean_verb} in a cute cartoon scene"
         elif word_class == "Adjektiv" or "adjective" in word_class.lower():
-            metaphor = f"A high-contrast, stylized 3D claymation scene visually demonstrating the concept of '{word_en}' through friendly cartoonish objects"
+            metaphor = f"a high-contrast, stylized 3D claymation scene visually demonstrating the concept of {word_en} through friendly cartoonish objects"
         else:
-            metaphor = f"A cute, stylized 3D clay illustration symbolizing the concept of '{word_en}'"
+            metaphor = f"a cute, stylized 3D clay illustration symbolizing the concept of {word_en}"
 
-    # Base prompt wrapping the metaphor with strict solid black background instructions
+    # Base prompt wrapping the metaphor with extremely strict isolated void and wordless instructions
     prompt = (
-        f"Cozy 3D claymation illustration representing the word '{word_en}'. {metaphor}. "
-        f"Solid, flat, high-contrast pure-black background, 3D clay model, studio lighting, "
-        f"cute and friendly, vibrant colors, premium mobile game asset style, no text, clean borders, 4k"
+        f"A beautiful 3D claymation illustration of: {metaphor}. "
+        f"Isolated asset floating on a 100% flat, solid, uniform pure black background. "
+        f"Strictly no ground plane, no floor shadow, no floor surface, no horizon line, no table surface, completely suspended in pure black void. "
+        f"Strictly no text, no letters, no words, no written characters, no alphabets, completely wordless. "
+        f"Studio lighting, cute and friendly 3D clay model, vibrant colors, premium mobile game asset style, clean borders, 4k"
     )
     return prompt
 

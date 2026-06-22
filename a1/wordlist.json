@@ -260,8 +260,10 @@
     "antonym": null,
     "example_de": "Wo arbeiten Sie?",
     "example_en": "Where do you work?",
-    "image": "images/card_14.svg",
-    "id": 14
+    "image": "images/card_14.webp",
+    "id": 14,
+    "image_tier": "B",
+    "image_path": "images/card_14.webp"
   },
   {
     "german": "arbeitslos",
@@ -279,8 +281,10 @@
     "antonym": "berufstätig",
     "example_de": "Es gibt bei uns viele Leute, die schon lange arbeitslos sind.",
     "example_en": "There are many people here who have been unemployed for a long time.",
-    "image": "images/card_15.svg",
-    "id": 15
+    "image": "images/card_15.webp",
+    "id": 15,
+    "image_tier": "B",
+    "image_path": "images/card_15.webp"
   },
   {
     "german": "der Arbeitsplatz",
@@ -295,8 +299,10 @@
     "antonym": null,
     "example_de": "An meinem Arbeitsplatz fehlt ein Drucker.",
     "example_en": "A printer is missing at my workplace.",
-    "image": "images/card_16.svg",
-    "id": 16
+    "image": "images/card_16.webp",
+    "id": 16,
+    "image_tier": "B",
+    "image_path": "images/card_16.webp"
   },
   {
     "german": "der Arm",
@@ -311,8 +317,10 @@
     "antonym": "das Bein",
     "example_de": "Mein Arm tut weh.",
     "example_en": "My arm hurts.",
-    "image": "images/card_17.svg",
-    "id": 17
+    "image": "images/card_17.webp",
+    "id": 17,
+    "image_tier": "B",
+    "image_path": "images/card_17.webp"
   },
   {
     "german": "der Arzt",
@@ -327,8 +335,10 @@
     "antonym": "der Patient",
     "example_de": "Morgen habe ich einen Termin bei meiner Ärztin.",
     "example_en": "Tomorrow I have an appointment with my doctor.",
-    "image": "images/card_18.svg",
-    "id": 18
+    "image": "images/card_18.webp",
+    "id": 18,
+    "image_tier": "B",
+    "image_path": "images/card_18.webp"
   },
   {
     "german": "auch",
@@ -343,8 +353,10 @@
     "antonym": null,
     "example_de": "Ich bin auch Spanier.",
     "example_en": "I am also Spanish.",
-    "image": "images/card_19.svg",
-    "id": 19
+    "image": "images/card_19.webp",
+    "id": 19,
+    "image_tier": "B",
+    "image_path": "images/card_19.webp"
   },
   {
     "german": "auf",
