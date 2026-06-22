@@ -659,8 +659,10 @@
     "antonym": "das Inland",
     "example_de": "Fahren Sie ins Ausland?",
     "example_en": "Are you traveling abroad?",
-    "image": "images/card_35.svg",
-    "id": 35
+    "image": "images/card_35.webp",
+    "id": 35,
+    "image_tier": "B",
+    "image_path": "images/card_35.webp"
   },
   {
     "german": "der Ausländer",
@@ -675,8 +677,10 @@
     "antonym": "der Inländer",
     "example_de": "Sind Sie Ausländerin?",
     "example_en": "Are you a foreigner?",
-    "image": "images/card_36.svg",
-    "id": 36
+    "image": "images/card_36.webp",
+    "id": 36,
+    "image_tier": "B",
+    "image_path": "images/card_36.webp"
   },
   {
     "german": "ausländisch",
@@ -694,8 +698,10 @@
     "antonym": "inländisch",
     "example_de": "Leider habe ich nur ausländisches Geld.",
     "example_en": "Unfortunately, I only have foreign money.",
-    "image": "images/card_37.svg",
-    "id": 37
+    "image": "images/card_37.webp",
+    "id": 37,
+    "image_tier": "B",
+    "image_path": "images/card_37.webp"
   },
   {
     "german": "ausmachen",
@@ -714,8 +720,10 @@
     "antonym": "anmachen",
     "example_de": "Mach bitte das Licht aus!",
     "example_en": "Please turn off the light!",
-    "image": "images/card_38.svg",
-    "id": 38
+    "image": "images/card_38.webp",
+    "id": 38,
+    "image_tier": "B",
+    "image_path": "images/card_38.webp"
   },
   {
     "german": "die Aussage",
@@ -730,8 +738,10 @@
     "antonym": null,
     "example_de": "Ist die Aussage richtig oder falsch?",
     "example_en": "Is the statement true or false?",
-    "image": "images/card_39.svg",
-    "id": 39
+    "image": "images/card_39.webp",
+    "id": 39,
+    "image_tier": "B",
+    "image_path": "images/card_39.webp"
   },
   {
     "german": "aussehen",
@@ -750,8 +760,10 @@
     "antonym": null,
     "example_de": "Das sieht schön aus.",
     "example_en": "That looks nice.",
-    "image": "images/card_40.svg",
-    "id": 40
+    "image": "images/card_40.webp",
+    "id": 40,
+    "image_tier": "B",
+    "image_path": "images/card_40.webp"
   },
   {
     "german": "aussteigen",
@@ -770,8 +782,10 @@
     "antonym": "einsteigen",
     "example_de": "Wo muss ich aussteigen?",
     "example_en": "Where do I have to get off?",
-    "image": "images/card_41.svg",
-    "id": 41
+    "image": "images/card_41.webp",
+    "id": 41,
+    "image_tier": "B",
+    "image_path": "images/card_41.webp"
   },
   {
     "german": "der Ausweis",
