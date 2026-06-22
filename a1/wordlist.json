@@ -449,7 +449,7 @@
     "adjective_forms": null,
     "english": "to stop / to end",
     "pronunciation": "owf-hur-en",
-    "theme": "Reise, Verkehr & Mobilität",
+    "theme": "Allgemeine Aktivitäten & Verben",
     "antonym": "anfangen",
     "example_de": "Der Kurs hört in einer Woche auf.",
     "example_en": "The course ends in a week.",
@@ -1142,7 +1142,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er bedeutet",
+      "present_3sg": "es bedeutet",
       "perfekt": "hat bedeutet",
       "is_irregular": false
     },
