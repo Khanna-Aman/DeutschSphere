@@ -435,7 +435,7 @@ export function renderCard() {
     if (elements.cardImage) {
       elements.cardImage.classList.add('hidden');
       elements.cardImage.classList.add('opacity-0');
-      elements.cardImage.src = card.image;
+      elements.cardImage.src = state.currentLevel + '/' + card.image;
       elements.cardImage.onload = () => {
         elements.cardImage.classList.remove('hidden');
         elements.cardImage.classList.remove('opacity-0');

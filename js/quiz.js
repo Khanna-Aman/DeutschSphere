@@ -145,7 +145,7 @@ export function loadQuizQuestion() {
   // Handle card illustration
   if (elements.quizCardImageContainer && elements.quizCardImage) {
     if (state.showImages && qCard.image) {
-      elements.quizCardImage.src = qCard.image;
+      elements.quizCardImage.src = state.currentLevel + '/' + qCard.image;
       elements.quizCardImageContainer.classList.remove('hidden');
     } else {
       elements.quizCardImageContainer.classList.add('hidden');
