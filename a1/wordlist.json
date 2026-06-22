@@ -148,8 +148,10 @@
     "antonym": "fragen",
     "example_de": "Er antwortet nicht.",
     "example_en": "He is not answering.",
-    "image": "images/card_8.svg",
-    "id": 8
+    "image": "images/card_8.webp",
+    "id": 8,
+    "image_tier": "B",
+    "image_path": "images/card_8.webp"
   },
   {
     "german": "die Anzeige",
@@ -164,8 +166,10 @@
     "antonym": null,
     "example_de": "Ich habe Ihre Anzeige in der Zeitung gelesen.",
     "example_en": "I read your advertisement in the newspaper.",
-    "image": "images/card_9.svg",
-    "id": 9
+    "image": "images/card_9.webp",
+    "id": 9,
+    "image_tier": "B",
+    "image_path": "images/card_9.webp"
   },
   {
     "german": "das Apartment",
@@ -180,8 +184,10 @@
     "antonym": null,
     "example_de": "Wir haben ein Apartment gemietet.",
     "example_en": "We have rented an apartment.",
-    "image": "images/card_10.svg",
-    "id": 10
+    "image": "images/card_10.webp",
+    "id": 10,
+    "image_tier": "B",
+    "image_path": "images/card_10.webp"
   },
   {
     "german": "der Apfel",
@@ -196,8 +202,10 @@
     "antonym": null,
     "example_de": "Ein Pfund Äpfel bitte.",
     "example_en": "One pound of apples, please.",
-    "image": "images/card_11.svg",
-    "id": 11
+    "image": "images/card_11.webp",
+    "id": 11,
+    "image_tier": "B",
+    "image_path": "images/card_11.webp"
   },
   {
     "german": "der Appetit",
