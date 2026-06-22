@@ -5472,8 +5472,10 @@
     "antonym": "der Beruf",
     "example_de": "Meine Hobbys sind Wandern und Schwimmen.",
     "example_en": "My hobbies are hiking and swimming.",
-    "image": "images/card_286.svg",
-    "id": 286
+    "image": "images/card_286.webp",
+    "id": 286,
+    "image_tier": "B",
+    "image_path": "images/card_286.webp"
   },
   {
     "german": "hoch",
@@ -5491,8 +5493,10 @@
     "antonym": "niedrig",
     "example_de": "Der Mount Everest ist 8.880 Meter hoch.",
     "example_en": "Mount Everest is 8,880 meters high.",
-    "image": "images/card_287.svg",
-    "id": 287
+    "image": "images/card_287.webp",
+    "id": 287,
+    "image_tier": "B",
+    "image_path": "images/card_287.webp"
   },
   {
     "german": "die Hochzeit",
@@ -5507,8 +5511,10 @@
     "antonym": "die Scheidung",
     "example_de": "Zur dieser Hochzeit kommen mehr als fünfzig Gäste.",
     "example_en": "More than fifty guests are coming to this wedding.",
-    "image": "images/card_288.svg",
-    "id": 288
+    "image": "images/card_288.webp",
+    "id": 288,
+    "image_tier": "B",
+    "image_path": "images/card_288.webp"
   },
   {
     "german": "holen",
@@ -5527,8 +5533,10 @@
     "antonym": "bringen",
     "example_de": "Ich hole zwei Flaschen Wasser aus der Küche.",
     "example_en": "I am fetching two bottles of water from the kitchen.",
-    "image": "images/card_289.svg",
-    "id": 289
+    "image": "images/card_289.webp",
+    "id": 289,
+    "image_tier": "B",
+    "image_path": "images/card_289.webp"
   },
   {
     "german": "das Hotel",
@@ -5543,8 +5551,10 @@
     "antonym": null,
     "example_de": "Im Urlaub sind wir in einem Hotel am Meer.",
     "example_en": "On vacation we are in a hotel by the sea.",
-    "image": "images/card_290.svg",
-    "id": 290
+    "image": "images/card_290.webp",
+    "id": 290,
+    "image_tier": "B",
+    "image_path": "images/card_290.webp"
   },
   {
     "german": "der Hund",

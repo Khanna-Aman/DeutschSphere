@@ -147,6 +147,7 @@ METAPHOR_MAP = {
     "birne": "A beautiful, highly detailed 3D green pear with a glossy surface and a tiny brown stem with a single emerald-green leaf, floating suspended in mid-air, front-and-center",
     "bis": "A winding 3D road segment ending abruptly at a glowing, transparent red barrier wall, representing a boundary or endpoint, floating in mid-air, front-and-center",
     "bisschen": "A cute 3D measuring spoon holding a single, glowing golden grain or tiny drop of nectar, representing a tiny amount, floating in mid-air, front-and-center",
+    "bitte": "A pair of cute, stylized 3D glossy hands held together in a warm, polite praying or pleading gesture, surrounded by soft self-illuminating sparkles, floating in mid-air, front-and-center",
     "bitten": "A pair of cute, stylized 3D glossy hands held together in a warm, polite praying or pleading gesture, surrounded by soft self-illuminating sparkles, floating in mid-air, front-and-center",
     "die bitte": "A cute, glowing 3D paper scroll containing a sparkling golden star and a clean checkmark symbol, floating in mid-air, front-and-center, completely wordless, representing a polite request",
     "bitter": "A giant, shiny dark brown 3D coffee bean floating in a spectacular splash of rich black espresso coffee, completely wordless, representing bitter flavor, floating in mid-air, front-and-center",
@@ -350,7 +351,39 @@ METAPHOR_MAP = {
     "heute": "A magnificent 3D desk calendar showing the current calendar page being highlighted by a glowing gold circle and sparkles, representing today, front-and-center",
     "hier": "A giant, glowing 3D location pin icon pointing directly down onto a single sparkling gold star on a glass grid floor, representing here, front-and-center",
     "hilfe": "A vibrant 3D lifesaver ring buoy painted in high-gloss red and white stripes, floating suspended, representing safety and rescue help, front-and-center",
-    "hinten": "A cute 3D character smilingly peeking out from directly behind a giant, high-gloss 3D wooden storage box, representing behind or in the back, front-and-center"
+    "hinten": "A cute 3D character smilingly peeking out from directly behind a giant, high-gloss 3D wooden storage box, representing behind or in the back, front-and-center",
+
+    # Handcrafted premium SOTA metaphors for Cards 286 to 315 (hobby through kein)
+    "hobby": "A stylized, premium 3D composition of miniature leisure items: a high-gloss colorful soccer ball, a shiny artist paintbrush with rainbow paint, and a glossy acoustic guitar, floating beautifully together in mid-air, front-and-center",
+    "hoch": "A spectacular, ultra-glossy 3D tower of stacked colorful building blocks reaching high into the air, with a cute little bird perched happily on the very top block under a tiny fluffy cloud, front-and-center",
+    "hochzeit": "Two beautiful, interlocking 3D wedding rings made of highly polished gold, floating in mid-air surrounded by gentle pink rose petals and glowing warm fairy lights, front-and-center",
+    "holen": "A cute 3D puppy dog running happily towards the viewer, holding a bright-red high-gloss toy ball gently in its mouth, representing fetching, front-and-center",
+    "hotel": "A majestic 3D miniature luxury hotel building with a curved glossy glass facade, a tiny glowing revolving entrance door, and a sleek modern 'H' flag fluttering on the roof, front-and-center",
+    "hund": "A beautiful, highly detailed 3D golden retriever puppy sitting happily, looking up with big cute glossy eyes, capturing 100% dog essence, front-and-center",
+    "hunger": "A cute 3D character looking with wide eyes at a delicious, steaming plate of spaghetti with a giant glossy meatball on top, surrounded by floating pink hearts of anticipation, front-and-center",
+    "hähnchen": "A perfectly golden-brown, crispy 3D roasted chicken served on an elegant glossy white ceramic platter, with tiny steam curls rising from it, front-and-center",
+    "hören": "A sleek, modern set of high-gloss white and pink wireless headphones, floating in mid-air with vibrant, colorful 3D music notes dancing around them, front-and-center",
+    "ich": "A single cute, friendly 3D character smiling warmly and pointing its thumb towards its own chest with a happy expression, front-and-center",
+    "immer": "A beautiful 3D infinity loop symbol made of smooth, glowing pink and blue glass, with tiny golden stars gliding perpetually along its track, front-and-center",
+    "in": "A bright-red high-gloss toy sphere resting snugly nestled inside a transparent glass jar, clearly showcasing the concept of being inside, front-and-center",
+    "information": "An ultra-glossy blue 3D information desk booth with a large, glowing warm-yellow lower-case 'i' symbol floating elegantly above it, front-and-center",
+    "international": "A spectacular glowing 3D holographic globe of planet Earth, surrounded by miniature colorful paper airplanes flying in glowing circular orbits, representing global connections, front-and-center",
+    "internet": "A sleek, glowing 3D ethernet globe made of translucent blue glass with glowing neon data lines connecting nodes across its surface, front-and-center",
+    "ja": "A vibrant, ultra-glossy green 3D speech bubble containing a giant, glowing golden checkmark inside, floating in mid-air, front-and-center",
+    "jacke": "A stylish, puffy 3D winter jacket in vibrant glossy pink and teal, floating in mid-air as if worn by an invisible figure, front-and-center",
+    "jed-": "A row of five identical, neat 3D red apples on a glass shelf, with each apple having its own glowing golden star sticker on top, representing every one, front-and-center",
+    "jetzt": "A beautiful 3D stopwatch with a bright-red ticking hand pointing exactly to the top, with a glowing neon ring highlighting the present moment, front-and-center",
+    "job": "A professional, stylized arrangement of 3D executive items: a sleek leather briefcase, a polished silver fountain pen, and a glowing digital tablet showing progress charts, front-and-center",
+    "jugendliche": "A cool, stylized 3D teenager character with a backward baseball cap and high-gloss sneakers, happily holding a skateboard under one arm, front-and-center",
+    "jung": "A vibrant, tiny green seedling plant happily sprouting out from a cracked brown seed in rich soil, with a single sparkling dewdrop on its leaf, front-and-center",
+    "junge": "A cute, smiling 3D boy character with wavy brown hair, wearing a glossy blue hoodie, waving happily towards the viewer, front-and-center",
+    "kaffee": "A classic white 3D ceramic coffee mug overflowing with rich dark-brown coffee, casting a beautiful splash of liquid with a few floating glossy coffee beans, front-and-center",
+    "kaputt": "A gorgeous, high-gloss pink 3D ceramic heart cleanly cracked into two neat halves, with a tiny golden band-aid trying to hold them together, front-and-center",
+    "karte": "A neat fan of three highly detailed 3D playing cards, displaying a red heart, a blue spade, and a gold star symbol, completely wordless, front-and-center",
+    "kartoffel": "A pair of cute, rustic-brown 3D potatoes with realistic bumpy textures, resting on a bed of fresh green leaves, floating in mid-air, front-and-center",
+    "kasse": "A vintage-style 3D cash register made of glossy teal and chrome, with its drawer popped open to show sparkling golden coins inside, front-and-center",
+    "kaufen": "A cute, glossy 3D shopping bag in pastel pink, with a pair of hands happily handing a shiny gold credit card to the bag, front-and-center",
+    "kein": "A bright-red 3D circle with a diagonal slash (prohibition symbol) floating in front of an empty, clean glass pedestal, representing none or nothing, front-and-center"
 }
 
 def remove_black_background(img, threshold=50, feather=True):
