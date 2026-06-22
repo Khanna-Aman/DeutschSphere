@@ -89,7 +89,7 @@ def run_nlm_query(question):
         except Exception as e:
             print(f"  [Error] Query failed: {type(e).__name__}: {e}")
         
-        wait_time = 10 * (attempt + 1)  # Progressive backoff: 10s, 20s, 30s
+        wait_time = 45 * (attempt + 1)  # Progressive backoff: 45s, 90s, 135s (longer wait for quota to clear)
         print(f"  [Retry] Waiting {wait_time}s before next attempt...")
         time.sleep(wait_time)
     
@@ -158,6 +158,29 @@ def apply_corrections(original_item, corrections):
     updated_item = original_item.copy()
     fields_updated = []
     
+    # Official DeutschSphere category list for defensive validation
+    VALID_CATEGORIES = [
+        'Person, Familie & Beziehungen',
+        'Gefühle, Charakter & Meinung',
+        'Wohnen, Haus & Haushalt',
+        'Gesundheit, Körper & Pflege',
+        'Natur, Umwelt & Tiere',
+        'Reise, Verkehr & Mobilität',
+        'Essen, Kochen & Restaurant',
+        'Einkaufen, Geld & Konsum',
+        'Ausbildung, Schule & Studium',
+        'Arbeit, Beruf & Karriere',
+        'Freizeit, Hobbys & Unterhaltung',
+        'Kommunikation, Medien & Sprache',
+        'Staat, Gesellschaft & Dokumente',
+        'Grammatik, Pronomen & Struktur',
+        'Zahlen, Maße & Mengen',
+        'Uhrzeit, Datum & Kalender',
+        'Allgemeine Aktivitäten & Verben',
+        'Eigenschaften & Adjektive',
+        'Basiswortschatz & Floskeln'
+    ]
+    
     # Simple top-level fields
     for field in ["gender", "plural", "english", "theme", "example_de", "example_en", "word_class"]:
         if field in corrections:
@@ -174,6 +197,12 @@ def apply_corrections(original_item, corrections):
                 print(f"    [SKIP] Rejecting '{field}' null correction: '{old_val}' -> None")
                 continue
                 
+            # Defensive check for theme categories
+            if field == "theme":
+                if new_val not in VALID_CATEGORIES:
+                    print(f"    [SKIP] Rejecting invalid theme category '{new_val}' for word '{original_item.get('german')}'. Must match DeutschSphere taxonomy.")
+                    continue
+                
             if new_val != old_val:
                 updated_item[field] = new_val
                 fields_updated.append(f"{field}: '{old_val}' -> '{new_val}'")
@@ -186,9 +215,29 @@ def apply_corrections(original_item, corrections):
             new_conj = orig_conj.copy()
             for f in ["present_3sg", "perfekt", "is_irregular"]:
                 if f in corr_conj:
-                    if corr_conj[f] != orig_conj.get(f):
-                        new_conj[f] = corr_conj[f]
-                        fields_updated.append(f"verb_conjugation.{f}: '{orig_conj.get(f)}' -> '{corr_conj[f]}'")
+                    new_val = corr_conj[f]
+                    old_val = orig_conj.get(f)
+                    
+                    # Guard: prevent removing "sich" from reflexive verbs
+                    if f in ("present_3sg", "perfekt") and isinstance(new_val, str) and isinstance(old_val, str):
+                        has_sich_headword = "sich" in original_item.get("german", "").lower()
+                        has_sich_old = re.search(r"\bsich\b", old_val.lower()) is not None
+                        has_sich_new = re.search(r"\bsich\b", new_val.lower()) is not None
+                        
+                        if (has_sich_headword or has_sich_old) and not has_sich_new:
+                            print(f"    [SKIP] Rejecting reflexive-stripping correction on '{original_item.get('german')}': verb_conjugation.{f} '{old_val}' -> '{new_val}'")
+                            continue
+                            
+                    # Guard: prevent setting Präteritum (e.g. "sollte", "musste") as Perfekt
+                    if f == "perfekt" and isinstance(new_val, str) and isinstance(old_val, str):
+                        has_auxiliary = any(aux in new_val.lower() for aux in ["hat", "ist", "haben", "sein", "sind", "war", "ward", "worden"])
+                        if not has_auxiliary and new_val.lower().endswith(("te", "ten")):
+                            print(f"    [SKIP] Rejecting Präteritum proposed for Perfekt on '{original_item.get('german')}': verb_conjugation.perfekt '{old_val}' -> '{new_val}'")
+                            continue
+                            
+                    if new_val != old_val:
+                        new_conj[f] = new_val
+                        fields_updated.append(f"verb_conjugation.{f}: '{old_val}' -> '{new_val}'")
             updated_item["verb_conjugation"] = new_conj
         
     # Nested adjective forms
@@ -260,8 +309,8 @@ def run_level_audit(level, batch_size=15, start_index=0, concurrency=1):
                     success = True
                     break
                 except Exception as e:
-                    print(f"    [Warning] Audit batch call failed: {e}. Retrying in 15 seconds...")
-                    time.sleep(15)
+                    print(f"    [Warning] Audit batch call failed: {e}. Retrying in 60 seconds...")
+                    time.sleep(60)
                     
             if not success:
                 print(f"[FATAL] Failed to audit batch {batch_num + 1} after retries. Interrupted.")
@@ -299,8 +348,8 @@ def run_level_audit(level, batch_size=15, start_index=0, concurrency=1):
                 print(f"    [Error] Failed to save database incremental progress: {save_err}")
                 log_f.write(f"ERROR saving batch {batch_num + 1} index progress: {save_err}\n")
                 
-            # Quick sleep to prevent hitting aggressive rate limits
-            time.sleep(3)
+            # Sleep to prevent hitting aggressive rate limits (longer for sequential)
+            time.sleep(15)
             
     else:
         # Multi-threaded concurrent execution loop
