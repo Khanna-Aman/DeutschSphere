@@ -32,7 +32,7 @@ except AttributeError:
     pass
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-NOTEBOOK_ID = "28bb41fe-e4cd-481e-b52a-5e637e132c26"  # Active 'Goethe-Zertifikat Wortliste' notebook ID
+NOTEBOOK_ID = "9ba76d80-5325-4f92-a29f-2a5c4f5dae5d"  # Active 'Goethe-Zertifikat A1-B1 Vocabulary List' notebook ID
 SCRIPTS_DIR = os.path.join(PROJECT_ROOT, "scripts")
 
 def get_wordlist_path(level):
