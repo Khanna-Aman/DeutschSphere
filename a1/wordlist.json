@@ -800,8 +800,10 @@
     "antonym": null,
     "example_de": "Hier ist mein Ausweis.",
     "example_en": "Here is my ID card.",
-    "image": "images/card_42.svg",
-    "id": 42
+    "image": "images/card_42.webp",
+    "id": 42,
+    "image_tier": "B",
+    "image_path": "images/card_42.webp"
   },
   {
     "german": "das Auto",
@@ -816,8 +818,10 @@
     "antonym": null,
     "example_de": "Er kommt mit dem Auto.",
     "example_en": "He is coming by car.",
-    "image": "images/card_43.svg",
-    "id": 43
+    "image": "images/card_43.webp",
+    "id": 43,
+    "image_tier": "B",
+    "image_path": "images/card_43.webp"
   },
   {
     "german": "die Autobahn",
@@ -832,8 +836,10 @@
     "antonym": "die Landstraße",
     "example_de": "Wo geht‘s hier bitte zur Autobahn?",
     "example_en": "Which way to the highway, please?",
-    "image": "images/card_44.svg",
-    "id": 44
+    "image": "images/card_44.webp",
+    "id": 44,
+    "image_tier": "B",
+    "image_path": "images/card_44.webp"
   },
   {
     "german": "der Automat",
