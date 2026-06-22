@@ -70,7 +70,11 @@ METAPHOR_MAP = {
     "ausfüllen": "a cute 3D clay character smilingly holding a giant pencil, filling in a checklist form, cartoon style",
     "ausgang": "a bright green 3D clay exit sign with a running figure, glowing softly, cartoon style",
     "auskunft": "a stylized 3D clay desk booth with a large glowing golden letter 'i' above it, cartoon style",
-    "ausland": "a beautiful 3D clay globe showing colorful flags and tiny cute airplanes flying around it, cartoon style"
+    "ausland": "a beautiful 3D clay globe showing colorful flags and tiny cute airplanes flying around it, cartoon style",
+    "ausländer": "a cute 3D clay character smiling and holding a passport with a tiny globe and suitcase next to them, cartoon style",
+    "ausländisch": "a bundle of colorful 3D clay paper bank notes of different world currencies, cartoon style",
+    "ausmachen": "a cute 3D clay hand actively flipping a large toggle light switch downward, cartoon style",
+    "aussage": "a cute 3D clay speech bubble containing a bold white checkmark and a red cross symbol side-by-side, cartoon style"
 }
 
 def remove_black_background(img, threshold=25, feather=True):
