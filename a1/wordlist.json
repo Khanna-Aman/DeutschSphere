@@ -52,8 +52,10 @@
     "antonym": "aus",
     "example_de": "Wir treffen uns am Bahnhof.",
     "example_en": "We are meeting at the train station.",
-    "image": "images/card_3.svg",
-    "id": 3
+    "image": "images/card_3.webp",
+    "id": 3,
+    "image_tier": "B",
+    "image_path": "images/card_3.webp"
   },
   {
     "german": "an sein",
@@ -451,8 +453,10 @@
     "antonym": "anfangen",
     "example_de": "Der Kurs hört in einer Woche auf.",
     "example_en": "The course ends in a week.",
-    "image": "images/card_24.svg",
-    "id": 24
+    "image": "images/card_24.webp",
+    "id": 24,
+    "image_tier": "B",
+    "image_path": "images/card_24.webp"
   },
   {
     "german": "aufstehen",
@@ -471,8 +475,10 @@
     "antonym": "sich hinsetzen",
     "example_de": "Ich muss immer um vier Uhr aufstehen.",
     "example_en": "I always have to get up at four o'clock.",
-    "image": "images/card_25.svg",
-    "id": 25
+    "image": "images/card_25.webp",
+    "id": 25,
+    "image_tier": "B",
+    "image_path": "images/card_25.webp"
   },
   {
     "german": "der Aufzug",
