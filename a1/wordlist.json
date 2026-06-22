@@ -371,8 +371,10 @@
     "antonym": "unter",
     "example_de": "Die Kinder spielen auf der Straße.",
     "example_en": "The children are playing on the street.",
-    "image": "images/card_20.svg",
-    "id": 20
+    "image": "images/card_20.webp",
+    "id": 20,
+    "image_tier": "B",
+    "image_path": "images/card_20.webp"
   },
   {
     "german": "auf sein",
@@ -387,8 +389,10 @@
     "antonym": "zu sein",
     "example_de": "Du brauchst den Schlüssel nicht. Die Wohnung ist auf.",
     "example_en": "You don't need the key. The apartment is open.",
-    "image": "images/card_21.svg",
-    "id": 21
+    "image": "images/card_21.webp",
+    "id": 21,
+    "image_tier": "B",
+    "image_path": "images/card_21.webp"
   },
   {
     "german": "auf sein",
@@ -407,8 +411,10 @@
     "antonym": "zu sein",
     "example_de": "Das Fenster ist noch auf.",
     "example_en": "The window is still open.",
-    "image": "images/card_22.svg",
-    "id": 22
+    "image": "images/card_22.webp",
+    "id": 22,
+    "image_tier": "B",
+    "image_path": "images/card_22.webp"
   },
   {
     "german": "die Aufgabe",
