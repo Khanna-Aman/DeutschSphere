@@ -169,7 +169,7 @@ METAPHOR_MAP = {
     "buchstabieren": "Three beautiful 3D blocks with letters A, B, C made of polished wood and glossy plastic, neatly lined up side-by-side in mid-air, representing spelling, front-and-center",
     "bus": "A stunning, highly-detailed bright yellow 3D bus with glossy glass windows and chrome wheels, floating slightly tilted, capturing 100% bus essence, front-and-center",
     "butter": "A block of rich, creamy golden 3D butter resting beautifully on a polished glass plate, with a small slice melting on top, floating in mid-air, front-and-center, 100% butter essence",
-    "bäckerei": "A highly stylized 3D bakery storefront with striped awning, warm glowing display windows showing miniature pastries and breads, floating suspended, front-and-center",
+    "bäckerei": "A highly stylized 3D bakery storefront with a striped awning and a completely wordless blank sign, warm glowing display windows showing miniature pastries and breads, absolutely no text, letters, or words on the sign, floating suspended, front-and-center",
     "böse": "A vibrant, cute red 3D emoji character with angry expressions, subtle smoke puffs coming out of its ears, floating in mid-air, front-and-center",
     "café": "A warm, stylized 3D ceramic coffee cup emitting elegant glossy steam curls, sitting on a glowing saucer in a mini cozy café corner setup, floating suspended, front-and-center",
     "cd": "An ultra-glossy 3D compact disc (CD) showing iridescent rainbow reflections, floating in mid-air next to a sleek jewel case, front-and-center, 100% CD essence",
