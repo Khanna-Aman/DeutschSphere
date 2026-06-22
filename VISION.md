@@ -21,6 +21,7 @@ DeutschSphere is a **fully functional, feature-rich German language learning SPA
 - [x] **Deactivated Illustrations for V1.0.0 (Coming in V1.0.1)**: Deactivated ~3,900 flat SVG assets from loading to guarantee a pristine 404-free E2E footprint. Premium glossy 3D AI illustrations will launch in V1.0.1.
 - [x] Per-level adventure scenario data (2-3 branching dialogue trees per level)
 - [x] **100% NotebookLM-Verified Database**: Verified entire 3,921-word database utilizing the official *Goethe-Zertifikat Wortliste* workspace (A1: 490 audited/0 corrections; A2: 1,142 audited/273 corrections; B1: 549 audited/154 corrections).
+- [ ] **Secondary High-Fidelity Iterative Auditing [TEMPORARILY PAUSED]**: Launched a secondary recursive loop to guarantee absolute zero-correction convergence on Level A2 and B1. Hardened with unbuffered logging (`python -u`) and strict validation filters (Reflexive Pronoun Guard, Präteritum-for-Perfekt Guard, and Theme Taxonomy Guard). Execution is currently paused due to account-level rate limits (`RESOURCE_EXHAUSTED` error code 8) and is scheduled to resume in 24 hours. Once the quota resets, we will run separate iterations for A2 and B1 sequentially, with internal concurrency (`--concurrency 4`) to attack the verification swiftly.
 
 ### Phase 2: Flashcard Engine (`#/`)
 - [x] Gender-themed card glows (🔵 der / 🔴 die / 🟢 das / 🟣 other)
@@ -140,6 +141,7 @@ These are honest assessments of areas that need attention:
 | ~~**No Service Worker**~~ | ~~Despite being "offline-first", there's no service worker~~ | ~~Medium~~ **✅ Fixed 2026-06-14** |
 | ~~**Weaver Sentences**~~ | ~~Extracted from wordlist example sentences at runtime — quality varies~~ | ~~Low~~ **✅ Fixed 2026-06-14** (C5: property name mismatch was preventing data lookup) |
 | ~~**Leitner SRS Algorithm**~~ | ~~Basic 5-box system with fixed intervals~~ | ~~Low~~ **✅ Upgraded to FSRS-5 v5.0** |
+| **NotebookLM 24h Rate Limit** | Account-level `RESOURCE_EXHAUSTED` query limit on Google Labs backend; sequential audits are temporarily paused | High |
 | **Theme Verification Ongoing** | NotebookLM batch audit may normalize some theme category names | Low |
 
 ---

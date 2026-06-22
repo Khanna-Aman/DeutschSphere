@@ -154,4 +154,13 @@ This section acts as our live implementation and audit ledger for the premium V6
   - **A1**: 490 words audited, 0 corrections.
   - **A2**: 1,142 words audited, 273 factual updates applied (e.g., correcting `'die Bank'` plural to `'die Banken'` and theme to `'Einkaufen, Geld & Konsum'`, and gender of `'das Glück'` to `'das'`).
   - **B1**: 549 words audited, 154 factual updates applied (e.g., aligned grammatical categories and verb/adjective forms).
+- **[/] High-Fidelity Iterative Audit & Verification Passes (Levels A2 & B1) [TEMPORARILY PAUSED]**: Engineered an automated, recursive, anti-caching iterative audit suite (`scripts/iterative_audit.py`).
+  - *Unbuffered Execution:* Modified the subprocess spawning pipeline to call the python interpreter with the `-u` unbuffered flag, ensuring terminal outputs and log entries are flushed immediately to disk for real-time diagnostic checks.
+  - *Reflexive Pronoun Guard:* Programmed validation rules inside `scripts/verify_via_notebooklm.py` to prevent stripping reflexive pronouns (`sich`) from reflexive verbs (e.g., `sich beeilen` must retain `sich` in all conjugation properties).
+  - *Präteritum-for-Perfekt Guard:* Integrated a regex lookahead to catch and block any LLM-proposed `perfekt` tense that incorrectly uses simple past-tense Präteritum (such as single verbs ending in `-te`/`-ten` like `sollte` or `musste` lacking auxiliary `hat`/`ist`).
+  - *Taxonomy Alignment Guard:* Strictly filters any category suggestions against the canonical 19-category DeutschSphere taxonomy.
+  - *Status:* The audit loop is temporarily paused due to hitting an account-level 24-hour rate limit (`RESOURCE_EXHAUSTED` error code 8) on Google Labs' backend during parallel batch executions.
+  - *Resume Strategy:* Once the daily quota resets (24 hours from `2026-06-23 00:30:00 +05:30`), we will concurrently attack A2 and B1 separately using:
+    1. `python -u scripts/iterative_audit.py --level a2 --batch-size 30 --concurrency 4` (run to perfect 0 corrections convergence and git-commit)
+    2. `python -u scripts/iterative_audit.py --level b1 --batch-size 30 --concurrency 4` (run to perfect 0 corrections convergence and git-commit)
 - **[x] Dynamic Illustration Deactivation (Zero-404 Deployment Mode)**: Temporarily disabled image illustration loading for V1.0.0. Added interactive glassmorphic toast notification triggers in the Settings panel informing learners of premium curated AI illustrations coming in V1.0.1. Saved ~3,900 flat SVG assets from unnecessary network request overhead.
