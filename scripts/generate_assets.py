@@ -48,6 +48,32 @@ METAPHOR_MAP = {
     "aus": "a cute, smiling 3D bird happily popping out of a beautiful rustic wooden cuckoo clock",
     "aus sein": "a cute 3D wall light switch in a pink frame, with the toggle flipped down to the off position, cartoon style",
 
+    # Handcrafted A1 early cards (1 to 30)
+    "abfliegen": "A magnificent, glossy 3D passenger airplane made of pristine white enamel, dramatically angled upwards as it climbs into the air, with glowing golden jet streams trailing behind its chrome engines, front-and-center",
+    "abflug": "A stylized, premium 3D terminal departure gate sign in glossy blue enamel, with a glowing translucent glass board showing a glowing yellow airplane departure symbol, front-and-center",
+    "an sein": "A sleek, glowing 3D light bulb with a glowing warm-yellow filament inside, shining brightly with subtle floating star sparkles, floating in mid-air, front-and-center",
+    "ansage": "A classic retro 3D microphone made of polished chrome and gold, suspended in front of a giant glossy red radio speaker, emitting golden soundwaves, front-and-center",
+    "anschluss": "Two stylized, high-gloss 3D puzzle pieces of contrasting colors, blue and pink, connecting perfectly together in mid-air, representing a seamless connection, front-and-center",
+    "antwort": "A vibrant, ultra-glossy pink 3D speech bubble with a giant glowing golden checkmark inside, floating in mid-air, front-and-center",
+    "antworten": "A cute 3D character happily writing a reply on a glowing translucent glass screen, with a tiny paper airplane letter flying off, front-and-center",
+    "anzeige": "A stylish 3D billboard with a glossy colorful display showing a glowing red tag with a percentage symbol (%) and sparkling gold coins, representing a premium advertisement, front-and-center",
+    "apartment": "A beautiful, miniature 3D modern high-rise apartment block with glowing warm windows and luxury green balcony gardens, floating in mid-air, front-and-center",
+    "apfel": "A perfectly polished, vibrant red 3D apple with a tiny brown stem and a glossy green leaf, capturing 100% apple essence, front-and-center",
+    "appetit": "A spectacular 3D silver cloche dome plate slightly opening to reveal delicious, mouth-watering gourmet dishes with cute steam swirls and floating pink hearts, representing a healthy appetite, front-and-center",
+    "arbeit": "A professional, stylized arrangement of premium 3D glossy tools: a gleaming silver wrench, a blueprint roll, and a shiny gold compass, floating together, front-and-center",
+    "arbeiten": "A cute 3D character sitting at a sleek modern desk, typing happily on a glowing translucent computer keyboard, with tiny sparkles of productivity, front-and-center",
+    "arbeitslos": "A cute 3D character sitting thoughtfully on a comfy park bench next to a closed briefcase with a tiny growing green seedling, representing a fresh start and transition, front-and-center",
+    "arbeitsplatz": "A modern, ultra-premium 3D desk setup with a sleek curved monitor displaying code, a designer lamp, and a small green succulent plant, floating in mid-air, front-and-center",
+    "arm": "A stylized, athletic 3D arm mannequin with a glowing neon pink sweatband on the wrist, flexed in a strong, energetic pose, front-and-center",
+    "arzt": "A stylized, premium 3D medical doctor's kit featuring a glowing red medical cross, a sleek stethoscope, and a shiny silver prescription clipboard, front-and-center",
+    "auch": "A pair of beautiful, identical 3D golden star badges floating side-by-side in mid-air, representing addition and inclusion, front-and-center",
+    "auf sein": "A majestic, minimalist 3D modern arched glass doorway with its double doors swung wide open, revealing a warm, welcoming glowing golden light inside, surrounded by floating star sparkles, with no buildings or signboards, front-and-center",
+    "aufgabe": "A giant, beautifully illustrated 3D checklist scroll with a gleaming gold star sticker next to a completed checkmark, representing a task accomplished, front-and-center",
+    "aufhören": "A classic, bold red 3D stop sign with a polished chrome border, floating in a dark studio void, representing stopping or ending, completely wordless, front-and-center",
+    "aufstehen": "A cute, stylized 3D character waking up and stretching happily as they rise from a cozy wooden bed, surrounded by a smiling glowing yellow sun, front-and-center",
+    "aufzug": "A high-tech, futuristic 3D elevator cabin made of translucent glowing glass and chrome, with green arrows pointing upward, floating suspended, front-and-center",
+    "auge": "A stunning, stylized 3D model of a beautiful blue eye with realistic glossy reflections and long thick eyelashes, capturing 100% eye essence, front-and-center",
+
     # Conjunctions
     "weil": "two beautiful interlocking toy puzzle pieces or mechanical gears representing cause-and-effect",
     "und": "two friendly characters happily holding hands",
@@ -69,8 +95,8 @@ METAPHOR_MAP = {
     
     # Hand-curated SOTA 3D inherently floating icons for Cards 31-55
     "ausflug": "a tiny cute 3D backpacker character happily hiking along a miniature mountain path, carrying a tiny blue backpack, cartoon style",
-    "ausfüllen": "a cute 3D character smilingly holding a giant pencil, filling in a checklist form, cartoon style",
-    "ausgang": "a bright green 3D exit sign with a running figure, glowing softly, cartoon style",
+    "ausfüllen": "a cute 3D character smilingly holding a giant pencil, drawing a checkmark on a completely blank list with simple empty square outlines and absolutely zero text, cartoon style",
+    "ausgang": "a minimalist bright-green rectangular board featuring only a simple white 3D silhouette of a running figure escaping through an open doorway next to a glowing green right-pointing arrow, completely wordless with absolutely no letters, characters, or words, front-and-center",
     "auskunft": "a stylized 3D desk booth with a large glowing golden letter 'i' above it, cartoon style",
     "ausland": "A spectacular glowing 3D holographic globe of planet Earth, floating in mid-air, surrounded by miniature colorful airplanes flying in glowing circular orbits, premium high-gloss SOTA 3D icon",
     "ausländer": "A cute, ultra-premium 3D explorer character floating happily in mid-air, wearing a beautiful high-gloss travel backpack and holding a glowing golden compass, surrounded by mini floating colorful passport stamps and clouds, front-facing, front-and-center",
@@ -490,25 +516,25 @@ def generate_metaphor_prompt(word_de, word_en, word_class):
         else:
             metaphor = f"a beautiful, stylized 3D digital art symbol representing the concept of {word_en}"
 
-    # SOTA-ify any legacy references to clay in the metaphor dynamically
-    metaphor = re.sub(r'\b(claymation|clay character|clay model|clay doll|clay)\b', 'SOTA glossy 3D character', metaphor, flags=re.I)
-    metaphor = re.sub(r'\b(clay kitten)\b', 'SOTA glossy 3D kitten', metaphor, flags=re.I)
-    metaphor = re.sub(r'\b(clay cottage)\b', 'SOTA glossy 3D cottage', metaphor, flags=re.I)
-    metaphor = re.sub(r'\b(clay envelope)\b', 'SOTA glossy 3D envelope', metaphor, flags=re.I)
-    metaphor = re.sub(r'\b(clay globe)\b', 'SOTA glossy 3D globe', metaphor, flags=re.I)
-    metaphor = re.sub(r'\b(clay desk booth)\b', 'SOTA glossy 3D desk booth', metaphor, flags=re.I)
+    # State-of-the-art-ify any legacy references to clay in the metaphor dynamically
+    metaphor = re.sub(r'\b(claymation|clay character|clay model|clay doll|clay)\b', 'state-of-the-art glossy 3D character', metaphor, flags=re.I)
+    metaphor = re.sub(r'\b(clay kitten)\b', 'state-of-the-art glossy 3D kitten', metaphor, flags=re.I)
+    metaphor = re.sub(r'\b(clay cottage)\b', 'state-of-the-art glossy 3D cottage', metaphor, flags=re.I)
+    metaphor = re.sub(r'\b(clay envelope)\b', 'state-of-the-art glossy 3D envelope', metaphor, flags=re.I)
+    metaphor = re.sub(r'\b(clay globe)\b', 'state-of-the-art glossy 3D globe', metaphor, flags=re.I)
+    metaphor = re.sub(r'\b(clay desk booth)\b', 'state-of-the-art glossy 3D desk booth', metaphor, flags=re.I)
     metaphor = re.sub(r'\b(clay ball|clay balls)\b', 'glowing 3D sphere', metaphor, flags=re.I)
-    metaphor = re.sub(r'\b(clay mug|clay coffee mug)\b', 'SOTA glossy 3D coffee mug', metaphor, flags=re.I)
+    metaphor = re.sub(r'\b(clay mug|clay coffee mug)\b', 'state-of-the-art glossy 3D coffee mug', metaphor, flags=re.I)
     metaphor = re.sub(r'\b(clay box|clay boxes)\b', 'glowing 3D block', metaphor, flags=re.I)
 
-    # Base prompt wrapping the metaphor in our ultra-premium SOTA style
+    # Base prompt wrapping the metaphor in our ultra-premium state-of-the-art style
     prompt = (
         f"A masterfully rendered, ultra-premium 3D digital art toy illustration of: {metaphor}. "
         f"The subject is huge, front-and-center, occupying 85% of the frame, capturing the pure essence of the concept. "
-        f"Crafted from premium SOTA materials: vibrant glossy enamel, translucent glowing glassmorphism layers, metallic chrome accents, and polished soft-touch matte resin. "
+        f"Crafted from premium state-of-the-art materials: vibrant glossy enamel, translucent glowing glassmorphism layers, metallic chrome accents, and polished soft-touch matte resin. "
         f"Isolated asset floating suspended in a pitch-black studio void. Pure black backdrop, clean edges. "
         f"Completely wordless, zero text, zero letters, zero characters. "
-        f"Premium SOTA 3D game asset style, spectacular cinematic studio lighting with soft self-illuminating ambient glow, octane render, 8k, raytracing."
+        f"Premium state-of-the-art 3D game asset style, spectacular cinematic studio lighting with soft self-illuminating ambient glow, octane render, 8k, raytracing."
     )
     return prompt
 
