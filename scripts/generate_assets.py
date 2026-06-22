@@ -66,6 +66,11 @@ METAPHOR_MAP = {
     "es": "a small glowing abstract clay box representing an object, neon glow",
     "hallo": "a cheerful 3D clay character smiling and waving its hand high in the air",
     "tschüss": "a cute clay character smiling and waving goodbye as it walks away",
+    "ausflug": "a tiny cute 3D clay backpacker character happily hiking along a miniature clay mountain path, carrying a tiny blue backpack, cartoon style",
+    "ausfüllen": "a cute 3D clay character smilingly holding a giant pencil, filling in a checklist form, cartoon style",
+    "ausgang": "a bright green 3D clay exit sign with a running figure, glowing softly, cartoon style",
+    "auskunft": "a stylized 3D clay desk booth with a large glowing golden letter 'i' above it, cartoon style",
+    "ausland": "a beautiful 3D clay globe showing colorful flags and tiny cute airplanes flying around it, cartoon style"
 }
 
 def remove_black_background(img, threshold=25, feather=True):
