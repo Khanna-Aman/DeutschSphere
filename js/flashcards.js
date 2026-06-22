@@ -924,6 +924,12 @@ export function toggleDeckPrefs(e) {
     elements.deckPrefsToggleBtn.setAttribute('aria-expanded', 'true');
     elements.deckPrefsDropdown.classList.remove('opacity-0', 'invisible', 'scale-95', 'pointer-events-none');
     elements.deckPrefsDropdown.classList.add('opacity-100', 'scale-100');
+    
+    // Automatically focus first item inside the settings menu for accessibility
+    const firstEl = elements.deckPrefsDropdown.querySelector('button, input');
+    if (firstEl) {
+      requestAnimationFrame(() => firstEl.focus());
+    }
   }
 }
 

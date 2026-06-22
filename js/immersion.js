@@ -380,11 +380,41 @@ export function openWordExplorer(item) {
   // Reveal overlay & add escape keydowns
   overlay.classList.remove('hidden');
   document.addEventListener('keydown', handleExplorerKeydown);
+  
+  // Automatically focus on close button
+  const closeBtn = document.getElementById('immersion-explorer-close-btn');
+  if (closeBtn) requestAnimationFrame(() => closeBtn.focus());
 }
 
 function handleExplorerKeydown(e) {
   if (e.key === 'Escape') {
+    e.preventDefault();
     closeWordExplorer();
+    return;
+  }
+  if (e.key === 'Tab') {
+    const closeBtn = document.getElementById('immersion-explorer-close-btn');
+    const speakBtn = document.getElementById('explorer-speak-btn');
+    const addBtn = document.getElementById('explorer-add-btn');
+    
+    // Filter visible elements
+    const focusable = [closeBtn, speakBtn, addBtn].filter(el => el && !el.classList.contains('hidden') && el.offsetParent !== null);
+    if (focusable.length === 0) return;
+    
+    const firstEl = focusable[0];
+    const lastEl = focusable[focusable.length - 1];
+    
+    if (e.shiftKey) {
+      if (document.activeElement === firstEl) {
+        e.preventDefault();
+        lastEl.focus();
+      }
+    } else {
+      if (document.activeElement === lastEl) {
+        e.preventDefault();
+        firstEl.focus();
+      }
+    }
   }
 }
 
