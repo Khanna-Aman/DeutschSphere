@@ -2,9 +2,16 @@ import os
 import json
 import re
 import sys
+import time
 import argparse
 from io import BytesIO
 from PIL import Image, ImageDraw, ImageChops, ImageFilter
+
+# Force UTF-8 encoding for stdout/stderr on Windows to support emojis cleanly
+if sys.platform.startswith('win'):
+    import io
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 
 try:
     from google import genai
@@ -77,8 +84,10 @@ def remove_black_background(img, threshold=25, feather=True):
     b_mask = b.point(lambda p: 255 if p < threshold else 0)
     
     # Bitwise AND to find pixels that are dark in R, G, AND B
-    near_black = ImageChops.and_(r_mask, g_mask)
-    near_black = ImageChops.and_(near_black, b_mask)
+    # Since r_mask, g_mask, b_mask are mode 'L' with 0 or 255 values, multiplying them
+    # behaves as a logical AND (255 * 255 / 255 = 255; any 0 results in 0).
+    near_black = ImageChops.multiply(r_mask, g_mask)
+    near_black = ImageChops.multiply(near_black, b_mask)
     
     # 3. Use flood fill from the 4 corners to isolate connected external background
     # This prevents internal blacks (eyes, shadows, dark clothing) from being removed.
@@ -169,6 +178,7 @@ def main():
     parser = argparse.ArgumentParser(description="A1-B1 German SOTA 3D Claymation Image Generator (Imagen 3)")
     parser.add_argument("--level", type=str, default="a1", choices=["a1", "a2", "b1"], help="Target CEFR level")
     parser.add_argument("--limit", type=int, default=10, help="Batch limit (number of images to generate)")
+    parser.add_argument("--delay", type=int, default=12, help="Pacing delay (seconds) between successful generations")
     parser.add_argument("--force", action="store_true", help="Force overwrite existing WebP images")
     args = parser.parse_args()
 
@@ -176,6 +186,7 @@ def main():
     print("💎 SOTA 3D CLAYMATION WEB-IMAGE GENERATOR STARTED 💎")
     print(f"Target Level: {args.level.upper()}")
     print(f"Batch Limit:  {args.limit}")
+    print(f"Pacing Delay: {args.delay}s")
     print(f"Force Overwrite: {args.force}")
     print("=========================================================")
 
@@ -183,31 +194,56 @@ def main():
         print("❌ Error: 'google-genai' library is not available. Please install it first.")
         sys.exit(1)
 
-    # Try to load GEMINI_API_KEY from .env in the project root if not in environment
-    if not os.environ.get("GEMINI_API_KEY"):
-        env_path = os.path.join(PROJECT_ROOT, ".env")
-        if os.path.exists(env_path):
-            try:
-                with open(env_path, "r", encoding="utf-8") as f:
-                    for line in f:
-                        line = line.strip()
-                        if line and not line.startswith("#") and "=" in line:
-                            k, v = line.split("=", 1)
-                            if k.strip() == "GEMINI_API_KEY":
-                                os.environ["GEMINI_API_KEY"] = v.strip().strip('"').strip("'")
-                                break
-            except Exception as e:
-                print(f"⚠️ Warning: Could not read .env file: {e}")
+    # Try to load keys from .env in the project root if not in environment
+    env_path = os.path.join(PROJECT_ROOT, ".env")
+    if os.path.exists(env_path):
+        try:
+            with open(env_path, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith("#") and "=" in line:
+                        k, v = line.split("=", 1)
+                        k = k.strip()
+                        v = v.strip().strip('"').strip("'")
+                        if not os.environ.get(k):
+                            os.environ[k] = v
+        except Exception as e:
+            print(f"⚠️ Warning: Could not read .env file: {e}")
 
-    api_key = os.environ.get("GEMINI_API_KEY")
-    if not api_key:
-        print("❌ Error: GEMINI_API_KEY environment variable is not set.")
-        print("Please set it in your system or create a .env file in the project root with:")
-        print("  GEMINI_API_KEY=your_api_key_here")
-        sys.exit(1)
+    # Check if we should use Google Cloud Vertex AI or Google AI Studio
+    gac = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")
+    if gac and not os.path.isabs(gac):
+        gac_abs = os.path.abspath(os.path.join(PROJECT_ROOT, gac))
+        if os.path.exists(gac_abs):
+            os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = gac_abs
 
-    # Initialize Modern Google GenAI SDK Client
-    client = genai.Client()
+    use_vertex = bool(os.environ.get("GOOGLE_APPLICATION_CREDENTIALS"))
+    
+    if use_vertex:
+        gcp_project = os.environ.get("GCP_PROJECT") or os.environ.get("GOOGLE_CLOUD_PROJECT") or "antigravity-sandbox-500206"
+        gcp_location = os.environ.get("GCP_LOCATION") or "us-central1"
+        print("=========================================================")
+        print(f"📡 Integration Path: Google Cloud Vertex AI Mode")
+        print(f"   Project:  {gcp_project}")
+        print(f"   Location: {gcp_location}")
+        print(f"   Key File: {os.environ.get('GOOGLE_APPLICATION_CREDENTIALS')}")
+        print("=========================================================")
+        client = genai.Client(vertexai=True, project=gcp_project, location=gcp_location)
+    else:
+        api_key = os.environ.get("GEMINI_API_KEY")
+        if not api_key:
+            print("❌ Error: Neither GEMINI_API_KEY nor GOOGLE_APPLICATION_CREDENTIALS is set in environment or .env file.")
+            print("Please create a .env file in the project root with either:")
+            print("  GEMINI_API_KEY=your_gemini_api_key_here")
+            print("Or to use Google Cloud Vertex AI (with your GCP Credits):")
+            print("  GOOGLE_APPLICATION_CREDENTIALS=gcp-key.json")
+            print("  GCP_PROJECT=antigravity-sandbox-500206")
+            sys.exit(1)
+        
+        print("=========================================================")
+        print("📡 Integration Path: Google AI Studio Mode")
+        print("=========================================================")
+        client = genai.Client()
 
     # Paths
     level_dir = os.path.join(PROJECT_ROOT, args.level)
@@ -260,22 +296,49 @@ def main():
 
         prompt = generate_metaphor_prompt(german, english, word_class)
         
+        # Add a pacing delay before we generate (if we have successfully generated some cards)
+        if index > 0 and generated_count > 0:
+            pacing_delay = getattr(args, "delay", 12)
+            if pacing_delay > 0:
+                print(f"  Pacing delay: waiting {pacing_delay}s to respect Vertex AI quotas...")
+                time.sleep(pacing_delay)
+
         print(f"\n[{index+1}/{len(slice_to_generate)}] Generating card_{card_id} for '{german}' -> '{english}'")
         print(f"  Prompt: \"{prompt}\"")
 
         try:
-            # Query SOTA Imagen 3 model via google-genai
-            response = client.models.generate_images(
-                model="imagen-3.0-generate-002",
-                prompt=prompt,
-                config=types.GenerateImagesConfig(
-                    number_of_images=1,
-                    output_mime_type="image/png",
-                    aspect_ratio="1:1"
-                )
-            )
+            # Query SOTA Imagen 3 model via google-genai with exponential backoff on 429
+            max_retries = 4
+            backoff_base = 15
+            response = None
+            
+            for attempt in range(max_retries):
+                try:
+                    response = client.models.generate_images(
+                        model="imagen-3.0-generate-002",
+                        prompt=prompt,
+                        config=types.GenerateImagesConfig(
+                            number_of_images=1,
+                            output_mime_type="image/png",
+                            aspect_ratio="1:1"
+                        )
+                    )
+                    break  # Success!
+                except Exception as e:
+                    err_str = str(e).lower()
+                    if "429" in err_str or "resource_exhausted" in err_str or "quota" in err_str:
+                        # Exponential backoff
+                        sleep_time = backoff_base * (2 ** attempt)
+                        print(f"  ⚠️ Rate limited (429/Quota). Retrying in {sleep_time}s... (Attempt {attempt+1}/{max_retries})")
+                        time.sleep(sleep_time)
+                    else:
+                        raise e
+            else:
+                # If we exhausted retries and didn't get a response
+                print(f"  ❌ Error: Exhausted all {max_retries} retries for card_{card_id} due to rate limits.")
+                continue
 
-            if not response.generated_images:
+            if not response or not response.generated_images:
                 print(f"  ⚠️ Warning: Imagen returned empty response for card_{card_id}.")
                 continue
 
