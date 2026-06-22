@@ -1059,8 +1059,10 @@
     "antonym": null,
     "example_de": "Die Bank schließt schon um vier Uhr. Er sitzt im Park auf einer Bank und liest.",
     "example_en": "The bank closes already at four o'clock. He is sitting in the park on a bench and reading.",
-    "image": "images/card_56.svg",
-    "id": 56
+    "image": "images/card_56.webp",
+    "id": 56,
+    "image_tier": "B",
+    "image_path": "images/card_56.webp"
   },
   {
     "german": "bar",
@@ -1075,8 +1077,10 @@
     "antonym": "mit Karte",
     "example_de": "Muss ich bar zahlen oder geht's auch mit Karte?",
     "example_en": "Do I have to pay in cash or is it also possible with a card?",
-    "image": "images/card_57.svg",
-    "id": 57
+    "image": "images/card_57.webp",
+    "id": 57,
+    "image_tier": "B",
+    "image_path": "images/card_57.webp"
   },
   {
     "german": "der Bauch",
@@ -1091,8 +1095,10 @@
     "antonym": "der Rücken",
     "example_de": "Seit gestern tut mir der Bauch weh.",
     "example_en": "Since yesterday my stomach hurts.",
-    "image": "images/card_58.svg",
-    "id": 58
+    "image": "images/card_58.webp",
+    "id": 58,
+    "image_tier": "B",
+    "image_path": "images/card_58.webp"
   },
   {
     "german": "der Baum",
@@ -1107,8 +1113,10 @@
     "antonym": null,
     "example_de": "Vorsicht, fahr nicht an den Baum!",
     "example_en": "Careful, do not drive into the tree!",
-    "image": "images/card_59.svg",
-    "id": 59
+    "image": "images/card_59.webp",
+    "id": 59,
+    "image_tier": "B",
+    "image_path": "images/card_59.webp"
   },
   {
     "german": "der Beamte",
@@ -1123,8 +1131,10 @@
     "antonym": null,
     "example_de": "Fragen Sie die Beamtin an Schalter acht!",
     "example_en": "Ask the female civil servant at counter eight!",
-    "image": "images/card_60.svg",
-    "id": 60
+    "image": "images/card_60.webp",
+    "id": 60,
+    "image_tier": "B",
+    "image_path": "images/card_60.webp"
   },
   {
     "german": "bedeuten",
@@ -1143,8 +1153,10 @@
     "antonym": null,
     "example_de": "Was bedeutet das Wort?",
     "example_en": "What does the word mean?",
-    "image": "images/card_61.svg",
-    "id": 61
+    "image": "images/card_61.webp",
+    "id": 61,
+    "image_tier": "B",
+    "image_path": "images/card_61.webp"
   },
   {
     "german": "beginnen",
@@ -1163,8 +1175,10 @@
     "antonym": "enden",
     "example_de": "Das Spiel beginnt um 15.30 Uhr.",
     "example_en": "The game begins at 3:30 p.m.",
-    "image": "images/card_62.svg",
-    "id": 62
+    "image": "images/card_62.webp",
+    "id": 62,
+    "image_tier": "B",
+    "image_path": "images/card_62.webp"
   },
   {
     "german": "bei",
@@ -1179,8 +1193,10 @@
     "antonym": null,
     "example_de": "Offenbach liegt bei Frankfurt. Ich wohne bei meinen Eltern. Bei uns regnet es heute. Er arbeitet bei der Polizei.",
     "example_en": "Offenbach is located near Frankfurt. I live with my parents. It is raining here today. He works for the police.",
-    "image": "images/card_63.svg",
-    "id": 63
+    "image": "images/card_63.webp",
+    "id": 63,
+    "image_tier": "B",
+    "image_path": "images/card_63.webp"
   },
   {
     "german": "beide",
@@ -1195,8 +1211,10 @@
     "antonym": "keine",
     "example_de": "Beide Eltern arbeiten. Wir kommen beide.",
     "example_en": "Both parents work. We are both coming.",
-    "image": "images/card_64.svg",
-    "id": 64
+    "image": "images/card_64.webp",
+    "id": 64,
+    "image_tier": "B",
+    "image_path": "images/card_64.webp"
   },
   {
     "german": "das Bein",
@@ -1211,8 +1229,10 @@
     "antonym": "der Arm",
     "example_de": "Mein rechtes Bein tut weh.",
     "example_en": "My right leg hurts.",
-    "image": "images/card_65.svg",
-    "id": 65
+    "image": "images/card_65.webp",
+    "id": 65,
+    "image_tier": "B",
+    "image_path": "images/card_65.webp"
   },
   {
     "german": "das Beispiel",
