@@ -117,11 +117,14 @@ METAPHOR_MAP = {
     "bezahlen": "A sleek, high-gloss 3D wireless payment terminal (POS machine) with a vibrant blue credit card hovering above it, displaying golden electromagnetic waves, representing payment, floating in mid-air, front-and-center",
     "bier": "A giant, highly polished 3D glass mug overflowing with golden amber beer and rich, creamy white foam spilling down the sides, floating in mid-air, front-and-center, 100% beer essence",
     "bild": "An exquisite, ornate golden 3D picture frame containing a beautiful vibrant sunset landscape painting, floating suspended in mid-air, front-and-center",
-    "billig": "A bright yellow 3D price tag with a huge red SALE -90% stamped on it, next to a tiny gold coin, representing cheap price, floating in mid-air, front-and-center",
+    "billig": "A bright yellow 3D price tag showing a large percentage symbol (%), next to a giant pile of sparkling golden coins, completely wordless, representing cheap price, floating in mid-air, front-and-center",
     "birne": "A beautiful, highly detailed 3D green pear with a glossy surface and a tiny brown stem with a single emerald-green leaf, floating suspended in mid-air, front-and-center",
     "bis": "A winding 3D road segment ending abruptly at a glowing, transparent red barrier wall, representing a boundary or endpoint, floating in mid-air, front-and-center",
     "bisschen": "A cute 3D measuring spoon holding a single, glowing golden grain or tiny drop of nectar, representing a tiny amount, floating in mid-air, front-and-center",
-    "bitten": "A pair of cute, stylized 3D glossy hands held together in a warm, polite praying or pleading gesture, surrounded by soft self-illuminating sparkles, floating in mid-air, front-and-center"
+    "bitten": "A pair of cute, stylized 3D glossy hands held together in a warm, polite praying or pleading gesture, surrounded by soft self-illuminating sparkles, floating in mid-air, front-and-center",
+    "die bitte": "A cute, glowing 3D paper scroll containing a sparkling golden star and a clean checkmark symbol, floating in mid-air, front-and-center, completely wordless, representing a polite request",
+    "bitter": "A giant, shiny dark brown 3D coffee bean floating in a spectacular splash of rich black espresso coffee, completely wordless, representing bitter flavor, floating in mid-air, front-and-center",
+    "bleiben": "A spectacular 3D metallic blue anchor firmly holding onto the sandy sea floor with a glowing gold chain, representing remaining or staying in place, completely wordless, floating in mid-air, front-and-center"
 }
 
 def remove_black_background(img, threshold=50, feather=True):
@@ -266,11 +269,14 @@ def generate_metaphor_prompt(word_de, word_en, word_class):
     Resolves the German word class and details to build a highly descriptive 
     visual prompt tailored for SOTA Cutting-Edge 3D Glossy and Tactile assets.
     """
-    # Clean articles and strip trailing hyphens for dictionary lookups
+    # Try exact match with lowercase original word (retaining articles) or stripped hyphen
+    de_exact = word_de.lower().strip().rstrip('-')
     de_clean = re.sub(r'^(der|die|das)\s+', '', word_de.lower()).strip().rstrip('-')
     
     # Check if we have a hand-curated metaphorical prompt
-    if de_clean in METAPHOR_MAP:
+    if de_exact in METAPHOR_MAP:
+        metaphor = METAPHOR_MAP[de_exact]
+    elif de_clean in METAPHOR_MAP:
         metaphor = METAPHOR_MAP[de_clean]
     else:
         # Dynamic fallback prompts based on word classes (using the new SOTA glossy style)

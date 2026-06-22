@@ -1459,8 +1459,10 @@
     "antonym": null,
     "example_de": "Darf ich dich besuchen?",
     "example_en": "May I visit you?",
-    "image": "images/card_76.svg",
-    "id": 76
+    "image": "images/card_76.webp",
+    "id": 76,
+    "image_tier": "B",
+    "image_path": "images/card_76.webp"
   },
   {
     "german": "das Bett",
@@ -1475,8 +1477,10 @@
     "antonym": null,
     "example_de": "Wir brauchen noch ein Kinderbett.",
     "example_en": "We still need a child's bed.",
-    "image": "images/card_77.svg",
-    "id": 77
+    "image": "images/card_77.webp",
+    "id": 77,
+    "image_tier": "B",
+    "image_path": "images/card_77.webp"
   },
   {
     "german": "bezahlen",
@@ -1495,8 +1499,10 @@
     "antonym": null,
     "example_de": "Wo muss ich bezahlen?",
     "example_en": "Where do I have to pay?",
-    "image": "images/card_78.svg",
-    "id": 78
+    "image": "images/card_78.webp",
+    "id": 78,
+    "image_tier": "B",
+    "image_path": "images/card_78.webp"
   },
   {
     "german": "das Bier",
@@ -1511,8 +1517,10 @@
     "antonym": null,
     "example_de": "Noch ein Bier bitte.",
     "example_en": "Another beer, please.",
-    "image": "images/card_79.svg",
-    "id": 79
+    "image": "images/card_79.webp",
+    "id": 79,
+    "image_tier": "B",
+    "image_path": "images/card_79.webp"
   },
   {
     "german": "das Bild",
@@ -1527,8 +1535,10 @@
     "antonym": null,
     "example_de": "Hast du ein Bild von deinem Sohn?",
     "example_en": "Do you have a picture of your son?",
-    "image": "images/card_80.svg",
-    "id": 80
+    "image": "images/card_80.webp",
+    "id": 80,
+    "image_tier": "B",
+    "image_path": "images/card_80.webp"
   },
   {
     "german": "billig",
@@ -1546,8 +1556,10 @@
     "antonym": "teuer",
     "example_de": "Die Jacke kostet nur 10 Euro! Die ist aber billig!",
     "example_en": "The jacket costs only 10 euros! It is really cheap!",
-    "image": "images/card_81.svg",
-    "id": 81
+    "image": "images/card_81.webp",
+    "id": 81,
+    "image_tier": "B",
+    "image_path": "images/card_81.webp"
   },
   {
     "german": "die Birne",
@@ -1562,8 +1574,10 @@
     "antonym": null,
     "example_de": "Ein Kilo Birnen, bitte!",
     "example_en": "One kilo of pears, please!",
-    "image": "images/card_82.svg",
-    "id": 82
+    "image": "images/card_82.webp",
+    "id": 82,
+    "image_tier": "B",
+    "image_path": "images/card_82.webp"
   },
   {
     "german": "bis",
@@ -1578,8 +1592,10 @@
     "antonym": "ab",
     "example_de": "Ich fahre nur bis Stuttgart. Ich warte bis morgen.",
     "example_en": "I only travel as far as Stuttgart. I will wait until tomorrow.",
-    "image": "images/card_83.svg",
-    "id": 83
+    "image": "images/card_83.webp",
+    "id": 83,
+    "image_tier": "B",
+    "image_path": "images/card_83.webp"
   },
   {
     "german": "bisschen",
@@ -1594,8 +1610,10 @@
     "antonym": "viel",
     "example_de": "Ich spreche Englisch, Französisch und ein bisschen Deutsch.",
     "example_en": "I speak English, French and a little bit of German.",
-    "image": "images/card_84.svg",
-    "id": 84
+    "image": "images/card_84.webp",
+    "id": 84,
+    "image_tier": "B",
+    "image_path": "images/card_84.webp"
   },
   {
     "german": "bitte",
@@ -1610,8 +1628,10 @@
     "antonym": "danke",
     "example_de": "Eine Tasse Kaffee, bitte! Sprechen Sie bitte leise!",
     "example_en": "A cup of coffee, please! Please speak quietly!",
-    "image": "images/card_85.svg",
-    "id": 85
+    "image": "images/card_85.webp",
+    "id": 85,
+    "image_tier": "B",
+    "image_path": "images/card_85.webp"
   },
   {
     "german": "die Bitte",
@@ -1626,8 +1646,10 @@
     "antonym": null,
     "example_de": "Ich habe noch eine Bitte.",
     "example_en": "I still have a request.",
-    "image": "images/card_86.svg",
-    "id": 86
+    "image": "images/card_86.webp",
+    "id": 86,
+    "image_tier": "B",
+    "image_path": "images/card_86.webp"
   },
   {
     "german": "bitten",
@@ -1646,8 +1668,10 @@
     "antonym": null,
     "example_de": "Darf ich Sie um etwas bitten?",
     "example_en": "May I ask you for something?",
-    "image": "images/card_87.svg",
-    "id": 87
+    "image": "images/card_87.webp",
+    "id": 87,
+    "image_tier": "B",
+    "image_path": "images/card_87.webp"
   },
   {
     "german": "bitter",
@@ -1665,8 +1689,10 @@
     "antonym": "süß",
     "example_de": "Der Kaffee schmeckt bitter.",
     "example_en": "The coffee tastes bitter.",
-    "image": "images/card_88.svg",
-    "id": 88
+    "image": "images/card_88.webp",
+    "id": 88,
+    "image_tier": "B",
+    "image_path": "images/card_88.webp"
   },
   {
     "german": "bleiben",
@@ -1685,8 +1711,10 @@
     "antonym": "gehen",
     "example_de": "Ich bleibe heute zu Hause. Wir bleiben nur bis morgen.",
     "example_en": "I am staying at home today. We are only staying until tomorrow.",
-    "image": "images/card_89.svg",
-    "id": 89
+    "image": "images/card_89.webp",
+    "id": 89,
+    "image_tier": "B",
+    "image_path": "images/card_89.webp"
   },
   {
     "german": "der Bleistift",
@@ -1701,8 +1729,10 @@
     "antonym": "der Kugelschreiber",
     "example_de": "Hast du einen Bleistift?",
     "example_en": "Do you have a pencil?",
-    "image": "images/card_90.svg",
-    "id": 90
+    "image": "images/card_90.webp",
+    "id": 90,
+    "image_tier": "B",
+    "image_path": "images/card_90.webp"
   },
   {
     "german": "der Blick",
