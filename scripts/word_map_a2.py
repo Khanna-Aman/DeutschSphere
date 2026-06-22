@@ -1238,4 +1238,50 @@ WORD_MAP = {
     'der zoo': '1f418',              # zoo → elephant
     'zuletzt': '23ea',               # at last → rewind
     'die übersetzung': '1f5e3-fe0f', # translation → speaking head
+
+    # === Missing A2 Mappings added in Sprint 4 ===
+    'abfahren': '1f697',             # to drive/depart → car
+    '(ab)fahren': '1f697',           # to drive/depart → car
+    'das tablet': '1f4f1',           # tablet → mobile phone
+    '(aus)tauschen': '1f504',        # to exchange → anticlockwise arrows
+    'tot': '1f480',                  # dead → skull
+    'total': '1f4af',                # totally → hundred points
+    'das training': '1f3cb-fe0f',    # training → weight lifter
+    'tschüs': '1f44b',               # goodbye → waving hand
+    'das t-shirt': '1f455',          # T-shirt → t-shirt
+    'unterhalten (sich)': '1f4ac',   # to converse → speech bubble
+    'untersuchen': '1f50d',          # to examine → magnifying glass
+    'verabredet sein': '1f4c5',      # to have an appointment → calendar
+    'der verein': '1f91d',           # club → handshake
+    'verlieben (sich)': '1f60d',     # to fall in love → heart eyes
+    'der vermieter': '1f511',        # landlord → key
+    'verreisen': '1f9f3',            # to travel → luggage
+    'der vertrag': '1f4dd',          # contract → memo
+    'der volleyball': '1f3d0',       # volleyball → volleyball
+    'vorbei': '1f51a',               # past/over → end arrow
+    'vorgestern': '23ea',            # day before yesterday → fast reverse
+    'vorher': '2b05-fe0f',           # beforehand → left arrow
+    'vorn(e)': '2b06-fe0f',          # in front → up arrow
+    'der wagen': '1f697',            # car → car
+    'die webseite': '1f310',         # website → globe meridians
+    'weg sein': '1f6ab',             # to be gone → prohibited
+    'weglaufen / wegmachen': '1f3c3', # to run away → runner
+    'weiterhelfen': '1f91d',         # to assist → handshake
+    'wie viel': '1f522',             # how much → 1234
+    'wiederholen': '1f501',          # to repeat → loop
+    'willkommen': '1f917',           # welcome → hugging face
+    'die wolke': '2601-fe0f',        # cloud → cloud
+    'der workshop': '1f3eb',         # workshop → school
+    'die zeitschrift': '1f4f0',      # magazine → newspaper
+    'der zettel': '1f4c4',           # piece of paper → page facing up
+    '(an-)/(aus)ziehen': '1f45a',    # to put on/take off clothes → clothing
+    'das ziel': '1f3af',             # goal/destination → bullseye
+    'die zitrone': '1f34b',          # lemon → lemon
+    'zu sein': '1f512',              # to be closed → locked
+    'zuerst': '1f131',               # first → squared B
+    'zuhören': '1f442',              # to listen → ear
+    'zurück-': '1f519',              # back → back arrow
+    'zwischen': '2194-fe0f',         # between → left-right arrow
+    'ändern': '1f504',               # to change → anticlockwise arrows
+    'überweisen': '1f4b8',           # to transfer money → money with wings
 }

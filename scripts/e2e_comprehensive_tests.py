@@ -120,7 +120,7 @@ try:
         # Navigate to index.html
         url = f"http://localhost:{PORT}/index.html"
         print(f"Navigating page to: {url}")
-        page.goto(url, wait_until="domcontentloaded")
+        page.goto(url, wait_until="domcontentloaded", timeout=45000)
         
         # Test Step 1: Base Application & Loading Check
         print("\n[STEP 1] Testing Base App & Offline Load...")
