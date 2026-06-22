@@ -230,7 +230,38 @@ METAPHOR_MAP = {
     "firma": "A modern, elegant 3D skyscraper office building made of glowing glassmorphism windows and steel frames, floating suspended, front-and-center",
     "fisch": "A beautiful, highly detailed 3D orange clownfish with white stripes, swimming gracefully in a splash of translucent water drops, 100% fish essence, front-and-center",
     "flasche": "A sleek, translucent 3D green glass bottle with a warm cork stopper, containing sparkling water bubbles, floating in mid-air, front-and-center",
-    "fleisch": "A rich, highly detailed 3D prime cut of T-bone steak with perfect marbled texture and a glossy sheen, resting on a rustic chopping board, front-and-center"
+    "fleisch": "A rich, highly detailed 3D prime cut of T-bone steak with perfect marbled texture and a glossy sheen, resting on a rustic chopping board, front-and-center",
+
+    # SOTA 3D assets for Cards 196 to 225 (fliegen through gehören)
+    "fliegen": "A stylized, high-gloss 3D white dove with elegant translucent wings, flying gracefully upward in mid-air with soft golden sparkles behind it, front-and-center",
+    "flughafen": "A futuristic 3D control tower with glowing glass panels, a curved airport terminal roof, and a sleek miniature airplane taking off, floating suspended in a pitch-black studio void, front-and-center",
+    "flugzeug": "An ultra-glossy white and blue 3D commercial jet airliner, tilted upward as if climbing, with silver chrome engines, front-and-center, 100% airplane essence",
+    "formular": "A crisp white 3D page displaying a clean checklist with three glowing green checkmark icons, next to a floating shiny gold pen, front-and-center",
+    "foto": "A vintage-style 3D instant polaroid camera made of glossy white and pink enamel, actively sliding out a glossy colorful print of a beautiful rainbow landscape, front-and-center",
+    "frage": "A giant, spectacular 3D question mark made of translucent glowing pink glass, reflecting warm studio lights, floating suspended in mid-air, front-and-center",
+    "fragen": "A cute 3D character raising its hand excitedly with a bright glowing yellow question mark bubble floating above its head, front-and-center",
+    "frau": "A sophisticated 3D character of a smiling woman with stylish hair, wearing a sleek modern jacket, looking warm and welcoming, front-and-center",
+    "frei": "A beautiful, wide-open 3D golden birdcage with a tiny glossy bird flying happily outside it, symbolizing freedom and availability, front-and-center",
+    "freizeit": "A beautiful, relaxing hammock tied between two small 3D palm trees, with a glossy red sunset in the background, representing leisure time, front-and-center",
+    "fremd": "A glowing 3D alien space-saucer hovering over a classic green park bench, representing something foreign or strange, front-and-center",
+    "freund": "Two smiling 3D boys high-fiving each other with giant, high-gloss expressions of joy, representing a close friend, front-and-center",
+    "früher": "A stylized 3D pocket watch with its hands spinning backwards, trailing a glowing dust trail toward a faded retro photo frame, symbolizing the past, front-and-center",
+    "frühstück": "A gorgeous, premium 3D breakfast set consisting of a hot cup of coffee with steam spirals, a sunny-side-up egg on a plate, and a crispy croissant, front-and-center",
+    "frühstücken": "A cute 3D character holding a glossy silver fork and knife, smiling in front of a giant warm croissant and a steaming mug, front-and-center",
+    "fuß": "A sleek, anatomical 3D artistic model of a foot wearing a modern translucent athletic shoe, walking on a glowing grid path, front-and-center",
+    "fußball": "A classic black-and-white soccer ball made of ultra-glossy leather patches, flying forward inside a spectacular splash of bright green grass particles, front-and-center, 100% football essence",
+    "führung": "A stylized 3D tour guide character wearing a cute hat, holding up a bright red flag with a golden star, leading a path of glowing arrow signs, front-and-center",
+    "für": "A beautiful 3D red gift box with a giant, glossy golden ribbon bow, tilted forward as if being presented to someone, representing 'for you', front-and-center",
+    "garten": "A beautiful, miniature 3D garden plot filled with blooming pink and yellow flowers, a small white picket fence, and a tiny glossy watering can, front-and-center",
+    "gast": "A welcoming, open 3D house door with a bright red carpet rolling out towards the viewer, welcoming a guest, front-and-center",
+    "geben": "A pair of warm 3D hands gently offering a glowing, glowing golden heart to the viewer, representing giving, front-and-center",
+    "geboren": "A beautiful, stylized 3D baby cradle or stork carrying a small glowing bundle wrapped in a golden bow, floating among soft clouds, front-and-center",
+    "geburtsjahr": "A giant, glowing 3D baby pacifier resting on top of a classic calendar block showing a gold ribbon, representing birth year, front-and-center",
+    "geburtsort": "A spectacular 3D glowing location pin hovering over a miniature model of a hospital or birthplace with a tiny golden baby footprints icon, front-and-center",
+    "geburtstag": "A giant, spectacular 3D birthday cake with glossy pink icing, colorful sprinkles, and a single burning candle with a glowing flame, front-and-center, 100% birthday essence",
+    "gefallen": "A spectacular 3D glossy pink heart icon surrounded by shooting stars and a big golden thumbs-up badge, representing liking something, front-and-center",
+    "gehen": "A pair of high-gloss pink running shoes walking forward on a stylized, winding glass pathway with glowing direction arrows, front-and-center",
+    "gehören": "A glowing gold crown resting perfectly inside a high-gloss luxury jewelry case, with a key representing ownership and belonging, front-and-center"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

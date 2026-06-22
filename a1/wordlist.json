@@ -3751,8 +3751,10 @@
     "antonym": null,
     "example_de": "Ich fliege nicht gern. Deshalb fahre ich mit dem Zug.",
     "example_en": "I do not like to fly. Therefore I travel by train.",
-    "image": "images/card_196.svg",
-    "id": 196
+    "image": "images/card_196.webp",
+    "id": 196,
+    "image_tier": "B",
+    "image_path": "images/card_196.webp"
   },
   {
     "german": "der Flughafen",
@@ -3767,8 +3769,10 @@
     "antonym": null,
     "example_de": "Kannst du mich zum Flughafen bringen?",
     "example_en": "Can you take me to the airport?",
-    "image": "images/card_197.svg",
-    "id": 197
+    "image": "images/card_197.webp",
+    "id": 197,
+    "image_tier": "B",
+    "image_path": "images/card_197.webp"
   },
   {
     "german": "das Flugzeug",
@@ -3783,8 +3787,10 @@
     "antonym": null,
     "example_de": "Das Flugzeug aus Berlin kommt heute später an.",
     "example_en": "The airplane from Berlin arrives later today.",
-    "image": "images/card_198.svg",
-    "id": 198
+    "image": "images/card_198.webp",
+    "id": 198,
+    "image_tier": "B",
+    "image_path": "images/card_198.webp"
   },
   {
     "german": "das Formular",
@@ -3799,8 +3805,10 @@
     "antonym": null,
     "example_de": "Sie müssen dieses Formular ausfüllen.",
     "example_en": "You have to fill out this form.",
-    "image": "images/card_199.svg",
-    "id": 199
+    "image": "images/card_199.webp",
+    "id": 199,
+    "image_tier": "B",
+    "image_path": "images/card_199.webp"
   },
   {
     "german": "das Foto",
@@ -3815,8 +3823,10 @@
     "antonym": null,
     "example_de": "Darf ich ein Foto machen?",
     "example_en": "May I take a photo?",
-    "image": "images/card_200.svg",
-    "id": 200
+    "image": "images/card_200.webp",
+    "id": 200,
+    "image_tier": "B",
+    "image_path": "images/card_200.webp"
   },
   {
     "german": "die Frage",
@@ -3831,8 +3841,10 @@
     "antonym": "die Antwort",
     "example_de": "Ich habe eine Frage.",
     "example_en": "I have a question.",
-    "image": "images/card_201.svg",
-    "id": 201
+    "image": "images/card_201.webp",
+    "id": 201,
+    "image_tier": "B",
+    "image_path": "images/card_201.webp"
   },
   {
     "german": "fragen",
@@ -3851,8 +3863,10 @@
     "antonym": "antworten",
     "example_de": "Er möchte Sie etwas fragen. Wann kommen Sie?",
     "example_en": "He would like to ask you something. When are you coming?",
-    "image": "images/card_202.svg",
-    "id": 202
+    "image": "images/card_202.webp",
+    "id": 202,
+    "image_tier": "B",
+    "image_path": "images/card_202.webp"
   },
   {
     "german": "die Frau",
@@ -3867,8 +3881,10 @@
     "antonym": "der Mann",
     "example_de": "Das ist Frau Becker. Guten Tag, Frau Schmitt! Hier arbeiten mehr Frauen als Männer.",
     "example_en": "This is Mrs. Becker. Good day, Mrs. Schmitt! More women work here than men.",
-    "image": "images/card_203.svg",
-    "id": 203
+    "image": "images/card_203.webp",
+    "id": 203,
+    "image_tier": "B",
+    "image_path": "images/card_203.webp"
   },
   {
     "german": "frei",
@@ -3886,8 +3902,10 @@
     "antonym": "besetzt",
     "example_de": "Ist der Platz noch frei?",
     "example_en": "Is the seat still free?",
-    "image": "images/card_204.svg",
-    "id": 204
+    "image": "images/card_204.webp",
+    "id": 204,
+    "image_tier": "B",
+    "image_path": "images/card_204.webp"
   },
   {
     "german": "die Freizeit",
@@ -3902,8 +3920,10 @@
     "antonym": "die Arbeit",
     "example_de": "In meiner Freizeit spiele ich oft Fußball.",
     "example_en": "In my free time I often play soccer.",
-    "image": "images/card_205.svg",
-    "id": 205
+    "image": "images/card_205.webp",
+    "id": 205,
+    "image_tier": "B",
+    "image_path": "images/card_205.webp"
   },
   {
     "german": "fremd",
@@ -3921,8 +3941,10 @@
     "antonym": "bekannt",
     "example_de": "Das weiß ich nicht; ich bin fremd hier.",
     "example_en": "I do not know that; I am a stranger here.",
-    "image": "images/card_206.svg",
-    "id": 206
+    "image": "images/card_206.webp",
+    "id": 206,
+    "image_tier": "B",
+    "image_path": "images/card_206.webp"
   },
   {
     "german": "der Freund",
@@ -3937,8 +3959,10 @@
     "antonym": null,
     "example_de": "Das ist ein Freund von mir. Das ist meine Freundin.",
     "example_en": "This is a friend of mine. This is my girlfriend.",
-    "image": "images/card_207.svg",
-    "id": 207
+    "image": "images/card_207.webp",
+    "id": 207,
+    "image_tier": "B",
+    "image_path": "images/card_207.webp"
   },
   {
     "german": "früher",
@@ -3953,8 +3977,10 @@
     "antonym": "später",
     "example_de": "Früher waren wir oft zusammen im Kino.",
     "example_en": "In the past we were often together in the cinema.",
-    "image": "images/card_208.svg",
-    "id": 208
+    "image": "images/card_208.webp",
+    "id": 208,
+    "image_tier": "B",
+    "image_path": "images/card_208.webp"
   },
   {
     "german": "das Frühstück",
@@ -3969,8 +3995,10 @@
     "antonym": "das Abendessen",
     "example_de": "Möchtest du ein Ei zum Frühstück?",
     "example_en": "Would you like an egg for breakfast?",
-    "image": "images/card_209.svg",
-    "id": 209
+    "image": "images/card_209.webp",
+    "id": 209,
+    "image_tier": "B",
+    "image_path": "images/card_209.webp"
   },
   {
     "german": "frühstücken",
@@ -3989,8 +4017,10 @@
     "antonym": null,
     "example_de": "Am Sonntag frühstücke ich gern im Bett.",
     "example_en": "On Sunday I like to have breakfast in bed.",
-    "image": "images/card_210.svg",
-    "id": 210
+    "image": "images/card_210.webp",
+    "id": 210,
+    "image_tier": "B",
+    "image_path": "images/card_210.webp"
   },
   {
     "german": "der Fuß",
@@ -4005,8 +4035,10 @@
     "antonym": "die Hand",
     "example_de": "Der linke Fuß tut mir weh.",
     "example_en": "My left foot hurts.",
-    "image": "images/card_211.svg",
-    "id": 211
+    "image": "images/card_211.webp",
+    "id": 211,
+    "image_tier": "B",
+    "image_path": "images/card_211.webp"
   },
   {
     "german": "der Fußball",
@@ -4021,8 +4053,10 @@
     "antonym": null,
     "example_de": "Spielt ihr gerne Fußball?",
     "example_en": "Do you like playing soccer?",
-    "image": "images/card_212.svg",
-    "id": 212
+    "image": "images/card_212.webp",
+    "id": 212,
+    "image_tier": "B",
+    "image_path": "images/card_212.webp"
   },
   {
     "german": "die Führung",
@@ -4037,8 +4071,10 @@
     "antonym": null,
     "example_de": "Die Führung durch das Haus beginnt in 3 Minuten.",
     "example_en": "The guided tour through the house begins in 3 minutes.",
-    "image": "images/card_213.svg",
-    "id": 213
+    "image": "images/card_213.webp",
+    "id": 213,
+    "image_tier": "B",
+    "image_path": "images/card_213.webp"
   },
   {
     "german": "für",
@@ -4053,8 +4089,10 @@
     "antonym": "gegen",
     "example_de": "Das ist für Sie. Das ist der Schlüssel für die Haustür. Das ist das Brot für morgen.",
     "example_en": "That is for you. That is the key for the front door. That is the bread for tomorrow.",
-    "image": "images/card_214.svg",
-    "id": 214
+    "image": "images/card_214.webp",
+    "id": 214,
+    "image_tier": "B",
+    "image_path": "images/card_214.webp"
   },
   {
     "german": "der Garten",
@@ -4069,8 +4107,10 @@
     "antonym": null,
     "example_de": "Wir haben leider keinen Garten.",
     "example_en": "Unfortunately, we do not have a garden.",
-    "image": "images/card_215.svg",
-    "id": 215
+    "image": "images/card_215.webp",
+    "id": 215,
+    "image_tier": "B",
+    "image_path": "images/card_215.webp"
   },
   {
     "german": "der Gast",
@@ -4085,8 +4125,10 @@
     "antonym": "der Gastgeber",
     "example_de": "Am Wochenende haben wir mehrere Gäste.",
     "example_en": "At the weekend we have several guests.",
-    "image": "images/card_216.svg",
-    "id": 216
+    "image": "images/card_216.webp",
+    "id": 216,
+    "image_tier": "B",
+    "image_path": "images/card_216.webp"
   },
   {
     "german": "geben",
@@ -4105,8 +4147,10 @@
     "antonym": "nehmen",
     "example_de": "Kannst du mir bitte deinen Kugelschreiber geben? Es gibt keine Karten mehr.",
     "example_en": "Can you please give me your pen? There are no tickets left.",
-    "image": "images/card_217.svg",
-    "id": 217
+    "image": "images/card_217.webp",
+    "id": 217,
+    "image_tier": "B",
+    "image_path": "images/card_217.webp"
   },
   {
     "german": "geboren",
@@ -4125,8 +4169,10 @@
     "antonym": "gestorben",
     "example_de": "Ich bin in Zagreb geboren.",
     "example_en": "I was born in Zagreb.",
-    "image": "images/card_218.svg",
-    "id": 218
+    "image": "images/card_218.webp",
+    "id": 218,
+    "image_tier": "B",
+    "image_path": "images/card_218.webp"
   },
   {
     "german": "das Geburtsjahr",
@@ -4141,8 +4187,10 @@
     "antonym": null,
     "example_de": "Das Geburtsjahr Ihres Sohnes, bitte?",
     "example_en": "The year of birth of your son, please?",
-    "image": "images/card_219.svg",
-    "id": 219
+    "image": "images/card_219.webp",
+    "id": 219,
+    "image_tier": "B",
+    "image_path": "images/card_219.webp"
   },
   {
     "german": "der Geburtsort",
@@ -4157,8 +4205,10 @@
     "antonym": null,
     "example_de": "Bitte schreiben Sie Ihren Geburtsort auf das Formular.",
     "example_en": "Please write your place of birth on the form.",
-    "image": "images/card_220.svg",
-    "id": 220
+    "image": "images/card_220.webp",
+    "id": 220,
+    "image_tier": "B",
+    "image_path": "images/card_220.webp"
   },
   {
     "german": "der Geburtstag",
@@ -4173,8 +4223,10 @@
     "antonym": null,
     "example_de": "Herzlichen Glückwunsch zum Geburtstag!",
     "example_en": "Happy birthday!",
-    "image": "images/card_221.svg",
-    "id": 221
+    "image": "images/card_221.webp",
+    "id": 221,
+    "image_tier": "B",
+    "image_path": "images/card_221.webp"
   },
   {
     "german": "gefallen",
@@ -4193,8 +4245,10 @@
     "antonym": "missfallen",
     "example_de": "Das gefällt mir.",
     "example_en": "I like that.",
-    "image": "images/card_222.svg",
-    "id": 222
+    "image": "images/card_222.webp",
+    "id": 222,
+    "image_tier": "B",
+    "image_path": "images/card_222.webp"
   },
   {
     "german": "gegen",
@@ -4209,8 +4263,10 @@
     "antonym": "für",
     "example_de": "Fahr nicht gegen den Baum! Ich bin gegen diese Lösung. Wer spielt gegen wen?",
     "example_en": "Do not drive against the tree! I am against this solution. Who is playing against whom?",
-    "image": "images/card_223.svg",
-    "id": 223
+    "image": "images/card_223.webp",
+    "id": 223,
+    "image_tier": "B",
+    "image_path": "images/card_223.webp"
   },
   {
     "german": "gehen",
@@ -4229,8 +4285,10 @@
     "antonym": "stehen",
     "example_de": "Ich weiß nicht, wie das geht. Wie geht's? Jetzt muss ich (aber) leider gehen. Ich muss zum Arzt gehen. Das geht nicht!",
     "example_en": "I do not know how that works. How are you? Now I unfortunately have to go. I have to go to the doctor. That does not work!",
-    "image": "images/card_224.svg",
-    "id": 224
+    "image": "images/card_224.webp",
+    "id": 224,
+    "image_tier": "B",
+    "image_path": "images/card_224.webp"
   },
   {
     "german": "gehören",
@@ -4249,8 +4307,10 @@
     "antonym": null,
     "example_de": "Wem gehört das?",
     "example_en": "Who does that belong to?",
-    "image": "images/card_225.svg",
-    "id": 225
+    "image": "images/card_225.webp",
+    "id": 225,
+    "image_tier": "B",
+    "image_path": "images/card_225.webp"
   },
   {
     "german": "das Geld",
