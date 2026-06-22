@@ -87,7 +87,17 @@ METAPHOR_MAP = {
     "baby": "A giant, cute 3D baby pacifier made of translucent pink glossy silicone and a shining gold ring, with a cute glowing baby rattle floating next to it, front-and-center, 100% baby essence",
     "bad": "A sleek, glowing white 3D bathtub filled with high-gloss translucent water bubbles and a cute yellow rubber duck floating inside, floating in mid-air, front-and-center",
     "baden": "A cute 3D character wearing glossy red swimming goggles, splashing happily in a giant splash of translucent crystal-clear blue water drops, floating in mid-air, front-and-center",
-    "bahn": "A highly polished, high-gloss red 3D bullet train cabin speeding forward out of a glowing tunnel arch, floating slightly tilted, front-and-center"
+    "bahn": "A highly polished, high-gloss red 3D bullet train cabin speeding forward out of a glowing tunnel arch, floating slightly tilted, front-and-center",
+    "bahnhof": "A grand, ultra-futuristic 3D train station terminal with high-gloss arches, glowing glass floors, a tiny red train visible in the portal, and neon-rimmed clocks, floating in mid-air, front-and-center",
+    "bahnsteig": "A sleek, high-gloss 3D railway platform segment, with yellow warning strips, a chrome and glass overhead canopy, and a glowing digital departures sign, floating suspended in mid-air, front-and-center",
+    "bald": "A beautiful 3D hourglass made of glowing translucent glassmorphic material, filled with vibrant pink sand running down, with a golden wings motif representing time flying, floating in mid-air, front-and-center",
+    "balkon": "A highly stylized 3D modern apartment balcony with white railings, lush green potted plants, and a cozy armchair, floating suspended in mid-air, front-and-center",
+    "banane": "A single, vibrant yellow 3D banana, partially peeled to reveal glossy cream-white inside, suspended in mid-air, casting a subtle soft self-illuminating glow, front-and-center",
+    "bank": "An ultra-glossy pink glass 3D piggy bank sitting on a polished wooden park bench, with a giant golden coin floating above it, capturing both bank and bench meanings, floating in mid-air, front-and-center",
+    "bar": "A thick, neat stack of vibrant green 3D cash banknotes with glowing golden bands, and shiny golden coins spilling around them, floating suspended in mid-air, front-and-center",
+    "bauch": "A stylized, cute 3D anatomical silhouette of a stomach, glowing with a warm pink internal energy, surrounded by floating golden sparkles, representing comfort and health, floating in mid-air, front-and-center",
+    "baum": "A beautiful, miniature 3D bonsai-style oak tree with vibrant emerald-green leaves and a polished rustic brown trunk, floating suspended in mid-air, front-and-center",
+    "beamte": "A stylized 3D stamp icon made of gold and chrome, stamping a giant official document with a shiny green wax seal, representing official duties, floating in mid-air, front-and-center"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

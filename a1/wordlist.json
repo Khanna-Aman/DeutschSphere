@@ -933,8 +933,10 @@
     "antonym": "duschen",
     "example_de": "Ich bade nicht so gern, ich dusche lieber.",
     "example_en": "I don't like bathing that much, I prefer to shower.",
-    "image": "images/card_49.svg",
-    "id": 49
+    "image": "images/card_49.webp",
+    "id": 49,
+    "image_tier": "B",
+    "image_path": "images/card_49.webp"
   },
   {
     "german": "die Bahn",
@@ -949,8 +951,10 @@
     "antonym": null,
     "example_de": "Wir fahren lieber mit der Bahn.",
     "example_en": "We prefer traveling by train.",
-    "image": "images/card_50.svg",
-    "id": 50
+    "image": "images/card_50.webp",
+    "id": 50,
+    "image_tier": "B",
+    "image_path": "images/card_50.webp"
   },
   {
     "german": "der Bahnhof",
@@ -965,8 +969,10 @@
     "antonym": null,
     "example_de": "Komme ich hier zum Bahnhof?",
     "example_en": "Is this the way to the train station?",
-    "image": "images/card_51.svg",
-    "id": 51
+    "image": "images/card_51.webp",
+    "id": 51,
+    "image_tier": "B",
+    "image_path": "images/card_51.webp"
   },
   {
     "german": "der Bahnsteig",
@@ -981,8 +987,10 @@
     "antonym": null,
     "example_de": "Auf welchem Bahnsteig fährt der Zug?",
     "example_en": "From which platform does the train depart?",
-    "image": "images/card_52.svg",
-    "id": 52
+    "image": "images/card_52.webp",
+    "id": 52,
+    "image_tier": "B",
+    "image_path": "images/card_52.webp"
   },
   {
     "german": "bald",
@@ -997,8 +1005,10 @@
     "antonym": "später",
     "example_de": "Ich komme bald.",
     "example_en": "I am coming soon.",
-    "image": "images/card_53.svg",
-    "id": 53
+    "image": "images/card_53.webp",
+    "id": 53,
+    "image_tier": "B",
+    "image_path": "images/card_53.webp"
   },
   {
     "german": "der Balkon",
@@ -1013,8 +1023,10 @@
     "antonym": null,
     "example_de": "Die Wohnung hat auch einen kleinen Balkon.",
     "example_en": "The apartment also has a small balcony.",
-    "image": "images/card_54.svg",
-    "id": 54
+    "image": "images/card_54.webp",
+    "id": 54,
+    "image_tier": "B",
+    "image_path": "images/card_54.webp"
   },
   {
     "german": "die Banane",
@@ -1029,8 +1041,10 @@
     "antonym": null,
     "example_de": "Drei Bananen, bitte!",
     "example_en": "Three bananas, please!",
-    "image": "images/card_55.svg",
-    "id": 55
+    "image": "images/card_55.webp",
+    "id": 55,
+    "image_tier": "B",
+    "image_path": "images/card_55.webp"
   },
   {
     "german": "die Bank",
