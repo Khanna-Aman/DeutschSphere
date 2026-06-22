@@ -199,7 +199,38 @@ METAPHOR_MAP = {
     "entschuldigung": "A beautiful, stylized 3D pink glass heart with a tiny white band-aid on it, representing a sincere apology and healing, front-and-center",
     "er": "A single, cute boy character pointing smilingly at himself, front-and-center",
     "ergebnis": "A highly-detailed 3D digital scoreboard displaying a spectacular gold star and a green checkmark, representing an excellent test result, front-and-center",
-    "erklären": "A glowing 3D lightbulb above a stylized chalkboard depicting a clear, simple arrow-diagram connecting ideas, representing explaining, front-and-center"
+    "erklären": "A glowing 3D lightbulb above a stylized chalkboard depicting a clear, simple arrow-diagram connecting ideas, representing explaining, front-and-center",
+
+    # SOTA 3D assets for Cards 166 to 195 (erlauben through fleisch)
+    "erlauben": "A spectacular glowing 3D green shield adorned with a highly polished metallic gold checkmark, representing permission, floating in mid-air, front-and-center",
+    "erwachsene": "A sophisticated, modern 3D character in stylish executive attire, wearing a sleek watch, looking confident and smiling, representing adulthood, front-and-center",
+    "erzählen": "A cozy 3D campfire setup with a stylized glowing open book and floating stars or speech bubbles rising up, symbolizing storytelling and narrating, front-and-center",
+    "essen": "A spectacular 3D plate with a delicious warm slice of pie and a glossy fork and knife, with tiny sparkle effects, front-and-center",
+    "das essen": "A gorgeous, mouth-watering gourmet 3D feast consisting of a glossy silver cloche dome plate opening to reveal a steaming delicious burger and crispy fries, capturing the ultimate food essence, front-and-center",
+    "euer": "A cute 3D gift box with two glowing hands pointing warmly towards it, indicating 'yours', front-and-center",
+    "fahren": "A modern, ultra-glossy blue sports car speeding forward along a tiny stylized floating road track, capturing driving speed, front-and-center",
+    "fahrer": "A cute 3D character with a stylized leather jacket and a polished chrome steering wheel in hand, looking forward excitedly, front-and-center",
+    "fahrkarte": "An ultra-premium, shiny gold-gilded 3D train passenger ticket with a glowing circular punch-hole, floating suspended, front-and-center",
+    "fahrrad": "A beautiful, modern 3D bicycle painted in high-gloss neon orange, with silver chrome spokes and handles, floating slightly tilted, 100% bicycle essence, front-and-center",
+    "falsch": "A giant, glowing red 3D 'X' symbol made of glossy enamel, floating in a dark studio void, casting a soft red glow, front-and-center",
+    "familie": "A heartwarming, stylized 3D grouping of a mother, father, and a cute child holding hands, surrounded by a glowing pink heart silhouette, front-and-center",
+    "familienname": "A beautiful 3D coat of arms shield with a blank elegant glowing scroll draped across it, representing lineage and family name, front-and-center",
+    "familienstand": "A beautiful 3D balance scale holding two interlocking gold wedding rings on one side and a single gold star on the other side, representing marital status, front-and-center",
+    "farbe": "A spectacular, highly-detailed 3D artist paint palette overflowing with vibrant glossy dollops of rainbow colors (pink, blue, yellow, green) and a polished silver paintbrush resting on it, front-and-center",
+    "fax": "A retro-futuristic 3D fax machine made of glossy white and pink plastic, with a printed page with a line graph half-emerging from it, front-and-center",
+    "fehlen": "A beautiful 3D puzzle sphere with one crucial glowing golden puzzle piece floating right next to its empty slot, symbolizing a missing piece, front-and-center",
+    "fehler": "A giant 3D eraser rubbing away a glowing red pencil scribble on a clean glass block, representing correcting a mistake, front-and-center",
+    "feiern": "A spectacular, exploding 3D party popper releasing a beautiful burst of glossy colorful confetti, stars, and streamers, front-and-center",
+    "fernsehen": "A retro-chic 3D television set with a curved glowing screen displaying a colorful cartoon scene, with cute antenna on top, front-and-center",
+    "fertig": "A giant glowing green 3D racing finish-line checkered archway, with a golden ribbon being cut, representing completion, front-and-center",
+    "feuer": "A gorgeous, stylized 3D roaring campfire made of glossy translucent orange and yellow flame crystals resting on polished dark wood logs, front-and-center",
+    "fieber": "A spectacular 3D glass medical thermometer showing a bright glowing red mercury line rising to the very top, with small floating warm sparkle dots, front-and-center",
+    "film": "A giant, stylized 3D film reel made of polished metallic silver and black, with a strip of celluloid ribbon looping elegantly around it, front-and-center",
+    "finden": "A sleek 3D magnifying glass hovering over a hidden glowing golden star on a high-contrast glass grid, representing finding, front-and-center",
+    "firma": "A modern, elegant 3D skyscraper office building made of glowing glassmorphism windows and steel frames, floating suspended, front-and-center",
+    "fisch": "A beautiful, highly detailed 3D orange clownfish with white stripes, swimming gracefully in a splash of translucent water drops, 100% fish essence, front-and-center",
+    "flasche": "A sleek, translucent 3D green glass bottle with a warm cork stopper, containing sparkling water bubbles, floating in mid-air, front-and-center",
+    "fleisch": "A rich, highly detailed 3D prime cut of T-bone steak with perfect marbled texture and a glossy sheen, resting on a rustic chopping board, front-and-center"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

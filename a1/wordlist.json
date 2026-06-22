@@ -3173,8 +3173,10 @@
     "antonym": "verbieten",
     "example_de": "Rauchen ist hier nicht erlaubt.",
     "example_en": "Smoking is not allowed here.",
-    "image": "images/card_166.svg",
-    "id": 166
+    "image": "images/card_166.webp",
+    "id": 166,
+    "image_tier": "B",
+    "image_path": "images/card_166.webp"
   },
   {
     "german": "der Erwachsene",
@@ -3189,8 +3191,10 @@
     "antonym": "das Kind",
     "example_de": "Dieser Film ist nur für Erwachsene.",
     "example_en": "This film is only for adults.",
-    "image": "images/card_167.svg",
-    "id": 167
+    "image": "images/card_167.webp",
+    "id": 167,
+    "image_tier": "B",
+    "image_path": "images/card_167.webp"
   },
   {
     "german": "erzählen",
@@ -3209,8 +3213,10 @@
     "antonym": null,
     "example_de": "Wir müssen euch etwas erzählen!",
     "example_en": "We have to tell you something!",
-    "image": "images/card_168.svg",
-    "id": 168
+    "image": "images/card_168.webp",
+    "id": 168,
+    "image_tier": "B",
+    "image_path": "images/card_168.webp"
   },
   {
     "german": "es",
@@ -3225,8 +3231,10 @@
     "antonym": null,
     "example_de": "Es regnet.",
     "example_en": "It is raining.",
-    "image": "images/card_169.svg",
-    "id": 169
+    "image": "images/card_169.webp",
+    "id": 169,
+    "image_tier": "B",
+    "image_path": "images/card_169.webp"
   },
   {
     "german": "essen",
@@ -3245,8 +3253,10 @@
     "antonym": "trinken",
     "example_de": "Was gibt es zu essen?",
     "example_en": "What is there to eat?",
-    "image": "images/card_170.svg",
-    "id": 170
+    "image": "images/card_170.webp",
+    "id": 170,
+    "image_tier": "B",
+    "image_path": "images/card_170.webp"
   },
   {
     "german": "das Essen",
@@ -3261,8 +3271,10 @@
     "antonym": "das Getränk",
     "example_de": "Das Essen ist heute sehr gut.",
     "example_en": "The food is very good today.",
-    "image": "images/card_171.svg",
-    "id": 171
+    "image": "images/card_171.webp",
+    "id": 171,
+    "image_tier": "B",
+    "image_path": "images/card_171.webp"
   },
   {
     "german": "euer",
@@ -3277,8 +3289,10 @@
     "antonym": "unser",
     "example_de": "Euer Kurs beginnt heute.",
     "example_en": "Your course begins today.",
-    "image": "images/card_172.svg",
-    "id": 172
+    "image": "images/card_172.webp",
+    "id": 172,
+    "image_tier": "B",
+    "image_path": "images/card_172.webp"
   },
   {
     "german": "fahren",
@@ -3297,8 +3311,10 @@
     "antonym": "halten",
     "example_de": "Ich fahre mit dem Auto zur Arbeit.",
     "example_en": "I drive to work by car.",
-    "image": "images/card_173.svg",
-    "id": 173
+    "image": "images/card_173.webp",
+    "id": 173,
+    "image_tier": "B",
+    "image_path": "images/card_173.webp"
   },
   {
     "german": "der Fahrer",
@@ -3313,8 +3329,10 @@
     "antonym": "der Beifahrer",
     "example_de": "Bitte nicht mit dem Fahrer sprechen!",
     "example_en": "Please do not speak with the driver!",
-    "image": "images/card_174.svg",
-    "id": 174
+    "image": "images/card_174.webp",
+    "id": 174,
+    "image_tier": "B",
+    "image_path": "images/card_174.webp"
   },
   {
     "german": "die Fahrkarte",
@@ -3329,8 +3347,10 @@
     "antonym": null,
     "example_de": "Hast du schon eine Fahrkarte?",
     "example_en": "Do you already have a ticket?",
-    "image": "images/card_175.svg",
-    "id": 175
+    "image": "images/card_175.webp",
+    "id": 175,
+    "image_tier": "B",
+    "image_path": "images/card_175.webp"
   },
   {
     "german": "das Fahrrad",
@@ -3345,8 +3365,10 @@
     "antonym": "das Auto",
     "example_de": "Fährst du mit dem Fahrrad oder mit dem Auto?",
     "example_en": "Do you travel by bicycle or by car?",
-    "image": "images/card_176.svg",
-    "id": 176
+    "image": "images/card_176.webp",
+    "id": 176,
+    "image_tier": "B",
+    "image_path": "images/card_176.webp"
   },
   {
     "german": "falsch",
@@ -3364,8 +3386,10 @@
     "antonym": "richtig",
     "example_de": "Das ist falsch.",
     "example_en": "That is wrong.",
-    "image": "images/card_177.svg",
-    "id": 177
+    "image": "images/card_177.webp",
+    "id": 177,
+    "image_tier": "B",
+    "image_path": "images/card_177.webp"
   },
   {
     "german": "die Familie",
@@ -3380,8 +3404,10 @@
     "antonym": null,
     "example_de": "Meine Familie lebt in Spanien.",
     "example_en": "My family lives in Spain.",
-    "image": "images/card_178.svg",
-    "id": 178
+    "image": "images/card_178.webp",
+    "id": 178,
+    "image_tier": "B",
+    "image_path": "images/card_178.webp"
   },
   {
     "german": "der Familienname",
@@ -3396,8 +3422,10 @@
     "antonym": "der Vorname",
     "example_de": "Meine Familiennamen sind García González.",
     "example_en": "My family names are García González.",
-    "image": "images/card_179.svg",
-    "id": 179
+    "image": "images/card_179.webp",
+    "id": 179,
+    "image_tier": "B",
+    "image_path": "images/card_179.webp"
   },
   {
     "german": "der Familienstand",
@@ -3412,8 +3440,10 @@
     "antonym": null,
     "example_de": "Bei „Familienstand“ musst du „ledig“ ankreuzen.",
     "example_en": "For „marital status“ you have to check „single“.",
-    "image": "images/card_180.svg",
-    "id": 180
+    "image": "images/card_180.webp",
+    "id": 180,
+    "image_tier": "B",
+    "image_path": "images/card_180.webp"
   },
   {
     "german": "die Farbe",
@@ -3428,8 +3458,10 @@
     "antonym": null,
     "example_de": "Die Farbe gefällt mir gut.",
     "example_en": "I like the color.",
-    "image": "images/card_181.svg",
-    "id": 181
+    "image": "images/card_181.webp",
+    "id": 181,
+    "image_tier": "B",
+    "image_path": "images/card_181.webp"
   },
   {
     "german": "das Fax",
@@ -3444,8 +3476,10 @@
     "antonym": null,
     "example_de": "Schicken Sie uns einfach ein Fax!",
     "example_en": "Simply send us a fax!",
-    "image": "images/card_182.svg",
-    "id": 182
+    "image": "images/card_182.webp",
+    "id": 182,
+    "image_tier": "B",
+    "image_path": "images/card_182.webp"
   },
   {
     "german": "fehlen",
@@ -3464,8 +3498,10 @@
     "antonym": "da sein",
     "example_de": "Herr Müller ist nicht da, er fehlt schon seit drei Tagen. Was fehlt Ihnen?",
     "example_en": "Mr. Müller is not here, he has been missing for three days. What is wrong with you?",
-    "image": "images/card_183.svg",
-    "id": 183
+    "image": "images/card_183.webp",
+    "id": 183,
+    "image_tier": "B",
+    "image_path": "images/card_183.webp"
   },
   {
     "german": "der Fehler",
@@ -3480,8 +3516,10 @@
     "antonym": "die Korrektur",
     "example_de": "Diesen Fehler mache ich immer.",
     "example_en": "I always make this mistake.",
-    "image": "images/card_184.svg",
-    "id": 184
+    "image": "images/card_184.webp",
+    "id": 184,
+    "image_tier": "B",
+    "image_path": "images/card_184.webp"
   },
   {
     "german": "feiern",
@@ -3500,8 +3538,10 @@
     "antonym": null,
     "example_de": "Wir feiern heute meinen Geburtstag.",
     "example_en": "We are celebrating my birthday today.",
-    "image": "images/card_185.svg",
-    "id": 185
+    "image": "images/card_185.webp",
+    "id": 185,
+    "image_tier": "B",
+    "image_path": "images/card_185.webp"
   },
   {
     "german": "fernsehen",
@@ -3520,8 +3560,10 @@
     "antonym": null,
     "example_de": "Wollen wir heute Abend mal fernsehen?",
     "example_en": "Do we want to watch TV tonight?",
-    "image": "images/card_186.svg",
-    "id": 186
+    "image": "images/card_186.webp",
+    "id": 186,
+    "image_tier": "B",
+    "image_path": "images/card_186.webp"
   },
   {
     "german": "fertig",
@@ -3539,8 +3581,10 @@
     "antonym": null,
     "example_de": "Bist du fertig? Ist mein Auto schon fertig?",
     "example_en": "Are you ready? Is my car already finished?",
-    "image": "images/card_187.svg",
-    "id": 187
+    "image": "images/card_187.webp",
+    "id": 187,
+    "image_tier": "B",
+    "image_path": "images/card_187.webp"
   },
   {
     "german": "das Feuer",
@@ -3555,8 +3599,10 @@
     "antonym": null,
     "example_de": "Haben Sie Feuer?",
     "example_en": "Do you have a light?",
-    "image": "images/card_188.svg",
-    "id": 188
+    "image": "images/card_188.webp",
+    "id": 188,
+    "image_tier": "B",
+    "image_path": "images/card_188.webp"
   },
   {
     "german": "das Fieber",
@@ -3571,8 +3617,10 @@
     "antonym": null,
     "example_de": "Mein Mann hat noch immer Fieber.",
     "example_en": "My husband still has a fever.",
-    "image": "images/card_189.svg",
-    "id": 189
+    "image": "images/card_189.webp",
+    "id": 189,
+    "image_tier": "B",
+    "image_path": "images/card_189.webp"
   },
   {
     "german": "der Film",
@@ -3587,8 +3635,10 @@
     "antonym": null,
     "example_de": "Ich möchte gern diesen Film sehen.",
     "example_en": "I would like to see this movie.",
-    "image": "images/card_190.svg",
-    "id": 190
+    "image": "images/card_190.webp",
+    "id": 190,
+    "image_tier": "B",
+    "image_path": "images/card_190.webp"
   },
   {
     "german": "finden",
@@ -3607,8 +3657,10 @@
     "antonym": "verlieren",
     "example_de": "Wir müssen den Schlüssel finden.",
     "example_en": "We must find the key.",
-    "image": "images/card_191.svg",
-    "id": 191
+    "image": "images/card_191.webp",
+    "id": 191,
+    "image_tier": "B",
+    "image_path": "images/card_191.webp"
   },
   {
     "german": "die Firma",
@@ -3623,8 +3675,10 @@
     "antonym": null,
     "example_de": "Er arbeitet jetzt bei einer anderen Firma.",
     "example_en": "He works at another company now.",
-    "image": "images/card_192.svg",
-    "id": 192
+    "image": "images/card_192.webp",
+    "id": 192,
+    "image_tier": "B",
+    "image_path": "images/card_192.webp"
   },
   {
     "german": "der Fisch",
@@ -3639,8 +3693,10 @@
     "antonym": "das Fleisch",
     "example_de": "Ich esse gern Fisch. Fleisch mag ich nicht.",
     "example_en": "I like to eat fish. I do not like meat.",
-    "image": "images/card_193.svg",
-    "id": 193
+    "image": "images/card_193.webp",
+    "id": 193,
+    "image_tier": "B",
+    "image_path": "images/card_193.webp"
   },
   {
     "german": "die Flasche",
@@ -3655,8 +3711,10 @@
     "antonym": null,
     "example_de": "Eine Flasche Bier, bitte.",
     "example_en": "A bottle of beer, please.",
-    "image": "images/card_194.svg",
-    "id": 194
+    "image": "images/card_194.webp",
+    "id": 194,
+    "image_tier": "B",
+    "image_path": "images/card_194.webp"
   },
   {
     "german": "das Fleisch",
@@ -3671,8 +3729,10 @@
     "antonym": "das Gemüse",
     "example_de": "Fleisch mag ich nicht.",
     "example_en": "I do not like meat.",
-    "image": "images/card_195.svg",
-    "id": 195
+    "image": "images/card_195.webp",
+    "id": 195,
+    "image_tier": "B",
+    "image_path": "images/card_195.webp"
   },
   {
     "german": "fliegen",
