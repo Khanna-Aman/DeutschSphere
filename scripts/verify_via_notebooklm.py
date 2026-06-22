@@ -179,34 +179,38 @@ def apply_corrections(original_item, corrections):
                 fields_updated.append(f"{field}: '{old_val}' -> '{new_val}'")
                 
     # Nested verb conjugations
-    if "verb_conjugation" in corrections and original_item.get("word_class") == "Verb":
+    if "verb_conjugation" in corrections and corrections["verb_conjugation"] is not None and original_item.get("word_class") == "Verb":
         corr_conj = corrections["verb_conjugation"]
-        orig_conj = original_item.get("verb_conjugation") or {}
-        new_conj = orig_conj.copy()
-        for f in ["present_3sg", "perfekt", "is_irregular"]:
-            if f in corr_conj:
-                if corr_conj[f] != orig_conj.get(f):
-                    new_conj[f] = corr_conj[f]
-                    fields_updated.append(f"verb_conjugation.{f}: '{orig_conj.get(f)}' -> '{corr_conj[f]}'")
-        updated_item["verb_conjugation"] = new_conj
+        if isinstance(corr_conj, dict):
+            orig_conj = original_item.get("verb_conjugation") or {}
+            new_conj = orig_conj.copy()
+            for f in ["present_3sg", "perfekt", "is_irregular"]:
+                if f in corr_conj:
+                    if corr_conj[f] != orig_conj.get(f):
+                        new_conj[f] = corr_conj[f]
+                        fields_updated.append(f"verb_conjugation.{f}: '{orig_conj.get(f)}' -> '{corr_conj[f]}'")
+            updated_item["verb_conjugation"] = new_conj
         
     # Nested adjective forms
-    if "adjective_forms" in corrections and original_item.get("word_class") == "Adjektiv":
+    if "adjective_forms" in corrections and corrections["adjective_forms"] is not None and original_item.get("word_class") == "Adjektiv":
         corr_forms = corrections["adjective_forms"]
-        orig_forms = original_item.get("adjective_forms") or {}
-        new_forms = orig_forms.copy()
-        for f in ["comparative", "superlative"]:
-            if f in corr_forms:
-                if corr_forms[f] != orig_forms.get(f):
-                    new_forms[f] = corr_forms[f]
-                    fields_updated.append(f"adjective_forms.{f}: '{orig_forms.get(f)}' -> '{corr_forms[f]}'")
-        updated_item["adjective_forms"] = new_forms
+        if isinstance(corr_forms, dict):
+            orig_forms = original_item.get("adjective_forms") or {}
+            new_forms = orig_forms.copy()
+            for f in ["comparative", "superlative"]:
+                if f in corr_forms:
+                    if corr_forms[f] != orig_forms.get(f):
+                        new_forms[f] = corr_forms[f]
+                        fields_updated.append(f"adjective_forms.{f}: '{orig_forms.get(f)}' -> '{corr_forms[f]}'")
+            updated_item["adjective_forms"] = new_forms
         
     return updated_item, fields_updated
 
-def run_level_audit(level, batch_size=15, start_index=0):
+def run_level_audit(level, batch_size=15, start_index=0, concurrency=1):
     print(f"\n==================================================")
     print(f"STARTING COMPREHENSIVE AUDIT: LEVEL {level.upper()}")
+    print(f"  - Batch Size: {batch_size}")
+    print(f"  - Concurrency: {concurrency}")
     print(f"==================================================")
     
     json_path = get_wordlist_path(level)
@@ -224,74 +228,205 @@ def run_level_audit(level, batch_size=15, start_index=0):
     os.makedirs(log_dir, exist_ok=True)
     log_file_path = os.path.join(log_dir, f"audit_{level}_{time.strftime('%Y%m%d')}.log")
     log_f = open(log_file_path, "a", encoding="utf-8")
-    log_f.write(f"--- Audit Started at {time.strftime('%Y-%m-%d %H:%M:%S')} ---\n")
+    log_f.write(f"--- Audit Started at {time.strftime('%Y-%m-%d %H:%M:%S')} (Concurrency={concurrency}, BatchSize={batch_size}) ---\n")
     
     corrections_applied_count = 0
     total_audited = 0
     
+    # Generate batch entries
+    batches = []
     for i in range(start_index, len(words), batch_size):
         batch = words[i:i+batch_size]
-        batch_num = i // batch_size
-        total_batches = ((len(words) - 1) // batch_size) + 1
+        batches.append((i, batch))
         
-        print(f"\n---> Batch {batch_num + 1} of {total_batches} (Words {i} to {min(i+batch_size, len(words))} of {len(words)})...")
-        log_f.write(f"\nProcessing Batch {batch_num + 1}/{total_batches} (Index {i} to {min(i+batch_size, len(words))})\n")
-        
-        # Call NotebookLM audit with retries
-        success = False
-        for attempt in range(2):
-            try:
-                results = audit_batch(batch, level)
-                if len(results) != len(batch):
-                    print(f"    [Warning] Received {len(results)} items in audit results but batch size is {len(batch)}. Retrying...")
-                    time.sleep(5)
-                    continue
-                success = True
-                break
-            except Exception as e:
-                print(f"    [Warning] Audit batch call failed: {e}. Retrying in 15 seconds...")
-                time.sleep(15)
+    total_batches = len(batches)
+    print(f"Divided remainder of dataset into {total_batches} batches.")
+    
+    if concurrency <= 1:
+        # Exact original synchronous execution loop
+        for batch_num, (start_idx, batch) in enumerate(batches):
+            print(f"\n---> Batch {batch_num + 1} of {total_batches} (Words {start_idx} to {min(start_idx+batch_size, len(words))} of {len(words)})...")
+            log_f.write(f"\nProcessing Batch {batch_num + 1}/{total_batches} (Index {start_idx} to {min(start_idx+batch_size, len(words))})\n")
+            
+            # Call NotebookLM audit with retries
+            success = False
+            for attempt in range(2):
+                try:
+                    results = audit_batch(batch, level)
+                    if len(results) != len(batch):
+                        print(f"    [Warning] Received {len(results)} items in audit results but batch size is {len(batch)}. Retrying...")
+                        time.sleep(5)
+                        continue
+                    success = True
+                    break
+                except Exception as e:
+                    print(f"    [Warning] Audit batch call failed: {e}. Retrying in 15 seconds...")
+                    time.sleep(15)
+                    
+            if not success:
+                print(f"[FATAL] Failed to audit batch {batch_num + 1} after retries. Interrupted.")
+                print(f"[INFO] Resume with: python scripts/verify_via_notebooklm.py --level {level} --batch-size {batch_size} --start-index {start_idx}")
+                log_f.write(f"FAILED to process batch {batch_num + 1} at index {start_idx}\n")
+                log_f.close()
+                return False
                 
-        if not success:
-            print(f"[FATAL] Failed to audit batch {batch_num + 1} after retries. Interrupted.")
-            print(f"[INFO] Resume with: python scripts/verify_via_notebooklm.py --level {level} --batch-size {batch_size} --start-index {i}")
-            log_f.write(f"FAILED to process batch {batch_num + 1} at index {i}\n")
-            log_f.close()
-            return False
+            # Apply corrections
+            for idx, result in enumerate(results):
+                original_item = batch[idx]
+                german_word = original_item.get("german")
+                
+                has_corr = result.get("has_corrections", False)
+                corrections = result.get("corrections", {})
+                
+                if has_corr and corrections:
+                    updated_item, fields_changed = apply_corrections(original_item, corrections)
+                    if fields_changed:
+                        words[start_idx + idx] = updated_item
+                        corrections_applied_count += 1
+                        msg = f"  [UPDATE] '{german_word}' (ID: {original_item.get('id')}): {', '.join(fields_changed)}"
+                        print(msg)
+                        log_f.write(msg + "\n")
+                total_audited += 1
+                
+            # Save progress incrementally after every successful batch
+            try:
+                with open(json_path, "w", encoding="utf-8") as f_out:
+                    json.dump(words, f_out, indent=2, ensure_ascii=False)
+                print(f"    [SAVE] Progress saved. Cumulative updates applied: {corrections_applied_count}")
+                log_f.write(f"Batch {batch_num + 1} saved successfully. Total cumulative updates: {corrections_applied_count}\n")
+                log_f.flush()
+            except Exception as save_err:
+                print(f"    [Error] Failed to save database incremental progress: {save_err}")
+                log_f.write(f"ERROR saving batch {batch_num + 1} index progress: {save_err}\n")
+                
+            # Quick sleep to prevent hitting aggressive rate limits
+            time.sleep(3)
             
-        # Apply corrections
-        for idx, result in enumerate(results):
-            original_item = batch[idx]
-            german_word = original_item.get("german")
-            
-            has_corr = result.get("has_corrections", False)
-            corrections = result.get("corrections", {})
-            
-            if has_corr and corrections:
-                updated_item, fields_changed = apply_corrections(original_item, corrections)
-                if fields_changed:
-                    # Update word in-place in words list
-                    words[i + idx] = updated_item
-                    corrections_applied_count += 1
-                    msg = f"  [UPDATE] '{german_word}' (ID: {original_item.get('id')}): {', '.join(fields_changed)}"
-                    print(msg)
-                    log_f.write(msg + "\n")
-            total_audited += 1
-            
-        # Save progress back to the file incrementally after every successful batch
-        try:
-            with open(json_path, "w", encoding="utf-8") as f_out:
-                json.dump(words, f_out, indent=2, ensure_ascii=False)
-            print(f"    [SAVE] Progress saved. Cumulative updates applied so far: {corrections_applied_count}")
-            log_f.write(f"Batch {batch_num + 1} saved successfully. Total cumulative updates: {corrections_applied_count}\n")
-            log_f.flush()
-        except Exception as save_err:
-            print(f"    [Error] Failed to save database incremental progress: {save_err}")
-            log_f.write(f"ERROR saving batch {batch_num + 1} index progress: {save_err}\n")
-            
-        # Quick sleep to prevent hitting aggressive rate limits
-        time.sleep(5)
+    else:
+        # Multi-threaded concurrent execution loop
+        from concurrent.futures import ThreadPoolExecutor, as_completed
         
+        def process_batch(batch_info):
+            start_idx, batch = batch_info
+            b_num = (start_idx - start_index) // batch_size
+            
+            # Call NotebookLM audit with retries
+            for attempt in range(3):
+                try:
+                    # Creating a dedicated client instance per thread for thread-safety
+                    from notebooklm_tools.core.client import NotebookLMClient
+                    from notebooklm_tools.core.auth import load_cached_tokens
+                    
+                    tokens = load_cached_tokens()
+                    client = NotebookLMClient(
+                        cookies=tokens.cookies,
+                        csrf_token=tokens.csrf_token,
+                        session_id=tokens.session_id,
+                        build_label=tokens.build_label,
+                    )
+                    
+                    # Build compact entries
+                    entries = []
+                    for item in batch:
+                        e = {
+                            "german": item.get("german"),
+                            "english": item.get("english"),
+                            "gender": item.get("gender"),
+                            "plural": item.get("plural"),
+                            "theme": item.get("theme"),
+                        }
+                        if item.get("word_class") == "Verb" and item.get("verb_conjugation"):
+                            e["verb_conjugation"] = item["verb_conjugation"]
+                        entries.append(e)
+                        
+                    input_json = json.dumps(entries, ensure_ascii=False)
+                    prompt = (
+                        f"Verify these {len(batch)} {level.upper()} German words against the official Goethe-Institut wordlist in your notebook. "
+                        "Check: english translation, gender, plural, theme category, verb conjugations. "
+                        "IMPORTANT: Do NOT remove or nullify existing plurals. Only correct a plural if it is WRONG. "
+                        "If a word already has a correct plural, do NOT include plural in corrections. "
+                        f'Return a JSON array with exactly {len(batch)} objects: '
+                        '[{"german":"...","has_corrections":true/false,"corrections":{}}]. '
+                        "Only include fields that are WRONG in corrections. Return ONLY the JSON array.\n\n"
+                        f"Words:\n{input_json}"
+                    )
+                    
+                    print(f"  [THREAD] Querying batch {b_num + 1}/{total_batches} ({len(batch)} words)...")
+                    result_raw = client.query(NOTEBOOK_ID, prompt)
+                    
+                    if isinstance(result_raw, dict):
+                        answer = result_raw.get("answer", result_raw.get("text", str(result_raw)))
+                    else:
+                        answer = str(result_raw)
+                        
+                    if not answer:
+                        raise ValueError("Empty answer received from NotebookLM")
+                        
+                    # Extract JSON array
+                    audit_results = extract_json_array(answer)
+                    if len(audit_results) != len(batch):
+                        raise ValueError(f"Received {len(audit_results)} results, expected {len(batch)}")
+                        
+                    return start_idx, batch, audit_results
+                    
+                except Exception as e:
+                    wait_time = 10 * (attempt + 1)
+                    print(f"    [Warning-Thread] Batch {b_num + 1} attempt {attempt + 1}/3 failed: {type(e).__name__}: {e}. Retrying in {wait_time}s...")
+                    time.sleep(wait_time)
+            
+            raise RuntimeError(f"Failed to process batch {b_num + 1} at index {start_idx} after 3 attempts.")
+
+        print(f"Spawning thread pool with max_workers={concurrency}...")
+        futures = {}
+        with ThreadPoolExecutor(max_workers=concurrency) as executor:
+            for b_info in batches:
+                future = executor.submit(process_batch, b_info)
+                futures[future] = b_info
+                
+            for future in as_completed(futures):
+                b_info = futures[future]
+                try:
+                    start_idx, batch, results = future.result()
+                    b_num = (start_idx - start_index) // batch_size
+                    print(f"\n---> [RESOLVED] Batch {b_num + 1} of {total_batches} (Index {start_idx}). Applying corrections...")
+                    log_f.write(f"\nApplying corrections for Batch {b_num + 1}/{total_batches} (Index {start_idx})\n")
+                    
+                    # Apply corrections sequentially (main thread is safe)
+                    for idx, result in enumerate(results):
+                        original_item = batch[idx]
+                        german_word = original_item.get("german")
+                        
+                        has_corr = result.get("has_corrections", False)
+                        corrections = result.get("corrections", {})
+                        
+                        if has_corr and corrections:
+                            updated_item, fields_changed = apply_corrections(original_item, corrections)
+                            if fields_changed:
+                                words[start_idx + idx] = updated_item
+                                corrections_applied_count += 1
+                                msg = f"  [UPDATE] '{german_word}' (ID: {original_item.get('id')}): {', '.join(fields_changed)}"
+                                print(msg)
+                                log_f.write(msg + "\n")
+                        total_audited += 1
+                        
+                    # Save progress sequentially to prevent file corruptions
+                    try:
+                        with open(json_path, "w", encoding="utf-8") as f_out:
+                            json.dump(words, f_out, indent=2, ensure_ascii=False)
+                        print(f"    [SAVE] Progress saved. Cumulative updates: {corrections_applied_count}")
+                        log_f.write(f"Batch {b_num + 1} saved successfully. Cumulative updates: {corrections_applied_count}\n")
+                        log_f.flush()
+                    except Exception as save_err:
+                        print(f"    [Error] Failed to save progress: {save_err}")
+                        log_f.write(f"ERROR saving batch {b_num + 1} progress: {save_err}\n")
+                        
+                except Exception as exc:
+                    print(f"\n[FATAL] Thread execution failed: {exc}")
+                    log_f.write(f"FATAL Exception: {exc}\n")
+                    executor.shutdown(wait=False, cancel_futures=True)
+                    log_f.close()
+                    return False
+                    
     print(f"\n==================================================")
     print(f"[LEVEL COMPLETE] Finished audit for LEVEL {level.upper()}!")
     print(f"  - Total words audited: {total_audited}")
@@ -308,11 +443,12 @@ if __name__ == "__main__":
     parser.add_argument("--level", choices=["a1", "a2", "b1", "all"], default="a1", help="Level to audit.")
     parser.add_argument("--batch-size", type=int, default=5, help="Number of words to process per batch (keep small for NotebookLM query limits).")
     parser.add_argument("--start-index", type=int, default=0, help="Index of word to start from (for resuming).")
+    parser.add_argument("--concurrency", "-j", type=int, default=1, help="Number of parallel query threads (set > 1 for high-speed audits).")
     args = parser.parse_args()
     
     levels = ["a1", "a2", "b1"] if args.level == "all" else [args.level]
     for lvl in levels:
-        success = run_level_audit(lvl, batch_size=args.batch_size, start_index=args.start_index)
+        success = run_level_audit(lvl, batch_size=args.batch_size, start_index=args.start_index, concurrency=args.concurrency)
         if not success:
             sys.exit(1)
     sys.exit(0)
