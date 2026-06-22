@@ -2,7 +2,7 @@
 
 This backlog tracks implemented features, their technical specifications, and outstanding tasks for the multi-level (A1, A2, B1) German vocabulary flashcard application.
 
-> Last updated: 2026-06-14
+> Last updated: 2026-06-22
 
 ---
 
@@ -180,6 +180,9 @@ Persisted via `localStorage.current_theme`. Each theme fully overrides: body bac
   - [x] Spaced Repetition deck rating hotkeys (`1-4`) and mobile-responsive kinetic swipe-to-rate gestures
   - [x] Scrambled word-chip hotkeys (`1-9` + `Enter`) for Grammar Weaver and Deutsch-Abenteuer RPG views
   - [x] Copy-pasteable Base64 compressed IndexedDB progress backup sync keys
+  - [x] Flashcard relative image pathing hotfix inside `js/flashcards.js` and `js/quiz.js` prepending `state.currentLevel` to prevent 404 image load errors
+  - [x] SOTA High-Fidelity visual asset audit of the first 20 words inside `visual_audit_a1_report.md` (fully updated, with remaining images deferred/paused per user request)
+
 
 ### Medium-Term
 - [ ] **PDF Flashcard Export**: Client-side PDF generation for printable flashcard sheets

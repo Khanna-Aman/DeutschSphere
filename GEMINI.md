@@ -147,3 +147,5 @@ This section acts as our live implementation and audit ledger for the premium V6
 - **[x] Suffix Grammar & Interactive Overlays**: Add inline suffix lightbulb drawers on flashcards and click-to-explore overlays inside `js/immersion.js`.
 - **[x] FSRS Spaced Repetition Decay Simulator & Forecaster**: Draw decay curves $R(t) = \left(1 + \frac{t}{9 \cdot S}\right)^{-1}$ on HTML5 Canvas and wire interactive `.forecast-chip` mouseenter/mouseleave/click simulation.
 - **[x] Base64 Sync & Mobile Swipes**: Implement swipe actions on flashcards and IndexedDB Base64 backup serialization inside `js/state.js` and `js/stats.js`.
+- **[x] Flashcard Relative Image Pathing Hotfix**: Prepended the active level namespace (`state.currentLevel`) to card image sources inside `js/flashcards.js` and `js/quiz.js` to resolve 404 image load errors.
+- **[x] Premium Image Manual Audit & Roadmap Sync**: Audited the first 20 words of Level A1 (compiled inside `visual_audit_a1_report.md` with Base64 embedded inline previews) and updated all documentation, roads, and checklists to pause/defer the visual assets redos per user request.
