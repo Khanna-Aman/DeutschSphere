@@ -1,11 +1,11 @@
-// sw.js — Service Worker for A1-B1 German Vocabulary Master
+// sw.js — Service Worker for DeutschSphere (A1-B1 German)
 // Strategy: Cache-first for static assets, stale-while-revalidate for CDN resources.
 // NOTE: This SW only activates on HTTPS origins (GitHub Pages). It cannot run on file://.
 
 const CACHE_VERSION = 'v6.0.0'; // v6.0 Sprint: Premium pillars integration
-const STATIC_CACHE = `german-master-static-${CACHE_VERSION}`;
-const DATA_CACHE = `german-master-data-${CACHE_VERSION}`;
-const CDN_CACHE = `german-master-cdn-${CACHE_VERSION}`;
+const STATIC_CACHE = `deutschsphere-static-${CACHE_VERSION}`;
+const DATA_CACHE = `deutschsphere-data-${CACHE_VERSION}`;
+const CDN_CACHE = `deutschsphere-cdn-${CACHE_VERSION}`;
 
 // Core app shell files to precache on install
 const APP_SHELL = [
@@ -48,7 +48,7 @@ self.addEventListener('activate', (event) => {
     caches.keys().then(cacheNames => {
       return Promise.all(
         cacheNames
-          .filter(name => name.startsWith('german-master-') && name !== STATIC_CACHE && name !== DATA_CACHE && name !== CDN_CACHE)
+          .filter(name => (name.startsWith('german-master-') || name.startsWith('deutschsphere-')) && name !== STATIC_CACHE && name !== DATA_CACHE && name !== CDN_CACHE)
           .map(name => caches.delete(name))
       );
     }).then(() => self.clients.claim())

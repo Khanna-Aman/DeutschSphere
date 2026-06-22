@@ -1,6 +1,6 @@
 # 🤖 GEMINI.md — AI Orchestration & Engineering Directives
 
-Welcome, AI Assistant. You are reading the core structural manifesto for the **A1-B1 German Vocabulary Master Project**. This file governs your behavior, coding guidelines, and response parameters while contributing to this repository.
+Welcome, AI Assistant. You are reading the core structural manifesto for the **DeutschSphere Project** (A1-B1 German language learning SPA). This file governs your behavior, coding guidelines, and response parameters while contributing to this repository.
 
 ---
 

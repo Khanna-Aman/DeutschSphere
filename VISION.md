@@ -8,7 +8,7 @@ This document provides an honest, accurate assessment of what has been built, wh
 
 ## 📍 Current Status: Production-Ready SPA
 
-The A1-B1 German Vocabulary Master is a **fully functional, feature-rich SPA** with 6 interactive views, 3,921 verified vocabulary entries, and a comprehensive study toolkit. All core features are implemented and working.
+DeutschSphere is a **fully functional, feature-rich German language learning SPA** with 6 interactive views, 3,921 verified vocabulary entries, and a comprehensive study toolkit. All core features are implemented and working.
 
 ---
 

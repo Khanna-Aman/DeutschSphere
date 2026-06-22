@@ -1,4 +1,4 @@
-# 🇩🇪 A1-B1 German Vocabulary Master
+# 🇩🇪 DeutschSphere
 
 A zero-dependency, offline-first, ultra-premium German language learning SPA covering **3,921 vocabulary words** across CEFR levels A1, A2, and B1 — verified against the official Goethe-Institut curriculum.
 
