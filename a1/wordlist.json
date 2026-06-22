@@ -220,8 +220,10 @@
     "antonym": null,
     "example_de": "Guten Appetit!",
     "example_en": "Enjoy your meal!",
-    "image": "images/card_12.svg",
-    "id": 12
+    "image": "images/card_12.webp",
+    "id": 12,
+    "image_tier": "B",
+    "image_path": "images/card_12.webp"
   },
   {
     "german": "die Arbeit",
@@ -236,8 +238,10 @@
     "antonym": "die Freizeit",
     "example_de": "Mein Bruder sucht Arbeit.",
     "example_en": "My brother is looking for work.",
-    "image": "images/card_13.svg",
-    "id": 13
+    "image": "images/card_13.webp",
+    "id": 13,
+    "image_tier": "B",
+    "image_path": "images/card_13.webp"
   },
   {
     "german": "arbeiten",
