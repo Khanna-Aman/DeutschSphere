@@ -528,17 +528,26 @@ def generate_metaphor_prompt(word_de, word_en, word_class):
     Resolves the German word class and details to build a highly descriptive 
     visual prompt tailored for SOTA Cutting-Edge 3D Glossy and Tactile assets.
     """
-    # Try exact match with lowercase original word (retaining articles) or stripped hyphen
-    de_exact = word_de.lower().strip().rstrip('-')
-    de_clean = re.sub(r'^(der|die|das)\s+', '', word_de.lower()).strip().rstrip('-')
+    # Try exact match with lowercase original word (retaining articles)
+    de_exact = word_de.lower().strip()
+    de_clean = re.sub(r'^(der|die|das)\s+', '', word_de.lower()).strip()
     
-    # Check if we have a hand-curated metaphorical prompt
-    if de_exact in METAPHOR_MAP:
-        metaphor = METAPHOR_MAP[de_exact]
-    elif de_clean in METAPHOR_MAP:
-        metaphor = METAPHOR_MAP[de_clean]
-    else:
-        # Dynamic fallback prompts based on word classes (using the new SOTA glossy style)
+    metaphor = None
+    for item in [de_exact, de_clean]:
+        if item in METAPHOR_MAP:
+            metaphor = METAPHOR_MAP[item]
+            break
+            
+    if not metaphor:
+        de_exact_strip = de_exact.rstrip('-')
+        de_clean_strip = de_clean.rstrip('-')
+        for item in [de_exact_strip, de_clean_strip]:
+            if item in METAPHOR_MAP:
+                metaphor = METAPHOR_MAP[item]
+                break
+                
+    # If still not found, use dynamic fallback prompts based on word classes
+    if not metaphor:
         if word_class == "Nomen":
             metaphor = f"a spectacular, highly-detailed 3D digital art model representing the object {word_en}"
         elif word_class == "Verb":
