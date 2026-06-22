@@ -1247,8 +1247,10 @@
     "antonym": null,
     "example_de": "Kannst du mir ein Beispiel sagen?",
     "example_en": "Can you give me an example?",
-    "image": "images/card_66.svg",
-    "id": 66
+    "image": "images/card_66.webp",
+    "id": 66,
+    "image_tier": "B",
+    "image_path": "images/card_66.webp"
   },
   {
     "german": "bekannt",
@@ -1266,8 +1268,10 @@
     "antonym": "unbekannt",
     "example_de": "Picasso ist sehr bekannt.",
     "example_en": "Picasso is very famous.",
-    "image": "images/card_67.svg",
-    "id": 67
+    "image": "images/card_67.webp",
+    "id": 67,
+    "image_tier": "B",
+    "image_path": "images/card_67.webp"
   },
   {
     "german": "bekommen",
@@ -1286,8 +1290,10 @@
     "antonym": "geben",
     "example_de": "Haben Sie meinen Brief bekommen? Was bekommen Sie? Dieses Medikament bekommen Sie in der Apotheke.",
     "example_en": "Did you receive my letter? What are you getting? You get this medicine at the pharmacy.",
-    "image": "images/card_68.svg",
-    "id": 68
+    "image": "images/card_68.webp",
+    "id": 68,
+    "image_tier": "B",
+    "image_path": "images/card_68.webp"
   },
   {
     "german": "benutzen",
@@ -1306,8 +1312,10 @@
     "antonym": null,
     "example_de": "Die Aufzüge bitte nicht benutzen!",
     "example_en": "Please do not use the elevators!",
-    "image": "images/card_69.svg",
-    "id": 69
+    "image": "images/card_69.webp",
+    "id": 69,
+    "image_tier": "B",
+    "image_path": "images/card_69.webp"
   },
   {
     "german": "der Beruf",
@@ -1322,8 +1330,10 @@
     "antonym": "die Freizeit",
     "example_de": "Was sind Sie von Beruf? Was ist Ihr Beruf?",
     "example_en": "What is your profession? What is your job?",
-    "image": "images/card_70.svg",
-    "id": 70
+    "image": "images/card_70.webp",
+    "id": 70,
+    "image_tier": "B",
+    "image_path": "images/card_70.webp"
   },
   {
     "german": "besetzt",
@@ -1341,8 +1351,10 @@
     "antonym": "frei",
     "example_de": "Die Nummer ist immer besetzt. Der Platz ist besetzt.",
     "example_en": "The number is always busy. The seat is taken.",
-    "image": "images/card_71.svg",
-    "id": 71
+    "image": "images/card_71.webp",
+    "id": 71,
+    "image_tier": "B",
+    "image_path": "images/card_71.webp"
   },
   {
     "german": "besichtigen",
@@ -1361,8 +1373,10 @@
     "antonym": null,
     "example_de": "Ich möchte gern den Dom besichtigen.",
     "example_en": "I would like to visit the cathedral.",
-    "image": "images/card_72.svg",
-    "id": 72
+    "image": "images/card_72.webp",
+    "id": 72,
+    "image_tier": "B",
+    "image_path": "images/card_72.webp"
   },
   {
     "german": "besser",
@@ -1380,8 +1394,10 @@
     "antonym": "schlechter",
     "example_de": "Es geht mir schon besser.",
     "example_en": "I am already feeling better.",
-    "image": "images/card_73.svg",
-    "id": 73
+    "image": "images/card_73.webp",
+    "id": 73,
+    "image_tier": "B",
+    "image_path": "images/card_73.webp"
   },
   {
     "german": "best-",
@@ -1399,8 +1415,10 @@
     "antonym": "schlechtest-",
     "example_de": "Am besten treffen wir uns morgen.",
     "example_en": "It is best if we meet tomorrow.",
-    "image": "images/card_74.svg",
-    "id": 74
+    "image": "images/card_74.webp",
+    "id": 74,
+    "image_tier": "B",
+    "image_path": "images/card_74.webp"
   },
   {
     "german": "bestellen",
@@ -1419,8 +1437,10 @@
     "antonym": null,
     "example_de": "Wir möchten bestellen, bitte. Dieses Buch haben wir nicht - sollen wir es für Sie bestellen?",
     "example_en": "We would like to order, please. We do not have this book - should we order it for you?",
-    "image": "images/card_75.svg",
-    "id": 75
+    "image": "images/card_75.webp",
+    "id": 75,
+    "image_tier": "B",
+    "image_path": "images/card_75.webp"
   },
   {
     "german": "besuchen",

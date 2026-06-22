@@ -97,7 +97,31 @@ METAPHOR_MAP = {
     "bar": "A thick, neat stack of vibrant green 3D cash banknotes with glowing golden bands, and shiny golden coins spilling around them, floating suspended in mid-air, front-and-center",
     "bauch": "A stylized, cute 3D anatomical silhouette of a stomach, glowing with a warm pink internal energy, surrounded by floating golden sparkles, representing comfort and health, floating in mid-air, front-and-center",
     "baum": "A beautiful, miniature 3D bonsai-style oak tree with vibrant emerald-green leaves and a polished rustic brown trunk, floating suspended in mid-air, front-and-center",
-    "beamte": "A stylized 3D stamp icon made of gold and chrome, stamping a giant official document with a shiny green wax seal, representing official duties, floating in mid-air, front-and-center"
+    "beamte": "A stylized 3D stamp icon made of gold and chrome, stamping a giant official document with a shiny green wax seal, representing official duties, floating in mid-air, front-and-center",
+    "bedeuten": "A large, glossy 3D golden question mark reflecting into a glowing lightbulb, with a shining equal sign (=) connecting them, representing meaning, floating in mid-air, front-and-center",
+    "beginnen": "A prominent green 3D START race-track flag waving, with a bright red ribbon being sliced by gold scissors, representing beginning, floating in mid-air, front-and-center",
+    "beide": "Two identical, high-gloss 3D smiling cherries attached to a single green stem, reflecting a glowing soft-touch pink and green aesthetic, representing both, floating in mid-air, front-and-center",
+    "bein": "A sleek, stylized 3D sports leg mannequin wearing a glowing neon pink running shoe, taking a powerful stride, floating in mid-air, front-and-center",
+    "beispiel": "A giant 3D glossy chalk blackboard displaying a simple, beautifully rendered math equation like 1 + 1 = 2 with a golden star sticker, representing an example, floating in mid-air, front-and-center",
+    "bekannt": "A spectacular, highly-polished 3D golden star reflecting glowing spotlights from below, completely wordless, representing fame, floating in mid-air, front-and-center",
+    "bekommen": "A cute, high-gloss 3D present gift box wrapped in a pink ribbon, with a pair of happy hands reaching up to receive it, floating in mid-air, front-and-center",
+    "benutzen": "A beautiful 3D glossy hand using a giant silver key to unlock a high-tech glowing electronic lock, representing active use, floating in mid-air, front-and-center",
+    "beruf": "A professional collage of three elegant 3D glossy tools: a chef's hat, a stethoscope, and a hard hat, beautifully arranged and floating together, representing job and profession, floating in mid-air, front-and-center",
+    "besetzt": "A stylized, glossy 3D toilet door lock with the indicator showing a bold, bright red locked icon, completely wordless, with a small brass key, floating in mid-air, front-and-center",
+    "besichtigen": "A cute 3D tourist character looking through large, high-gloss 3D binoculars, with a mini glowing 3D Eiffel Tower visible inside the reflection of the lenses, floating in mid-air, front-and-center",
+    "besser": "A shiny 3D bar graph with three bars, the last bar being green, tall, and capped with a glossy smiling face emoji, with a golden thumbs-up next to it, representing feeling better, floating in mid-air, front-and-center",
+    "best": "A towering, highly-polished 3D golden trophy cup with a sparkling blue diamond embedded, surrounded by golden confetti, representing the best, floating in mid-air, front-and-center",
+    "bestellen": "A sleek 3D smartphone displaying a large floating shopping cart icon made of glowing gold, with a giant friendly 3D hand tapping a big blank glossy orange button containing a simple white arrow icon, completely wordless, representing ordering, floating in mid-air, front-and-center",
+    "besuchen": "A friendly 3D character ringing a shiny brass doorbell of a warm, welcoming house with a glowing window, representing visiting a friend, floating in mid-air, front-and-center",
+    "bett": "A luxurious and ultra-comfy 3D bed with a fluffy pink duvet, fluffy white pillows, and a polished warm wooden frame, floating slightly tilted, 100% bed essence, front-and-center",
+    "bezahlen": "A sleek, high-gloss 3D wireless payment terminal (POS machine) with a vibrant blue credit card hovering above it, displaying golden electromagnetic waves, representing payment, floating in mid-air, front-and-center",
+    "bier": "A giant, highly polished 3D glass mug overflowing with golden amber beer and rich, creamy white foam spilling down the sides, floating in mid-air, front-and-center, 100% beer essence",
+    "bild": "An exquisite, ornate golden 3D picture frame containing a beautiful vibrant sunset landscape painting, floating suspended in mid-air, front-and-center",
+    "billig": "A bright yellow 3D price tag with a huge red SALE -90% stamped on it, next to a tiny gold coin, representing cheap price, floating in mid-air, front-and-center",
+    "birne": "A beautiful, highly detailed 3D green pear with a glossy surface and a tiny brown stem with a single emerald-green leaf, floating suspended in mid-air, front-and-center",
+    "bis": "A winding 3D road segment ending abruptly at a glowing, transparent red barrier wall, representing a boundary or endpoint, floating in mid-air, front-and-center",
+    "bisschen": "A cute 3D measuring spoon holding a single, glowing golden grain or tiny drop of nectar, representing a tiny amount, floating in mid-air, front-and-center",
+    "bitten": "A pair of cute, stylized 3D glossy hands held together in a warm, polite praying or pleading gesture, surrounded by soft self-illuminating sparkles, floating in mid-air, front-and-center"
 }
 
 def remove_black_background(img, threshold=50, feather=True):
@@ -242,8 +266,8 @@ def generate_metaphor_prompt(word_de, word_en, word_class):
     Resolves the German word class and details to build a highly descriptive 
     visual prompt tailored for SOTA Cutting-Edge 3D Glossy and Tactile assets.
     """
-    # Clean articles for dictionary lookups
-    de_clean = re.sub(r'^(der|die|das)\s+', '', word_de.lower()).strip()
+    # Clean articles and strip trailing hyphens for dictionary lookups
+    de_clean = re.sub(r'^(der|die|das)\s+', '', word_de.lower()).strip().rstrip('-')
     
     # Check if we have a hand-curated metaphorical prompt
     if de_clean in METAPHOR_MAP:

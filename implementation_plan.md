@@ -1,94 +1,60 @@
-# SOTA Universal 3D Claymation & Lottie Integration Plan (Phase 2 Visual Strategy)
+# SOTA Universal 3D Glossy Tactile Visuals & Level Transition Plan (V6.0 Sprint)
 
-This document provides the definitive, design-locked engineering roadmap for the **Universal 3D Claymation Visuals & Lottie Sensory Integration**. It is architected to run 100% offline-first inside our zero-dependency Single Page Application, leveraging Google Developer Program credits for bulk offline image generation.
-
----
-
-## 💎 User Review Status
-
-> [!IMPORTANT]
-> **Complete Offline-First Integrity**: The application shell, the entire 3,921 WebP 3D claymation visual set, dynamic SVGs, and Lottie animations will run completely offline-first. The Service Worker will lazily pre-cache assets by level to guarantee instantaneous local study sessions.
-> **Google credits Imagen 3 Integration**: The generation pipeline utilizes the modern **Google GenAI SDK (`google-genai`)** with Google's SOTA **`imagen-3.0-generate-002`** model. No runtime billing is introduced.
-
-### Design Decisions Locked In:
-1. **Slow & High-Quality Batches**: Slicing the image generation to run super-slow and thoroughly in controlled batches of 5 to 10 words at a time to monitor progress, verify quality, and avoid rate limiting.
-2. **Contextual Metaphor Resolver**: Abstract grammatical words are mapped to highly specific 3D claymation metaphors (e.g. ball-under-box for "unter") to guarantee high semantic retention.
-3. **Pillow Auto-Trim & Centering**: Generated images are alpha-masked from solid black to transparent, auto-trimmed using PIL's bounding box (`getbbox()`), and centered with a clean 5% padding.
-4. **Premium Dual-Engine Sensory effects**: A beautiful integration of local Lottie JSON players, with an instantaneous fallback to a high-performance CSS/Canvas particle explosion when offline or if Lottie is unavailable.
+This document defines our definitive visual audit and execution roadmap for generating the remaining German Vocabulary SPA assets across A1, A2, and B1. It is designed to run under a persistent `/goal` loop with strict pacing, manual visual review, and a zero-tolerance policy for text/spelling defects.
 
 ---
 
-## 🚀 Architectural Blueprint & Technical Strategy
+## 💎 Design System & Visual Style Verification
 
-```mermaid
-graph TD
-    A[scripts/generate_assets.py] -->|1. Contextual Metaphor| B[Imagen 3 API via google-genai]
-    B -->|2. High-res PNG with Black BG| C[Pillow Post-Processor]
-    C -->|3. Chroma-Key Transparency| D[Alpha Masking, BoxBlur Feathering, getbbox Auto-Trim]
-    D -->|4. Downsample & Compress| E[WebP <12KB images/card_ID.webp]
-    
-    A -->|5. Regex SVG Parser| F[Dynamic CSS SVGs images/card_ID.svg]
-    A -->|6. JSON Exporter| G[a1/a2/b1 wordlists expanded]
-    
-    H[index.html] -->|Loads async| I[Airbnb lottie-web player]
-    J[js/state.js] -->|Trigger| K[window.triggerPremiumAnimation]
-    K -->|Option A: Lottie JSON| L[lottie-container rendering]
-    K -->|Option B: Fallback Canvas/CSS| M[Instant CSS Particle Blast]
-    K -->|Sync Web Audio| N[audio.js volume-scaled chimes]
-    K -->|Sync Haptics| O[navigator.vibrate]
-```
+### 1. Pivot from Muddy "Clay" to SOTA Glossy Tactile 3D Art
+The visual aesthetic has been upgraded to a cutting-edge **SOTA Glossy & Tactile 3D Digital Art** style. This completely deprecates raw matte "claymation" in favor of:
+* **Vibrant Glossy Enamel**: High-gloss, shiny surfaces with vivid colors.
+* **Translucent Glowing Glassmorphism**: Internal refractive glass layers with glowing edges.
+* **Metallic Chrome Accents**: Polished silver and gold chrome reflections.
+* **Soft-Touch Matte Resin**: Tactile, premium resin bases.
+
+### 2. Essence Extraction Constraints (Front and Center)
+To ensure the card's concept is immediately recognizable, every prompt forces the subject to be **huge and front-and-center, occupying 85%+ of the canvas**, with zero distracting background clutter. 
+
+### 3. Absolute Wordless and Text-Free Enforcement
+To support language immersion and avoid weird AI-generated gibberish/typos, all cards must be **completely wordless (zero letters, zero numbers, zero text)**. Any card generating letters (e.g. "FAME" on a star or "OCCUPIEID" on a sign) is immediately rejected and regenerated with a non-text visual metaphor.
 
 ---
 
-## 📦 Proposed Changes & Implementations
+## 🚀 Step-by-Step V6.0 Execution Roadmap
 
-### 1. The Offline AI Generation Pipeline & Metaphor Engine
+### Phase 1: Force Regenerate and Fix Audited Cards (A1)
+We will immediately regenerate the following cards to correct text and prompt-mismatch defects:
+1. **Card 67 (`bekannt` - famous)**: Remove the text "FAME" from the star plaque; replace it with a glowing golden Hollywood-style star spotlight, completely wordless.
+2. **Card 71 (`besetzt` - busy/occupied)**: Remove the typo "OCCUPIEID" from the bathroom indicator; replace it with a purely graphic red circular locked padlock icon, completely wordless.
+3. **Card 74 (`best-` - the best)**: Resolve adjective form mapping so `"best-"` correctly matches the hand-curated metaphor of a spectacular golden trophy cup with a sparkling blue diamond.
+4. **Card 75 (`bestellen` - to order)**: Remove the "ORDER" text from the button; replace it with a giant golden finger tapping a shopping cart checkout icon, completely wordless.
 
-#### [MODIFY] [generate_assets.py](file:///d:/Aman/_________Projects/A1-B1_German/scripts/generate_assets.py)
-We will completely overwrite the Python pipeline `scripts/generate_assets.py` to act as an automated, pause-resumable batch generation engine:
-1. **Google GenAI Client**: Initialize via `client = genai.Client()` leveraging `os.environ["GEMINI_API_KEY"]`.
-2. **Batch Control**: Accept `--limit` (default 5 or 10) and `--level` (a1, a2, b1) and `--force` arguments. It will skip words that already have generated `.webp` files in the directory to allow easy resume.
-3. **Contextual Metaphor Resolver**: Analyze word class, English translation, and German spelling to automatically map abstract terms to consistent, intuitive SOTA physical metaphors.
-4. **Black Chroma-Key Alpha Mask**: Convert to RGBA, perform high-speed color filtering (`r, g, b < 20`) to replace black with transparent.
-5. **Auto-Trim & 5% Padding**: Run `img.getbbox()` on the transparent image, crop to the active bounding box, and center the cropped object inside a square canvas with a comfortable 5% padding border.
-6. **SOTA WebP Compression**: Downsample the transparent PNG to `256x256` and save it at **WebP (quality 82)**, keeping each custom icon **under 12KB**.
-7. **Database Expansion**: Iterate through wordlists and update schema fields (`image_tier`, `image_path`, `image`).
+### Phase 2: Systematic Batch Generation Loop (Level A1: Cards 76 to 640)
+We will run the pipeline in paced batches (10 to 15 cards per run) using a strict loop:
+1. **Generate**: Run `scripts/generate_assets.py` to generate the WebPs.
+2. **Manual Audit**: Use the browser agent or `view_file` to review every generated card.
+3. **Regenerate Imperfect Cards**: If any card contains text, has an off-center subject, or fails to capture the word's essence, refine its metaphor mapping in `generate_assets.py` and re-run with `--force`.
+4. **Commit**: Cleanly stage and commit verified batches in atomic segments of 10-20 images with a precise semantic commit message (e.g. `feat(database): integrate cards 76 to 90 SOTA 3D WebP assets`).
 
----
-
-### 2. SOTA Sensory Lottie Micro-Animations
-
-#### [MODIFY] [index.html](file:///d:/Aman/_________Projects/A1-B1_German/index.html)
-* **Airbnb Lottie Player**: Embed the lightweight `lottie-web` script asynchronously.
-* **Dynamic Overlay Container**: Add a fullscreen, click-through Lottie micro-animation player container:
-  ```html
-  <div id="lottie-container" class="fixed inset-0 pointer-events-none z-[58] flex items-center justify-center overflow-hidden"></div>
-  ```
-
-#### [NEW] [download_lottie.py](file:///d:/Aman/_________Projects/A1-B1_German/scripts/download_lottie.py) (Helper Script)
-A helper script to fetch lightweight, high-performance Lottie JSON files locally into `lottie/streak.json`, `lottie/level-complete.json`, and `lottie/achievement.json`.
-
-#### [MODIFY] [js/state.js](file:///d:/Aman/_________Projects/A1-B1_German/js/state.js)
-* **Sensory Integration Manager**: Implement `window.triggerPremiumAnimation(type)`.
-* **Fallback particle engine**: If `lottie` is not loaded or fails, create dynamic colored 2D canvas/CSS particle explosions mimicking a premium burst.
-* **Synchronized Web Audio & Haptics**: Scale chimes based on `state.sfxVolume` and trigger precise `navigator.vibrate` rhythms.
+### Phase 3: Automatic Level Transition (A2 and B1)
+Once Level A1 is 100% complete:
+1. Transition automatically to `--level a2` and run its batch-generation and audit loop.
+2. Once A2 is complete, transition automatically to `--level b1`.
+3. Complete the entire database with over 3,900 verified premium cards.
 
 ---
 
-### 3. Progressive Lazy Pre-Caching
-
-#### [MODIFY] [sw.js](file:///d:/Aman/_________Projects/A1-B1_German/sw.js)
-* **Level-Based Lazy Pre-caching**: Update the Service Worker to pre-cache the images of the *selected* level only upon switching levels, preserving minimal initial application size.
-
----
-
-## 🧪 Verification & QA Checklist
+## 🛠️ Verification & QA Checklist
 
 ### Automated Script Validation
-- [ ] Confirm `generate_assets.py` successfully connects to Imagen 3, processes 5-10 word slices, and writes cropped, alpha-masked transparent WebP assets.
-- [ ] Verify that updated JSON catalogs remain completely valid arrays without schema pollution.
+- [x] Confirm `generate_assets.py` handles `.rstrip('-')` for adjectives.
+- [ ] Ensure the connected black chroma-key floodfill and dynamic shadow-wiper successfully clean backgrounds.
 
-### Frontend Quality Checklist
-- [ ] Confirm the Lottie animation layer overlays correctly over cards during streak-updates, achievements, or level completions.
-- [ ] Verify CSS/Canvas particle explosion fallbacks trigger flawlessly and frame-sync with SFX scaling.
-- [ ] Verify Service Worker lazily caches level images on demand.
+### Visual Quality Audit
+- [ ] Review every card WebP using `view_file` to verify:
+  - 100% wordless (no text/letters).
+  - Subject is huge, filling 85% of the frame.
+  - SOTA glossy tactile materials render perfectly.
+  - Transparent backdrop is clean with no floating black artifacts or disconnected shadows.
+
