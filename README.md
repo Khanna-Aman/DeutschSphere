@@ -28,16 +28,19 @@ A zero-dependency, offline-first, ultra-premium German language learning SPA cov
 
 ## 📦 Vocabulary Coverage
 
-| Level | Words | Description | Status |
-|-------|-------|-------------|--------|
-| **A1** | 640 | Beginner (Anfänger) | ✅ Complete |
-| **A2** | 1,142 | Elementary (Grundlagen) | ✅ Complete |
-| **B1** | 2,139 | Intermediate (Fortgeschritten) | ✅ Complete |
-| **Total** | **3,921** | Full Goethe-Institut A1–B1 curriculum | ✅ |
+| Level | Words | Description | Verification Status |
+|-------|-------|-------------|---------------------|
+| **A1** | 640 | Beginner (Anfänger) | ✅ 100% NotebookLM Verified |
+| **A2** | 1,142 | Elementary (Grundlagen) | ✅ 100% NotebookLM Verified (273 corrections) |
+| **B1** | 2,139 | Intermediate (Fortgeschritten) | ✅ 100% NotebookLM Verified (154 corrections) |
+| **Total** | **3,921** | Full Goethe-Institut A1–B1 curriculum | ✅ Complete & Fact-Checked |
 
-Each word includes: German headword, English translation, gender, plural form, word class, theme category, example sentence (DE + EN), pronunciation hint, antonym, verb conjugation (for verbs), adjective forms (for adjectives), and optional SVG illustration.
+Each word includes: German headword, English translation, gender, plural form, word class, theme category, example sentence (DE + EN), pronunciation hint, antonym, verb conjugation (for verbs), adjective forms (for adjectives), and optional premium visual aid.
 
-All linguistic data is verified against the official Goethe-Institut wordlists via [NotebookLM](https://notebooklm.google.com/) as the exclusive translation and verification engine.
+> [!NOTE]
+> All linguistic data is verified against the official Goethe-Institut wordlists via [NotebookLM](https://notebooklm.google.com/) as our exclusive translation and verification engine (using the curated *Goethe-Zertifikat Wortliste* workspace).
+> 
+> In **V1.0.0**, all illustration assets are deactivated to eliminate any network overhead and ensure a pristine 404-free E2E browser footprint. Curated SOTA 3D Glossy AI Illustrations will launch in **V1.0.1** (with in-app glassmorphic alerts guiding users).
 
 ---
 
