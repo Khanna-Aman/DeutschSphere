@@ -24,66 +24,73 @@ except ImportError:
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
 
-# Meta Dictionary of highly specific claymation metaphors for abstract / functional words
+# Meta Dictionary of highly specific SOTA 3D metaphors for abstract / functional words
 METAPHOR_MAP = {
     # Prepositions
-    "an": "a cute 3D clay character sticking a vibrant sticky note onto a green wooden wall",
-    "auf": "a cute 3D clay kitten sitting on top of a comfortable wooden stool",
+    "an": "a cute 3D character sticking a vibrant sticky note onto a green wooden wall",
+    "auf": "a cute 3D kitten sitting on top of a comfortable wooden stool",
     "in": "a bright red toy ball nestled inside a transparent glass jar",
     "unter": "a red toy ball sitting snugly directly under a rustic blue wooden box",
-    "über": "a tiny toy plane flying over a cozy clay mountain peak",
+    "über": "a tiny toy plane flying over a cozy mountain peak",
     "neben": "a red toy ball resting right next to a small blue wooden box",
-    "vor": "a friendly 3D clay character standing proudly in front of a rustic wooden door",
-    "hinter": "a cute 3D clay character peeking out from behind a large green tree trunk",
+    "vor": "a friendly 3D character standing proudly in front of a rustic wooden door",
+    "hinter": "a cute 3D character peeking out from behind a large green tree trunk",
     "zwischen": "a bright yellow ball sitting exactly between two tall blue wooden boxes",
-    "bei": "a cozy small clay cottage sitting right beside a tall beautiful wooden tower",
-    "mit": "a pair of red and blue clay socks folded snugly together",
-    "ohne": "a cute clay coffee mug with a puzzle piece missing from its side",
-    "nach": "a friendly toy clay train pointing forward along a tiny track towards a distant destination",
-    "von": "a tiny clay envelope floating out from a small wooden mailbox",
-    "zu": "a friendly clay character walking toward a bright shining golden star",
+    "bei": "a cozy small cottage sitting right beside a tall beautiful wooden tower",
+    "mit": "a pair of red and blue socks folded snugly together",
+    "ohne": "a cute coffee mug with a puzzle piece missing from its side",
+    "nach": "a friendly toy train pointing forward along a tiny track towards a distant destination",
+    "von": "a tiny envelope floating out from a small wooden mailbox",
+    "zu": "a friendly character walking toward a bright shining golden star",
     "durch": "a small toy car driving happily through a green archway tunnel",
-    "gegen": "two cute clay balls gently bumping against each other, action style",
+    "gegen": "two cute balls gently bumping against each other, action style",
     "um": "a small ring of colorful wooden toy blocks positioned around a tall red candle",
-    "aus": "a cute, smiling 3D clay bird happily popping out of a beautiful rustic wooden cuckoo clock",
-    "aus sein": "a cute 3D clay wall light switch in a pink frame, with the toggle flipped down to the off position, cartoon style",
+    "aus": "a cute, smiling 3D bird happily popping out of a beautiful rustic wooden cuckoo clock",
+    "aus sein": "a cute 3D wall light switch in a pink frame, with the toggle flipped down to the off position, cartoon style",
 
     # Conjunctions
     "weil": "two beautiful interlocking toy puzzle pieces or mechanical gears representing cause-and-effect",
-    "und": "two friendly clay characters happily holding hands",
+    "und": "two friendly characters happily holding hands",
     "aber": "a small scale balance with a bright shiny diamond on one side and a heavy grey stone on the other side",
     "oder": "a wooden signpost with two arrows pointing in different left and right directions",
-    "dass": "a small clay scroll containing a secret scroll message, cartoon style",
+    "dass": "a small scroll containing a secret scroll message, cartoon style",
     "wenn": "a glowing golden key sitting next to a tiny locked chest, representing if-then condition",
-    "ob": "a cute clay character scratching its head thoughtfully while looking at a question mark",
+    "ob": "a cute character scratching its head thoughtfully while looking at a question mark",
 
     # Pronouns & Greetings
-    "ich": "a single cute clay character pointing smilingly at itself",
-    "du": "a friendly clay character pointing forward in a warm greeting",
-    "wir": "a small group of diverse friendly clay characters smiling and waving together",
-    "ihr": "a group of clay characters standing together, looking friendly",
-    "sie": "two friendly clay women waving",
-    "es": "a small glowing abstract clay box representing an object, neon glow",
-    "hallo": "a cheerful 3D clay character smiling and waving its hand high in the air",
-    "tschüss": "a cute clay character smiling and waving goodbye as it walks away",
-    "ausflug": "a tiny cute 3D clay backpacker character happily hiking along a miniature clay mountain path, carrying a tiny blue backpack, cartoon style",
-    "ausfüllen": "a cute 3D clay character smilingly holding a giant pencil, filling in a checklist form, cartoon style",
-    "ausgang": "a bright green 3D clay exit sign with a running figure, glowing softly, cartoon style",
-    "auskunft": "a stylized 3D clay desk booth with a large glowing golden letter 'i' above it, cartoon style",
-    "ausland": "a beautiful 3D clay globe showing colorful flags and tiny cute airplanes flying around it, cartoon style",
-    "ausländer": "a cute 3D character holding a colorful travel backpack and a map, standing in front of a famous global landmark cuckoo clock under a smiling sun",
+    "ich": "a single cute character pointing smilingly at itself",
+    "du": "a friendly character pointing forward in a warm greeting",
+    "wir": "a small group of diverse friendly characters smiling and waving together",
+    "ihr": "a group of characters standing together, looking friendly",
+    "sie": "two friendly women waving",
+    "es": "a small glowing abstract box representing an object, neon glow",
+    "hallo": "a cheerful 3D character smiling and waving its hand high in the air",
+    "tschüss": "a cute character smiling and waving goodbye as it walks away",
+    
+    # Hand-curated SOTA 3D inherently floating icons for Cards 31-55
+    "ausflug": "a tiny cute 3D backpacker character happily hiking along a miniature mountain path, carrying a tiny blue backpack, cartoon style",
+    "ausfüllen": "a cute 3D character smilingly holding a giant pencil, filling in a checklist form, cartoon style",
+    "ausgang": "a bright green 3D exit sign with a running figure, glowing softly, cartoon style",
+    "auskunft": "a stylized 3D desk booth with a large glowing golden letter 'i' above it, cartoon style",
+    "ausland": "A spectacular glowing 3D holographic globe of planet Earth, floating in mid-air, surrounded by miniature colorful airplanes flying in glowing circular orbits, premium high-gloss SOTA 3D icon",
+    "ausländer": "A cute, ultra-premium 3D explorer character floating happily in mid-air, wearing a beautiful high-gloss travel backpack and holding a glowing golden compass, surrounded by mini floating colorful passport stamps and clouds, front-facing, front-and-center",
     "ausländisch": "a pile of vibrant, colorful 3D toy bank notes and golden coins from different countries, cartoon style",
-    "ausmachen": "a cute 3D hand pressing down on a giant glossy red power button, turning it off, cartoon style",
-    "aussage": "a giant, glossy 3D speech bubble with a bright green checkmark on its face, cartoon style",
-    "aussehen": "a cute 3D character happily looking at their own smiling reflection in a beautiful vintage standing mirror, cartoon style",
-    "aussteigen": "a cute 3D character stepping out of a cute yellow toy train or bus door onto a platform, cartoon style",
-    "ausweis": "a beautiful, detailed 3D plastic identification card with a cute cartoon face photo and colored seals, cartoon style",
-    "auto": "a beautiful, shiny red 3D toy car with a cute smile, cartoon style",
-    "autobahn": "a long, winding grey 3D highway stretching forward with white road lines and a green highway overhead sign, cartoon style",
-    "automat": "a colorful red 3D vending machine or ticket machine with a glowing screen and a ticket sliding out of its slot, cartoon style"
+    "ausmachen": "A massive, ultra-glossy 3D power button icon, glowing with a soft pink power symbol, floating in mid-air, with a cute glossy 3D hand pressing it down. High-gloss translucent glass and metallic elements, front-facing, front-and-center",
+    "aussage": "A massive, ultra-glossy vibrant pink 3D speech bubble containing a glowing neon-green 3D checkmark symbol, floating suspended in a pitch-black studio void, front-facing, front-and-center",
+    "aussehen": "A spectacular, glossy 3D hand-held mirror with a beautiful golden metallic handle, floating in mid-air, reflecting a cute smiling 3D character face with sparkling stars around it, front-and-center, premium SOTA asset",
+    "aussteigen": "A futuristic, glossy 3D train door made of translucent glowing glass, sliding open, with a cute stylized 3D shoe stepping out onto a tiny floating platform, front-facing, front-and-center",
+    "ausweis": "A massive, ultra-premium 3D plastic identity card with a cute cartoon face photo, colorful metallic glowing security seals, and translucent glossy layers, floating suspended in mid-air, front-and-center",
+    "auto": "A beautiful, compact, ultra-glossy red toy car with giant cute smiling headlights and silver wheels, floating slightly tilted in mid-air, front-and-center, 100% car essence",
+    "autobahn": "A giant glowing green overhead highway sign with white arrows pointing forward, floating in mid-air above a tiny, curving high-gloss road segment, front-and-center, premium SOTA 3D icon",
+    "automat": "A vibrant retro-futuristic red 3D ticket machine, with a high-gloss glowing screen, golden coins slot, and a colorful ticket half-slid out of its dispenser, floating in mid-air, front-and-center",
+    "automatisch": "A series of three beautiful, interlocking mechanical gears made of glossy colorful plastic and glowing neon accents, turning automatically, floating in mid-air, front-and-center",
+    "baby": "A giant, cute 3D baby pacifier made of translucent pink glossy silicone and a shining gold ring, with a cute glowing baby rattle floating next to it, front-and-center, 100% baby essence",
+    "bad": "A sleek, glowing white 3D bathtub filled with high-gloss translucent water bubbles and a cute yellow rubber duck floating inside, floating in mid-air, front-and-center",
+    "baden": "A cute 3D character wearing glossy red swimming goggles, splashing happily in a giant splash of translucent crystal-clear blue water drops, floating in mid-air, front-and-center",
+    "bahn": "A highly polished, high-gloss red 3D bullet train cabin speeding forward out of a glowing tunnel arch, floating slightly tilted, front-and-center"
 }
 
-def remove_black_background(img, threshold=25, feather=True):
+def remove_black_background(img, threshold=50, feather=True):
     """
     Applies high-speed chroma-keying to convert solid black backgrounds to transparent.
     Uses an advanced floodfill-based seed extraction to protect internal black pixels 
@@ -101,26 +108,37 @@ def remove_black_background(img, threshold=25, feather=True):
     b_mask = b.point(lambda p: 255 if p < threshold else 0)
     
     # Bitwise AND to find pixels that are dark in R, G, AND B
-    # Since r_mask, g_mask, b_mask are mode 'L' with 0 or 255 values, multiplying them
-    # behaves as a logical AND (255 * 255 / 255 = 255; any 0 results in 0).
     near_black = ImageChops.multiply(r_mask, g_mask)
     near_black = ImageChops.multiply(near_black, b_mask)
     
     # 3. Use flood fill from the 4 corners to isolate connected external background
-    # This prevents internal blacks (eyes, shadows, dark clothing) from being removed.
+    # 3. Use flood fill from all four borders to isolate connected external background.
+    # Spacing seeds along edges ensures we clear ground/reflection islands touching the borders.
     flood_img = near_black.copy()
     
-    corners = [(0, 0), (width - 1, 0), (0, height - 1), (width - 1, height - 1)]
-    for corner in corners:
-        if flood_img.getpixel(corner) == 255:
-            ImageDraw.floodfill(flood_img, corner, value=128)
+    edge_seeds = []
+    # Add corners
+    edge_seeds.extend([(0, 0), (width - 1, 0), (0, height - 1), (width - 1, height - 1)])
+    # Add spaced points along top and bottom edges
+    for x in range(0, width, max(1, width // 10)):
+        edge_seeds.append((x, 0))
+        edge_seeds.append((x, height - 1))
+    # Add spaced points along left and right edges
+    for y in range(0, height, max(1, height // 10)):
+        edge_seeds.append((0, y))
+        edge_seeds.append((width - 1, y))
+        
+    for seed in edge_seeds:
+        try:
+            if flood_img.getpixel(seed) == 255:
+                ImageDraw.floodfill(flood_img, seed, value=128)
+        except IndexError:
+            continue
             
     # Pixels marked with 128 are confirmed external background. 
-    # Create final alpha channel: 0 (transparent) where background was detected, 255 (opaque) otherwise.
     bg_alpha = flood_img.point(lambda p: 0 if p == 128 else 255)
     
     if feather:
-        # Blur the alpha mask slightly to feather borders and remove jagged dark pixels
         bg_alpha = bg_alpha.filter(ImageFilter.GaussianBlur(radius=1.2))
         
     img.putalpha(bg_alpha)
@@ -133,17 +151,14 @@ def trim_and_center(img, target_size=(256, 256), padding_percent=0.05):
     """
     bbox = img.getbbox()
     if not bbox:
-        # Fallback if image is completely transparent or empty
         return img.resize(target_size, Image.Resampling.LANCZOS)
         
     cropped = img.crop(bbox)
     cw, ch = cropped.size
     
-    # Create target canvas
     canvas = Image.new("RGBA", target_size, (0, 0, 0, 0))
     tw, th = target_size
     
-    # Calculate scale factor to maintain aspect ratio with specified padding
     max_w = int(tw * (1.0 - 2 * padding_percent))
     max_h = int(th * (1.0 - 2 * padding_percent))
     
@@ -153,7 +168,6 @@ def trim_and_center(img, target_size=(256, 256), padding_percent=0.05):
     
     resized = cropped.resize((new_w, new_h), Image.Resampling.LANCZOS)
     
-    # Center paste
     px = (tw - new_w) // 2
     py = (th - new_h) // 2
     
@@ -163,7 +177,7 @@ def trim_and_center(img, target_size=(256, 256), padding_percent=0.05):
 def generate_metaphor_prompt(word_de, word_en, word_class):
     """
     Resolves the German word class and details to build a highly descriptive 
-    visual prompt tailored for SOTA 3D Claymation assets.
+    visual prompt tailored for SOTA Cutting-Edge 3D Glossy and Tactile assets.
     """
     # Clean articles for dictionary lookups
     de_clean = re.sub(r'^(der|die|das)\s+', '', word_de.lower()).strip()
@@ -172,24 +186,36 @@ def generate_metaphor_prompt(word_de, word_en, word_class):
     if de_clean in METAPHOR_MAP:
         metaphor = METAPHOR_MAP[de_clean]
     else:
-        # Dynamic fallback prompts based on word classes
+        # Dynamic fallback prompts based on word classes (using the new SOTA glossy style)
         if word_class == "Nomen":
-            metaphor = f"a beautiful, detailed, colorful 3D claymation model representing the object {word_en}"
+            metaphor = f"a spectacular, highly-detailed 3D digital art model representing the object {word_en}"
         elif word_class == "Verb":
             clean_verb = re.sub(r'^to\s+', '', word_en.lower()).strip()
-            metaphor = f"a friendly, stylized 3D clay character dynamically performing the action of {clean_verb} in a cute cartoon scene"
+            metaphor = f"a vibrant, stylized 3D icon dynamically representing the action of {clean_verb} with creative visual elements"
         elif word_class == "Adjektiv" or "adjective" in word_class.lower():
-            metaphor = f"a high-contrast, stylized 3D claymation scene visually demonstrating the concept of {word_en} through friendly cartoonish objects"
+            metaphor = f"a high-contrast, premium 3D digital art graphic visually demonstrating the concept of {word_en}"
         else:
-            metaphor = f"a cute, stylized 3D clay illustration symbolizing the concept of {word_en}"
+            metaphor = f"a beautiful, stylized 3D digital art symbol representing the concept of {word_en}"
 
-    # Base prompt wrapping the metaphor with extremely strict isolated void and wordless instructions
+    # SOTA-ify any legacy references to clay in the metaphor dynamically
+    metaphor = re.sub(r'\b(claymation|clay character|clay model|clay doll|clay)\b', 'SOTA glossy 3D character', metaphor, flags=re.I)
+    metaphor = re.sub(r'\b(clay kitten)\b', 'SOTA glossy 3D kitten', metaphor, flags=re.I)
+    metaphor = re.sub(r'\b(clay cottage)\b', 'SOTA glossy 3D cottage', metaphor, flags=re.I)
+    metaphor = re.sub(r'\b(clay envelope)\b', 'SOTA glossy 3D envelope', metaphor, flags=re.I)
+    metaphor = re.sub(r'\b(clay globe)\b', 'SOTA glossy 3D globe', metaphor, flags=re.I)
+    metaphor = re.sub(r'\b(clay desk booth)\b', 'SOTA glossy 3D desk booth', metaphor, flags=re.I)
+    metaphor = re.sub(r'\b(clay ball|clay balls)\b', 'glowing 3D sphere', metaphor, flags=re.I)
+    metaphor = re.sub(r'\b(clay mug|clay coffee mug)\b', 'SOTA glossy 3D coffee mug', metaphor, flags=re.I)
+    metaphor = re.sub(r'\b(clay box|clay boxes)\b', 'glowing 3D block', metaphor, flags=re.I)
+
+    # Base prompt wrapping the metaphor in our ultra-premium SOTA style
     prompt = (
-        f"A beautiful 3D claymation illustration of: {metaphor}. "
-        f"Isolated asset floating on a 100% flat, solid, uniform pure black background. "
-        f"Strictly no ground plane, no floor shadow, no floor surface, no horizon line, no table surface, completely suspended in pure black void. "
-        f"Strictly no text, no letters, no words, no written characters, no alphabets, completely wordless. "
-        f"Studio lighting, cute and friendly 3D clay model, vibrant colors, premium mobile game asset style, clean borders, 4k"
+        f"A masterfully rendered, ultra-premium 3D digital art toy illustration of: {metaphor}. "
+        f"The subject is huge, front-and-center, occupying 85% of the frame, capturing the pure essence of the concept. "
+        f"Crafted from premium SOTA materials: vibrant glossy enamel, translucent glowing glassmorphism layers, metallic chrome accents, and polished soft-touch matte resin. "
+        f"Isolated asset floating suspended in a pitch-black studio void. Pure black backdrop, clean edges. "
+        f"Completely wordless, zero text, zero letters, zero characters. "
+        f"Premium SOTA 3D game asset style, spectacular cinematic studio lighting with soft self-illuminating ambient glow, octane render, 8k, raytracing."
     )
     return prompt
 
@@ -383,7 +409,7 @@ def main():
             raw_img = Image.open(BytesIO(img_bytes))
 
             # 1. Apply robust connected chroma-key masking
-            transparent_img = remove_black_background(raw_img, threshold=25, feather=True)
+            transparent_img = remove_black_background(raw_img, threshold=50, feather=True)
 
             # 2. Trim empty transparent border pixels & center with 5% padding
             final_img = trim_and_center(transparent_img, target_size=(256, 256), padding_percent=0.05)
