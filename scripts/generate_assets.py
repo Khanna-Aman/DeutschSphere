@@ -261,7 +261,39 @@ METAPHOR_MAP = {
     "geburtstag": "A giant, spectacular 3D birthday cake with glossy pink icing, colorful sprinkles, and a single burning candle with a glowing flame, front-and-center, 100% birthday essence",
     "gefallen": "A spectacular 3D glossy pink heart icon surrounded by shooting stars and a big golden thumbs-up badge, representing liking something, front-and-center",
     "gehen": "A pair of high-gloss pink running shoes walking forward on a stylized, winding glass pathway with glowing direction arrows, front-and-center",
-    "gehören": "A glowing gold crown resting perfectly inside a high-gloss luxury jewelry case, with a key representing ownership and belonging, front-and-center"
+    "gehören": "A glowing gold crown resting perfectly inside a high-gloss luxury jewelry case, with a key representing ownership and belonging, front-and-center",
+
+    # SOTA 3D assets for Cards 226 to 255 (geld through gruppe)
+    "geld": "A beautiful, overflowing 3D money bag made of high-gloss fabric, bursting with shining golden coins and sparkling bills floating suspended, front-and-center, 100% money essence",
+    "gemüse": "A spectacular, colorful grouping of stylized 3D vegetables, including a glossy red tomato, a bright orange carrot with green leaves, and a fresh green broccoli stalk, front-and-center, 100% vegetable essence",
+    "gepäck": "A highly detailed, luxury 3D suitcase in vibrant pink, with glowing chrome wheels, leather straps, and miniature floating travel tags, front-and-center, 100% luggage essence",
+    "gerade": "A high-gloss golden 3D precision target board with a single red dart hitting perfectly and exactly in the absolute dead-center bullseye, front-and-center",
+    "geradeaus": "A bold, shining 3D glassmorphism direction arrow pointing straight ahead, hovering over a sleek grid line, front-and-center",
+    "geschenk": "An ultra-premium, gorgeous 3D gift box wrapped in metallic gold wrapping paper and tied with a massive, glossy pink satin ribbon bow, front-and-center, 100% present essence",
+    "geschlossen": "A beautiful, stylized 3D vintage metal padlock securely closed with a massive gold key chain, completely wordless, front-and-center",
+    "geschwister": "Three cute, smiling 3D siblings (a boy and two girls) happily hugging each other under a soft glowing rainbow, front-and-center",
+    "geschäft": "A highly detailed 3D boutique shop storefront with a striped pink awning, glassmorphism display windows showing tiny luxury items, and a cozy entrance, front-and-center",
+    "gespräch": "Two large, glowing 3D speech bubbles (one translucent pink, one translucent blue) overlapping beautifully, representing active conversation, front-and-center",
+    "gestern": "A stylized 3D pocket watch with its hands pointing backward, hovering next to a translucent calendar sheet labeled with a glowing backward-pointing arrow, front-and-center",
+    "gestorben": "A peaceful, stylized 3D wilted flower with a single falling petal, surrounded by a gentle, glowing halo of soft starlight in a dark void, front-and-center",
+    "getränk": "A spectacular 3D glowing cocktail glass with a pink slice of lemon, a green straw, and sparkling translucent liquid with floating ice cubes, front-and-center, 100% drink essence",
+    "gewicht": "A heavy, classic 3D iron dumbbell or kettlebell weight with a highly polished black lacquer surface and a metallic gold handle, front-and-center, 100% weight essence",
+    "gewinnen": "A towering, magnificent 3D golden trophy cup with glowing blue stars shooting out, surrounded by a shower of gold coins, front-and-center",
+    "geöffnet": "A beautiful, open 3D shop door with a glowing green checkmark emblem and a friendly open door frame, front-and-center",
+    "glas": "A high-gloss, crystal-clear 3D drinking glass made of spectacular translucent glassmorphism material, filled with sparkling water and bubbles, front-and-center, 100% glass essence",
+    "glauben": "A cute, stylized 3D character sitting on a glowing cloud, looking upward at a magnificent shining golden star, representing faith and belief, front-and-center",
+    "gleich": "A sleek, highly polished 3D equals sign (=) made of glowing pink enamel and gold metallic edges, floating suspended in a pitch-black studio void, front-and-center",
+    "gleis": "A highly detailed 3D railway track segment extending forward into a glowing neon portal, with chrome rails and polished wooden ties, front-and-center, 100% railway track essence",
+    "glück": "A giant, magnificent 3D four-leaf clover made of glowing translucent green glass, with sparkling golden dust floating around it, front-and-center, 100% luck essence",
+    "glücklich": "A giant, radiant 3D yellow smiling face emoji with glistening starlit eyes, surrounded by colorful sparkles and a mini golden crown, front-and-center",
+    "glückwunsch": "A spectacular 3D greeting card opening up to reveal a burst of golden stars, colorful balloons, and sparkling confetti, front-and-center",
+    "gratulieren": "Two friendly 3D characters joyfully shaking hands while a burst of colorful confetti and a golden medal floats above them, front-and-center",
+    "grillen": "A spectacular, sleek red 3D barbecue grill kettle, with a glossy metal grate showing realistic glowing orange fire charcoal embers and a tiny steak sizzling, front-and-center",
+    "groß": "A towering, giant 3D elephant standing proud and majestic next to a tiny, miniature mouse, beautifully demonstrating the contrast of size, front-and-center",
+    "großeltern": "A heartwarming 3D portrait of a sweet, smiling grandmother and grandfather standing together arm-in-arm, wearing cute cozy sweaters, front-and-center",
+    "großmutter": "A sweet, gentle 3D grandmother character with glasses and silver hair in a neat bun, smiling warmly while knitting a colorful scarf, front-and-center",
+    "großvater": "A kind, smiling 3D grandfather character with silver hair, wearing classic round glasses and a cozy tweed vest, holding a pocket watch, front-and-center",
+    "gruppe": "A beautifully arranged, tight-knit cluster of five colorful 3D star-shaped icons sitting snugly together on a glowing glass platform, representing a cohesive group, front-and-center"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

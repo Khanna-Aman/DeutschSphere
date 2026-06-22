@@ -4325,8 +4325,10 @@
     "antonym": null,
     "example_de": "Hast du noch Geld?",
     "example_en": "Do you still have money?",
-    "image": "images/card_226.svg",
-    "id": 226
+    "image": "images/card_226.webp",
+    "id": 226,
+    "image_tier": "B",
+    "image_path": "images/card_226.webp"
   },
   {
     "german": "das Gemüse",
@@ -4341,8 +4343,10 @@
     "antonym": "das Obst",
     "example_de": "Gemüse brauchen wir auch noch.",
     "example_en": "We also need vegetables.",
-    "image": "images/card_227.svg",
-    "id": 227
+    "image": "images/card_227.webp",
+    "id": 227,
+    "image_tier": "B",
+    "image_path": "images/card_227.webp"
   },
   {
     "german": "das Gepäck",
@@ -4357,8 +4361,10 @@
     "antonym": null,
     "example_de": "Wollen Sie Ihr Gepäck mitnehmen?",
     "example_en": "Do you want to take your luggage with you?",
-    "image": "images/card_228.svg",
-    "id": 228
+    "image": "images/card_228.webp",
+    "id": 228,
+    "image_tier": "B",
+    "image_path": "images/card_228.webp"
   },
   {
     "german": "gerade",
@@ -4373,8 +4379,10 @@
     "antonym": null,
     "example_de": "Da kommt er ja gerade.",
     "example_en": "There he comes right now.",
-    "image": "images/card_229.svg",
-    "id": 229
+    "image": "images/card_229.webp",
+    "id": 229,
+    "image_tier": "B",
+    "image_path": "images/card_229.webp"
   },
   {
     "german": "geradeaus",
@@ -4389,8 +4397,10 @@
     "antonym": null,
     "example_de": "Gehen Sie immer geradeaus!",
     "example_en": "Always go straight ahead!",
-    "image": "images/card_230.svg",
-    "id": 230
+    "image": "images/card_230.webp",
+    "id": 230,
+    "image_tier": "B",
+    "image_path": "images/card_230.webp"
   },
   {
     "german": "das Geschenk",
@@ -4405,8 +4415,10 @@
     "antonym": null,
     "example_de": "Danke für das schöne Geschenk.",
     "example_en": "Thank you for the beautiful gift.",
-    "image": "images/card_231.svg",
-    "id": 231
+    "image": "images/card_231.webp",
+    "id": 231,
+    "image_tier": "B",
+    "image_path": "images/card_231.webp"
   },
   {
     "german": "geschlossen",
@@ -4424,8 +4436,10 @@
     "antonym": "geöffnet",
     "example_de": "Die Bank hat am Samstag geschlossen.",
     "example_en": "The bank is closed on Saturday.",
-    "image": "images/card_232.svg",
-    "id": 232
+    "image": "images/card_232.webp",
+    "id": 232,
+    "image_tier": "B",
+    "image_path": "images/card_232.webp"
   },
   {
     "german": "die Geschwister",
@@ -4440,8 +4454,10 @@
     "antonym": "das Einzelkind",
     "example_de": "Ich habe leider keine Geschwister.",
     "example_en": "Unfortunately, I have no siblings.",
-    "image": "images/card_233.svg",
-    "id": 233
+    "image": "images/card_233.webp",
+    "id": 233,
+    "image_tier": "B",
+    "image_path": "images/card_233.webp"
   },
   {
     "german": "das Geschäft",
@@ -4456,8 +4472,10 @@
     "antonym": null,
     "example_de": "Die Geschäfte schließen um 18.30 Uhr.",
     "example_en": "The shops close at 6.30 pm.",
-    "image": "images/card_234.svg",
-    "id": 234
+    "image": "images/card_234.webp",
+    "id": 234,
+    "image_tier": "B",
+    "image_path": "images/card_234.webp"
   },
   {
     "german": "das Gespräch",
@@ -4472,8 +4490,10 @@
     "antonym": null,
     "example_de": "Das Gespräch mit Frau Kunz ist um 14 Uhr.",
     "example_en": "The conversation with Mrs. Kunz is at 2 pm.",
-    "image": "images/card_235.svg",
-    "id": 235
+    "image": "images/card_235.webp",
+    "id": 235,
+    "image_tier": "B",
+    "image_path": "images/card_235.webp"
   },
   {
     "german": "gestern",
@@ -4488,8 +4508,10 @@
     "antonym": "heute",
     "example_de": "Gestern war ich krank.",
     "example_en": "Yesterday I was sick.",
-    "image": "images/card_236.svg",
-    "id": 236
+    "image": "images/card_236.webp",
+    "id": 236,
+    "image_tier": "B",
+    "image_path": "images/card_236.webp"
   },
   {
     "german": "gestorben",
@@ -4508,8 +4530,10 @@
     "antonym": "geboren",
     "example_de": "Meine Frau ist gestern gestorben.",
     "example_en": "My wife died yesterday.",
-    "image": "images/card_237.svg",
-    "id": 237
+    "image": "images/card_237.webp",
+    "id": 237,
+    "image_tier": "B",
+    "image_path": "images/card_237.webp"
   },
   {
     "german": "das Getränk",
@@ -4524,8 +4548,10 @@
     "antonym": "die Speise",
     "example_de": "Mein Lieblingsgetränk ist Tomatensaft.",
     "example_en": "My favorite drink is tomato juice.",
-    "image": "images/card_238.svg",
-    "id": 238
+    "image": "images/card_238.webp",
+    "id": 238,
+    "image_tier": "B",
+    "image_path": "images/card_238.webp"
   },
   {
     "german": "das Gewicht",
@@ -4540,8 +4566,10 @@
     "antonym": null,
     "example_de": "Bei „Gewicht“ schreibst du: 62 Kilo.",
     "example_en": "For „weight“ you write: 62 kilos.",
-    "image": "images/card_239.svg",
-    "id": 239
+    "image": "images/card_239.webp",
+    "id": 239,
+    "image_tier": "B",
+    "image_path": "images/card_239.webp"
   },
   {
     "german": "gewinnen",
@@ -4560,8 +4588,10 @@
     "antonym": "verlieren",
     "example_de": "Wer gewinnt das Spiel?",
     "example_en": "Who wins the game?",
-    "image": "images/card_240.svg",
-    "id": 240
+    "image": "images/card_240.webp",
+    "id": 240,
+    "image_tier": "B",
+    "image_path": "images/card_240.webp"
   },
   {
     "german": "geöffnet",
@@ -4579,8 +4609,10 @@
     "antonym": "geschlossen",
     "example_de": "Der Laden ist samstags bis 16.00 Uhr geöffnet.",
     "example_en": "The shop is open on Saturdays until 4.00 pm.",
-    "image": "images/card_241.svg",
-    "id": 241
+    "image": "images/card_241.webp",
+    "id": 241,
+    "image_tier": "B",
+    "image_path": "images/card_241.webp"
   },
   {
     "german": "das Glas",
@@ -4595,8 +4627,10 @@
     "antonym": null,
     "example_de": "Bitte noch ein Glas Wein! Wir brauchen noch drei Gläser.",
     "example_en": "Another glass of wine, please! We need three more glasses.",
-    "image": "images/card_242.svg",
-    "id": 242
+    "image": "images/card_242.webp",
+    "id": 242,
+    "image_tier": "B",
+    "image_path": "images/card_242.webp"
   },
   {
     "german": "glauben",
@@ -4615,8 +4649,10 @@
     "antonym": "wissen",
     "example_de": "Sie können mir glauben, es ist so. Ich glaube, er kommt gleich.",
     "example_en": "You can believe me, it is so. I believe he is coming soon.",
-    "image": "images/card_243.svg",
-    "id": 243
+    "image": "images/card_243.webp",
+    "id": 243,
+    "image_tier": "B",
+    "image_path": "images/card_243.webp"
   },
   {
     "german": "gleich",
@@ -4634,8 +4670,10 @@
     "antonym": "anders",
     "example_de": "Das ist mir gleich. Das ist der gleiche Preis. Ich komme gleich.",
     "example_en": "That is the same to me. That is the same price. I am coming right away.",
-    "image": "images/card_244.svg",
-    "id": 244
+    "image": "images/card_244.webp",
+    "id": 244,
+    "image_tier": "B",
+    "image_path": "images/card_244.webp"
   },
   {
     "german": "das Gleis",
@@ -4650,8 +4688,10 @@
     "antonym": null,
     "example_de": "Der ICE nach Berlin hält heute an Gleis 12.",
     "example_en": "The ICE to Berlin stops today at track 12.",
-    "image": "images/card_245.svg",
-    "id": 245
+    "image": "images/card_245.webp",
+    "id": 245,
+    "image_tier": "B",
+    "image_path": "images/card_245.webp"
   },
   {
     "german": "das Glück",
@@ -4666,8 +4706,10 @@
     "antonym": "das Pech",
     "example_de": "Viel Glück!",
     "example_en": "Good luck!",
-    "image": "images/card_246.svg",
-    "id": 246
+    "image": "images/card_246.webp",
+    "id": 246,
+    "image_tier": "B",
+    "image_path": "images/card_246.webp"
   },
   {
     "german": "glücklich",
@@ -4685,8 +4727,10 @@
     "antonym": "unglücklich",
     "example_de": "Meine Kinder sind glücklich verheiratet.",
     "example_en": "My children are happily married.",
-    "image": "images/card_247.svg",
-    "id": 247
+    "image": "images/card_247.webp",
+    "id": 247,
+    "image_tier": "B",
+    "image_path": "images/card_247.webp"
   },
   {
     "german": "der Glückwunsch",
@@ -4701,8 +4745,10 @@
     "antonym": null,
     "example_de": "Herzlichen Glückwunsch zum Geburtstag.",
     "example_en": "Happy birthday.",
-    "image": "images/card_248.svg",
-    "id": 248
+    "image": "images/card_248.webp",
+    "id": 248,
+    "image_tier": "B",
+    "image_path": "images/card_248.webp"
   },
   {
     "german": "gratulieren",
@@ -4721,8 +4767,10 @@
     "antonym": null,
     "example_de": "Ich gratuliere dir!",
     "example_en": "I congratulate you!",
-    "image": "images/card_249.svg",
-    "id": 249
+    "image": "images/card_249.webp",
+    "id": 249,
+    "image_tier": "B",
+    "image_path": "images/card_249.webp"
   },
   {
     "german": "grillen",
@@ -4741,8 +4789,10 @@
     "antonym": null,
     "example_de": "Heute grillen wir im Garten.",
     "example_en": "Today we are grilling in the garden.",
-    "image": "images/card_250.svg",
-    "id": 250
+    "image": "images/card_250.webp",
+    "id": 250,
+    "image_tier": "B",
+    "image_path": "images/card_250.webp"
   },
   {
     "german": "groß",
@@ -4760,8 +4810,10 @@
     "antonym": "klein",
     "example_de": "Mein Bruder und ich sind gleich groß. Frankfurt ist eine große Stadt.",
     "example_en": "My brother and I are the same height. Frankfurt is a big city.",
-    "image": "images/card_251.svg",
-    "id": 251
+    "image": "images/card_251.webp",
+    "id": 251,
+    "image_tier": "B",
+    "image_path": "images/card_251.webp"
   },
   {
     "german": "die Großeltern",
@@ -4776,8 +4828,10 @@
     "antonym": "die Enkel",
     "example_de": "Meine Großeltern leben in Japan.",
     "example_en": "My grandparents live in Japan.",
-    "image": "images/card_252.svg",
-    "id": 252
+    "image": "images/card_252.webp",
+    "id": 252,
+    "image_tier": "B",
+    "image_path": "images/card_252.webp"
   },
   {
     "german": "die Großmutter",
@@ -4792,8 +4846,10 @@
     "antonym": "der Großvater",
     "example_de": "Meine Großmutter heißt Eva.",
     "example_en": "My grandmother's name is Eva.",
-    "image": "images/card_253.svg",
-    "id": 253
+    "image": "images/card_253.webp",
+    "id": 253,
+    "image_tier": "B",
+    "image_path": "images/card_253.webp"
   },
   {
     "german": "der Großvater",
@@ -4808,8 +4864,10 @@
     "antonym": "die Großmutter",
     "example_de": "Mein Großvater ist schon 80.",
     "example_en": "My grandfather is already 80.",
-    "image": "images/card_254.svg",
-    "id": 254
+    "image": "images/card_254.webp",
+    "id": 254,
+    "image_tier": "B",
+    "image_path": "images/card_254.webp"
   },
   {
     "german": "die Gruppe",
@@ -4824,8 +4882,10 @@
     "antonym": null,
     "example_de": "Die erste Gruppe beginnt um 16 Uhr.",
     "example_en": "The first group begins at 4 pm.",
-    "image": "images/card_255.svg",
-    "id": 255
+    "image": "images/card_255.webp",
+    "id": 255,
+    "image_tier": "B",
+    "image_path": "images/card_255.webp"
   },
   {
     "german": "der Gruß",
