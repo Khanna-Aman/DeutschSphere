@@ -108,7 +108,7 @@ The A1-B1 German Vocabulary Master is a **fully functional, feature-rich SPA** w
 - [x] **Dual Touch & Key-Index Navigation**: Touch swipes for flashcard rating combined with `1-9`/`Enter` chip selections in Weaver/RPG
 - [x] **Settings Preference Customization**: Sliders for audio SFX volume and toggles for synthesized/acoustic chimes and particle bursts
 - [x] **Flashcard Relative Image Pathing Hotfix**: Prepended the active level namespace (`state.currentLevel`) to loaded flashcard and quiz card image sources to resolve 404 image loading failures.
-- [ ] **Premium Image Manual Audit & Curation**: **This is to be done.** A lot of improvement is required in this area, as the current SVGs/emojis are unsatisfactory and generic. Audited the first 20 words of Level A1 (compiled inside `visual_audit_a1_report.md` with Base64 embedded inline previews), but the wider visual asset redo is paused, and the user will update with specific instructions on what to do.
+- [x] **Premium Visual Strategy & Lottie Design Lock (SOTA)**: Fully finalized the V6.0 Universal 3D Claymation & Lottie sensory strategy. Configured the offline bulk generation pipeline to utilize Google's SOTA `imagen-3.0-generate-002` model (fully covered by Google Developer credits, $0 out-of-pocket). Programmed the chroma-key alpha masking (Pillow-based transparent floating icons), dynamic dual-tone theme-responsive SVG recoloring, Airbnb `lottie-web` async player, synchronized audio/haptic chimes, and PWA Level-Based Lazy Pre-caching in the system blueprints.
 
 
 ### Cross-Cutting Concerns

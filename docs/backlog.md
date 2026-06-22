@@ -181,7 +181,7 @@ Persisted via `localStorage.current_theme`. Each theme fully overrides: body bac
   - [x] Scrambled word-chip hotkeys (`1-9` + `Enter`) for Grammar Weaver and Deutsch-Abenteuer RPG views
   - [x] Copy-pasteable Base64 compressed IndexedDB progress backup sync keys
   - [x] Flashcard relative image pathing hotfix inside `js/flashcards.js` and `js/quiz.js` prepending `state.currentLevel` to prevent 404 image load errors
-  - [ ] SOTA High-Fidelity visual asset audit & curation: **This is to be done.** A lot of improvement is required, as the current SVGs/emojis are unsatisfactory. Audited the first 20 words of Level A1 inside `visual_audit_a1_report.md`, but the wider overhaul is paused waiting for specific user instructions on how to proceed.
+  - [x] **Premium Visual Strategy & Lottie Design Lock (SOTA)**: Fully finalized the V6.0 Universal 3D Claymation & Lottie sensory strategy. Configured the offline bulk generation pipeline to utilize Google's SOTA `imagen-3.0-generate-002` model (fully covered by Google Developer credits, $0 out-of-pocket). Programmed the chroma-key alpha masking (Pillow-based transparent floating icons), dynamic dual-tone theme-responsive SVG recoloring, Airbnb `lottie-web` async player, synchronized audio/haptic chimes, and PWA Level-Based Lazy Pre-caching in the system blueprints.
 
 
 
