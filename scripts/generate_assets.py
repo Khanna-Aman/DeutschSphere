@@ -221,7 +221,7 @@ METAPHOR_MAP = {
     "empfehlen": "A spectacular golden 3D thumbs-up badge with glowing golden sparkles and ribbons around it, representing a high recommendation, front-and-center",
     "empfänger": "A cute 3D character smiling warmly as it happily catches a floating pink package from the sky, representing the recipient, front-and-center",
     "ende": "A sleek black 3D checkered flag waving proudly, representing the finish line and end of a race, front-and-center",
-    "enden": "A large red 3D STOP sign symbol made of glossy enamel, floating in mid-air, representing ending and stopping, front-and-center",
+    "enden": "A stylized 3D theater stage with a massive, high-gloss crimson curtain completely closed, representing the end of a performance, completely wordless, front-and-center",
     "entschuldigen": "A pair of cute 3D hands clasped together in a polite, apologetic bowing gesture, surrounded by soft self-illuminating golden light, front-and-center",
     "entschuldigung": "A beautiful, stylized 3D pink glass heart with a tiny white band-aid on it, representing a sincere apology and healing, front-and-center",
     "er": "A single, cute boy character pointing smilingly at himself, front-and-center",
