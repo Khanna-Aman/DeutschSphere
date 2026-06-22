@@ -493,8 +493,10 @@
     "antonym": "die Treppe",
     "example_de": "In diesem Haus gibt es keinen Aufzug.",
     "example_en": "There is no elevator in this house.",
-    "image": "images/card_26.svg",
-    "id": 26
+    "image": "images/card_26.webp",
+    "id": 26,
+    "image_tier": "B",
+    "image_path": "images/card_26.webp"
   },
   {
     "german": "das Auge",
@@ -509,8 +511,10 @@
     "antonym": null,
     "example_de": "Er hat blaue Augen.",
     "example_en": "He has blue eyes.",
-    "image": "images/card_27.svg",
-    "id": 27
+    "image": "images/card_27.webp",
+    "id": 27,
+    "image_tier": "B",
+    "image_path": "images/card_27.webp"
   },
   {
     "german": "aus",
@@ -525,8 +529,10 @@
     "antonym": "in",
     "example_de": "Er kommt aus Brasilien.",
     "example_en": "He comes from Brazil.",
-    "image": "images/card_28.svg",
-    "id": 28
+    "image": "images/card_28.webp",
+    "id": 28,
+    "image_tier": "B",
+    "image_path": "images/card_28.webp"
   },
   {
     "german": "aus",
