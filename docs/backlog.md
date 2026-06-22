@@ -1,4 +1,4 @@
-# Feature Backlog: DeutschSphere — A1-B1 German
+# Feature Backlog: DeutschSphere
 
 This backlog tracks implemented features, their technical specifications, and outstanding tasks for the multi-level (A1, A2, B1) German vocabulary flashcard application.
 
