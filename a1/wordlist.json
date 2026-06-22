@@ -547,8 +547,10 @@
     "antonym": "in",
     "example_de": "Conchi kommt aus Spanien.",
     "example_en": "Conchi comes from Spain.",
-    "image": "images/card_29.svg",
-    "id": 29
+    "image": "images/card_29.webp",
+    "id": 29,
+    "image_tier": "B",
+    "image_path": "images/card_29.webp"
   },
   {
     "german": "aus sein",
@@ -563,8 +565,10 @@
     "antonym": "an sein",
     "example_de": "Das Licht ist aus. Die Schule ist aus.",
     "example_en": "The light is off. School is over.",
-    "image": "images/card_30.svg",
-    "id": 30
+    "image": "images/card_30.webp",
+    "id": 30,
+    "image_tier": "B",
+    "image_path": "images/card_30.webp"
   },
   {
     "german": "der Ausflug",
@@ -579,8 +583,10 @@
     "antonym": null,
     "example_de": "Morgen machen wir einen Ausflug nach Heidelberg.",
     "example_en": "Tomorrow we are taking a trip to Heidelberg.",
-    "image": "images/card_31.svg",
-    "id": 31
+    "image": "images/card_31.webp",
+    "id": 31,
+    "image_tier": "B",
+    "image_path": "images/card_31.webp"
   },
   {
     "german": "ausfüllen",

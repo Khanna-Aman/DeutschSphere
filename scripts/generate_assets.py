@@ -46,7 +46,7 @@ METAPHOR_MAP = {
     "gegen": "two cute clay balls gently bumping against each other, action style",
     "um": "a small ring of colorful wooden toy blocks positioned around a tall red candle",
     "aus": "a cute, smiling 3D clay bird happily popping out of a beautiful rustic wooden cuckoo clock",
-    "aus sein": "a cute, stylized 3D clay desk lamp with its light switched off and bulb dark, cartoon style",
+    "aus sein": "a cute 3D clay wall light switch in a pink frame, with the toggle flipped down to the off position, cartoon style",
 
     # Conjunctions
     "weil": "two beautiful interlocking toy puzzle pieces or mechanical gears representing cause-and-effect",
