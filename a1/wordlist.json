@@ -16,8 +16,10 @@
     "antonym": "landen",
     "example_de": "Wann fliegst du ab?",
     "example_en": "When do you take off?",
-    "image": "images/card_1.svg",
-    "id": 1
+    "image": "images/card_1.webp",
+    "id": 1,
+    "image_tier": "B",
+    "image_path": "images/card_1.webp"
   },
   {
     "german": "der Abflug",
@@ -32,8 +34,10 @@
     "antonym": "die Ankunft",
     "example_de": "Der Abflug ist um 11.20 Uhr.",
     "example_en": "The departure is at 11:20 AM.",
-    "image": "images/card_2.svg",
-    "id": 2
+    "image": "images/card_2.webp",
+    "id": 2,
+    "image_tier": "B",
+    "image_path": "images/card_2.webp"
   },
   {
     "german": "an",
@@ -68,8 +72,10 @@
     "antonym": "aus sein",
     "example_de": "Das Licht ist noch an.",
     "example_en": "The light is still on.",
-    "image": "images/card_4.svg",
-    "id": 4
+    "image": "images/card_4.webp",
+    "id": 4,
+    "image_tier": "B",
+    "image_path": "images/card_4.webp"
   },
   {
     "german": "die Ansage",
@@ -84,8 +90,10 @@
     "antonym": null,
     "example_de": "Hören Sie die Ansagen.",
     "example_en": "Listen to the announcements.",
-    "image": "images/card_5.svg",
-    "id": 5
+    "image": "images/card_5.webp",
+    "id": 5,
+    "image_tier": "B",
+    "image_path": "images/card_5.webp"
   },
   {
     "german": "der Anschluss",
@@ -100,8 +108,10 @@
     "antonym": null,
     "example_de": "In Mannheim haben Sie Anschluss nach Saarbrücken.",
     "example_en": "In Mannheim you have a connection to Saarbrücken.",
-    "image": "images/card_6.svg",
-    "id": 6
+    "image": "images/card_6.webp",
+    "id": 6,
+    "image_tier": "B",
+    "image_path": "images/card_6.webp"
   },
   {
     "german": "die Antwort",
@@ -116,8 +126,10 @@
     "antonym": "die Frage",
     "example_de": "Er gibt leider keine Antwort.",
     "example_en": "Unfortunately, he gives no answer.",
-    "image": "images/card_7.svg",
-    "id": 7
+    "image": "images/card_7.webp",
+    "id": 7,
+    "image_tier": "B",
+    "image_path": "images/card_7.webp"
   },
   {
     "german": "antworten",
