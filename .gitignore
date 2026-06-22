@@ -33,6 +33,10 @@ Thumbs.db
 cookies.txt
 .env
 .env.local
+antigravity-key.json
+gcp-key.json
+*key.json
+*-key.json
 
 # Backup files
 scripts/backups/
