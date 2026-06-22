@@ -1747,8 +1747,10 @@
     "antonym": null,
     "example_de": "Von diesem Hotel hat man einen guten Blick auf den Rhein.",
     "example_en": "From this hotel you have a good view of the Rhine.",
-    "image": "images/card_91.svg",
-    "id": 91
+    "image": "images/card_91.webp",
+    "id": 91,
+    "image_tier": "B",
+    "image_path": "images/card_91.webp"
   },
   {
     "german": "die Blume",
@@ -1763,8 +1765,10 @@
     "antonym": null,
     "example_de": "Gefallen dir die Blumen?",
     "example_en": "Do you like the flowers?",
-    "image": "images/card_92.svg",
-    "id": 92
+    "image": "images/card_92.webp",
+    "id": 92,
+    "image_tier": "B",
+    "image_path": "images/card_92.webp"
   },
   {
     "german": "der Bogen",
@@ -1779,8 +1783,10 @@
     "antonym": null,
     "example_de": "Schreiben Sie Ihre Lösungen bitte auf den Antwortbogen.",
     "example_en": "Please write your solutions on the answer sheet.",
-    "image": "images/card_93.svg",
-    "id": 93
+    "image": "images/card_93.webp",
+    "id": 93,
+    "image_tier": "B",
+    "image_path": "images/card_93.webp"
   },
   {
     "german": "brauchen",
@@ -1799,8 +1805,10 @@
     "antonym": null,
     "example_de": "Brauchst du die Zeitung noch?",
     "example_en": "Do you still need the newspaper?",
-    "image": "images/card_94.svg",
-    "id": 94
+    "image": "images/card_94.webp",
+    "id": 94,
+    "image_tier": "B",
+    "image_path": "images/card_94.webp"
   },
   {
     "german": "breit",
@@ -1818,8 +1826,10 @@
     "antonym": "schmal",
     "example_de": "Wie breit ist der Schrank?",
     "example_en": "How wide is the cabinet?",
-    "image": "images/card_95.svg",
-    "id": 95
+    "image": "images/card_95.webp",
+    "id": 95,
+    "image_tier": "B",
+    "image_path": "images/card_95.webp"
   },
   {
     "german": "der Brief",
@@ -1834,8 +1844,10 @@
     "antonym": null,
     "example_de": "Haben Sie einen Brief für mich?",
     "example_en": "Do you have a letter for me?",
-    "image": "images/card_96.svg",
-    "id": 96
+    "image": "images/card_96.webp",
+    "id": 96,
+    "image_tier": "B",
+    "image_path": "images/card_96.webp"
   },
   {
     "german": "die Briefmarke",
@@ -1850,8 +1862,10 @@
     "antonym": null,
     "example_de": "Kaufst du bitte Briefmarken bei der Post.",
     "example_en": "Please buy stamps at the post office.",
-    "image": "images/card_97.svg",
-    "id": 97
+    "image": "images/card_97.webp",
+    "id": 97,
+    "image_tier": "B",
+    "image_path": "images/card_97.webp"
   },
   {
     "german": "bringen",
@@ -1870,8 +1884,10 @@
     "antonym": null,
     "example_de": "Bringen Sie mir bitte noch einen Kaffee! Wir müssen ihn zum Arzt bringen.",
     "example_en": "Bring me another coffee, please! We have to take him to the doctor.",
-    "image": "images/card_98.svg",
-    "id": 98
+    "image": "images/card_98.webp",
+    "id": 98,
+    "image_tier": "B",
+    "image_path": "images/card_98.webp"
   },
   {
     "german": "das Brot",
@@ -1886,8 +1902,10 @@
     "antonym": null,
     "example_de": "Haben Sie auch Weißbrot? Nimm noch ein paar Brote für die Fahrt mit.",
     "example_en": "Do you also have white bread? Take a few more sandwiches for the trip.",
-    "image": "images/card_99.svg",
-    "id": 99
+    "image": "images/card_99.webp",
+    "id": 99,
+    "image_tier": "B",
+    "image_path": "images/card_99.webp"
   },
   {
     "german": "der Bruder",
@@ -1902,8 +1920,10 @@
     "antonym": "die Schwester",
     "example_de": "Sein Bruder arbeitet auch hier.",
     "example_en": "His brother also works here.",
-    "image": "images/card_100.svg",
-    "id": 100
+    "image": "images/card_100.webp",
+    "id": 100,
+    "image_tier": "B",
+    "image_path": "images/card_100.webp"
   },
   {
     "german": "das Brötchen",
@@ -1918,8 +1938,10 @@
     "antonym": null,
     "example_de": "Möchtest du Brötchen zum Frühstück?",
     "example_en": "Would you like bread rolls for breakfast?",
-    "image": "images/card_101.svg",
-    "id": 101
+    "image": "images/card_101.webp",
+    "id": 101,
+    "image_tier": "B",
+    "image_path": "images/card_101.webp"
   },
   {
     "german": "das Buch",
@@ -1934,8 +1956,10 @@
     "antonym": null,
     "example_de": "Gute Bücher sind oft sehr teuer. In diesem Wörterbuch finden Sie mehr als 20.000 Wörter.",
     "example_en": "Good books are often very expensive. In this dictionary you will find more than 20,000 words.",
-    "image": "images/card_102.svg",
-    "id": 102
+    "image": "images/card_102.webp",
+    "id": 102,
+    "image_tier": "B",
+    "image_path": "images/card_102.webp"
   },
   {
     "german": "der Buchstabe",
@@ -1950,8 +1974,10 @@
     "antonym": "die Zahl",
     "example_de": "Diesen Buchstaben gibt es in meiner Sprache nicht.",
     "example_en": "This letter does not exist in my language.",
-    "image": "images/card_103.svg",
-    "id": 103
+    "image": "images/card_103.webp",
+    "id": 103,
+    "image_tier": "B",
+    "image_path": "images/card_103.webp"
   },
   {
     "german": "buchstabieren",
@@ -1970,8 +1996,10 @@
     "antonym": null,
     "example_de": "Bitte buchstabieren Sie Ihren Namen.",
     "example_en": "Please spell your name.",
-    "image": "images/card_104.svg",
-    "id": 104
+    "image": "images/card_104.webp",
+    "id": 104,
+    "image_tier": "B",
+    "image_path": "images/card_104.webp"
   },
   {
     "german": "der Bus",
@@ -1986,8 +2014,10 @@
     "antonym": null,
     "example_de": "Wann kommt der nächste Bus?",
     "example_en": "When is the next bus coming?",
-    "image": "images/card_105.svg",
-    "id": 105
+    "image": "images/card_105.webp",
+    "id": 105,
+    "image_tier": "B",
+    "image_path": "images/card_105.webp"
   },
   {
     "german": "die Butter",
