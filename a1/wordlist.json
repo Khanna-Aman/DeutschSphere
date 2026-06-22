@@ -605,8 +605,10 @@
     "antonym": null,
     "example_de": "Füllen Sie bitte dieses Formular aus.",
     "example_en": "Please fill out this form.",
-    "image": "images/card_32.svg",
-    "id": 32
+    "image": "images/card_32.webp",
+    "id": 32,
+    "image_tier": "B",
+    "image_path": "images/card_32.webp"
   },
   {
     "german": "der Ausgang",
@@ -621,8 +623,10 @@
     "antonym": "der Eingang",
     "example_de": "Wo ist der Ausgang?",
     "example_en": "Where is the exit?",
-    "image": "images/card_33.svg",
-    "id": 33
+    "image": "images/card_33.webp",
+    "id": 33,
+    "image_tier": "B",
+    "image_path": "images/card_33.webp"
   },
   {
     "german": "die Auskunft",
@@ -637,8 +641,10 @@
     "antonym": null,
     "example_de": "Können Sie mir eine Auskunft geben?",
     "example_en": "Can you give me some information?",
-    "image": "images/card_34.svg",
-    "id": 34
+    "image": "images/card_34.webp",
+    "id": 34,
+    "image_tier": "B",
+    "image_path": "images/card_34.webp"
   },
   {
     "german": "das Ausland",
