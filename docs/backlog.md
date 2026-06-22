@@ -181,7 +181,8 @@ Persisted via `localStorage.current_theme`. Each theme fully overrides: body bac
   - [x] Scrambled word-chip hotkeys (`1-9` + `Enter`) for Grammar Weaver and Deutsch-Abenteuer RPG views
   - [x] Copy-pasteable Base64 compressed IndexedDB progress backup sync keys
   - [x] Flashcard relative image pathing hotfix inside `js/flashcards.js` and `js/quiz.js` prepending `state.currentLevel` to prevent 404 image load errors
-  - [x] SOTA High-Fidelity visual asset audit of the first 20 words inside `visual_audit_a1_report.md` (fully updated, with remaining images deferred/paused per user request)
+  - [ ] SOTA High-Fidelity visual asset audit & curation: **This is to be done.** A lot of improvement is required, as the current SVGs/emojis are unsatisfactory. Audited the first 20 words of Level A1 inside `visual_audit_a1_report.md`, but the wider overhaul is paused waiting for specific user instructions on how to proceed.
+
 
 
 ### Medium-Term

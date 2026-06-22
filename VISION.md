@@ -108,7 +108,7 @@ The A1-B1 German Vocabulary Master is a **fully functional, feature-rich SPA** w
 - [x] **Dual Touch & Key-Index Navigation**: Touch swipes for flashcard rating combined with `1-9`/`Enter` chip selections in Weaver/RPG
 - [x] **Settings Preference Customization**: Sliders for audio SFX volume and toggles for synthesized/acoustic chimes and particle bursts
 - [x] **Flashcard Relative Image Pathing Hotfix**: Prepended the active level namespace (`state.currentLevel`) to loaded flashcard and quiz card image sources to resolve 404 image loading failures.
-- [x] **Premium Image Manual Audit & Roadmap Sync**: Audited the first 20 words of Level A1 (compiled inside `visual_audit_a1_report.md` with Base64 embedded inline previews) and updated all documentation, roads, and checklists to pause/defer the visual assets redos per user request.
+- [ ] **Premium Image Manual Audit & Curation**: **This is to be done.** A lot of improvement is required in this area, as the current SVGs/emojis are unsatisfactory and generic. Audited the first 20 words of Level A1 (compiled inside `visual_audit_a1_report.md` with Base64 embedded inline previews), but the wider visual asset redo is paused, and the user will update with specific instructions on what to do.
 
 
 ### Cross-Cutting Concerns
