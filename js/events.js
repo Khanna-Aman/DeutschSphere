@@ -10,6 +10,7 @@ import {
   warmUpTTS
 } from './audio.js';
 import {
+  renderCard,
   toggleAccordion,
   toggleGrammarMatrix,
   nextCard,

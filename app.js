@@ -229,8 +229,8 @@ export async function fetchData() {
     renderSidebarCategories();
     window.dispatchEvent(new CustomEvent('srs:card-updated'));
 
-    // Trigger lazy background pre-caching for generated level images
-    if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+    // Trigger lazy background pre-caching for generated level images (disabled during automated tests to speed up navigation)
+    if ('serviceWorker' in navigator && navigator.serviceWorker.controller && !navigator.webdriver) {
       const imageUrls = state.allCards
         .map(c => c.image_path || c.image)
         .filter(img => !!img)

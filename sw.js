@@ -144,17 +144,19 @@ self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'PRECACHE_RESOURCES') {
     const urls = event.data.urls || [];
     event.waitUntil(
-      caches.open(DATA_CACHE).then(cache => {
-        return Promise.all(
-          urls.map(url => {
-            return cache.match(url).then(cached => {
-              if (cached) return; // already in cache
-              return cache.add(url).catch(err => {
-                console.warn('[SW] Dynamic background precache failed for URL:', url, err);
-              });
-            });
-          })
-        );
+      caches.open(DATA_CACHE).then(async (cache) => {
+        for (const url of urls) {
+          try {
+            const cached = await cache.match(url);
+            if (!cached) {
+              await cache.add(url);
+              // Small yield of 50ms to keep network and main thread smooth
+              await new Promise(resolve => setTimeout(resolve, 50));
+            }
+          } catch (err) {
+            console.warn('[SW] Dynamic background precache failed for URL:', url, err);
+          }
+        }
       })
     );
   }
