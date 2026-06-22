@@ -854,8 +854,10 @@
     "antonym": null,
     "example_de": "Die Fahrkarten gibt es nur am Automaten.",
     "example_en": "The tickets are only available at the ticket machine.",
-    "image": "images/card_45.svg",
-    "id": 45
+    "image": "images/card_45.webp",
+    "id": 45,
+    "image_tier": "B",
+    "image_path": "images/card_45.webp"
   },
   {
     "german": "automatisch",
@@ -873,8 +875,10 @@
     "antonym": "manuell",
     "example_de": "Du musst nichts machen. Das geht automatisch.",
     "example_en": "You don't have to do anything. It works automatically.",
-    "image": "images/card_46.svg",
-    "id": 46
+    "image": "images/card_46.webp",
+    "id": 46,
+    "image_tier": "B",
+    "image_path": "images/card_46.webp"
   },
   {
     "german": "das Baby",
@@ -889,8 +893,10 @@
     "antonym": "der Erwachsene",
     "example_de": "Mein Kind ist noch ein Baby.",
     "example_en": "My child is still a baby.",
-    "image": "images/card_47.svg",
-    "id": 47
+    "image": "images/card_47.webp",
+    "id": 47,
+    "image_tier": "B",
+    "image_path": "images/card_47.webp"
   },
   {
     "german": "das Bad",
@@ -905,8 +911,10 @@
     "antonym": null,
     "example_de": "Wir haben kein großes Bad.",
     "example_en": "We don't have a large bathroom.",
-    "image": "images/card_48.svg",
-    "id": 48
+    "image": "images/card_48.webp",
+    "id": 48,
+    "image_tier": "B",
+    "image_path": "images/card_48.webp"
   },
   {
     "german": "baden",
