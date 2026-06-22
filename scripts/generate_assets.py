@@ -330,7 +330,10 @@ def main():
                         config=types.GenerateImagesConfig(
                             number_of_images=1,
                             output_mime_type="image/png",
-                            aspect_ratio="1:1"
+                            aspect_ratio="1:1",
+                            person_generation="ALLOW_ALL",
+                            safety_filter_level="BLOCK_ONLY_HIGH",
+                            include_rai_reason=True
                         )
                     )
                     break  # Success!
@@ -352,8 +355,14 @@ def main():
                 print(f"  ⚠️ Warning: Imagen returned empty response for card_{card_id}.")
                 continue
 
+            generated_image_obj = response.generated_images[0]
+            if not generated_image_obj.image or not generated_image_obj.image.image_bytes:
+                filter_reason = getattr(generated_image_obj, "rai_filtered_reason", "No reason provided")
+                print(f"  ⚠️ Warning: Imagen image was filtered/blocked for card_{card_id}. Reason: {filter_reason}")
+                continue
+
             # Load image bytes
-            img_bytes = response.generated_images[0].image.image_bytes
+            img_bytes = generated_image_obj.image.image_bytes
             raw_img = Image.open(BytesIO(img_bytes))
 
             # 1. Apply robust connected chroma-key masking
