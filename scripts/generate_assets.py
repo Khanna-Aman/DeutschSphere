@@ -293,7 +293,38 @@ METAPHOR_MAP = {
     "großeltern": "A heartwarming 3D portrait of a sweet, smiling grandmother and grandfather standing together arm-in-arm, wearing cute cozy sweaters, front-and-center",
     "großmutter": "A sweet, gentle 3D grandmother character with glasses and silver hair in a neat bun, smiling warmly while knitting a colorful scarf, front-and-center",
     "großvater": "A kind, smiling 3D grandfather character with silver hair, wearing classic round glasses and a cozy tweed vest, holding a pocket watch, front-and-center",
-    "gruppe": "A beautifully arranged, tight-knit cluster of five colorful 3D star-shaped icons sitting snugly together on a glowing glass platform, representing a cohesive group, front-and-center"
+    "gruppe": "A beautifully arranged, tight-knit cluster of five colorful 3D star-shaped icons sitting snugly together on a glowing glass platform, representing a cohesive group, front-and-center",
+
+    # SOTA 3D assets for Cards 256 to 285 (gruß through hinten)
+    "gruß": "A cheerful, high-gloss 3D smiling emoji character waving its hand in a warm, welcoming greeting, surrounded by small glowing stars, front-and-center",
+    "größe": "A beautiful 3D comparative display showing three high-gloss t-shirts (small, medium, giant) neatly lined up, beautifully showing the concept of sizes, front-and-center",
+    "gut": "A massive, ultra-glossy golden thumbs-up icon reflecting glowing soft-touch pink and cyan studio lights, representing excellent and good, front-and-center",
+    "gültig": "A highly detailed, glossy white 3D ticket with a prominent bright green checkmark stamp and glowing sparkles, representing validity, front-and-center",
+    "günstig": "A bright orange 3D sale tag showing a large percentage symbol (%) next to a neat stack of golden coins, representing favorable price, front-and-center",
+    "haar": "A beautiful, stylized 3D hair-care silhouette showing flowing, glossy golden locks of hair styled elegantly, with glowing star accents, front-and-center",
+    "haben": "A pair of warm 3D hands securely holding a giant, glowing golden key, representing possession and having, front-and-center",
+    "halbpension": "A sleek 3D dinner plate with a cloche dome half-opened to reveal a croissant on one side and a savory dish on the other, representing breakfast and dinner, front-and-center",
+    "halle": "A magnificent, spacious 3D exhibition hall interior with giant high-gloss pillars, an arched ceiling, and glowing glassmorphic exhibition floors, front-and-center",
+    "halten": "A giant 3D open hand gesture (palm facing forward) glowing with a soft pink hazard barrier sign, representing stop, front-and-center",
+    "haltestelle": "A beautiful 3D modern glass bus stop shelter with a glossy red bench and a glowing timetable signpost, front-and-center, 100% bus stop essence",
+    "hand": "A highly detailed, stylized 3D human hand made of soft-touch matte pink resin with polished gold nails, fingers open, front-and-center, 100% hand essence",
+    "handy": "A sleek, ultra-modern 3D smartphone with a curved glassmorphism screen displaying a warm pink heart icon and floating bubbles, front-and-center, 100% mobile phone essence",
+    "haus": "A cozy, highly detailed 3D cottage house with a warm glowing chimney, white fence, and a tiny green tree, capturing 100% house essence, front-and-center",
+    "hausaufgabe": "A highly detailed, open 3D school notebook with neat rows of colorful pencil sketches, a glossy red apple, and a yellow pencil resting on it, front-and-center, 100% homework essence",
+    "hausfrau": "A cheerful 3D female character wearing a cozy apron, holding a fresh tray of warm cookies in one hand and a glossy feather duster in the other, front-and-center",
+    "hausmann": "A cheerful 3D male character wearing a stylish apron, holding a clean frying pan with a golden spatula and a glossy spray bottle, front-and-center",
+    "heimat": "A heartwarming 3D landscape of rolling green hills, a small cozy house with a flying flag showing a golden heart outline, representing homeland, front-and-center",
+    "heiraten": "Two spectacular, interlocking 3D wedding rings made of polished gold and sparkling diamonds, hovering over a shower of pink rose petals, front-and-center",
+    "heißen": "A stylish, glossy 3D name tag badge with a glowing golden border and a cute star icon in the center, representing name and calling, front-and-center",
+    "helfen": "A heartwarming 3D scene of a friendly character extending a warm hand to pull another character up onto a glowing golden ledge, representing help, front-and-center",
+    "hell": "A magnificent, radiant 3D lightbulb bursting with dazzling, warm golden sunbeam rays that light up the entire frame with brilliant energy, front-and-center",
+    "herd": "A spectacular, modern 3D kitchen stove cooker in sleek chrome and white enamel, with realistic glowing blue gas fire hobs and a steaming glossy pot, front-and-center",
+    "herr": "An elegant, highly detailed 3D gentleman's set consisting of a black top hat, a glossy pink bow tie, and a polished gold-handled cane, front-and-center",
+    "herzlich": "A gorgeous, radiant 3D pink glass heart radiating waves of soft-touch warm golden light, representing cordiality and sincere warmth, front-and-center",
+    "heute": "A magnificent 3D desk calendar showing the current calendar page being highlighted by a glowing gold circle and sparkles, representing today, front-and-center",
+    "hier": "A giant, glowing 3D location pin icon pointing directly down onto a single sparkling gold star on a glass grid floor, representing here, front-and-center",
+    "hilfe": "A vibrant 3D lifesaver ring buoy painted in high-gloss red and white stripes, floating suspended, representing safety and rescue help, front-and-center",
+    "hinten": "A cute 3D character smilingly peeking out from directly behind a giant, high-gloss 3D wooden storage box, representing behind or in the back, front-and-center"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

@@ -4900,8 +4900,10 @@
     "antonym": "der Abschied",
     "example_de": "Viele Grüße an Ihre Frau. Mit freundlichen Grüßen",
     "example_en": "Many greetings to your wife. With kind regards",
-    "image": "images/card_256.svg",
-    "id": 256
+    "image": "images/card_256.webp",
+    "id": 256,
+    "image_tier": "B",
+    "image_path": "images/card_256.webp"
   },
   {
     "german": "die Größe",
@@ -4916,8 +4918,10 @@
     "antonym": null,
     "example_de": "Haben Sie das auch in Größe 40?",
     "example_en": "Do you also have that in size 40?",
-    "image": "images/card_257.svg",
-    "id": 257
+    "image": "images/card_257.webp",
+    "id": 257,
+    "image_tier": "B",
+    "image_path": "images/card_257.webp"
   },
   {
     "german": "gut",
@@ -4935,8 +4939,10 @@
     "antonym": "schlecht",
     "example_de": "Das finde ich gut. Ich komme um 13 Uhr. - Gut! Guten Morgen! Ein gutes neues Jahr! Guten Appetit!",
     "example_en": "I find that good. I am coming at 1 pm. - Good! Good morning! A happy new year! Enjoy your meal!",
-    "image": "images/card_258.svg",
-    "id": 258
+    "image": "images/card_258.webp",
+    "id": 258,
+    "image_tier": "B",
+    "image_path": "images/card_258.webp"
   },
   {
     "german": "gültig",
@@ -4954,8 +4960,10 @@
     "antonym": "ungültig",
     "example_de": "Der Pass ist nicht mehr gültig.",
     "example_en": "The passport is no longer valid.",
-    "image": "images/card_259.svg",
-    "id": 259
+    "image": "images/card_259.webp",
+    "id": 259,
+    "image_tier": "B",
+    "image_path": "images/card_259.webp"
   },
   {
     "german": "günstig",
@@ -4973,8 +4981,10 @@
     "antonym": "teuer",
     "example_de": "Dort gibt es günstige Angebote.",
     "example_en": "There are favorable offers there.",
-    "image": "images/card_260.svg",
-    "id": 260
+    "image": "images/card_260.webp",
+    "id": 260,
+    "image_tier": "B",
+    "image_path": "images/card_260.webp"
   },
   {
     "german": "das Haar",
@@ -4989,8 +4999,10 @@
     "antonym": null,
     "example_de": "Sie hat lange Haare.",
     "example_en": "She has long hair.",
-    "image": "images/card_261.svg",
-    "id": 261
+    "image": "images/card_261.webp",
+    "id": 261,
+    "image_tier": "B",
+    "image_path": "images/card_261.webp"
   },
   {
     "german": "haben",
@@ -5009,8 +5021,10 @@
     "antonym": null,
     "example_de": "Ich habe ein neues Auto.",
     "example_en": "I have a new car.",
-    "image": "images/card_262.svg",
-    "id": 262
+    "image": "images/card_262.webp",
+    "id": 262,
+    "image_tier": "B",
+    "image_path": "images/card_262.webp"
   },
   {
     "german": "die Halbpension",
@@ -5025,8 +5039,10 @@
     "antonym": "die Vollpension",
     "example_de": "Möchten Sie Vollpension oder Halbpension?",
     "example_en": "Would you like full board or half board?",
-    "image": "images/card_263.svg",
-    "id": 263
+    "image": "images/card_263.webp",
+    "id": 263,
+    "image_tier": "B",
+    "image_path": "images/card_263.webp"
   },
   {
     "german": "die Halle",
@@ -5041,8 +5057,10 @@
     "antonym": null,
     "example_de": "Wir treffen uns in Halle B.",
     "example_en": "We will meet in hall B.",
-    "image": "images/card_264.svg",
-    "id": 264
+    "image": "images/card_264.webp",
+    "id": 264,
+    "image_tier": "B",
+    "image_path": "images/card_264.webp"
   },
   {
     "german": "hallo",
@@ -5057,8 +5075,10 @@
     "antonym": "tschüss",
     "example_de": "Hallo Inge! Wie geht's?",
     "example_en": "Hello Inge! How are you?",
-    "image": "images/card_265.svg",
-    "id": 265
+    "image": "images/card_265.webp",
+    "id": 265,
+    "image_tier": "B",
+    "image_path": "images/card_265.webp"
   },
   {
     "german": "halten",
@@ -5077,8 +5097,10 @@
     "antonym": "fahren",
     "example_de": "Dieser Zug hält nicht in Rüdesheim.",
     "example_en": "This train does not stop in Rüdesheim.",
-    "image": "images/card_266.svg",
-    "id": 266
+    "image": "images/card_266.webp",
+    "id": 266,
+    "image_tier": "B",
+    "image_path": "images/card_266.webp"
   },
   {
     "german": "die Haltestelle",
@@ -5093,8 +5115,10 @@
     "antonym": null,
     "example_de": "An der nächsten Haltestelle müssen Sie aussteigen.",
     "example_en": "You must get off at the next stop.",
-    "image": "images/card_267.svg",
-    "id": 267
+    "image": "images/card_267.webp",
+    "id": 267,
+    "image_tier": "B",
+    "image_path": "images/card_267.webp"
   },
   {
     "german": "die Hand",
@@ -5109,8 +5133,10 @@
     "antonym": "der Fuß",
     "example_de": "Er gibt mir die Hand.",
     "example_en": "He gives me his hand.",
-    "image": "images/card_268.svg",
-    "id": 268
+    "image": "images/card_268.webp",
+    "id": 268,
+    "image_tier": "B",
+    "image_path": "images/card_268.webp"
   },
   {
     "german": "das Handy",
@@ -5125,8 +5151,10 @@
     "antonym": null,
     "example_de": "In der Schule bitte die Handys ausmachen!",
     "example_en": "Please turn off the mobile phones in school!",
-    "image": "images/card_269.svg",
-    "id": 269
+    "image": "images/card_269.webp",
+    "id": 269,
+    "image_tier": "B",
+    "image_path": "images/card_269.webp"
   },
   {
     "german": "das Haus",
@@ -5141,8 +5169,10 @@
     "antonym": null,
     "example_de": "In welchem Haus wohnst du? Ich gehe jetzt nach Hause. Paul ist nicht zu Hause.",
     "example_en": "In which house do you live? I am going home now. Paul is not at home.",
-    "image": "images/card_270.svg",
-    "id": 270
+    "image": "images/card_270.webp",
+    "id": 270,
+    "image_tier": "B",
+    "image_path": "images/card_270.webp"
   },
   {
     "german": "die Hausaufgabe",
@@ -5157,8 +5187,10 @@
     "antonym": null,
     "example_de": "Kannst du mir bei den Hausaufgaben helfen?",
     "example_en": "Can you help me with the homework?",
-    "image": "images/card_271.svg",
-    "id": 271
+    "image": "images/card_271.webp",
+    "id": 271,
+    "image_tier": "B",
+    "image_path": "images/card_271.webp"
   },
   {
     "german": "die Hausfrau",
@@ -5173,8 +5205,10 @@
     "antonym": "der Hausmann",
     "example_de": "Die Hausfrau/der Hausmann wäscht, kocht und kauft ein.",
     "example_en": "The housewife/househusband washes, cooks and shops.",
-    "image": "images/card_272.svg",
-    "id": 272
+    "image": "images/card_272.webp",
+    "id": 272,
+    "image_tier": "B",
+    "image_path": "images/card_272.webp"
   },
   {
     "german": "der Hausmann",
@@ -5189,8 +5223,10 @@
     "antonym": "die Hausfrau",
     "example_de": "Die Hausfrau/der Hausmann wäscht, kocht und kauft ein.",
     "example_en": "The housewife/househusband washes, cooks and shops.",
-    "image": "images/card_273.svg",
-    "id": 273
+    "image": "images/card_273.webp",
+    "id": 273,
+    "image_tier": "B",
+    "image_path": "images/card_273.webp"
   },
   {
     "german": "die Heimat",
@@ -5205,8 +5241,10 @@
     "antonym": "die Fremde",
     "example_de": "Ich komme aus der Schweiz. Das ist meine Heimat.",
     "example_en": "I come from Switzerland. That is my homeland.",
-    "image": "images/card_274.svg",
-    "id": 274
+    "image": "images/card_274.webp",
+    "id": 274,
+    "image_tier": "B",
+    "image_path": "images/card_274.webp"
   },
   {
     "german": "heiraten",
@@ -5225,8 +5263,10 @@
     "antonym": "sich scheiden lassen",
     "example_de": "Meine Schwester heiratet einen Japaner.",
     "example_en": "My sister is marrying a Japanese man.",
-    "image": "images/card_275.svg",
-    "id": 275
+    "image": "images/card_275.webp",
+    "id": 275,
+    "image_tier": "B",
+    "image_path": "images/card_275.webp"
   },
   {
     "german": "heißen",
@@ -5245,8 +5285,10 @@
     "antonym": null,
     "example_de": "Ich heiße Charlotte Meier. Wie heißt das auf Deutsch?",
     "example_en": "My name is Charlotte Meier. What is that called in German?",
-    "image": "images/card_276.svg",
-    "id": 276
+    "image": "images/card_276.webp",
+    "id": 276,
+    "image_tier": "B",
+    "image_path": "images/card_276.webp"
   },
   {
     "german": "helfen",
@@ -5265,8 +5307,10 @@
     "antonym": null,
     "example_de": "Können Sie mir helfen, bitte?",
     "example_en": "Can you help me, please?",
-    "image": "images/card_277.svg",
-    "id": 277
+    "image": "images/card_277.webp",
+    "id": 277,
+    "image_tier": "B",
+    "image_path": "images/card_277.webp"
   },
   {
     "german": "hell",
@@ -5284,8 +5328,10 @@
     "antonym": "dunkel",
     "example_de": "Im Sommer ist es bis 21 Uhr hell.",
     "example_en": "In summer it is light until 9 pm.",
-    "image": "images/card_278.svg",
-    "id": 278
+    "image": "images/card_278.webp",
+    "id": 278,
+    "image_tier": "B",
+    "image_path": "images/card_278.webp"
   },
   {
     "german": "der Herd",
@@ -5300,8 +5346,10 @@
     "antonym": null,
     "example_de": "In der neuen Küche fehlt noch der Herd.",
     "example_en": "The stove is still missing in the new kitchen.",
-    "image": "images/card_279.svg",
-    "id": 279
+    "image": "images/card_279.webp",
+    "id": 279,
+    "image_tier": "B",
+    "image_path": "images/card_279.webp"
   },
   {
     "german": "der Herr",
@@ -5316,8 +5364,10 @@
     "antonym": "die Dame",
     "example_de": "Guten Tag, Herr Sommer!",
     "example_en": "Good day, Mr. Sommer!",
-    "image": "images/card_280.svg",
-    "id": 280
+    "image": "images/card_280.webp",
+    "id": 280,
+    "image_tier": "B",
+    "image_path": "images/card_280.webp"
   },
   {
     "german": "herzlich",
@@ -5332,8 +5382,10 @@
     "antonym": null,
     "example_de": "Herzlichen Glückwunsch!",
     "example_en": "Congratulations!",
-    "image": "images/card_281.svg",
-    "id": 281
+    "image": "images/card_281.webp",
+    "id": 281,
+    "image_tier": "B",
+    "image_path": "images/card_281.webp"
   },
   {
     "german": "heute",
@@ -5348,8 +5400,10 @@
     "antonym": "gestern",
     "example_de": "Heute ist ein schöner Tag.",
     "example_en": "Today is a beautiful day.",
-    "image": "images/card_282.svg",
-    "id": 282
+    "image": "images/card_282.webp",
+    "id": 282,
+    "image_tier": "B",
+    "image_path": "images/card_282.webp"
   },
   {
     "german": "hier",
@@ -5364,8 +5418,10 @@
     "antonym": "dort",
     "example_de": "Hier ist 06131-553221, Pamela Linke. Hier wohne ich.",
     "example_en": "Here is 06131-553221, Pamela Linke. I live here.",
-    "image": "images/card_283.svg",
-    "id": 283
+    "image": "images/card_283.webp",
+    "id": 283,
+    "image_tier": "B",
+    "image_path": "images/card_283.webp"
   },
   {
     "german": "die Hilfe",
@@ -5380,8 +5436,10 @@
     "antonym": null,
     "example_de": "Hilfe! Bitte helfen Sie mir! Brauchen Sie meine Hilfe?",
     "example_en": "Help! Please help me! Do you need my help?",
-    "image": "images/card_284.svg",
-    "id": 284
+    "image": "images/card_284.webp",
+    "id": 284,
+    "image_tier": "B",
+    "image_path": "images/card_284.webp"
   },
   {
     "german": "hinten",
@@ -5396,8 +5454,10 @@
     "antonym": "vorn",
     "example_de": "Die Tür zum Aussteigen ist hinten.",
     "example_en": "The door for getting out is in the back.",
-    "image": "images/card_285.svg",
-    "id": 285
+    "image": "images/card_285.webp",
+    "id": 285,
+    "image_tier": "B",
+    "image_path": "images/card_285.webp"
   },
   {
     "german": "das Hobby",
