@@ -419,9 +419,10 @@ export function renderCard() {
     elements.flashcard.className = `glass border rounded-2xl p-8 md:p-12 min-h-[180px] md:min-h-[220px] flex flex-col justify-between cursor-pointer transition-all duration-300 select-none relative group overflow-hidden ${glowClass}`;
   }
 
-  // Ensure card image container is visible and loads Twemoji illustration if enabled
+  // Ensure card image container is hidden (illustrations disabled for V1.0.0; coming in V1.0.1)
   const activeImage = card.image_path || card.image;
-  if (state.showImages && activeImage) {
+  const isImageAllowed = false; // Strictly disabled for now
+  if (state.showImages && isImageAllowed) {
     if (elements.cardImageContainer) {
       elements.cardImageContainer.style.display = '';
       elements.cardImageContainer.classList.remove('hidden');
@@ -892,24 +893,60 @@ export function toggleAutoplay() {
   }
 }
 
+// Premium Coming Soon Toast
+function showToast(title, description, icon = 'fa-circle-info') {
+  // Remove existing premium toasts to prevent stacking
+  const existing = document.querySelectorAll('.premium-coming-soon-toast');
+  existing.forEach(t => t.remove());
+
+  const toast = document.createElement('div');
+  toast.className = "premium-coming-soon-toast fixed bottom-6 right-6 z-50 max-w-sm bg-slate-950/95 border border-indigo-500/30 text-white rounded-xl p-4 shadow-2xl shadow-indigo-500/10 flex items-start gap-3 transform translate-y-12 opacity-0 transition-all duration-500 backdrop-blur-md";
+  toast.innerHTML = `
+    <div class="p-2 bg-indigo-500/10 rounded-lg text-indigo-400">
+      <i class="fa-solid ${icon} text-lg animate-pulse"></i>
+    </div>
+    <div class="flex-1">
+      <h4 class="text-xs font-black text-white tracking-wide uppercase">${title}</h4>
+      <p class="text-[10px] text-slate-300 mt-0.5">${description}</p>
+    </div>
+    <button class="text-slate-500 hover:text-slate-300 text-xs focus:outline-none" onclick="this.parentElement.remove()">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+  `;
+  document.body.appendChild(toast);
+  
+  requestAnimationFrame(() => {
+    toast.classList.remove('translate-y-12', 'opacity-0');
+  });
+
+  setTimeout(() => {
+    if (toast.parentElement) {
+      toast.classList.add('translate-y-12', 'opacity-0');
+      setTimeout(() => toast.remove(), 500);
+    }
+  }, 5000);
+}
+
 // Preferences: Toggle illustrations
 export function toggleImages() {
-  state.showImages = !state.showImages;
-  safeSetItem('show_images', String(state.showImages));
+  showToast(
+    "Premium-Illustrationen",
+    "Unsere handkuratierten, detailreichen AI-Illustrationen folgen in Kürze in Version 1.0.1! Freuen Sie sich auf ein visuell fesselndes Lernerlebnis! ✨",
+    "fa-image"
+  );
+  // Keep state.showImages false to ensure no 404 image requests are ever fired
+  state.showImages = false;
+  safeSetItem('show_images', 'false');
   updateImagesToggleUI();
-  renderCard();
 }
 
 export function updateImagesToggleUI() {
   if (elements.toggleImagesBtn && elements.toggleImagesText) {
-    if (state.showImages) {
-      elements.toggleImagesBtn.classList.add('bg-indigo-600', 'border-indigo-500', 'text-white', 'hover:bg-indigo-500', 'hover:text-white');
-      elements.toggleImagesBtn.classList.remove('bg-slate-950/40', 'border-slate-900/80', 'text-slate-400', 'hover:text-white', 'hover:border-slate-700');
-      elements.toggleImagesText.textContent = "Bilder anzeigen: EIN";
-    } else {
-      elements.toggleImagesBtn.classList.remove('bg-indigo-600', 'border-indigo-500', 'text-white', 'hover:bg-indigo-500', 'hover:text-white');
-      elements.toggleImagesBtn.classList.add('bg-slate-950/40', 'border-slate-900/80', 'text-slate-400', 'hover:text-white', 'hover:border-slate-700');
-      elements.toggleImagesText.textContent = "Bilder anzeigen: AUS";
+    elements.toggleImagesBtn.classList.remove('bg-indigo-600', 'border-indigo-500', 'text-white', 'hover:bg-indigo-500', 'hover:text-white');
+    elements.toggleImagesBtn.classList.add('bg-slate-950/40', 'border-slate-900/80', 'text-slate-500/70', 'cursor-pointer');
+    elements.toggleImagesBtn.title = "Illustrationen folgen in Kürze in V1.0.1 (B)";
+    if (elements.toggleImagesText) {
+      elements.toggleImagesText.textContent = "Premium-Bilder: In Kürze...";
     }
   }
 }

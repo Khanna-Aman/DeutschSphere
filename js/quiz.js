@@ -142,10 +142,11 @@ export function loadQuizQuestion() {
   if (elements.quizFeedbackPanel) elements.quizFeedbackPanel.classList.add('hidden');
   if (elements.quizNextQuestionBtn) elements.quizNextQuestionBtn.classList.add('hidden');
 
-  // Handle card illustration
+  // Handle card illustration (restricted to Level A1 WebP cards 1-160; disabled for V1.0.0, coming in V1.0.1)
   if (elements.quizCardImageContainer && elements.quizCardImage) {
     const activeImage = qCard.image_path || qCard.image;
-    if (state.showImages && activeImage) {
+    const isImageAllowed = false; // Strictly disabled for now
+    if (state.showImages && isImageAllowed) {
       elements.quizCardImage.src = state.currentLevel + '/' + activeImage;
       elements.quizCardImageContainer.classList.remove('hidden');
     } else {
