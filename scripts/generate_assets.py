@@ -179,6 +179,7 @@ def main():
     parser.add_argument("--level", type=str, default="a1", choices=["a1", "a2", "b1"], help="Target CEFR level")
     parser.add_argument("--limit", type=int, default=10, help="Batch limit (number of images to generate)")
     parser.add_argument("--delay", type=int, default=12, help="Pacing delay (seconds) between successful generations")
+    parser.add_argument("--skip", type=str, default="", help="Comma-separated card IDs to skip")
     parser.add_argument("--force", action="store_true", help="Force overwrite existing WebP images")
     args = parser.parse_args()
 
@@ -187,6 +188,8 @@ def main():
     print(f"Target Level: {args.level.upper()}")
     print(f"Batch Limit:  {args.limit}")
     print(f"Pacing Delay: {args.delay}s")
+    if args.skip:
+        print(f"Skipping Card IDs: {args.skip}")
     print(f"Force Overwrite: {args.force}")
     print("=========================================================")
 
@@ -259,12 +262,17 @@ def main():
         wordlist = json.load(f)
 
     # Filter items that need generation
+    skip_ids = [s.strip() for s in args.skip.split(",") if s.strip()]
     to_generate = []
     for item in wordlist:
         card_id = item.get("id")
         if not card_id:
             continue
         
+        # Skip specific card IDs if requested
+        if str(card_id) in skip_ids:
+            continue
+            
         webp_filename = f"card_{card_id}.webp"
         webp_path = os.path.join(images_dir, webp_filename)
 
