@@ -429,8 +429,10 @@
     "antonym": "die Lösung",
     "example_de": "Das ist eine schwere Aufgabe.",
     "example_en": "That is a difficult task.",
-    "image": "images/card_23.svg",
-    "id": 23
+    "image": "images/card_23.webp",
+    "id": 23,
+    "image_tier": "B",
+    "image_path": "images/card_23.webp"
   },
   {
     "german": "aufhören",
