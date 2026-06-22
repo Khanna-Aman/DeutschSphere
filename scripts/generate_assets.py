@@ -144,6 +144,59 @@ def remove_black_background(img, threshold=50, feather=True):
     img.putalpha(bg_alpha)
     return img
 
+def wipe_disconnected_shadows(img, min_gap_rows=3):
+    """
+    Scans the image from bottom to top to find any disconnected shadow islands.
+    If it finds non-transparent pixels at the bottom separated from the main subject
+    by a horizontal gap of pure transparency (at least min_gap_rows tall), it
+    completely wipes out everything below that gap.
+    """
+    img = img.convert("RGBA")
+    width, height = img.size
+    
+    alpha = img.getchannel('A')
+    alpha_data = list(alpha.getdata())
+    
+    def is_row_transparent(y):
+        start_idx = y * width
+        for x in range(width):
+            if alpha_data[start_idx + x] > 0:
+                return False
+        return True
+
+    y = height - 1
+    has_seen_pixels = False
+    gap_counter = 0
+    gap_start_y = None
+    
+    while y >= 0:
+        if is_row_transparent(y):
+            if has_seen_pixels:
+                gap_counter += 1
+                if gap_counter >= min_gap_rows:
+                    gap_start_y = y + gap_counter
+                    break
+            else:
+                pass
+        else:
+            has_seen_pixels = True
+            gap_counter = 0
+        y -= 1
+        
+    if gap_start_y is not None:
+        # Safety cutoff: Only wipe if the gap starts in the bottom part of the image
+        if gap_start_y >= int(height * 0.55):
+            print(f"  🧹 Dynamic Shadow Wiper: Detected floor shadow island at y >= {gap_start_y}. Clearing!")
+            pixels = img.load()
+            for y_to_clear in range(gap_start_y, height):
+                for x_to_clear in range(width):
+                    r, g, b, a = pixels[x_to_clear, y_to_clear]
+                    pixels[x_to_clear, y_to_clear] = (r, g, b, 0)
+        else:
+            print(f"  ⚠️ Dynamic Shadow Wiper: Ignored high-up gap at y = {gap_start_y} (above safety cutoff of {int(height * 0.55)})")
+                
+    return img
+
 def trim_and_center(img, target_size=(256, 256), padding_percent=0.05):
     """
     Trims fully transparent boundary pixels using getbbox(), and rescales/centers 
@@ -411,8 +464,11 @@ def main():
             # 1. Apply robust connected chroma-key masking
             transparent_img = remove_black_background(raw_img, threshold=50, feather=True)
 
+            # 1b. Apply dynamic shadow island wiper to remove disconnected shadows/reflections
+            clean_img = wipe_disconnected_shadows(transparent_img, min_gap_rows=3)
+
             # 2. Trim empty transparent border pixels & center with 5% padding
-            final_img = trim_and_center(transparent_img, target_size=(256, 256), padding_percent=0.05)
+            final_img = trim_and_center(clean_img, target_size=(256, 256), padding_percent=0.05)
 
             # 3. Compress and save as SOTA WebP
             final_img.save(output_webp_path, "WEBP", quality=82)
