@@ -2591,8 +2591,10 @@
     "antonym": null,
     "example_de": "Ich habe die Durchsage nicht verstanden.",
     "example_en": "I did not understand the announcement.",
-    "image": "images/card_136.svg",
-    "id": 136
+    "image": "images/card_136.webp",
+    "id": 136,
+    "image_tier": "B",
+    "image_path": "images/card_136.webp"
   },
   {
     "german": "der Durst",
@@ -2607,8 +2609,10 @@
     "antonym": "der Hunger",
     "example_de": "Hast du etwas zu trinken? Ich habe großen Durst.",
     "example_en": "Do you have something to drink? I am very thirsty.",
-    "image": "images/card_137.svg",
-    "id": 137
+    "image": "images/card_137.webp",
+    "id": 137,
+    "image_tier": "B",
+    "image_path": "images/card_137.webp"
   },
   {
     "german": "die Dusche",
@@ -2623,8 +2627,10 @@
     "antonym": "die Badewanne",
     "example_de": "Unsere Wohnung hat nur eine Dusche.",
     "example_en": "Our apartment only has one shower.",
-    "image": "images/card_138.svg",
-    "id": 138
+    "image": "images/card_138.webp",
+    "id": 138,
+    "image_tier": "B",
+    "image_path": "images/card_138.webp"
   },
   {
     "german": "dürfen",
@@ -2643,8 +2649,10 @@
     "antonym": "müssen",
     "example_de": "Sie dürfen hier nicht rauchen. Darf ich Sie zu einem Kaffee einladen? Es darf nicht mehr als 15 Euro kosten.",
     "example_en": "You are not allowed to smoke here. May I invite you to a coffee? It may not cost more than 15 euros.",
-    "image": "images/card_139.svg",
-    "id": 139
+    "image": "images/card_139.webp",
+    "id": 139,
+    "image_tier": "B",
+    "image_path": "images/card_139.webp"
   },
   {
     "german": "die Ecke",
@@ -2659,8 +2667,10 @@
     "antonym": null,
     "example_de": "An der nächsten Ecke links.",
     "example_en": "At the next corner on the left.",
-    "image": "images/card_140.svg",
-    "id": 140
+    "image": "images/card_140.webp",
+    "id": 140,
+    "image_tier": "B",
+    "image_path": "images/card_140.webp"
   },
   {
     "german": "die Ehefrau",
@@ -2675,8 +2685,10 @@
     "antonym": "der Ehemann",
     "example_de": "Das ist mein (Ehe-) Mann/meine (Ehe-) Frau.",
     "example_en": "This is my husband/my wife.",
-    "image": "images/card_141.svg",
-    "id": 141
+    "image": "images/card_141.webp",
+    "id": 141,
+    "image_tier": "B",
+    "image_path": "images/card_141.webp"
   },
   {
     "german": "der Ehemann",
@@ -2691,8 +2703,10 @@
     "antonym": "die Ehefrau",
     "example_de": "Das ist mein (Ehe-) Mann/meine (Ehe-) Frau.",
     "example_en": "This is my husband/my wife.",
-    "image": "images/card_142.svg",
-    "id": 142
+    "image": "images/card_142.webp",
+    "id": 142,
+    "image_tier": "B",
+    "image_path": "images/card_142.webp"
   },
   {
     "german": "das Ei",
@@ -2707,8 +2721,10 @@
     "antonym": null,
     "example_de": "Möchtest du ein Ei zum Frühstück?",
     "example_en": "Would you like an egg for breakfast?",
-    "image": "images/card_143.svg",
-    "id": 143
+    "image": "images/card_143.webp",
+    "id": 143,
+    "image_tier": "B",
+    "image_path": "images/card_143.webp"
   },
   {
     "german": "eilig",
@@ -2726,8 +2742,10 @@
     "antonym": null,
     "example_de": "Hast du es eilig?",
     "example_en": "Are you in a hurry?",
-    "image": "images/card_144.svg",
-    "id": 144
+    "image": "images/card_144.webp",
+    "id": 144,
+    "image_tier": "B",
+    "image_path": "images/card_144.webp"
   },
   {
     "german": "ein-",
@@ -2742,8 +2760,10 @@
     "antonym": "kein-",
     "example_de": "Ich nehme ein Bier. Willst du auch eins? Ist hier einer, der das kann?",
     "example_en": "I will take a beer. Do you want one too? Is there someone here who can do that?",
-    "image": "images/card_145.svg",
-    "id": 145
+    "image": "images/card_145.webp",
+    "id": 145,
+    "image_tier": "B",
+    "image_path": "images/card_145.webp"
   },
   {
     "german": "einfach",
@@ -2761,8 +2781,10 @@
     "antonym": "schwer",
     "example_de": "Die Prüfung ist ganz einfach. Hin und zurück? - Nein, bitte nur einfach. Ich brauche nur ein einfaches Zimmer.",
     "example_en": "The exam is very easy. Round trip? - No, just one-way please. I only need a simple room.",
-    "image": "images/card_146.svg",
-    "id": 146
+    "image": "images/card_146.webp",
+    "id": 146,
+    "image_tier": "B",
+    "image_path": "images/card_146.webp"
   },
   {
     "german": "der Eingang",
@@ -2777,8 +2799,10 @@
     "antonym": "der Ausgang",
     "example_de": "Der Eingang ist um die Ecke.",
     "example_en": "The entrance is around the corner.",
-    "image": "images/card_147.svg",
-    "id": 147
+    "image": "images/card_147.webp",
+    "id": 147,
+    "image_tier": "B",
+    "image_path": "images/card_147.webp"
   },
   {
     "german": "einkaufen",
@@ -2797,8 +2821,10 @@
     "antonym": "verkaufen",
     "example_de": "Ich muss noch für morgen einkaufen.",
     "example_en": "I still need to shop for tomorrow.",
-    "image": "images/card_148.svg",
-    "id": 148
+    "image": "images/card_148.webp",
+    "id": 148,
+    "image_tier": "B",
+    "image_path": "images/card_148.webp"
   },
   {
     "german": "einladen",
@@ -2817,8 +2843,10 @@
     "antonym": null,
     "example_de": "Darf ich Sie zu einem Kaffee einladen?",
     "example_en": "May I invite you to a coffee?",
-    "image": "images/card_149.svg",
-    "id": 149
+    "image": "images/card_149.webp",
+    "id": 149,
+    "image_tier": "B",
+    "image_path": "images/card_149.webp"
   },
   {
     "german": "die Einladung",
@@ -2833,8 +2861,10 @@
     "antonym": null,
     "example_de": "Danke für die Einladung!",
     "example_en": "Thank you for the invitation!",
-    "image": "images/card_150.svg",
-    "id": 150
+    "image": "images/card_150.webp",
+    "id": 150,
+    "image_tier": "B",
+    "image_path": "images/card_150.webp"
   },
   {
     "german": "einmal",
@@ -2849,8 +2879,10 @@
     "antonym": "nie",
     "example_de": "Diese Prüfung mache ich nicht noch einmal.",
     "example_en": "I am not taking this exam once again.",
-    "image": "images/card_151.svg",
-    "id": 151
+    "image": "images/card_151.webp",
+    "id": 151,
+    "image_tier": "B",
+    "image_path": "images/card_151.webp"
   },
   {
     "german": "einsteigen",
@@ -2869,8 +2901,10 @@
     "antonym": "aussteigen",
     "example_de": "Schnell, steig ein, der Zug fährt gleich.",
     "example_en": "Quick, get in, the train is leaving soon.",
-    "image": "images/card_152.svg",
-    "id": 152
+    "image": "images/card_152.webp",
+    "id": 152,
+    "image_tier": "B",
+    "image_path": "images/card_152.webp"
   },
   {
     "german": "der Eintritt",
@@ -2885,8 +2919,10 @@
     "antonym": null,
     "example_de": "Der Preis für den Eintritt ist 5 Euro.",
     "example_en": "The price for admission is 5 euros.",
-    "image": "images/card_153.svg",
-    "id": 153
+    "image": "images/card_153.webp",
+    "id": 153,
+    "image_tier": "B",
+    "image_path": "images/card_153.webp"
   },
   {
     "german": "das Einzelzimmer",
@@ -2901,8 +2937,10 @@
     "antonym": "das Doppelzimmer",
     "example_de": "Haben Sie noch ein Einzelzimmer?",
     "example_en": "Do you still have a single room?",
-    "image": "images/card_154.svg",
-    "id": 154
+    "image": "images/card_154.webp",
+    "id": 154,
+    "image_tier": "B",
+    "image_path": "images/card_154.webp"
   },
   {
     "german": "die Eltern",
@@ -2917,8 +2955,10 @@
     "antonym": "die Kinder",
     "example_de": "Meine Eltern leben in Spanien.",
     "example_en": "My parents live in Spain.",
-    "image": "images/card_155.svg",
-    "id": 155
+    "image": "images/card_155.webp",
+    "id": 155,
+    "image_tier": "B",
+    "image_path": "images/card_155.webp"
   },
   {
     "german": "die E-Mail",
@@ -2933,8 +2973,10 @@
     "antonym": "der Brief",
     "example_de": "Ich habe Ihre E-Mail nicht bekommen.",
     "example_en": "I did not receive your email.",
-    "image": "images/card_156.svg",
-    "id": 156
+    "image": "images/card_156.webp",
+    "id": 156,
+    "image_tier": "B",
+    "image_path": "images/card_156.webp"
   },
   {
     "german": "empfehlen",
@@ -2953,8 +2995,10 @@
     "antonym": "abraten",
     "example_de": "Welchen Wein können Sie mir empfehlen?",
     "example_en": "Which wine can you recommend to me?",
-    "image": "images/card_157.svg",
-    "id": 157
+    "image": "images/card_157.webp",
+    "id": 157,
+    "image_tier": "B",
+    "image_path": "images/card_157.webp"
   },
   {
     "german": "der Empfänger",
@@ -2969,8 +3013,10 @@
     "antonym": "der Absender",
     "example_de": "Auf dem Brief steht dein Name, also bist du der Empfänger.",
     "example_en": "Your name is on the letter, so you are the recipient.",
-    "image": "images/card_158.svg",
-    "id": 158
+    "image": "images/card_158.webp",
+    "id": 158,
+    "image_tier": "B",
+    "image_path": "images/card_158.webp"
   },
   {
     "german": "das Ende",
@@ -2985,8 +3031,10 @@
     "antonym": "der Anfang",
     "example_de": "Sie wohnt am Ende der Straße. Er bekommt sein Geld am Ende des Monats.",
     "example_en": "She lives at the end of the street. He gets his money at the end of the month.",
-    "image": "images/card_159.svg",
-    "id": 159
+    "image": "images/card_159.webp",
+    "id": 159,
+    "image_tier": "B",
+    "image_path": "images/card_159.webp"
   },
   {
     "german": "enden",
@@ -3005,8 +3053,10 @@
     "antonym": "beginnen",
     "example_de": "Die Straße endet hier.",
     "example_en": "The street ends here.",
-    "image": "images/card_160.svg",
-    "id": 160
+    "image": "images/card_160.webp",
+    "id": 160,
+    "image_tier": "B",
+    "image_path": "images/card_160.webp"
   },
   {
     "german": "entschuldigen",
@@ -3025,8 +3075,10 @@
     "antonym": null,
     "example_de": "Entschuldigen Sie bitte!",
     "example_en": "Excuse me, please!",
-    "image": "images/card_161.svg",
-    "id": 161
+    "image": "images/card_161.webp",
+    "id": 161,
+    "image_tier": "B",
+    "image_path": "images/card_161.webp"
   },
   {
     "german": "die Entschuldigung",
@@ -3041,8 +3093,10 @@
     "antonym": null,
     "example_de": "Entschuldigung! - Bitte.",
     "example_en": "Excuse me! - You're welcome.",
-    "image": "images/card_162.svg",
-    "id": 162
+    "image": "images/card_162.webp",
+    "id": 162,
+    "image_tier": "B",
+    "image_path": "images/card_162.webp"
   },
   {
     "german": "er",
@@ -3057,8 +3111,10 @@
     "antonym": "sie",
     "example_de": "Er heißt Ali.",
     "example_en": "His name is Ali.",
-    "image": "images/card_163.svg",
-    "id": 163
+    "image": "images/card_163.webp",
+    "id": 163,
+    "image_tier": "B",
+    "image_path": "images/card_163.webp"
   },
   {
     "german": "das Ergebnis",
@@ -3073,8 +3129,10 @@
     "antonym": null,
     "example_de": "Das Ergebnis des Tests bekommen Sie in zwei Wochen.",
     "example_en": "You will receive the result of the test in two weeks.",
-    "image": "images/card_164.svg",
-    "id": 164
+    "image": "images/card_164.webp",
+    "id": 164,
+    "image_tier": "B",
+    "image_path": "images/card_164.webp"
   },
   {
     "german": "erklären",
@@ -3093,8 +3151,10 @@
     "antonym": null,
     "example_de": "Kannst du mir das erklären?",
     "example_en": "Can you explain that to me?",
-    "image": "images/card_165.svg",
-    "id": 165
+    "image": "images/card_165.webp",
+    "id": 165,
+    "image_tier": "B",
+    "image_path": "images/card_165.webp"
   },
   {
     "german": "erlauben",
