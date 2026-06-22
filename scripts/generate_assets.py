@@ -71,10 +71,16 @@ METAPHOR_MAP = {
     "ausgang": "a bright green 3D clay exit sign with a running figure, glowing softly, cartoon style",
     "auskunft": "a stylized 3D clay desk booth with a large glowing golden letter 'i' above it, cartoon style",
     "ausland": "a beautiful 3D clay globe showing colorful flags and tiny cute airplanes flying around it, cartoon style",
-    "ausländer": "a cute 3D clay character smiling and holding a passport with a tiny globe and suitcase next to them, cartoon style",
-    "ausländisch": "a bundle of colorful 3D clay paper bank notes of different world currencies, cartoon style",
-    "ausmachen": "a cute 3D clay hand actively flipping a large toggle light switch downward, cartoon style",
-    "aussage": "a cute 3D clay speech bubble containing a bold white checkmark and a red cross symbol side-by-side, cartoon style"
+    "ausländer": "a cute 3D character holding a colorful travel backpack and a map, standing in front of a famous global landmark cuckoo clock under a smiling sun",
+    "ausländisch": "a pile of vibrant, colorful 3D toy bank notes and golden coins from different countries, cartoon style",
+    "ausmachen": "a cute 3D hand pressing down on a giant glossy red power button, turning it off, cartoon style",
+    "aussage": "a giant, glossy 3D speech bubble with a bright green checkmark on its face, cartoon style",
+    "aussehen": "a cute 3D character happily looking at their own smiling reflection in a beautiful vintage standing mirror, cartoon style",
+    "aussteigen": "a cute 3D character stepping out of a cute yellow toy train or bus door onto a platform, cartoon style",
+    "ausweis": "a beautiful, detailed 3D plastic identification card with a cute cartoon face photo and colored seals, cartoon style",
+    "auto": "a beautiful, shiny red 3D toy car with a cute smile, cartoon style",
+    "autobahn": "a long, winding grey 3D highway stretching forward with white road lines and a green highway overhead sign, cartoon style",
+    "automat": "a colorful red 3D vending machine or ticket machine with a glowing screen and a ticket sliding out of its slot, cartoon style"
 }
 
 def remove_black_background(img, threshold=25, feather=True):
