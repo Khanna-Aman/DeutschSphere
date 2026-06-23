@@ -42,4 +42,8 @@ gcp-key.json
 scripts/backups/
 scripts/logs/
 
+# AI Orchestrations & Agent Planning
+GEMINI.md
+implementation_plan.md
+
 
