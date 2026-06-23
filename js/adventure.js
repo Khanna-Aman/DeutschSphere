@@ -476,6 +476,16 @@ export function checkAdventureAnswer() {
     playAdventureErrorChime();
     state.adventure.errorsInScenario++;
     
+    // Add horizontal shake animation to the dropzone for physical error feedback
+    if (elements.adventureDropzone) {
+      elements.adventureDropzone.classList.add('shake-anim');
+      setTimeout(() => {
+        if (elements.adventureDropzone) {
+          elements.adventureDropzone.classList.remove('shake-anim');
+        }
+      }, 500);
+    }
+    
     // Show Feedback container styled with Warning/Error aesthetics
     if (elements.adventureFeedback) {
       elements.adventureFeedback.classList.remove('hidden');
