@@ -249,24 +249,24 @@ export function renderCard() {
   const deckLength = state.currentDeck.length;
 
   // Update category title text
-  const germanTitle = state.activeCategory === 'All' ? 'Alle Kategorien' : state.activeCategory;
+  const germanTitle = state.activeCategory === 'All' ? 'All Categories' : state.activeCategory;
   const englishTitle = categoryTranslations[state.activeCategory] || '';
-  let titleText = englishTitle ? `${germanTitle} (${englishTitle})` : germanTitle;
+  let titleText = englishTitle ? `${englishTitle} (${germanTitle})` : germanTitle;
   if (state.searchQuery) {
-    titleText += ` (Gefiltert: "${state.searchQuery}")`;
+    titleText += ` (Filtered: "${state.searchQuery}")`;
   }
   if (elements.currentCategoryTitle) elements.currentCategoryTitle.textContent = titleText;
 
   // Update deck stats
-  if (elements.deckStats) elements.deckStats.textContent = `${deckLength} Karte(n) geladen${state.isShuffled ? ' • Gemischt' : ''}`;
+  if (elements.deckStats) elements.deckStats.textContent = `${deckLength} card(s) loaded${state.isShuffled ? ' • Shuffled' : ''}`;
 
   // Check if deck is empty
   if (deckLength === 0) {
     if (elements.progressBarFill) elements.progressBarFill.style.width = `0%`;
-    if (elements.deckProgressText) elements.deckProgressText.textContent = `Karte 0 von 0 (0%)`;
+    if (elements.deckProgressText) elements.deckProgressText.textContent = `Card 0 of 0 (0%)`;
     if (elements.cardIndexIndicator) elements.cardIndexIndicator.textContent = `0 / 0`;
     if (elements.cardMetadataBadges) elements.cardMetadataBadges.innerHTML = '';
-    if (elements.cardWord) elements.cardWord.innerHTML = `<span class="text-slate-500 font-sans text-xl font-normal">Keine passenden Karten gefunden.</span>`;
+    if (elements.cardWord) elements.cardWord.innerHTML = `<span class="text-slate-500 font-sans text-xl font-normal">No matching cards found.</span>`;
     
     if (elements.cardImageContainer) {
       elements.cardImageContainer.classList.add('hidden');
@@ -332,7 +332,7 @@ export function renderCard() {
   const progressPercent = ((state.currentIndex + 1) / deckLength) * 100;
   if (elements.progressBarFill) elements.progressBarFill.style.width = `${progressPercent}%`;
   if (elements.deckProgressText) {
-    elements.deckProgressText.textContent = `Karte ${state.currentIndex + 1} von ${deckLength} (${Math.round(progressPercent)}%)`;
+    elements.deckProgressText.textContent = `Card ${state.currentIndex + 1} of ${deckLength} (${Math.round(progressPercent)}%)`;
   }
 
   // Render Metadata Badges (Word Class, Gender, Plural, Learned Status)
@@ -373,18 +373,18 @@ export function renderCard() {
   let boxBadgeHTML = '';
   if (srsInfo.box === 1) {
     if (srsInfo.lastReviewed > 0) {
-      boxBadgeHTML = `<span class="px-2 py-0.5 bg-rose-500/10 border border-rose-500/35 text-rose-400 text-[10px] font-bold rounded-md flex items-center gap-1" title="Falsch beantwortet • Sofortige Wiederholung"><i class="fa-solid fa-circle-notch animate-spin text-[8px]"></i> Box 1</span>`;
+      boxBadgeHTML = `<span class="px-2 py-0.5 bg-rose-500/10 border border-rose-500/35 text-rose-400 text-[10px] font-bold rounded-md flex items-center gap-1" title="Incorrectly answered • Review immediately"><i class="fa-solid fa-circle-notch animate-spin text-[8px]"></i> Box 1</span>`;
     } else {
-      boxBadgeHTML = `<span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-slate-400 text-[10px] font-semibold rounded-md flex items-center gap-1" title="Unstudiert • Neu">Box 1 (Neu)</span>`;
+      boxBadgeHTML = `<span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-slate-400 text-[10px] font-semibold rounded-md flex items-center gap-1" title="Unstudied • New">Box 1 (New)</span>`;
     }
   } else if (srsInfo.box === 2) {
-    boxBadgeHTML = `<span class="px-2 py-0.5 bg-indigo-500/10 border border-indigo-500/35 text-indigo-400 text-[10px] font-bold rounded-md flex items-center gap-1" title="Wiederholung alle 2 Tage">Box 2</span>`;
+    boxBadgeHTML = `<span class="px-2 py-0.5 bg-indigo-500/10 border border-indigo-500/35 text-indigo-400 text-[10px] font-bold rounded-md flex items-center gap-1" title="Review every 2 days">Box 2</span>`;
   } else if (srsInfo.box === 3) {
-    boxBadgeHTML = `<span class="px-2 py-0.5 bg-violet-500/10 border border-violet-500/35 text-violet-400 text-[10px] font-bold rounded-md flex items-center gap-1" title="Wiederholung alle 5 Tage">Box 3</span>`;
+    boxBadgeHTML = `<span class="px-2 py-0.5 bg-violet-500/10 border border-violet-500/35 text-violet-400 text-[10px] font-bold rounded-md flex items-center gap-1" title="Review every 5 days">Box 3</span>`;
   } else if (srsInfo.box === 4) {
-    boxBadgeHTML = `<span class="px-2 py-0.5 bg-purple-500/10 border border-purple-500/35 text-purple-400 text-[10px] font-bold rounded-md flex items-center gap-1" title="Wiederholung alle 9 Tage">Box 4</span>`;
+    boxBadgeHTML = `<span class="px-2 py-0.5 bg-purple-500/10 border border-purple-500/35 text-purple-400 text-[10px] font-bold rounded-md flex items-center gap-1" title="Review every 9 days">Box 4</span>`;
   } else if (srsInfo.box === 5) {
-    boxBadgeHTML = `<span class="px-2 py-0.5 bg-emerald-500/10 border border-emerald-500/35 text-emerald-400 text-[10px] font-bold rounded-md flex items-center gap-1" title="Meisterhaft beherrscht • Wiederholung alle 15 Tage"><i class="fa-solid fa-crown text-[8px]"></i> Box 5 (Meister)</span>`;
+    boxBadgeHTML = `<span class="px-2 py-0.5 bg-emerald-500/10 border border-emerald-500/35 text-emerald-400 text-[10px] font-bold rounded-md flex items-center gap-1" title="Mastered • Review every 15 days"><i class="fa-solid fa-crown text-[8px]"></i> Box 5 (Master)</span>`;
   }
   
   if (boxBadgeHTML) {
@@ -394,7 +394,7 @@ export function renderCard() {
   // Add Learned status badge and format learned button
   const hasLearned = state.learnedCards.has(Number(card.id));
   if (hasLearned) {
-    badgesHTML += `<span class="px-2 py-0.5 bg-emerald-500/10 border border-emerald-500/35 text-emerald-400 text-[10px] font-bold rounded-md flex items-center gap-1"><i class="fa-solid fa-circle-check"></i> Gelernt</span>`;
+    badgesHTML += `<span class="px-2 py-0.5 bg-emerald-500/10 border border-emerald-500/35 text-emerald-400 text-[10px] font-bold rounded-md flex items-center gap-1"><i class="fa-solid fa-circle-check"></i> Learned</span>`;
     if (elements.learnedBtn) {
       elements.learnedBtn.className = "flex items-center justify-center bg-emerald-600 hover:bg-emerald-500 text-white w-12 h-12 rounded-xl transition-all shadow-lg shadow-emerald-600/20 active:scale-95";
     }
@@ -889,11 +889,11 @@ export function updateHideLearnedUI() {
     if (state.hideLearned) {
       elements.hideLearnedBtn.classList.add('bg-indigo-950/40', '!border-indigo-500/30');
       elements.hideLearnedBtn.setAttribute('data-active', 'true');
-      elements.hideLearnedText.textContent = "Gelernte anzeigen";
+      elements.hideLearnedText.textContent = "Show Learned";
     } else {
       elements.hideLearnedBtn.classList.remove('bg-indigo-950/40', '!border-indigo-500/30');
       elements.hideLearnedBtn.removeAttribute('data-active');
-      elements.hideLearnedText.textContent = "Gelernte ausblenden";
+      elements.hideLearnedText.textContent = "Hide Learned";
     }
   }
 }
