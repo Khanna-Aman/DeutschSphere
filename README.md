@@ -30,10 +30,10 @@ A zero-dependency, offline-first, ultra-premium German language learning SPA cov
 
 | Level | Words | Description | Verification Status |
 |-------|-------|-------------|---------------------|
-| **A1** | 640 | Beginner (Anfänger) | ✅ 100% NotebookLM Verified |
-| **A2** | 1,142 | Elementary (Grundlagen) | ✅ 100% NotebookLM Verified (273 corrections) |
-| **B1** | 2,139 | Intermediate (Fortgeschritten) | ✅ 100% NotebookLM Verified (154 corrections) |
-| **Total** | **3,921** | Full Goethe-Institut A1–B1 curriculum | ✅ Complete & Fact-Checked |
+| **A1** | 640 | Beginner (Anfänger) | ✅ 100% NotebookLM Verified & Active |
+| **A2** | 1,142 | Elementary (Grundlagen) | ⏳ Disabled (NotebookLM Verification Pending) |
+| **B1** | 2,139 | Intermediate (Fortgeschritten) | ⏳ Disabled (NotebookLM Verification Pending) |
+| **Total** | **3,921** | Full Goethe-Institut A1–B1 curriculum | ⚙️ Level A1 Active (A2/B1 Coming Soon) |
 
 Each word includes: German headword, English translation, gender, plural form, word class, theme category, example sentence (DE + EN), pronunciation hint, antonym, verb conjugation (for verbs), adjective forms (for adjectives), and optional premium visual aid.
 
