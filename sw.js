@@ -26,8 +26,8 @@ const APP_SHELL = [
   './js/immersion.js',
   './js/idb-keyval.js',
   './manifest.json',
-  './icon-192.png',
-  './icon-512.png',
+  './icons/icon-192.png',
+  './icons/icon-512.png',
   './lottie/streak.json',
   './lottie/level-complete.json',
   './lottie/achievement.json'
