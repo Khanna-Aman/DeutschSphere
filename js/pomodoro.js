@@ -75,7 +75,7 @@ export function startFocusTimer() {
   state.focus.soundType = soundSelect.value;
   state.focus.active = true;
 
-  toggleBtn.innerHTML = `<i class="fa-solid fa-stop text-[10px]"></i><span>Stoppen | Stop</span>`;
+  toggleBtn.innerHTML = `<i class="fa-solid fa-stop text-[10px]"></i><span>Stop Focus</span>`;
   toggleBtn.className = "flex-1 py-1.5 px-3 rounded-lg text-center text-xs font-bold bg-rose-600 hover:bg-rose-500 active:scale-95 text-white transition-all shadow-md shadow-rose-600/20 flex items-center justify-center gap-1.5";
 
   durationSelect.disabled = true;
@@ -118,7 +118,7 @@ export function stopFocusTimer() {
   if (durationSelect) durationSelect.disabled = false;
 
   if (toggleBtn) {
-    toggleBtn.innerHTML = `<i class="fa-solid fa-play text-[10px]"></i><span>Starten | Start</span>`;
+    toggleBtn.innerHTML = `<i class="fa-solid fa-play text-[10px]"></i><span>Start Focus</span>`;
     toggleBtn.className = "flex-1 py-1.5 px-3 rounded-lg text-center text-xs font-bold bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white transition-all shadow-md shadow-indigo-600/20 flex items-center justify-center gap-1.5";
   }
 
@@ -218,7 +218,7 @@ export function updateMultiplierUI(timeLeft) {
       indicator.className = "mt-3 pt-2 border-t border-indigo-500/10 flex items-center justify-between text-[9px] text-amber-400 font-bold uppercase tracking-wider animate-pulse";
       widgetContainer.appendChild(indicator);
     }
-    indicator.innerHTML = `<span>⚡ 1.25x XP Aktiv!</span><span class="font-mono font-black">${timeStr}</span>`;
+    indicator.innerHTML = `<span>⚡ 1.25x XP Active!</span><span class="font-mono font-black">${timeStr}</span>`;
     indicator.classList.remove('hidden');
   } else {
     if (indicator) {
@@ -238,8 +238,8 @@ export function showFocusCompletionToast() {
       <i class="fa-solid fa-trophy text-lg"></i>
     </div>
     <div class="flex-1">
-      <h4 class="text-xs font-black text-white tracking-wide uppercase">Fokus-Sitzung Beendet!</h4>
-      <p class="text-[10px] text-slate-300 mt-0.5">Hervorragende Arbeit! Sie haben +25 XP erhalten und einen 1.25x XP-Multiplikator für die nächsten 15 Minuten freigeschaltet! ⚡</p>
+      <h4 class="text-xs font-black text-white tracking-wide uppercase">Focus Session Completed!</h4>
+      <p class="text-[10px] text-slate-300 mt-0.5">Outstanding work! You have earned +25 XP and unlocked a 1.25x XP multiplier for the next 15 minutes! ⚡</p>
     </div>
     <button class="text-slate-500 hover:text-slate-300 text-xs focus:outline-none" onclick="this.parentElement.remove()">
       <i class="fa-solid fa-xmark"></i>
