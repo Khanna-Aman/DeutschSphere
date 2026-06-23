@@ -617,7 +617,7 @@
     </div>
 
     <!-- Active Flashcard Workspace -->
-    <div class="flex-1 flex flex-col justify-center items-center w-full max-w-3xl mx-auto">
+    <div class="flex-1 flex flex-col justify-start items-center w-full max-w-3xl mx-auto pt-6 sm:pt-10">
       
       <!-- Progress Bar Indicator -->
       <div class="w-full mb-4 space-y-2">
@@ -1551,16 +1551,16 @@
       <div class="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div class="flex flex-col">
           <h2 class="text-2xl md:text-3xl font-bold font-display tracking-tight text-white flex items-center gap-2">
-            <i class="fa-solid fa-compass text-indigo-400"></i> Deutsch-Abenteuer
+            <i class="fa-solid fa-compass text-indigo-400"></i> German Adventure
           </h2>
-          <p class="text-sm text-slate-400 mt-1">Interaktives Rollenspiel &amp; Syntax-Arena | Conversational RPG</p>
+          <p class="text-sm text-slate-400 mt-1">Interactive Roleplay &amp; Syntax Arena | Conversational RPG</p>
         </div>
         
         <!-- Experience Points (XP) Dashboard -->
         <div class="bg-slate-900 border border-slate-800 rounded-xl px-4 py-2 flex items-center gap-2.5 text-indigo-400 shadow-md">
           <i class="fa-solid fa-star animate-pulse text-amber-500"></i>
           <div class="flex flex-col font-mono text-xs font-bold uppercase tracking-wider">
-            <span class="text-[9px] text-slate-500">Erfahrungspunkte (XP)</span>
+            <span class="text-[9px] text-slate-500">Experience Points (XP)</span>
             <span id="adventure-xp-counter" class="text-sm text-white mt-0.5">0 XP</span>
           </div>
         </div>
@@ -1578,7 +1578,7 @@
         </div>
         
         <div>
-          <h4 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Verfügbare Szenarien | Available Scenarios</h4>
+          <h4 class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-4">Available Scenarios</h4>
           <div id="adventure-selector" class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <!-- Active Scenario Cards will be loaded dynamically here -->
           </div>
@@ -1590,18 +1590,18 @@
         <!-- Active Scenario Header -->
         <div class="flex items-center justify-between border-b border-slate-900 pb-3">
           <div class="flex items-center gap-2.5">
-            <button id="adventure-quit-btn" class="p-2 text-slate-400 hover:text-rose-400 transition-colors flex items-center justify-center w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 hover:border-rose-950" title="Abenteuer verlassen | Quit">
+            <button id="adventure-quit-btn" class="p-2 text-slate-400 hover:text-rose-400 transition-colors flex items-center justify-center w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 hover:border-rose-950" title="Quit Scenario">
               <i class="fa-solid fa-arrow-left text-xs"></i>
             </button>
             <div>
-              <h3 id="adventure-active-title" class="text-lg font-extrabold text-white leading-tight">Szenario</h3>
+              <h3 id="adventure-active-title" class="text-lg font-extrabold text-white leading-tight">Scenario</h3>
               <span id="adventure-active-badge" class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 text-slate-400 text-[9px] font-bold rounded uppercase mt-0.5 block tracking-wider w-fit">A1</span>
             </div>
           </div>
           <div class="flex items-center gap-3">
             <div class="flex flex-col items-end">
-              <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Fortschritt | Progress</span>
-              <span id="adventure-progress-text" class="text-xs font-bold font-mono text-slate-300 mt-0.5">Schritt 1 / 3</span>
+              <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Progress</span>
+              <span id="adventure-progress-text" class="text-xs font-bold font-mono text-slate-300 mt-0.5">Step 1 / 3</span>
             </div>
             <div class="w-24 bg-slate-950 rounded-full h-2 overflow-hidden border border-slate-800/80">
               <div id="adventure-progress-bar-fill" class="bg-gradient-to-r from-indigo-500 to-violet-500 h-full w-0 transition-all duration-300"></div>
@@ -1616,13 +1616,13 @@
           </div>
           <div class="space-y-3 flex-1 min-w-0">
             <div class="flex items-center justify-between">
-              <span class="text-[9px] font-bold text-indigo-400 uppercase tracking-widest block leading-none">Gesprächspartner (NPC)</span>
-              <span class="text-[10px] text-slate-500 font-medium italic">Klicken Sie zum Vorlesen</span>
+              <span class="text-[9px] font-bold text-indigo-400 uppercase tracking-widest block leading-none">Conversational Partner (NPC)</span>
+              <span class="text-[10px] text-slate-500 font-medium italic">Click to listen</span>
             </div>
             <p id="adventure-npc-bubble" class="text-lg font-semibold text-slate-100 leading-relaxed notranslate">...</p>
-            <button id="adventure-npc-speak-btn" class="px-3 py-1.5 rounded-xl bg-slate-950 hover:bg-slate-900 border border-slate-800 hover:border-indigo-500 text-slate-300 hover:text-indigo-400 transition-all flex items-center gap-2 w-fit shadow-md group" title="Anhören | Listen">
+            <button id="adventure-npc-speak-btn" class="px-3 py-1.5 rounded-xl bg-slate-950 hover:bg-slate-900 border border-slate-800 hover:border-indigo-500 text-slate-300 hover:text-indigo-400 transition-all flex items-center gap-2 w-fit shadow-md group" title="Listen">
               <i class="fa-solid fa-volume-high text-xs group-hover:scale-110 transition-transform"></i>
-              <span class="text-xs font-bold">Vorlesen | Pronounce</span>
+              <span class="text-xs font-bold">Listen</span>
             </button>
           </div>
         </div>
@@ -1630,14 +1630,14 @@
         <!-- Sentence Constructor Workspace -->
         <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 space-y-4 shadow-lg shadow-slate-950/10">
           <div class="flex items-center justify-between">
-            <span class="text-[9px] font-bold text-pink-400 uppercase tracking-widest block leading-none">Ihre Antwort | Your Answer</span>
-            <span class="text-[10px] text-slate-500 font-medium italic">Klicken Sie auf die Wort-Chips, um Ihren Satz zu bauen</span>
+            <span class="text-[9px] font-bold text-pink-400 uppercase tracking-widest block leading-none">Your Answer</span>
+            <span class="text-[10px] text-slate-500 font-medium italic">Click on the word chips below to construct your answer</span>
           </div>
           
           <!-- Sentence slots (interactive drop zone) -->
-          <div id="adventure-dropzone" role="group" aria-label="Satzantwort-Bereich" class="min-h-[72px] border-2 border-dashed border-slate-800/80 rounded-xl p-4 bg-slate-950/40 flex flex-wrap gap-2.5 items-center justify-center transition-all duration-300">
+          <div id="adventure-dropzone" role="group" aria-label="Assembly Board" class="min-h-[72px] border-2 border-dashed border-slate-800/80 rounded-xl p-4 bg-slate-950/40 flex flex-wrap gap-2.5 items-center justify-center transition-all duration-300">
             <!-- User constructs sentence here -->
-            <span id="adventure-dropzone-placeholder" class="text-slate-500 font-medium text-xs">Wählen Sie Wörter aus dem Pool unten...</span>
+            <span id="adventure-dropzone-placeholder" class="text-slate-500 font-medium text-xs">Choose words from the pool below...</span>
           </div>
 
           <!-- Scrambled chips pool -->
@@ -1651,29 +1651,29 @@
           <div class="flex items-start gap-3.5">
             <div id="adventure-feedback-icon" class="w-10 h-10 rounded-xl flex items-center justify-center text-white shrink-0 shadow-lg text-lg"><i class="fa-solid fa-check"></i></div>
             <div class="flex-1 space-y-1">
-              <h4 id="adventure-feedback-title" class="text-sm font-black text-white">Gut gemacht!</h4>
+              <h4 id="adventure-feedback-title" class="text-sm font-black text-white">Well done!</h4>
               <p id="adventure-feedback-text" class="text-xs text-slate-300 leading-relaxed"></p>
             </div>
           </div>
           <div id="adventure-feedback-tip" class="bg-indigo-950/20 border border-indigo-900/30 p-3.5 rounded-xl hidden flex items-start gap-2.5 text-indigo-300 text-xs leading-relaxed">
             <i class="fa-solid fa-lightbulb shrink-0 mt-0.5 text-amber-400"></i>
             <div>
-              <span class="font-extrabold uppercase text-[9px] tracking-wider block mb-1">Grammatik-Tipp:</span>
+              <span class="font-extrabold uppercase text-[9px] tracking-wider block mb-1">Grammar Tip:</span>
               <p id="adventure-feedback-tip-text"></p>
             </div>
           </div>
           <div class="flex justify-end pt-1">
-            <button id="adventure-next-node-btn" class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2 rounded-xl text-xs font-extrabold transition-all shadow-md shadow-indigo-600/20 active:scale-95">Weiter | Continue <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i></button>
+            <button id="adventure-next-node-btn" class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2 rounded-xl text-xs font-extrabold transition-all shadow-md shadow-indigo-600/20 active:scale-95">Continue <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i></button>
           </div>
         </div>
 
         <!-- Active Actions (Reset & Submit) -->
         <div id="adventure-action-buttons" class="flex justify-end gap-3">
           <button id="adventure-reset-btn" class="px-5 py-2.5 bg-slate-900 border border-slate-800 hover:bg-rose-950/10 hover:border-rose-900 hover:text-rose-400 rounded-xl text-xs font-bold transition-all active:scale-95 flex items-center gap-1.5">
-            <i class="fa-solid fa-rotate-left"></i> <span>Zurücksetzen | Reset</span>
+            <i class="fa-solid fa-rotate-left"></i> <span>Reset</span>
           </button>
           <button id="adventure-submit-btn" class="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-black transition-all shadow-lg shadow-indigo-600/10 active:scale-95 flex items-center gap-1.5">
-            <i class="fa-solid fa-paper-plane"></i> <span>Antwort abschicken | Submit</span>
+            <i class="fa-solid fa-paper-plane"></i> <span>Submit</span>
           </button>
         </div>
       </div>
@@ -1685,24 +1685,24 @@
         </div>
         
         <div class="space-y-2">
-          <h3 class="text-2xl md:text-3xl font-black font-display text-white tracking-tight">Szenario beendet!</h3>
-          <p class="text-sm text-slate-400 leading-relaxed">Hervorragende Arbeit. Sie haben das Gespräch erfolgreich gemeistert!</p>
+          <h3 class="text-2xl md:text-3xl font-black font-display text-white tracking-tight">Scenario Completed!</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">Excellent work! You have successfully mastered the conversation.</p>
         </div>
 
         <div class="w-full bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 grid grid-cols-2 gap-4">
           <div class="flex flex-col items-center p-3 bg-slate-950/40 rounded-xl border border-slate-900">
-            <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Verdiente XP</span>
+            <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">XP Earned</span>
             <span id="adventure-results-xp" class="text-xl font-black font-mono text-amber-400 mt-1">+60 XP</span>
           </div>
           <div class="flex flex-col items-center p-3 bg-slate-950/40 rounded-xl border border-slate-900">
-            <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Satz-Präzision</span>
+            <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Sentence Precision</span>
             <span class="text-xl font-black font-mono text-emerald-400 mt-1">100%</span>
           </div>
         </div>
 
         <div class="flex flex-col sm:flex-row gap-3 w-full">
-          <button id="adventure-results-retry-btn" class="flex-1 bg-slate-900 border border-slate-800 hover:border-indigo-500 hover:bg-indigo-950/20 text-slate-300 hover:text-indigo-400 py-3 px-4 rounded-xl text-xs font-bold transition-all active:scale-95">Szenario wiederholen</button>
-          <button id="adventure-results-done-btn" class="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white py-3 px-4 rounded-xl text-xs font-black transition-all shadow-md shadow-indigo-600/10 active:scale-95">Zurück zur Übersicht</button>
+          <button id="adventure-results-retry-btn" class="flex-1 bg-slate-900 border border-slate-800 hover:border-indigo-500 hover:bg-indigo-950/20 text-slate-300 hover:text-indigo-400 py-3 px-4 rounded-xl text-xs font-bold transition-all active:scale-95">Repeat Scenario</button>
+          <button id="adventure-results-done-btn" class="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white py-3 px-4 rounded-xl text-xs font-black transition-all shadow-md shadow-indigo-600/10 active:scale-95">View Dashboard</button>
         </div>
       </div>
     </div> <!-- End of adventure-view -->
@@ -1722,7 +1722,7 @@
         <div class="bg-slate-900 border border-slate-800 rounded-xl px-4 py-2 flex items-center gap-2.5 text-indigo-400 shadow-md">
           <i class="fa-solid fa-star animate-pulse text-amber-500"></i>
           <div class="flex flex-col font-mono text-xs font-bold uppercase tracking-wider">
-            <span class="text-[9px] text-slate-500">Erfahrungspunkte (XP)</span>
+            <span class="text-[9px] text-slate-500">Experience Points (XP)</span>
             <span id="weaver-xp-counter" class="text-sm text-white mt-0.5">0 XP</span>
           </div>
         </div>
@@ -1748,18 +1748,18 @@
         <!-- Progress Bar -->
         <div class="flex items-center justify-between border-b border-slate-900 pb-3">
           <div class="flex items-center gap-2.5">
-            <button id="weaver-quit-btn" class="p-2 text-slate-400 hover:text-rose-400 transition-colors flex items-center justify-center w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 hover:border-rose-950" title="Verlassen | Quit">
+            <button id="weaver-quit-btn" class="p-2 text-slate-400 hover:text-rose-400 transition-colors flex items-center justify-center w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 hover:border-rose-950" title="Quit">
               <i class="fa-solid fa-arrow-left text-xs"></i>
             </button>
             <div>
-              <h3 id="weaver-active-title" class="text-lg font-extrabold text-white leading-tight">Satzbau-Rätsel</h3>
+              <h3 id="weaver-active-title" class="text-lg font-extrabold text-white leading-tight">Sentence Builder</h3>
               <span id="weaver-active-badge" class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 text-slate-400 text-[9px] font-bold rounded uppercase mt-0.5 block tracking-wider w-fit">A2</span>
             </div>
           </div>
           <div class="flex items-center gap-3">
             <div class="flex flex-col items-end">
-              <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Fortschritt | Progress</span>
-              <span id="weaver-progress-text" class="text-xs font-bold font-mono text-slate-300 mt-0.5">Satz 1 / 5</span>
+              <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Progress</span>
+              <span id="weaver-progress-text" class="text-xs font-bold font-mono text-slate-300 mt-0.5">Sentence 1 / 5</span>
             </div>
             <div class="w-24 bg-slate-950 rounded-full h-2 overflow-hidden border border-slate-800/80">
               <div id="weaver-progress-bar-fill" class="bg-gradient-to-r from-indigo-500 to-violet-500 h-full w-0 transition-all duration-300"></div>
@@ -1773,7 +1773,7 @@
             <i class="fa-solid fa-language"></i>
           </div>
           <div class="flex-1 min-w-0">
-            <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block leading-none">Englische Übersetzung | Target Translation</span>
+            <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block leading-none">Target Translation</span>
             <p id="weaver-translation-hint" class="text-sm font-semibold text-slate-200 mt-1 truncate">Translate this sentence...</p>
           </div>
         </div>
@@ -1781,8 +1781,8 @@
         <!-- Sentence Workspace (The Dotted Snap Zones) -->
         <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 space-y-4 shadow-lg shadow-slate-950/10">
           <div class="flex items-center justify-between">
-            <span class="text-[9px] font-bold text-pink-400 uppercase tracking-widest block leading-none">Satz-Webrahmen | Assembly Board</span>
-            <span class="text-[10px] text-slate-500 font-medium italic">Ziehen Sie die Wörter in die gestrichelten Rahmen</span>
+            <span class="text-[9px] font-bold text-pink-400 uppercase tracking-widest block leading-none">Assembly Board</span>
+            <span class="text-[10px] text-slate-500 font-medium italic">Arrange the words in the dashed boxes</span>
           </div>
           
           <!-- Dropzone area containing snap boxes -->
@@ -1868,35 +1868,35 @@
     <section id="immersion-view" class="w-full max-w-4xl mx-auto h-full flex flex-col hidden pb-24">
       <header class="mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 class="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 drop-shadow-md notranslate mb-1 tracking-tight" id="immersion-view-title">Immersions-Labor</h2>
-          <p class="text-sm font-medium text-slate-400">Offline NLP Engine — <span class="italic font-normal">Füge echten deutschen Text ein und entdecke neue Wörter.</span></p>
+          <h2 class="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 drop-shadow-md notranslate mb-1 tracking-tight" id="immersion-view-title">Immersion Lab</h2>
+          <p class="text-sm font-medium text-slate-400">Offline NLP Engine — <span class="italic font-normal">Paste real German text and discover new vocabulary.</span></p>
         </div>
       </header>
 
       <div class="glass p-5 rounded-2xl border border-slate-700/50 mb-6 flex flex-col gap-4">
           <div class="flex items-center gap-2 mb-1">
               <i class="fa-solid fa-paste text-indigo-400"></i>
-              <h2 class="text-sm font-bold uppercase tracking-wider text-slate-300">Rohtext eingeben | Paste Raw Text</h2>
+              <h2 class="text-sm font-bold uppercase tracking-wider text-slate-300">Paste Raw Text</h2>
           </div>
-          <textarea id="immersion-textarea" class="w-full h-48 bg-slate-900/60 border border-slate-700 rounded-xl p-4 text-slate-200 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-medium resize-y" placeholder="Füge hier einen deutschen Text ein (Nachrichten, Buchauszug, Chatverlauf)..."></textarea>
+          <textarea id="immersion-textarea" class="w-full h-48 bg-slate-900/60 border border-slate-700 rounded-xl p-4 text-slate-200 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-medium resize-y" placeholder="Paste German text here (news, book excerpt, chat history)..."></textarea>
           <div class="flex justify-end">
               <button id="immersion-analyze-btn" class="px-6 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold transition-all shadow-[0_0_15px_rgba(79,70,229,0.3)] hover:shadow-[0_0_20px_rgba(79,70,229,0.5)] transform active:scale-95 flex items-center">
-                  <i class="fa-solid fa-magnifying-glass mr-2"></i> Text analysieren
+                  <i class="fa-solid fa-magnifying-glass mr-2"></i> Analyze Text
               </button>
           </div>
       </div>
 
       <div class="flex items-center gap-2 mb-4 px-1">
           <i class="fa-solid fa-layer-group text-slate-400"></i>
-          <h2 class="text-sm font-bold uppercase tracking-wider text-slate-300">Gefundene Vokabeln | Extracted Vocabulary</h2>
+          <h2 class="text-sm font-bold uppercase tracking-wider text-slate-300">Extracted Vocabulary</h2>
       </div>
 
       <div id="immersion-empty-state" class="flex flex-col items-center justify-center py-16 px-4 text-center border-2 border-dashed border-slate-800/50 rounded-2xl bg-slate-900/20">
           <div class="w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center mb-4">
               <i class="fa-solid fa-microscope text-2xl text-slate-500"></i>
           </div>
-          <h3 class="text-lg font-bold text-slate-300 mb-2">Noch keine Analyse</h3>
-          <p class="text-sm text-slate-500 max-w-md">Füge oben einen Text ein und klicke auf "Analysieren", um das Vokabular in Lemmata (Grundformen) und Genus (der/die/das) aufzuschlüsseln.</p>
+          <h3 class="text-lg font-bold text-slate-300 mb-2">No Analysis Yet</h3>
+          <p class="text-sm text-slate-500 max-w-md">Paste text above and click "Analyze Text" to breakdown vocabulary into base forms (lemmas), parts of speech, and genders.</p>
       </div>
 
       <div id="immersion-results-grid" class="flex flex-col gap-3">
@@ -2106,63 +2106,63 @@
           <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-lg">
             <i class="fa-solid fa-keyboard"></i>
           </div>
-          <h3 id="shortcut-overlay-title" class="font-display font-bold text-base text-white">Tastaturkürzel | Keyboard Shortcuts</h3>
+          <h3 id="shortcut-overlay-title" class="font-display font-bold text-base text-white">Keyboard Shortcuts</h3>
         </div>
-        <button id="shortcut-close-btn" class="p-2 text-slate-400 hover:text-white transition-colors" aria-label="Schließen">
+        <button id="shortcut-close-btn" class="p-2 text-slate-400 hover:text-white transition-colors" aria-label="Close">
           <i class="fa-solid fa-xmark text-lg"></i>
         </button>
       </div>
       <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-xs">
         <div class="flex items-center justify-between py-1.5 border-b border-slate-800/50">
-          <span class="text-slate-300">Kartendetails | Reveal</span>
+          <span class="text-slate-300">Reveal Card Details</span>
           <kbd class="kbd-key">Space</kbd>
         </div>
         <div class="flex items-center justify-between py-1.5 border-b border-slate-800/50">
-          <span class="text-slate-300">Nächste Karte | Next</span>
+          <span class="text-slate-300">Next Card</span>
           <kbd class="kbd-key">→</kbd>
         </div>
         <div class="flex items-center justify-between py-1.5 border-b border-slate-800/50">
-          <span class="text-slate-300">Vorherige Karte | Prev</span>
+          <span class="text-slate-300">Previous Card</span>
           <kbd class="kbd-key">←</kbd>
         </div>
         <div class="flex items-center justify-between py-1.5 border-b border-slate-800/50">
-          <span class="text-slate-300">Gelernt markieren | Learned</span>
+          <span class="text-slate-300">Mark as Learned</span>
           <kbd class="kbd-key">L</kbd>
         </div>
         <div class="flex items-center justify-between py-1.5 border-b border-slate-800/50">
-          <span class="text-slate-300">Mischen | Shuffle</span>
+          <span class="text-slate-300">Shuffle Deck</span>
           <kbd class="kbd-key">S</kbd>
         </div>
         <div class="flex items-center justify-between py-1.5 border-b border-slate-800/50">
-          <span class="text-slate-300">Aussprechen | Speak</span>
+          <span class="text-slate-300">Speak (TTS)</span>
           <kbd class="kbd-key">V</kbd>
         </div>
         <div class="flex items-center justify-between py-1.5 border-b border-slate-800/50">
-          <span class="text-slate-300">Schnell-Lesen | Fast Read</span>
+          <span class="text-slate-300">Fast Read Mode</span>
           <kbd class="kbd-key">F</kbd>
         </div>
         <div class="flex items-center justify-between py-1.5 border-b border-slate-800/50">
-          <span class="text-slate-300">Gelernte ausblenden | Hide</span>
+          <span class="text-slate-300">Hide Learned Cards</span>
           <kbd class="kbd-key">H</kbd>
         </div>
         <div class="flex items-center justify-between py-1.5 border-b border-slate-800/50">
-          <span class="text-slate-300">Auto-Speak | Autoplay</span>
+          <span class="text-slate-300">Auto-Speak Mode</span>
           <kbd class="kbd-key">A</kbd>
         </div>
         <div class="flex items-center justify-between py-1.5 border-b border-slate-800/50">
-          <span class="text-slate-300">Bilder umschalten | Images</span>
+          <span class="text-slate-300">Toggle Images</span>
           <kbd class="kbd-key">B</kbd>
         </div>
         <div class="flex items-center justify-between py-1.5 border-b border-slate-800/50">
-          <span class="text-slate-300">Quiz: Antwort A-D</span>
+          <span class="text-slate-300">Quiz: Select A-D</span>
           <kbd class="kbd-key">1-4</kbd>
         </div>
         <div class="flex items-center justify-between py-1.5">
-          <span class="text-slate-300">Menü schließen | Close</span>
+          <span class="text-slate-300">Close Menu</span>
           <kbd class="kbd-key">Esc</kbd>
         </div>
       </div>
-      <p class="text-[10px] text-slate-500 mt-4 text-center">Drücke <kbd class="kbd-key text-[9px]">?</kbd> zum Öffnen/Schließen dieses Panels</p>
+      <p class="text-[10px] text-slate-500 mt-4 text-center">Press <kbd class="kbd-key text-[9px]">?</kbd> to open/close this panel</p>
     </div>
   </div>
 
