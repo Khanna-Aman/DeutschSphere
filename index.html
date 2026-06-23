@@ -144,12 +144,12 @@
 
     <!-- Level Selector -->
     <div class="px-6 py-4 border-b border-slate-800/50">
-      <label for="level-select" class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Niveau (Level) | Level</label>
+      <label for="level-select" class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">CEFR Language Level</label>
       <div class="relative">
         <select id="level-select" class="w-full bg-slate-950/60 border border-slate-800 rounded-xl py-2.5 px-3.5 text-sm text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-medium appearance-none cursor-pointer">
-          <option value="a1" selected>Level A1 (Anfänger) | Beginner (Verified)</option>
-          <option value="a2" disabled>Level A2 (Grundlagen) | Elementary (Verification Pending)</option>
-          <option value="b1" disabled>Level B1 (Fortgeschritten) | Intermediate (Verification Pending)</option>
+          <option value="a1" selected>Level A1 (Beginner) - Verified</option>
+          <option value="a2" disabled>Level A2 (Elementary) - Under Verification</option>
+          <option value="b1" disabled>Level B1 (Intermediate) - Under Verification</option>
         </select>
         <span class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-slate-400">
           <i class="fa-solid fa-chevron-down text-xs"></i>
@@ -159,7 +159,7 @@
 
     <!-- Theme Selector -->
     <div class="px-6 py-4 border-b border-slate-800/50">
-      <label for="theme-select" class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Design-Thema | Color Theme</label>
+      <label for="theme-select" class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">User Interface Theme</label>
       <div class="relative">
         <select id="theme-select" class="w-full bg-slate-950/60 border border-slate-800 rounded-xl py-2.5 px-3.5 text-sm text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-medium appearance-none cursor-pointer">
           <option value="default">Standard-Mesh | Slate Mesh</option>
@@ -180,7 +180,7 @@
         <button id="search-submit-btn" aria-label="Suche starten" class="z-10 absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 hover:text-indigo-400 transition-colors cursor-pointer" title="Suchen | Search">
           <i class="fa-solid fa-magnifying-glass text-sm"></i>
         </button>
-        <input type="text" id="search-input" class="w-full bg-slate-950/60 border border-slate-800 rounded-xl py-2.5 pl-10 pr-10 text-sm placeholder-slate-500 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-medium" placeholder="Suchen / Search (Wort / Bedeutung)..." autocomplete="off">
+        <input type="text" id="search-input" class="w-full bg-slate-950/60 border border-slate-800 rounded-xl py-2.5 pl-10 pr-10 text-sm placeholder-slate-500 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-medium" placeholder="Search dictionary (German or English)..." autocomplete="off">
         <button id="search-clear" aria-label="Suche löschen" class="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-500 hover:text-slate-300 hidden">
           <i class="fa-solid fa-circle-xmark text-sm"></i>
         </button>
@@ -197,61 +197,54 @@
 
 
     <!-- Main Views Navigation -->
-    <nav aria-label="Hauptnavigation" class="px-4 py-3 border-b border-slate-800/60 space-y-1">
+    <nav aria-label="Main Navigation" class="px-4 py-3 border-b border-slate-800/60 space-y-1">
       <a href="#/" id="nav-flashcards" class="w-full px-3 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2.5 text-white bg-slate-800/50 border border-slate-700/50">
         <i class="fa-solid fa-clone text-xs text-indigo-400"></i>
         <div class="flex flex-col">
-          <span class="font-semibold text-xs leading-none">Karteikarten</span>
-          <span class="text-[9px] text-slate-400 font-medium leading-none mt-1">Flashcards</span>
+          <span class="font-semibold text-xs leading-none">Flashcards</span>
         </div>
       </a>
       <a href="#/quiz" id="nav-quiz" class="w-full px-3 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2.5 text-slate-400 hover:text-white hover:bg-slate-800/40 border border-transparent">
         <i class="fa-solid fa-gamepad text-xs text-indigo-400"></i>
         <div class="flex flex-col">
-          <span class="font-semibold text-xs leading-none">Quiz-Arena</span>
-          <span class="text-[9px] text-slate-500 font-medium leading-none mt-1">Quiz Arena</span>
+          <span class="font-semibold text-xs leading-none">Quiz Arena</span>
         </div>
       </a>
       <a href="#/adventure" id="nav-adventure" class="w-full px-3 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2.5 text-slate-400 hover:text-white hover:bg-slate-800/40 border border-transparent">
         <i class="fa-solid fa-compass text-xs text-indigo-400"></i>
         <div class="flex flex-col">
-          <span class="font-semibold text-xs leading-none">Abenteuer (RPG)</span>
-          <span class="text-[9px] text-slate-500 font-medium leading-none mt-1">Deutsch-Abenteuer</span>
+          <span class="font-semibold text-xs leading-none">RPG Adventure</span>
         </div>
       </a>
       <a href="#/weaver" id="nav-weaver" class="w-full px-3 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2.5 text-slate-400 hover:text-white hover:bg-slate-800/40 border border-transparent">
         <i class="fa-solid fa-puzzle-piece text-xs text-indigo-400"></i>
         <div class="flex flex-col">
-          <span class="font-semibold text-xs leading-none">Grammatik-Weberei</span>
-          <span class="text-[9px] text-slate-500 font-medium leading-none mt-1">Grammar Weaver</span>
+          <span class="font-semibold text-xs leading-none">Grammar Weaver</span>
         </div>
       </a>
       <a href="#/cheatcodes" id="nav-cheatcodes" class="w-full px-3 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2.5 text-slate-400 hover:text-white hover:bg-slate-800/40 border border-transparent">
         <i class="fa-solid fa-key text-xs text-indigo-400"></i>
         <div class="flex flex-col">
-          <span class="font-semibold text-xs leading-none">Spickzettel (Cheatcodes)</span>
-          <span class="text-[9px] text-slate-500 font-medium leading-none mt-1">Cheatcodes</span>
+          <span class="font-semibold text-xs leading-none">Grammar Cheatcodes</span>
         </div>
       </a>
       <a href="#/stats" id="nav-stats" class="w-full px-3 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2.5 text-slate-400 hover:text-white hover:bg-slate-800/40 border border-transparent">
         <i class="fa-solid fa-chart-pie text-xs text-indigo-400"></i>
         <div class="flex flex-col">
-          <span class="font-semibold text-xs leading-none">Statistiken</span>
-          <span class="text-[9px] text-slate-500 font-medium leading-none mt-1">Statistics</span>
+          <span class="font-semibold text-xs leading-none">Learning Stats</span>
         </div>
       </a>
       <a href="#/immersion" id="nav-immersion" class="w-full px-3 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2.5 text-slate-400 hover:text-white hover:bg-slate-800/40 border border-transparent">
         <i class="fa-solid fa-flask text-xs text-indigo-400"></i>
         <div class="flex flex-col">
-          <span class="font-semibold text-xs leading-none">Immersions-Labor</span>
-          <span class="text-[9px] text-slate-500 font-medium leading-none mt-1">Immersion Lab</span>
+          <span class="font-semibold text-xs leading-none">Immersion Lab</span>
         </div>
       </a>
     </nav>
 
     <!-- Categories Navigation List -->
     <div class="flex-none px-4 py-4 space-y-1 notranslate" id="categories-container">
-      <div class="px-3 py-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">Themen / Kategorien | Categories</div>
+      <div class="px-3 py-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">Theme Categories</div>
       <!-- Dynamically filled with javascript -->
     </div>
 
@@ -262,21 +255,21 @@
           <div class="flex items-center gap-2">
             <i class="fa-solid fa-fire text-orange-500 text-lg streak-fire-icon"></i>
             <div class="flex flex-col">
-              <span class="text-xs font-bold text-orange-400 uppercase tracking-wider leading-none">Lernserie | Study Streak</span>
-              <span class="text-[9px] text-slate-500 font-medium leading-none mt-1">Tage in Folge | Consecutive Days</span>
+              <span class="text-xs font-bold text-orange-400 uppercase tracking-wider leading-none">Daily Streak</span>
+              <span class="text-[9px] text-slate-500 font-medium leading-none mt-1">Consecutive study days</span>
             </div>
           </div>
           <span id="sidebar-streak-count" class="text-2xl font-black font-mono text-orange-400 streak-counter">0</span>
         </div>
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-1.5">
-            <span class="text-[10px] text-slate-500 font-semibold">Rekord:</span>
+            <span class="text-[10px] text-slate-500 font-semibold">Best:</span>
             <span id="sidebar-streak-best" class="text-[10px] font-mono font-bold text-amber-400/80">0</span>
           </div>
           <div class="flex items-center gap-1.5" id="streak-freeze-display">
             <i class="fa-solid fa-snowflake text-sky-400 text-[10px]"></i>
             <span id="sidebar-streak-freezes" class="text-[10px] font-mono font-bold text-sky-400">1</span>
-            <span class="text-[10px] text-slate-500 font-semibold">Pause | Freeze</span>
+            <span class="text-[10px] text-slate-500 font-semibold">Freezes</span>
           </div>
         </div>
       </div>
@@ -289,8 +282,8 @@
           <div class="flex items-center gap-2">
             <i class="fa-solid fa-clock-rotate-left text-indigo-400 text-lg animate-pulse"></i>
             <div class="flex flex-col">
-              <span class="text-xs font-bold text-indigo-300 uppercase tracking-wider leading-none">Fokus-Booster | Focus</span>
-              <span class="text-[9px] text-slate-500 font-medium leading-none mt-1">XP-Multiplikator | Study Timer</span>
+              <span class="text-xs font-bold text-indigo-300 uppercase tracking-wider leading-none">Focus Booster</span>
+              <span class="text-[9px] text-slate-500 font-medium leading-none mt-1">XP Multiplier &amp; Timer</span>
             </div>
           </div>
           <!-- Timer Display with concentric circular ring indicator -->
@@ -306,7 +299,7 @@
         <!-- Duration Select & Sound Choice -->
         <div class="grid grid-cols-2 gap-2 mb-3">
           <div>
-            <label for="pomodoro-duration" class="block text-[8px] font-bold text-slate-500 uppercase mb-1">Dauer | Time</label>
+            <label for="pomodoro-duration" class="block text-[8px] font-bold text-slate-500 uppercase mb-1">Duration</label>
             <select id="pomodoro-duration" class="w-full bg-slate-950/80 border border-slate-800 rounded-lg py-1 px-1.5 text-[10px] text-slate-300 focus:outline-none focus:border-indigo-500 cursor-pointer">
               <option value="15">15 Min (Short)</option>
               <option value="25" selected>25 Min (Std)</option>
@@ -317,7 +310,7 @@
           <div>
             <label for="pomodoro-sound" class="block text-[8px] font-bold text-slate-500 uppercase mb-1">Soundscape</label>
             <select id="pomodoro-sound" class="w-full bg-slate-950/80 border border-slate-800 rounded-lg py-1 px-1.5 text-[10px] text-slate-300 focus:outline-none focus:border-indigo-500 cursor-pointer">
-              <option value="none">Stumm | Silent</option>
+              <option value="none">Silent</option>
               <option value="binaural">Binaural (10Hz)</option>
               <option value="brown">Deep Brown Noise</option>
               <option value="pink">Warm Rain (Pink)</option>
@@ -329,7 +322,7 @@
         <div class="flex gap-2">
           <button id="pomodoro-toggle-btn" class="flex-1 py-1.5 px-3 rounded-lg text-center text-xs font-bold bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white transition-all shadow-md shadow-indigo-600/20 flex items-center justify-center gap-1.5">
             <i class="fa-solid fa-play text-[10px]"></i>
-            <span>Starten | Start</span>
+            <span>Start</span>
           </button>
         </div>
       </div>
@@ -339,8 +332,7 @@
     <div class="px-6 py-4 border-t border-slate-800/60 bg-slate-950/10">
       <div class="flex items-center justify-between text-xs font-semibold text-slate-400 mb-1.5">
         <div class="flex flex-col">
-          <span>Gesamtfortschritt</span>
-          <span class="text-[9px] text-slate-500 font-medium">Overall Progress</span>
+          <span>Overall Progress</span>
         </div>
         <span id="overall-progress-text" class="font-mono text-indigo-400">0 / 1424 (0%)</span>
       </div>
@@ -348,9 +340,9 @@
         <div id="overall-progress-bar-fill" class="bg-gradient-to-r from-indigo-500 to-emerald-500 h-full w-0 transition-all duration-500"></div>
       </div>
       <div class="flex justify-end mt-2">
-        <button id="reset-progress-btn" class="text-[10px] font-semibold text-slate-500 hover:text-rose-500 transition-colors flex items-center gap-1.5" title="Gesamten Lernfortschritt zurücksetzen">
+        <button id="reset-progress-btn" class="text-[10px] font-semibold text-slate-500 hover:text-rose-500 transition-colors flex items-center gap-1.5" title="Reset all progress tracking">
           <i class="fa-solid fa-trash-can text-[9px]"></i>
-          <span>Lernfortschritt zurücksetzen | Reset Progress</span>
+          <span>Reset All Progress</span>
         </button>
       </div>
     </div>
@@ -360,15 +352,14 @@
       <button id="toggle-shortcuts-btn" class="w-full px-6 py-4 flex items-center justify-between text-xs font-bold text-slate-400 hover:text-white uppercase tracking-wider transition-all select-none">
         <span class="flex items-center gap-2">
           <i class="fa-solid fa-keyboard text-indigo-400"></i>
-          <span>Tastaturkürzel (Shortcuts)</span>
+          <span>Keyboard Shortcuts</span>
         </span>
         <i id="shortcuts-toggle-icon" class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300"></i>
       </button>
       <div id="shortcuts-content" class="px-6 pb-6 space-y-3 overflow-y-auto max-h-[220px] transition-all duration-300 hidden">
         <div class="flex items-center justify-between text-xs text-slate-400">
           <div class="flex flex-col">
-            <span class="font-medium text-slate-300">Aufklappen / Zuklappen</span>
-            <span class="text-[10px] text-slate-500 font-medium">Reveal / Hide</span>
+            <span class="font-medium text-slate-300">Reveal / Hide</span>
           </div>
           <kbd class="hotkey-badge px-2 py-0.5 rounded text-[10px] font-mono text-slate-300">Spacebar</kbd>
         </div>
@@ -747,6 +738,30 @@
 
         </div>
 
+        <!-- Navigation & Primary Controls Below Card -->
+        <div class="w-full flex items-center justify-between mt-4 gap-4">
+          <button id="prev-btn" aria-label="Vorherige Karte" class="flex-1 sm:flex-initial flex items-center justify-center gap-2 bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-slate-700 active:scale-95 text-slate-300 hover:text-white px-5 py-3 rounded-xl font-medium transition-all shadow-md" title="Vorherige Karte (Tastaturkürzel: Links/Oben)">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>Zurück</span>
+          </button>
+
+          <div class="flex-1 sm:flex-initial flex items-center gap-3 justify-center">
+            <button id="toggle-reveal-btn" class="hidden sm:flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white px-6 py-3 rounded-xl font-semibold transition-all shadow-lg shadow-indigo-600/20" title="Bedeutung aufdecken (Tastaturkürzel: Leertaste)">
+              <i class="fa-solid fa-eye" id="toggle-reveal-icon"></i>
+              <span id="toggle-reveal-text">Aufdecken</span>
+            </button>
+            
+            <button id="learned-btn" aria-label="Als gelernt markieren" class="flex items-center justify-center bg-slate-900 border border-slate-800 hover:border-emerald-500 hover:bg-emerald-950/20 text-slate-400 hover:text-emerald-400 w-12 h-12 rounded-xl transition-all shadow-md active:scale-95" title="Als gelernt markieren (Tastaturkürzel: L)">
+              <i class="fa-solid fa-check text-lg"></i>
+            </button>
+          </div>
+
+          <button id="next-btn" aria-label="Nächste Karte" class="flex-1 sm:flex-initial flex items-center justify-center gap-2 bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-slate-700 active:scale-95 text-slate-300 hover:text-white px-5 py-3 rounded-xl font-medium transition-all shadow-md" title="Nächste Karte (Tastaturkürzel: Rechts/Unten)">
+            <span>Weiter</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+
         <!-- Phonetic Mirror Panel (Phonetik-Spiegel) -->
         <div id="phonetic-mirror-panel" class="accordion-content">
           <div class="glass border border-pink-500/35 rounded-2xl p-6 md:p-8 space-y-6 shadow-xl shadow-pink-950/5 relative overflow-hidden">
@@ -891,28 +906,6 @@
 
       </div>
 
-      <!-- Navigation & Primary Controls Below Card -->
-      <div class="w-full flex items-center justify-between mt-4 gap-4">
-        <button id="prev-btn" aria-label="Vorherige Karte" class="flex-1 sm:flex-initial flex items-center justify-center gap-2 bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-slate-700 active:scale-95 text-slate-300 hover:text-white px-5 py-3 rounded-xl font-medium transition-all shadow-md" title="Vorherige Karte (Tastaturkürzel: Links/Oben)">
-          <i class="fa-solid fa-arrow-left"></i>
-          <span>Zurück</span>
-        </button>
-
-        <div class="flex-1 sm:flex-initial flex items-center gap-3 justify-center">
-          <button id="toggle-reveal-btn" class="hidden sm:flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white px-6 py-3 rounded-xl font-semibold transition-all shadow-lg shadow-indigo-600/20" title="Bedeutung aufdecken (Tastaturkürzel: Leertaste)">
-            <i class="fa-solid fa-eye" id="toggle-reveal-icon"></i>
-            <span id="toggle-reveal-text">Aufdecken</span>
-          </button>
-          
-          <button id="learned-btn" aria-label="Als gelernt markieren" class="flex items-center justify-center bg-slate-900 border border-slate-800 hover:border-emerald-500 hover:bg-emerald-950/20 text-slate-400 hover:text-emerald-400 w-12 h-12 rounded-xl transition-all shadow-md active:scale-95" title="Als gelernt markieren (Tastaturkürzel: L)">
-            <i class="fa-solid fa-check text-lg"></i>
-          </button>
-        </div>
-
-        <button id="next-btn" aria-label="Nächste Karte" class="flex-1 sm:flex-initial flex items-center justify-center gap-2 bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-slate-700 active:scale-95 text-slate-300 hover:text-white px-5 py-3 rounded-xl font-medium transition-all shadow-md" title="Nächste Karte (Tastaturkürzel: Rechts/Unten)">
-          <span>Weiter</span>
-          <i class="fa-solid fa-arrow-right"></i>
-        </button>
       </div>
 
     </div>
@@ -1577,10 +1570,10 @@
       <div id="adventure-selector-screen" class="space-y-6">
         <div class="bg-indigo-950/20 border border-indigo-500/20 rounded-2xl p-6 md:p-8">
           <h3 class="text-lg md:text-xl font-bold font-display text-white flex items-center gap-2">
-            <i class="fa-solid fa-bullseye text-indigo-400"></i> Willkommen im Rollenspiel-Modus!
+            <i class="fa-solid fa-bullseye text-indigo-400"></i> Welcome to German Roleplay Mode!
           </h3>
           <p class="text-sm text-slate-300 mt-2 leading-relaxed">
-            Wählen Sie ein realistisches Alltagsszenario aus, um Ihr Deutsch in echten Gesprächen zu üben. Ordnen Sie die Wort-Chips in der syntaktisch korrekten Reihenfolge an. Achten Sie auf die deutsche Wortstellung (Verben in Position 2, Nebensätze, trennbare Präfixe)!
+            Select a realistic real-world scenario to practice your German in authentic conversation dialogues. Arrange the word chips in the syntactically correct order. Keep in mind German syntax rules (verbs in Position 2, subordinate clauses, and separable prefixes)!
           </p>
         </div>
         
@@ -1739,13 +1732,13 @@
       <div id="weaver-intro-screen" class="space-y-6">
         <div class="bg-indigo-950/20 border border-indigo-500/20 rounded-2xl p-6 md:p-8">
           <h3 class="text-lg md:text-xl font-bold font-display text-white flex items-center gap-2">
-            <i class="fa-solid fa-lightbulb text-indigo-400"></i> Meistern Sie die deutsche Wortstellung!
+            <i class="fa-solid fa-lightbulb text-indigo-400"></i> Master German Word Order!
           </h3>
           <p class="text-sm text-slate-300 mt-2 leading-relaxed">
-            Ordnen Sie die Wort-Chips in der syntaktisch korrekten Reihenfolge an. Achten Sie auf deutsche Satzbauregeln: Das konjugierte Verb steht im Hauptsatz an Position 2 (V2-Regel), wandert aber bei Nebensätzen (z. B. mit <em>weil</em>, <em>dass</em>) ganz ans Ende! Trennbare Verben teilen sich auf. Starten Sie das Training!
+            Arrange the word chips in the syntactically correct sequence. Pay close attention to German sentence structure rules: the conjugated verb stands at position 2 in main clauses (V2 rule), but travels to the very end in subordinate clauses (e.g., clauses starting with <em>weil</em>, <em>dass</em>)! Separable verbs split up. Let's start training!
           </p>
           <button id="weaver-start-btn" class="mt-4 bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2.5 rounded-xl text-xs font-extrabold transition-all shadow-md shadow-indigo-600/20 active:scale-95">
-            Training starten | Start Training
+            Start Training
           </button>
         </div>
       </div>
@@ -1968,7 +1961,7 @@
     </div>
   </div>
 
-  <!-- F15: Bilingual Help & Introduction Modal -->
+  <!-- F15: English Help & Introduction Modal -->
   <div id="help-modal-overlay" class="confirm-modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="help-modal-title">
     <div class="confirm-modal-card max-w-[42rem] max-h-[85vh] flex flex-col p-0 relative overflow-hidden backdrop-blur-xl bg-slate-950/85 border border-slate-800/80 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
       <!-- Gradient Header Header -->
@@ -1978,8 +1971,8 @@
             <i class="fa-solid fa-graduation-cap"></i>
           </div>
           <div>
-            <h3 id="help-modal-title" class="font-display font-black text-lg text-white">Hilfe & Einführung</h3>
-            <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Help & System Introduction</span>
+            <h3 id="help-modal-title" class="font-display font-black text-xl text-white">Help & System Introduction</h3>
+            <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Learn all features of DeutschSphere</span>
           </div>
         </div>
         <button id="help-modal-close" class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-white flex items-center justify-center text-sm transition-all active:scale-95 cursor-pointer">
@@ -1994,11 +1987,8 @@
         <div class="bg-indigo-500/5 border border-indigo-500/10 rounded-xl p-4 flex gap-3">
           <i class="fa-solid fa-circle-info text-indigo-400 text-lg shrink-0 mt-0.5 animate-pulse"></i>
           <div class="space-y-1">
-            <p class="text-xs font-semibold leading-relaxed text-slate-200">
-              Willkommen bei <strong>DeutschSphere</strong>! Diese Plattform vereint klinische Gedächtniswissenschaft mit interaktiven Lernmodulen.
-            </p>
-            <p class="text-[11px] leading-relaxed text-slate-400 font-medium">
-              Welcome to <strong>DeutschSphere</strong>! This platform marries clinical memory science with interactive game boards.
+            <p class="text-sm font-semibold leading-relaxed text-slate-200">
+              Welcome to <strong>DeutschSphere</strong>! This ultra-premium platform seamlessly integrates clinical memory science with interactive immersion boards to accelerate your German acquisition.
             </p>
           </div>
         </div>
@@ -2007,13 +1997,10 @@
         <div class="space-y-2">
           <div class="flex items-center gap-2 border-b border-slate-900 pb-1">
             <span class="text-indigo-400 text-sm font-bold">01.</span>
-            <h4 class="font-bold text-slate-200 text-sm">FSRS-5 Spaced Repetition | FSRS-5 Spaced Repetition</h4>
+            <h4 class="font-bold text-slate-200 text-sm">FSRS-5 Spaced Repetition</h4>
           </div>
-          <p class="text-xs leading-relaxed text-slate-300">
-            Jede Karteikarte nutzt den wissenschaftlich erprobten <strong>FSRS-5 (Free Spaced Repetition Scheduler)</strong> Algorithmus. Bewerten Sie Ihren Abruferfolg mit vier Tasten: <strong>Nochmal (Again)</strong>, <strong>Schwer (Hard)</strong>, <strong>Gut (Good)</strong>, oder <strong>Einfach (Easy)</strong>. Das System berechnet das nächste optimale Intervall dynamisch.
-          </p>
-          <p class="text-[11px] leading-relaxed text-slate-400 font-medium">
-            Every card utilizes the state-of-the-art <strong>FSRS-5</strong> algorithm. Rate your memory recall using four options: <strong>Again</strong>, <strong>Hard</strong>, <strong>Good</strong>, or <strong>Easy</strong>. The scheduler calculates your stability and optimal review intervals dynamically.
+          <p class="text-xs leading-relaxed text-slate-300 font-medium">
+            Every card utilizes the state-of-the-art <strong>FSRS-5 (Free Spaced Repetition Scheduler)</strong> algorithm. Rate your memory recall using four options: <strong>Again</strong>, <strong>Hard</strong>, <strong>Good</strong>, or <strong>Easy</strong>. The scheduler calculates your stability and optimal review intervals dynamically. Responsive touch swipe gestures (swipe left for Hard, swipe right for Good) are supported on mobile.
           </p>
         </div>
 
@@ -2021,23 +2008,25 @@
         <div class="space-y-2">
           <div class="flex items-center gap-2 border-b border-slate-900 pb-1">
             <span class="text-indigo-400 text-sm font-bold">02.</span>
-            <h4 class="font-bold text-slate-200 text-sm">Tastenkombinationen | Keyboard Hotkeys</h4>
+            <h4 class="font-bold text-slate-200 text-sm">Keyboard Shortcuts & Fluid Navigation</h4>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
             <div class="bg-slate-950/40 border border-slate-900 p-3 rounded-xl space-y-1.5">
-              <span class="text-[10px] font-bold text-indigo-400 uppercase tracking-wider block">Karteikarten | Flashcards</span>
+              <span class="text-[10px] font-bold text-indigo-400 uppercase tracking-wider block">Flashcard Arena</span>
               <ul class="space-y-1 text-[11px] text-slate-300 font-medium">
-                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">Leertaste</kbd> Karte umdrehen (Flip card)</li>
-                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">1</kbd> - <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">4</kbd> Bewertung abgeben (Rate 1-4)</li>
-                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">A</kbd> Audio vorlesen (TTS Playback)</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">Space</kbd> Reveal translation & examples</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">1</kbd> - <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">4</kbd> Rate FSRS recall rating</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">←</kbd> / <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">→</kbd> Navigate previous / next card</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">L</kbd> Toggle marked as learned (advances deck)</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">V</kbd> Pronounce German word via TTS</li>
               </ul>
             </div>
             <div class="bg-slate-950/40 border border-slate-900 p-3 rounded-xl space-y-1.5">
-              <span class="text-[10px] font-bold text-indigo-400 uppercase tracking-wider block">Spiele | Interactive Modes</span>
+              <span class="text-[10px] font-bold text-indigo-400 uppercase tracking-wider block">Interactive Modes</span>
               <ul class="space-y-1 text-[11px] text-slate-300 font-medium">
-                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">1</kbd> - <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">9</kbd> Wort-Chip auswählen (Select chip)</li>
-                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">Enter</kbd> Antwort einreichen (Submit)</li>
-                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">Backspace</kbd> Letzte Wahl löschen (Undo)</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">1</kbd> - <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">9</kbd> Select scrambled word chips</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">Enter</kbd> Submit assembled answer</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">Backspace</kbd> Undo/remove last selected chip</li>
               </ul>
             </div>
           </div>
@@ -2047,13 +2036,10 @@
         <div class="space-y-2">
           <div class="flex items-center gap-2 border-b border-slate-900 pb-1">
             <span class="text-indigo-400 text-sm font-bold">03.</span>
-            <h4 class="font-bold text-slate-200 text-sm">Interaktives Immersions-Labor | Interactive NLP Lab</h4>
+            <h4 class="font-bold text-slate-200 text-sm">Interactive Immersion Lab (NLP)</h4>
           </div>
-          <p class="text-xs leading-relaxed text-slate-300">
-            Im <strong>Immersions-Labor</strong> können Sie jeden Beispielsatz zerlegen. Klicken Sie auf ein beliebiges Wort im Textgitter, um dessen grammatikalische Wortart (POS), den FSRS-Fortschritt und das TTS-Audio zu untersuchen. Sie können unbekannte Wörter mit einem Klick in Ihr eigens Deck importieren!
-          </p>
-          <p class="text-[11px] leading-relaxed text-slate-400 font-medium">
-            In the <strong>Immersion Lab</strong>, click any parsed word token in the text grid to reveal its CEFR status, active FSRS spacing logs, voice TTS, and instantly add it as a custom review card!
+          <p class="text-xs leading-relaxed text-slate-300 font-medium">
+            Deconstruct sentences inside the <strong>Immersion Lab</strong>. Click on any parsed word token in the text grid to reveal its Part-of-Speech (POS) category, CEFR status, active FSRS spacing records, hear its TTS pronunciation, and instantly import it as a custom card in your review deck.
           </p>
         </div>
 
@@ -2061,13 +2047,10 @@
         <div class="space-y-2">
           <div class="flex items-center gap-2 border-b border-slate-900 pb-1">
             <span class="text-indigo-400 text-sm font-bold">04.</span>
-            <h4 class="font-bold text-slate-200 text-sm">Grammatik-Weaver & Rollenspiel | Grammar Weaver & RPG</h4>
+            <h4 class="font-bold text-slate-200 text-sm">Grammar Weaver & Conversational RPG</h4>
           </div>
-          <p class="text-xs leading-relaxed text-slate-300">
-            Bauen Sie Sätze im <strong>Grammar Weaver</strong> mithilfe farbcodierter Wortchips (Nomen in rot, Verben in indigo). Erleben Sie realistische Alltagsgespräche im <strong>RPG-Abenteuer</strong>. Falsche Worteingaben lösen visuelle Fehler-Rüttel-Gesten aus, um Ihr Unterbewusstsein zu trainieren.
-          </p>
-          <p class="text-[11px] leading-relaxed text-slate-400 font-medium">
-            Construct sentences in <strong>Grammar Weaver</strong> with syntactic chip highlights (Nouns in pink, Verbs in indigo). Roleplay situations in the <strong>RPG Adventure</strong>, where mistakes trigger physical shake animations for tactile feedback.
+          <p class="text-xs leading-relaxed text-slate-300 font-medium">
+            Assemble authentic sentences in the <strong>Grammar Weaver</strong> with syntactic color-coded word chips (Nouns in pink, Verbs in indigo). Roleplay realistic dialogues in the <strong>RPG Adventure</strong> with adaptive dialogue forks. Mistakes trigger tactile haptic shake animations to guide intuitive correction.
           </p>
         </div>
 
@@ -2075,13 +2058,32 @@
         <div class="space-y-2">
           <div class="flex items-center gap-2 border-b border-slate-900 pb-1">
             <span class="text-indigo-400 text-sm font-bold">05.</span>
-            <h4 class="font-bold text-slate-200 text-sm">Endungs-Grammatik | Suffix Suffix Contextualization</h4>
+            <h4 class="font-bold text-slate-200 text-sm">Suffix Grammar Contextualizer</h4>
           </div>
-          <p class="text-xs leading-relaxed text-slate-300">
-            Das System parst Wortendungen (z.B. <code class="text-indigo-400">-ung</code>, <code class="text-indigo-400">-heit</code>) bei Nomen und rendert automatisch einen inline Glühbirnen-Tipp mit der passenden Geschlechterregel (z.B. <code class="text-pink-400">die</code> für <code class="text-indigo-400">-ung</code>). Adjektive und Verben sind vor diesen Regeln geschützt.
+          <p class="text-xs leading-relaxed text-slate-300 font-medium">
+            The smart parser detects typical German noun endings (such as <code class="text-indigo-400">-ung</code>, <code class="text-indigo-400">-heit</code>, or <code class="text-indigo-400">-keit</code>) and renders an inline lightbulb tipped drawer showing the corresponding gender association rules (such as <code class="text-pink-400">die</code> for nouns ending in <code class="text-indigo-400">-ung</code>). Adjectives and verbs are protected from rules pollution.
           </p>
-          <p class="text-[11px] leading-relaxed text-slate-400 font-medium">
-            The parser detects noun suffixes (e.g. <code class="text-indigo-400">-ung</code>, <code class="text-indigo-400">-heit</code>) and renders context drawers for gender matching (e.g. <code class="text-pink-400">die</code> for <code class="text-indigo-400">-ung</code>). Adjectives/verbs are isolated from rule pollution.
+        </div>
+
+        <!-- Phonetic Mirror -->
+        <div class="space-y-2">
+          <div class="flex items-center gap-2 border-b border-slate-900 pb-1">
+            <span class="text-indigo-400 text-sm font-bold">06.</span>
+            <h4 class="font-bold text-slate-200 text-sm">Phonetik-Spiegel (Speech Pronunciation Coach)</h4>
+          </div>
+          <p class="text-xs leading-relaxed text-slate-300 font-medium">
+            Perfect your accent using our high-fidelity Speech Recognition engine. The pure-JS <strong>Kölner Phonetik</strong> algorithm scores your spoken input against target pronunciations. If you fail to pronounce tricky German phonemes like <code class="text-pink-400">ö</code>, <code class="text-pink-400">ü</code>, <code class="text-pink-400">ch</code>, <code class="text-pink-400">sch</code>, or <code class="text-pink-400">r</code>, an interactive mouth positioning drawer pops open with detailed anatomical illustrations and tongue positioning guides.
+          </p>
+        </div>
+
+        <!-- Pomodoro, Sync & Analytics -->
+        <div class="space-y-2">
+          <div class="flex items-center gap-2 border-b border-slate-900 pb-1">
+            <span class="text-indigo-400 text-sm font-bold">07.</span>
+            <h4 class="font-bold text-slate-200 text-sm">Pomodoro Timers, Backup Sync, & Analytics</h4>
+          </div>
+          <p class="text-xs leading-relaxed text-slate-300 font-medium">
+            Stay disciplined with the built-in Pomodoro focus timer to unlock XP multipliers. Visualize study metrics with FSRS stability decay charts on the Statistics dashboard. Import or export your progress profile instantly using a Base64-encrypted copy/paste Sync Key.
           </p>
         </div>
 
@@ -2090,7 +2092,7 @@
       <!-- Footer Buttons -->
       <div class="p-4 border-t border-slate-800/60 bg-slate-950/50 flex justify-end shrink-0">
         <button id="help-modal-ack" class="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-black transition-all shadow-lg shadow-indigo-600/20 active:scale-95 cursor-pointer">
-          Verstanden! | Got it!
+          Got it!
         </button>
       </div>
     </div>
@@ -2266,7 +2268,7 @@
   <div id="lottie-container" class="fixed inset-0 pointer-events-none z-[58] flex items-center justify-center overflow-hidden"></div>
 
   <!-- Floating Action Help Button (FAB) -->
-  <button id="help-fab" class="fixed bottom-6 right-6 w-14 h-14 bg-slate-900/80 border border-slate-700/60 hover:border-indigo-500 hover:shadow-[0_0_15px_rgba(99,102,241,0.4)] text-indigo-400 hover:text-indigo-300 rounded-full flex items-center justify-center shadow-2xl backdrop-blur-md z-[55] cursor-pointer transition-all hover:scale-110 active:scale-95 group animate-bounce" title="Hilfe & Einführung | Help & Introduction (Hot-key: ?)">
+  <button id="help-fab" class="fixed bottom-6 right-6 w-14 h-14 bg-slate-900/80 border border-slate-700/60 hover:border-indigo-500 hover:shadow-[0_0_15px_rgba(99,102,241,0.4)] text-indigo-400 hover:text-indigo-300 rounded-full flex items-center justify-center shadow-2xl backdrop-blur-md z-[55] cursor-pointer transition-all hover:scale-110 active:scale-95 group" title="Help & System Introduction (Hot-key: ?)">
     <i class="fa-solid fa-question text-xl transition-transform group-hover:rotate-12"></i>
   </button>
 
