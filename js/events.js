@@ -579,7 +579,7 @@ export function setupEventListeners() {
   if (elements.adventureQuitBtn) {
     elements.adventureQuitBtn.addEventListener('click', () => {
       showConfirmModal(
-        "Möchten Sie das Abenteuer wirklich verlassen? Ihr aktueller Fortschritt in diesem Szenario geht verloren.",
+        "Are you sure you want to quit the Adventure? Your current progress in this scenario will be lost.",
         () => quitAdventureScenario()
       );
     });
@@ -603,7 +603,7 @@ export function setupEventListeners() {
   if (elements.weaverQuitBtn) {
     elements.weaverQuitBtn.addEventListener('click', () => {
       showConfirmModal(
-        "Möchten Sie die Grammatik-Weberei wirklich beenden? Der aktuelle Fortschritt geht verloren.",
+        "Are you sure you want to quit the Grammar Weaver? Your current progress will be lost.",
         () => quitWeaverGame()
       );
     });
@@ -1021,7 +1021,7 @@ export function showConfirmModal(message, onConfirm) {
  */
 export function resetProgress() {
   showConfirmModal(
-    "Möchten Sie Ihren gesamten Lernfortschritt (gelesene/gelernte Karten) wirklich zurücksetzen?",
+    "Are you sure you want to reset your entire learning progress (viewed/learned cards)?",
     async () => {
       if (state.trainer && state.trainer.active) {
         stopAudioTrainer();
