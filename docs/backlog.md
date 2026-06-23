@@ -128,7 +128,7 @@ Persisted via `localStorage.current_theme`. Each theme fully overrides: body bac
 - [x] 5 Premium Themes
 - [x] 13 Keyboard Shortcuts
 - [x] Responsive Design (mobile sidebar, touch targets)
-- [x] Bilingual UI (German + English)
+- [x] English-First Bilingual UI
 - [x] JSON Backup Export/Import
 - [x] E2E Test Suite (Playwright) — fully implemented via `scripts/e2e_comprehensive_tests.py`
 

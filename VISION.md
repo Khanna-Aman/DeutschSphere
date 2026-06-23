@@ -123,7 +123,7 @@ DeutschSphere is a **fully functional, feature-rich German language learning SPA
 - [x] **10+ keyboard shortcuts** for mouse-free navigation
 - [x] **Hash-based SPA routing**: 7 views
 - [x] **Responsive design**: Mobile sidebar, hamburger menu, touch targets, compound word hyphenation
-- [x] **Bilingual UI**: All labels in German (primary) + English (secondary)
+- [x] **English-First Bilingual UI**: Optimized for learners with English (primary) + German (secondary) context labels
 - [x] **ES6 module architecture**: 8 JS modules with clean separation of concerns
 
 ---
