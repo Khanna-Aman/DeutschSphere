@@ -47,8 +47,8 @@ export function initQuiz(mode) {
       elements.quizOptionsContainer.innerHTML = `
         <div class="col-span-2 bg-rose-950/20 border border-rose-500/20 rounded-2xl p-6 text-center text-rose-300">
           <i class="fa-solid fa-triangle-exclamation text-2xl mb-2 text-rose-400" aria-hidden="true"></i>
-          <p class="font-extrabold text-sm">Keine Vokabeln im aktuellen Stapel vorhanden!</p>
-          <p class="text-xs text-rose-400 mt-1">Bitte wähle eine andere Kategorie oder ein anderes Niveau.</p>
+          <p class="font-extrabold text-sm">No vocabulary cards available in the current deck!</p>
+          <p class="text-xs text-rose-400 mt-1">Please select another category or a different CEFR level.</p>
         </div>`;
     }
     return;
@@ -101,7 +101,7 @@ export function initQuiz(mode) {
 
   // Update game mode badge text
   if (elements.quizModeBadge) {
-    elements.quizModeBadge.textContent = mode === 'mc' ? 'Vokabel-Test (Multiple-Choice)' : 'Schreib-Arena (Spelling Test)';
+    elements.quizModeBadge.textContent = mode === 'mc' ? 'Vocabulary Quiz (Multiple-Choice)' : 'Spelling Arena (Spelling Test)';
   }
 
   // Load first question
@@ -118,9 +118,9 @@ export function loadQuizQuestion() {
   // 1. Progress meters
   if (elements.quizProgressText) {
     if (state.quiz.isEndless) {
-      elements.quizProgressText.textContent = `Frage ${currentIdx + 1} (Endlos-Modus) | Question ${currentIdx + 1} (Endless Mode)`;
+      elements.quizProgressText.textContent = `Question ${currentIdx + 1} (Endless Mode)`;
     } else {
-      elements.quizProgressText.textContent = `Frage ${currentIdx + 1} / ${state.quiz.questions.length} | Question ${currentIdx + 1} / ${state.quiz.questions.length}`;
+      elements.quizProgressText.textContent = `Question ${currentIdx + 1} of ${state.quiz.questions.length}`;
     }
   }
 
@@ -170,10 +170,10 @@ export function loadQuizQuestion() {
 
     if (qCard.direction === 'de-to-en') {
       if (elements.quizQuestionPrompt) elements.quizQuestionPrompt.textContent = qCard.word;
-      if (elements.quizQuestionSubprompt) elements.quizQuestionSubprompt.textContent = 'Wählen Sie die englische Bedeutung | Choose the English meaning';
+      if (elements.quizQuestionSubprompt) elements.quizQuestionSubprompt.textContent = 'Choose the English meaning';
     } else {
       if (elements.quizQuestionPrompt) elements.quizQuestionPrompt.textContent = qCard.meaning;
-      if (elements.quizQuestionSubprompt) elements.quizQuestionSubprompt.textContent = 'Wählen Sie das passende deutsche Wort | Choose the matching German word';
+      if (elements.quizQuestionSubprompt) elements.quizQuestionSubprompt.textContent = 'Choose the matching German word';
     }
 
     // Compile 4 MC choices
@@ -188,9 +188,9 @@ export function loadQuizQuestion() {
     if (elements.quizQuestionPrompt) elements.quizQuestionPrompt.textContent = qCard.meaning;
 
     // Set appropriate placeholder text / prompt hints for article-based nouns
-    let promptHint = 'Tippen Sie die deutsche Übersetzung | Type the German translation';
+    let promptHint = 'Type the German translation';
     if (qCard.wordClass === 'Nomen' && qCard.gender) {
-      promptHint = `Tippen Sie das Nomen mit passendem Artikel (${qCard.gender}) | Type the noun with correct article (${qCard.gender})`;
+      promptHint = `Type the noun with correct article (${qCard.gender})`;
     }
     if (elements.quizQuestionSubprompt) elements.quizQuestionSubprompt.textContent = promptHint;
 
@@ -321,7 +321,7 @@ export function handleMCOptionClick(opt, clickedBtn) {
     // Show correct feedback
     if (elements.quizFeedbackPanel) {
       elements.quizFeedbackIcon.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-500 text-3xl"></i>';
-      elements.quizFeedbackTitle.textContent = 'Richtig! | Correct!';
+      elements.quizFeedbackTitle.textContent = 'Correct!';
       elements.quizFeedbackTitle.className = 'text-lg font-bold text-emerald-400 font-display';
       elements.quizFeedbackPanel.className = 'mt-6 p-4 rounded-2xl border border-emerald-500/20 bg-emerald-950/10 flex items-start gap-4 transition-all duration-300';
       
@@ -359,7 +359,7 @@ export function handleMCOptionClick(opt, clickedBtn) {
     // Show wrong feedback
     if (elements.quizFeedbackPanel) {
       elements.quizFeedbackIcon.innerHTML = '<i class="fa-solid fa-circle-xmark text-rose-500 text-3xl"></i>';
-      elements.quizFeedbackTitle.textContent = 'Falsch | Incorrect';
+      elements.quizFeedbackTitle.textContent = 'Incorrect';
       elements.quizFeedbackTitle.className = 'text-lg font-bold text-rose-400 font-display';
       elements.quizFeedbackPanel.className = 'mt-6 p-4 rounded-2xl border border-rose-500/20 bg-rose-950/10 flex items-start gap-4 transition-all duration-300';
       
@@ -426,7 +426,7 @@ export function checkSpellingAnswer() {
 
     if (elements.quizFeedbackPanel) {
       elements.quizFeedbackIcon.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-500 text-3xl"></i>';
-      elements.quizFeedbackTitle.textContent = 'Richtig! | Correct!';
+      elements.quizFeedbackTitle.textContent = 'Correct!';
       elements.quizFeedbackTitle.className = 'text-lg font-bold text-emerald-400 font-display';
       elements.quizFeedbackPanel.className = 'mt-6 p-4 rounded-2xl border border-emerald-500/20 bg-emerald-950/10 flex items-start gap-4 transition-all duration-300';
       
@@ -453,11 +453,11 @@ export function checkSpellingAnswer() {
 
     if (elements.quizFeedbackPanel) {
       elements.quizFeedbackIcon.innerHTML = '<i class="fa-solid fa-circle-xmark text-rose-500 text-3xl"></i>';
-      elements.quizFeedbackTitle.textContent = 'Falsch | Incorrect';
+      elements.quizFeedbackTitle.textContent = 'Incorrect';
       elements.quizFeedbackTitle.className = 'text-lg font-bold text-rose-400 font-display';
       elements.quizFeedbackPanel.className = 'mt-6 p-4 rounded-2xl border border-rose-500/20 bg-rose-950/10 flex items-start gap-4 transition-all duration-300';
       
-      let feedbackHtml = `Eingabe / Input: <span class="line-through text-rose-400">${escapeHtml(typed) || '(leer / empty)'}</span><br>Richtige Lösung / Correct Answer: <span class="font-extrabold text-emerald-400">${escapeHtml(correct)}</span>`;
+      let feedbackHtml = `Your Input: <span class="line-through text-rose-400">${escapeHtml(typed) || '(empty)'}</span><br>Correct Answer: <span class="font-extrabold text-emerald-400">${escapeHtml(correct)}</span>`;
       if (qCard.exampleDe) {
         feedbackHtml += `<br><span class="text-xs text-slate-400 font-normal italic mt-1 block">"${escapeHtml(qCard.exampleDe)}" ${qCard.exampleEn ? `(${escapeHtml(qCard.exampleEn)})` : ''}</span>`;
       }
