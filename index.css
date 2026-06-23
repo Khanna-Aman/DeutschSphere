@@ -513,6 +513,75 @@ body.theme-weimar .level-title {
   -webkit-background-clip: text !important;
 }
 
+/* Weimar Classic Comprehensive Dark-to-Light Overrides */
+body.theme-weimar .bg-slate-900,
+body.theme-weimar .bg-slate-950,
+body.theme-weimar .bg-slate-850,
+body.theme-weimar .bg-indigo-950,
+body.theme-weimar .bg-slate-900\/50,
+body.theme-weimar .bg-slate-950\/40,
+body.theme-weimar .bg-indigo-950\/20,
+body.theme-weimar .bg-indigo-950\/30,
+body.theme-weimar .bg-white\/5,
+body.theme-weimar .bg-white\/10 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(203, 213, 225, 0.8) !important;
+}
+
+body.theme-weimar .text-slate-300,
+body.theme-weimar .text-slate-200,
+body.theme-weimar .text-slate-100 {
+  color: #1e293b !important; /* Rich slate-800 */
+}
+
+body.theme-weimar .text-indigo-300,
+body.theme-weimar .text-indigo-200 {
+  color: #4f46e5 !important; /* Indigo-600 */
+}
+
+body.theme-weimar .text-emerald-300,
+body.theme-weimar .text-emerald-200 {
+  color: #15803d !important; /* Emerald-700 */
+}
+
+body.theme-weimar .text-rose-300,
+body.theme-weimar .text-rose-200,
+body.theme-weimar .text-pink-300 {
+  color: #b91c1c !important; /* Rose-700 */
+}
+
+body.theme-weimar .text-amber-300,
+body.theme-weimar .text-amber-400 {
+  color: #b45309 !important; /* Amber-700 */
+}
+
+/* Panel overlays, details dropdowns, Weaver, RPG lists */
+body.theme-weimar .bg-slate-950\/30,
+body.theme-weimar .bg-slate-900\/30 {
+  background-color: rgba(241, 245, 249, 0.9) !important;
+}
+
+body.theme-weimar .border-white\/10,
+body.theme-weimar .border-white\/20,
+body.theme-weimar .border-indigo-500\/30 {
+  border-color: rgba(203, 213, 225, 0.8) !important;
+}
+
+body.theme-weimar .hover\:bg-white\/10:hover,
+body.theme-weimar .hover\:bg-white\/5:hover {
+  background-color: rgba(226, 232, 240, 0.5) !important;
+}
+
+body.theme-weimar #help-modal .bg-slate-950\/80 {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+}
+
+body.theme-weimar .active-tab {
+  background-color: rgba(79, 70, 229, 0.08) !important;
+  color: #4f46e5 !important;
+}
+
+
 /* ==========================================================================
    DEUTSCH-ABENTEUER (RPG) MODE STYLES
    ========================================================================== */
