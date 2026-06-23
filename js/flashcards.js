@@ -12,9 +12,9 @@ let nativeAmp = 0;
 const PHONEME_GUIDES = {
   'ö': {
     title: 'Umlaut Ö [ø:] / [œ]',
-    lips: 'Stark gerundet und leicht nach vorne vorgestülpt (wie bei „O“).',
-    tongue: 'Wie beim „E“ (hoch und weit vorne im Mund platziert).',
-    instructions: 'Sprechen Sie ein langes „e“ (wie in „Weg“). Halten Sie die Zunge genau in dieser Position und runden Sie nun Ihre Lippen zu einem engen „O“. So entsteht das perfekte „Ö“!',
+    lips: 'Rounded tightly and projected slightly forward (as when saying "O").',
+    tongue: 'Positioned high and far forward in the mouth (as when saying "E").',
+    instructions: 'Pronounce a long "e" (like the "ay" sound in "day" but pure). Keep your tongue in exactly this high forward position and round your lips into a tight circle "O". The resulting sound is the perfect "Ö"!',
     svg: `<svg viewBox="0 0 100 100" class="w-24 h-24 drop-shadow-[0_0_8px_rgba(244,63,94,0.3)]">
       <defs>
         <filter id="glow-pink-o" x="-20%" y="-20%" width="140%" height="140%">
@@ -43,9 +43,9 @@ const PHONEME_GUIDES = {
   },
   'ü': {
     title: 'Umlaut Ü [y:] / [ʏ]',
-    lips: 'Sehr eng kreisrund gerundet und stark vorgestülpt (wie beim Pfeifen).',
-    tongue: 'Wie beim „I“ (sehr hoch und ganz weit vorne an den Zähnen).',
-    instructions: 'Sprechen Sie ein langes „i“ (wie in „Sieg“). Lassen Sie die Zunge unverändert in dieser extrem hohen Vorderposition und runden Sie die Lippen fest zu einem ganz engen, kleinen „U“!',
+    lips: 'Extremely rounded, tight, and projected forward (as when whistling).',
+    tongue: 'Positioned very high and far forward, right behind your front teeth (as when saying "I").',
+    instructions: 'Pronounce a long "ee" sound (like in "see"). Keep your tongue completely unchanged in this extremely high forward position and round your lips tightly as if saying a very narrow "U"!',
     svg: `<svg viewBox="0 0 100 100" class="w-24 h-24 drop-shadow-[0_0_8px_rgba(244,63,94,0.3)]">
       <defs>
         <filter id="glow-pink-u" x="-20%" y="-20%" width="140%" height="140%">
@@ -73,9 +73,9 @@ const PHONEME_GUIDES = {
   },
   'ä': {
     title: 'Umlaut Ä [ɛ:] / [ɛ]',
-    lips: 'Weit geöffnet und leicht flach entspannt (breiter als bei „A“).',
-    tongue: 'Flach liegend, die Zungenspitze berührt leicht die unteren Schneidezähne.',
-    instructions: 'Öffnen Sie den Mund wie für ein normales „A“. Ziehen Sie nun Ihre Mundwinkel ganz leicht nach außen (ein breites Grinsen simulieren) und heben Sie die Zunge minimal an, um ein offenes „E“ zu formen.',
+    lips: 'Opened wide and slightly relaxed (wider than when saying "A").',
+    tongue: 'Lying flat, with the tip of the tongue gently touching the back of your bottom teeth.',
+    instructions: 'Open your mouth as if to pronounce a normal "A". Pull the corners of your mouth slightly outward (simulating a wide grin) and raise your tongue minimally to shape an open "E" (like in "bed").',
     svg: `<svg viewBox="0 0 100 100" class="w-24 h-24 drop-shadow-[0_0_8px_rgba(244,63,94,0.3)]">
       <defs>
         <filter id="glow-pink-a" x="-20%" y="-20%" width="140%" height="140%">
@@ -103,9 +103,9 @@ const PHONEME_GUIDES = {
   },
   'sch': {
     title: 'Sibilant SCH [ʃ]',
-    lips: 'Leicht gerundet, nach vorne geschoben und leicht geöffnet.',
-    tongue: 'Zungenseiten liegen am Gaumen an, Zungenmitte bildet eine breite Rinne.',
-    instructions: 'Bringen Sie die Zähne nahe zusammen (ohne sie ganz zu schließen). Formen Sie mit den Lippen ein leichtes Viereck, schieben Sie sie nach vorne und blasen Sie die Luft kraftvoll durch die Mitte aus (Rauschen).',
+    lips: 'Slightly rounded, pushed forward, and slightly open.',
+    tongue: 'The sides of your tongue press against your upper molars, forming a broad channel in the middle.',
+    instructions: 'Bring your teeth close together (without fully touching). Form a slight square with your lips, push them forward, and blow the air forcefully through the middle (similar to the English "sh" sound in "shoe").',
     svg: `<svg viewBox="0 0 100 100" class="w-24 h-24 drop-shadow-[0_0_8px_rgba(244,63,94,0.3)]">
       <defs>
         <filter id="glow-pink-s" x="-20%" y="-20%" width="140%" height="140%">
@@ -128,10 +128,10 @@ const PHONEME_GUIDES = {
     </svg>`
   },
   'ch': {
-    title: 'Frikativ CH [ç] / [x]',
-    lips: 'Leicht geöffnet (Mundwinkel entspannt bis breit auseinander).',
-    tongue: 'Ich-Laut [ç]: Zungenmitte nähert sich dem harten Gaumen. Ach-Laut [x]: Zungenrücken nähert sich dem weichen Gaumen.',
-    instructions: 'Für den „Ich-Laut“ (nach e/i/ä/ö/ü): Flüstern Sie ein langes „jaaaa“ und halten Sie den Reibelaut in der Mitte. Für den „Ach-Laut“ (nach a/o/u): Machen Sie ein leichtes Räuspern im Rachen (wie beim Atmen an eine kalte Scheibe).',
+    title: 'Fricative CH [ç] / [x]',
+    lips: 'Slightly open (with the corners of your mouth relaxed or pulled slightly wide).',
+    tongue: '"Ich-Laut" [ç] (after e/i/ä/ö/ü): The middle of the tongue rises near the hard palate. "Ach-Laut" [x] (after a/o/u): The back of the tongue rises near the soft palate.',
+    instructions: 'For the "Ich-Laut" (after front vowels): whisper a long "yes" and hold the friction sound of the "y". For the "Ach-Laut" (after back vowels): make a gentle clearing-the-throat sound (like breathing onto cold glasses to fog them up).',
     svg: `<svg viewBox="0 0 100 100" class="w-24 h-24 drop-shadow-[0_0_8px_rgba(244,63,94,0.3)]">
       <defs>
         <filter id="glow-green-c" x="-20%" y="-20%" width="140%" height="140%">
@@ -155,10 +155,10 @@ const PHONEME_GUIDES = {
     </svg>`
   },
   'r': {
-    title: 'Uvulares R [ʁ] / Vokalisches R [ɐ]',
-    lips: 'Leicht geöffnet und entspannt.',
-    tongue: 'Konsonantisches R: Das Zäpfchen (Uvula) hinten am Gaumensegel vibriert gegen den Zungenrücken.',
-    instructions: 'Für das Reibe-R: Stellen Sie sich vor, Sie gurgeln sanft mit einem Schluck Wasser ganz hinten im Mund. Die Zunge bleibt unten, während die Luft hinten am Gaumensegel ein leicht vibrierendes, weiches Reibegeräusch erzeugt.',
+    title: 'Uvular R [ʁ] / Vocalic R [ɐ]',
+    lips: 'Slightly open and relaxed.',
+    tongue: 'Consonantal R: The uvula at the back of the soft palate vibrates gently against the back of your tongue.',
+    instructions: 'For the consonantal rolled R: imagine gently gargling a tiny sip of water at the very back of your throat. The tongue stays down while the air creates a soft, vibrating friction sound at the back of your palate.',
     svg: `<svg viewBox="0 0 100 100" class="w-24 h-24 drop-shadow-[0_0_8px_rgba(244,63,94,0.3)]">
       <defs>
         <filter id="glow-pink-r" x="-20%" y="-20%" width="140%" height="140%">
@@ -834,6 +834,13 @@ export function toggleLearned() {
   }));
   
   renderCard();
+
+  // M16: Automatically advance to the next card after a small delay if marked as learned
+  if (!hasLearned) {
+    setTimeout(() => {
+      nextCard();
+    }, 400);
+  }
 }
 
 // Preferences UI Sync: Fast Read Mode
@@ -1128,7 +1135,7 @@ export function startPhoneticRecording() {
   // H6: SpeechRecognition requires HTTPS — detect file:// protocol and warn user
   if (location.protocol === 'file:') {
     if (elements.phoneticStatusMsg) {
-      elements.phoneticStatusMsg.textContent = "⚠️ Spracherkennung erfordert HTTPS. Bitte öffnen Sie die App über einen lokalen Server (python -m http.server) oder GitHub Pages.";
+      elements.phoneticStatusMsg.textContent = "⚠️ Speech recognition requires HTTPS. Please open the app via a local server (e.g., python -m http.server) or GitHub Pages.";
     }
     return;
   }
@@ -1136,7 +1143,7 @@ export function startPhoneticRecording() {
   const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
   if (!SpeechRecognition) {
     if (elements.phoneticStatusMsg) {
-      elements.phoneticStatusMsg.textContent = "Fehler: Spracherkennung in Ihrem Browser nicht unterstützt (empfohlen: Google Chrome / Edge).";
+      elements.phoneticStatusMsg.textContent = "Error: Speech recognition is not supported in your browser (recommended: Google Chrome or Microsoft Edge).";
     }
     return;
   }
@@ -1176,11 +1183,11 @@ export function startPhoneticRecording() {
         elements.phoneticRecordBtn.classList.add('bg-pink-600', 'border-pink-500', 'text-white');
       }
       if (elements.learnerSpecStatus) {
-        elements.learnerSpecStatus.textContent = "Zuhören...";
+        elements.learnerSpecStatus.textContent = "Listening...";
         elements.learnerSpecStatus.className = "text-pink-400 animate-pulse font-bold";
       }
       if (elements.phoneticStatusMsg) {
-        elements.phoneticStatusMsg.textContent = "Ich höre zu... Bitte sprechen Sie das Wort deutlich aus.";
+        elements.phoneticStatusMsg.textContent = "Listening... Please pronounce the German word clearly.";
       }
       if (elements.phoneticEvaluationPanel) {
         elements.phoneticEvaluationPanel.classList.add('hidden');
@@ -1203,11 +1210,11 @@ export function startPhoneticRecording() {
         console.warn("Speech Recognition Error Event:", event.error);
         if (event.error === 'no-speech') {
           if (elements.phoneticStatusMsg) {
-            elements.phoneticStatusMsg.textContent = "Keine Sprache erkannt. Bitte versuchen Sie es noch einmal.";
+            elements.phoneticStatusMsg.textContent = "No speech detected. Please try again.";
           }
         } else {
           if (elements.phoneticStatusMsg) {
-            elements.phoneticStatusMsg.textContent = `Erkennungsfehler: ${event.error}. Bitte erneut versuchen.`;
+            elements.phoneticStatusMsg.textContent = `Recognition error: ${event.error}. Please try again.`;
           }
         }
         stopPhoneticRecording();
@@ -1222,7 +1229,7 @@ export function startPhoneticRecording() {
     .catch(err => {
       console.error("Microphone hardware access blocked:", err);
       if (elements.phoneticStatusMsg) {
-        elements.phoneticStatusMsg.textContent = "Mikrofon-Zugriff verweigert. Bitte erlauben Sie den Mikrofon-Zugriff in den Einstellungen.";
+        elements.phoneticStatusMsg.textContent = "Microphone access denied. Please allow microphone access in your browser settings.";
       }
     });
 }
@@ -1613,7 +1620,7 @@ export function evaluatePhoneticPronunciation(spokenText) {
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-2 w-2 bg-rose-500"></span>
               </span>
-              <h5 class="text-[10px] font-extrabold uppercase tracking-widest text-rose-400">Phonetische Hilfestellung | Mouth Positioning Guide</h5>
+              <h5 class="text-[10px] font-extrabold uppercase tracking-widest text-rose-400">Mouth Positioning Guide</h5>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
         `;
@@ -1629,11 +1636,11 @@ export function evaluatePhoneticPronunciation(spokenText) {
                 <div class="space-y-1 min-w-0">
                   <div class="flex items-center gap-1.5 flex-wrap">
                     <span class="text-xs font-black text-pink-400 font-sans tracking-wide uppercase">${guide.title}</span>
-                    <span class="px-1.5 py-0.5 bg-pink-500/10 border border-pink-500/25 text-pink-400 text-[8px] font-black uppercase tracking-wider rounded">Mundstellung</span>
+                    <span class="px-1.5 py-0.5 bg-pink-500/10 border border-pink-500/25 text-pink-400 text-[8px] font-black uppercase tracking-wider rounded">Mouth Guide</span>
                   </div>
-                  <p class="text-[10px] text-slate-300 leading-normal font-medium"><strong class="text-slate-400 font-extrabold uppercase text-[8px] tracking-wider block">Lippen | Lips:</strong> ${guide.lips}</p>
-                  <p class="text-[10px] text-slate-300 leading-normal font-medium"><strong class="text-slate-400 font-extrabold uppercase text-[8px] tracking-wider block">Zunge | Tongue:</strong> ${guide.tongue}</p>
-                  <p class="text-[10px] text-slate-400 leading-normal italic font-medium pt-0.5"><strong class="text-slate-400 font-extrabold uppercase text-[8px] tracking-widest block not-italic">Anleitung:</strong> ${guide.instructions}</p>
+                  <p class="text-[10px] text-slate-300 leading-normal font-medium"><strong class="text-slate-400 font-extrabold uppercase text-[8px] tracking-wider block">Lips:</strong> ${guide.lips}</p>
+                  <p class="text-[10px] text-slate-300 leading-normal font-medium"><strong class="text-slate-400 font-extrabold uppercase text-[8px] tracking-wider block">Tongue:</strong> ${guide.tongue}</p>
+                  <p class="text-[10px] text-slate-400 leading-normal italic font-medium pt-0.5"><strong class="text-slate-400 font-extrabold uppercase text-[8px] tracking-widest block not-italic">Instructions:</strong> ${guide.instructions}</p>
                 </div>
               </div>
             `;
@@ -1669,17 +1676,17 @@ export function evaluatePhoneticPronunciation(spokenText) {
 
   let feedbackMessage = '';
   if (score === 100) {
-    feedbackMessage = `Perfekt! Sie haben das Wort fehlerfrei ausgesprochen. ("${spokenText}")`;
+    feedbackMessage = `Perfect! You pronounced the word flawlessly. ("${spokenText}")`;
   } else if (score >= 90) {
-    feedbackMessage = `Ausgezeichnete Aussprache! Kleine Abweichung vorhanden, aber vollkommen verständlich. ("${spokenText}")`;
+    feedbackMessage = `Excellent pronunciation! Very minor deviations, but perfectly intelligible. ("${spokenText}")`;
   } else if (score >= 75) {
-    feedbackMessage = `Sehr gutes Ergebnis! Achten Sie auf die rot durchgestrichenen Buchstaben, um die Aussprache zu optimieren. ("${spokenText}")`;
+    feedbackMessage = `Great job! Check the red strikethrough characters to refine your pronunciation. ("${spokenText}")`;
   } else if (score >= 50) {
-    feedbackMessage = `Guter Versuch! Hören Sie sich die Vorlage (Modell-Button) an und trainieren Sie besonders die Konsonanten und Umlaute. ("${spokenText}")`;
+    feedbackMessage = `Good try! Listen to the model audio speaker, and pay special attention to the consonants and umlauts. ("${spokenText}")`;
   } else if (spokenText.length > 0) {
-    feedbackMessage = `Erkannter Text weicht stark ab ("${spokenText}"). Bitte vergleichen Sie Ihre Betonung mit dem Audio-Sprecher.`;
+    feedbackMessage = `The recognized speech deviates significantly ("${spokenText}"). Please compare your pronunciation with the speaker audio.`;
   } else {
-    feedbackMessage = "Das Wort konnte leider nicht eindeutig analysiert werden. Sprechen Sie lauter, näher am Mikrofon oder etwas langsamer.";
+    feedbackMessage = "Speech was too faint or distorted to analyze. Speak louder, closer to the microphone, or slightly slower.";
   }
 
   if (elements.phoneticFeedbackMsg) {
@@ -1691,7 +1698,7 @@ export function evaluatePhoneticPronunciation(spokenText) {
   }
 
   if (elements.phoneticStatusMsg) {
-    elements.phoneticStatusMsg.textContent = `Auswertung abgeschlossen: ${score}% Übereinstimmung.`;
+    elements.phoneticStatusMsg.textContent = `Evaluation complete: ${score}% match.`;
   }
 }
 
