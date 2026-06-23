@@ -11,7 +11,7 @@ except AttributeError:
 from notebooklm_tools.core.client import NotebookLMClient
 from notebooklm_tools.core.auth import load_cached_tokens
 
-NOTEBOOK_ID = "efa902d2-f8e4-480e-94da-554cdb87e674"
+NOTEBOOK_ID = "9ba76d80-5325-4f92-a29f-2a5c4f5dae5d"
 
 tokens = load_cached_tokens()
 client = NotebookLMClient(

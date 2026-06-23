@@ -27,17 +27,28 @@ print(f"=== SOTA E2E Stress-Testing Suite ===")
 print(f"Starting server on dynamic port: {PORT}")
 
 # 2. Local HTTP Server Setup
+class NoKeepAliveRequestHandler(SimpleHTTPRequestHandler):
+    protocol_version = "HTTP/1.1"
+    
+    def log_message(self, format, *args):
+        # Keep E2E output silent and clean
+        pass
+        
+    def end_headers(self):
+        self.send_header("Connection", "close")
+        super().end_headers()
+
 class ThreadedTCPServer(TCPServer):
     allow_reuse_address = True
 
 # Ensure working directory is the project root
 os.chdir(r"D:\Aman\_________Projects\A1-B1_German")
 
-server = ThreadedTCPServer(("", PORT), SimpleHTTPRequestHandler)
+server = ThreadedTCPServer(("", PORT), NoKeepAliveRequestHandler)
 server_thread = threading.Thread(target=server.serve_forever)
 server_thread.daemon = True
 server_thread.start()
-print("Local HTTP Server started in the background.")
+print("Local HTTP Server started in the background (Keep-Alive disabled).")
 
 # 3. Screenshot/Artifacts Directory (Dynamic Conversation ID Resolution)
 base_brain_dir = r"C:\Users\aman-\.gemini\antigravity\brain"
@@ -49,7 +60,7 @@ if os.path.exists(base_brain_dir):
         subfolders = [
             os.path.join(base_brain_dir, f) 
             for f in os.listdir(base_brain_dir) 
-            if os.path.isdir(os.path.join(base_brain_dir, f)) and len(f) > 10 and f != ".system_generated"
+            if os.path.isdir(os.path.join(base_brain_dir, f)) and len(f) == 36 and "-" in f and f != ".system_generated"
         ]
         if subfolders:
             # Sort by modification time (most recent first)
@@ -190,6 +201,146 @@ try:
         all_btn = page.locator('#categories-container button[data-category="All"]').first
         all_btn.click()
         time.sleep(0.5)
+        
+        # =========================================================================
+        # [STEP 2.5] VOCABULARY SEARCH SYSTEM & QUICK-FILTER CHIPS STRESS TEST
+        # =========================================================================
+        print("\n[STEP 2.5] Testing Vocabulary Search System & Quick-Filter Chips...")
+        
+        # Focus search input and type a query
+        print(" Typing search query 'Abflug' into vocabulary search...")
+        page.locator("#search-input").fill("Abflug")
+        time.sleep(0.5)
+        
+        # Verify search-clear is visible
+        clear_btn = page.locator("#search-clear")
+        assert clear_btn.is_visible(), "Search clear button did not become visible after typing!"
+        
+        # Test clear button
+        print(" Clicking search clear button...")
+        clear_btn.click()
+        time.sleep(0.5)
+        assert page.locator("#search-input").input_value() == "", "Search input was not cleared!"
+        assert not clear_btn.is_visible(), "Search clear button remains visible after clearing!"
+        
+        # Test Search Submit Button and Auto-Routing from another page
+        print(" Routing to #/stats to test auto-routing from search...")
+        page.evaluate("window.location.hash = '#/stats'")
+        time.sleep(0.5)
+        assert page.locator("#stats-view").is_visible(), "Failed to route to stats view!"
+        
+        print(" Typing in search input while on #/stats...")
+        page.locator("#search-input").fill("Ankunft")
+        time.sleep(0.5)
+        assert page.locator("#flashcards-view").is_visible(), "Search did not auto-route back to flashcards view!"
+        
+        # Reset search
+        page.locator("#search-clear").click()
+        time.sleep(0.5)
+        
+        # Test search-submit-btn click
+        print(" Routing to #/quiz to test search-submit-btn auto-routing...")
+        page.evaluate("window.location.hash = '#/quiz'")
+        time.sleep(0.5)
+        assert page.locator("#quiz-view").is_visible(), "Failed to route to quiz view!"
+        
+        print(" Typing query and clicking search submit button...")
+        page.locator("#search-input").fill("Ansage")
+        page.locator("#search-submit-btn").click()
+        time.sleep(0.5)
+        assert page.locator("#flashcards-view").is_visible(), "search-submit-btn click did not auto-route to flashcards view!"
+        assert page.locator("#search-input").input_value() == "Ansage", "Search query was lost on submit!"
+        
+        # Reset search
+        page.locator("#search-clear").click()
+        time.sleep(0.5)
+        
+        # Test vocabulary search enter key submission and keyboard blur / mobile sidebar auto-close
+        print(" Routing to #/stats to test Enter-key search submission and auto-routing...")
+        page.evaluate("window.location.hash = '#/stats'")
+        time.sleep(0.5)
+        assert page.locator("#stats-view").is_visible(), "Failed to route to stats view!"
+        
+        print(" Typing query 'Ankunft' and pressing Enter inside search input...")
+        page.locator("#search-input").fill("Ankunft")
+        page.locator("#search-input").press("Enter")
+        time.sleep(0.5)
+        assert page.locator("#flashcards-view").is_visible(), "Pressing Enter inside search did not auto-route to flashcards view!"
+        assert page.locator("#search-input").input_value() == "Ankunft", "Search query was lost on Enter key submit!"
+        
+        # Reset search
+        page.locator("#search-clear").click()
+        time.sleep(0.5)
+
+        # Test cheatcodes search input Enter key behavior
+        print(" Routing to #/cheatcodes to test cheatcode Enter-key search...")
+        page.evaluate("window.location.hash = '#/cheatcodes'")
+        time.sleep(0.5)
+        assert page.locator("#cheatcodes-view").is_visible(), "Failed to route to cheatcodes view!"
+        
+        print(" Typing query '-heit' and pressing Enter in cheatcodes search input...")
+        page.locator("#cheatcode-search").fill("-heit")
+        page.locator("#cheatcode-search").press("Enter")
+        time.sleep(0.5)
+        assert page.locator("#cheatcode-search").input_value() == "-heit", "Cheatcode search query was not retained!"
+        
+        # Reset cheatcodes search input
+        page.locator("#cheatcode-search").fill("")
+        page.locator("#cheatcode-search").press("Enter")
+        time.sleep(0.5)
+
+        # Test quick filter chips
+        print(" Clicking quick search filter chip 'is:noun'...")
+        noun_chip = page.locator('.search-tag-chip[data-tag="is:noun"]')
+        noun_chip.click()
+        time.sleep(0.5)
+        assert "is:noun" in page.locator("#search-input").input_value(), "Filter chip did not append tag to search input!"
+        
+        # Reset search
+        page.locator("#search-clear").click()
+        time.sleep(0.5)
+
+        # =========================================================================
+        # [STEP 2.7] POMODORO FOCUS BOOSTER & AMBIENT SOUNDSCAPES WIDGET TEST
+        # =========================================================================
+        print("\n[STEP 2.7] Testing Pomodoro Focus Booster Widget (Sidebar)...")
+        assert page.locator("#pomodoro-sidebar-widget").is_visible(), "Pomodoro sidebar widget is not visible!"
+        
+        # Change duration select value to 15 minutes
+        print(" Changing Pomodoro timer duration to 15 minutes...")
+        page.locator("#pomodoro-duration").select_option("15")
+        time.sleep(0.3)
+        assert page.locator("#pomodoro-time-text").inner_text().strip() == "15m", "Pomodoro timer display did not update to 15m!"
+        
+        # Start focus timer
+        print(" Clicking Pomodoro toggle button to START timer...")
+        page.locator("#pomodoro-toggle-btn").click()
+        time.sleep(1.5) # Let it tick at least one second
+        
+        # Verify it entered active focus mode (button changes to "Stoppen | Stop")
+        btn_text = page.locator("#pomodoro-toggle-btn").inner_text().lower()
+        assert "stop" in btn_text or "stoppen" in btn_text, f"Pomodoro button text '{btn_text}' does not indicate running state!"
+        
+        # Verify the timer ticked (display format is now MM:SS like 14:59 or 14:58)
+        timer_ticked_text = page.locator("#pomodoro-time-text").inner_text().strip()
+        print(f" Pomodoro timer running display ticked to: '{timer_ticked_text}'")
+        assert ":" in timer_ticked_text, f"Pomodoro timer display '{timer_ticked_text}' is not in active tick format MM:SS!"
+        
+        # Switch focus sound to pink / warm rain
+        print(" Changing Pomodoro soundscape option to 'pink'...")
+        page.locator("#pomodoro-sound").select_option("pink")
+        time.sleep(0.3)
+        
+        # Stop focus timer
+        print(" Clicking Pomodoro toggle button to STOP timer...")
+        page.locator("#pomodoro-toggle-btn").click()
+        time.sleep(0.5)
+        
+        # Verify it went back to initial default state
+        btn_text_stopped = page.locator("#pomodoro-toggle-btn").inner_text().lower()
+        assert "start" in btn_text_stopped or "starten" in btn_text_stopped, "Pomodoro button text did not return to Start!"
+        assert page.locator("#pomodoro-time-text").inner_text().strip() == "15m", "Pomodoro timer display did not reset to 15m!"
+        print(" Pomodoro Focus Booster widget passed stress test.")
         
         # =========================================================================
         # [STEP 3] FLASHCARD INTERACTIONS, ACCORDIONS & PREFS UI SYNCS
