@@ -5516,8 +5516,8 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "fliegt",
-      "perfekt": "ist geflogen",
+      "present_3sg": "fliegt (ab)",
+      "perfekt": "ist (ab)geflogen",
       "is_irregular": true
     },
     "adjective_forms": null,
