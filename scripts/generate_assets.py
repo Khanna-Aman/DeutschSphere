@@ -629,7 +629,11 @@ def main():
     use_vertex = bool(os.environ.get("GOOGLE_APPLICATION_CREDENTIALS"))
     
     if use_vertex:
-        gcp_project = os.environ.get("GCP_PROJECT") or os.environ.get("GOOGLE_CLOUD_PROJECT") or "antigravity-sandbox-500206"
+        gcp_project = os.environ.get("GCP_PROJECT") or os.environ.get("GOOGLE_CLOUD_PROJECT")
+        if not gcp_project:
+            print("❌ Error: GCP_PROJECT is not set in environment or .env file when using Vertex AI.")
+            print("Please define GCP_PROJECT inside your .env configuration.")
+            sys.exit(1)
         gcp_location = os.environ.get("GCP_LOCATION") or "us-central1"
         print("=========================================================")
         print(f"📡 Integration Path: Google Cloud Vertex AI Mode")
@@ -646,7 +650,7 @@ def main():
             print("  GEMINI_API_KEY=your_gemini_api_key_here")
             print("Or to use Google Cloud Vertex AI (with your GCP Credits):")
             print("  GOOGLE_APPLICATION_CREDENTIALS=gcp-key.json")
-            print("  GCP_PROJECT=antigravity-sandbox-500206")
+            print("  GCP_PROJECT=your_gcp_project_id_here")
             sys.exit(1)
         
         print("=========================================================")
