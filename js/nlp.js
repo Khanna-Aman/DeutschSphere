@@ -14,24 +14,152 @@ const STOPWORDS = new Set([
 ]);
 
 /**
+ * A targeted set of highly common German singular nouns ending in 'e', 'el', 'er'
+ * to prevent false lemmatization and false suffix-stripping.
+ */
+const IRREGULAR_E_NOUNS = new Set([
+  'käse', 'ende', 'auge', 'name', 'straße', 'schule', 'reise', 'frage', 'hilfe', 'woche', 
+  'küche', 'tasche', 'flasche', 'blume', 'lampe', 'hose', 'jacke', 'socke', 'tasse', 'suppe', 
+  'sonne', 'ecke', 'farbe', 'karte', 'größe', 'nähe', 'liebe', 'kasse', 'pflege', 'menge', 
+  'kirche', 'kneipe', 'adresse', 'seite', 'zitrone', 'banane', 'orange', 'birne', 'pflaume', 
+  'tomate', 'nase', 'zunge', 'zehe', 'wange', 'fliege', 'biene', 'katze', 'ziege', 'ente', 
+  'taube', 'schlange', 'spinne', 'pflanze', 'erde', 'ruhe', 'sorge', 'freude', 'miete', 
+  'treppe', 'decke', 'fliese', 'garage', 'gasse', 'brücke', 'haltestelle', 'fahrkarte', 
+  'speisekarte', 'kreditkarte', 'postkarte', 'brieftasche', 'badewanne', 'seife', 'zahnbürste', 
+  'zahnpasta', 'taschenlampe', 'gabel', 'zwiebel', 'nudel', 'kartoffel', 'regel', 'schachtel'
+]);
+
+/**
  * Strips common German plural suffixes to approximate the singular form.
  */
 function lemmatizeNoun(word) {
+  const wLower = word.toLowerCase();
+  
+  // If the word itself is already a known singular ending in 'e' or other, leave it untouched
+  if (IRREGULAR_E_NOUNS.has(wLower)) {
+    return word;
+  }
+  
   let w = word;
+  
+  // Handle feminine plurals and dative plurals ending in 'en' or 'n'
+  if (w.endsWith('en') && w.length > 4) {
+    const withoutN = w.slice(0, -1);
+    const withoutNLower = withoutN.toLowerCase();
+    // If the word without 'n' is a known 'e'-ending singular, return that
+    if (IRREGULAR_E_NOUNS.has(withoutNLower)) {
+      return withoutN;
+    }
+    // Otherwise, strip 'en'
+    return w.slice(0, -2);
+  }
+  
   if (w.endsWith('nen') && w.length > 5) return w.slice(0, -1);
   if (w.endsWith('se') && w.length > 4) return w.slice(0, -1); // Autos -> Auto
-  if (w.endsWith('en') && w.length > 4) return w.slice(0, -2);
+  
+  // Strip 'n' from plural words ending in 'rn' or 'ln' (e.g. Gabeln -> Gabel, Fehlern -> Fehler)
+  if ((w.endsWith('rn') || w.endsWith('ln')) && w.length > 4) {
+    return w.slice(0, -1);
+  }
+  
   if (w.endsWith('s') && w.length > 4 && !w.endsWith('us') && !w.endsWith('is')) return w.slice(0, -1);
-  // Safe e-stripping for regular plurals (Tische -> Tisch), avoiding words like 'Käse' or 'Ende' if possible (hard algorithmically).
-  if (w.endsWith('e') && w.length > 4 && !w.endsWith('ie') && !w.endsWith('ee')) return w.slice(0, -1); 
+  
+  // Safe e-stripping for regular plurals (Tische -> Tisch), avoiding words like 'Käse' or 'Ende' if possible.
+  if (w.endsWith('e') && w.length > 4 && !w.endsWith('ie') && !w.endsWith('ee')) {
+    if (IRREGULAR_E_NOUNS.has(wLower)) {
+      return w;
+    }
+    return w.slice(0, -1); 
+  }
   return w;
 }
+
+/**
+ * Common irregular and modal conjugated forms mapped directly to their infinitives.
+ */
+const IRREGULAR_VERB_MAP = {
+  // sein
+  'bin': 'sein', 'bist': 'sein', 'ist': 'sein', 'sind': 'sein', 'seid': 'sein',
+  'war': 'sein', 'warst': 'sein', 'waren': 'sein', 'wart': 'sein', 'gewesen': 'sein',
+  // haben
+  'habe': 'haben', 'hast': 'haben', 'hat': 'haben', 'haben': 'haben', 'habt': 'haben',
+  'hatte': 'haben', 'hattest': 'haben', 'hatten': 'haben', 'hattet': 'haben', 'gehabt': 'haben',
+  // werden
+  'werde': 'werden', 'wirst': 'werden', 'wird': 'werden', 'werden': 'werden', 'werdet': 'werden',
+  'wurde': 'werden', 'wurdest': 'werden', 'wurden': 'werden', 'wurdet': 'werden', 'geworden': 'werden',
+  // können
+  'kann': 'können', 'kannst': 'können', 'können': 'können', 'könnt': 'können',
+  'konnte': 'können', 'konntest': 'können', 'konnten': 'können', 'konntet': 'können', 'gekonnt': 'können',
+  // müssen
+  'muss': 'müssen', 'musst': 'müssen', 'müssen': 'müssen', 'müsst': 'müssen',
+  'musste': 'müssen', 'musstest': 'müssen', 'mussten': 'müssen', 'musstet': 'müssen', 'gemusst': 'müssen',
+  // wollen
+  'will': 'wollen', 'willst': 'wollen', 'wollte': 'wollen', 'wolltest': 'wollen', 'wollten': 'wollen', 'wolltet': 'wollen', 'gewollt': 'wollen',
+  // sollen
+  'soll': 'sollen', 'sollst': 'sollen', 'sollte': 'sollen', 'solltest': 'sollen', 'sollten': 'sollen', 'solltet': 'sollen', 'gesollt': 'sollen',
+  // dürfen
+  'darf': 'dürfen', 'darfst': 'dürfen', 'durfte': 'dürfen', 'durftest': 'dürfen', 'durften': 'dürfen', 'durftet': 'dürfen', 'gedurft': 'dürfen',
+  // mögen / möchten
+  'mag': 'mögen', 'magst': 'mögen', 'mögen': 'mögen', 'mögt': 'mögen',
+  'mochte': 'mögen', 'mochtest': 'mögen', 'mochten': 'mögen', 'mochtet': 'mögen', 'gemocht': 'mögen',
+  'möchte': 'möchten', 'möchtest': 'möchten', 'möchten': 'möchten', 'möchtet': 'möchten',
+  // wissen
+  'weiß': 'wissen', 'weißt': 'wissen', 'wissen': 'wissen', 'wisst': 'wissen',
+  'wusste': 'wissen', 'wusstest': 'wissen', 'wussten': 'wissen', 'wusstet': 'wissen', 'gewusst': 'wissen',
+  // geben
+  'gebe': 'geben', 'gibst': 'geben', 'gibt': 'geben', 'geben': 'geben', 'gebt': 'geben',
+  'gab': 'geben', 'gabst': 'geben', 'gaben': 'geben', 'gabt': 'geben', 'gegeben': 'geben',
+  // sehen
+  'sehe': 'sehen', 'siehst': 'sehen', 'sieht': 'sehen', 'sehen': 'sehen', 'seht': 'sehen',
+  'sah': 'sehen', 'sahst': 'sehen', 'sahen': 'sehen', 'saht': 'sehen', 'gesehen': 'sehen',
+  // lesen
+  'lese': 'lesen', 'liest': 'lesen', 'lesen': 'lesen', 'lest': 'lesen',
+  'las': 'lesen', 'lasst': 'lesen', 'lasen': 'lesen', 'last': 'lesen', 'gelesen': 'lesen',
+  // fahren
+  'fahre': 'fahren', 'fährst': 'fahren', 'fährt': 'fahren', 'fahren': 'fahren', 'fahrt': 'fahren',
+  'fuhr': 'fahren', 'fuhrst': 'fahren', 'fuhren': 'fahren', 'fuhrt': 'fahren', 'gefahren': 'fahren',
+  // laufen
+  'laufe': 'laufen', 'läufst': 'laufen', 'läuft': 'laufen', 'laufen': 'laufen', 'lauft': 'laufen',
+  'lief': 'laufen', 'liefst': 'laufen', 'liefen': 'laufen', 'lieft': 'laufen', 'gelaufen': 'laufen',
+  // sprechen
+  'spreche': 'sprechen', 'sprichst': 'sprechen', 'spricht': 'sprechen', 'sprechen': 'sprechen', 'sprecht': 'sprechen',
+  'sprach': 'sprechen', 'sprachst': 'sprechen', 'sprachen': 'sprechen', 'spracht': 'sprechen', 'gesprochen': 'sprechen',
+  // nehmen
+  'nehme': 'nehmen', 'nimmst': 'nehmen', 'nimmt': 'nehmen', 'nehmen': 'nehmen', 'nehmt': 'nehmen',
+  'nahm': 'nehmen', 'nahmst': 'nehmen', 'nahmen': 'nehmen', 'nahmt': 'nehmen', 'genommen': 'nehmen',
+  // essen
+  'esse': 'essen', 'isst': 'essen', 'essen': 'essen', 'esst': 'essen',
+  'aß': 'essen', 'aßen': 'essen', 'aßt': 'essen', 'gegessen': 'essen',
+  // gehen
+  'gehe': 'gehen', 'gehst': 'gehen', 'geht': 'gehen', 'gehen': 'gehen', 'geht': 'gehen',
+  'ging': 'gehen', 'gingst': 'gehen', 'gingen': 'gehen', 'gingt': 'gehen', 'gegangen': 'gehen',
+  // kommen
+  'komme': 'kommen', 'kommst': 'kommen', 'kommt': 'kommen', 'kommen': 'kommen', 'kommt': 'kommen',
+  'kam': 'kommen', 'kamst': 'kommen', 'kamen': 'kommen', 'kamt': 'kommen', 'gekommen': 'kommen',
+  // tun
+  'tue': 'tun', 'tust': 'tun', 'tut': 'tun', 'tun': 'tun', 'tut': 'tun',
+  'tat': 'tun', 'tatst': 'tun', 'taten': 'tun', 'tatet': 'tun', 'getan': 'tun',
+  // schreiben
+  'schreibe': 'schreiben', 'schreibst': 'schreiben', 'schreibt': 'schreiben', 'schreiben': 'schreiben', 'schreibt': 'schreiben',
+  'schrieb': 'schreiben', 'schriebst': 'schreiben', 'schrieben': 'schreiben', 'schriebt': 'schreiben', 'geschrieben': 'schreiben'
+};
 
 /**
  * Strips common German conjugation suffixes to approximate the infinitive.
  */
 export function lemmatizeVerb(word) {
   let w = word.toLowerCase();
+  
+  // Direct irregular conjugation lookup
+  if (IRREGULAR_VERB_MAP[w]) {
+    return IRREGULAR_VERB_MAP[w];
+  }
+  
+  // Weak Präteritum (past tense) and t-stem present ich-forms ending in 'te', 'test', 'ten', 'tet'
+  if (w.endsWith('test') && w.length > 5) return w.slice(0, -4) + 'en'; // spieltest -> spielen
+  if (w.endsWith('ten') && w.length > 5) return w.slice(0, -3) + 'en';  // spielten -> spielen
+  if (w.endsWith('tet') && w.length > 5) return w.slice(0, -3) + 'en';  // spieltet -> spielen
+  if (w.endsWith('te') && w.length > 4) return w.slice(0, -2) + 'en';   // spielte -> spielen, sagte -> sagen, arbeite -> arbeiten
   
   // Weak past participle: gespielt -> spielen
   if (w.startsWith('ge') && w.endsWith('t') && w.length > 5) {
@@ -225,7 +353,7 @@ export function koelnerPhonetik(word) {
         }
         break;
       case 'd': case 't':
-        if ('csz'.includes(next)) {
+        if (next && 'csz'.includes(next)) {
           code.push('8');
         } else {
           code.push('2');
@@ -239,15 +367,15 @@ export function koelnerPhonetik(word) {
         break;
       case 'c':
         if (i === 0) {
-          if ('ahklorux'.includes(next)) {
+          if (next && 'ahklorux'.includes(next)) {
             code.push('4');
           } else {
             code.push('8');
           }
         } else {
-          if ('szgkq'.includes(prev)) {
+          if (prev && 'szgkq'.includes(prev)) {
             code.push('8');
-          } else if ('ahkorux'.includes(next)) {
+          } else if (next && 'ahkorux'.includes(next)) {
             code.push('4');
           } else {
             code.push('8');
@@ -255,7 +383,7 @@ export function koelnerPhonetik(word) {
         }
         break;
       case 'x':
-        if ('ckq'.includes(prev)) {
+        if (prev && 'ckq'.includes(prev)) {
           code.push('8');
         } else {
           code.push('48');

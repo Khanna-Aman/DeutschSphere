@@ -121,37 +121,52 @@ def run_iterative_audit(level, batch_size=30, concurrency=4):
         print(f"[EXEC] Running command: {' '.join(cmd)}")
         start_time = time.time()
         
-        try:
-            # Run the command and print output live
-            process = subprocess.Popen(
-                cmd,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.STDOUT,
-                text=True,
-                bufsize=1,
-                cwd=PROJECT_ROOT,
-                encoding="utf-8"
-            )
-            
-            # Print output live to terminal
-            while True:
-                line = process.stdout.readline()
-                if not line and process.poll() is not None:
-                    break
-                if line:
-                    sys.stdout.write(line)
-                    sys.stdout.flush()
-                    
-            process.wait()
-            duration = time.time() - start_time
-            print(f"[EXEC] Completed in {duration:.2f} seconds with exit code: {process.returncode}")
-            
-            if process.returncode != 0:
-                print(f"[FATAL] Subprocess exited with error code {process.returncode}. Aborting iterative audit loop.")
-                sys.exit(process.returncode)
+        max_attempts = 3
+        success = False
+        
+        for attempt in range(1, max_attempts + 1):
+            print(f"[EXEC] Running command (attempt {attempt}/{max_attempts}): {' '.join(cmd)}")
+            start_time = time.time()
+            try:
+                # Run the command and print output live
+                process = subprocess.Popen(
+                    cmd,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.STDOUT,
+                    text=True,
+                    bufsize=1,
+                    cwd=PROJECT_ROOT,
+                    encoding="utf-8"
+                )
                 
-        except Exception as e:
-            print(f"[FATAL] Failed to spawn or execute verification: {e}")
+                # Print output live to terminal
+                while True:
+                    line = process.stdout.readline()
+                    if not line and process.poll() is not None:
+                        break
+                    if line:
+                        sys.stdout.write(line)
+                        sys.stdout.flush()
+                        
+                process.wait()
+                duration = time.time() - start_time
+                print(f"[EXEC] Attempt {attempt} completed in {duration:.2f} seconds with exit code: {process.returncode}")
+                
+                if process.returncode == 0:
+                    success = True
+                    break
+                else:
+                    print(f"[WARN] Verification run failed with exit code {process.returncode}.")
+            except Exception as e:
+                print(f"[WARN] Failed to spawn or execute verification: {e}")
+            
+            if attempt < max_attempts:
+                backoff_time = 60 * attempt  # Exponential backoff: 60s, 120s
+                print(f"[RETRY] Waiting {backoff_time} seconds before next attempt to allow GCP quota to reset...")
+                time.sleep(backoff_time)
+                
+        if not success:
+            print(f"[FATAL] Subprocess exited with errors after {max_attempts} attempts. Aborting iterative audit loop.")
             sys.exit(1)
             
         # 3. Parse corrections count from log
