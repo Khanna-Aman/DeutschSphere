@@ -1,10 +1,27 @@
 # 🇩🇪 DeutschSphere
 
-A zero-dependency, offline-first, ultra-premium German language learning SPA covering **3,921 vocabulary words** across CEFR levels A1, A2, and B1 — verified against the official Goethe-Institut curriculum.
+<div align="center">
 
-👉 **Live Web Application**: [https://khanna-aman.github.io/DeutschSphere/](https://khanna-aman.github.io/DeutschSphere/) — **Launch and learn instantly on desktop or mobile!**
+### 🚀 [CLICK HERE TO LAUNCH WEB APP](https://khanna-aman.github.io/DeutschSphere/)
 
-> Built with HTML, Tailwind CSS (CDN), and vanilla ES6 JavaScript modules. No Node.js, no bundlers, no frameworks. Runs completely client-side.
+[![Live Web App](https://img.shields.io/badge/Launch%20App-DeutschSphere-FF007F?style=for-the-badge&logo=google-translate&logoColor=white&labelColor=020617)](https://khanna-aman.github.io/DeutschSphere/)
+[![GitHub Pages Status](https://img.shields.io/badge/Deploy-GitHub%20Pages-00F0FF?style=for-the-badge&logo=github&logoColor=white&labelColor=020617)](https://khanna-aman.github.io/DeutschSphere/)
+
+*A zero-dependency, offline-first, ultra-premium German language learning SPA covering **3,921 words** across CEFR levels A1-B1.*
+
+</div>
+
+---
+
+> [!IMPORTANT]
+> ### 🛠️ Getting a 404 Error? How to Enable GitHub Pages in 15 Seconds:
+> 1. In your GitHub browser window, click on your repository's **Settings** tab (the gear icon on the top menu bar).
+> 2. On the left sidebar menu, look under *Code and automation* and click on **Pages**.
+> 3. Under **Build and deployment** -> **Branch**:
+>    - Change the first dropdown from `None` to **`main`**.
+>    - Keep the second dropdown as **`/ (root)`**.
+>    - Click the **Save** button.
+> 4. Refresh your live URL after 15-30 seconds. Your web application is now active and running!
 
 ---
 
