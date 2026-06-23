@@ -177,9 +177,9 @@
     <!-- Search Input -->
     <div class="px-6 py-4 border-b border-slate-800/50">
       <div class="relative">
-        <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400">
+        <button id="search-submit-btn" aria-label="Suche starten" class="z-10 absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 hover:text-indigo-400 transition-colors cursor-pointer" title="Suchen | Search">
           <i class="fa-solid fa-magnifying-glass text-sm"></i>
-        </span>
+        </button>
         <input type="text" id="search-input" class="w-full bg-slate-950/60 border border-slate-800 rounded-xl py-2.5 pl-10 pr-10 text-sm placeholder-slate-500 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-medium" placeholder="Suchen / Search (Wort / Bedeutung)..." autocomplete="off">
         <button id="search-clear" aria-label="Suche löschen" class="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-500 hover:text-slate-300 hidden">
           <i class="fa-solid fa-circle-xmark text-sm"></i>
@@ -1132,9 +1132,9 @@
         </div>
         <!-- Search Input -->
         <div class="relative w-full md:w-80">
-          <span class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-slate-400">
+          <button id="cheatcode-search-btn" aria-label="Abkürzung suchen" class="z-10 absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 hover:text-indigo-400 transition-colors cursor-pointer" title="Abkürzung suchen">
             <i class="fa-solid fa-magnifying-glass text-sm"></i>
-          </span>
+          </button>
           <input type="text" id="cheatcode-search" class="w-full bg-slate-900 border border-slate-800 rounded-xl py-2 pl-10 pr-4 text-sm placeholder-slate-500 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-medium" placeholder="Abkürzung suchen (z.B. -ung, vor-)..." autocomplete="off">
         </div>
       </div>

@@ -1343,7 +1343,7 @@ input:focus-visible {
 /* ============================================
    v6.0: Viewport Height Responsiveness & Spacing
    ============================================ */
-@media (max-height: 850px) {
+@media (max-height: 1024px) {
   #main-content {
     padding-top: 0.5rem !important;
     padding-bottom: 0.5rem !important;
@@ -1417,7 +1417,7 @@ input:focus-visible {
   }
 }
 
-@media (max-height: 720px) {
+@media (max-height: 800px) {
   #main-content {
     padding-top: 0.25rem !important;
     padding-bottom: 0.25rem !important;

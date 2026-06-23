@@ -53,11 +53,6 @@ export function handleRoutingCore() {
   if (elements.adventureView) elements.adventureView.classList.add('hidden');
   if (elements.weaverView) elements.weaverView.classList.add('hidden');
   if (elements.immersionView) elements.immersionView.classList.add('hidden');
-  
-  // Disable search bar by default for non-flashcard views
-  elements.searchInput.disabled = true;
-  elements.searchInput.parentElement.classList.add('opacity-40');
-  
   // Disable weaver state tracking
   state.weaver.active = false;
 
@@ -110,9 +105,6 @@ export function handleRoutingCore() {
     elements.flashcardsView.classList.remove('hidden');
     elements.navFlashcards.className = "w-full px-3 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2.5 text-white bg-slate-800/50 border border-slate-700/50";
     document.title = `German ${levelUpper} Flashcards`;
-    
-    elements.searchInput.disabled = false;
-    elements.searchInput.parentElement.classList.remove('opacity-40');
     
     renderCard();
   }

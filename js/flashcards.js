@@ -841,14 +841,21 @@ export function updateReadModeUI() {
   if (elements.readModeBtn) {
     const icon = elements.readModeBtn.querySelector('.toggle-icon');
     if (icon) {
+      const wrapper = icon.parentElement;
       if (state.isFastRead) {
         icon.className = "toggle-icon fa-solid fa-toggle-on text-xs text-indigo-400";
         elements.readModeBtn.classList.add('border-indigo-500/30', 'bg-indigo-950/20');
         elements.readModeBtn.classList.remove('border-slate-800', 'bg-slate-900/80');
+        if (wrapper) {
+          wrapper.className = "read-mode-toggle-wrapper flex items-center justify-center w-8 h-8 rounded-lg text-sm font-medium transition-all bg-indigo-950/20 border border-indigo-500/30 text-indigo-400";
+        }
       } else {
         icon.className = "toggle-icon fa-solid fa-toggle-off text-xs text-slate-500";
         elements.readModeBtn.classList.add('border-slate-800', 'bg-slate-900/80');
         elements.readModeBtn.classList.remove('border-indigo-500/30', 'bg-indigo-950/20');
+        if (wrapper) {
+          wrapper.className = "read-mode-toggle-wrapper flex items-center justify-center w-8 h-8 rounded-lg text-sm font-medium transition-all bg-slate-900/80 border border-slate-800 text-slate-500 group-hover:border-indigo-500/30 group-hover:bg-indigo-950/20";
+        }
       }
     }
     if (elements.readModeText) {
@@ -899,14 +906,21 @@ export function updateAutoplayUI() {
   if (elements.autoplayBtn) {
     const icon = elements.autoplayBtn.querySelector('.toggle-icon');
     if (icon) {
+      const wrapper = icon.parentElement;
       if (state.isAutoPlaySpeech) {
         icon.className = "toggle-icon fa-solid fa-toggle-on text-xs text-indigo-400";
         elements.autoplayBtn.classList.add('border-indigo-500/30', 'bg-indigo-950/20');
         elements.autoplayBtn.classList.remove('border-slate-800', 'bg-slate-900/80');
+        if (wrapper) {
+          wrapper.className = "autoplay-toggle-wrapper flex items-center justify-center w-8 h-8 rounded-lg text-sm font-medium transition-all bg-indigo-950/20 border border-indigo-500/30 text-indigo-400";
+        }
       } else {
         icon.className = "toggle-icon fa-solid fa-toggle-off text-xs text-slate-500";
         elements.autoplayBtn.classList.add('border-slate-800', 'bg-slate-900/80');
         elements.autoplayBtn.classList.remove('border-indigo-500/30', 'bg-indigo-950/20');
+        if (wrapper) {
+          wrapper.className = "autoplay-toggle-wrapper flex items-center justify-center w-8 h-8 rounded-lg text-sm font-medium transition-all bg-slate-900/80 border border-slate-800 text-slate-500 group-hover:border-indigo-500/30 group-hover:bg-indigo-950/20";
+        }
       }
     }
     if (elements.autoplayText) {

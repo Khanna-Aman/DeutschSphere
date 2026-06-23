@@ -1,6 +1,6 @@
 // js/events.js — Handlers for hotkeys, swipes, settings sliders, help modals, and custom dialogs
 import { state, elements, safeSetItem, safeJsonParse, resetActiveLevelProgress } from './state.js';
-import { handleRouting, closeMobileSidebar, openMobileSidebar } from './router.js';
+import { handleRouting, closeMobileSidebar, openMobileSidebar, cheatcodeState } from './router.js';
 import { renderSidebarCategories, filterDeck } from './search.js';
 import {
   speakWord,
@@ -275,10 +275,38 @@ export function setupEventListeners() {
         elements.searchClear.classList.add('hidden');
       }
       
+      // Auto-route to home (flashcards) if not there, so the user can see the filtered deck
+      if (window.location.hash !== '#/' && window.location.hash !== '') {
+        window.location.hash = '#/';
+      }
+      
       clearTimeout(searchTimeoutId);
       searchTimeoutId = setTimeout(() => {
         filterDeck();
       }, 150);
+    });
+
+    // Handle Enter key for instantaneous search submission and mobile/desktop keyboard dismissals
+    elements.searchInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        state.searchQuery = elements.searchInput.value.trim();
+        if (state.searchQuery) {
+          if (elements.searchClear) elements.searchClear.classList.remove('hidden');
+        } else {
+          if (elements.searchClear) elements.searchClear.classList.add('hidden');
+        }
+        
+        // Auto-route to home (flashcards) if not there, so the user can see the filtered deck
+        if (window.location.hash !== '#/' && window.location.hash !== '') {
+          window.location.hash = '#/';
+        }
+        
+        clearTimeout(searchTimeoutId);
+        filterDeck();
+        elements.searchInput.blur();
+        closeMobileSidebar();
+      }
     });
   }
 
@@ -289,6 +317,55 @@ export function setupEventListeners() {
       elements.searchClear.classList.add('hidden');
       filterDeck();
       elements.searchInput.focus();
+    });
+  }
+
+  // Active Sidebar Search Submit Button click behavior
+  const searchSubmitBtn = document.getElementById('search-submit-btn');
+  if (searchSubmitBtn) {
+    searchSubmitBtn.addEventListener('click', () => {
+      const input = elements.searchInput;
+      if (input) {
+        state.searchQuery = input.value.trim();
+        if (state.searchQuery) {
+          if (elements.searchClear) elements.searchClear.classList.remove('hidden');
+        } else {
+          if (elements.searchClear) elements.searchClear.classList.add('hidden');
+        }
+        // Auto-route to home (flashcards) if not there, so the user can see the filtered deck
+        if (window.location.hash !== '#/' && window.location.hash !== '') {
+          window.location.hash = '#/';
+        }
+        clearTimeout(searchTimeoutId);
+        filterDeck();
+        input.blur();
+        closeMobileSidebar();
+      }
+    });
+  }
+
+  // Active Cheatcodes Search Icon Button click behavior
+  const cheatcodeSearchBtn = document.getElementById('cheatcode-search-btn');
+  if (cheatcodeSearchBtn) {
+    cheatcodeSearchBtn.addEventListener('click', () => {
+      const input = elements.cheatcodeSearch;
+      if (input) {
+        cheatcodeState.searchQuery = input.value.trim();
+        window.dispatchEvent(new CustomEvent('cheatcode:search-input', { detail: { query: cheatcodeState.searchQuery } }));
+        input.blur();
+      }
+    });
+  }
+
+  // Handle Enter key for cheatcode search input to dismiss keyboard
+  if (elements.cheatcodeSearch) {
+    elements.cheatcodeSearch.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        cheatcodeState.searchQuery = elements.cheatcodeSearch.value.trim();
+        window.dispatchEvent(new CustomEvent('cheatcode:search-input', { detail: { query: cheatcodeState.searchQuery } }));
+        elements.cheatcodeSearch.blur();
+      }
     });
   }
 
@@ -311,8 +388,14 @@ export function setupEventListeners() {
         if (elements.searchClear) {
           elements.searchClear.classList.remove('hidden');
         }
+        // Auto-route to home (flashcards) if not there, so the user can see the filtered deck
+        if (window.location.hash !== '#/' && window.location.hash !== '') {
+          window.location.hash = '#/';
+        }
+        clearTimeout(searchTimeoutId);
         filterDeck();
-        input.focus();
+        input.blur();
+        closeMobileSidebar();
       }
     });
   });
