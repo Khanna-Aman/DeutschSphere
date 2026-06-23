@@ -449,7 +449,7 @@ function renderFSRSMetricsPanel(retentionRate, weakWords) {
       `;
     }).join('');
   } else {
-    weakWordsHTML = '<p class="text-[10px] text-slate-500 italic py-2">Keine schwachen Vokabeln erkannt. Weiter so!</p>';
+    weakWordsHTML = '<p class="text-[10px] text-slate-500 italic py-2">No weak vocabulary detected. Keep it up!</p>';
   }
   
   // Build session history display
@@ -464,12 +464,12 @@ function renderFSRSMetricsPanel(retentionRate, weakWords) {
           <span class="text-slate-400">${dateStr}</span>
           <span class="text-slate-500">${durationMin}min</span>
           <span class="font-mono font-bold ${s.accuracy >= 80 ? 'text-emerald-400' : 'text-amber-400'}">${s.accuracy}%</span>
-          <span class="text-slate-500">${s.cardsReviewed} Karten</span>
+          <span class="text-slate-500">${s.cardsReviewed} cards</span>
         </div>
       `;
     }).join('');
   } else {
-    sessionHTML = '<p class="text-[10px] text-slate-500 italic py-2">Noch keine Sitzungsdaten vorhanden.</p>';
+    sessionHTML = '<p class="text-[10px] text-slate-500 italic py-2">No session data available yet.</p>';
   }
   
   container.innerHTML = `
@@ -484,17 +484,17 @@ function renderFSRSMetricsPanel(retentionRate, weakWords) {
           </div>
           <div class="flex flex-col">
             <span class="text-2xl font-black font-display text-white">${streakInfo.current}</span>
-            <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Tage Serie</span>
+            <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Day Streak</span>
           </div>
         </div>
         <div class="flex items-center justify-between text-[10px] mt-2">
-          <span class="text-slate-500">Längste: <span class="font-bold text-slate-300">${streakInfo.longest} Tage</span></span>
+          <span class="text-slate-500">Longest: <span class="font-bold text-slate-300">${streakInfo.longest} days</span></span>
           <span class="text-slate-500">${streakInfo.isActiveToday
-            ? '<span class="text-emerald-400 font-bold"><i class="fa-solid fa-circle-check text-[8px]"></i> Heute aktiv</span>'
-            : '<span class="text-amber-400 font-bold"><i class="fa-solid fa-triangle-exclamation text-[8px]"></i> Heute nicht geübt</span>'
+            ? '<span class="text-emerald-400 font-bold"><i class="fa-solid fa-circle-check text-[8px]"></i> Active today</span>'
+            : '<span class="text-amber-400 font-bold"><i class="fa-solid fa-triangle-exclamation text-[8px]"></i> Not practiced today</span>'
           }</span>
         </div>
-        ${streakInfo.freezesAvailable > 0 ? `<div class="text-[9px] text-cyan-400 mt-1"><i class="fa-solid fa-snowflake text-[8px]"></i> ${streakInfo.freezesAvailable} Streak-Freeze verfügbar</div>` : ''}
+        ${streakInfo.freezesAvailable > 0 ? `<div class="text-[9px] text-cyan-400 mt-1"><i class="fa-solid fa-snowflake text-[8px]"></i> ${streakInfo.freezesAvailable} Streak Freeze available</div>` : ''}
       </div>
       
       <!-- Retention Rate Card -->
@@ -505,13 +505,13 @@ function renderFSRSMetricsPanel(retentionRate, weakWords) {
           </div>
           <div class="flex flex-col">
             <span class="text-2xl font-black font-display ${retentionRate >= 85 ? 'text-emerald-400' : (retentionRate >= 70 ? 'text-amber-400' : 'text-rose-400')}">${retentionRate}%</span>
-            <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Behaltensrate</span>
+            <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Retention Rate</span>
           </div>
         </div>
         <div class="w-full bg-slate-900/80 rounded-full h-2 overflow-hidden border border-slate-800/40 mt-2">
           <div class="${retentionRate >= 85 ? 'bg-emerald-500' : (retentionRate >= 70 ? 'bg-amber-500' : 'bg-rose-500')} h-full rounded-full transition-all duration-1000 ease-out" style="width: ${retentionRate}%"></div>
         </div>
-        <p class="text-[10px] text-slate-500 mt-2">${retentionRate >= 85 ? 'Ausgezeichnet! Ihr Gedächtnis arbeitet optimal.' : (retentionRate >= 70 ? 'Gute Rate. Regelmäßiges Üben verbessert sie weiter.' : 'Mehr Wiederholungen empfohlen.')}</p>
+        <p class="text-[10px] text-slate-500 mt-2">${retentionRate >= 85 ? 'Excellent! Your memory retention is optimal.' : (retentionRate >= 70 ? 'Good rate. Regular practice will improve it further.' : 'More reviews recommended.')}</p>
       </div>
       
       <!-- Weak Words Card -->
@@ -520,7 +520,7 @@ function renderFSRSMetricsPanel(retentionRate, weakWords) {
           <div class="w-8 h-8 rounded-lg bg-rose-500/10 border border-rose-500/25 flex items-center justify-center text-rose-400 text-sm">
             <i class="fa-solid fa-triangle-exclamation"></i>
           </div>
-          <span class="text-xs font-bold text-white">Schwache Vokabeln</span>
+          <span class="text-xs font-bold text-white">Weak Words</span>
           <span class="text-[9px] bg-rose-950/40 text-rose-400 border border-rose-500/20 px-1.5 rounded-full font-mono font-bold">${weakWords.length}</span>
         </div>
         <div class="max-h-32 overflow-y-auto custom-scrollbar">
@@ -536,10 +536,10 @@ function renderFSRSMetricsPanel(retentionRate, weakWords) {
         <div class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/25 flex items-center justify-center text-indigo-400 text-sm">
           <i class="fa-solid fa-clock-rotate-left"></i>
         </div>
-        <span class="text-xs font-bold text-white">Letzte Sitzungen</span>
+        <span class="text-xs font-bold text-white">Recent Sessions</span>
       </div>
       <div class="flex items-center justify-between text-[9px] text-slate-500 font-bold uppercase tracking-wider border-b border-slate-800/40 pb-1 mb-1">
-        <span>Datum</span><span>Dauer</span><span>Genauigkeit</span><span>Karten</span>
+        <span>Date</span><span>Duration</span><span>Accuracy</span><span>Cards</span>
       </div>
       ${sessionHTML}
     </div>
@@ -618,14 +618,14 @@ export function importBackup(e) {
   
   elements.backupImportFeedback.classList.remove('hidden', 'text-rose-400', 'text-emerald-400');
   elements.backupImportFeedback.classList.add('text-slate-400');
-  elements.backupImportFeedback.textContent = "Backup-Datei wird analysiert...";
+  elements.backupImportFeedback.textContent = "Analyzing backup file...";
   
   const reader = new FileReader();
   reader.onload = async function(evt) {
     try {
       const backup = JSON.parse(evt.target.result);
       if (!backup || typeof backup !== 'object' || !backup.data) {
-        throw new Error("Dateiformat ist ungültig. Es muss eine gültige .json Backup-Datei sein.");
+        throw new Error("Invalid file format. It must be a valid .json backup file.");
       }
       
       const data = backup.data;
@@ -653,7 +653,7 @@ export function importBackup(e) {
       if (data.unlocked_achievements) safeSetItem('unlocked_achievements', JSON.stringify(data.unlocked_achievements));
       
       elements.backupImportFeedback.className = "text-[10px] text-center font-bold text-emerald-400 mt-3";
-      elements.backupImportFeedback.textContent = "✓ Backup geladen! Das Dashboard wird aktualisiert...";
+      elements.backupImportFeedback.textContent = "✓ Backup loaded! Refreshing dashboard...";
       
       setTimeout(() => {
         window.location.reload();
@@ -662,13 +662,13 @@ export function importBackup(e) {
     } catch (err) {
       console.error("Backup restore failed:", err);
       elements.backupImportFeedback.className = "text-[10px] text-center font-bold text-rose-400 mt-3";
-      elements.backupImportFeedback.textContent = "✕ Import fehlgeschlagen: " + err.message;
+      elements.backupImportFeedback.textContent = "✕ Import failed: " + err.message;
     }
   };
   
   reader.onerror = function() {
     elements.backupImportFeedback.className = "text-[10px] text-center font-bold text-rose-400 mt-3";
-    elements.backupImportFeedback.textContent = "✕ Fehler beim Lesen der Backup-Datei.";
+    elements.backupImportFeedback.textContent = "✕ Error reading the backup file.";
   };
   
   reader.readAsText(file);
@@ -684,7 +684,7 @@ export async function copySyncKey() {
     await navigator.clipboard.writeText(key);
     
     const originalText = btn.innerHTML;
-    btn.innerHTML = `<i class="fa-solid fa-check text-sm text-emerald-400"></i> <span class="text-emerald-400">Kopiert! ✓</span>`;
+    btn.innerHTML = `<i class="fa-solid fa-check text-sm text-emerald-400"></i> <span class="text-emerald-400">Copied! ✓</span>`;
     
     // Play a quick chime/haptic or trigger particle burst
     if (typeof window.triggerParticleBurst === 'function') {
@@ -697,7 +697,7 @@ export async function copySyncKey() {
     }, 2000);
   } catch (err) {
     console.error("Failed to generate or copy sync key:", err);
-    alert("Kopieren fehlgeschlagen: " + err.message);
+    alert("Copy failed: " + err.message);
   }
 }
 
@@ -708,7 +708,7 @@ export async function restoreSyncKey() {
   
   const key = input.value.trim();
   if (!key) {
-    alert("Bitte fügen Sie einen gültigen Sync-Schlüssel ein.");
+    alert("Please paste a valid Sync Key.");
     return;
   }
   
@@ -716,14 +716,14 @@ export async function restoreSyncKey() {
   if (feedback) {
     feedback.classList.remove('hidden', 'text-rose-400', 'text-emerald-400');
     feedback.classList.add('text-slate-400');
-    feedback.textContent = "Sync-Schlüssel wird validiert...";
+    feedback.textContent = "Validating Sync Key...";
   }
   
   try {
     const decodedStr = decodeURIComponent(escape(atob(key)));
     const payload = JSON.parse(decodedStr);
     if (!payload || typeof payload !== 'object' || !payload.data) {
-      throw new Error("Dateiformat ist ungültig. Es muss ein gültiger Sync-Schlüssel sein.");
+      throw new Error("Invalid format. It must be a valid Sync Key.");
     }
     
     const imp = payload.data;
@@ -768,7 +768,7 @@ export async function restoreSyncKey() {
       if (success) {
         if (feedback) {
           feedback.className = "text-[10px] text-center font-bold text-emerald-400 mt-3";
-          feedback.textContent = "✓ Bereits synchronisiert! Keine Änderungen erforderlich.";
+          feedback.textContent = "✓ Already synchronized! No changes required.";
         }
       }
       return;
@@ -789,51 +789,51 @@ export async function restoreSyncKey() {
             <i class="fa-solid fa-code-compare animate-pulse"></i>
           </div>
           <div>
-            <h3 class="font-display font-bold text-lg text-white">Fortschritts-Konflikt erkannt</h3>
+            <h3 class="font-display font-bold text-lg text-white">Sync Conflict Detected</h3>
             <p class="text-[10px] text-slate-500 font-medium uppercase tracking-widest">Compare & Merge Panel</p>
           </div>
         </div>
 
         <p class="text-xs text-slate-300 leading-relaxed font-medium">
-          Der importierte Synchronisationsschlüssel weicht von Ihrem lokalen Offline-Profil ab. Bitte vergleichen Sie die Daten und wählen Sie, wie die Fortschritte zusammengeführt werden sollen.
+          The imported synchronization key differs from your local offline profile. Please compare the data and select how you would like to resolve the conflict.
         </p>
 
         <!-- Compare Matrix Columns -->
         <div class="grid grid-cols-3 gap-3 border-b border-slate-900 pb-5">
           <!-- Metric Label -->
           <div class="col-span-1 flex flex-col justify-center space-y-4">
-            <span class="text-[10px] font-black uppercase tracking-wider text-slate-500">Kriterium | Metric</span>
-            <span class="text-xs font-bold text-slate-300 border-l-2 border-indigo-500/30 pl-2">Gelernte Karten</span>
-            <span class="text-xs font-bold text-slate-300 border-l-2 border-indigo-500/30 pl-2">Eigene Karten</span>
-            <span class="text-xs font-bold text-slate-300 border-l-2 border-indigo-500/30 pl-2">FSRS-5 Karten</span>
-            <span class="text-xs font-bold text-slate-300 border-l-2 border-indigo-500/30 pl-2">Aktuelle Strähne</span>
-            <span class="text-xs font-bold text-slate-300 border-l-2 border-indigo-500/30 pl-2">Beste Strähne</span>
+            <span class="text-[10px] font-black uppercase tracking-wider text-slate-500">Metric</span>
+            <span class="text-xs font-bold text-slate-300 border-l-2 border-indigo-500/30 pl-2">Learned Cards</span>
+            <span class="text-xs font-bold text-slate-300 border-l-2 border-indigo-500/30 pl-2">Custom Cards</span>
+            <span class="text-xs font-bold text-slate-300 border-l-2 border-indigo-500/30 pl-2">FSRS-5 Cards</span>
+            <span class="text-xs font-bold text-slate-300 border-l-2 border-indigo-500/30 pl-2">Current Streak</span>
+            <span class="text-xs font-bold text-slate-300 border-l-2 border-indigo-500/30 pl-2">Best Streak</span>
           </div>
 
           <!-- Local Profile Column -->
           <div class="col-span-1 bg-slate-950/40 border border-slate-900/80 rounded-xl p-3 flex flex-col space-y-4 text-center">
-            <span class="text-[10px] font-black uppercase tracking-wider text-indigo-400">Lokales Profil</span>
+            <span class="text-[10px] font-black uppercase tracking-wider text-indigo-400">Local Profile</span>
             <span class="text-xs font-black text-slate-100">${localLearnedCount}</span>
             <span class="text-xs font-black text-slate-100">${localCustomCount}</span>
             <span class="text-xs font-black text-slate-100">${localSrsCount}</span>
-            <span class="text-xs font-black text-slate-100">${localStreak} Tage</span>
-            <span class="text-xs font-black text-slate-100">${localBestStreak} Tage</span>
+            <span class="text-xs font-black text-slate-100">${localStreak} days</span>
+            <span class="text-xs font-black text-slate-100">${localBestStreak} days</span>
           </div>
 
           <!-- Imported Key Column -->
           <div class="col-span-1 bg-indigo-950/10 border border-indigo-900/30 rounded-xl p-3 flex flex-col space-y-4 text-center">
-            <span class="text-[10px] font-black uppercase tracking-wider text-pink-400">Importiert (Key)</span>
+            <span class="text-[10px] font-black uppercase tracking-wider text-pink-400">Imported (Key)</span>
             <span class="text-xs font-black text-slate-100">${impLearnedCount}</span>
             <span class="text-xs font-black text-slate-100">${impCustomCount}</span>
             <span class="text-xs font-black text-slate-100">${impSrsCount}</span>
-            <span class="text-xs font-black text-slate-100">${impStreak} Tage</span>
-            <span class="text-xs font-black text-slate-100">${impBestStreak} Tage</span>
+            <span class="text-xs font-black text-slate-100">${impStreak} days</span>
+            <span class="text-xs font-black text-slate-100">${impBestStreak} days</span>
           </div>
         </div>
 
         <!-- Action Columns & Explanations -->
         <div class="space-y-3">
-          <h4 class="text-[10px] font-extrabold uppercase tracking-widest text-slate-400">Auflösungs-Strategie wählen | Resolve Method</h4>
+          <h4 class="text-[10px] font-extrabold uppercase tracking-widest text-slate-400">Select Resolution Strategy</h4>
           
           <!-- Combine Option -->
           <button id="resolve-merge-btn" class="w-full text-left p-3.5 bg-slate-950 hover:bg-slate-900 border border-emerald-500/25 hover:border-emerald-500 rounded-2xl flex gap-3 items-start transition-all group active:scale-[0.99]">
@@ -842,11 +842,11 @@ export async function restoreSyncKey() {
             </div>
             <div>
               <div class="flex items-center gap-2">
-                <span class="text-xs font-black text-slate-100 font-display">Intelligent Zusammenführen (Merge)</span>
-                <span class="px-1.5 py-0.5 bg-emerald-500/15 text-emerald-400 text-[8px] font-black uppercase tracking-widest rounded-md">Empfohlen</span>
+                <span class="text-xs font-black text-slate-100 font-display">Intelligent Merge</span>
+                <span class="px-1.5 py-0.5 bg-emerald-500/15 text-emerald-400 text-[8px] font-black uppercase tracking-widest rounded-md">Recommended</span>
               </div>
               <p class="text-[10px] text-slate-400 leading-relaxed mt-0.5 font-medium">
-                Kombiniert gelernte, eigene und FSRS Karten beider Profile ohne Duplikate. Behält die jeweils längere Lernsträhne. Absolut sichere Fortschritts-Erhaltung.
+                Combines learned, custom, and FSRS cards of both profiles without duplicates. Retains the longer daily learning streak. Safe and seamless progress preservation.
               </p>
             </div>
           </button>
@@ -857,9 +857,9 @@ export async function restoreSyncKey() {
               <i class="fa-solid fa-cloud-arrow-up"></i>
             </div>
             <div>
-              <span class="text-xs font-black text-slate-100 font-display">Lokale Daten überschreiben</span>
+              <span class="text-xs font-black text-slate-100 font-display">Overwrite Local Data</span>
               <p class="text-[10px] text-slate-400 leading-relaxed mt-0.5 font-medium">
-                Ersetzt Ihr lokales Offline-Profil vollständig mit den importierten Schlüssel-Daten. Aktuelle lokale Fortschritte gehen verloren.
+                Replaces your local offline profile completely with the imported sync key data. Your current local progress will be lost.
               </p>
             </div>
           </button>
@@ -870,9 +870,9 @@ export async function restoreSyncKey() {
               <i class="fa-solid fa-xmark"></i>
             </div>
             <div>
-              <span class="text-xs font-black text-slate-100 font-display">Abbrechen</span>
+              <span class="text-xs font-black text-slate-100 font-display">Cancel</span>
               <p class="text-[10px] text-slate-400 leading-relaxed mt-0.5 font-medium">
-                Bricht den Importvorgang vollständig ab. Ihre lokalen Offline-Fortschritte bleiben unberührt.
+                Cancels the import process. Your current local offline progress remains untouched.
               </p>
             </div>
           </button>
@@ -896,7 +896,7 @@ export async function restoreSyncKey() {
       modalDiv.remove();
       if (feedback) {
         feedback.className = "text-[10px] text-center font-bold text-emerald-400 mt-3";
-        feedback.textContent = "✓ Synchronisiert! Überschreiben erfolgreich...";
+        feedback.textContent = "✓ Synchronized! Overwrite successful...";
       }
       await state.restoreFromSyncKey(key);
       setTimeout(() => {
@@ -908,7 +908,7 @@ export async function restoreSyncKey() {
       modalDiv.remove();
       if (feedback) {
         feedback.className = "text-[10px] text-center font-bold text-emerald-400 mt-3";
-        feedback.textContent = "✓ Profile werden zusammengeführt...";
+        feedback.textContent = "✓ Merging profiles...";
       }
 
       try {
@@ -1004,7 +1004,7 @@ export async function restoreSyncKey() {
         localStorage.setItem('session_history', JSON.stringify(finalSessionHistory));
 
         if (feedback) {
-          feedback.textContent = "✓ Zusammenführung erfolgreich! Das Dashboard wird neu geladen...";
+          feedback.textContent = "✓ Merge successful! Reloading dashboard...";
         }
 
         setTimeout(() => {
@@ -1013,7 +1013,7 @@ export async function restoreSyncKey() {
 
       } catch (err) {
         console.error("Merge and combine failed:", err);
-        alert("Fehler beim Zusammenführen der Profile: " + err.message);
+        alert("Error merging profiles: " + err.message);
       }
     });
 
@@ -1021,9 +1021,9 @@ export async function restoreSyncKey() {
     console.error("Sync key restore failed:", err);
     if (feedback) {
       feedback.className = "text-[10px] text-center font-bold text-rose-400 mt-3";
-      feedback.textContent = "✕ Fehler bei Wiederherstellung: " + err.message;
+      feedback.textContent = "✕ Recovery failed: " + err.message;
     } else {
-      alert("Fehler bei Wiederherstellung: " + err.message);
+      alert("Recovery failed: " + err.message);
     }
   }
 }
