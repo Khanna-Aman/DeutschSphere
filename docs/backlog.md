@@ -170,7 +170,7 @@ Persisted via `localStorage.current_theme`. Each theme fully overrides: body bac
 - [ ] **More Adventure Scenarios**: Add 3-5 additional branching dialogues per level
 - [x] **Enhanced FSRS Timeline**: FSRS-5 retention analytics, 7-day review forecast in stats view
 - [x] **v6.0 Hyper-Premium Upgrades**: Active development sprint for premium student suite:
-  - [x] Establishment of V6.0 Core Directives & Rules (`GEMINI.md`)
+  - [x] Establishment of V6.0 Core Directives & Rules (AI Orchestration Directives)
   - [x] Service Worker module precaching of ESM modules (`sw.js` precaches `js/nlp.js`, `js/immersion.js`, `idb-keyval.js`)
   - [x] Kölner Phonetik algorithms & inline suffix parser rules (`js/nlp.js`)
   - [x] Custom settings toggles in "Einstellungen" dropdown (SFX volume slider, Synthesized vs. Acoustic chimes, Toggle particle bursts)

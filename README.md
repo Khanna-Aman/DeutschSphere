@@ -2,7 +2,9 @@
 
 A zero-dependency, offline-first, ultra-premium German language learning SPA covering **3,921 vocabulary words** across CEFR levels A1, A2, and B1 — verified against the official Goethe-Institut curriculum.
 
-> Built with HTML, Tailwind CSS (CDN), and vanilla ES6 JavaScript modules. No Node.js, no bundlers, no frameworks.
+👉 **Live Web Application**: [https://khanna-aman.github.io/DeutschSphere/](https://khanna-aman.github.io/DeutschSphere/) — **Launch and learn instantly on desktop or mobile!**
+
+> Built with HTML, Tailwind CSS (CDN), and vanilla ES6 JavaScript modules. No Node.js, no bundlers, no frameworks. Runs completely client-side.
 
 ---
 
@@ -44,26 +46,36 @@ Each word includes: German headword, English translation, gender, plural form, w
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start & Deployment
 
-### Option 1: Open directly
-```
-# Just open index.html in any modern browser
-open index.html
-```
+### Option 1: Instant Access (Recommended)
+You do not need to install or compile anything! Run the application directly in your web browser:
+👉 **[Launch DeutschSphere Web App](https://khanna-aman.github.io/DeutschSphere/)**
 
-### Option 2: Local HTTP server (recommended for ES6 modules)
+---
+
+### Option 2: One-Click Self-Hosting (GitHub Pages)
+You can deploy your own private copy of DeutschSphere for free in under 60 seconds:
+1. **Fork** this repository to your GitHub account.
+2. Go to your fork's **Settings** tab.
+3. Click **Pages** in the left sidebar.
+4. Under *Build and deployment*, set the Source to **Deploy from a branch**.
+5. Select the **`main`** branch and the **`/ (root)`** folder, then click **Save**.
+6. Refresh the page after 30 seconds to get your public live URL!
+
+---
+
+### Option 3: Local Developer Server (Python)
+Because the app uses ES6 JavaScript modules, a local HTTP server is required to satisfy local browser security policies:
 ```bash
-# Python
+# Start a local HTTP server
 python -m http.server 8080
 
-# Then visit http://localhost:8080
+# Open your browser and navigate to:
+# http://localhost:8080
 ```
 
-### Option 3: GitHub Pages
-Deploy to any GitHub Pages repository — the app is a flat SPA with no build step.
-
-> **Note**: The app requires a modern browser with ES6 module support (Chrome 61+, Firefox 60+, Safari 11+, Edge 16+).
+> **Note**: The app requires a modern web browser with ES6 module support (Chrome 61+, Firefox 60+, Safari 11+, Edge 16+) and IndexedDB for progress storage.
 
 ---
 
@@ -77,7 +89,7 @@ A1-B1_German/
 ├── app.js                  # Main orchestrator: routing, themes, View Transitions, lifecycle
 │
 ├── js/                     # ES6 modules
-│   ├── state.js            # Central state, DOM cache, IndexedDB persistence layer
+│   ├── state.js            # Central state, DOM cache, IndexedDB persistence safety layer
 │   ├── idb-keyval.js       # Zero-dependency IndexedDB wrapper for massive payload storage
 │   ├── fsrs.js             # FSRS-5 algorithm (pure client-side, zero deps)
 │   ├── nlp.js              # Pure-JS Offline NLP Engine (Lemmatization, Gender Prediction)
@@ -88,16 +100,20 @@ A1-B1_German/
 │   ├── weaver.js           # Grammar Weaver sentence builder
 │   ├── immersion.js        # NLP Lab view controller
 │   ├── stats.js            # Statistics & achievements
+│   ├── router.js           # SPA client-side routing, view transitions, and route guards
+│   ├── events.js           # Keyboard shortcuts, click handlers, and global event listeners
+│   ├── search.js           # Vocabulary search indexing and category filters
+│   ├── pomodoro.js         # Pomodoro focus-booster timers, soundscapes, and multipliers
 │   └── cheatcodes_db.js    # Grammar reference database + sanitizeGermanEncoding()
 │
 ├── a1/                     # Level A1 (640 words + SVGs + adventure)
 ├── a2/                     # Level A2 (1,142 words + SVGs + adventure)
 ├── b1/                     # Level B1 (2,139 words + SVGs + adventure)
 │
+├── icons/                  # PWA application icons (192px, 512px)
 ├── sw.js                   # Service Worker (4-strategy offline caching)
 ├── manifest.json           # PWA manifest with app icons
-├── GEMINI.md               # AI orchestration directives & coding rules
-├── scripts/                # Python automation & verification (16 scripts)
+├── scripts/                # Python automation & verification (32 scripts)
 └── docs/                   # Feature backlog & plans
 ```
 
@@ -176,4 +192,4 @@ This project is open-source and created for the language learning community.
 
 ## 🤝 Contributing
 
-See [GEMINI.md](GEMINI.md) for AI contribution guidelines and [VISION.md](VISION.md) for the project roadmap.
+Contributions from the language learning community are welcome! Feel free to open pull requests, report issues, or suggest vocabulary additions. See [VISION.md](VISION.md) for the project roadmap and milestones.
