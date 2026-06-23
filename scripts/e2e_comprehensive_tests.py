@@ -139,6 +139,8 @@ try:
         print("\n[STEP 2] Testing Sidebar Categories & Level Selector...")
         
         # Check that Level dropdown works and switches to A1
+        # Temporarily enable disabled options for E2E validation of other level data layers
+        page.evaluate('document.querySelectorAll("#level-select option").forEach(opt => opt.removeAttribute("disabled"))')
         page.select_option("#level-select", "a1")
         time.sleep(1.5)
         print(" Switched Level to A1.")

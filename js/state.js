@@ -258,7 +258,7 @@ export const ACHIEVEMENTS = [
 
 // Central Reactive Application State
 export const state = {
-  currentLevel: safeGetItem('current_level', 'a2'), // Active CEFR Level ('a1', 'a2', 'b1')
+  currentLevel: safeGetItem('current_level', 'a1'), // Active CEFR Level ('a1', 'a2', 'b1')
   visitedIntro: safeGetItem('visited_intro', 'false') === 'true', // Has the visitor completed the intro tour modal?
   allCards: [],          // Raw normalized vocabulary elements
   antonymIndex: null,    // Map<lowercaseCleanWord, card> for O(1) antonym lookup (built during data load)
