@@ -5,7 +5,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er fährt (ab)",
+      "present_3sg": "fährt (ab)",
       "perfekt": "ist (ab)gefahren",
       "is_irregular": true
     },
@@ -57,7 +57,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er fährt ab",
+      "present_3sg": "fährt ab",
       "perfekt": "ist abgefahren",
       "is_irregular": true
     },
@@ -93,7 +93,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er gibt ab",
+      "present_3sg": "gibt ab",
       "perfekt": "hat abgegeben",
       "is_irregular": true
     },
@@ -113,7 +113,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er holt ab",
+      "present_3sg": "holt ab",
       "perfekt": "hat abgeholt",
       "is_irregular": false
     },
@@ -133,7 +133,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er schließt ab",
+      "present_3sg": "schließt ab",
       "perfekt": "hat abgeschlossen",
       "is_irregular": true
     },
@@ -364,7 +364,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "es ist an",
+      "present_3sg": "ist an",
       "perfekt": "ist an gewesen",
       "is_irregular": true
     },
@@ -384,7 +384,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er bietet an",
+      "present_3sg": "bietet an",
       "perfekt": "hat angeboten",
       "is_irregular": true
     },
@@ -404,7 +404,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er bietet an",
+      "present_3sg": "bietet an",
       "perfekt": "hat angeboten",
       "is_irregular": true
     },
@@ -472,7 +472,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er fängt an",
+      "present_3sg": "fängt an",
       "perfekt": "hat angefangen",
       "is_irregular": true
     },
@@ -524,7 +524,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er kommt an",
+      "present_3sg": "kommt an",
       "perfekt": "ist angekommen",
       "is_irregular": true
     },
@@ -560,7 +560,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er macht an",
+      "present_3sg": "macht an",
       "perfekt": "hat angemacht",
       "is_irregular": false
     },
@@ -628,7 +628,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er ruft an",
+      "present_3sg": "ruft an",
       "perfekt": "hat angerufen",
       "is_irregular": true
     },
@@ -664,7 +664,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er sieht an",
+      "present_3sg": "sieht an",
       "perfekt": "hat angesehen",
       "is_irregular": true
     },
@@ -700,7 +700,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er antwortet",
+      "present_3sg": "antwortet",
       "perfekt": "hat geantwortet",
       "is_irregular": false
     },
@@ -816,7 +816,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er arbeitet",
+      "present_3sg": "arbeitet",
       "perfekt": "hat gearbeitet",
       "is_irregular": false
     },
@@ -970,7 +970,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "es ist auf",
+      "present_3sg": "ist auf",
       "perfekt": "ist auf gewesen",
       "is_irregular": true
     },
@@ -990,7 +990,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er hört auf",
+      "present_3sg": "hört auf",
       "perfekt": "hat aufgehört",
       "is_irregular": false
     },
@@ -1010,7 +1010,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er macht auf",
+      "present_3sg": "macht auf",
       "perfekt": "hat aufgemacht",
       "is_irregular": false
     },
@@ -1030,7 +1030,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er passt auf",
+      "present_3sg": "passt auf",
       "perfekt": "hat aufgepasst",
       "is_irregular": false
     },
@@ -1069,7 +1069,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er räumt auf",
+      "present_3sg": "räumt auf",
       "perfekt": "hat aufgeräumt",
       "is_irregular": false
     },
@@ -1089,7 +1089,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er steht auf",
+      "present_3sg": "steht auf",
       "perfekt": "ist aufgestanden",
       "is_irregular": true
     },
@@ -1141,7 +1141,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "es ist aus",
+      "present_3sg": "ist aus",
       "perfekt": "ist aus gewesen",
       "is_irregular": true
     },
@@ -1177,7 +1177,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er füllt aus",
+      "present_3sg": "füllt aus",
       "perfekt": "hat ausgefüllt",
       "is_irregular": false
     },
@@ -1213,7 +1213,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er gibt aus",
+      "present_3sg": "gibt aus",
       "perfekt": "hat ausgegeben",
       "is_irregular": true
     },
@@ -1233,7 +1233,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er geht aus",
+      "present_3sg": "geht aus",
       "perfekt": "ist ausgegangen",
       "is_irregular": true
     },
@@ -1285,7 +1285,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er macht aus",
+      "present_3sg": "macht aus",
       "perfekt": "hat ausgemacht",
       "is_irregular": false
     },
@@ -1305,7 +1305,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er packt aus",
+      "present_3sg": "packt aus",
       "perfekt": "hat ausgepackt",
       "is_irregular": false
     },
@@ -1325,7 +1325,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er sieht aus",
+      "present_3sg": "sieht aus",
       "perfekt": "hat ausgesehen",
       "is_irregular": true
     },
@@ -1345,7 +1345,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er spricht aus",
+      "present_3sg": "spricht aus",
       "perfekt": "hat ausgesprochen",
       "is_irregular": true
     },
@@ -1365,7 +1365,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er steigt aus",
+      "present_3sg": "steigt aus",
       "perfekt": "ist ausgestiegen",
       "is_irregular": true
     },
@@ -1385,7 +1385,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er trägt aus",
+      "present_3sg": "trägt aus",
       "perfekt": "hat ausgetragen",
       "is_irregular": true
     },
@@ -1568,7 +1568,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er bäckt/backt",
+      "present_3sg": "bäckt/backt",
       "perfekt": "hat gebacken",
       "is_irregular": true
     },
@@ -1604,7 +1604,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er badet",
+      "present_3sg": "badet",
       "perfekt": "hat gebadet",
       "is_irregular": false
     },
@@ -1819,7 +1819,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er bastelt",
+      "present_3sg": "bastelt",
       "perfekt": "hat gebastelt",
       "is_irregular": false
     },
@@ -1855,7 +1855,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er baut",
+      "present_3sg": "baut",
       "perfekt": "hat gebaut",
       "is_irregular": false
     },
@@ -1907,7 +1907,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er beantwortet",
+      "present_3sg": "beantwortet",
       "perfekt": "hat beantwortet",
       "is_irregular": false
     },
@@ -1927,7 +1927,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "es bedeutet",
+      "present_3sg": "bedeutet",
       "perfekt": "hat bedeutet",
       "is_irregular": false
     },
@@ -1947,7 +1947,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er beendet",
+      "present_3sg": "beendet",
       "perfekt": "hat beendet",
       "is_irregular": false
     },
@@ -1967,7 +1967,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er beginnt",
+      "present_3sg": "beginnt",
       "perfekt": "hat begonnen",
       "is_irregular": true
     },
@@ -1987,7 +1987,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er begründet",
+      "present_3sg": "begründet",
       "perfekt": "hat begründet",
       "is_irregular": false
     },
@@ -2074,7 +2074,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er bekommt",
+      "present_3sg": "bekommt",
       "perfekt": "hat bekommen",
       "is_irregular": true
     },
@@ -2113,7 +2113,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er benutzt",
+      "present_3sg": "benutzt",
       "perfekt": "hat benutzt",
       "is_irregular": false
     },
@@ -2152,7 +2152,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er berät",
+      "present_3sg": "berät",
       "perfekt": "hat beraten",
       "is_irregular": true
     },
@@ -2188,7 +2188,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er berichtet",
+      "present_3sg": "berichtet",
       "perfekt": "hat berichtet",
       "is_irregular": false
     },
@@ -2259,7 +2259,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er bekommt Bescheid",
+      "present_3sg": "bekommt Bescheid",
       "perfekt": "hat Bescheid bekommen",
       "is_irregular": true
     },
@@ -2279,8 +2279,8 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er gibt Bescheid",
-      "perfekt": "hat Bescheid gegeben",
+      "present_3sg": "gibt/sagt Bescheid",
+      "perfekt": "hat Bescheid gegeben/gesagt",
       "is_irregular": true
     },
     "adjective_forms": null,
@@ -2299,7 +2299,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er beschreibt",
+      "present_3sg": "beschreibt",
       "perfekt": "hat beschrieben",
       "is_irregular": true
     },
@@ -2374,7 +2374,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er besteht",
+      "present_3sg": "besteht",
       "perfekt": "hat bestanden",
       "is_irregular": true
     },
@@ -2394,7 +2394,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er bestellt",
+      "present_3sg": "bestellt",
       "perfekt": "hat bestellt",
       "is_irregular": false
     },
@@ -2414,7 +2414,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er bestätigt",
+      "present_3sg": "bestätigt",
       "perfekt": "hat bestätigt",
       "is_irregular": false
     },
@@ -2450,7 +2450,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er besucht",
+      "present_3sg": "besucht",
       "perfekt": "hat besucht",
       "is_irregular": false
     },
@@ -2521,7 +2521,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er bezahlt",
+      "present_3sg": "bezahlt",
       "perfekt": "hat bezahlt",
       "is_irregular": false
     },
@@ -2656,7 +2656,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er bittet",
+      "present_3sg": "bittet",
       "perfekt": "hat gebeten",
       "is_irregular": true
     },
@@ -2711,7 +2711,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er bleibt",
+      "present_3sg": "bleibt",
       "perfekt": "ist geblieben",
       "is_irregular": true
     },
@@ -2849,7 +2849,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er brät",
+      "present_3sg": "brät",
       "perfekt": "hat gebraten",
       "is_irregular": true
     },
@@ -2869,7 +2869,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er braucht",
+      "present_3sg": "braucht",
       "perfekt": "hat gebraucht",
       "is_irregular": false
     },
@@ -2937,7 +2937,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er bringt",
+      "present_3sg": "bringt",
       "perfekt": "hat gebracht",
       "is_irregular": true
     },
@@ -3021,7 +3021,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er bucht",
+      "present_3sg": "bucht",
       "perfekt": "hat gebucht",
       "is_irregular": false
     },
@@ -3057,7 +3057,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er buchstabiert",
+      "present_3sg": "buchstabiert",
       "perfekt": "hat buchstabiert",
       "is_irregular": false
     },
@@ -3211,7 +3211,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er chattet",
+      "present_3sg": "chattet",
       "perfekt": "hat gechattet",
       "is_irregular": false
     },
@@ -3375,8 +3375,8 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er ist dagegen",
-      "perfekt": "ist dagegen gewesen",
+      "present_3sg": "ist dafür/dagegen",
+      "perfekt": "ist dafür/dagegen gewesen",
       "is_irregular": true
     },
     "adjective_forms": null,
@@ -3475,7 +3475,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er dankt",
+      "present_3sg": "dankt",
       "perfekt": "hat gedankt",
       "is_irregular": false
     },
@@ -3559,7 +3559,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "es dauert",
+      "present_3sg": "dauert",
       "perfekt": "hat gedauert",
       "is_irregular": false
     },
@@ -3579,7 +3579,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er denkt",
+      "present_3sg": "denkt",
       "perfekt": "hat gedacht",
       "is_irregular": true
     },
@@ -3768,7 +3768,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er diskutiert",
+      "present_3sg": "diskutiert",
       "perfekt": "hat diskutiert",
       "is_irregular": false
     },
@@ -3887,7 +3887,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er druckt",
+      "present_3sg": "druckt",
       "perfekt": "hat gedruckt",
       "is_irregular": false
     },
@@ -3939,7 +3939,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er drückt",
+      "present_3sg": "drückt",
       "perfekt": "hat gedrückt",
       "is_irregular": false
     },
@@ -4064,7 +4064,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er darf",
+      "present_3sg": "darf",
       "perfekt": "hat gedurft",
       "is_irregular": true
     },
@@ -4288,7 +4288,7 @@
     "gender": "der",
     "plural": "die Vorschläge",
     "verb_conjugation": {
-      "present_3sg": "er hat/macht einen Vorschlag",
+      "present_3sg": "hat/macht einen Vorschlag",
       "perfekt": "hat einen Vorschlag gehabt/gemacht",
       "is_irregular": true
     },
@@ -4359,7 +4359,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er kauft ein",
+      "present_3sg": "kauft ein",
       "perfekt": "hat eingekauft",
       "is_irregular": false
     },
@@ -4395,7 +4395,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er lädt ein",
+      "present_3sg": "lädt ein",
       "perfekt": "hat eingeladen",
       "is_irregular": true
     },
@@ -4447,7 +4447,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er packt ein",
+      "present_3sg": "packt ein",
       "perfekt": "hat eingepackt",
       "is_irregular": false
     },
@@ -4467,7 +4467,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er steigt ein",
+      "present_3sg": "steigt ein",
       "perfekt": "ist eingestiegen",
       "is_irregular": true
     },
@@ -4535,7 +4535,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er zieht ein",
+      "present_3sg": "zieht ein",
       "perfekt": "ist eingezogen",
       "is_irregular": true
     },
@@ -4587,7 +4587,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er empfiehlt",
+      "present_3sg": "empfiehlt",
       "perfekt": "hat empfohlen",
       "is_irregular": true
     },
@@ -4639,7 +4639,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er endet",
+      "present_3sg": "endet",
       "perfekt": "hat geendet",
       "is_irregular": false
     },
@@ -4694,7 +4694,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er entschuldigt",
+      "present_3sg": "entschuldigt",
       "perfekt": "hat entschuldigt",
       "is_irregular": false
     },
@@ -4746,7 +4746,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er erklärt",
+      "present_3sg": "erklärt",
       "perfekt": "hat erklärt",
       "is_irregular": false
     },
@@ -4766,7 +4766,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er ist erkältet",
+      "present_3sg": "ist erkältet",
       "perfekt": "ist erkältet gewesen",
       "is_irregular": true
     },
@@ -4786,7 +4786,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er erlaubt",
+      "present_3sg": "erlaubt",
       "perfekt": "hat erlaubt",
       "is_irregular": false
     },
@@ -4822,7 +4822,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "es ist erlaubt",
+      "present_3sg": "ist erlaubt",
       "perfekt": "ist erlaubt gewesen",
       "is_irregular": true
     },
@@ -4842,7 +4842,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er erreicht",
+      "present_3sg": "erreicht",
       "perfekt": "hat erreicht",
       "is_irregular": false
     },
@@ -4878,7 +4878,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er erzählt",
+      "present_3sg": "erzählt",
       "perfekt": "hat erzählt",
       "is_irregular": false
     },
@@ -4898,7 +4898,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er isst",
+      "present_3sg": "isst",
       "perfekt": "hat gegessen",
       "is_irregular": true
     },
@@ -4998,7 +4998,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er fällt",
+      "present_3sg": "fällt",
       "perfekt": "ist gefallen",
       "is_irregular": true
     },
@@ -5155,7 +5155,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er fehlt",
+      "present_3sg": "fehlt",
       "perfekt": "hat gefehlt",
       "is_irregular": false
     },
@@ -5255,7 +5255,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er sieht fern",
+      "present_3sg": "sieht fern",
       "perfekt": "hat ferngesehen",
       "is_irregular": true
     },
@@ -5393,7 +5393,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er findet",
+      "present_3sg": "findet",
       "perfekt": "hat gefunden",
       "is_irregular": true
     },
@@ -5445,7 +5445,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er ist fit",
+      "present_3sg": "ist fit",
       "perfekt": "ist fit gewesen",
       "is_irregular": true
     },
@@ -5516,7 +5516,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er fliegt",
+      "present_3sg": "fliegt",
       "perfekt": "ist geflogen",
       "is_irregular": true
     },
@@ -5648,7 +5648,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er fotografiert",
+      "present_3sg": "fotografiert",
       "perfekt": "hat fotografiert",
       "is_irregular": false
     },
@@ -5684,7 +5684,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er fragt",
+      "present_3sg": "fragt",
       "perfekt": "hat gefragt",
       "is_irregular": false
     },
@@ -5917,7 +5917,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er frühstückt",
+      "present_3sg": "frühstückt",
       "perfekt": "hat gefrühstückt",
       "is_irregular": false
     },
@@ -6151,7 +6151,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er gibt",
+      "present_3sg": "gibt",
       "perfekt": "hat gegeben",
       "is_irregular": true
     },
@@ -6242,7 +6242,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "es gefällt",
+      "present_3sg": "gefällt",
       "perfekt": "hat gefallen",
       "is_irregular": true
     },
@@ -6345,7 +6345,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er geht",
+      "present_3sg": "geht",
       "perfekt": "ist gegangen",
       "is_irregular": true
     },
@@ -6365,8 +6365,8 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er hängt",
-      "perfekt": "hat gehängt / hat gehangen",
+      "present_3sg": "hängt",
+      "perfekt": "hat gehangen/gehängt",
       "is_irregular": true
     },
     "adjective_forms": null,
@@ -6385,7 +6385,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er gehört",
+      "present_3sg": "gehört",
       "perfekt": "hat gehört",
       "is_irregular": false
     },
@@ -6744,7 +6744,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er ist",
+      "present_3sg": "ist",
       "perfekt": "ist gewesen",
       "is_irregular": true
     },
@@ -6764,7 +6764,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er ist",
+      "present_3sg": "ist",
       "perfekt": "ist gewesen",
       "is_irregular": true
     },
@@ -6784,7 +6784,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er gewinnt",
+      "present_3sg": "gewinnt",
       "perfekt": "hat gewonnen",
       "is_irregular": true
     },
@@ -6820,8 +6820,8 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er zieht an/aus",
-      "perfekt": "hat/ist an-/ausgezogen",
+      "present_3sg": "zieht (an/aus)",
+      "perfekt": "hat/ist (an/aus)gezogen",
       "is_irregular": true
     },
     "adjective_forms": null,
@@ -6872,7 +6872,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er glaubt",
+      "present_3sg": "glaubt",
       "perfekt": "hat geglaubt",
       "is_irregular": false
     },
@@ -6975,7 +6975,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er gratuliert",
+      "present_3sg": "gratuliert",
       "perfekt": "hat gratuliert",
       "is_irregular": false
     },
@@ -6995,7 +6995,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er grillt",
+      "present_3sg": "grillt",
       "perfekt": "hat gegrillt",
       "is_irregular": false
     },
@@ -7117,7 +7117,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "es ist gültig",
+      "present_3sg": "ist gültig",
       "perfekt": "ist gültig gewesen",
       "is_irregular": true
     },
@@ -7172,7 +7172,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er hat",
+      "present_3sg": "hat",
       "perfekt": "hat gehabt",
       "is_irregular": true
     },
@@ -7240,7 +7240,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er hält",
+      "present_3sg": "hält",
       "perfekt": "hat gehalten",
       "is_irregular": true
     },
@@ -7407,7 +7407,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er heiratet",
+      "present_3sg": "heiratet",
       "perfekt": "hat geheiratet",
       "is_irregular": false
     },
@@ -7462,7 +7462,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er heißt",
+      "present_3sg": "heißt",
       "perfekt": "hat geheißen",
       "is_irregular": true
     },
@@ -7482,7 +7482,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er hilft",
+      "present_3sg": "hilft",
       "perfekt": "hat geholfen",
       "is_irregular": true
     },
@@ -7617,7 +7617,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er stellt her",
+      "present_3sg": "stellt her",
       "perfekt": "hat hergestellt",
       "is_irregular": false
     },
@@ -7637,7 +7637,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er lädt herunter",
+      "present_3sg": "lädt herunter",
       "perfekt": "hat heruntergeladen",
       "is_irregular": true
     },
@@ -7839,7 +7839,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er hofft",
+      "present_3sg": "hofft",
       "perfekt": "hat gehofft",
       "is_irregular": false
     },
@@ -7875,7 +7875,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er holt",
+      "present_3sg": "holt",
       "perfekt": "hat geholt",
       "is_irregular": false
     },
@@ -7975,7 +7975,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er hustet",
+      "present_3sg": "hustet",
       "perfekt": "hat gehustet",
       "is_irregular": false
     },
@@ -8011,8 +8011,8 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er hängt",
-      "perfekt": "hat gehangen / hat gehängt",
+      "present_3sg": "hängt",
+      "perfekt": "hat gehangen/gehängt",
       "is_irregular": true
     },
     "adjective_forms": null,
@@ -8050,7 +8050,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er hört",
+      "present_3sg": "hört",
       "perfekt": "hat gehört",
       "is_irregular": false
     },
@@ -8118,7 +8118,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er informiert (sich)",
+      "present_3sg": "informiert (sich)",
       "perfekt": "hat (sich) informiert",
       "is_irregular": false
     },
@@ -8419,8 +8419,8 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er joggt",
-      "perfekt": "ist gejoggt / hat gejoggt",
+      "present_3sg": "joggt",
+      "perfekt": "ist/hat gejoggt",
       "is_irregular": false
     },
     "adjective_forms": null,
@@ -8656,7 +8656,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er kauft",
+      "present_3sg": "kauft",
       "perfekt": "hat gekauft",
       "is_irregular": false
     },
@@ -8724,7 +8724,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er kennt",
+      "present_3sg": "kennt",
       "perfekt": "hat gekannt",
       "is_irregular": true
     },
@@ -8744,7 +8744,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er lernt kennen",
+      "present_3sg": "lernt kennen",
       "perfekt": "hat kennengelernt",
       "is_irregular": false
     },
@@ -8844,7 +8844,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "es klappt",
+      "present_3sg": "klappt",
       "perfekt": "hat geklappt",
       "is_irregular": false
     },
@@ -8982,7 +8982,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er kocht",
+      "present_3sg": "kocht",
       "perfekt": "hat gekocht",
       "is_irregular": false
     },
@@ -9069,7 +9069,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er kommt",
+      "present_3sg": "kommt",
       "perfekt": "ist gekommen",
       "is_irregular": true
     },
@@ -9121,7 +9121,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er kontrolliert",
+      "present_3sg": "kontrolliert",
       "perfekt": "hat kontrolliert",
       "is_irregular": false
     },
@@ -9189,7 +9189,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "es kostet",
+      "present_3sg": "kostet",
       "perfekt": "hat gekostet",
       "is_irregular": false
     },
@@ -9324,7 +9324,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er kriegt",
+      "present_3sg": "kriegt",
       "perfekt": "hat gekriegt",
       "is_irregular": false
     },
@@ -9491,7 +9491,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er kann",
+      "present_3sg": "kann",
       "perfekt": "hat gekonnt",
       "is_irregular": true
     },
@@ -9578,7 +9578,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er lacht",
+      "present_3sg": "lacht",
       "perfekt": "hat gelacht",
       "is_irregular": false
     },
@@ -9735,7 +9735,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er lässt",
+      "present_3sg": "lässt",
       "perfekt": "hat gelassen",
       "is_irregular": true
     },
@@ -9755,7 +9755,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er läuft",
+      "present_3sg": "läuft",
       "perfekt": "ist gelaufen",
       "is_irregular": true
     },
@@ -9794,7 +9794,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er lebt",
+      "present_3sg": "lebt",
       "perfekt": "hat gelebt",
       "is_irregular": false
     },
@@ -9865,7 +9865,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er legt",
+      "present_3sg": "legt",
       "perfekt": "hat gelegt",
       "is_irregular": false
     },
@@ -9920,7 +9920,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "es tut leid",
+      "present_3sg": "tut leid",
       "perfekt": "hat leidgetan",
       "is_irregular": true
     },
@@ -9940,7 +9940,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er leiht",
+      "present_3sg": "leiht",
       "perfekt": "hat geliehen",
       "is_irregular": true
     },
@@ -9979,7 +9979,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er lernt",
+      "present_3sg": "lernt",
       "perfekt": "hat gelernt",
       "is_irregular": false
     },
@@ -9999,7 +9999,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er liest",
+      "present_3sg": "liest",
       "perfekt": "hat gelesen",
       "is_irregular": true
     },
@@ -10083,7 +10083,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er liebt",
+      "present_3sg": "liebt",
       "perfekt": "hat geliebt",
       "is_irregular": false
     },
@@ -10135,7 +10135,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er liefert",
+      "present_3sg": "liefert",
       "perfekt": "hat geliefert",
       "is_irregular": false
     },
@@ -10155,7 +10155,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er liegt",
+      "present_3sg": "liegt",
       "perfekt": "hat/ist gelegen",
       "is_irregular": true
     },
@@ -10290,7 +10290,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er lügt",
+      "present_3sg": "lügt",
       "perfekt": "hat gelogen",
       "is_irregular": true
     },
@@ -10310,7 +10310,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er macht",
+      "present_3sg": "macht",
       "perfekt": "hat gemacht",
       "is_irregular": false
     },
@@ -10378,7 +10378,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er malt",
+      "present_3sg": "malt",
       "perfekt": "hat gemalt",
       "is_irregular": false
     },
@@ -10542,7 +10542,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er meint",
+      "present_3sg": "meint",
       "perfekt": "hat gemeint",
       "is_irregular": false
     },
@@ -10626,7 +10626,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er merkt",
+      "present_3sg": "merkt",
       "perfekt": "hat gemerkt",
       "is_irregular": false
     },
@@ -10694,7 +10694,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er mietet",
+      "present_3sg": "mietet",
       "perfekt": "hat gemietet",
       "is_irregular": false
     },
@@ -10794,7 +10794,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er bringt mit",
+      "present_3sg": "bringt mit",
       "perfekt": "hat mitgebracht",
       "is_irregular": true
     },
@@ -10814,7 +10814,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er kommt mit",
+      "present_3sg": "kommt mit",
       "perfekt": "ist mitgekommen",
       "is_irregular": true
     },
@@ -11093,7 +11093,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er möchte",
+      "present_3sg": "möchte",
       "perfekt": "hat gemocht",
       "is_irregular": true
     },
@@ -11113,7 +11113,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er mag",
+      "present_3sg": "mag",
       "perfekt": "hat gemocht",
       "is_irregular": true
     },
@@ -11187,7 +11187,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er muss",
+      "present_3sg": "muss",
       "perfekt": "hat gemusst",
       "is_irregular": true
     },
@@ -11389,7 +11389,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er nimmt",
+      "present_3sg": "nimmt",
       "perfekt": "hat genommen",
       "is_irregular": true
     },
@@ -11425,7 +11425,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er nennt",
+      "present_3sg": "nennt",
       "perfekt": "hat genannt",
       "is_irregular": true
     },
@@ -11633,7 +11633,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er notiert",
+      "present_3sg": "notiert",
       "perfekt": "hat notiert",
       "is_irregular": false
     },
@@ -11950,7 +11950,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er organisiert",
+      "present_3sg": "organisiert",
       "perfekt": "hat organisiert",
       "is_irregular": false
     },
@@ -12002,7 +12002,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er packt",
+      "present_3sg": "packt",
       "perfekt": "hat gepackt",
       "is_irregular": false
     },
@@ -12102,7 +12102,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er parkt",
+      "present_3sg": "parkt",
       "perfekt": "hat geparkt",
       "is_irregular": false
     },
@@ -12186,7 +12186,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er passt",
+      "present_3sg": "passt",
       "perfekt": "hat gepasst",
       "is_irregular": false
     },
@@ -12206,7 +12206,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "es passiert",
+      "present_3sg": "passiert",
       "perfekt": "ist passiert",
       "is_irregular": false
     },
@@ -12354,7 +12354,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er plant",
+      "present_3sg": "plant",
       "perfekt": "hat geplant",
       "is_irregular": false
     },
@@ -12623,7 +12623,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er probiert",
+      "present_3sg": "probiert",
       "perfekt": "hat probiert",
       "is_irregular": false
     },
@@ -12723,7 +12723,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er prüft",
+      "present_3sg": "prüft",
       "perfekt": "hat geprüft",
       "is_irregular": false
     },
@@ -12775,7 +12775,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er putzt",
+      "present_3sg": "putzt",
       "perfekt": "hat geputzt",
       "is_irregular": false
     },
@@ -12862,7 +12862,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er rät",
+      "present_3sg": "rät",
       "perfekt": "hat geraten",
       "is_irregular": true
     },
@@ -12898,7 +12898,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er raucht",
+      "present_3sg": "raucht",
       "perfekt": "hat geraucht",
       "is_irregular": false
     },
@@ -12934,7 +12934,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er rechnet",
+      "present_3sg": "rechnet",
       "perfekt": "hat gerechnet",
       "is_irregular": false
     },
@@ -12970,7 +12970,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er hat recht",
+      "present_3sg": "hat recht",
       "perfekt": "hat recht gehabt",
       "is_irregular": true
     },
@@ -13006,7 +13006,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er redet",
+      "present_3sg": "redet",
       "perfekt": "hat geredet",
       "is_irregular": false
     },
@@ -13042,7 +13042,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "es regnet",
+      "present_3sg": "regnet",
       "perfekt": "hat geregnet",
       "is_irregular": false
     },
@@ -13193,7 +13193,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er reist",
+      "present_3sg": "reist",
       "perfekt": "ist gereist",
       "is_irregular": false
     },
@@ -13213,7 +13213,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er reitet",
+      "present_3sg": "reitet",
       "perfekt": "ist geritten",
       "is_irregular": true
     },
@@ -13233,7 +13233,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er renoviert",
+      "present_3sg": "renoviert",
       "perfekt": "hat renoviert",
       "is_irregular": false
     },
@@ -13301,7 +13301,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er repariert",
+      "present_3sg": "repariert",
       "perfekt": "hat repariert",
       "is_irregular": false
     },
@@ -13321,7 +13321,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er reserviert",
+      "present_3sg": "reserviert",
       "perfekt": "hat reserviert",
       "is_irregular": false
     },
@@ -13424,7 +13424,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er riecht",
+      "present_3sg": "riecht",
       "perfekt": "hat gerochen",
       "is_irregular": true
     },
@@ -13543,7 +13543,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er ruft",
+      "present_3sg": "ruft",
       "perfekt": "hat gerufen",
       "is_irregular": true
     },
@@ -13697,7 +13697,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er sagt",
+      "present_3sg": "sagt",
       "perfekt": "hat gesagt",
       "is_irregular": false
     },
@@ -13749,7 +13749,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er sammelt",
+      "present_3sg": "sammelt",
       "perfekt": "hat gesammelt",
       "is_irregular": false
     },
@@ -13839,7 +13839,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er schafft",
+      "present_3sg": "schafft",
       "perfekt": "hat geschafft",
       "is_irregular": false
     },
@@ -13894,7 +13894,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er scheint",
+      "present_3sg": "scheint",
       "perfekt": "hat geschienen",
       "is_irregular": true
     },
@@ -13914,7 +13914,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er schenkt",
+      "present_3sg": "schenkt",
       "perfekt": "hat geschenkt",
       "is_irregular": false
     },
@@ -13950,7 +13950,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er schickt",
+      "present_3sg": "schickt",
       "perfekt": "hat geschickt",
       "is_irregular": false
     },
@@ -14002,7 +14002,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er schimpft",
+      "present_3sg": "schimpft",
       "perfekt": "hat geschimpft",
       "is_irregular": false
     },
@@ -14038,7 +14038,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er schläft",
+      "present_3sg": "schläft",
       "perfekt": "hat geschlafen",
       "is_irregular": true
     },
@@ -14077,7 +14077,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er schließt",
+      "present_3sg": "schließt",
       "perfekt": "hat geschlossen",
       "is_irregular": true
     },
@@ -14164,7 +14164,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er schmeckt",
+      "present_3sg": "schmeckt",
       "perfekt": "hat geschmeckt",
       "is_irregular": false
     },
@@ -14255,7 +14255,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "es schneit",
+      "present_3sg": "schneit",
       "perfekt": "hat geschneit",
       "is_irregular": false
     },
@@ -14377,7 +14377,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er schreibt",
+      "present_3sg": "schreibt",
       "perfekt": "hat geschrieben",
       "is_irregular": true
     },
@@ -14553,7 +14553,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er schwimmt",
+      "present_3sg": "schwimmt",
       "perfekt": "ist geschwommen",
       "is_irregular": true
     },
@@ -14659,7 +14659,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er sieht",
+      "present_3sg": "sieht",
       "perfekt": "hat gesehen",
       "is_irregular": true
     },
@@ -14727,7 +14727,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er ist",
+      "present_3sg": "ist",
       "perfekt": "ist gewesen",
       "is_irregular": true
     },
@@ -15107,8 +15107,8 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er informiert sich",
-      "perfekt": "hat sich informiert",
+      "present_3sg": "informiert (sich)",
+      "perfekt": "hat (sich) informiert",
       "is_irregular": false
     },
     "adjective_forms": null,
@@ -15127,8 +15127,8 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er kümmert sich",
-      "perfekt": "hat sich gekümmert",
+      "present_3sg": "kümmert (sich)",
+      "perfekt": "hat (sich) gekümmert",
       "is_irregular": false
     },
     "adjective_forms": null,
@@ -15147,7 +15147,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er zieht sich um",
+      "present_3sg": "zieht sich um",
       "perfekt": "hat sich umgezogen",
       "is_irregular": true
     },
@@ -15167,8 +15167,8 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er ärgert sich",
-      "perfekt": "hat sich geärgert",
+      "present_3sg": "ärgert (sich)",
+      "perfekt": "hat (sich) geärgert",
       "is_irregular": false
     },
     "adjective_forms": null,
@@ -15206,7 +15206,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er singt",
+      "present_3sg": "singt",
       "perfekt": "hat gesungen",
       "is_irregular": true
     },
@@ -15242,7 +15242,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er sitzt",
+      "present_3sg": "sitzt",
       "perfekt": "hat/ist gesessen",
       "is_irregular": true
     },
@@ -15342,7 +15342,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er soll",
+      "present_3sg": "soll",
       "perfekt": "hat gesollt",
       "is_irregular": true
     },
@@ -15432,7 +15432,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er spart",
+      "present_3sg": "spart",
       "perfekt": "hat gespart",
       "is_irregular": false
     },
@@ -15452,7 +15452,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er geht spazieren",
+      "present_3sg": "geht spazieren",
       "perfekt": "ist spazieren gegangen",
       "is_irregular": true
     },
@@ -15504,7 +15504,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er speichert",
+      "present_3sg": "speichert",
       "perfekt": "hat gespeichert",
       "is_irregular": false
     },
@@ -15556,7 +15556,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er spielt",
+      "present_3sg": "spielt",
       "perfekt": "hat gespielt",
       "is_irregular": false
     },
@@ -15643,7 +15643,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er spricht",
+      "present_3sg": "spricht",
       "perfekt": "hat gesprochen",
       "is_irregular": true
     },
@@ -15781,7 +15781,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "es findet statt",
+      "present_3sg": "findet statt",
       "perfekt": "hat stattgefunden",
       "is_irregular": true
     },
@@ -15801,7 +15801,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er steht",
+      "present_3sg": "steht",
       "perfekt": "hat/ist gestanden",
       "is_irregular": true
     },
@@ -15837,7 +15837,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er stellt",
+      "present_3sg": "stellt",
       "perfekt": "hat gestellt",
       "is_irregular": false
     },
@@ -15857,7 +15857,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er stirbt",
+      "present_3sg": "stirbt",
       "perfekt": "ist gestorben",
       "is_irregular": true
     },
@@ -16005,8 +16005,8 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er streitet sich",
-      "perfekt": "hat sich gestritten",
+      "present_3sg": "streitet (sich)",
+      "perfekt": "hat (sich) gestritten",
       "is_irregular": true
     },
     "adjective_forms": null,
@@ -16092,7 +16092,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er studiert",
+      "present_3sg": "studiert",
       "perfekt": "hat studiert",
       "is_irregular": false
     },
@@ -16110,7 +16110,7 @@
     "german": "das Studium",
     "word_class": "Nomen",
     "gender": "das",
-    "plural": null,
+    "plural": "die Studien",
     "verb_conjugation": null,
     "adjective_forms": null,
     "english": "university studies / degree program",
@@ -16144,7 +16144,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er stört",
+      "present_3sg": "stört",
       "perfekt": "hat gestört",
       "is_irregular": false
     },
@@ -16180,7 +16180,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er sucht",
+      "present_3sg": "sucht",
       "perfekt": "hat gesucht",
       "is_irregular": false
     },
@@ -16251,7 +16251,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er surft",
+      "present_3sg": "surft",
       "perfekt": "hat/ist gesurft",
       "is_irregular": false
     },
@@ -16373,7 +16373,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er tanzt",
+      "present_3sg": "tanzt",
       "perfekt": "hat getanzt",
       "is_irregular": false
     },
@@ -16441,7 +16441,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er tauscht (aus)",
+      "present_3sg": "tauscht (aus)",
       "perfekt": "hat (aus)getauscht",
       "is_irregular": false
     },
@@ -16509,7 +16509,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er teilt",
+      "present_3sg": "teilt",
       "perfekt": "hat geteilt",
       "is_irregular": false
     },
@@ -16529,7 +16529,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er nimmt teil",
+      "present_3sg": "nimmt teil",
       "perfekt": "hat teilgenommen",
       "is_irregular": true
     },
@@ -16565,7 +16565,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er telefoniert",
+      "present_3sg": "telefoniert",
       "perfekt": "hat telefoniert",
       "is_irregular": false
     },
@@ -16965,7 +16965,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er trägt",
+      "present_3sg": "trägt",
       "perfekt": "hat getragen",
       "is_irregular": true
     },
@@ -16985,7 +16985,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er trainiert",
+      "present_3sg": "trainiert",
       "perfekt": "hat trainiert",
       "is_irregular": false
     },
@@ -17056,8 +17056,8 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er trifft sich",
-      "perfekt": "hat sich getroffen",
+      "present_3sg": "trifft (sich)",
+      "perfekt": "hat (sich) getroffen",
       "is_irregular": true
     },
     "adjective_forms": null,
@@ -17076,7 +17076,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er trifft",
+      "present_3sg": "trifft",
       "perfekt": "hat getroffen",
       "is_irregular": true
     },
@@ -17112,7 +17112,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er trinkt",
+      "present_3sg": "trinkt",
       "perfekt": "hat getrunken",
       "is_irregular": true
     },
@@ -17151,7 +17151,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er träumt",
+      "present_3sg": "träumt",
       "perfekt": "hat geträumt",
       "is_irregular": false
     },
@@ -17203,7 +17203,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er tut",
+      "present_3sg": "tut",
       "perfekt": "hat getan",
       "is_irregular": true
     },
@@ -17290,7 +17290,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er steigt um",
+      "present_3sg": "steigt um",
       "perfekt": "ist umgestiegen",
       "is_irregular": true
     },
@@ -17310,7 +17310,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er zieht um",
+      "present_3sg": "zieht um",
       "perfekt": "ist umgezogen",
       "is_irregular": true
     },
@@ -17410,8 +17410,8 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er unterhält sich",
-      "perfekt": "hat sich unterhalten",
+      "present_3sg": "unterhält (sich)",
+      "perfekt": "hat (sich) unterhalten",
       "is_irregular": true
     },
     "adjective_forms": null,
@@ -17430,7 +17430,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er unternimmt",
+      "present_3sg": "unternimmt",
       "perfekt": "hat unternommen",
       "is_irregular": true
     },
@@ -17450,7 +17450,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er unterschreibt",
+      "present_3sg": "unterschreibt",
       "perfekt": "hat unterschrieben",
       "is_irregular": true
     },
@@ -17470,7 +17470,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er untersucht",
+      "present_3sg": "untersucht",
       "perfekt": "hat untersucht",
       "is_irregular": false
     },
@@ -17490,7 +17490,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er ist unterwegs",
+      "present_3sg": "ist unterwegs",
       "perfekt": "ist unterwegs gewesen",
       "is_irregular": true
     },
@@ -17526,7 +17526,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er ist verabredet",
+      "present_3sg": "ist verabredet",
       "perfekt": "ist verabredet gewesen",
       "is_irregular": true
     },
@@ -17582,7 +17582,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er verdient",
+      "present_3sg": "verdient",
       "perfekt": "hat verdient",
       "is_irregular": false
     },
@@ -17618,7 +17618,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er vereinbart",
+      "present_3sg": "vereinbart",
       "perfekt": "hat vereinbart",
       "is_irregular": false
     },
@@ -17638,7 +17638,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er vergisst",
+      "present_3sg": "vergisst",
       "perfekt": "hat vergessen",
       "is_irregular": true
     },
@@ -17658,7 +17658,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er vergleicht",
+      "present_3sg": "vergleicht",
       "perfekt": "hat verglichen",
       "is_irregular": true
     },
@@ -17678,7 +17678,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er verkauft",
+      "present_3sg": "verkauft",
       "perfekt": "hat verkauft",
       "is_irregular": false
     },
@@ -17730,8 +17730,8 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er verletzt sich",
-      "perfekt": "hat sich verletzt",
+      "present_3sg": "verletzt (sich)",
+      "perfekt": "hat (sich) verletzt",
       "is_irregular": false
     },
     "adjective_forms": null,
@@ -17770,7 +17770,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er verliert",
+      "present_3sg": "verliert",
       "perfekt": "hat verloren",
       "is_irregular": true
     },
@@ -17790,7 +17790,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er vermietet",
+      "present_3sg": "vermietet",
       "perfekt": "hat vermietet",
       "is_irregular": false
     },
@@ -17842,7 +17842,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er verpasst",
+      "present_3sg": "verpasst",
       "perfekt": "hat verpasst",
       "is_irregular": false
     },
@@ -17862,7 +17862,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er verreist",
+      "present_3sg": "verreist",
       "perfekt": "ist verreist",
       "is_irregular": false
     },
@@ -17882,7 +17882,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er verschiebt",
+      "present_3sg": "verschiebt",
       "perfekt": "hat verschoben",
       "is_irregular": true
     },
@@ -17921,7 +17921,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er versteht",
+      "present_3sg": "versteht",
       "perfekt": "hat verstanden",
       "is_irregular": true
     },
@@ -17941,7 +17941,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er versucht",
+      "present_3sg": "versucht",
       "perfekt": "hat versucht",
       "is_irregular": false
     },
@@ -18108,7 +18108,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er bereitet vor",
+      "present_3sg": "bereitet vor",
       "perfekt": "hat vorbereitet",
       "is_irregular": false
     },
@@ -18349,7 +18349,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er wandert",
+      "present_3sg": "wandert",
       "perfekt": "ist gewandert",
       "is_irregular": false
     },
@@ -18404,7 +18404,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er wartet",
+      "present_3sg": "wartet",
       "perfekt": "hat gewartet",
       "is_irregular": false
     },
@@ -18492,7 +18492,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er wechselt",
+      "present_3sg": "wechselt",
       "perfekt": "hat gewechselt",
       "is_irregular": false
     },
@@ -18512,7 +18512,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er weckt",
+      "present_3sg": "weckt",
       "perfekt": "hat geweckt",
       "is_irregular": false
     },
@@ -18644,7 +18644,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er weint",
+      "present_3sg": "weint",
       "perfekt": "hat geweint",
       "is_irregular": false
     },
@@ -18768,7 +18768,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er wird",
+      "present_3sg": "wird",
       "perfekt": "ist geworden",
       "is_irregular": true
     },
@@ -18820,7 +18820,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er wiederholt",
+      "present_3sg": "wiederholt",
       "perfekt": "hat wiederholt",
       "is_irregular": false
     },
@@ -18872,7 +18872,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er weiß",
+      "present_3sg": "weiß",
       "perfekt": "hat gewusst",
       "is_irregular": true
     },
@@ -18908,7 +18908,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er wohnt",
+      "present_3sg": "wohnt",
       "perfekt": "hat gewohnt",
       "is_irregular": false
     },
@@ -18976,7 +18976,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er will",
+      "present_3sg": "will",
       "perfekt": "hat gewollt",
       "is_irregular": true
     },
@@ -19079,7 +19079,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er wählt",
+      "present_3sg": "wählt",
       "perfekt": "hat gewählt",
       "is_irregular": false
     },
@@ -19115,7 +19115,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er wünscht",
+      "present_3sg": "wünscht",
       "perfekt": "hat gewünscht",
       "is_irregular": false
     },
@@ -19151,7 +19151,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er zahlt",
+      "present_3sg": "zahlt",
       "perfekt": "hat gezahlt",
       "is_irregular": false
     },
@@ -19187,7 +19187,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er zeichnet",
+      "present_3sg": "zeichnet",
       "perfekt": "hat gezeichnet",
       "is_irregular": false
     },
@@ -19207,7 +19207,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er zeigt",
+      "present_3sg": "zeigt",
       "perfekt": "hat gezeigt",
       "is_irregular": false
     },
@@ -19355,8 +19355,8 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er zieht an/aus",
-      "perfekt": "hat/ist an-/ausgezogen",
+      "present_3sg": "zieht (an/aus)",
+      "perfekt": "hat/ist (an/aus)gezogen",
       "is_irregular": true
     },
     "adjective_forms": null,
@@ -19471,7 +19471,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er ist zu",
+      "present_3sg": "ist zu",
       "perfekt": "ist zu gewesen",
       "is_irregular": true
     },
@@ -19558,7 +19558,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er hört zu",
+      "present_3sg": "hört zu",
       "perfekt": "hat zugehört",
       "is_irregular": false
     },
@@ -19610,7 +19610,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er macht zu",
+      "present_3sg": "macht zu",
       "perfekt": "hat zugemacht",
       "is_irregular": false
     },
@@ -19694,7 +19694,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er ändert",
+      "present_3sg": "ändert",
       "perfekt": "hat geändert",
       "is_irregular": false
     },
@@ -19714,7 +19714,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er öffnet",
+      "present_3sg": "öffnet",
       "perfekt": "hat geöffnet",
       "is_irregular": false
     },
@@ -19750,7 +19750,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er übt",
+      "present_3sg": "übt",
       "perfekt": "hat geübt",
       "is_irregular": false
     },
@@ -19818,7 +19818,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er übernachtet",
+      "present_3sg": "übernachtet",
       "perfekt": "hat übernachtet",
       "is_irregular": false
     },
@@ -19838,7 +19838,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er übersetzt",
+      "present_3sg": "übersetzt",
       "perfekt": "hat übersetzt",
       "is_irregular": false
     },
@@ -19874,7 +19874,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": {
-      "present_3sg": "er überweist",
+      "present_3sg": "überweist",
       "perfekt": "hat überwiesen",
       "is_irregular": true
     },
