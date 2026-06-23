@@ -151,106 +151,106 @@ export const categoryTranslations = {
 export const ACHIEVEMENTS = [
   {
     id: 'early_bird',
-    title: 'Der frühe Vogel',
-    desc: 'Lerne eine Vokabel vor 7:00 Uhr morgens.',
+    title: 'Early Bird',
+    desc: 'Learn a vocabulary word before 7:00 AM.',
     icon: 'fa-regular fa-clock',
     color: 'text-sky-400'
   },
   {
     id: 'night_owl',
-    title: 'Nachteule',
-    desc: 'Lerne eine Vokabel nach 22:00 Uhr nachts.',
+    title: 'Night Owl',
+    desc: 'Learn a vocabulary word after 10:00 PM.',
     icon: 'fa-solid fa-moon',
     color: 'text-indigo-400'
   },
   {
     id: 'sprech_deutsch',
     title: 'Sprechen Sie Deutsch?',
-    desc: 'Lerne insgesamt 100 Vokabeln (markiert als gelernt).',
+    desc: 'Learn a total of 100 vocabulary words (marked as learned).',
     icon: 'fa-solid fa-comments',
     color: 'text-emerald-400'
   },
   {
     id: 'streak_master',
-    title: 'Serienmeister',
-    desc: 'Erreiche eine Quiz-Serie von 10 richtigen Antworten.',
+    title: 'Streak Master',
+    desc: 'Achieve a quiz streak of 10 correct answers.',
     icon: 'fa-solid fa-fire',
     color: 'text-orange-500'
   },
   {
     id: 'perfect_score',
-    title: 'Fehlerfrei',
-    desc: 'Beende ein Quiz mit 100% Genauigkeit (mind. 10 Fragen).',
+    title: 'Perfect Score',
+    desc: 'Complete a quiz with 100% accuracy (min. 10 questions).',
     icon: 'fa-solid fa-crown',
     color: 'text-amber-400'
   },
   {
     id: 'polyglott',
-    title: 'Polyglott-Reisender',
-    desc: 'Besuche alle drei Niveaustufen (A1, A2 und B1).',
+    title: 'Polyglot Traveler',
+    desc: 'Visit all three CEFR levels (A1, A2, and B1).',
     icon: 'fa-solid fa-earth-europe',
     color: 'text-blue-400'
   },
   {
     id: 'srs_pioneer',
-    title: 'FSRS-Pionier',
-    desc: 'Befördere mindestens 5 Vokabeln über die Lernphase hinaus.',
+    title: 'FSRS Pioneer',
+    desc: 'Promote at least 5 words beyond the learning phase.',
     icon: 'fa-solid fa-box-archive',
     color: 'text-purple-400'
   },
   {
     id: 'marathon',
-    title: 'Quiz-Marathon',
-    desc: 'Beantworte 30 Fragen in einer einzigen Quiz-Runde.',
+    title: 'Quiz Marathon',
+    desc: 'Answer 30 questions in a single quiz round.',
     icon: 'fa-solid fa-person-running',
     color: 'text-rose-400'
   },
   {
     id: 'streak_3',
-    title: 'Drei-Tage-Flamme',
-    desc: 'Erreiche eine tägliche Lernserie von 3 Tagen.',
+    title: 'Three-Day Flame',
+    desc: 'Reach a 3-day daily learning streak.',
     icon: 'fa-solid fa-fire-flame-curved',
     color: 'text-orange-400'
   },
   {
     id: 'streak_7',
-    title: 'Wochen-Krieger',
-    desc: 'Erreiche eine tägliche Lernserie von 7 Tagen.',
+    title: 'Weekly Warrior',
+    desc: 'Reach a 7-day daily learning streak.',
     icon: 'fa-solid fa-fire-flame-simple',
     color: 'text-orange-500'
   },
   {
     id: 'streak_30',
-    title: 'Monats-Meister',
-    desc: 'Erreiche eine tägliche Lernserie von 30 Tagen.',
+    title: 'Monthly Master',
+    desc: 'Reach a 30-day daily learning streak.',
     icon: 'fa-solid fa-medal',
     color: 'text-yellow-400'
   },
   {
     id: 'retention_90',
-    title: 'Gedächtnis-Genie',
-    desc: 'Erreiche eine Behaltensrate von über 90%.',
+    title: 'Memory Genius',
+    desc: 'Achieve a retention rate above 90%.',
     icon: 'fa-solid fa-brain',
     color: 'text-fuchsia-400'
   },
   {
     id: 'first_steps',
-    title: 'Erste Schritte',
-    desc: 'Bewerte deine erste Karteikarte mit dem FSRS-System.',
+    title: 'First Steps',
+    desc: 'Rate your first flashcard with the FSRS system.',
     icon: 'fa-solid fa-shoe-prints',
     color: 'text-lime-400'
   },
   {
     id: 'quiz_rookie',
-    title: 'Quiz-Anfänger',
-    desc: 'Beende dein erstes Quiz (mind. 5 Fragen).',
+    title: 'Quiz Rookie',
+    desc: 'Complete your first quiz (min. 5 questions).',
     icon: 'fa-solid fa-circle-check',
     color: 'text-cyan-400'
   },
   {
     id: 'adventurer',
-    title: 'Abenteurer',
-    desc: 'Schließe dein erstes Deutsch-Abenteuer-Szenario ab.',
+    title: 'Adventurer',
+    desc: 'Complete your first German Adventure scenario.',
     icon: 'fa-solid fa-dungeon',
     color: 'text-amber-500'
   }
@@ -1183,7 +1183,7 @@ export async function restoreFromSyncKey(base64Str) {
     const decodedStr = decodeURIComponent(escape(atob(base64Str.trim())));
     const payload = JSON.parse(decodedStr);
     if (!payload || typeof payload !== 'object' || !payload.data) {
-      throw new Error("Dateiformat ist ungültig. Es muss ein gültiger Sync-Schlüssel sein.");
+      throw new Error("Invalid format. It must be a valid Sync Key.");
     }
     
     const data = payload.data;
