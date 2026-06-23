@@ -77,8 +77,7 @@
   <noscript>
     <div style="background:#1e293b;color:#e2e8f0;padding:2rem;text-align:center;font-family:Inter,sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;">
       <h2 style="font-size:1.5rem;margin-bottom:1rem;">🇩🇪 DeutschSphere</h2>
-      <p>Diese Anwendung benötigt JavaScript. Bitte aktivieren Sie JavaScript in Ihren Browsereinstellungen.</p>
-      <p style="margin-top:0.5rem;color:#94a3b8;">This application requires JavaScript. Please enable JavaScript in your browser settings.</p>
+      <p>This application requires JavaScript. Please enable JavaScript in your browser settings to continue.</p>
     </div>
   </noscript>
 
@@ -365,15 +364,13 @@
         </div>
         <div class="flex items-center justify-between text-xs text-slate-400">
           <div class="flex flex-col">
-            <span class="font-medium text-slate-300">Als gelernt markieren</span>
-            <span class="text-[10px] text-slate-500 font-medium">Mark as Learned</span>
+            <span class="font-medium text-slate-300">Mark as Learned</span>
           </div>
           <kbd class="hotkey-badge px-2 py-0.5 rounded text-[10px] font-mono text-slate-300">L</kbd>
         </div>
         <div class="flex items-center justify-between text-xs text-slate-400">
           <div class="flex flex-col">
-            <span class="font-medium text-slate-300">Nächste Karte</span>
-            <span class="text-[10px] text-slate-500 font-medium">Next Card</span>
+            <span class="font-medium text-slate-300">Next Card</span>
           </div>
           <div class="flex gap-1">
             <kbd class="hotkey-badge px-1.5 py-0.5 rounded text-[10px] font-mono text-slate-300">→</kbd>
@@ -382,8 +379,7 @@
         </div>
         <div class="flex items-center justify-between text-xs text-slate-400">
           <div class="flex flex-col">
-            <span class="font-medium text-slate-300">Vorherige Karte</span>
-            <span class="text-[10px] text-slate-500 font-medium">Previous Card</span>
+            <span class="font-medium text-slate-300">Previous Card</span>
           </div>
           <div class="flex gap-1">
             <kbd class="hotkey-badge px-1.5 py-0.5 rounded text-[10px] font-mono text-slate-300">←</kbd>
@@ -392,36 +388,31 @@
         </div>
         <div class="flex items-center justify-between text-xs text-slate-400">
           <div class="flex flex-col">
-            <span class="font-medium text-slate-300">Karten mischen</span>
-            <span class="text-[10px] text-slate-500 font-medium">Shuffle Cards</span>
+            <span class="font-medium text-slate-300">Shuffle Cards</span>
           </div>
           <kbd class="hotkey-badge px-2 py-0.5 rounded text-[10px] font-mono text-slate-300">S</kbd>
         </div>
         <div class="flex items-center justify-between text-xs text-slate-400">
           <div class="flex flex-col">
-            <span class="font-medium text-slate-300">Schnell-Lesen umschalten</span>
-            <span class="text-[10px] text-slate-500 font-medium">Toggle Fast Read</span>
+            <span class="font-medium text-slate-300">Toggle Fast Read</span>
           </div>
           <kbd class="hotkey-badge px-2 py-0.5 rounded text-[10px] font-mono text-slate-300">F</kbd>
         </div>
         <div class="flex items-center justify-between text-xs text-slate-400">
           <div class="flex flex-col">
-            <span class="font-medium text-slate-300">Gelernte ausblenden</span>
-            <span class="text-[10px] text-slate-500 font-medium">Toggle Hide Learned</span>
+            <span class="font-medium text-slate-300">Toggle Hide Learned</span>
           </div>
           <kbd class="hotkey-badge px-2 py-0.5 rounded text-[10px] font-mono text-slate-300">H</kbd>
         </div>
         <div class="flex items-center justify-between text-xs text-slate-400">
           <div class="flex flex-col">
-            <span class="font-medium text-slate-300">Aussprache-Autoplay</span>
-            <span class="text-[10px] text-slate-500 font-medium">Toggle Autoplay</span>
+            <span class="font-medium text-slate-300">Toggle Autoplay</span>
           </div>
           <kbd class="hotkey-badge px-2 py-0.5 rounded text-[10px] font-mono text-slate-300">A</kbd>
         </div>
         <div class="flex items-center justify-between text-xs text-slate-400">
           <div class="flex flex-col">
-            <span class="font-medium text-slate-300">Bilder anzeigen umschalten</span>
-            <span class="text-[10px] text-slate-500 font-medium">Toggle Images</span>
+            <span class="font-medium text-slate-300">Toggle Images</span>
           </div>
           <kbd class="hotkey-badge px-2 py-0.5 rounded text-[10px] font-mono text-slate-300">B</kbd>
         </div>
@@ -440,15 +431,15 @@
       <!-- Top Stats and Filters Info -->
     <div class="w-full max-w-3xl mx-auto flex items-center justify-between mb-5">
       <div class="flex flex-col">
-        <h2 id="current-category-title" class="text-xl md:text-2xl font-bold font-display tracking-tight text-white notranslate">Alle Kategorien</h2>
-        <p id="deck-stats" class="text-sm text-slate-400 mt-1">Lade Karten...</p>
+        <h2 id="current-category-title" class="text-xl md:text-2xl font-bold font-display tracking-tight text-white notranslate">All Categories</h2>
+        <p id="deck-stats" class="text-sm text-slate-400 mt-1">Loading cards...</p>
       </div>
       <div class="flex gap-2 relative" id="deck-control-deck">
         <!-- Unified Preferences Menu — All deck controls consolidated here -->
         <div class="relative inline-block text-left" id="deck-preferences-menu">
-          <button id="deck-prefs-toggle-btn" class="flex items-center gap-2 bg-slate-900/80 border border-slate-800 hover:border-indigo-500 hover:bg-indigo-950/30 text-slate-300 hover:text-indigo-400 px-4 py-2.5 rounded-xl text-sm font-medium transition-all shadow-md shadow-slate-950/20" title="Karten-Einstellungen (Preferences)" aria-haspopup="true" aria-expanded="false">
+          <button id="deck-prefs-toggle-btn" class="flex items-center gap-2 bg-slate-900/80 border border-slate-800 hover:border-indigo-500 hover:bg-indigo-950/30 text-slate-300 hover:text-indigo-400 px-4 py-2.5 rounded-xl text-sm font-medium transition-all shadow-md shadow-slate-950/20" title="Settings (Preferences)" aria-haspopup="true" aria-expanded="false">
             <i class="fa-solid fa-sliders text-xs"></i>
-            <span>Einstellungen</span>
+            <span>Settings</span>
             <i class="fa-solid fa-chevron-down text-[8px] ml-0.5 opacity-50"></i>
           </button>
           
@@ -456,33 +447,33 @@
           <div id="deck-prefs-dropdown" class="absolute right-0 mt-2 w-80 origin-top-right rounded-2xl border border-slate-800 bg-slate-950/95 backdrop-blur-xl shadow-2xl transition-all duration-200 transform scale-95 opacity-0 pointer-events-none z-50 p-4 space-y-1" role="menu">
             <!-- Header -->
             <div class="flex items-center justify-between border-b border-slate-800 pb-2.5 mb-2">
-              <h4 class="text-xs font-bold uppercase tracking-widest text-slate-400">Karten-Einstellungen</h4>
+              <h4 class="text-xs font-bold uppercase tracking-widest text-slate-400">Settings</h4>
               <span class="text-[9px] text-slate-500 font-medium font-sans uppercase">Card Preferences</span>
             </div>
             
             <!-- Action 1: Shuffle — most frequently used, at top -->
-            <button id="shuffle-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group" title="Kartenreihenfolge zufällig mischen">
+            <button id="shuffle-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group" title="Shuffle card order randomly">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:border-indigo-500/40 transition-colors">
                   <i class="fa-solid fa-shuffle text-xs"></i>
                 </div>
                 <div class="flex flex-col text-left">
-                  <span class="text-xs font-semibold text-slate-200">Karten mischen</span>
-                  <span class="text-[10px] text-slate-500 font-medium">Shuffle Cards</span>
+                  <span class="text-xs font-semibold text-slate-200">Shuffle Cards</span>
+                  <span class="text-[10px] text-slate-500 font-medium">Randomize deck order</span>
                 </div>
               </div>
               <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded text-[10px] font-mono text-slate-400">S</kbd>
             </button>
 
             <!-- Action 2: Hide Learned -->
-            <button id="hide-learned-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group" title="Gelernte Karten ausblenden">
+            <button id="hide-learned-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group" title="Hide learned cards">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:border-indigo-500/40 transition-colors">
                   <i class="fa-solid fa-eye-slash text-xs"></i>
                 </div>
                 <div class="flex flex-col text-left">
-                  <span id="hide-learned-text" class="text-xs font-semibold text-slate-200">Gelernte ausblenden</span>
-                  <span class="text-[10px] text-slate-500 font-medium">Hide Learned Cards</span>
+                  <span id="hide-learned-text" class="text-xs font-semibold text-slate-200">Hide Learned</span>
+                  <span class="text-[10px] text-slate-500 font-medium">Filter mastered cards</span>
                 </div>
               </div>
               <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded text-[10px] font-mono text-slate-400">H</kbd>
@@ -492,14 +483,14 @@
             <div class="border-t border-slate-800/60 my-1"></div>
 
             <!-- Toggle 1: Schnell-Lesen -->
-            <button id="read-mode-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group text-left" title="Lese-Modus umschalten (F)">
+            <button id="read-mode-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group text-left" title="Toggle read mode (F)">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 group-hover:border-amber-500/40 transition-colors">
                   <i class="fa-solid fa-bolt text-xs"></i>
                 </div>
                 <div class="flex flex-col">
-                  <span class="text-xs font-semibold text-slate-200">Schnell-Lesen</span>
-                  <span class="text-[10px] text-slate-500 font-medium">Fast Read Mode</span>
+                  <span class="text-xs font-semibold text-slate-200">Fast Read Mode</span>
+                  <span class="text-[10px] text-slate-500 font-medium">Quick translation focus</span>
                 </div>
               </div>
               <div class="flex items-center gap-2">
@@ -507,19 +498,19 @@
                 <div class="read-mode-toggle-wrapper flex items-center justify-center w-8 h-8 rounded-lg text-sm font-medium transition-all bg-slate-900/80 border border-slate-800 text-slate-300 group-hover:border-indigo-500/30 group-hover:bg-indigo-950/20">
                   <i class="toggle-icon fa-solid fa-toggle-off text-xs"></i>
                 </div>
-                <span id="read-mode-text" class="sr-only">Schnell-Lesen</span>
+                <span id="read-mode-text" class="sr-only">Fast Read</span>
               </div>
             </button>
 
             <!-- Toggle 2: Autoplay -->
-            <button id="autoplay-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group text-left" title="Aussprache-Autoplay umschalten (A)">
+            <button id="autoplay-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group text-left" title="Toggle pronunciation autoplay (A)">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:border-emerald-500/40 transition-colors">
                   <i class="fa-solid fa-circle-play text-xs"></i>
                 </div>
                 <div class="flex flex-col">
-                  <span class="text-xs font-semibold text-slate-200">Aussprache-Autoplay</span>
-                  <span class="text-[10px] text-slate-500 font-medium">Auto-Speak Vocab</span>
+                  <span class="text-xs font-semibold text-slate-200">Auto-Speak Vocab</span>
+                  <span class="text-[10px] text-slate-500 font-medium">Automatic voice play</span>
                 </div>
               </div>
               <div class="flex items-center gap-2">
@@ -532,13 +523,13 @@
             </button>
 
             <!-- Toggle 3: Bilder anzeigen -->
-            <button id="toggle-images-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group text-left" title="Bilder anzeigen/ausblenden (B)">
+            <button id="toggle-images-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group text-left" title="Show/hide images (B)">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-lg bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400 group-hover:border-pink-500/40 transition-colors">
                   <i class="fa-solid fa-image text-xs"></i>
                 </div>
                 <div class="flex flex-col">
-                  <span class="text-xs font-semibold text-slate-400">Premium-Bilder (In Kürze)</span>
+                  <span class="text-xs font-semibold text-slate-400">Premium Illustrations</span>
                   <span class="text-[10px] text-slate-500 font-medium">Coming in V1.0.1</span>
                 </div>
               </div>
@@ -547,7 +538,7 @@
                 <div class="toggle-images-wrapper flex items-center justify-center w-8 h-8 rounded-lg text-sm font-medium transition-all bg-slate-900/80 border border-slate-800 text-slate-300 group-hover:border-indigo-500/30 group-hover:bg-indigo-950/20">
                   <i class="toggle-icon fa-solid fa-toggle-off text-xs text-slate-500"></i>
                 </div>
-                <span id="toggle-images-text" class="sr-only">Bilder anzeigen</span>
+                <span id="toggle-images-text" class="sr-only">Show Illustrations</span>
               </div>
             </button>
 
@@ -561,25 +552,25 @@
                   <i class="fa-solid fa-volume-high text-xs"></i>
                 </div>
                 <div class="flex flex-col">
-                  <span class="text-xs font-semibold text-slate-200">Effekt-Lautstärke</span>
-                  <span class="text-[10px] text-slate-500 font-medium">SFX Volume</span>
+                  <span class="text-xs font-semibold text-slate-200">SFX Volume</span>
+                  <span class="text-[10px] text-slate-500 font-medium">Effect audio volume</span>
                 </div>
               </div>
               <div class="flex items-center gap-2">
-                <input id="sfx-volume-slider" type="range" min="0" max="1" step="0.1" value="0.5" class="w-20 h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" title="Effekt-Lautstärke anpassen">
+                <input id="sfx-volume-slider" type="range" min="0" max="1" step="0.1" value="0.5" class="w-20 h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" title="Adjust SFX Volume">
                 <span id="sfx-volume-val" class="text-[10px] font-mono font-bold text-slate-400 w-8 text-right">50%</span>
               </div>
             </div>
 
             <!-- Klang-Stil Switcher -->
-            <button id="sound-style-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group text-left" title="Klang-Stil umschalten">
+            <button id="sound-style-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group text-left" title="Toggle sound style">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:border-indigo-500/40 transition-colors">
                   <i class="fa-solid fa-music text-xs"></i>
                 </div>
                 <div class="flex flex-col">
-                  <span class="text-xs font-semibold text-slate-200">Sound-Effekt Stil</span>
-                  <span class="text-[10px] text-slate-500 font-medium">SFX Style</span>
+                  <span class="text-xs font-semibold text-slate-200">SFX Style</span>
+                  <span class="text-[10px] text-slate-500 font-medium">Chime tone type</span>
                 </div>
               </div>
               <div class="flex items-center gap-1.5 px-2 py-1 h-8 rounded-lg text-xs font-medium bg-slate-900/80 border border-slate-800 text-slate-300 group-hover:border-indigo-500 group-hover:bg-indigo-950/30">
@@ -589,14 +580,14 @@
             </button>
 
             <!-- Partikel-Effekte Toggle -->
-            <button id="particles-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group text-left" title="Partikel-Effekte umschalten">
+            <button id="particles-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group text-left" title="Toggle particle bursts">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:border-indigo-500/40 transition-colors">
                   <i class="fa-solid fa-wand-magic-sparkles text-xs"></i>
                 </div>
                 <div class="flex flex-col">
-                  <span class="text-xs font-semibold text-slate-200">Partikel-Effekte</span>
-                  <span class="text-[10px] text-slate-500 font-medium">Particle Bursts</span>
+                  <span class="text-xs font-semibold text-slate-200">Particle Bursts</span>
+                  <span class="text-[10px] text-slate-500 font-medium">Screen feedback on/off</span>
                 </div>
               </div>
               <div class="flex items-center justify-center w-8 h-8 rounded-lg text-sm font-medium bg-slate-900/80 border border-slate-800 text-slate-300 group-hover:border-indigo-500 group-hover:bg-indigo-950/30">
@@ -606,9 +597,9 @@
 
             <!-- Danger Zone: Reset Progress -->
             <div class="border-t border-slate-800 pt-3 mt-1">
-              <button id="reset-progress-btn-main" class="w-full flex items-center justify-center gap-2 bg-slate-900/60 border border-slate-800/80 hover:border-rose-500 hover:bg-rose-950/20 text-slate-400 hover:text-rose-400 py-2.5 rounded-xl text-xs font-semibold transition-all shadow-sm" title="Gesamten Lernfortschritt zurücksetzen">
+              <button id="reset-progress-btn-main" class="w-full flex items-center justify-center gap-2 bg-slate-900/60 border border-slate-800/80 hover:border-rose-500 hover:bg-rose-950/20 text-slate-400 hover:text-rose-400 py-2.5 rounded-xl text-xs font-semibold transition-all shadow-sm" title="Reset entire learning progress">
                 <i class="fa-solid fa-arrow-rotate-left text-[10px]"></i>
-                <span>Lernfortschritt zurücksetzen</span>
+                <span>Reset Learning Progress</span>
               </button>
             </div>
           </div>
@@ -622,8 +613,8 @@
       <!-- Progress Bar Indicator -->
       <div class="w-full mb-4 space-y-2">
         <div class="flex justify-between items-center text-xs font-semibold text-slate-400">
-          <span>Stapel-Durchlauf</span>
-          <span id="deck-progress-text" class="font-mono text-indigo-400">Karte 0 von 0 (0%)</span>
+          <span>Deck Progress</span>
+          <span id="deck-progress-text" class="font-mono text-indigo-400">Card 0 of 0 (0%)</span>
         </div>
         <div class="w-full bg-slate-900/60 rounded-full h-2 overflow-hidden border border-slate-800/40">
           <div id="progress-bar-fill" class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 h-full w-0 transition-all duration-300"></div>
@@ -681,7 +672,7 @@
 
         
         <!-- The Core Card Element (M6: aria-live for screen reader announcements) -->
-        <div id="flashcard" role="region" aria-live="polite" aria-label="Aktuelle Karteikarte" class="glass border rounded-2xl p-6 md:py-6 md:px-10 min-h-[150px] md:min-h-[180px] flex flex-col justify-between cursor-pointer transition-all duration-300 select-none relative group overflow-hidden card-glow-neutral">
+        <div id="flashcard" role="region" aria-live="polite" aria-label="Aktuelle Karteikarte" class="glass border rounded-2xl p-6 md:py-6 md:px-10 min-h-[220px] sm:min-h-[240px] md:min-h-[280px] flex flex-col justify-between cursor-pointer transition-all duration-300 select-none relative group overflow-hidden card-glow-neutral">
           <!-- Subtle Glow Overlay on hover -->
           <div class="absolute inset-0 bg-gradient-to-b from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
 
@@ -702,7 +693,7 @@
 
             <div class="flex flex-wrap items-baseline justify-center gap-3 relative">
               <h2 id="card-word" class="text-3xl sm:text-4xl md:text-5xl font-black font-display tracking-tight text-white drop-shadow-md group-hover:scale-[1.02] transition-transform duration-300 leading-tight notranslate" aria-live="polite" role="status">Word</h2>
-              <button id="suffix-helper-trigger" aria-label="Grammatik-Tipp anzeigen" class="hidden p-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 hover:bg-amber-500/20 active:scale-95 transition-all text-xs z-20" title="Grammatik-Schnittstelle umschalten">
+              <button id="suffix-helper-trigger" aria-label="Show Grammar Tip" class="hidden p-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 hover:bg-amber-500/20 active:scale-95 transition-all text-xs z-20" title="Toggle Grammar Panel">
                 <i class="fa-solid fa-lightbulb"></i>
               </button>
               <span id="card-pronunciation" class="text-base sm:text-lg md:text-xl text-slate-400 font-mono italic tracking-wide hidden"></span>
@@ -714,7 +705,7 @@
                 <div class="flex items-center justify-between">
                   <div class="flex items-center gap-2 text-amber-400">
                     <i class="fa-solid fa-lightbulb text-[10px] animate-pulse"></i>
-                    <span class="text-[9px] font-extrabold uppercase tracking-widest">Grammatik-Regel</span>
+                    <span class="text-[9px] font-extrabold uppercase tracking-widest">Grammar Rule</span>
                   </div>
                   <span id="suffix-drawer-badge" class="px-1.5 py-0.5 bg-amber-500/20 text-amber-300 text-[8px] font-extrabold rounded uppercase tracking-wider">DIE (Feminin)</span>
                 </div>
@@ -884,7 +875,7 @@
               <button id="card-grammar-matrix-trigger" class="w-full py-2.5 px-4 rounded-xl bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-400 font-extrabold text-xs uppercase tracking-wider flex items-center justify-between transition-all border border-indigo-500/20 active:scale-98">
                 <span class="flex items-center gap-2">
                   <i class="fa-solid fa-table text-sm"></i>
-                  <span id="grammar-matrix-title">Grammatik-Matrix | Grammar Table</span>
+                  <span id="grammar-matrix-title">Grammar Matrix</span>
                 </span>
                 <i id="grammar-matrix-icon" class="fa-solid fa-chevron-down transition-transform duration-300"></i>
               </button>
@@ -912,15 +903,15 @@
 
     <!-- Hotkeys hint footer (Hidden on mobile) -->
     <footer class="mt-4 text-center text-[11px] font-medium text-slate-500/80 hidden sm:block">
-      Tastatursteuerung: <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">Leertaste</kbd> zum Aufdecken | 
-      <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">←</kbd> <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">→</kbd> zum Navigieren | 
-      <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">L</kbd> zum Lernen | 
-      <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">S</kbd> zum Mischen | 
-      <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">V</kbd> zum Anhören |
-      <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">F</kbd> für Schnell-Lesen |
-      <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">H</kbd> für Gelernte ausblenden |
-      <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">A</kbd> für Autoplay |
-      <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">B</kbd> für Bilder anzeigen
+      Keyboard Controls: <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">Spacebar</kbd> to Reveal | 
+      <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">←</kbd> <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">→</kbd> to Navigate | 
+      <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">L</kbd> to toggle Learned | 
+      <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">S</kbd> to Shuffle | 
+      <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">V</kbd> to Pronounce |
+      <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">F</kbd> to toggle Fast Read |
+      <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">H</kbd> to Hide Learned |
+      <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">A</kbd> to toggle Autoplay |
+      <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">B</kbd> to toggle Images
     </footer>
     </div> <!-- End of flashcards-view -->
 
@@ -960,21 +951,19 @@
         <!-- Quiz Configurations Settings -->
         <div class="w-full glass border border-slate-800/80 rounded-2xl p-5 mb-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div class="flex flex-col">
-            <h3 class="text-sm font-bold text-white font-display">Quiz-Einstellungen (Options)</h3>
+            <h3 class="text-sm font-bold text-white font-display">Quiz Settings</h3>
             <p class="text-xs text-slate-500 mt-0.5">
-              <span>Wählen Sie das Format und die Rundenlänge</span>
-              <span class="hidden sm:inline"> | </span>
-              <span class="text-xs text-slate-500 font-normal">Choose format and round length</span>
+              <span>Choose format and round length</span>
             </p>
           </div>
           <div class="flex items-center gap-3">
-            <span class="text-xs text-slate-400 font-semibold">Umfang (Length):</span>
+            <span class="text-xs text-slate-400 font-semibold">Length:</span>
             <div class="relative">
               <select id="quiz-length-select" class="bg-slate-950/60 border border-slate-800 rounded-xl py-2 px-3 text-xs text-slate-200 focus:outline-none focus:border-indigo-500 transition-all font-medium appearance-none cursor-pointer pr-8">
-                <option value="10">10 Fragen (Standard) | 10 Questions</option>
-                <option value="20">20 Fragen | 20 Questions</option>
-                <option value="50">50 Fragen | 50 Questions</option>
-                <option value="endless">Endlos-Modus ♾️ | Endless Mode</option>
+                <option value="10">10 Questions (Standard)</option>
+                <option value="20">20 Questions</option>
+                <option value="50">50 Questions</option>
+                <option value="endless">Endless Mode ♾️</option>
               </select>
               <span class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none text-slate-500 text-[10px]">
                 <i class="fa-solid fa-chevron-down"></i>
@@ -989,13 +978,12 @@
             <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-400 text-xl mb-6 group-hover:scale-110 transition-transform">
               <i class="fa-solid fa-list-check"></i>
             </div>
-            <h3 class="text-xl font-bold text-white mb-2 font-display group-hover:text-pink-400 transition-colors">Vokabel-Test</h3>
+            <h3 class="text-xl font-bold text-white mb-2 font-display group-hover:text-pink-400 transition-colors">Vocabulary Quiz</h3>
             <p class="text-sm text-slate-400 mb-4">
-              <span>Multiple-Choice-Quiz. Wählen Sie die richtige englische Bedeutung oder das passende deutsche Wort.</span>
-              <span class="block text-xs text-slate-500 font-normal mt-1.5">Multiple-choice quiz. Choose the correct English meaning or appropriate German word.</span>
+              <span>Multiple-choice quiz. Choose the correct English meaning or appropriate German word.</span>
             </p>
             <div class="text-xs font-semibold text-pink-400/80 flex items-center gap-1.5 mt-auto">
-              <span>Jetzt starten | Start Now</span>
+              <span>Start Now</span>
               <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
             </div>
           </div>
@@ -1005,13 +993,12 @@
             <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl mb-6 group-hover:scale-110 transition-transform">
               <i class="fa-solid fa-pen-clip"></i>
             </div>
-            <h3 class="text-xl font-bold text-white mb-2 font-display group-hover:text-emerald-400 transition-colors">Schreib-Arena</h3>
+            <h3 class="text-xl font-bold text-white mb-2 font-display group-hover:text-emerald-400 transition-colors">Spelling Arena</h3>
             <p class="text-sm text-slate-400 mb-4">
-              <span>Schreib- und Rechtschreibtrainer. Tippen Sie die korrekte Übersetzung mit Umlaut-Unterstützung.</span>
-              <span class="block text-xs text-slate-500 font-normal mt-1.5">Spelling and orthography trainer. Type the correct translation with integrated umlaut support.</span>
+              <span>Spelling and writing trainer. Type the correct translation with integrated umlaut support.</span>
             </p>
             <div class="text-xs font-semibold text-emerald-400/80 flex items-center gap-1.5 mt-auto">
-              <span>Jetzt starten | Start Now</span>
+              <span>Start Now</span>
               <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
             </div>
           </div>
@@ -1023,8 +1010,8 @@
         <!-- Progress Bar Indicator -->
         <div class="w-full mb-6 space-y-2">
           <div class="flex justify-between items-center text-xs font-semibold text-slate-400">
-            <span id="quiz-mode-badge" class="font-display uppercase text-indigo-400 tracking-wider">Vokabel-Test</span>
-            <span id="quiz-progress-text" class="font-mono text-indigo-400">Frage 1 von 10</span>
+            <span id="quiz-mode-badge" class="font-display uppercase text-indigo-400 tracking-wider">Vocabulary Test</span>
+            <span id="quiz-progress-text" class="font-mono text-indigo-400">Question 1 of 10</span>
           </div>
           <div class="w-full bg-slate-900/60 rounded-full h-1.5 overflow-hidden border border-slate-800/40">
             <div id="quiz-progress-bar-fill" class="bg-gradient-to-r from-indigo-500 to-violet-500 h-full w-1/12 transition-all duration-300"></div>
@@ -1035,11 +1022,11 @@
         <div class="w-full glass border border-slate-800/80 rounded-2xl p-6 md:p-8 flex flex-col items-center mb-6 relative overflow-hidden">
           <!-- Question illustration (svg) -->
           <div id="quiz-card-image-container" class="w-32 h-32 flex items-center justify-center mb-4 hidden">
-            <img id="quiz-card-image" src="" alt="Quiz-Bild" class="max-h-full max-w-full object-contain pointer-events-none drop-shadow-md" />
+            <img id="quiz-card-image" src="" alt="Quiz Illustration" class="max-h-full max-w-full object-contain pointer-events-none drop-shadow-md" />
           </div>
           <span id="quiz-word-class" class="px-2 py-0.5 bg-slate-800/80 border border-slate-700/60 text-slate-400 text-[10px] uppercase font-bold tracking-wider rounded-md mb-2">Noun</span>
-          <h3 id="quiz-question-prompt" class="text-2xl sm:text-3xl font-black font-display text-white text-center leading-tight notranslate">Deutsches Wort</h3>
-          <p id="quiz-question-subprompt" class="text-xs text-slate-500 font-medium mt-1 uppercase tracking-wider">Tippen Sie die Übersetzung</p>
+          <h3 id="quiz-question-prompt" class="text-2xl sm:text-3xl font-black font-display text-white text-center leading-tight notranslate">German Word</h3>
+          <p id="quiz-question-subprompt" class="text-xs text-slate-500 font-medium mt-1 uppercase tracking-wider">Type the translation</p>
         </div>
 
         <!-- Mode A Workspace: Multiple Choice Options -->
@@ -1050,7 +1037,7 @@
         <!-- Mode B Workspace: Spelling Input -->
         <div id="quiz-spelling-container" class="w-full flex flex-col space-y-4 mb-6 hidden">
           <div class="relative">
-            <input type="text" id="quiz-spelling-input" class="w-full bg-slate-950/60 border border-slate-800 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 rounded-xl py-3.5 px-4 text-slate-200 placeholder-slate-600 focus:outline-none transition-all font-semibold text-lg text-center" placeholder="Geben Sie die Antwort ein..." autocomplete="off">
+            <input type="text" id="quiz-spelling-input" class="w-full bg-slate-950/60 border border-slate-800 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 rounded-xl py-3.5 px-4 text-slate-200 placeholder-slate-600 focus:outline-none transition-all font-semibold text-lg text-center" placeholder="Type your answer here..." autocomplete="off">
           </div>
           
           <!-- Virtual Umlaut / Gender Keyboard -->
@@ -1066,7 +1053,7 @@
           </div>
 
           <!-- Confirm button -->
-          <button id="quiz-spelling-submit" class="w-full bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white py-3.5 rounded-xl font-bold transition-all shadow-lg shadow-emerald-600/20 text-center">Überprüfen</button>
+          <button id="quiz-spelling-submit" class="w-full bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white py-3.5 rounded-xl font-bold transition-all shadow-lg shadow-emerald-600/20 text-center">Check Answer</button>
         </div>
 
         <!-- Bottom Feedback Panel (e.g. Next Question trigger) -->
@@ -1076,13 +1063,13 @@
               <i class="fa-solid fa-check"></i>
             </div>
             <div>
-              <p id="quiz-feedback-title" class="font-bold text-sm text-white">Richtig!</p>
-              <p id="quiz-feedback-text" class="text-xs text-slate-400 mt-0.5">Die korrekte Antwort ist ...</p>
+              <p id="quiz-feedback-title" class="font-bold text-sm text-white">Correct!</p>
+              <p id="quiz-feedback-text" class="text-xs text-slate-400 mt-0.5">The correct answer is ...</p>
             </div>
           </div>
           <div class="flex gap-2">
-            <button id="quiz-finish-early-btn" class="bg-slate-900/60 hover:bg-rose-950/20 border border-slate-800/80 text-slate-400 hover:text-rose-400 px-4 py-2.5 rounded-xl text-xs font-semibold transition-all hidden">Beenden</button>
-            <button id="quiz-next-question-btn" class="bg-slate-800 hover:bg-slate-700 active:scale-95 text-white px-5 py-2.5 rounded-xl text-xs font-semibold transition-all">Weiter <i class="fa-solid fa-chevron-right ml-1"></i></button>
+            <button id="quiz-finish-early-btn" class="bg-slate-900/60 hover:bg-rose-950/20 border border-slate-800/80 text-slate-400 hover:text-rose-400 px-4 py-2.5 rounded-xl text-xs font-semibold transition-all hidden">Finish Early</button>
+            <button id="quiz-next-question-btn" class="bg-slate-800 hover:bg-slate-700 active:scale-95 text-white px-5 py-2.5 rounded-xl text-xs font-semibold transition-all">Next <i class="fa-solid fa-chevron-right ml-1"></i></button>
           </div>
         </div>
       </div>
@@ -1092,25 +1079,25 @@
         <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-indigo-500 to-violet-600 flex items-center justify-center shadow-lg shadow-indigo-500/25 text-white text-3xl mb-6">
           <i class="fa-solid fa-award"></i>
         </div>
-        <h3 class="text-2xl font-black font-display text-white">Runde abgeschlossen!</h3>
-        <p class="text-sm text-slate-400 mt-2">Herzlichen Glückwunsch. Sie haben die Übungseinheit abgeschlossen.</p>
+        <h3 class="text-2xl font-black font-display text-white">Round Completed!</h3>
+        <p class="text-sm text-slate-400 mt-2">Congratulations! You have successfully completed this practice round.</p>
 
         <!-- Stats grid -->
         <div class="grid grid-cols-2 gap-4 w-full my-8">
           <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4">
             <span class="text-2xl font-black text-white font-mono" id="quiz-stats-score">0 / 0</span>
-            <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mt-1">Richtig</p>
+            <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mt-1">Correct</p>
           </div>
           <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4">
             <span class="text-2xl font-black text-white font-mono" id="quiz-stats-accuracy">0%</span>
-            <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mt-1">Genauigkeit</p>
+            <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mt-1">Accuracy</p>
           </div>
         </div>
 
         <!-- Action buttons -->
         <div class="flex flex-col sm:flex-row gap-3 w-full">
-          <button id="quiz-retry-btn" class="flex-1 bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white py-3.5 rounded-xl font-bold transition-all shadow-lg shadow-indigo-600/20">Nochmal spielen</button>
-          <button id="quiz-quit-btn" class="flex-1 bg-slate-900 hover:bg-slate-850 active:scale-95 text-slate-300 border border-slate-800 py-3.5 rounded-xl font-bold transition-all">Zurück zur Auswahl</button>
+          <button id="quiz-retry-btn" class="flex-1 bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white py-3.5 rounded-xl font-bold transition-all shadow-lg shadow-indigo-600/20">Play Again</button>
+          <button id="quiz-quit-btn" class="flex-1 bg-slate-900 hover:bg-slate-850 active:scale-95 text-slate-300 border border-slate-800 py-3.5 rounded-xl font-bold transition-all">Back to Selection</button>
         </div>
       </div>
     </div> <!-- End of quiz-view -->
@@ -1120,24 +1107,24 @@
       <!-- Header Block -->
       <div class="mb-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div class="flex flex-col">
-          <h2 class="text-2xl md:text-3xl font-bold font-display tracking-tight text-white">Spickzettel (Cheatcodes)</h2>
-          <p class="text-sm text-slate-400 mt-1">Strukturelle Abkürzungen &amp; Grammatik-Hacks für das Niveau A2</p>
+          <h2 class="text-2xl md:text-3xl font-bold font-display tracking-tight text-white">Grammar Cheat Codes</h2>
+          <p class="text-sm text-slate-400 mt-1">Structural Shortcuts &amp; Grammar Hacks</p>
         </div>
         <!-- Search Input -->
         <div class="relative w-full md:w-80">
-          <button id="cheatcode-search-btn" aria-label="Abkürzung suchen" class="z-10 absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 hover:text-indigo-400 transition-colors cursor-pointer" title="Abkürzung suchen">
+          <button id="cheatcode-search-btn" aria-label="Search shortcut" class="z-10 absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 hover:text-indigo-400 transition-colors cursor-pointer" title="Search shortcut">
             <i class="fa-solid fa-magnifying-glass text-sm"></i>
           </button>
-          <input type="text" id="cheatcode-search" class="w-full bg-slate-900 border border-slate-800 rounded-xl py-2 pl-10 pr-4 text-sm placeholder-slate-500 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-medium" placeholder="Abkürzung suchen (z.B. -ung, vor-)..." autocomplete="off">
+          <input type="text" id="cheatcode-search" class="w-full bg-slate-900 border border-slate-800 rounded-xl py-2 pl-10 pr-4 text-sm placeholder-slate-500 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-medium" placeholder="Search shortcut (e.g. -ung, vor-)..." autocomplete="off">
         </div>
       </div>
 
       <!-- Tab Buttons (V3: Added WAI-ARIA tablist/tab semantics) -->
-      <div class="mb-6 flex border-b border-slate-800/80 overflow-x-auto gap-2 scrollbar-none" role="tablist" aria-label="Grammatik-Kategorien">
-        <button role="tab" aria-selected="true" class="cheatcode-tab-btn active border-b-2 border-indigo-500 pb-3 px-4 text-sm font-semibold text-white transition-all whitespace-nowrap" data-tab="all">Alle Hacks</button>
-        <button role="tab" aria-selected="false" class="cheatcode-tab-btn border-b-2 border-transparent hover:border-slate-700 pb-3 px-4 text-sm font-semibold text-slate-400 hover:text-slate-200 transition-all whitespace-nowrap" data-tab="nouns">Nomen-Suffixe (Gender-Hacks)</button>
-        <button role="tab" aria-selected="false" class="cheatcode-tab-btn border-b-2 border-transparent hover:border-slate-700 pb-3 px-4 text-sm font-semibold text-slate-400 hover:text-slate-200 transition-all whitespace-nowrap" data-tab="prefixes">Verb-Präfixe</button>
-        <button role="tab" aria-selected="false" class="cheatcode-tab-btn border-b-2 border-transparent hover:border-slate-700 pb-3 px-4 text-sm font-semibold text-slate-400 hover:text-slate-200 transition-all whitespace-nowrap" data-tab="adjectives">Adjektiv-Suffixe</button>
+      <div class="mb-6 flex border-b border-slate-800/80 overflow-x-auto gap-2 scrollbar-none" role="tablist" aria-label="Grammar Categories">
+        <button role="tab" aria-selected="true" class="cheatcode-tab-btn active border-b-2 border-indigo-500 pb-3 px-4 text-sm font-semibold text-white transition-all whitespace-nowrap" data-tab="all">All Hacks</button>
+        <button role="tab" aria-selected="false" class="cheatcode-tab-btn border-b-2 border-transparent hover:border-slate-700 pb-3 px-4 text-sm font-semibold text-slate-400 hover:text-slate-200 transition-all whitespace-nowrap" data-tab="nouns">Noun Suffixes (Gender Hacks)</button>
+        <button role="tab" aria-selected="false" class="cheatcode-tab-btn border-b-2 border-transparent hover:border-slate-700 pb-3 px-4 text-sm font-semibold text-slate-400 hover:text-slate-200 transition-all whitespace-nowrap" data-tab="prefixes">Verb Prefixes</button>
+        <button role="tab" aria-selected="false" class="cheatcode-tab-btn border-b-2 border-transparent hover:border-slate-700 pb-3 px-4 text-sm font-semibold text-slate-400 hover:text-slate-200 transition-all whitespace-nowrap" data-tab="adjectives">Adjective Suffixes</button>
       </div>
 
       <!-- Cheatcodes Grid Container -->
@@ -1150,7 +1137,7 @@
         <div class="w-16 h-16 rounded-full bg-slate-900/80 border border-slate-800 flex items-center justify-center mb-4 text-slate-500 text-xl">
           <i class="fa-solid fa-circle-exclamation"></i>
         </div>
-        <p class="text-slate-400 font-medium">Keine passenden Cheatcodes gefunden.</p>
+        <p class="text-slate-400 font-medium">No matching grammar hacks found.</p>
       </div>
     </div> <!-- End of cheatcodes-view -->
 
@@ -1159,8 +1146,8 @@
       <!-- Header Block -->
       <div class="mb-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div class="flex flex-col">
-          <h2 class="text-2xl md:text-3xl font-bold font-display tracking-tight text-white">Lernstatistiken &amp; Fortschritt</h2>
-          <p class="text-sm text-slate-400 mt-1">Echtzeitanalyse Ihres Sprachlern-Erfolgs über alle CEFR-Stufen</p>
+          <h2 class="text-2xl md:text-3xl font-bold font-display tracking-tight text-white">Learning Statistics &amp; Progress</h2>
+          <p class="text-sm text-slate-400 mt-1">Real-time analysis of your language learning progress across all CEFR levels</p>
         </div>
       </div>
 
@@ -1172,7 +1159,7 @@
             <i class="fa-solid fa-crown"></i>
           </div>
           <div class="flex flex-col">
-            <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider leading-none">Meister (Box 5)</span>
+            <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider leading-none">Mastered (Box 5)</span>
             <span id="stats-mastered-count" class="text-xl font-black font-mono text-white mt-1">0</span>
           </div>
         </div>
@@ -1183,7 +1170,7 @@
             <i class="fa-solid fa-circle-check"></i>
           </div>
           <div class="flex flex-col">
-            <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider leading-none">Gelernt gesamt</span>
+            <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider leading-none">Total Learned</span>
             <span id="stats-learned-count" class="text-xl font-black font-mono text-white mt-1">0</span>
           </div>
         </div>
@@ -1194,7 +1181,7 @@
             <i class="fa-solid fa-fire streak-fire-icon"></i>
           </div>
           <div class="flex flex-col">
-            <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider leading-none">Lernserie (Streak)</span>
+            <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider leading-none">Daily Streak</span>
             <span id="stats-streak-count" class="text-xl font-black font-mono text-white mt-1">0</span>
           </div>
         </div>
@@ -1205,7 +1192,7 @@
             <i class="fa-solid fa-clock animate-pulse"></i>
           </div>
           <div class="flex flex-col">
-            <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider leading-none">Fällig (SRS)</span>
+            <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider leading-none">Due (SRS)</span>
             <span id="stats-due-count" class="text-xl font-black font-mono text-white mt-1">0</span>
           </div>
         </div>
@@ -1219,7 +1206,7 @@
           <!-- Level Progress Rings Panel -->
           <div class="bg-slate-900/60 glass border border-slate-800/80 rounded-2xl p-6 md:p-8 shadow-xl shadow-slate-950/20">
             <h3 class="text-lg font-bold font-display text-white mb-6 flex items-center gap-2">
-              <i class="fa-solid fa-circle-nodes text-indigo-400"></i> Fortschritt nach Niveau (CEFR Levels)
+              <i class="fa-solid fa-circle-nodes text-indigo-400"></i> Progress by Level (CEFR Levels)
             </h3>
             
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
@@ -1234,7 +1221,7 @@
                   </svg>
                   <span id="stats-text-a1" class="absolute font-display font-extrabold text-sm text-slate-200">0%</span>
                 </div>
-                <span class="font-display font-bold text-xs text-white">Niveau A1</span>
+                <span class="font-display font-bold text-xs text-white">Level A1</span>
                 <span id="stats-count-a1" class="text-[10px] font-mono text-slate-500 mt-1">0 / 640</span>
               </div>
 
@@ -1249,7 +1236,7 @@
                   </svg>
                   <span id="stats-text-a2" class="absolute font-display font-extrabold text-sm text-slate-200">0%</span>
                 </div>
-                <span class="font-display font-bold text-xs text-white">Niveau A2</span>
+                <span class="font-display font-bold text-xs text-white">Level A2</span>
                 <span id="stats-count-a2" class="text-[10px] font-mono text-slate-500 mt-1">0 / 1142</span>
               </div>
 
@@ -1264,7 +1251,7 @@
                   </svg>
                   <span id="stats-text-b1" class="absolute font-display font-extrabold text-sm text-slate-200">0%</span>
                 </div>
-                <span class="font-display font-bold text-xs text-white">Niveau B1</span>
+                <span class="font-display font-bold text-xs text-white">Level B1</span>
                 <span id="stats-count-b1" class="text-[10px] font-mono text-slate-500 mt-1">0 / 2139</span>
               </div>
             </div>
@@ -1274,11 +1261,11 @@
           <div class="bg-slate-900/60 glass border border-slate-800/80 rounded-2xl p-6 md:p-8 shadow-xl shadow-slate-950/20">
             <h3 class="text-lg font-bold font-display text-white mb-2 flex items-center justify-between">
               <div class="flex items-center gap-2">
-                <i class="fa-solid fa-chart-simple text-indigo-400"></i> FSRS-Verteilung
+                <i class="fa-solid fa-chart-simple text-indigo-400"></i> FSRS Distribution
               </div>
-              <span id="stats-active-level-label" class="text-xs font-semibold px-2 py-0.5 border border-slate-800 bg-slate-950 rounded-md text-slate-400 uppercase tracking-wide">A2 (Aktiv)</span>
+              <span id="stats-active-level-label" class="text-xs font-semibold px-2 py-0.5 border border-slate-800 bg-slate-950 rounded-md text-slate-400 uppercase tracking-wide">A2 (Active)</span>
             </h3>
-            <p class="text-xs text-slate-500 mb-6">Wortverteilung im FSRS-System (Free Spaced Repetition Scheduler) für das aktuelle Niveau.</p>
+            <p class="text-xs text-slate-500 mb-6">Word distribution in the FSRS system (Free Spaced Repetition Scheduler) for the current level.</p>
 
             <!-- Column Graph Wrapper -->
             <div class="h-48 flex items-end justify-between gap-2 px-4 border-b border-slate-800/80 pb-2">
@@ -1311,40 +1298,40 @@
 
             <!-- Graph Labels -->
             <div class="flex justify-between text-[11px] font-bold text-slate-500 mt-3 px-1">
-              <span class="flex-1 text-center">Box 1<br><span class="text-[9px] font-normal font-sans text-rose-500/80">Neu</span></span>
-              <span class="flex-1 text-center">Box 2<br><span class="text-[9px] font-normal font-sans text-indigo-400/80">Lernen</span></span>
-              <span class="flex-1 text-center">Box 3<br><span class="text-[9px] font-normal font-sans text-violet-400/80">Kurz</span></span>
-              <span class="flex-1 text-center">Box 4<br><span class="text-[9px] font-normal font-sans text-purple-400/80">Lang</span></span>
-              <span class="flex-1 text-center">Box 5<br><span class="text-[9px] font-normal font-sans text-emerald-400">Meister</span></span>
+              <span class="flex-1 text-center">Box 1<br><span class="text-[9px] font-normal font-sans text-rose-500/80">New</span></span>
+              <span class="flex-1 text-center">Box 2<br><span class="text-[9px] font-normal font-sans text-indigo-400/80">Learning</span></span>
+              <span class="flex-1 text-center">Box 3<br><span class="text-[9px] font-normal font-sans text-violet-400/80">Short</span></span>
+              <span class="flex-1 text-center">Box 4<br><span class="text-[9px] font-normal font-sans text-purple-400/80">Long</span></span>
+              <span class="flex-1 text-center">Box 5<br><span class="text-[9px] font-normal font-sans text-emerald-400">Master</span></span>
             </div>
           </div>
 
           <!-- Retention Rate & Session Analytics Panel -->
           <div class="bg-slate-900/60 glass border border-slate-800/80 rounded-2xl p-6 md:p-8 shadow-xl shadow-slate-950/20">
             <h3 class="text-lg font-bold font-display text-white mb-2 flex items-center gap-2">
-              <i class="fa-solid fa-brain text-violet-400"></i> FSRS-Lernanalyse
+              <i class="fa-solid fa-brain text-violet-400"></i> FSRS Learning Analytics
             </h3>
-            <p class="text-xs text-slate-500 mb-6">Retentionsrate und Lerneffizienz basierend auf dem adaptiven FSRS-Algorithmus.</p>
+            <p class="text-xs text-slate-500 mb-6">Retention rate and learning efficiency based on the adaptive FSRS algorithm.</p>
             <div class="grid grid-cols-2 gap-4">
               <div class="bg-slate-950/40 rounded-xl border border-slate-900 p-4 flex flex-col items-center text-center">
-                <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Retentionsrate</span>
+                <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Retention Rate</span>
                 <span id="stats-retention-rate" class="text-2xl font-black font-mono text-emerald-400 mt-2">—</span>
-                <span class="text-[9px] text-slate-500 mt-1">Ziel: 90%</span>
+                <span class="text-[9px] text-slate-500 mt-1">Target: 90%</span>
               </div>
               <div class="bg-slate-950/40 rounded-xl border border-slate-900 p-4 flex flex-col items-center text-center">
-                <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Wiederholungen gespart</span>
+                <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Reviews Saved</span>
                 <span id="stats-reviews-saved" class="text-2xl font-black font-mono text-indigo-400 mt-2">—</span>
-                <span class="text-[9px] text-slate-500 mt-1">vs. Leitner-System</span>
+                <span class="text-[9px] text-slate-500 mt-1">vs. Leitner System</span>
               </div>
               <div class="bg-slate-950/40 rounded-xl border border-slate-900 p-4 flex flex-col items-center text-center">
-                <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Ø Schwierigkeit</span>
+                <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Avg. Difficulty</span>
                 <span id="stats-avg-difficulty" class="text-2xl font-black font-mono text-amber-400 mt-2">—</span>
-                <span class="text-[9px] text-slate-500 mt-1">Skala 1-10</span>
+                <span class="text-[9px] text-slate-500 mt-1">Scale 1-10</span>
               </div>
               <div class="bg-slate-950/40 rounded-xl border border-slate-900 p-4 flex flex-col items-center text-center">
-                <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Lernzeit heute</span>
+                <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Study Time Today</span>
                 <span id="stats-session-time" class="text-2xl font-black font-mono text-sky-400 mt-2">—</span>
-                <span class="text-[9px] text-slate-500 mt-1">Minuten</span>
+                <span class="text-[9px] text-slate-500 mt-1">Minutes</span>
               </div>
             </div>
           </div>
@@ -1353,24 +1340,24 @@
           <div class="bg-slate-900/60 glass border border-slate-800/80 rounded-2xl p-6 md:p-8 shadow-xl shadow-slate-950/20">
             <h3 class="text-lg font-bold font-display text-white mb-2 flex items-center justify-between">
               <div class="flex items-center gap-2">
-                <i class="fa-solid fa-chart-line text-pink-400 animate-pulse"></i> FSRS-Gedächtnisverfall-Simulator
+                <i class="fa-solid fa-chart-line text-pink-400 animate-pulse"></i> FSRS Memory Decay Simulator
               </div>
               <span class="text-xs font-semibold px-2 py-0.5 border border-slate-800 bg-slate-950 rounded-md text-slate-400 uppercase tracking-wide">FSRS-5 Simulator</span>
             </h3>
-            <p class="text-xs text-slate-500 mb-6">Visualisieren Sie Ihren Gedächtnisverfall (Retentionsrate) basierend auf der Stabilität gelernter Wörter.</p>
+            <p class="text-xs text-slate-500 mb-6">Visualize your memory decay (retention rate) based on the stability of learned words.</p>
 
             <!-- Card selector and stability slider -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               <div class="flex flex-col">
-                <label for="fsrs-decay-card-select" class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">Vokabel auswählen | Select Card</label>
+                <label for="fsrs-decay-card-select" class="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">Select Vocabulary Card</label>
                 <select id="fsrs-decay-card-select" class="bg-slate-950/60 border border-slate-800/80 rounded-xl py-2 px-3 text-xs text-slate-200 focus:outline-none focus:border-indigo-500 transition-colors font-medium appearance-none cursor-pointer">
-                  <option value="">Keine Karten geladen / No learned cards</option>
+                  <option value="">No learned cards available</option>
                 </select>
               </div>
               <div class="flex flex-col justify-end">
                 <div class="flex justify-between text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">
-                  <span>Stabilität (S) | Stability</span>
-                  <span class="text-indigo-400 font-mono font-black" id="fsrs-decay-stability-val">8.2 Tage</span>
+                  <span>Stability (S)</span>
+                  <span class="text-indigo-400 font-mono font-black" id="fsrs-decay-stability-val">8.2 Days</span>
                 </div>
                 <input type="range" id="fsrs-decay-slider" min="1" max="120" step="0.5" value="8" class="w-full accent-indigo-500 bg-slate-950 border border-slate-800 rounded-lg h-2 cursor-pointer focus:outline-none" />
               </div>
@@ -1383,18 +1370,18 @@
 
             <!-- Interactive FSRS Rating Forecast chips -->
             <div class="mt-4 flex flex-col gap-2">
-              <span class="text-[9px] font-black text-slate-500 uppercase tracking-widest block text-center">Review-Rating simulieren (Hover/Klick für Prognose)</span>
+              <span class="text-[9px] font-black text-slate-500 uppercase tracking-widest block text-center">Simulate Review Rating (Hover/Click for Forecast)</span>
               <div class="flex justify-center gap-1.5 md:gap-3">
-                <button id="forecast-btn-1" class="forecast-chip text-[10px] font-black uppercase px-2.5 py-1.5 rounded-lg border border-red-500/20 bg-red-950/10 text-red-400 hover:bg-red-500/20 hover:border-red-500/40 active:scale-95 transition-all cursor-pointer" data-rating="1">Nochmals (1)</button>
-                <button id="forecast-btn-2" class="forecast-chip text-[10px] font-black uppercase px-2.5 py-1.5 rounded-lg border border-amber-500/20 bg-amber-950/10 text-amber-400 hover:bg-amber-500/20 hover:border-amber-500/40 active:scale-95 transition-all cursor-pointer" data-rating="2">Schwer (2)</button>
-                <button id="forecast-btn-3" class="forecast-chip text-[10px] font-black uppercase px-2.5 py-1.5 rounded-lg border border-indigo-500/20 bg-indigo-950/10 text-indigo-400 hover:bg-indigo-500/20 hover:border-indigo-500/40 active:scale-95 transition-all cursor-pointer" data-rating="3">Gut (3)</button>
-                <button id="forecast-btn-4" class="forecast-chip text-[10px] font-black uppercase px-2.5 py-1.5 rounded-lg border border-emerald-500/20 bg-emerald-950/10 text-emerald-400 hover:bg-emerald-500/20 hover:border-emerald-500/40 active:scale-95 transition-all cursor-pointer" data-rating="4">Einfach (4)</button>
+                <button id="forecast-btn-1" class="forecast-chip text-[10px] font-black uppercase px-2.5 py-1.5 rounded-lg border border-red-500/20 bg-red-950/10 text-red-400 hover:bg-red-500/20 hover:border-red-500/40 active:scale-95 transition-all cursor-pointer" data-rating="1">Again (1)</button>
+                <button id="forecast-btn-2" class="forecast-chip text-[10px] font-black uppercase px-2.5 py-1.5 rounded-lg border border-amber-500/20 bg-amber-950/10 text-amber-400 hover:bg-amber-500/20 hover:border-amber-500/40 active:scale-95 transition-all cursor-pointer" data-rating="2">Hard (2)</button>
+                <button id="forecast-btn-3" class="forecast-chip text-[10px] font-black uppercase px-2.5 py-1.5 rounded-lg border border-indigo-500/20 bg-indigo-950/10 text-indigo-400 hover:bg-indigo-500/20 hover:border-indigo-500/40 active:scale-95 transition-all cursor-pointer" data-rating="3">Good (3)</button>
+                <button id="forecast-btn-4" class="forecast-chip text-[10px] font-black uppercase px-2.5 py-1.5 rounded-lg border border-emerald-500/20 bg-emerald-950/10 text-emerald-400 hover:bg-emerald-500/20 hover:border-emerald-500/40 active:scale-95 transition-all cursor-pointer" data-rating="4">Easy (4)</button>
               </div>
             </div>
 
             <div class="flex justify-between text-[9px] font-mono text-slate-500/80 mt-2.5">
               <span>R(t) = (1 + t / (9 · S))^-1</span>
-              <span>Visualisierter Zeitraum: 30 Tage</span>
+              <span>Visualized Period: 30 Days</span>
             </div>
           </div>
 
@@ -1402,9 +1389,9 @@
           <div class="bg-slate-900/60 glass border border-slate-800/80 rounded-2xl p-6 md:p-8 shadow-xl shadow-slate-950/20">
             <h3 class="text-lg font-bold font-display text-white mb-2 flex items-center justify-between">
               <div class="flex items-center gap-2">
-                <i class="fa-solid fa-clock-rotate-left text-indigo-400"></i> SRS-Wiederholungs-Prognose
+                <i class="fa-solid fa-clock-rotate-left text-indigo-400"></i> SRS Review Forecast
               </div>
-              <span class="text-xs font-semibold px-2 py-0.5 border border-slate-800 bg-slate-950 rounded-md text-slate-400 uppercase tracking-wide">7-Tage-Vorschau</span>
+              <span class="text-xs font-semibold px-2 py-0.5 border border-slate-800 bg-slate-950 rounded-md text-slate-400 uppercase tracking-wide">7-Day Forecast</span>
             </h3>
             <p class="text-xs text-slate-500 mb-6">Prognose der fälligen Vokabel-Wiederholungen in den nächsten 7 Tagen.</p>
 
@@ -1464,7 +1451,7 @@
           <!-- Parts of Speech Breakdown -->
           <div class="bg-slate-900/60 glass border border-slate-800/80 rounded-2xl p-6 shadow-xl shadow-slate-950/20">
             <h3 class="text-base font-bold font-display text-white mb-4 flex items-center gap-2">
-              <i class="fa-solid fa-tags text-indigo-400"></i> Wortarten-Verteilung
+              <i class="fa-solid fa-tags text-indigo-400"></i> Word Class Distribution
             </h3>
             <div id="stats-parts-of-speech-container" class="space-y-3">
               <!-- Dynamically populated -->
@@ -1474,15 +1461,15 @@
           <!-- Sovereign Backup & Import/Export -->
           <div class="bg-slate-900/60 glass border border-slate-800/80 rounded-2xl p-6 shadow-xl shadow-slate-950/20">
             <h3 class="text-base font-bold font-display text-white mb-2 flex items-center gap-2">
-              <i class="fa-solid fa-floppy-disk text-indigo-400"></i> Datensicherung &amp; Export
+              <i class="fa-solid fa-floppy-disk text-indigo-400"></i> Backup &amp; Export
             </h3>
-            <p class="text-xs text-slate-500 mb-4 leading-relaxed">Sichern Sie Ihren Lernfortschritt, Ihre Leitner-Boxen und Quiz-Statistiken ab oder stellen Sie sie wieder her.</p>
+            <p class="text-xs text-slate-500 mb-4 leading-relaxed">Securely save or restore your learning progress, FSRS intervals, and quiz statistics.</p>
 
             <div class="space-y-3">
               <!-- Export Button -->
               <button id="backup-export-btn" class="w-full flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white py-2.5 px-4 rounded-xl text-xs font-bold transition-all shadow-md shadow-indigo-600/10">
                 <i class="fa-solid fa-file-arrow-down text-sm"></i>
-                <span>Backup exportieren</span>
+                <span>Export Backup</span>
               </button>
 
               <!-- Import Button (Custom Styled file upload wrapper) -->
@@ -1490,7 +1477,7 @@
                 <input type="file" id="backup-import-file" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" accept=".json" />
                 <button class="w-full flex items-center justify-center gap-2 bg-slate-950/80 border border-slate-800 hover:border-slate-700 hover:bg-slate-900 text-slate-300 py-2.5 px-4 rounded-xl text-xs font-bold transition-all shadow-sm">
                   <i class="fa-solid fa-file-arrow-up text-sm"></i>
-                  <span>Backup wiederherstellen</span>
+                  <span>Restore Backup</span>
                 </button>
               </div>
 
@@ -1499,17 +1486,17 @@
 
               <!-- Encrypted Sync Key Section -->
               <div class="space-y-3">
-                <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest block">FSRS Sync-Schlüssel (Base64)</span>
+                <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest block">FSRS Sync Key (Base64)</span>
                 <button id="sync-copy-btn" class="w-full flex items-center justify-center gap-2 bg-slate-950 border border-indigo-900/45 hover:border-indigo-700 hover:bg-slate-900 text-indigo-400 py-2.5 px-4 rounded-xl text-xs font-bold transition-all shadow-sm">
                   <i class="fa-solid fa-copy text-sm"></i>
-                  <span>Sync-Schlüssel kopieren</span>
+                  <span>Copy Sync Key</span>
                 </button>
                 <div class="relative w-full">
-                  <input type="text" id="sync-restore-input" placeholder="Sync-Schlüssel hier einfügen..." class="w-full px-3 py-2 bg-slate-950/80 border border-slate-800 rounded-xl text-xs font-medium text-slate-300 placeholder-slate-600 focus:outline-none focus:border-indigo-500 transition-colors" />
+                  <input type="text" id="sync-restore-input" placeholder="Paste Sync Key here..." class="w-full px-3 py-2 bg-slate-950/80 border border-slate-800 rounded-xl text-xs font-medium text-slate-300 placeholder-slate-600 focus:outline-none focus:border-indigo-500 transition-colors" />
                 </div>
                 <button id="sync-restore-btn" class="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white py-2 px-4 rounded-xl text-xs font-bold transition-all shadow-sm">
                   <i class="fa-solid fa-cloud-arrow-up text-sm"></i>
-                  <span>Schlüssel wiederherstellen</span>
+                  <span>Restore from Key</span>
                 </button>
               </div>
             </div>
@@ -1523,9 +1510,9 @@
       <!-- Achievements Milestone Panel -->
       <div class="bg-slate-900/60 glass border border-slate-800/80 rounded-2xl p-6 md:p-8 shadow-xl shadow-slate-950/20 mb-6">
         <h3 class="text-lg font-bold font-display text-white mb-2 flex items-center gap-2">
-          <i class="fa-solid fa-medal text-amber-500"></i> Errungenschaften (Achievements)
+          <i class="fa-solid fa-medal text-amber-500"></i> Achievements
         </h3>
-        <p class="text-xs text-slate-500 mb-6">Offline-Meilensteine für Ihren Lernfortschritt. Schalten Sie Medaillen durch Lernen und fehlerfreie Quizzes frei!</p>
+        <p class="text-xs text-slate-500 mb-6">Offline milestones for your learning progress. Unlock medals through learning and error-free quizzes!</p>
         
         <div id="achievements-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-4">
           <!-- Dynamically filled with achievement cards -->
@@ -1535,9 +1522,9 @@
       <!-- Categories breakdown section -->
       <div class="bg-slate-900/60 glass border border-slate-800/80 rounded-2xl p-6 md:p-8 shadow-xl shadow-slate-950/20">
         <h3 class="text-lg font-bold font-display text-white mb-2 flex items-center gap-2">
-          <i class="fa-solid fa-layer-group text-indigo-400"></i> Fortschritt nach Kategorie
+          <i class="fa-solid fa-layer-group text-indigo-400"></i> Progress by Category
         </h3>
-        <p class="text-xs text-slate-500 mb-6">Prozentualer Lernfortschritt in den einzelnen Themenkategorien des aktuellen Niveaus.</p>
+        <p class="text-xs text-slate-500 mb-6">Percentage learning progress in individual topic categories of the current CEFR level.</p>
         
         <div id="stats-categories-grid" class="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-96 overflow-y-auto pr-2 scrollbar-thin">
           <!-- Dynamically filled by JS -->
@@ -1713,9 +1700,9 @@
       <div class="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div class="flex flex-col">
           <h2 class="text-2xl md:text-3xl font-bold font-display tracking-tight text-white flex items-center gap-2">
-            <i class="fa-solid fa-puzzle-piece text-indigo-400"></i> Grammatik-Weberei
+            <i class="fa-solid fa-puzzle-piece text-indigo-400"></i> Grammar Weaver
           </h2>
-          <p class="text-sm text-slate-400 mt-1">Satzstruktur-Trainer &amp; Wortstellungs-Physik | Syntax Game</p>
+          <p class="text-sm text-slate-400 mt-1">Sentence Structure Trainer &amp; Word Order Physics | Syntax Game</p>
         </div>
         
         <!-- Experience Points (XP) Dashboard -->
@@ -1786,13 +1773,13 @@
           </div>
           
           <!-- Dropzone area containing snap boxes -->
-          <div id="weaver-dropzone" role="group" aria-label="Satzbau-Bereich" class="min-h-[96px] border-2 border-dashed border-slate-800/80 rounded-xl p-4 bg-slate-950/40 flex flex-wrap gap-3.5 items-center justify-center transition-all duration-300 relative select-none">
+          <div id="weaver-dropzone" role="group" aria-label="Sentence Building Area" class="min-h-[96px] border-2 border-dashed border-slate-800/80 rounded-xl p-4 bg-slate-950/40 flex flex-wrap gap-3.5 items-center justify-center transition-all duration-300 relative select-none">
             <!-- Snap boxes are loaded dynamically via JS -->
-            <span id="weaver-dropzone-placeholder" class="text-slate-500 font-medium text-xs pointer-events-none">Der Webrahmen ist leer. Wählen Sie Wörter unten...</span>
+            <span id="weaver-dropzone-placeholder" class="text-slate-500 font-medium text-xs pointer-events-none">Workspace is empty. Choose words from the pool below...</span>
           </div>
 
           <!-- Dynamic word chips pool -->
-          <div id="weaver-chips-pool" role="group" aria-label="Wörter zum Ziehen und Ablegen" class="flex flex-wrap gap-2.5 justify-center p-4 bg-slate-950/20 rounded-xl border border-slate-900/60 min-h-[64px] select-none">
+          <div id="weaver-chips-pool" role="group" aria-label="Words for dragging and dropping" class="flex flex-wrap gap-2.5 justify-center p-4 bg-slate-950/20 rounded-xl border border-slate-900/60 min-h-[64px] select-none">
             <!-- Word chips are loaded dynamically via JS -->
           </div>
         </div>
@@ -1804,7 +1791,7 @@
               <i class="fa-solid fa-check"></i>
             </div>
             <div class="flex-1 space-y-1">
-              <h4 id="weaver-feedback-title" class="text-sm font-black text-white">Richtig gewebt!</h4>
+              <h4 id="weaver-feedback-title" class="text-sm font-black text-white">Correctly woven!</h4>
               <p id="weaver-feedback-text" class="text-xs text-slate-300 leading-relaxed"></p>
             </div>
           </div>
@@ -1812,14 +1799,14 @@
           <div id="weaver-feedback-tip" class="bg-indigo-950/20 border border-indigo-900/30 p-3.5 rounded-xl hidden flex items-start gap-2.5 text-indigo-300 text-xs leading-relaxed">
             <i class="fa-solid fa-compass shrink-0 mt-0.5 text-amber-400"></i>
             <div>
-              <span class="font-extrabold uppercase text-[9px] tracking-wider block mb-1">Syntax-Analyse (Grammatik-Tipp):</span>
+              <span class="font-extrabold uppercase text-[9px] tracking-wider block mb-1">Syntax Analysis (Grammar Tip):</span>
               <p id="weaver-feedback-tip-text"></p>
             </div>
           </div>
           
           <div class="flex justify-end pt-1">
             <button id="weaver-next-btn" class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2 rounded-xl text-xs font-extrabold transition-all shadow-md shadow-indigo-600/20 active:scale-95">
-              Nächster Satz | Continue <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i>
+              Next Sentence | Continue <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i>
             </button>
           </div>
         </div>
@@ -1827,10 +1814,10 @@
         <!-- Control Buttons -->
         <div id="weaver-action-buttons" class="flex justify-end gap-3">
           <button id="weaver-reset-btn" class="px-5 py-2.5 bg-slate-900 border border-slate-800 hover:bg-rose-950/10 hover:border-rose-900 hover:text-rose-400 rounded-xl text-xs font-bold transition-all active:scale-95 flex items-center gap-1.5">
-            <i class="fa-solid fa-rotate-left"></i> <span>Zurücksetzen | Reset</span>
+            <i class="fa-solid fa-rotate-left"></i> <span>Reset Workspace</span>
           </button>
           <button id="weaver-submit-btn" class="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-black transition-all shadow-lg shadow-indigo-600/10 active:scale-95 flex items-center gap-1.5">
-            <i class="fa-solid fa-paper-plane"></i> <span>Muster prüfen | Verify</span>
+            <i class="fa-solid fa-paper-plane"></i> <span>Verify Pattern</span>
           </button>
         </div>
       </div>
@@ -1842,24 +1829,24 @@
         </div>
         
         <div class="space-y-2">
-          <h3 class="text-2xl md:text-3xl font-black font-display text-white tracking-tight">Runde abgeschlossen!</h3>
-          <p class="text-sm text-slate-400 leading-relaxed">Fantastisch gewebt. Sie beherrschen die deutsche Satzstruktur!</p>
+          <h3 class="text-2xl md:text-3xl font-black font-display text-white tracking-tight">Round Completed!</h3>
+          <p class="text-sm text-slate-400 leading-relaxed">Fantastic weaving! You are mastering German sentence structures.</p>
         </div>
 
         <div class="w-full bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 grid grid-cols-2 gap-4">
           <div class="flex flex-col items-center p-3 bg-slate-950/40 rounded-xl border border-slate-900">
-            <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Verdiente XP</span>
+            <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">XP Earned</span>
             <span id="weaver-results-xp" class="text-xl font-black font-mono text-amber-400 mt-1">+125 XP</span>
           </div>
           <div class="flex flex-col items-center p-3 bg-slate-950/40 rounded-xl border border-slate-900">
-            <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Genauigkeit</span>
+            <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Accuracy</span>
             <span id="weaver-results-accuracy" class="text-xl font-black font-mono text-emerald-400 mt-1">100%</span>
           </div>
         </div>
 
         <div class="flex flex-col sm:flex-row gap-3 w-full">
-          <button id="weaver-results-retry-btn" class="flex-1 bg-slate-900 border border-slate-800 hover:border-indigo-500 hover:bg-indigo-950/20 text-slate-300 hover:text-indigo-400 py-3 px-4 rounded-xl text-xs font-bold transition-all active:scale-95">Runde wiederholen</button>
-          <button id="weaver-results-done-btn" class="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white py-3 px-4 rounded-xl text-xs font-black transition-all shadow-md shadow-indigo-600/10 active:scale-95">Zur Übersicht</button>
+          <button id="weaver-results-retry-btn" class="flex-1 bg-slate-900 border border-slate-800 hover:border-indigo-500 hover:bg-indigo-950/20 text-slate-300 hover:text-indigo-400 py-3 px-4 rounded-xl text-xs font-bold transition-all active:scale-95">Repeat Round</button>
+          <button id="weaver-results-done-btn" class="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white py-3 px-4 rounded-xl text-xs font-black transition-all shadow-md shadow-indigo-600/10 active:scale-95">Back to Selection</button>
         </div>
       </div>
     </div> <!-- End of weaver-view -->
@@ -1912,9 +1899,9 @@
       <i class="fa-solid fa-trophy"></i>
     </div>
     <div class="flex-1 flex flex-col">
-      <span class="text-[9px] text-amber-400 font-extrabold uppercase tracking-widest leading-none">Errungenschaft Freigeschaltet!</span>
-      <span id="achievement-toast-title" class="text-sm font-black font-display text-white mt-1 leading-snug">Frühaufsteher</span>
-      <span id="achievement-toast-desc" class="text-xs text-slate-400 mt-0.5 leading-normal">Lerne eine Vokabel vor 7 Uhr morgens.</span>
+      <span class="text-[9px] text-amber-400 font-extrabold uppercase tracking-widest leading-none">Achievement Unlocked!</span>
+      <span id="achievement-toast-title" class="text-sm font-black font-display text-white mt-1 leading-snug">Early Bird</span>
+      <span id="achievement-toast-desc" class="text-xs text-slate-400 mt-0.5 leading-normal">Study a word before 7:00 AM.</span>
     </div>
   </div>
 
@@ -1924,8 +1911,8 @@
       <div class="absolute inset-0 rounded-full border-4 border-indigo-500/20"></div>
       <div class="absolute inset-0 rounded-full border-4 border-t-indigo-500 animate-spin"></div>
     </div>
-    <h3 class="font-display font-bold text-xl text-white tracking-wide">Vokabeln werden geladen</h3>
-    <p class="text-sm text-slate-400 mt-2">Bitte warten...</p>
+    <h3 class="font-display font-bold text-xl text-white tracking-wide">Loading Vocabulary</h3>
+    <p class="text-sm text-slate-400 mt-2">Please wait...</p>
   </div>
 
   <!-- Fullscreen Error State Overlay -->
@@ -1933,10 +1920,10 @@
     <div class="w-16 h-16 rounded-full bg-rose-500/10 border border-rose-500/20 flex items-center justify-center mb-6 text-rose-500 text-2xl">
       <i class="fa-solid fa-circle-exclamation"></i>
     </div>
-    <h3 class="font-display font-bold text-xl text-white tracking-wide">Fehler beim Laden</h3>
-    <p id="error-message" class="text-sm text-slate-400 mt-2 text-center max-w-md">Die Wortliste konnte nicht geladen werden. Bitte stellen Sie sicher, dass wordlist.json im selben Verzeichnis liegt.</p>
+    <h3 class="font-display font-bold text-xl text-white tracking-wide">Failed to Load</h3>
+    <p id="error-message" class="text-sm text-slate-400 mt-2 text-center max-w-md">The wordlist could not be loaded. Please ensure that wordlist.json is in the same directory.</p>
     <button id="error-reload-btn" class="mt-6 bg-rose-600 hover:bg-rose-500 active:scale-95 text-white px-5 py-2.5 rounded-xl text-sm font-semibold transition-all shadow-lg shadow-rose-600/20">
-      Erneut versuchen
+      Try Again
     </button>
   </div>
 
@@ -1947,15 +1934,15 @@
         <div id="confirm-modal-icon" class="w-10 h-10 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400 text-lg shrink-0">
           <i class="fa-solid fa-triangle-exclamation"></i>
         </div>
-        <h3 id="confirm-modal-title" class="font-display font-bold text-base text-white">Bestätigung</h3>
+        <h3 id="confirm-modal-title" class="font-display font-bold text-base text-white">Confirmation</h3>
       </div>
       <p id="confirm-modal-message" class="text-sm text-slate-300 leading-relaxed mb-6"></p>
       <div class="flex gap-3 justify-end">
         <button id="confirm-modal-cancel" class="px-4 py-2.5 bg-slate-800/80 hover:bg-slate-700 border border-slate-700 text-slate-300 rounded-xl text-sm font-semibold transition-all active:scale-95">
-          Abbrechen
+          Cancel
         </button>
         <button id="confirm-modal-confirm" class="px-4 py-2.5 bg-rose-600 hover:bg-rose-500 text-white rounded-xl text-sm font-semibold transition-all shadow-lg shadow-rose-600/20 active:scale-95">
-          Bestätigen
+          Confirm
         </button>
       </div>
     </div>
@@ -2213,29 +2200,29 @@
         <div class="grid grid-cols-2 gap-4">
           <!-- Level / CEFR Tier -->
           <div class="bg-slate-950/40 border border-slate-900 rounded-xl p-3 flex flex-col">
-            <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Niveau (CEFR)</span>
+            <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Level (CEFR)</span>
             <span id="explorer-cefr-level" class="text-base font-black text-indigo-400 mt-1 font-mono">A2</span>
           </div>
           <!-- FSRS State -->
           <div class="bg-slate-950/40 border border-slate-900 rounded-xl p-3 flex flex-col">
             <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">FSRS Status</span>
-            <span id="explorer-fsrs-state" class="text-xs font-extrabold text-slate-300 mt-1.5 uppercase tracking-wide">Neu</span>
+            <span id="explorer-fsrs-state" class="text-xs font-extrabold text-slate-300 mt-1.5 uppercase tracking-wide">New</span>
           </div>
         </div>
 
         <!-- Optional grammatical conjugation or forms helper -->
         <div id="explorer-forms-container" class="bg-slate-950/40 border border-slate-900 rounded-xl p-4 hidden space-y-2">
-          <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block">Grammatische Formen</span>
+          <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block">Grammatical Forms</span>
           <p id="explorer-forms-text" class="text-xs font-semibold text-slate-300 notranslate"></p>
         </div>
 
         <!-- Suffix helper integrated inside word explorer -->
         <div id="explorer-suffix-container" class="bg-amber-500/10 border border-amber-500/20 rounded-xl p-4 hidden space-y-2">
           <div class="flex items-center justify-between">
-            <span class="text-[9px] font-bold text-amber-400 uppercase tracking-widest block">Grammatik-Tipp (Endung)</span>
+            <span class="text-[9px] font-bold text-amber-400 uppercase tracking-widest block">Grammar Tip (Suffix)</span>
             <span id="explorer-suffix-badge" class="px-1.5 py-0.5 bg-amber-500/20 text-amber-300 text-[8px] font-extrabold rounded uppercase tracking-wider">GENDER</span>
           </div>
-          <h4 id="explorer-suffix-title" class="text-xs font-bold text-slate-200">Endung: -ung</h4>
+          <h4 id="explorer-suffix-title" class="text-xs font-bold text-slate-200">Suffix: -ung</h4>
           <p id="explorer-suffix-rule" class="text-[11px] text-slate-400 leading-normal font-medium"></p>
         </div>
 
@@ -2250,11 +2237,11 @@
         <div class="flex gap-3 justify-end pt-1">
           <!-- Pronounce (TTS) -->
           <button id="explorer-speak-btn" class="px-4 py-2.5 bg-slate-900 border border-slate-800 hover:border-indigo-500 text-slate-300 hover:text-indigo-400 rounded-xl text-xs font-bold transition-all active:scale-95 flex items-center gap-2">
-            <i class="fa-solid fa-volume-high text-xs"></i> <span>Anhören | TTS</span>
+            <i class="fa-solid fa-volume-high text-xs"></i> <span>Listen | TTS</span>
           </button>
           <!-- Quick Add / Study card -->
           <button id="explorer-add-btn" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-black transition-all shadow-lg shadow-indigo-600/20 active:scale-95 flex items-center gap-2">
-            <i class="fa-solid fa-plus text-xs"></i> <span id="explorer-add-btn-text">Ins Deck legen</span>
+            <i class="fa-solid fa-plus text-xs"></i> <span id="explorer-add-btn-text">Add to Deck</span>
           </button>
         </div>
       </div>
@@ -2268,8 +2255,8 @@
   <div id="lottie-container" class="fixed inset-0 pointer-events-none z-[58] flex items-center justify-center overflow-hidden"></div>
 
   <!-- Floating Action Help Button (FAB) -->
-  <button id="help-fab" class="fixed bottom-6 right-6 w-14 h-14 bg-slate-900/80 border border-slate-700/60 hover:border-indigo-500 hover:shadow-[0_0_15px_rgba(99,102,241,0.4)] text-indigo-400 hover:text-indigo-300 rounded-full flex items-center justify-center shadow-2xl backdrop-blur-md z-[55] cursor-pointer transition-all hover:scale-110 active:scale-95 group" title="Help & System Introduction (Hot-key: ?)">
-    <i class="fa-solid fa-question text-xl transition-transform group-hover:rotate-12"></i>
+  <button id="help-fab" class="fixed bottom-6 right-6 w-14 h-14 bg-slate-900/80 border border-slate-700/60 hover:border-indigo-500 hover:shadow-[0_0_15px_rgba(99,102,241,0.4)] text-indigo-400 hover:text-indigo-300 rounded-full flex items-center justify-center shadow-2xl backdrop-blur-md z-[55] cursor-pointer transition-colors" title="Help & System Introduction (Hot-key: ?)">
+    <i class="fa-solid fa-question text-xl"></i>
   </button>
 
   <!-- Premium Lottie Player Library via CDN (Cacheable) -->

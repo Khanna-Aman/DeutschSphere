@@ -309,8 +309,8 @@ export function startWeaverGame() {
           elements.weaverFeedbackIcon.className = 'w-10 h-10 rounded-xl flex items-center justify-center text-white shrink-0 shadow-lg text-lg bg-amber-500';
           elements.weaverFeedbackIcon.innerHTML = '<i class="fa-solid fa-hourglass-half"></i>';
         }
-        if (elements.weaverFeedbackTitle) elements.weaverFeedbackTitle.textContent = 'Vokabeldaten werden geladen...';
-        if (elements.weaverFeedbackText) elements.weaverFeedbackText.textContent = 'Bitte versuchen Sie es in wenigen Sekunden erneut. Die Wortdatenbank wird noch vorbereitet.';
+        if (elements.weaverFeedbackTitle) elements.weaverFeedbackTitle.textContent = 'Vocabulary data loading...';
+        if (elements.weaverFeedbackText) elements.weaverFeedbackText.textContent = 'Please try again in a few seconds. The vocabulary database is being prepared.';
       }
       return;
     }
@@ -748,11 +748,11 @@ export function submitWeaverSentence() {
       elements.weaverFeedbackIcon.innerHTML = '<i class="fa-solid fa-xmark"></i>';
     }
     if (elements.weaverFeedbackTitle) {
-      elements.weaverFeedbackTitle.textContent = "Strukturfehler entdeckt";
+      elements.weaverFeedbackTitle.textContent = "Structure Error Detected";
       elements.weaverFeedbackTitle.className = "text-sm font-black text-rose-400";
     }
     if (elements.weaverFeedbackText) {
-      elements.weaverFeedbackText.textContent = "Die gewählte Wortreihenfolge entspricht leider nicht den deutschen Syntaxregeln. Überprüfen Sie die Position von Verben oder Pronomen!";
+      elements.weaverFeedbackText.textContent = "The selected word order does not match German syntax rules. Check the position of verbs or pronouns!";
     }
 
     // Render helper hint
@@ -795,7 +795,7 @@ export function showWeaverResults() {
     elements.weaverResultsXp.textContent = `+${earned} XP`;
   }
   if (elements.weaverResultsAccuracy) {
-    elements.weaverResultsAccuracy.textContent = `${accuracy}% Genauigkeit`;
+    elements.weaverResultsAccuracy.textContent = `${accuracy}% Accuracy`;
     if (accuracy < 75) {
       elements.weaverResultsAccuracy.className = "text-xl font-black font-mono text-amber-500 mt-1";
     } else {
@@ -817,25 +817,25 @@ export function getGrammarExplanation(sentenceText) {
   const subConjunctions = ["weil", "dass", "obwohl", "wenn", "ob", "als", "da", "damit", "nachdem"];
   const subFound = words.find(w => subConjunctions.includes(w));
   if (subFound) {
-    return `💡 Grammatik-Tipp: Das Wort "${subFound}" leitet einen Nebensatz ein! Im deutschen Nebensatz wandert das konjugierte Verb (z. B. "ist", "bin", "kann") immer an das absolute Satzende.`;
+    return `💡 Grammar Tip: The word "${subFound}" introduces a subordinate clause! In German subordinate clauses, the conjugated verb (e.g., "ist", "bin", "kann") always moves to the absolute end of the clause.`;
   }
 
   // Check separable prefix particles
   const commonPrefixes = ["ein", "aus", "auf", "ab", "an", "mit", "zu", "her", "hin", "vor", "nach", "weg", "los", "zurück"];
   const lastWord = words[words.length - 1];
   if (commonPrefixes.includes(lastWord)) {
-    return `💡 Grammatik-Tipp: Trennbares Verb im Hauptsatz erkannt! Das Präfix "${lastWord}" trennt sich ab und fliegt an das Satzende, während das Hauptverb an Position 2 konjugiert wird (V2-Regel).`;
+    return `💡 Grammar Tip: Separable verb detected in main clause! The prefix "${lastWord}" separates and flies to the absolute end of the clause, while the main verb is conjugated at position 2 (V2 rule).`;
   }
 
   // Check coordinating conjunctions (ADUSO)
   const coConjunctions = ["und", "aber", "oder", "denn", "sondern"];
   const coFound = words.find(w => coConjunctions.includes(w));
   if (coFound) {
-    return `💡 Grammatik-Tipp: Die Konjunktion "${coFound}" ist ein ADUSO-Bindewort (Position 0). Es verbindet Sätze, verändert aber die reguläre Wortreihenfolge des folgenden Satzes nicht!`;
+    return `💡 Grammar Tip: The conjunction "${coFound}" is an ADUSO connector (Position 0). It joins clauses but does not alter the regular word order of the following clause!`;
   }
 
   // Standard Main Clause V2
-  return `💡 Grammatik-Tipp (V2-Regel): In einem deutschen Aussagesatz steht das konjugierte Hauptverb immer unumstößlich an der zweiten Position des Satzes (Position 2).`;
+  return `💡 Grammar Tip (V2 Rule): In a standard German declarative clause, the conjugated verb is always locked at the second structural position of the clause (Position 2).`;
 }
 
 /**

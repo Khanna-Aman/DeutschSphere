@@ -515,7 +515,7 @@ export function startAudioTrainer() {
   }
   
   if (elements.trainerStatusIcon) elements.trainerStatusIcon.className = "fa-solid fa-headphones-simple text-sm text-indigo-400";
-  if (elements.trainerStatusText) elements.trainerStatusText.textContent = "Audio-Trainer aktiv...";
+  if (elements.trainerStatusText) elements.trainerStatusText.textContent = "Audio Trainer active...";
   if (elements.trainerPulseRing) elements.trainerPulseRing.classList.remove('opacity-0');
   
   runTrainerStep();
@@ -539,7 +539,7 @@ export function stopAudioTrainer() {
   }
   
   if (elements.trainerStatusIcon) elements.trainerStatusIcon.className = "fa-solid fa-microphone-lines text-sm";
-  if (elements.trainerStatusText) elements.trainerStatusText.textContent = "Inaktiv (Bereit)";
+  if (elements.trainerStatusText) elements.trainerStatusText.textContent = "Inactive (Ready)";
   if (elements.trainerPulseRing) elements.trainerPulseRing.classList.add('opacity-0');
 }
 
@@ -550,7 +550,7 @@ export function runTrainerStep() {
   const speedScale = 1 / state.trainer.speed;
   if (state.trainer.step === 'idle') {
     state.trainer.step = 'word';
-    if (elements.trainerStatusText) elements.trainerStatusText.textContent = `Aussprache: ${card.word}`;
+    if (elements.trainerStatusText) elements.trainerStatusText.textContent = `Pronunciation: ${card.word}`;
     
     // 1. Speak German Word
     let textToSpeak = card.word.replace(/\(.*?\)/g, '').trim();
@@ -582,7 +582,7 @@ export function runTrainerStep() {
     
   } else if (state.trainer.step === 'recall_pause') {
     state.trainer.step = 'meaning';
-    if (elements.trainerStatusText) elements.trainerStatusText.textContent = `Bedeutung: ${card.meaning}`;
+    if (elements.trainerStatusText) elements.trainerStatusText.textContent = `Meaning: ${card.meaning}`;
     
     // 2. Speak English Translation
     const textToSpeak = card.meaning.replace(/\(.*?\)/g, '').trim();
@@ -610,7 +610,7 @@ export function runTrainerStep() {
   } else if (state.trainer.step === 'sentence') {
     if (card.exampleDe) {
       state.trainer.step = 'settle_pause';
-      if (elements.trainerStatusText) elements.trainerStatusText.textContent = `Beispielsatz...`;
+      if (elements.trainerStatusText) elements.trainerStatusText.textContent = `Example sentence...`;
       
       const textToSpeak = card.exampleDe.trim();
       const utt = new SpeechSynthesisUtterance(textToSpeak);
@@ -645,7 +645,7 @@ function advanceTrainerNext() {
   
   if (isAtEnd && !state.trainer.loop) {
     stopAudioTrainer();
-    if (elements.trainerStatusText) elements.trainerStatusText.textContent = "Trainer fertig durchgelaufen!";
+    if (elements.trainerStatusText) elements.trainerStatusText.textContent = "Trainer completed!";
     return;
   }
   

@@ -38,7 +38,7 @@ function handleAnalyze() {
   const text = elements.immersionTextarea.value.trim();
   if (!text) return;
   
-  elements.immersionAnalyzeBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-2"></i> Analysiere...`;
+  elements.immersionAnalyzeBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-2"></i> Analyzing...`;
   elements.immersionAnalyzeBtn.disabled = true;
   
   // Slight delay to allow UI to update to loading state
@@ -56,9 +56,9 @@ function handleAnalyze() {
       renderImmersionResults();
     } catch (err) {
       console.error("[Immersion] Analysis failed", err);
-      alert("Fehler bei der Textanalyse.");
+      alert("Error during text analysis.");
     } finally {
-      elements.immersionAnalyzeBtn.innerHTML = `<i class="fa-solid fa-magnifying-glass mr-2"></i> Text analysieren`;
+      elements.immersionAnalyzeBtn.innerHTML = `<i class="fa-solid fa-magnifying-glass mr-2"></i> Analyze Text`;
       elements.immersionAnalyzeBtn.disabled = false;
     }
   }, 50);
@@ -87,14 +87,14 @@ function renderImmersionResults() {
       let opacityClass = '';
       
       if (item.isLearned) {
-          statusHtml = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex-shrink-0"><i class="fa-solid fa-check mr-1"></i>Gelernt</span>`;
+          statusHtml = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 flex-shrink-0"><i class="fa-solid fa-check mr-1"></i>Learned</span>`;
           borderClass = 'border-emerald-900/40 bg-emerald-950/10';
           opacityClass = 'opacity-50 grayscale hover:opacity-100 hover:grayscale-0'; // De-emphasize already learned words
       } else if (item.isKnown) {
-          statusHtml = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20 flex-shrink-0"><i class="fa-solid fa-book-open mr-1"></i>A1-B1 Archiv</span>`;
+          statusHtml = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20 flex-shrink-0"><i class="fa-solid fa-book-open mr-1"></i>A1-B1 Archive</span>`;
           borderClass = 'border-amber-900/40 bg-amber-950/10';
       } else {
-          statusHtml = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 flex-shrink-0"><i class="fa-solid fa-sparkles mr-1"></i>Neues Wort</span>`;
+          statusHtml = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 flex-shrink-0"><i class="fa-solid fa-sparkles mr-1"></i>New Word</span>`;
           borderClass = 'border-indigo-900/40 bg-indigo-950/10 shadow-[0_0_15px_rgba(99,102,241,0.1)]';
       }
       
@@ -109,9 +109,9 @@ function renderImmersionResults() {
       if (!item.isLearned && item.isKnown) {
           actionBtn = `<button class="text-xs px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors font-medium border border-slate-700/50 pointer-events-none">Details</button>`;
       } else if (!item.isKnown) {
-          actionBtn = `<button class="text-xs px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white transition-colors font-medium border border-indigo-500/50 pointer-events-none"><i class="fa-solid fa-plus mr-1"></i>Legen</button>`;
+          actionBtn = `<button class="text-xs px-3 py-1.5 rounded-lg bg-indigo-600 hover:bg-indigo-500 text-white transition-colors font-medium border border-indigo-500/50 pointer-events-none"><i class="fa-solid fa-plus mr-1"></i>Add</button>`;
       } else {
-          actionBtn = `<button class="text-xs px-3 py-1.5 rounded-lg bg-slate-900 text-slate-500 border border-slate-800/60 cursor-not-allowed pointer-events-none"><i class="fa-solid fa-check mr-1"></i>Fertig</button>`;
+          actionBtn = `<button class="text-xs px-3 py-1.5 rounded-lg bg-slate-900 text-slate-500 border border-slate-800/60 cursor-not-allowed pointer-events-none"><i class="fa-solid fa-check mr-1"></i>Done</button>`;
       }
       
       html += `
@@ -122,7 +122,7 @@ function renderImmersionResults() {
                     <h3 class="text-lg font-bold text-slate-100 notranslate truncate">${escapeHtml(item.lemma)}</h3>
                 </div>
                 <div class="flex items-center gap-2">
-                    <span class="text-xs text-slate-400 italic truncate">im Text als "${escapeHtml(item.original)}"</span>
+                    <span class="text-xs text-slate-400 italic truncate">in text as "${escapeHtml(item.original)}"</span>
                 </div>
                 ${item.translation ? `<p class="text-sm font-medium text-slate-300 mt-1 truncate">${escapeHtml(item.translation)}</p>` : ''}
             </div>
@@ -163,21 +163,21 @@ export function openWordExplorer(item) {
   if (elements.explorerWordClass) {
     let wordClassText = item.wordClass || (card ? card.wordClass : 'Nomen');
     const classLabels = {
-      'noun': 'Substantiv / Nomen',
-      'verb': 'Verb / Zeitwort',
-      'adjective': 'Adjektiv / Eigenschaftswort',
-      'adverb': 'Adverb / Umstandswort',
-      'pronoun': 'Pronomen / Fürwort',
-      'preposition': 'Präposition / Verhältniswort',
-      'conjunction': 'Konjunktion / Bindewort',
-      'article': 'Artikel / Begleiter'
+      'noun': 'Noun',
+      'verb': 'Verb',
+      'adjective': 'Adjective',
+      'adverb': 'Adverb',
+      'pronoun': 'Pronoun',
+      'preposition': 'Preposition',
+      'conjunction': 'Conjunction',
+      'article': 'Article'
     };
     elements.explorerWordClass.textContent = classLabels[wordClassText.toLowerCase()] || wordClassText;
   }
 
   // Set English Translation Meaning
   if (elements.explorerEnglishMeaning) {
-    elements.explorerEnglishMeaning.textContent = card ? card.meaning : (item.translation || 'Unbekannte Bedeutung');
+    elements.explorerEnglishMeaning.textContent = card ? card.meaning : (item.translation || 'Unknown Meaning');
   }
 
   // Set CEFR Niveau
@@ -190,15 +190,15 @@ export function openWordExplorer(item) {
     if (card) {
       const srsInfo = state.getSRSInfo(card.id);
       if (srsInfo.isNew) {
-        elements.explorerFsrsState.textContent = 'Neu (FSRS)';
+        elements.explorerFsrsState.textContent = 'New (FSRS)';
         elements.explorerFsrsState.className = 'text-xs font-extrabold text-blue-400 mt-1.5 uppercase tracking-wide';
       } else {
-        const boxLabel = srsInfo.box >= 5 ? 'Meister' : `Stufe ${srsInfo.box}`;
+        const boxLabel = srsInfo.box >= 5 ? 'Master' : `Level ${srsInfo.box}`;
         elements.explorerFsrsState.textContent = `${boxLabel} (${Math.round(srsInfo.retrievability * 100)}% Ret.)`;
         elements.explorerFsrsState.className = 'text-xs font-extrabold text-emerald-400 mt-1.5 uppercase tracking-wide';
       }
     } else {
-      elements.explorerFsrsState.textContent = 'Nicht im Deck';
+      elements.explorerFsrsState.textContent = 'Not in Deck';
       elements.explorerFsrsState.className = 'text-xs font-extrabold text-indigo-400 mt-1.5 uppercase tracking-wide';
     }
   }
@@ -208,12 +208,12 @@ export function openWordExplorer(item) {
     if (card && (card.plural || card.gender)) {
       elements.explorerFormsContainer.classList.remove('hidden');
       let forms = [];
-      if (card.gender) forms.push(`Artikel: ${card.gender.toUpperCase()}`);
+      if (card.gender) forms.push(`Article: ${card.gender.toUpperCase()}`);
       if (card.plural) forms.push(`Plural: ${card.plural}`);
       elements.explorerFormsText.textContent = forms.join(' | ');
     } else if (item.gender) {
       elements.explorerFormsContainer.classList.remove('hidden');
-      elements.explorerFormsText.textContent = `Artikel (NLP vorhergesagt): ${item.gender.toUpperCase()}`;
+      elements.explorerFormsText.textContent = `Article (NLP Predicted): ${item.gender.toUpperCase()}`;
     } else {
       elements.explorerFormsContainer.classList.add('hidden');
     }
@@ -233,7 +233,7 @@ export function openWordExplorer(item) {
            'bg-amber-500/20 text-amber-300');
       }
       if (elements.explorerSuffixTitle) {
-        elements.explorerSuffixTitle.textContent = `Endung: -${suffixRule.suffix}`;
+        elements.explorerSuffixTitle.textContent = `Suffix: -${suffixRule.suffix}`;
       }
       if (elements.explorerSuffixRule) {
         elements.explorerSuffixRule.textContent = suffixRule.rule;
@@ -300,12 +300,12 @@ export function openWordExplorer(item) {
     if (item.isLearned) {
       elements.explorerAddBtn.disabled = true;
       elements.explorerAddBtn.className = "px-5 py-2.5 bg-emerald-950/40 border border-emerald-900 text-emerald-400 rounded-xl text-xs font-black transition-all cursor-not-allowed flex items-center gap-2";
-      if (elements.explorerAddBtnText) elements.explorerAddBtnText.textContent = "Bereits gelernt";
+      if (elements.explorerAddBtnText) elements.explorerAddBtnText.textContent = "Already Learned";
     } else if (card) {
       // It exists in current level deck, but is not marked learned
       elements.explorerAddBtn.disabled = false;
       elements.explorerAddBtn.className = "px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-black transition-all shadow-lg shadow-indigo-600/20 active:scale-95 flex items-center gap-2";
-      if (elements.explorerAddBtnText) elements.explorerAddBtnText.textContent = "Jetzt lernen (Lernen)";
+      if (elements.explorerAddBtnText) elements.explorerAddBtnText.textContent = "Study Now (Learn)";
       
       elements.explorerAddBtn.addEventListener('click', async () => {
         // Mark learned in SRS
@@ -329,7 +329,7 @@ export function openWordExplorer(item) {
       // It does not exist in our deck -> Add as a custom card!
       elements.explorerAddBtn.disabled = false;
       elements.explorerAddBtn.className = "px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-black transition-all shadow-lg shadow-indigo-600/20 active:scale-95 flex items-center gap-2";
-      if (elements.explorerAddBtnText) elements.explorerAddBtnText.textContent = "Ins Deck legen";
+      if (elements.explorerAddBtnText) elements.explorerAddBtnText.textContent = "Add to Deck";
 
       elements.explorerAddBtn.addEventListener('click', async () => {
         const newCard = {

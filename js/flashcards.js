@@ -838,7 +838,11 @@ export function toggleLearned() {
   // M16: Automatically advance to the next card after a small delay if marked as learned
   if (!hasLearned) {
     setTimeout(() => {
-      nextCard();
+      if (state.hideLearned) {
+        window.dispatchEvent(new CustomEvent('deck:filter-request', { detail: { resetIndex: true } }));
+      } else {
+        nextCard();
+      }
     }, 400);
   }
 }

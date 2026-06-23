@@ -249,10 +249,10 @@ export function initStatsView() {
   // Map FSRS states to the existing 5-bar display elements
   // Bar 1 = New, Bar 2 = Learning, Bar 3 = Review, Bar 4 = Mastered, Bar 5 = (unused/retention rate)
   const stateDistribution = [
-    { count: fsrsStateCounts.new, label: 'Neu' },
-    { count: fsrsStateCounts.learning, label: 'Lernen' },
+    { count: fsrsStateCounts.new, label: 'New' },
+    { count: fsrsStateCounts.learning, label: 'Learn' },
     { count: fsrsStateCounts.review, label: 'Review' },
-    { count: fsrsStateCounts.mastered, label: 'Meister' },
+    { count: fsrsStateCounts.mastered, label: 'Master' },
     { count: 0, label: '' } // Slot 5 unused for state distribution
   ];
   const maxStateCount = Math.max(...stateDistribution.map(s => s.count), 1);
@@ -291,21 +291,21 @@ export function initStatsView() {
   const labelsContainer = document.getElementById('stats-due-timeline-labels');
   if (labelsContainer) {
     labelsContainer.innerHTML = '';
-    const dayNames = ['So', 'Mo', 'Di', 'Mi', 'Do', 'Fr', 'Sa'];
+    const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
     const todayIndex = new Date().getDay();
     
     for (let i = 0; i <= 7; i++) {
       let label = '';
       let sublabel = '';
       if (i === 0) {
-        label = 'Heute';
-        sublabel = 'Aktiv';
+        label = 'Today';
+        sublabel = 'Active';
       } else if (i === 1) {
-        label = 'Morgen';
-        sublabel = '1 Tag';
+        label = 'Tomorrow';
+        sublabel = '1 Day';
       } else {
         label = dayNames[(todayIndex + i) % 7];
-        sublabel = `${i} Tage`;
+        sublabel = `${i} Days`;
       }
       
       const span = document.createElement('span');
@@ -329,11 +329,25 @@ export function initStatsView() {
       const pct = totalCount > 0 ? Math.round((count / totalCount) * 100) : 0;
       const colorClass = WORD_CLASS_COLORS[wc] || WORD_CLASS_COLORS['Andere'];
       
+      const wcLabels = {
+        'nomen': 'Noun',
+        'substantiv': 'Noun',
+        'verb': 'Verb',
+        'adjektiv': 'Adjective',
+        'adverb': 'Adverb',
+        'pronomen': 'Pronoun',
+        'präposition': 'Preposition',
+        'konjunktion': 'Conjunction',
+        'artikel': 'Article',
+        'andere': 'Other'
+      };
+      const englishWc = wcLabels[wc.toLowerCase()] || wc;
+      
       const div = document.createElement('div');
       div.className = 'space-y-1.5';
       div.innerHTML = `
         <div class="flex justify-between items-center text-xs font-semibold">
-          <span class="text-slate-300">${wc}</span>
+          <span class="text-slate-300">${englishWc}</span>
           <span class="font-mono text-slate-400">${count} <span class="text-[10px] text-slate-500">(${pct}%)</span></span>
         </div>
         <div class="w-full bg-slate-950/60 rounded-full h-1.5 overflow-hidden border border-slate-900/40">
@@ -370,7 +384,7 @@ export function initStatsView() {
           </div>
           <div class="flex flex-col">
             <span class="text-xs font-bold text-white">${cat}</span>
-            <span class="text-[10px] text-slate-500 font-mono mt-0.5">${stats.learned} / ${stats.total} gelernt</span>
+            <span class="text-[10px] text-slate-500 font-mono mt-0.5">${stats.learned} / ${stats.total} learned</span>
           </div>
         </div>
         <div class="flex flex-col items-end gap-1.5">
@@ -553,7 +567,7 @@ export function updateOverallStats() {
   const percent = total > 0 ? Math.round((learnedCount / total) * 100) : 0;
   
   if (elements.overallProgressText) {
-    elements.overallProgressText.textContent = `${learnedCount} / ${total} gelernt (${percent}%)`;
+    elements.overallProgressText.textContent = `${learnedCount} / ${total} learned (${percent}%)`;
   }
   if (elements.overallProgressBarFill) {
     elements.overallProgressBarFill.style.width = `${percent}%`;
@@ -1075,12 +1089,12 @@ export function initFSRSDecaySimulator() {
   if (learnedCardsList.length === 0) {
     const opt = document.createElement('option');
     opt.value = "";
-    opt.textContent = "Keine gelernten Vokabeln vorhanden / No learned cards";
+    opt.textContent = "No learned cards available";
     cardSelect.appendChild(opt);
     
     // Default fallback draw
     slider.value = 8;
-    stabilityVal.textContent = "8.0 Tage";
+    stabilityVal.textContent = "8.0 Days";
     loadCardState(null);
     drawFSRSDecay(canvas, 8);
   } else {
@@ -1100,14 +1114,14 @@ export function initFSRSDecaySimulator() {
     
     const initialStability = simulatedCard.stability;
     slider.value = Math.min(Math.max(initialStability, 1), 120);
-    stabilityVal.textContent = `${Number(initialStability).toFixed(1)} Tage`;
+    stabilityVal.textContent = `${Number(initialStability).toFixed(1)} Days`;
     drawFSRSDecay(canvas, initialStability);
   }
 
   // 2. Slider input listener
   slider.addEventListener('input', (e) => {
     const val = parseFloat(e.target.value);
-    stabilityVal.textContent = `${val.toFixed(1)} Tage`;
+    stabilityVal.textContent = `${val.toFixed(1)} Days`;
     if (simulatedCard) {
       simulatedCard.stability = val;
     }
@@ -1122,7 +1136,7 @@ export function initFSRSDecaySimulator() {
     
     const initialStability = simulatedCard.stability;
     slider.value = Math.min(Math.max(initialStability, 1), 120);
-    stabilityVal.textContent = `${Number(initialStability).toFixed(1)} Tage`;
+    stabilityVal.textContent = `${Number(initialStability).toFixed(1)} Days`;
     drawFSRSDecay(canvas, initialStability);
   });
 
@@ -1165,7 +1179,7 @@ export function initFSRSDecaySimulator() {
       
       // Update UI components
       slider.value = Math.min(Math.max(nextStability, 1), 120);
-      stabilityVal.textContent = `${Number(nextStability).toFixed(1)} Tage`;
+      stabilityVal.textContent = `${Number(nextStability).toFixed(1)} Days`;
       
       // Repaint base curve
       drawFSRSDecay(canvas, nextStability);
@@ -1236,7 +1250,7 @@ export function drawFSRSDecay(canvas, stability, forecastStability = null, forec
   xTicks.forEach(tick => {
     const xVal = paddingLeft + chartWidth * (tick / 30);
     // Label
-    ctx.fillText(`Tag ${tick}`, xVal, height - paddingBottom + 5);
+    ctx.fillText(`Day ${tick}`, xVal, height - paddingBottom + 5);
   });
 
   // Draw Optimal Retention line at 90%

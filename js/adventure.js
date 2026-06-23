@@ -166,7 +166,7 @@ export async function initAdventureView() {
     const level = state.currentLevel; // 'a1', 'a2', 'b1'
     const response = await fetch(`./${level}/adventure.json`);
     if (!response.ok) {
-      throw new Error(`Konnte die Abenteuerdaten für das Niveau ${level.toUpperCase()} nicht laden.`);
+      throw new Error(`Could not load adventure data for level ${level.toUpperCase()}.`);
     }
     const data = await response.json();
     state.adventure.scenarios = data;
@@ -177,10 +177,10 @@ export async function initAdventureView() {
       elements.adventureSelector.innerHTML = `
         <div class="col-span-full bg-rose-950/20 border border-rose-500/20 rounded-2xl p-6 text-center text-rose-300">
           <i class="fa-solid fa-triangle-exclamation text-2xl mb-2 text-rose-400"></i>
-          <p class="font-extrabold text-sm">Szenarien konnten nicht geladen werden.</p>
+          <p class="font-extrabold text-sm">Failed to load adventure scenarios.</p>
           <p class="text-xs text-rose-400 mt-1">${escapeHtml(err.message)}</p>
           <button id="adventure-retry-btn" class="mt-4 bg-rose-600 hover:bg-rose-500 active:scale-95 text-white px-4 py-2 rounded-xl text-xs font-semibold transition-all shadow-lg shadow-rose-600/20">
-            <i class="fa-solid fa-rotate-right mr-1"></i>Erneut versuchen
+            <i class="fa-solid fa-rotate-right mr-1"></i>Try Again
           </button>
         </div>
       `;
@@ -226,23 +226,23 @@ export function renderAdventureMenu() {
           </span>
           ${isCompleted 
             ? `<span class="text-[9px] font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/10 flex items-center gap-1 uppercase tracking-wider">
-                 <i class="fa-solid fa-check"></i> Gelöst
+                 <i class="fa-solid fa-check"></i> Completed
                </span>` 
             : `<span class="text-[9px] font-bold text-slate-500 bg-slate-950/40 px-2 py-0.5 rounded border border-slate-900 uppercase tracking-wider flex items-center gap-1">
-                 <i class="fa-solid fa-gamepad"></i> Aktiv
+                 <i class="fa-solid fa-gamepad"></i> Active
                </span>`
           }
         </div>
         <h4 class="text-base font-extrabold text-white mt-1 group-hover:text-indigo-400 transition-colors">${scen.title}</h4>
         <p class="text-xs text-slate-400 line-clamp-2 leading-relaxed mt-1">
-          Spielen Sie ein interaktives Gespräch durch. Meistern Sie die Wortstellung in ${scen.difficulty}.
+          Play through an interactive conversation. Master sentence structures in ${scen.difficulty}.
         </p>
       </div>
       
       <div class="flex items-center justify-between border-t border-slate-900/60 pt-4 mt-5">
         <div class="flex items-center gap-1 text-[10px] text-slate-500 font-bold uppercase tracking-wider">
           <i class="fa-solid fa-comments text-indigo-400/80 text-[11px]"></i>
-          <span>${Object.keys(scen.nodes).length} Runden</span>
+          <span>${Object.keys(scen.nodes).length} Rounds</span>
         </div>
         <span class="text-xs font-black font-mono text-amber-400 bg-amber-500/5 px-2 py-1 rounded-lg border border-amber-500/10 flex items-center gap-1">
           <i class="fa-solid fa-star text-[10px]"></i> +${totalXP} XP
@@ -459,11 +459,11 @@ export function checkAdventureAnswer() {
     }
     if (elements.adventureFeedbackTitle) {
       elements.adventureFeedbackTitle.className = "text-sm font-black text-emerald-400";
-      elements.adventureFeedbackTitle.textContent = "Gut gemacht! Richtig!";
+      elements.adventureFeedbackTitle.textContent = "Well done! Correct!";
     }
     if (elements.adventureFeedbackText) {
       elements.adventureFeedbackText.className = "text-xs text-slate-300 leading-relaxed";
-      elements.adventureFeedbackText.textContent = `Ihr Satz: "${constructed.join(' ')}" ist perfekt strukturiert!`;
+      elements.adventureFeedbackText.textContent = `Your sentence: "${constructed.join(' ')}" is perfectly structured!`;
     }
     
     // Hide educational hint
@@ -497,13 +497,13 @@ export function checkAdventureAnswer() {
     }
     if (elements.adventureFeedbackTitle) {
       elements.adventureFeedbackTitle.className = "text-sm font-black text-rose-400";
-      elements.adventureFeedbackTitle.textContent = "Leider nicht ganz richtig...";
+      elements.adventureFeedbackTitle.textContent = "Not quite correct yet...";
     }
     if (elements.adventureFeedbackText) {
       elements.adventureFeedbackText.className = "text-xs text-slate-300 leading-relaxed";
       elements.adventureFeedbackText.textContent = constructed.length > 0
-        ? `Ihr Satz: "${constructed.join(' ')}" hat noch grammatikalische Fehler. Versuchen Sie es noch einmal!`
-        : "Sie haben noch keine Wörter ausgewählt! Bitte bauen Sie zuerst Ihren Satz.";
+        ? `Your sentence: "${constructed.join(' ')}" has grammatical errors. Try again!`
+        : "You haven't selected any words yet! Please build your sentence first.";
     }
     
     // Reveal Grammatik-Tipp Panel
