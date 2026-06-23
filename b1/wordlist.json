@@ -20760,7 +20760,7 @@
   {
     "german": "der/das (Schlag-)Obers",
     "word_class": "Nomen",
-    "gender": null,
+    "gender": "das/der",
     "plural": null,
     "verb_conjugation": null,
     "adjective_forms": null,
@@ -24685,7 +24685,7 @@
   {
     "german": "das Schlagobers / die Schlagsahne",
     "word_class": "Nomen",
-    "gender": "das",
+    "gender": "die",
     "plural": null,
     "verb_conjugation": null,
     "adjective_forms": null,

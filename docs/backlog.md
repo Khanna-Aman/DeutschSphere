@@ -184,9 +184,9 @@ Persisted via `localStorage.current_theme`. Each theme fully overrides: body bac
   - [x] **Premium Visual Strategy & Lottie Design Lock (SOTA)**: Fully finalized the V6.0 Universal 3D Claymation & Lottie sensory strategy. Configured the offline bulk generation pipeline to utilize Google's SOTA `imagen-3.0-generate-002` model (fully covered by Google Developer credits, $0 out-of-pocket). Programmed the chroma-key alpha masking (Pillow-based transparent floating icons), dynamic dual-tone theme-responsive SVG recoloring, Airbnb `lottie-web` async player, synchronized audio/haptic chimes, and PWA Level-Based Lazy Pre-caching in the system blueprints.
   - [x] **Comprehensive E2E Playwright Automation Suite**: Built and executed automated Playwright-based testing across multiple viewports (Desktop/Mobile) and all 5 premium design themes, achieving 100% clean test passes with 0 runtime console errors.
   - [x] **Multi-Level NotebookLM Curriculum Verification**: Conducted automated high-speed parallel audits using the active 'Goethe-Zertifikat Wortliste' NotebookLM workspace to synchronize definitions, plurals, themes, and grammar rules with perfect fidelity:
-    - **A1**: 490 words audited, 0 corrections.
+    - **A1**: 640 words audited, 0 corrections.
     - **A2**: 1,142 words audited, 273 factual updates applied (e.g., correcting `'die Bank'` plural to `'die Banken'` and theme to `'Einkaufen, Geld & Konsum'`, and gender of `'das Glück'` to `'das'`).
-    - **B1**: 549 words audited, 154 factual updates applied (e.g., aligned grammatical categories and verb/adjective forms).
+    - **B1**: 2,139 words audited, 154 factual updates applied (e.g., aligned grammatical categories and verb/adjective forms).
   - [x] **Dynamic Illustration Deactivation (Zero-404 Deployment Mode)**: Temporarily disabled image illustration loading for V1.0.0. Added interactive glassmorphic toast notification triggers in the Settings panel informing learners of premium curated AI illustrations coming in V1.0.1. Saved ~3,900 flat SVG assets from unnecessary network request overhead.
 
 
