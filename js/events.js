@@ -26,7 +26,10 @@ import {
   togglePhoneticMirror,
   closePhoneticMirror,
   togglePhoneticRecording,
-  updateImagesToggleUI
+  updateImagesToggleUI,
+  updateReadModeUI,
+  updateAutoplayUI,
+  updateHideLearnedUI
 } from './flashcards.js';
 import {
   initQuiz,
@@ -95,9 +98,9 @@ export function updateSoundStyleUI() {
     elements.soundStyleText.textContent = state.audioTone === 'synth' ? 'Synth' : 'Acoustic';
   }
   if (elements.soundStyleBtn) {
-    const icon = elements.soundStyleBtn.querySelector('i');
+    const icon = elements.soundStyleBtn.querySelector('.sound-style-icon');
     if (icon) {
-      icon.className = state.audioTone === 'synth' ? 'fa-solid fa-wave-square text-[10px]' : 'fa-solid fa-guitar text-[10px] text-indigo-400';
+      icon.className = state.audioTone === 'synth' ? 'sound-style-icon fa-solid fa-wave-square text-[10px]' : 'sound-style-icon fa-solid fa-guitar text-[10px] text-indigo-400';
     }
   }
 }
@@ -107,13 +110,13 @@ export function updateSoundStyleUI() {
  */
 export function updateParticlesUI() {
   if (elements.particlesBtn) {
-    const icon = elements.particlesBtn.querySelector('i');
+    const icon = elements.particlesBtn.querySelector('.toggle-icon');
     if (icon) {
       if (state.particleBursts) {
-        icon.className = 'fa-solid fa-toggle-on text-xs text-indigo-400';
+        icon.className = 'toggle-icon fa-solid fa-toggle-on text-xs text-indigo-400';
         elements.particlesBtn.classList.remove('opacity-60');
       } else {
-        icon.className = 'fa-solid fa-toggle-off text-xs text-slate-500';
+        icon.className = 'toggle-icon fa-solid fa-toggle-off text-xs text-slate-500';
         elements.particlesBtn.classList.add('opacity-60');
       }
     }
@@ -132,6 +135,9 @@ export function initSettingsUI() {
   }
   updateSoundStyleUI();
   updateParticlesUI();
+  updateReadModeUI();
+  updateAutoplayUI();
+  updateHideLearnedUI();
 }
 
 /**

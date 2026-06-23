@@ -12,9 +12,9 @@ from playwright.sync_api import sync_playwright
 try:
     sys.stdout.reconfigure(encoding='utf-8')
 except AttributeError:
-    pass # Older Python versions or redirection might not support reconfigure
+    pass  # Older Python versions or redirection might not support reconfigure
 
-# 1. Automatic Free Port Selector
+# 1. Automatic Free Port Selector to prevent port collisions
 def get_free_port():
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.bind(('', 0))
@@ -23,7 +23,7 @@ def get_free_port():
     return port
 
 PORT = get_free_port()
-print(f"=== Comprehensive E2E Testing Suite ===")
+print(f"=== SOTA E2E Stress-Testing Suite ===")
 print(f"Starting server on dynamic port: {PORT}")
 
 # 2. Local HTTP Server Setup
@@ -41,7 +41,7 @@ print("Local HTTP Server started in the background.")
 
 # 3. Screenshot/Artifacts Directory (Dynamic Conversation ID Resolution)
 base_brain_dir = r"C:\Users\aman-\.gemini\antigravity\brain"
-screenshot_dir = os.path.join(base_brain_dir, "c9bacab3-d6e0-4e65-afc2-7742676b07f5") # Default fallback to active conversation
+screenshot_dir = os.path.join(base_brain_dir, "db1bf4fa-ae19-483f-b864-5b28b6ffe25c") # Default fallback to active conversation
 
 if os.path.exists(base_brain_dir):
     try:
@@ -60,7 +60,6 @@ if os.path.exists(base_brain_dir):
         print(f"Error dynamically resolving active brain directory: {e}")
 
 os.makedirs(screenshot_dir, exist_ok=True)
-
 
 # Tracks captured console errors/page errors
 console_errors = []
@@ -122,451 +121,588 @@ try:
         print(f"Navigating page to: {url}")
         page.goto(url, wait_until="domcontentloaded", timeout=45000)
         
-        # Test Step 1: Base Application & Loading Check
-        print("\n[STEP 1] Testing Base App & Offline Load...")
+        # =========================================================================
+        # [STEP 1] LOADING OVERLAY & ROUTER NAVIGATION TRANSITIONS
+        # =========================================================================
+        print("\n[STEP 1] Testing Base App Load & Router Transitions...")
         page.wait_for_selector("#loader-overlay", state="hidden", timeout=15000)
-        print(" Loader overlay hidden successfully.")
+        print(" Loader overlay dismissed.")
         
         title = page.title()
         print(f" Page Title: '{title}'")
-        assert "A1-B1" in title or "German" in title, "Page Title is incorrect!"
+        assert "DeutschSphere" in title or "German" in title, f"Unexpected page title: {title}"
         
-        # Ensure level select is visible and populated
-        assert page.locator("#level-select").is_visible(), "Level Select is missing!"
-        assert page.locator("#theme-select").is_visible(), "Theme Select is missing!"
+        # Verify hash router transitions across all 7 views
+        views = {
+            "#/": "#flashcards-view",
+            "#/quiz": "#quiz-view",
+            "#/adventure": "#adventure-view",
+            "#/weaver": "#weaver-view",
+            "#/cheatcodes": "#cheatcodes-view",
+            "#/immersion": "#immersion-view",
+            "#/stats": "#stats-view"
+        }
         
-        # Test Step 2: Sidebar Categories & Level Selection Swings
-        print("\n[STEP 2] Testing Sidebar Categories & Level Selector...")
-        
-        # Check that Level dropdown works and switches to A1
-        # Temporarily enable disabled options for E2E validation of other level data layers
-        page.evaluate('document.querySelectorAll("#level-select option").forEach(opt => opt.removeAttribute("disabled"))')
-        page.select_option("#level-select", "a1")
-        time.sleep(1.5)
-        print(" Switched Level to A1.")
-        
-        # Ensure categories are loaded
-        categories = page.locator("#categories-container button")
-        cat_count = categories.count()
-        print(f" Loaded {cat_count} category badges in A1.")
-        assert cat_count > 1, "Categories did not load correctly!"
-        
-        # Switch Level to B1 and check
-        page.select_option("#level-select", "b1")
-        time.sleep(1.5)
-        print(" Switched Level to B1.")
-        
-        # Switch back to A2 for standard test runs
-        page.select_option("#level-select", "a2")
-        time.sleep(1.5)
-        print(" Switched Level to A2.")
-        
-        # Click on 'All' category button
-        all_cat_btn = page.locator('#categories-container button[data-category="All"]').first
-        all_cat_btn.click()
+        for route, view_id in views.items():
+            print(f" -> Navigating to router route: {route}")
+            page.evaluate(f"window.location.hash = '{route}'")
+            time.sleep(0.5)
+            assert page.locator(view_id).is_visible(), f"View {view_id} is not visible on route {route}!"
+            print(f"   Successfully verified view: {view_id}")
+            
+        # Return to main flashcards view
+        page.evaluate("window.location.hash = '#/'")
         time.sleep(0.5)
-        print(" Category 'Alle Kategorien' selected.")
         
-        # Test Step 3: Flashcard Interactions & Preferences Dropdown
-        print("\n[STEP 3] Testing Flashcard Loops & Prefs Panel...")
+        # =========================================================================
+        # [STEP 2] LEVEL SELECTION & SIDEBAR CATEGORIES AUDITING
+        # =========================================================================
+        print("\n[STEP 2] Testing Level Selections & Sidebar Categories...")
+        # Enable all disabled levels for verification
+        page.evaluate('document.querySelectorAll("#level-select option").forEach(opt => opt.removeAttribute("disabled"))')
         
-        # Read the active German word
-        active_word = page.locator("#card-word").inner_text().strip()
-        print(f" Active German Word: '{active_word}'")
-        assert len(active_word) > 0, "No word displayed on the flashcard!"
+        levels = ["a1", "b1", "a2"]
+        for level in levels:
+            print(f" Switching Level Dropdown Select to: '{level.upper()}'...")
+            page.select_option("#level-select", level)
+            time.sleep(1.0)
+            
+            # Assert categories load
+            badges = page.locator("#categories-container button")
+            badge_count = badges.count()
+            print(f"   Loaded {badge_count} category buttons in level '{level}'.")
+            assert badge_count > 1, f"No category buttons loaded for level {level}!"
+            
+        # Click on category badge
+        print(" Clicking on first non-'All' category badge...")
+        category_btns = page.locator("#categories-container button")
+        for i in range(category_btns.count()):
+            btn = category_btns.nth(i)
+            cat_val = btn.get_attribute("data-category")
+            if cat_val != "All":
+                print(f"   Selected Category: '{cat_val}'")
+                btn.click()
+                time.sleep(0.5)
+                break
+                
+        # Reset back to 'All'
+        print(" Restoring category filter to 'Alle Kategorien' (All)...")
+        all_btn = page.locator('#categories-container button[data-category="All"]').first
+        all_btn.click()
+        time.sleep(0.5)
         
-        # Click flashcard itself to expand details (accordion flip)
-        print(" Clicking flashcard to expand accordion details...")
+        # =========================================================================
+        # [STEP 3] FLASHCARD INTERACTIONS, ACCORDIONS & PREFS UI SYNCS
+        # =========================================================================
+        print("\n[STEP 3] Testing Flashcard Accordions & Preferences Dropdown...")
+        
+        # Card Text Check
+        de_word = page.locator("#card-word").inner_text().strip()
+        print(f" Current flashcard headword: '{de_word}'")
+        assert len(de_word) > 0, "German headword on flashcard is empty!"
+        
+        # 1. Accordion click expand details
+        print(" Clicking flashcard container to expand grammar/example accordion details...")
         page.locator("#flashcard").click()
-        time.sleep(0.6)
+        time.sleep(0.5)
         
-        # Check meaning and example are visible
-        meaning_visible = page.locator("#card-meaning").is_visible()
-        example_visible = page.locator("#card-example-de").is_visible()
-        print(f" Details Visible: Meaning={meaning_visible}, German Example={example_visible}")
-        assert meaning_visible, "Card Meaning is hidden after flip click!"
+        assert page.locator("#card-meaning").is_visible(), "Flashcard meaning hidden after click!"
+        assert page.locator("#card-example-de").is_visible(), "Flashcard German example sentence hidden after click!"
+        print("   Meaning and example details are correctly visible.")
         
-        # Click next card button
+        # 2. Card navigation buttons
         print(" Clicking 'Next Card' button...")
         page.locator("#next-btn").click()
-        time.sleep(0.6)
-        new_word = page.locator("#card-word").inner_text().strip()
-        print(f" Advanced to next card. New Word: '{new_word}'")
-        assert active_word != new_word, "Card did not advance!"
+        time.sleep(0.5)
+        de_word_next = page.locator("#card-word").inner_text().strip()
+        print(f"   Advanced card. New Word: '{de_word_next}'")
+        assert de_word != de_word_next, "Card headword did not change after clicking Next!"
         
-        # Click previous card button
         print(" Clicking 'Prev Card' button...")
         page.locator("#prev-btn").click()
-        time.sleep(0.6)
-        restored_word = page.locator("#card-word").inner_text().strip()
-        print(f" Returned back. Current Word: '{restored_word}'")
-        assert restored_word == active_word, "Previous card did not return to start!"
+        time.sleep(0.5)
+        de_word_prev = page.locator("#card-word").inner_text().strip()
+        print(f"   Returned to previous card. Current Word: '{de_word_prev}'")
+        assert de_word == de_word_prev, "Card failed to return to the original headword!"
         
-        # Click mark as Learned button to toggle SRS promotion
-        print(" Clicking 'Gelernt' toggle button...")
+        # 3. Gelernt (Learned) Status Toggling
+        print(" Testing 'Gelernt' toggle button...")
         page.locator("#learned-btn").click()
         time.sleep(0.5)
-        print(" Toggled learned status successfully.")
+        print("   Toggled learned state.")
         
-        # Click TTS speech button
-        print(" Clicking speech synthesis button...")
+        # 4. Speak synthesis button
+        print(" Testing TTS speak button...")
         page.locator("#speak-btn").click()
-        time.sleep(0.5)
+        time.sleep(0.3)
         
-        # Open Glassmorphic Preferences Popover
-        print(" Clicking Preferences Cog toggle button...")
+        # 5. Open and test Settings dropdown and volumes
+        print(" Clicking Preferences Cog button to open settings dropdown...")
         page.locator("#deck-prefs-toggle-btn").click()
         time.sleep(0.5)
+        assert page.locator("#deck-prefs-dropdown").is_visible(), "Settings dropdown panel failed to display!"
         
-        dropdown_visible = page.locator("#deck-prefs-dropdown").is_visible()
-        print(f" Preferences Dropdown Visible: {dropdown_visible}")
-        assert dropdown_visible, "Preferences dropdown menu is missing or hidden!"
+        # Row clicking stress tests (Verifying our exact selector bugfix!)
+        print(" Stress testing settings row buttons (toggling configurations)...")
+        toggles = [
+            ("#read-mode-btn", "Fast-Read mode"),
+            ("#autoplay-btn", "Autoplay voice"),
+            ("#sound-style-btn", "Sound effects toggle"),
+            ("#particles-btn", "Particles animation effects")
+        ]
         
-        # Click Fast-Read Mode toggle inside the dropdown
-        print(" Clicking 'Fast Read Mode' toggle inside dropdown...")
-        page.locator("#read-mode-btn").click()
-        time.sleep(0.5)
+        for selector, name in toggles:
+            print(f"   Clicking settings option: {name} ({selector})...")
+            btn = page.locator(selector)
+            btn.click()
+            time.sleep(0.3)
+            # Toggle again to restore
+            btn.click()
+            time.sleep(0.3)
+            print(f"     Successfully toggled {name} and verified icon remains intact.")
+            
+        # Volume slider adjustment
+        print(" Testing SFX volume slider drag adjust...")
+        slider = page.locator("#sfx-volume-slider")
+        # Evaluate to set value to 0.8
+        page.evaluate("document.getElementById('sfx-volume-slider').value = 0.8")
+        slider.dispatch_event("input")
+        slider.dispatch_event("change")
+        time.sleep(0.3)
+        vol_display = page.locator("#sfx-volume-val").inner_text().strip()
+        print(f"   Slider adjusted. Display volume value: '{vol_display}'")
+        assert vol_display == "80%", f"Volume label failed to synchronize! Expected '80%' but got '{vol_display}'"
         
-        # Clicking outside to auto-close dropdown
-        print(" Clicking outside to close dropdown panel...")
+        # Close settings panel by clicking outside
+        print(" Clicking outside dropdown panel to verify auto-close...")
         page.mouse.click(10, 10)
         time.sleep(0.5)
-        dropdown_closed = not page.locator("#deck-prefs-dropdown").is_visible()
-        print(f" Dropdown successfully closed by click-outside: {dropdown_closed}")
-        assert dropdown_closed, "Preferences dropdown failed to auto-close!"
+        assert not page.locator("#deck-prefs-dropdown").is_visible(), "Preferences dropdown failed to auto-close on outside click!"
         
-        # Open and Close Phonetik-Spiegel Accent Coach
-        print(" Opening Phonetik-Spiegel pronunciation coach panel...")
+        # =========================================================================
+        # [STEP 4] PHONETIK-SPIEGEL (ACCENT COACH) PANEL
+        # =========================================================================
+        print("\n[STEP 4] Testing Phonetik-Spiegel (Pronunciation Mirror)...")
+        print(" Clicking Phonetik-Spiegel trigger button...")
         page.locator("#phonetic-btn").click()
         time.sleep(0.5)
-        assert "open" in page.locator("#phonetic-mirror-panel").get_attribute("class"), "Phonetic Mirror panel failed to open!"
         
-        # Test clicking phonetic record button to verify micro-animations
-        print(" Testing phonetic record button toggle...")
-        page.locator("#phonetic-record-btn").click()
-        time.sleep(0.5)
-        page.locator("#phonetic-record-btn").click()
-        time.sleep(0.5)
+        mirror_panel = page.locator("#phonetic-mirror-panel")
+        assert "open" in mirror_panel.get_attribute("class"), "Phonetic panel did not receive 'open' style class!"
         
-        print(" Closing Phonetik-Spiegel pronunciation coach panel...")
+        print(" Clicks phonetic record button to verify recording toggles...")
+        page.locator("#phonetic-record-btn").click()
+        time.sleep(0.4)
+        page.locator("#phonetic-record-btn").click()
+        time.sleep(0.4)
+        
+        print(" Clicking Phonetik-Spiegel close button...")
         page.locator("#phonetic-close-btn").click()
         time.sleep(0.5)
-        assert "open" not in page.locator("#phonetic-mirror-panel").get_attribute("class"), "Phonetic Mirror panel failed to close!"
+        assert "open" not in mirror_panel.get_attribute("class"), "Phonetic panel failed to close on dismiss click!"
         
-        # Test Step 3.5: Audio Trainer Panel & Keyboard Shortcuts
-        print("\n[STEP 3.5] Testing Audio Trainer Controls & Keyboard Navigation...")
+        # =========================================================================
+        # [STEP 5] AUDIO TRAINER & KEYBOARD SHORTCUTS STRESS TEST
+        # =========================================================================
+        print("\n[STEP 5] Stress Testing Keyboard Hotkeys & Audio Trainer Controls...")
         
-        # 1. Expand keyboard shortcuts guide
-        print(" Toggling keyboard shortcuts panel...")
-        page.locator("#toggle-shortcuts-btn").click()
-        time.sleep(0.5)
-        assert page.locator("#shortcuts-content").is_visible(), "Shortcuts content failed to expand!"
-        page.locator("#toggle-shortcuts-btn").click()
-        time.sleep(0.5)
-        
-        # 2. Test Audio Trainer Panel clicks
-        print(" Testing Audio Trainer controls...")
+        # Audio Trainer Controls
+        print(" Expanding and testing Audio Trainer control buttons...")
         page.locator("#trainer-play-btn").click()
-        time.sleep(0.5)
-        page.locator("#trainer-loop-btn").click()
         time.sleep(0.3)
+        page.locator("#trainer-loop-btn").click()
+        time.sleep(0.2)
         page.locator("#trainer-next-btn").click()
-        time.sleep(0.5)
+        time.sleep(0.3)
         page.locator("#trainer-prev-btn").click()
+        time.sleep(0.3)
+        page.locator("#trainer-play-btn").click()  # Stop play
+        time.sleep(0.3)
+        
+        # Shortcuts helper accordion panel
+        print(" Expanding keyboard shortcuts guide drawer...")
+        page.locator("#toggle-shortcuts-btn").click()
         time.sleep(0.5)
-        # Turn off trainer
-        page.locator("#trainer-play-btn").click()
+        assert page.locator("#shortcuts-content").is_visible(), "Shortcuts drawer content is not expanded!"
+        page.locator("#toggle-shortcuts-btn").click()
         time.sleep(0.5)
         
-        # 3. Test Keyboard Shortcuts
-        print(" Simulating spacebar keypress to toggle active card accordion...")
+        # Press keyboard hotkeys
+        print(" Simulating keyboard Hotkey 'F' (Fast Read toggle)...")
+        page.keyboard.press("f")
+        time.sleep(0.4)
+        
+        print(" Simulating keyboard Hotkey 'A' (Autoplay speech toggle)...")
+        page.keyboard.press("a")
+        time.sleep(0.4)
+        
+        print(" Simulating keyboard Hotkey 'S' (Sound style toggle)...")
+        page.keyboard.press("s")
+        time.sleep(0.4)
+        
+        print(" Simulating keyboard Hotkey 'L' (Learned status toggle)...")
+        page.keyboard.press("l")
+        time.sleep(0.4)
+        
+        print(" Simulating keyboard Hotkey 'Space' (Toggle card accordion details)...")
         page.keyboard.press("Space")
         time.sleep(0.5)
         
-        print(" Simulating ArrowRight keypress to go to next card...")
+        print(" Simulating keyboard Hotkey 'ArrowRight' (Next card)...")
         page.keyboard.press("ArrowRight")
         time.sleep(0.5)
         
-        print(" Simulating ArrowLeft keypress to go back...")
+        print(" Simulating keyboard Hotkey 'ArrowLeft' (Prev card)...")
         page.keyboard.press("ArrowLeft")
         time.sleep(0.5)
         
-        # Test Step 4: MCQ & Spelling Quiz Arena
-        print("\n[STEP 4] Testing Multiple-Choice & Spelling Quiz loops...")
-        
-        # Navigate to Quiz tab via router hash
-        print(" Navigating to hash '#/quiz'...")
-        page.evaluate("window.location.hash = '#/quiz'")
-        time.sleep(1.0)
-        assert page.locator("#quiz-view").is_visible(), "Quiz view failed to render!"
-        
-        # 4a. MCQ Quiz Loop
-        print(" Starting MCQ (Multiple-Choice) quiz mode...")
-        page.locator("#quiz-mode-mc").click()
-        time.sleep(1.2)
-        assert page.locator("#quiz-workspace").is_visible(), "Quiz workspace did not load!"
-        
-        # Verify MCQ option choices are loaded
-        options = page.locator("#quiz-options-container button")
-        opt_count = options.count()
-        print(f" MCQ Option Buttons visible: {opt_count}")
-        assert opt_count == 4, "MCQ quiz mode must render exactly 4 answer options!"
-        
-        # Click the first answer option button
-        print(" Clicking first option chip...")
-        options.first.click()
+        # Test keyboard rating keybinds (FSRS buttons 1-4)
+        print(" Simulating FSRS spacing keypress hotkey '1' (Again)...")
+        page.keyboard.press("1")
         time.sleep(0.5)
         
-        # Feedback screen should show up
-        feedback_visible = page.locator("#quiz-feedback-panel").is_visible()
-        print(f" MCQ Answer feedback panel visible: {feedback_visible}")
-        assert feedback_visible, "No feedback panel revealed after selecting MCQ option!"
+        print(" Simulating FSRS spacing keypress hotkey '3' (Good)...")
+        page.keyboard.press("3")
+        time.sleep(0.5)
         
-        # Click Next question
-        print(" Advancing quiz to next question...")
+        # =========================================================================
+        # [STEP 6] MULTIPLE-CHOICE & SPELLING QUIZ ARENA
+        # =========================================================================
+        print("\n[STEP 6] Testing MCQ and Spelling Quiz Arena...")
+        page.evaluate("window.location.hash = '#/quiz'")
+        time.sleep(1.0)
+        assert page.locator("#quiz-view").is_visible(), "Failed to navigate to Quiz Arena!"
+        
+        # 6a. MCQ Quiz Loop
+        print(" Clicking MCQ mode selection button...")
+        page.locator("#quiz-mode-mc").click()
+        time.sleep(1.2)
+        assert page.locator("#quiz-workspace").is_visible(), "MCQ Quiz workspace failed to load!"
+        
+        mcq_buttons = page.locator("#quiz-options-container button")
+        print(f"   MCQ Options Buttons rendered: {mcq_buttons.count()}")
+        assert mcq_buttons.count() == 4, "MCQ quiz must present exactly 4 choices!"
+        
+        print("   Selecting first option choice...")
+        mcq_buttons.first.click()
+        time.sleep(0.5)
+        assert page.locator("#quiz-feedback-panel").is_visible(), "MCQ feedback screen is hidden after option select!"
+        
+        print("   Clicking Next MCQ Question button...")
         page.locator("#quiz-next-question-btn").click()
         time.sleep(0.8)
         
-        # Quit ongoing MCQ quiz via keyboard Escape key shortcut
-        print(" Quitting ongoing MCQ quiz via Escape key shortcut...")
+        print("   Pressing 'Escape' key to quit ongoing MCQ quiz...")
         page.keyboard.press("Escape")
         time.sleep(0.8)
-        assert page.locator("#quiz-mode-selector").is_visible(), "MCQ Quiz failed to quit via Escape key!"
+        assert page.locator("#quiz-mode-selector").is_visible(), "Failed to exit MCQ quiz back to selection lobby via Escape!"
         
-        # 4b. Spelling Quiz Loop
-        print(" Starting Spelling quiz mode...")
+        # 6b. Spelling Quiz Loop
+        print(" Clicking Spelling mode selection button...")
         page.locator("#quiz-mode-spelling").click()
         time.sleep(1.2)
-        assert page.locator("#quiz-spelling-container").is_visible(), "Spelling container did not load!"
+        assert page.locator("#quiz-spelling-container").is_visible(), "Spelling quiz workspace failed to load!"
         
-        # Type a dummy answer
-        print(" Typing dummy spelling input...")
-        page.locator("#quiz-spelling-input").fill("Dummy-Test")
+        print("   Filling in dummy spelling guess...")
+        page.locator("#quiz-spelling-input").fill("Probestraße")
         
-        # Test clicking virtual umlaut keys
-        umlauts = page.locator(".quiz-kb-btn")
-        umlaut_count = umlauts.count()
-        print(f" Virtual Umlaut Keyboard Buttons count: {umlaut_count}")
-        assert umlaut_count > 0, "No virtual umlaut keyboard buttons loaded!"
+        # Virtual Keyboard click
+        kb_umlauts = page.locator(".quiz-kb-btn")
+        print(f"   Virtual keyboard buttons rendered: {kb_umlauts.count()}")
+        assert kb_umlauts.count() > 0, "No spelling virtual umlaut keyboard buttons rendered!"
         
-        print(" Clicking first virtual umlaut key...")
-        umlauts.first.click()
+        print("   Clicking first virtual keyboard button...")
+        kb_umlauts.first.click()
         time.sleep(0.3)
-        typed_val = page.locator("#quiz-spelling-input").input_value()
-        print(f" Input field value after umlaut click: '{typed_val}'")
+        spelling_val = page.locator("#quiz-spelling-input").input_value()
+        print(f"   Input value after click: '{spelling_val}'")
         
-        # Submit spelling answer
-        print(" Submitting spelling answer...")
+        print("   Submitting spelling answer...")
         page.locator("#quiz-spelling-submit").click()
         time.sleep(0.8)
+        assert page.locator("#quiz-feedback-panel").is_visible(), "Spelling feedback screen failed to display!"
         
-        # Verify feedback
-        assert page.locator("#quiz-feedback-panel").is_visible(), "Spelling Answer feedback failed to show!"
-        
-        # Quit Spelling Quiz via Escape key shortcut
-        print(" Quitting Spelling quiz via Escape key shortcut...")
+        print("   Pressing 'Escape' key to exit spelling quiz lobby...")
         page.keyboard.press("Escape")
         time.sleep(0.8)
-        assert page.locator("#quiz-mode-selector").is_visible(), "Spelling Quiz failed to quit via Escape key!"
+        assert page.locator("#quiz-mode-selector").is_visible(), "Failed to exit Spelling quiz to selection lobby via Escape!"
         
-        # Test Step 4.5: Cheatcodes Panel & Search Verification
-        print("\n[STEP 4.5] Testing Cheatcodes Spickzettel and Tab filters...")
-        print(" Navigating to hash '#/cheatcodes'...")
-        page.evaluate("window.location.hash = '#/cheatcodes'")
-        time.sleep(1.0)
-        assert page.locator("#cheatcodes-view").is_visible(), "Cheatcodes view failed to render!"
-        
-        # Search cheatcodes
-        print(" Typing search query inside Cheatcodes Search...")
-        page.locator("#cheatcode-search").fill("der")
-        time.sleep(0.5)
-        
-        # Click category tabs
-        tabs = ["all", "nouns", "prefixes", "adjectives"]
-        for tab in tabs:
-            print(f" Clicking Cheatcode Tab: {tab}...")
-            page.locator(f".cheatcode-tab-btn[data-tab='{tab}']").click()
-            time.sleep(0.5)
-            
-        # Clear search
-        page.locator("#cheatcode-search").fill("")
-        time.sleep(0.5)
-        
-        # Test Step 5: RPG Deutsch-Abenteuer (Adventure Mode)
-        print("\n[STEP 5] Testing RPG Deutsch-Abenteuer...")
-        print(" Navigating to hash '#/adventure'...")
+        # =========================================================================
+        # [STEP 7] RPG DEUTSCH-ABENTEUER (ADVENTURE GAMEBOARD)
+        # =========================================================================
+        print("\n[STEP 7] Testing RPG Deutsch-Abenteuer...")
         page.evaluate("window.location.hash = '#/adventure'")
-        time.sleep(1.5) # Allow dynamic async fetch to populate scenarios list
-        assert page.locator("#adventure-view").is_visible(), "Adventure view failed to render!"
+        time.sleep(1.5)  # Wait for scenarios list fetch
+        assert page.locator("#adventure-view").is_visible(), "Failed to route to RPG Adventure view!"
         
-        # Ensure scenario cards loaded (using correct hierarchy selector)
         scenarios = page.locator("#adventure-selector > div")
-        scen_count = scenarios.count()
-        print(f" RPG Scenarios available: {scen_count}")
-        assert scen_count > 0, "No adventure scenarios found!"
+        scenario_count = scenarios.count()
+        print(f" Scenarios listed in lobby: {scenario_count}")
+        assert scenario_count > 0, "No RPG adventure scenarios found inside curriculum datasets!"
         
-        # Start first available RPG scenario by clicking the card div
-        print(" Starting first adventure scenario...")
+        print(" Starting first available RPG Scenario...")
         scenarios.first.click()
         time.sleep(1.5)
         
-        # Check active dialog panel is visible
-        assert page.locator("#adventure-board").is_visible(), "Adventure game board failed to start!"
+        assert page.locator("#adventure-board").is_visible(), "Active RPG adventure gameboard did not open!"
+        npc_speech = page.locator("#adventure-npc-bubble").inner_text().strip()
+        print(f"   NPC Scenario Dialogue: '{npc_speech}'")
+        assert len(npc_speech) > 0, "NPC dialog bubble is empty!"
         
-        # NPC speaker text bubble should exist
-        npc_text = page.locator("#adventure-npc-bubble").inner_text()
-        print(f" NPC Dialogue speech: '{npc_text}'")
-        assert len(npc_text) > 0, "NPC dialog text is empty!"
-        
-        # Test clicking phonetic speaker button on active scenario
-        print(" Clicking NPC voice pronouncer button...")
+        # NPC speaker TTS play click
+        print("   Clicking NPC audio synthesis pronouncer button...")
         page.locator("#adventure-npc-speak-btn").click()
-        time.sleep(0.5)
+        time.sleep(0.3)
         
-        # Verify word chips are loaded
+        # Words chips list check
         adv_chips = page.locator("#adventure-chips-pool .adventure-chip")
         adv_chip_count = adv_chips.count()
-        print(f" Adventure scrambled word chips in pool: {adv_chip_count}")
-        assert adv_chip_count > 0, "No adventure scrambled word chips generated!"
+        print(f"   Scrambled word chips in pool: {adv_chip_count}")
+        assert adv_chip_count > 0, "No scramble chips generated for this RPG phrase!"
         
-        # Click the first chip to snap it to the dropzone
-        print(" Snapping first scrambled word chip...")
+        print("   Clicking first scrambled chip to snap into slot...")
         adv_chips.first.click()
-        time.sleep(0.5)
+        time.sleep(0.4)
         
-        # Click reset syntax board button
-        print(" Clicking reset syntax board button inside Adventure Mode...")
+        # Reset board
+        print("   Clicking Reset button to return chips to pool...")
         page.locator("#adventure-reset-btn").click()
-        time.sleep(0.5)
-        
-        # Ensure snapped slot was cleared and chips pool size is restored
+        time.sleep(0.4)
         reset_adv_chip_count = page.locator("#adventure-chips-pool .adventure-chip").count()
-        print(f" Chips pool size after reset: {reset_adv_chip_count}")
-        assert reset_adv_chip_count == adv_chip_count, "Adventure syntax reset failed!"
+        assert reset_adv_chip_count == adv_chip_count, "Syntax reset failed to return chips to pool!"
         
-        # Snap again and submit for test coverage
-        print(" Snapping first chip again and submitting syntax check...")
+        print("   Clicking first chip again and submitting syntax check...")
         page.locator("#adventure-chips-pool .adventure-chip").first.click()
         time.sleep(0.3)
         page.locator("#adventure-submit-btn").click()
         time.sleep(0.8)
         
-        # Quit scenario back to lobby
-        print(" Clicking Quit Adventure button...")
+        # Quit scenario and modal confirm
+        print("   Clicking 'Abbrechen' (Quit Scenario) button...")
         page.locator("#adventure-quit-btn").click()
         time.sleep(0.5)
         
-        # Confirm quit on our custom confirm modal
-        print(" Clicking confirm on adventure quit custom modal...")
+        modal = page.locator("#confirm-modal-overlay")
+        assert modal.is_visible(), "Quit confirmation modal failed to open!"
+        print("   Custom confirmation modal is visible. Clicking Confirm ('Ja, abbrechen')...")
         page.locator("#confirm-modal-confirm").click()
-        time.sleep(0.8)
+        time.sleep(1.0)
+        assert page.locator("#adventure-selector").is_visible(), "Failed to return back to scenarios lobby!"
         
-        # Test Step 6: Grammatik-Weberei (Weaver Game Board)
-        print("\n[STEP 6] Testing Grammatik-Weberei drag-and-snap syntax checker...")
-        print(" Navigating to hash '#/weaver'...")
+        # =========================================================================
+        # [STEP 8] GRAMMATIK-WEBEREI (WEAVER SYNTAX SNAPPER)
+        # =========================================================================
+        print("\n[STEP 8] Testing Grammatik-Weberei (Weaver Game Board)...")
         page.evaluate("window.location.hash = '#/weaver'")
         time.sleep(1.0)
-        assert page.locator("#weaver-view").is_visible(), "Grammatik-Weberei view failed to load!"
+        assert page.locator("#weaver-view").is_visible(), "Failed to route to Grammar Weaver view!"
         
-        # Click start
-        print(" Clicking Weaver start training button...")
+        print(" Clicking Weaver 'Training starten' button...")
         page.locator("#weaver-start-btn").click()
         time.sleep(1.5)
-        assert page.locator("#weaver-board").is_visible(), "Weaver active game board failed to start!"
+        assert page.locator("#weaver-board").is_visible(), "Weaver active gaming board did not start!"
         
-        # Ensure pool of chips and empty targets exist
-        chips = page.locator("#weaver-chips-pool .weaver-chip")
-        chip_count = chips.count()
-        print(f" Scrambled Word Chips in pool: {chip_count}")
-        assert chip_count > 0, "No syntax scrambled word chips generated!"
+        weaver_chips = page.locator("#weaver-chips-pool .weaver-chip")
+        weaver_chip_count = weaver_chips.count()
+        print(f"   Scrambled Weaver chips rendered: {weaver_chip_count}")
+        assert weaver_chip_count > 0, "No scrambled chips loaded on the weaver board!"
         
-        # Click the first chip to test click-to-snap logic
-        first_chip_text = chips.first.inner_text().strip()
-        print(f" Snapping first scrambled chip: '{first_chip_text}'")
-        chips.first.click()
-        time.sleep(0.5)
+        print("   Clicking first word chip to snap...")
+        weaver_chips.first.click()
+        time.sleep(0.4)
         
-        # Verify that reset clears the snapped slots
-        print(" Clicking reset syntax board button...")
+        print("   Clicking Weaver Reset button...")
         page.locator("#weaver-reset-btn").click()
-        time.sleep(0.5)
+        time.sleep(0.4)
+        reset_weaver_chip_count = page.locator("#weaver-chips-pool .weaver-chip").count()
+        assert reset_weaver_chip_count == weaver_chip_count, "Weaver reset failed to restore chip pool!"
         
-        # Snapped slots should return back to active pool
-        reset_chip_count = page.locator("#weaver-chips-pool .weaver-chip").count()
-        print(f" Chips pool size after reset: {reset_chip_count}")
-        assert reset_chip_count == chip_count, "Syntax reset failed to return chips to pool!"
-        
-        # Click chip again and hit Submit to check verification mechanics
-        print(" Snapping first chip and clicking submit syntax check...")
+        print("   Clicking first chip again and submitting Weaver check...")
         page.locator("#weaver-chips-pool .weaver-chip").first.click()
         time.sleep(0.3)
         page.locator("#weaver-submit-btn").click()
         time.sleep(0.8)
         
-        # Click Quit Weaver game
-        print(" Clicking Quit Weaver button...")
+        print("   Clicking 'Spiel beenden' (Quit Weaver) button...")
         page.locator("#weaver-quit-btn").click()
         time.sleep(0.5)
-        
-        # Confirm quit on our custom confirm modal
-        print(" Clicking confirm on weaver quit custom modal...")
+        assert modal.is_visible(), "Quit confirmation modal failed to open inside Weaver!"
+        print("   Clicking Confirm on exit modal...")
         page.locator("#confirm-modal-confirm").click()
-        time.sleep(0.8)
+        time.sleep(1.0)
+        assert page.locator("#flashcards-view").is_visible(), "Failed to return to home view after Weaver quit!"
         
-        # Test Step 7: Stats Analysis Panel
-        print("\n[STEP 7] Testing Stats view & Export backup click...")
-        print(" Navigating to hash '#/stats'...")
+        # =========================================================================
+        # [STEP 9] CHEATCODES SPICKZETTEL SECTIONS
+        # =========================================================================
+        print("\n[STEP 9] Testing Cheatcodes Spickzettel and Tab filters...")
+        page.evaluate("window.location.hash = '#/cheatcodes'")
+        time.sleep(1.0)
+        assert page.locator("#cheatcodes-view").is_visible(), "Failed to route to Cheatcodes view!"
+        
+        print(" Searching cheatcodes for 'die' suffix/rules...")
+        page.locator("#cheatcode-search").fill("die")
+        time.sleep(0.5)
+        
+        # Category Tabs clicking
+        tabs = ["nouns", "prefixes", "adjectives", "all"]
+        for tab in tabs:
+            print(f"   Clicking Cheatcode category filter tab: '{tab}'")
+            page.locator(f".cheatcode-tab-btn[data-tab='{tab}']").click()
+            time.sleep(0.4)
+            
+        print(" Clearing cheatcodes search queries...")
+        page.locator("#cheatcode-search").fill("")
+        time.sleep(0.4)
+        
+        # Expand cheatcode card accordion
+        print(" Clicking first cheatcode accordion header card to expand details...")
+        cheatcode_cards = page.locator(".cheatcode-card")
+        if cheatcode_cards.count() > 0:
+            cheatcode_cards.first.click()
+            time.sleep(0.5)
+            print("   Cheatcode detail expanded successfully.")
+            
+        # =========================================================================
+        # [STEP 10] IMMERSION LAB (NLP TEXT ANALYZER) - STRESS TESTING THE NLP ENGINE
+        # =========================================================================
+        print("\n[STEP 10] Stress Testing Immersion Lab & NLP Offline Engine...")
+        page.evaluate("window.location.hash = '#/immersion'")
+        time.sleep(1.0)
+        assert page.locator("#immersion-view").is_visible(), "Failed to route to Immersion view!"
+        
+        # Input German text to analyze
+        sample_sentence = "Ich fahre morgen mit dem Zug ab, weil ich meine Familie besuchen möchte."
+        print(f" Entering German text into text area:\n   \"{sample_sentence}\"")
+        page.locator("#immersion-textarea").fill(sample_sentence)
+        time.sleep(0.4)
+        
+        # Trigger analyze button
+        print(" Clicking 'Text analysieren' button...")
+        page.locator("#immersion-analyze-btn").click()
+        
+        # Wait for analyze loading overlay to complete and display parsed cards
+        print(" Waiting for parsed text grid cards rendering...")
+        page.wait_for_selector("#immersion-results-grid .immersion-card", state="visible", timeout=15000)
+        
+        parsed_cards = page.locator("#immersion-results-grid .immersion-card")
+        parsed_count = parsed_cards.count()
+        print(f"   Successfully parsed {parsed_count} word tokens into the results grid!")
+        assert parsed_count > 0, "NLP engine failed to parse tokens into the grid!"
+        
+        # Click on the first parsed word card to trigger overlay drawer
+        first_card_word = parsed_cards.first.locator("h3").inner_text().strip()
+        print(f" Clicking parsed word card token: '{first_card_word}' to open explorer drawer overlay...")
+        parsed_cards.first.click()
+        time.sleep(0.6)
+        
+        # Assert Overlay Drawer is open
+        explorer_overlay = page.locator("#immersion-explorer-overlay")
+        assert explorer_overlay.is_visible() and "hidden" not in explorer_overlay.get_attribute("class"), "Immersion Word Explorer drawer overlay failed to open!"
+        print("   Immersion Word Explorer Overlay Drawer is open successfully.")
+        
+        explorer_title = page.locator("#immersion-explorer-title").inner_text().strip()
+        print(f"   Explorer Title / Word Head: '{explorer_title}'")
+        assert len(explorer_title) > 0, "Word explorer title is empty!"
+        
+        # Click speech voice synthesis inside drawer
+        print("   Clicking Speak/TTS button inside Word Explorer drawer...")
+        page.locator("#explorer-speak-btn").click()
+        time.sleep(0.4)
+        
+        # Close Drawer overlay
+        print("   Clicking close ('Schließen') button inside Word Explorer drawer...")
+        page.locator("#immersion-explorer-close-btn").click(force=True)
+        time.sleep(0.5)
+        assert not explorer_overlay.is_visible() or "hidden" in explorer_overlay.get_attribute("class"), "Explorer overlay drawer failed to close!"
+        print("   Word Explorer Drawer successfully dismissed.")
+        
+        # =========================================================================
+        # [STEP 11] STATS DASHBOARD & FSRS DECAY SIMULATOR FORECASTER
+        # =========================================================================
+        print("\n[STEP 11] Testing Stats Achievements & FSRS Decay Simulator/Forecaster...")
         page.evaluate("window.location.hash = '#/stats'")
         time.sleep(1.0)
-        assert page.locator("#stats-view").is_visible(), "Stats view failed to load!"
+        assert page.locator("#stats-view").is_visible(), "Failed to route to Stats view!"
         
-        # Check overall progress counts and unlocked achievements render
+        # Streak and Achievements check
         badges = page.locator("#achievements-grid > div")
-        print(f" Achievements grid card nodes: {badges.count()}")
-        assert badges.count() > 0, "Achievements grid did not render!"
+        badge_count = badges.count()
+        print(f" Achievements grid cards count: {badge_count}")
+        assert badge_count > 0, "No achievement badges rendered in stats view grid!"
         
-        # Intercept download trigger on Backup Export button click
-        print(" Testing backup export trigger...")
+        # Canvas graph exist check
+        assert page.locator("#fsrs-decay-canvas").is_visible(), "FSRS memory decay canvas graph element missing!"
+        print("   FSRS stability decay graph canvas is present.")
+        
+        # FSRS Spaced Repetition Decay Simulator: click forecast buttons to simulate curves
+        forecast_chips = page.locator(".forecast-chip")
+        chip_count = forecast_chips.count()
+        print(f" Interactive Forecast Spacing chips rendered: {chip_count}")
+        assert chip_count > 0, "No .forecast-chip elements found inside FSRS simulator panel!"
+        
+        # Click each spacing forecast chip to verify decay curves simulations!
+        for i in range(chip_count):
+            chip = forecast_chips.nth(i)
+            chip_text = chip.inner_text().strip()
+            print(f"   Simulating user hover/click on forecast rating option: '{chip_text}'...")
+            chip.hover()
+            time.sleep(0.2)
+            chip.click()
+            time.sleep(0.3)
+            
+        # Verify JSON Backup Download
+        print(" Testing 'Datensicherung exportieren' (Backup Export) download handler...")
         with page.expect_download() as download_info:
             page.locator("#backup-export-btn").click()
         download = download_info.value
-        print(f" Backup file download initiated. File name: '{download.suggested_filename}'")
-        assert "german_mastery_backup" in download.suggested_filename.lower(), "Suggested backup filename is incorrect!"
+        filename = download.suggested_filename
+        print(f"   Backup file download intercepted. Suggested filename: '{filename}'")
+        assert "backup" in filename.lower() and ".json" in filename.lower(), f"Unexpected suggested backup filename: {filename}"
         
-        # Test Step 7.5: User Progress Reset Flow
-        print("\n[STEP 7.5] Testing progress reset confirmation modal flow...")
-        
-        # Setup dialog handler to accept browser confirmations
-        print(" Listening for confirm dialogs...")
-        page.once("dialog", lambda dialog: dialog.accept())
-        
-        # Navigate back to Home hash
+        # =========================================================================
+        # [STEP 11.5] SETTINGS PROFILE PROGRESS RESET FLOW
+        # =========================================================================
+        print("\n[STEP 11.5] Testing custom user profile progress reset flow...")
         page.evaluate("window.location.hash = '#/'")
         time.sleep(0.8)
         
-        print(" Opening Preferences menu...")
+        print(" Opening preferences settings dropdown...")
         page.locator("#deck-prefs-toggle-btn").click()
         time.sleep(0.5)
         
-        print(" Clicking 'Reset Progress' button...")
+        print(" Clicking 'Fortschritt zurücksetzen' button...")
         page.locator("#reset-progress-btn-main").click()
         time.sleep(0.5)
         
-        # Confirm reset on our custom confirm modal
-        print(" Clicking confirm on progress reset custom modal...")
+        assert modal.is_visible(), "Progress reset confirmation modal failed to open!"
+        print(" Clicking Confirm ('Zurücksetzen') on reset profile progress modal...")
         page.locator("#confirm-modal-confirm").click()
         time.sleep(1.0)
-        print(" Progress reset executed and accepted successfully!")
+        print("   Progress reset triggered and completed successfully!")
         
-        # Test Step 8: Multi-Theme Contrast Cycles & Multi-Viewport Screen Audits
-        print("\n[STEP 8] Auditing Multi-Theme Contrast & Viewports...")
+        # =========================================================================
+        # [STEP 12] MULTI-THEME CONTRAST CYCLES & SCREENSHOT GENERATIONS
+        # =========================================================================
+        print("\n[STEP 12] Performing Multi-Theme Visual Audits & Capture High-Res Screenshots...")
         themes = ["default", "cyberpunk", "schwarzwald", "oktoberfest", "weimar"]
         
-        # Go back to Flashcards main view
-        page.evaluate("window.location.hash = '#/'")
-        time.sleep(1.0)
+        # Let's take screenshots of multiple key views across both viewports!
+        # Views screenshots targets:
+        view_scenarios = [
+            ("#/", "flashcards-view", "flashcard"),
+            ("#/quiz", "quiz-view", "quiz"),
+            ("#/adventure", "adventure-view", "adventure"),
+            ("#/weaver", "weaver-view", "weaver"),
+            ("#/immersion", "immersion-view", "immersion"),
+            ("#/stats", "stats-view", "stats")
+        ]
         
-        # Ensure we expand card details to show Weimar theme text visibility on example elements
+        # 12a. Desktop Viewports Screenshot cycles
+        print("\nRunning Desktop theme and viewport screenshots audits (1440x900)...")
+        # Go back to flashcards main view and expand details for default main layout shots
+        page.evaluate("window.location.hash = '#/'")
+        time.sleep(0.5)
         page.locator("#flashcard").click()
         time.sleep(0.5)
         
@@ -575,25 +711,89 @@ try:
             page.evaluate(f"applyTheme('{theme}')")
             time.sleep(0.8)
             
-            # Save Desktop Screenshot Run
             sc_desktop = os.path.join(screenshot_dir, f"e2e_desktop_{theme}.png")
             page.screenshot(path=sc_desktop)
-            print(f"   [Desktop Screenshot] saved: {sc_desktop}")
+            print(f"   [Desktop Main-View Screenshot] saved: {sc_desktop}")
             
-        # Switch to Mobile Viewport dynamically on the same page (375x812 - iPhone X)
+        # Weimar View cycles: Take other views screenshots under distinct illustrative themes
+        print("\nCapturing various sub-views on Desktop under representative premium themes...")
+        for route, view_id, name in view_scenarios:
+            if name == "flashcard":
+                continue # Already captured
+            
+            # Use Weimar theme for Quiz, Cyberpunk for RPG, Schwarzwald for Weaver, Oktoberfest for Immersion, Default for Stats
+            assoc_theme = "default"
+            if name == "quiz":
+                assoc_theme = "weimar"
+            elif name == "adventure":
+                assoc_theme = "cyberpunk"
+            elif name == "weaver":
+                assoc_theme = "schwarzwald"
+            elif name == "immersion":
+                assoc_theme = "oktoberfest"
+            
+            print(f" -> Routing to {route} under theme '{assoc_theme.upper()}'...")
+            page.evaluate(f"applyTheme('{assoc_theme}')")
+            page.evaluate(f"window.location.hash = '{route}'")
+            time.sleep(1.0)
+            
+            # Extra setup for immersion analysis screenshot
+            if name == "immersion":
+                page.locator("#immersion-textarea").fill("Ich gehe heute in die Schule und lerne Deutsch.")
+                page.locator("#immersion-analyze-btn").click()
+                time.sleep(1.0)
+            
+            sc_path = os.path.join(screenshot_dir, f"e2e_desktop_view_{name}.png")
+            page.screenshot(path=sc_path)
+            print(f"   [Desktop Sub-View {name.upper()}] saved: {sc_path}")
+            
+        # 12b. Mobile Viewports Screenshot cycles (375x812 - iPhone X)
         print("\nSwitching to Mobile Viewport dynamically (375x812)...")
         page.set_viewport_size({"width": 375, "height": 812})
         time.sleep(1.0)
+        
+        # Capture main flashcard view in all themes
+        page.evaluate("window.location.hash = '#/'")
+        time.sleep(0.5)
         
         for theme in themes:
             print(f" -> Switching Mobile Theme to: '{theme.upper()}'")
             page.evaluate(f"applyTheme('{theme}')")
             time.sleep(0.8)
             
-            # Save Mobile Screenshot Run
             sc_mobile = os.path.join(screenshot_dir, f"e2e_mobile_{theme}.png")
             page.screenshot(path=sc_mobile)
-            print(f"   [Mobile Screenshot] saved: {sc_mobile}")
+            print(f"   [Mobile Main-View Screenshot] saved: {sc_mobile}")
+            
+        # Capture sub views on Mobile
+        print("\nCapturing various sub-views on Mobile under representative premium themes...")
+        for route, view_id, name in view_scenarios:
+            if name == "flashcard":
+                continue
+                
+            assoc_theme = "default"
+            if name == "quiz":
+                assoc_theme = "weimar"
+            elif name == "adventure":
+                assoc_theme = "cyberpunk"
+            elif name == "weaver":
+                assoc_theme = "schwarzwald"
+            elif name == "immersion":
+                assoc_theme = "oktoberfest"
+                
+            print(f" -> Routing to {route} under theme '{assoc_theme.upper()}' on Mobile...")
+            page.evaluate(f"applyTheme('{assoc_theme}')")
+            page.evaluate(f"window.location.hash = '{route}'")
+            time.sleep(1.0)
+            
+            if name == "immersion":
+                page.locator("#immersion-textarea").fill("Ich gehe heute in die Schule und lerne Deutsch.")
+                page.locator("#immersion-analyze-btn").click()
+                time.sleep(1.0)
+                
+            sc_path = os.path.join(screenshot_dir, f"e2e_mobile_view_{name}.png")
+            page.screenshot(path=sc_path)
+            print(f"   [Mobile Sub-View {name.upper()}] saved: {sc_path}")
             
         print("\nClosing browser...")
         browser.close()

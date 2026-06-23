@@ -1339,3 +1339,132 @@ input:focus-visible {
     opacity: 1;
   }
 }
+
+/* ============================================
+   v6.0: Viewport Height Responsiveness & Spacing
+   ============================================ */
+@media (max-height: 850px) {
+  #main-content {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  .mb-5 {
+    margin-bottom: 0.75rem !important;
+  }
+  .mb-4 {
+    margin-bottom: 0.5rem !important;
+  }
+  #current-category-title {
+    font-size: 1.25rem !important;
+  }
+  #deck-stats {
+    font-size: 0.75rem !important;
+    margin-top: 0px !important;
+  }
+  #audio-trainer-panel {
+    padding: 0.5rem 1rem !important;
+    margin-bottom: 0.5rem !important;
+    gap: 0.5rem !important;
+  }
+  #audio-trainer-panel .w-10 {
+    width: 2rem !important;
+    height: 2rem !important;
+  }
+  #audio-trainer-panel .w-9 {
+    width: 1.75rem !important;
+    height: 1.75rem !important;
+  }
+  #flashcard {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    min-height: 130px !important;
+  }
+  #flashcard #card-word {
+    font-size: 2.25rem !important; /* text-3xl or 4xl */
+  }
+  #flashcard .py-6 {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+  #accordion-reveal > div {
+    padding: 1rem !important;
+    gap: 1rem !important;
+  }
+  #accordion-reveal .space-y-6 > * + * {
+    margin-top: 0.75rem !important;
+  }
+  #accordion-reveal h4 {
+    font-size: 0.65rem !important;
+  }
+  #accordion-reveal #card-meaning {
+    font-size: 1.125rem !important;
+  }
+  #accordion-reveal #card-examples-container {
+    padding-top: 0.75rem !important;
+    margin-top: 0.75rem !important;
+  }
+  #accordion-reveal #card-examples-container div {
+    padding: 0.75rem !important;
+  }
+  #accordion-reveal #card-example-de {
+    font-size: 1rem !important;
+  }
+  #accordion-reveal #card-example-en {
+    font-size: 0.8125rem !important;
+  }
+  .mt-4 {
+    margin-top: 0.75rem !important;
+  }
+}
+
+@media (max-height: 720px) {
+  #main-content {
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+  #audio-trainer-panel {
+    padding: 0.35rem 0.75rem !important;
+    margin-bottom: 0.35rem !important;
+    gap: 0.35rem !important;
+  }
+  #flashcard {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+    min-height: 100px !important;
+  }
+  #flashcard #card-word {
+    font-size: 1.875rem !important; /* text-3xl */
+  }
+  #flashcard .py-6 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+  #accordion-reveal > div {
+    padding: 0.75rem !important;
+    gap: 0.75rem !important;
+  }
+  #accordion-reveal .space-y-6 > * + * {
+    margin-top: 0.5rem !important;
+  }
+  #accordion-reveal #card-meaning {
+    font-size: 1rem !important;
+  }
+  #accordion-reveal #card-examples-container {
+    padding-top: 0.5rem !important;
+    margin-top: 0.5rem !important;
+  }
+  #accordion-reveal #card-examples-container div {
+    padding: 0.5rem !important;
+  }
+  #accordion-reveal #card-example-de {
+    font-size: 0.875rem !important;
+  }
+  #accordion-reveal #card-example-en {
+    font-size: 0.75rem !important;
+  }
+  #prev-btn, #next-btn, #learned-btn, #toggle-reveal-btn {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    font-size: 0.8125rem !important;
+  }
+}

@@ -282,7 +282,7 @@ export function renderCard() {
     
     // Disable primary interaction buttons
     if (elements.flashcard) {
-      elements.flashcard.className = "glass border border-slate-900 rounded-2xl p-8 md:p-12 min-h-[180px] md:min-h-[220px] flex flex-col justify-between cursor-not-allowed select-none relative card-glow-neutral";
+      elements.flashcard.className = "glass border border-slate-900 rounded-2xl p-6 md:py-6 md:px-10 min-h-[150px] md:min-h-[180px] flex flex-col justify-between cursor-not-allowed select-none relative card-glow-neutral";
     }
     if (elements.prevBtn) {
       elements.prevBtn.disabled = true;
@@ -416,7 +416,7 @@ export function renderCard() {
     glowClass = 'card-glow-das';
   }
   if (elements.flashcard) {
-    elements.flashcard.className = `glass border rounded-2xl p-8 md:p-12 min-h-[180px] md:min-h-[220px] flex flex-col justify-between cursor-pointer transition-all duration-300 select-none relative group overflow-hidden ${glowClass}`;
+    elements.flashcard.className = `glass border rounded-2xl p-6 md:py-6 md:px-10 min-h-[150px] md:min-h-[180px] flex flex-col justify-between cursor-pointer transition-all duration-300 select-none relative group overflow-hidden ${glowClass}`;
   }
 
   // Ensure card image container is hidden (illustrations disabled for V1.0.0; coming in V1.0.1)
@@ -836,29 +836,41 @@ export function toggleLearned() {
   renderCard();
 }
 
-// Preferences: Toggle Fast Read (autoflip detail)
-export function toggleReadMode() {
-  state.isFastRead = !state.isFastRead;
-  
-  if (elements.readModeBtn && elements.readModeText) {
-    if (state.isFastRead) {
-      elements.readModeBtn.classList.add('bg-indigo-600', 'border-indigo-500', 'text-white', 'hover:bg-indigo-500', 'hover:text-white');
-      elements.readModeBtn.classList.remove('bg-slate-950/40', 'border-slate-900/80', 'text-slate-400', 'hover:text-white', 'hover:border-slate-700');
-      elements.readModeText.textContent = "Fast Read: EIN";
-      openAccordion();
-    } else {
-      elements.readModeBtn.classList.remove('bg-indigo-600', 'border-indigo-500', 'text-white', 'hover:bg-indigo-500', 'hover:text-white');
-      elements.readModeBtn.classList.add('bg-slate-950/40', 'border-slate-900/80', 'text-slate-400', 'hover:text-white', 'hover:border-slate-700');
-      elements.readModeText.textContent = "Fast Read: AUS";
-      closeAccordion();
+// Preferences UI Sync: Fast Read Mode
+export function updateReadModeUI() {
+  if (elements.readModeBtn) {
+    const icon = elements.readModeBtn.querySelector('.toggle-icon');
+    if (icon) {
+      if (state.isFastRead) {
+        icon.className = "toggle-icon fa-solid fa-toggle-on text-xs text-indigo-400";
+        elements.readModeBtn.classList.add('border-indigo-500/30', 'bg-indigo-950/20');
+        elements.readModeBtn.classList.remove('border-slate-800', 'bg-slate-900/80');
+      } else {
+        icon.className = "toggle-icon fa-solid fa-toggle-off text-xs text-slate-500";
+        elements.readModeBtn.classList.add('border-slate-800', 'bg-slate-900/80');
+        elements.readModeBtn.classList.remove('border-indigo-500/30', 'bg-indigo-950/20');
+      }
+    }
+    if (elements.readModeText) {
+      elements.readModeText.textContent = state.isFastRead ? "Fast Read: EIN" : "Fast Read: AUS";
     }
   }
 }
 
-// Preferences: Hide Learned Cards from current loop
-export function toggleHideLearned() {
-  state.hideLearned = !state.hideLearned;
-  
+// Preferences: Toggle Fast Read (autoflip detail)
+export function toggleReadMode() {
+  state.isFastRead = !state.isFastRead;
+  safeSetItem('is_fast_read', state.isFastRead.toString());
+  updateReadModeUI();
+  if (state.isFastRead) {
+    openAccordion();
+  } else {
+    closeAccordion();
+  }
+}
+
+// Preferences UI Sync: Hide Learned
+export function updateHideLearnedUI() {
   if (elements.hideLearnedBtn && elements.hideLearnedText) {
     if (state.hideLearned) {
       elements.hideLearnedBtn.classList.add('bg-indigo-950/40', '!border-indigo-500/30');
@@ -870,26 +882,46 @@ export function toggleHideLearned() {
       elements.hideLearnedText.textContent = "Gelernte ausblenden";
     }
   }
+}
+
+// Preferences: Hide Learned Cards from current loop
+export function toggleHideLearned() {
+  state.hideLearned = !state.hideLearned;
+  safeSetItem('hide_learned', state.hideLearned.toString());
+  updateHideLearnedUI();
   
   // V3: Emit CustomEvent for deck re-filter (replaces window.filterDeckExternal bridge)
   window.dispatchEvent(new CustomEvent('deck:filter-request', { detail: { resetIndex: false } }));
 }
 
+// Preferences UI Sync: Autoplay Speech
+export function updateAutoplayUI() {
+  if (elements.autoplayBtn) {
+    const icon = elements.autoplayBtn.querySelector('.toggle-icon');
+    if (icon) {
+      if (state.isAutoPlaySpeech) {
+        icon.className = "toggle-icon fa-solid fa-toggle-on text-xs text-indigo-400";
+        elements.autoplayBtn.classList.add('border-indigo-500/30', 'bg-indigo-950/20');
+        elements.autoplayBtn.classList.remove('border-slate-800', 'bg-slate-900/80');
+      } else {
+        icon.className = "toggle-icon fa-solid fa-toggle-off text-xs text-slate-500";
+        elements.autoplayBtn.classList.add('border-slate-800', 'bg-slate-900/80');
+        elements.autoplayBtn.classList.remove('border-indigo-500/30', 'bg-indigo-950/20');
+      }
+    }
+    if (elements.autoplayText) {
+      elements.autoplayText.textContent = state.isAutoPlaySpeech ? "Auto-Sprachausgabe: EIN" : "Auto-Sprachausgabe: AUS";
+    }
+  }
+}
+
 // Preferences: Autoplay speech on card change
 export function toggleAutoplay() {
   state.isAutoPlaySpeech = !state.isAutoPlaySpeech;
-  
-  if (elements.autoplayBtn && elements.autoplayText) {
-    if (state.isAutoPlaySpeech) {
-      elements.autoplayBtn.classList.add('bg-indigo-600', 'border-indigo-500', 'text-white', 'hover:bg-indigo-500', 'hover:text-white');
-      elements.autoplayBtn.classList.remove('bg-slate-950/40', 'border-slate-900/80', 'text-slate-400', 'hover:text-white', 'hover:border-slate-700');
-      elements.autoplayText.textContent = "Auto-Sprachausgabe: EIN";
-      warmUpTTS();
-    } else {
-      elements.autoplayBtn.classList.remove('bg-indigo-600', 'border-indigo-500', 'text-white', 'hover:bg-indigo-500', 'hover:text-white');
-      elements.autoplayBtn.classList.add('bg-slate-950/40', 'border-slate-900/80', 'text-slate-400', 'hover:text-white', 'hover:border-slate-700');
-      elements.autoplayText.textContent = "Auto-Sprachausgabe: AUS";
-    }
+  safeSetItem('is_autoplay_speech', state.isAutoPlaySpeech.toString());
+  updateAutoplayUI();
+  if (state.isAutoPlaySpeech) {
+    warmUpTTS();
   }
 }
 

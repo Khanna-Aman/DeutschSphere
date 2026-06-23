@@ -269,9 +269,9 @@ export const state = {
   activeCategory: 'All', // Active category selector ('All' or tag)
   searchQuery: '',       // Active search term
   isAccordionOpen: false, // Core flashcard accordion revealed state
-  isFastRead: false,      // Fast Read toggle state
-  hideLearned: false,     // Hide learned cards filter state
-  isAutoPlaySpeech: false, // Auto-TTS speech on active card transitions
+  isFastRead: safeGetItem('is_fast_read', 'false') === 'true',      // Fast Read toggle state
+  hideLearned: safeGetItem('hide_learned', 'false') === 'true',     // Hide learned cards filter state
+  isAutoPlaySpeech: safeGetItem('is_autoplay_speech', 'false') === 'true', // Auto-TTS speech on active card transitions
   showImages: safeGetItem('show_images', 'true') !== 'false', // Visual aids render flag
   sfxVolume: parseFloat(safeGetItem('sfx_volume', '0.5')), // SFX Volume (0.0 to 1.0)
   audioTone: safeGetItem('audio_tone', 'synth'), // SFX sound tone ('synth' or 'acoustic')
