@@ -11,19 +11,6 @@
 
 </div>
 
----
-
-> [!IMPORTANT]
-> ### 🛠️ Getting a 404 Error? How to Enable GitHub Pages in 15 Seconds:
-> 1. In your GitHub browser window, click on your repository's **Settings** tab (the gear icon on the top menu bar).
-> 2. On the left sidebar menu, look under *Code and automation* and click on **Pages**.
-> 3. Under **Build and deployment** -> **Branch**:
->    - Change the first dropdown from `None` to **`main`**.
->    - Keep the second dropdown as **`/ (root)`**.
->    - Click the **Save** button.
-> 4. Refresh your live URL after 15-30 seconds. Your web application is now active and running!
-
----
 
 ## ✨ Features at a Glance
 
