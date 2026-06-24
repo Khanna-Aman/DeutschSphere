@@ -8933,8 +8933,10 @@
     "antonym": "laut",
     "example_de": "Ich möchte ein ruhiges Zimmer.",
     "example_en": "I would like a quiet room.",
-    "image": "images/card_466.svg",
-    "id": 466
+    "image": "images/card_466.webp",
+    "id": 466,
+    "image_tier": "B",
+    "image_path": "images/card_466.webp"
   },
   {
     "german": "der Saft",
@@ -8949,8 +8951,10 @@
     "antonym": null,
     "example_de": "Möchtest du einen Apfelsaft?",
     "example_en": "Would you like an apple juice?",
-    "image": "images/card_467.svg",
-    "id": 467
+    "image": "images/card_467.webp",
+    "id": 467,
+    "image_tier": "B",
+    "image_path": "images/card_467.webp"
   },
   {
     "german": "sagen",
@@ -8969,8 +8973,10 @@
     "antonym": "schweigen",
     "example_de": "Sag mal, wie geht es dir denn?",
     "example_en": "Tell me, how are you doing?",
-    "image": "images/card_468.svg",
-    "id": 468
+    "image": "images/card_468.webp",
+    "id": 468,
+    "image_tier": "B",
+    "image_path": "images/card_468.webp"
   },
   {
     "german": "der Salat",
@@ -8985,8 +8991,10 @@
     "antonym": null,
     "example_de": "Wie schmeckt dir der Salat?",
     "example_en": "How does the salad taste to you?",
-    "image": "images/card_469.svg",
-    "id": 469
+    "image": "images/card_469.webp",
+    "id": 469,
+    "image_tier": "B",
+    "image_path": "images/card_469.webp"
   },
   {
     "german": "das Salz",
@@ -9001,8 +9009,10 @@
     "antonym": "der Zucker",
     "example_de": "Herr Ober, kann ich bitte Salz haben?",
     "example_en": "Waiter, can I please have some salt?",
-    "image": "images/card_470.svg",
-    "id": 470
+    "image": "images/card_470.webp",
+    "id": 470,
+    "image_tier": "B",
+    "image_path": "images/card_470.webp"
   },
   {
     "german": "die S-Bahn",
