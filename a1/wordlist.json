@@ -9420,8 +9420,10 @@
     "antonym": null,
     "example_de": "Kommst du mit ins Schwimmbad?",
     "example_en": "Are you coming to the swimming pool?",
-    "image": "images/card_491.svg",
-    "id": 491
+    "image": "images/card_491.webp",
+    "id": 491,
+    "image_tier": "B",
+    "image_path": "images/card_491.webp"
   },
   {
     "german": "schwimmen",
@@ -9440,8 +9442,10 @@
     "antonym": null,
     "example_de": "Ich schwimme jeden Tag einen Kilometer.",
     "example_en": "I swim a kilometer every day.",
-    "image": "images/card_492.svg",
-    "id": 492
+    "image": "images/card_492.webp",
+    "id": 492,
+    "image_tier": "B",
+    "image_path": "images/card_492.webp"
   },
   {
     "german": "schön",
@@ -9459,8 +9463,10 @@
     "antonym": "hässlich",
     "example_de": "Schönen Urlaub! Das ist sehr schön.",
     "example_en": "Have a nice holiday! That is very beautiful.",
-    "image": "images/card_493.svg",
-    "id": 493
+    "image": "images/card_493.webp",
+    "id": 493,
+    "image_tier": "B",
+    "image_path": "images/card_493.webp"
   },
   {
     "german": "der Schüler",
@@ -9475,8 +9481,10 @@
     "antonym": "der Lehrer",
     "example_de": "In meinem Kurs sind acht Schülerinnen und fünf Schüler.",
     "example_en": "In my course there are eight female students and five male students.",
-    "image": "images/card_494.svg",
-    "id": 494
+    "image": "images/card_494.webp",
+    "id": 494,
+    "image_tier": "B",
+    "image_path": "images/card_494.webp"
   },
   {
     "german": "der See",
@@ -9491,8 +9499,10 @@
     "antonym": "das Meer",
     "example_de": "Komm, wir fahren zum Starnberger See.",
     "example_en": "Come, we are driving to Lake Starnberg.",
-    "image": "images/card_495.svg",
-    "id": 495
+    "image": "images/card_495.webp",
+    "id": 495,
+    "image_tier": "B",
+    "image_path": "images/card_495.webp"
   },
   {
     "german": "sehen",
