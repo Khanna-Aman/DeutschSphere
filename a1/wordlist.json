@@ -6242,8 +6242,10 @@
     "antonym": null,
     "example_de": "Herr Georgi kann gut kochen.",
     "example_en": "Mr. Georgi can cook well.",
-    "image": "images/card_326.svg",
-    "id": 326
+    "image": "images/card_326.webp",
+    "id": 326,
+    "image_tier": "B",
+    "image_path": "images/card_326.webp"
   },
   {
     "german": "der Koffer",
@@ -6258,8 +6260,10 @@
     "antonym": "die Tasche",
     "example_de": "Ist das Ihr Koffer?",
     "example_en": "Is that your suitcase?",
-    "image": "images/card_327.svg",
-    "id": 327
+    "image": "images/card_327.webp",
+    "id": 327,
+    "image_tier": "B",
+    "image_path": "images/card_327.webp"
   },
   {
     "german": "der Kollege",
@@ -6274,8 +6278,10 @@
     "antonym": null,
     "example_de": "Wie heißt die neue Kollegin?",
     "example_en": "What is the new colleague's name?",
-    "image": "images/card_328.svg",
-    "id": 328
+    "image": "images/card_328.webp",
+    "id": 328,
+    "image_tier": "B",
+    "image_path": "images/card_328.webp"
   },
   {
     "german": "kommen",
@@ -6294,8 +6300,10 @@
     "antonym": "gehen",
     "example_de": "Woher kommen Sie? - Aus Frankreich. Kommst du mit ins Schwimmbad?",
     "example_en": "Where do you come from? - From France. Are you coming along to the swimming pool?",
-    "image": "images/card_329.svg",
-    "id": 329
+    "image": "images/card_329.webp",
+    "id": 329,
+    "image_tier": "B",
+    "image_path": "images/card_329.webp"
   },
   {
     "german": "das Konto",
@@ -6310,8 +6318,10 @@
     "antonym": null,
     "example_de": "Das Geld überweisen wir am ersten März auf Ihr Konto.",
     "example_en": "We will transfer the money to your account on the first of March.",
-    "image": "images/card_330.svg",
-    "id": 330
+    "image": "images/card_330.webp",
+    "id": 330,
+    "image_tier": "B",
+    "image_path": "images/card_330.webp"
   },
   {
     "german": "der Kopf",
