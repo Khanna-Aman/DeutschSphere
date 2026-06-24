@@ -619,7 +619,16 @@ METAPHOR_MAP = {
     "später": "A beautifully polished 3D hourglass tilted slightly, next to a curved neon-pink arrow pointing forward to represent time passing or later, completely wordless, front-and-center, premium SOTA asset",
     "die stadt": "A gorgeous miniature 3D isometric cutaway model of a clean modern city, with tiny colorful glass skyscrapers, green trees, and glowing streetlights, completely wordless, front-and-center, premium SOTA asset",
     "stadt": "A gorgeous miniature 3D isometric cutaway model of a clean modern city, with tiny colorful glass skyscrapers, green trees, and glowing streetlights, completely wordless, front-and-center, premium SOTA asset",
-    "stehen": "A cute, proud 3D star character standing tall and perfectly straight on a tiny polished marble pedestal, completely wordless, front-and-center, premium SOTA asset"
+    "stehen": "A cute, proud 3D star character standing tall and perfectly straight on a tiny polished marble pedestal, completely wordless, front-and-center, premium SOTA asset",
+    "die stelle": "A beautiful 3D map pin in glowing yellow enamel, marking a clean, sparkling spot on a curved pastel-blue surface, representing a specific position or place, completely wordless, front-and-center, premium SOTA asset",
+    "stelle": "A beautiful 3D map pin in glowing yellow enamel, marking a clean, sparkling spot on a curved pastel-blue surface, representing a specific position or place, completely wordless, front-and-center, premium SOTA asset",
+    "stellen": "A cute 3D star character carefully putting a glossy red coffee mug down onto a polished glass table surface, representing the action of placing something down, completely wordless, front-and-center, premium SOTA asset",
+    "der stock": "A beautiful 3D cutaway model of a modern three-story building, with the second floor glowing in vibrant neon-blue light to represent a specific floor or story, completely wordless, front-and-center, premium SOTA asset",
+    "stock": "A beautiful 3D cutaway model of a modern three-story building, with the second floor glowing in vibrant neon-blue light to represent a specific floor or story, completely wordless, front-and-center, premium SOTA asset",
+    "die straße": "A beautifully curving 3D asphalt road with clean white lane markings, bordered by tiny green grass patches and a miniature glassmorphic guardrail, completely wordless, front-and-center, premium SOTA asset",
+    "straße": "A beautifully curving 3D asphalt road with clean white lane markings, bordered by tiny green grass patches and a miniature glassmorphic guardrail, completely wordless, front-and-center, premium SOTA asset",
+    "die straßenbahn": "A sleek, modern 3D electric tram in glossy yellow and white enamel, sitting on tiny metal tracks with overhead power cables, completely wordless, front-and-center, premium SOTA asset",
+    "straßenbahn": "A sleek, modern 3D electric tram in glossy yellow and white enamel, sitting on tiny metal tracks with overhead power cables, completely wordless, front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

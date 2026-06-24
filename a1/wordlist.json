@@ -10005,8 +10005,10 @@
     "antonym": null,
     "example_de": "Ich habe eine neue Stelle.",
     "example_en": "I have a new job.",
-    "image": "images/card_521.svg",
-    "id": 521
+    "image": "images/card_521.webp",
+    "id": 521,
+    "image_tier": "B",
+    "image_path": "images/card_521.webp"
   },
   {
     "german": "stellen",
@@ -10025,8 +10027,10 @@
     "antonym": "legen",
     "example_de": "Stell die Tasche rechts in die Ecke!",
     "example_en": "Put the bag in the corner on the right!",
-    "image": "images/card_522.svg",
-    "id": 522
+    "image": "images/card_522.webp",
+    "id": 522,
+    "image_tier": "B",
+    "image_path": "images/card_522.webp"
   },
   {
     "german": "der Stock",
@@ -10041,8 +10045,10 @@
     "antonym": null,
     "example_de": "Unsere Wohnung liegt im ersten Stock.",
     "example_en": "Our apartment is on the first floor.",
-    "image": "images/card_523.svg",
-    "id": 523
+    "image": "images/card_523.webp",
+    "id": 523,
+    "image_tier": "B",
+    "image_path": "images/card_523.webp"
   },
   {
     "german": "die Straße",
@@ -10057,8 +10063,10 @@
     "antonym": null,
     "example_de": "In welcher Straße wohnen Sie?",
     "example_en": "What street do you live on?",
-    "image": "images/card_524.svg",
-    "id": 524
+    "image": "images/card_524.webp",
+    "id": 524,
+    "image_tier": "B",
+    "image_path": "images/card_524.webp"
   },
   {
     "german": "die Straßenbahn",
@@ -10073,8 +10081,10 @@
     "antonym": null,
     "example_de": "Wo fährt die Straßenbahn ab?",
     "example_en": "Where does the tram depart from?",
-    "image": "images/card_525.svg",
-    "id": 525
+    "image": "images/card_525.webp",
+    "id": 525,
+    "image_tier": "B",
+    "image_path": "images/card_525.webp"
   },
   {
     "german": "der Student",
