@@ -11639,8 +11639,10 @@
     "antonym": null,
     "example_de": "Wir müssen jetzt Schluss machen. Also auf Wiederhören!",
     "example_en": "We must finish now. So goodbye!",
-    "image": "images/card_606.svg",
-    "id": 606
+    "image": "images/card_606.webp",
+    "id": 606,
+    "image_tier": "B",
+    "image_path": "images/card_606.webp"
   },
   {
     "german": "das Wiedersehen",
@@ -11655,8 +11657,10 @@
     "antonym": null,
     "example_de": "Auf Wiedersehen!",
     "example_en": "Goodbye!",
-    "image": "images/card_607.svg",
-    "id": 607
+    "image": "images/card_607.webp",
+    "id": 607,
+    "image_tier": "B",
+    "image_path": "images/card_607.webp"
   },
   {
     "german": "willkommen",
@@ -11674,8 +11678,10 @@
     "antonym": "unwillkommen",
     "example_de": "Herzlich willkommen!",
     "example_en": "Welcome!",
-    "image": "images/card_608.svg",
-    "id": 608
+    "image": "images/card_608.webp",
+    "id": 608,
+    "image_tier": "B",
+    "image_path": "images/card_608.webp"
   },
   {
     "german": "der Wind",
@@ -11690,8 +11696,10 @@
     "antonym": null,
     "example_de": "Der Wind kommt aus Osten.",
     "example_en": "The wind comes from the east.",
-    "image": "images/card_609.svg",
-    "id": 609
+    "image": "images/card_609.webp",
+    "id": 609,
+    "image_tier": "B",
+    "image_path": "images/card_609.webp"
   },
   {
     "german": "wir",
@@ -11706,8 +11714,10 @@
     "antonym": "ihr",
     "example_de": "Wir lernen Deutsch.",
     "example_en": "We are learning German.",
-    "image": "images/card_610.svg",
-    "id": 610
+    "image": "images/card_610.webp",
+    "id": 610,
+    "image_tier": "B",
+    "image_path": "images/card_610.webp"
   },
   {
     "german": "wissen",
