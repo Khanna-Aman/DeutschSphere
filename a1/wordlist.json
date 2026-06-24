@@ -6336,8 +6336,10 @@
     "antonym": null,
     "example_de": "Mein Kopf tut weh!",
     "example_en": "My head hurts!",
-    "image": "images/card_331.svg",
-    "id": 331
+    "image": "images/card_331.webp",
+    "id": 331,
+    "image_tier": "B",
+    "image_path": "images/card_331.webp"
   },
   {
     "german": "kosten",
@@ -6356,8 +6358,10 @@
     "antonym": null,
     "example_de": "Wie viel kostet das? – 10 Euro.",
     "example_en": "How much does that cost? - 10 euros.",
-    "image": "images/card_332.svg",
-    "id": 332
+    "image": "images/card_332.webp",
+    "id": 332,
+    "image_tier": "B",
+    "image_path": "images/card_332.webp"
   },
   {
     "german": "krank",
@@ -6375,8 +6379,10 @@
     "antonym": "gesund",
     "example_de": "Ich kann heute nicht zur Arbeit kommen, ich bin krank und liege im Bett.",
     "example_en": "I cannot come to work today, I am sick and lying in bed.",
-    "image": "images/card_333.svg",
-    "id": 333
+    "image": "images/card_333.webp",
+    "id": 333,
+    "image_tier": "B",
+    "image_path": "images/card_333.webp"
   },
   {
     "german": "kriegen",
@@ -6395,8 +6401,10 @@
     "antonym": "geben",
     "example_de": "Ich kriege 15 Euro in der Stunde für meine Arbeit.",
     "example_en": "I get 15 euros an hour for my work.",
-    "image": "images/card_334.svg",
-    "id": 334
+    "image": "images/card_334.webp",
+    "id": 334,
+    "image_tier": "B",
+    "image_path": "images/card_334.webp"
   },
   {
     "german": "der Kuchen",
@@ -6411,8 +6419,10 @@
     "antonym": null,
     "example_de": "Ich nehme ein Stück Kuchen.",
     "example_en": "I am taking a piece of cake.",
-    "image": "images/card_335.svg",
-    "id": 335
+    "image": "images/card_335.webp",
+    "id": 335,
+    "image_tier": "B",
+    "image_path": "images/card_335.webp"
   },
   {
     "german": "der Kugelschreiber",
