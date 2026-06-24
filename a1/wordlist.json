@@ -11542,8 +11542,10 @@
     "antonym": null,
     "example_de": "Wir hatten schlechtes Wetter.",
     "example_en": "We had bad weather.",
-    "image": "images/card_601.svg",
-    "id": 601
+    "image": "images/card_601.webp",
+    "id": 601,
+    "image_tier": "B",
+    "image_path": "images/card_601.webp"
   },
   {
     "german": "wichtig",
@@ -11561,8 +11563,10 @@
     "antonym": "unwichtig",
     "example_de": "Dieses Formular ist sehr wichtig.",
     "example_en": "This form is very important.",
-    "image": "images/card_602.svg",
-    "id": 602
+    "image": "images/card_602.webp",
+    "id": 602,
+    "image_tier": "B",
+    "image_path": "images/card_602.webp"
   },
   {
     "german": "wie",
@@ -11577,8 +11581,10 @@
     "antonym": null,
     "example_de": "Wie heißt du? Er schreibt wie ein Kind.",
     "example_en": "What is your name? He writes like a child.",
-    "image": "images/card_603.svg",
-    "id": 603
+    "image": "images/card_603.webp",
+    "id": 603,
+    "image_tier": "B",
+    "image_path": "images/card_603.webp"
   },
   {
     "german": "wie viel",
@@ -11593,8 +11599,10 @@
     "antonym": null,
     "example_de": "Wie viel Milch nehmen Sie?",
     "example_en": "How much milk do you take?",
-    "image": "images/card_604.svg",
-    "id": 604
+    "image": "images/card_604.webp",
+    "id": 604,
+    "image_tier": "B",
+    "image_path": "images/card_604.webp"
   },
   {
     "german": "wiederholen",
@@ -11613,8 +11621,10 @@
     "antonym": null,
     "example_de": "Können Sie das bitte wiederholen?",
     "example_en": "Can you please repeat that?",
-    "image": "images/card_605.svg",
-    "id": 605
+    "image": "images/card_605.webp",
+    "id": 605,
+    "image_tier": "B",
+    "image_path": "images/card_605.webp"
   },
   {
     "german": "das Wiederhören",

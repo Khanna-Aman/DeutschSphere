@@ -736,7 +736,13 @@ METAPHOR_MAP = {
     "welt": "A stunning, highly polished 3D Earth globe floating suspended in a dark studio space with glowing turquoise gridlines and miniature glittering stars orbiting it, completely wordless, front-and-center, premium SOTA asset",
     "wenig": "A cute, high-gloss 3D glass cookie jar sitting on a dark surface, mostly empty, containing only two small, beautifully detailed chocolate chip cookies sitting at the very bottom, completely wordless, front-and-center, premium SOTA asset",
     "wer": "A stylized, cute 3D silhouette of an anonymous character's face made of glossy purple plastic, with a massive golden glowing question mark floating directly in front of it, completely wordless, front-and-center, premium SOTA asset",
-    "werden": "A beautiful sequence of a tiny green seedling growing inside a miniature glass capsule, showing three stages: a seed, a tiny sprout, and a blooming plant, with glowing golden transition arrows, completely wordless, front-and-center, premium SOTA asset"
+    "werden": "A beautiful sequence of a tiny green seedling growing inside a miniature glass capsule, showing three stages: a seed, a tiny sprout, and a blooming plant, with glowing golden transition arrows, completely wordless, front-and-center, premium SOTA asset",
+    "das wetter": "A whimsical 3D sky sphere split into four sections, showing a bright smiling sun, a soft grey rain cloud with drops, a fluffy white cloud, and a tiny lightning bolt, completely wordless, front-and-center, premium SOTA asset",
+    "wetter": "A whimsical 3D sky sphere split into four sections, showing a bright smiling sun, a soft grey rain cloud with drops, a fluffy white cloud, and a tiny lightning bolt, completely wordless, front-and-center, premium SOTA asset",
+    "wichtig": "A spectacular 3D golden key resting on a luxurious velvet red cushion, surrounded by glowing star sparkles and a subtle golden aura, completely wordless, front-and-center, premium SOTA asset",
+    "wie": "A beautiful 3D mechanical scales showing two identical glowing blue stars on both sides, balanced perfectly, representing equivalence or likeness, completely wordless, front-and-center, premium SOTA asset",
+    "wie viel": "A cute 3D character standing next to a tall clear glass cylinder containing a heap of glossy golden coins, holding a glowing green magnifying glass to look at the massive quantity, completely wordless, front-and-center, premium SOTA asset",
+    "wiederholen": "A beautiful, high-gloss 3D loop arrow made of translucent glowing green glass, hovering over a small, glossy timeline track, completely wordless, front-and-center, premium SOTA asset"
 }
 
 
