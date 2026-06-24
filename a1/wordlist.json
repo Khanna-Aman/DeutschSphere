@@ -5577,8 +5577,10 @@
     "antonym": "die Katze",
     "example_de": "Der Hund ist noch jung.",
     "example_en": "The dog is still young.",
-    "image": "images/card_291.svg",
-    "id": 291
+    "image": "images/card_291.webp",
+    "id": 291,
+    "image_tier": "B",
+    "image_path": "images/card_291.webp"
   },
   {
     "german": "der Hunger",
@@ -5593,8 +5595,10 @@
     "antonym": "der Durst",
     "example_de": "Ich habe Hunger! Wann ist das Essen fertig?",
     "example_en": "I am hungry! When is the food ready?",
-    "image": "images/card_292.svg",
-    "id": 292
+    "image": "images/card_292.webp",
+    "id": 292,
+    "image_tier": "B",
+    "image_path": "images/card_292.webp"
   },
   {
     "german": "das Hähnchen",
@@ -5609,8 +5613,10 @@
     "antonym": null,
     "example_de": "Ein Hähnchen mit Pommes bitte!",
     "example_en": "A chicken with fries, please!",
-    "image": "images/card_293.svg",
-    "id": 293
+    "image": "images/card_293.webp",
+    "id": 293,
+    "image_tier": "B",
+    "image_path": "images/card_293.webp"
   },
   {
     "german": "hören",
@@ -5629,8 +5635,10 @@
     "antonym": null,
     "example_de": "Hör mal! Was ist das? Ich habe das Lied schon mal gehört.",
     "example_en": "Listen! What is that? I have heard the song before.",
-    "image": "images/card_294.svg",
-    "id": 294
+    "image": "images/card_294.webp",
+    "id": 294,
+    "image_tier": "B",
+    "image_path": "images/card_294.webp"
   },
   {
     "german": "ich",
@@ -5645,8 +5653,10 @@
     "antonym": null,
     "example_de": "Ich heiße Veronika.",
     "example_en": "My name is Veronika.",
-    "image": "images/card_295.svg",
-    "id": 295
+    "image": "images/card_295.webp",
+    "id": 295,
+    "image_tier": "B",
+    "image_path": "images/card_295.webp"
   },
   {
     "german": "immer",
