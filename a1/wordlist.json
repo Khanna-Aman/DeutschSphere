@@ -9618,8 +9618,10 @@
     "antonym": "angestellt",
     "example_de": "Er ist selbstständig.",
     "example_en": "He is self-employed.",
-    "image": "images/card_501.svg",
-    "id": 501
+    "image": "images/card_501.webp",
+    "id": 501,
+    "image_tier": "B",
+    "image_path": "images/card_501.webp"
   },
   {
     "german": "sich",
@@ -9634,8 +9636,10 @@
     "antonym": null,
     "example_de": "Sie müssen sich erst anmelden.",
     "example_en": "You must register first.",
-    "image": "images/card_502.svg",
-    "id": 502
+    "image": "images/card_502.webp",
+    "id": 502,
+    "image_tier": "B",
+    "image_path": "images/card_502.webp"
   },
   {
     "german": "sich kümmern",
@@ -9654,8 +9658,10 @@
     "antonym": "vernachlässigen",
     "example_de": "Jede Mutter kümmert sich um ihre kleinen Kinder.",
     "example_en": "Every mother takes care of her small children.",
-    "image": "images/card_503.svg",
-    "id": 503
+    "image": "images/card_503.webp",
+    "id": 503,
+    "image_tier": "B",
+    "image_path": "images/card_503.webp"
   },
   {
     "german": "sie / Sie",
@@ -9670,8 +9676,10 @@
     "antonym": "er",
     "example_de": "Wie heißt sie? Wie heißen Sie, bitte?",
     "example_en": "What is her name? What is your name, please?",
-    "image": "images/card_504.svg",
-    "id": 504
+    "image": "images/card_504.webp",
+    "id": 504,
+    "image_tier": "B",
+    "image_path": "images/card_504.webp"
   },
   {
     "german": "sitzen",
@@ -9690,8 +9698,10 @@
     "antonym": "stehen",
     "example_de": "Wo sitzen Sie?",
     "example_en": "Where are you sitting?",
-    "image": "images/card_505.svg",
-    "id": 505
+    "image": "images/card_505.webp",
+    "id": 505,
+    "image_tier": "B",
+    "image_path": "images/card_505.webp"
   },
   {
     "german": "so",
