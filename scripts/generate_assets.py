@@ -696,8 +696,17 @@ METAPHOR_MAP = {
     "der verein": "A beautiful 3D glossy badge crest showing three stylized, smiling star characters standing together hand-in-hand in a circular embrace, completely wordless, front-and-center, premium SOTA asset",
     "verein": "A beautiful 3D glossy badge crest showing three stylized, smiling star characters standing together hand-in-hand in a circular embrace, completely wordless, front-and-center, premium SOTA asset",
     "verheiratet": "Two elegant, interlocking 3D wedding rings in polished gold, with a tiny glossy pink heart floating in the center of their intersection, completely wordless, front-and-center, premium SOTA asset",
-    "verkaufen": "A cute 3D star character dressed as a shopkeeper standing behind a beautiful, polished wooden market stall table, happily extending a small glossy box decorated with a ribbon, completely wordless, front-and-center, premium SOTA asset"
+    "verkaufen": "A cute 3D star character dressed as a shopkeeper standing behind a beautiful, polished wooden market stall table, happily extending a small glossy box decorated with a ribbon, completely wordless, front-and-center, premium SOTA asset",
+    "der verkäufer": "A cute 3D star character wearing a professional shop assistant's apron, standing happily behind a clean glass checkout counter that holds a small, beautiful ribbon-wrapped gift box, completely wordless, front-and-center, premium SOTA asset",
+    "verkäufer": "A cute 3D star character wearing a professional shop assistant's apron, standing happily behind a clean glass checkout counter that holds a small, beautiful ribbon-wrapped gift box, completely wordless, front-and-center, premium SOTA asset",
+    "vermieten": "A cute 3D stylized house in mid-air with a glowing, glossy golden key floating in front of its front door, with a tiny hand offering the key, representing renting out, completely wordless, front-and-center, premium SOTA asset",
+    "der vermieter": "A proud 3D star character wearing a tiny golden cap, standing next to a beautiful 3D claymation apartment building, holding a glowing golden ring of keys in its hand, completely wordless, front-and-center, premium SOTA asset",
+    "vermieter": "A proud 3D star character wearing a tiny golden cap, standing next to a beautiful 3D claymation apartment building, holding a glowing golden ring of keys in its hand, completely wordless, front-and-center, premium SOTA asset",
+    "verstehen": "A cute 3D star character with a glowing, bright golden lightbulb lit up directly above its head, its face smiling with wide, happy eyes, representing complete understanding, completely wordless, front-and-center, premium SOTA asset",
+    "der verwandte": "A beautiful, leafy 3D claymation family tree with glossy round frames as fruits showing smiling star character faces of different sizes connected by golden branches, completely wordless, front-and-center, premium SOTA asset",
+    "verwandte": "A beautiful, leafy 3D claymation family tree with glossy round frames as fruits showing smiling star character faces of different sizes connected by golden branches, completely wordless, front-and-center, premium SOTA asset"
 }
+
 
 def remove_black_background(img, threshold=50, feather=True):
     """

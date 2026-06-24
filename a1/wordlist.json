@@ -10961,8 +10961,10 @@
     "antonym": "der Kunde",
     "example_de": "Meine Mutter ist Verkäuferin im Kaufhaus.",
     "example_en": "My mother is a shop assistant in the department store.",
-    "image": "images/card_571.svg",
-    "id": 571
+    "image": "images/card_571.webp",
+    "id": 571,
+    "image_tier": "B",
+    "image_path": "images/card_571.webp"
   },
   {
     "german": "vermieten",
@@ -10981,8 +10983,10 @@
     "antonym": "mieten",
     "example_de": "Die Wohnung ist schon vermietet.",
     "example_en": "The apartment is already rented out.",
-    "image": "images/card_572.svg",
-    "id": 572
+    "image": "images/card_572.webp",
+    "id": 572,
+    "image_tier": "B",
+    "image_path": "images/card_572.webp"
   },
   {
     "german": "der Vermieter",
@@ -10997,8 +11001,10 @@
     "antonym": "der Mieter",
     "example_de": "Unser Vermieter heißt Huber. Er wohnt auch hier.",
     "example_en": "Our landlord is called Huber. He lives here too.",
-    "image": "images/card_573.svg",
-    "id": 573
+    "image": "images/card_573.webp",
+    "id": 573,
+    "image_tier": "B",
+    "image_path": "images/card_573.webp"
   },
   {
     "german": "verstehen",
@@ -11017,8 +11023,10 @@
     "antonym": null,
     "example_de": "Können Sie mich verstehen?",
     "example_en": "Can you understand me?",
-    "image": "images/card_574.svg",
-    "id": 574
+    "image": "images/card_574.webp",
+    "id": 574,
+    "image_tier": "B",
+    "image_path": "images/card_574.webp"
   },
   {
     "german": "der Verwandte",
@@ -11033,8 +11041,10 @@
     "antonym": null,
     "example_de": "Peter besucht seine Verwandten in Polen.",
     "example_en": "Peter is visiting his relatives in Poland.",
-    "image": "images/card_575.svg",
-    "id": 575
+    "image": "images/card_575.webp",
+    "id": 575,
+    "image_tier": "B",
+    "image_path": "images/card_575.webp"
   },
   {
     "german": "viel",
