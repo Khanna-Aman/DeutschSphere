@@ -397,7 +397,12 @@ METAPHOR_MAP = {
     "lang": "A sleek, incredibly long 3D limousine in ultra-glossy hot pink, stretching across a glass baseline grid, illustrating extreme length, front-and-center, premium SOTA asset",
     "lange": "A beautiful 3D pocket watch with glowing golden clock hands spinning slowly, trailing a soft trail of golden dust, front-and-center, premium SOTA asset",
     "langsam": "An adorable, high-gloss 3D claymation snail crawling slowly along a shiny green leaf, leaving a trail of sparkling silver glitter, front-and-center, premium SOTA asset",
-    "laufen": "A pair of highly-detailed, ultra-glossy 3D athletic running shoes in hot pink and glowing cyan, dynamically running forward on a glowing glass path, front-and-center, premium SOTA asset"
+    "laufen": "A pair of highly-detailed, ultra-glossy 3D athletic running shoes in hot pink and glowing cyan, dynamically running forward on a glowing glass path, front-and-center, premium SOTA asset",
+    "laut": "A vibrant, glossy pink 3D megaphone loudspeaker with glowing golden soundwaves radiating outward in a dark studio void, front-and-center, premium SOTA asset",
+    "leben": "An adorable, high-gloss 3D character watering a vibrant, glowing green seedling plant with a small pink heart floating over it, front-and-center, premium SOTA asset",
+    "das leben": "A majestic 3D tree of life with glowing golden roots, translucent green glass leaves, and floating star sparkles, front-and-center, premium SOTA asset",
+    "das lebensmittel": "A spectacular 3D grocery basket overflowing with high-gloss colorful fruits, vegetables, bread, and a carton of milk, front-and-center, premium SOTA asset",
+    "ledig": "An adorable single 3D puzzle piece with a little smiling face and tiny sparkles, standing proudly alone, representing single independence, front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

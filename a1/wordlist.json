@@ -6734,8 +6734,10 @@
     "antonym": "leise",
     "example_de": "Nicht so laut! Das Baby schläft.",
     "example_en": "Not so loud! The baby is sleeping.",
-    "image": "images/card_351.svg",
-    "id": 351
+    "image": "images/card_351.webp",
+    "id": 351,
+    "image_tier": "B",
+    "image_path": "images/card_351.webp"
   },
   {
     "german": "leben",
@@ -6754,8 +6756,10 @@
     "antonym": "sterben",
     "example_de": "Sie lebt bei ihrer Schwester. Ihre Eltern leben nicht mehr.",
     "example_en": "She lives with her sister. Her parents are no longer alive.",
-    "image": "images/card_352.svg",
-    "id": 352
+    "image": "images/card_352.webp",
+    "id": 352,
+    "image_tier": "B",
+    "image_path": "images/card_352.webp"
   },
   {
     "german": "das Leben",
@@ -6770,8 +6774,10 @@
     "antonym": "der Tod",
     "example_de": "Das Leben in diesem Land ist teuer.",
     "example_en": "Life in this country is expensive.",
-    "image": "images/card_353.svg",
-    "id": 353
+    "image": "images/card_353.webp",
+    "id": 353,
+    "image_tier": "B",
+    "image_path": "images/card_353.webp"
   },
   {
     "german": "das Lebensmittel",
@@ -6786,8 +6792,10 @@
     "antonym": null,
     "example_de": "Lebensmittel bekommen Sie im Supermarkt.",
     "example_en": "You get groceries in the supermarket.",
-    "image": "images/card_354.svg",
-    "id": 354
+    "image": "images/card_354.webp",
+    "id": 354,
+    "image_tier": "B",
+    "image_path": "images/card_354.webp"
   },
   {
     "german": "ledig",
@@ -6805,8 +6813,10 @@
     "antonym": "verheiratet",
     "example_de": "Sind Sie verheiratet? - Nein. Ledig.",
     "example_en": "Are you married? - No. Single.",
-    "image": "images/card_355.svg",
-    "id": 355
+    "image": "images/card_355.webp",
+    "id": 355,
+    "image_tier": "B",
+    "image_path": "images/card_355.webp"
   },
   {
     "german": "legen",
