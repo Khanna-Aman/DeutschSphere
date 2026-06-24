@@ -8735,8 +8735,10 @@
     "antonym": null,
     "example_de": "Wir machen eine Reise nach Österreich.",
     "example_en": "We are taking a trip to Austria.",
-    "image": "images/card_456.svg",
-    "id": 456
+    "image": "images/card_456.webp",
+    "id": 456,
+    "image_tier": "B",
+    "image_path": "images/card_456.webp"
   },
   {
     "german": "das Reisebüro",
@@ -8751,8 +8753,10 @@
     "antonym": null,
     "example_de": "Mein Mann arbeitet im Reisebüro.",
     "example_en": "My husband works in the travel agency.",
-    "image": "images/card_457.svg",
-    "id": 457
+    "image": "images/card_457.webp",
+    "id": 457,
+    "image_tier": "B",
+    "image_path": "images/card_457.webp"
   },
   {
     "german": "der Reiseführer",
@@ -8767,8 +8771,10 @@
     "antonym": null,
     "example_de": "Ich kaufe mir einen Reiseführer von Berlin. Unser Reiseführer heißt Peter.",
     "example_en": "I am buying a travel guide for Berlin. Our tour guide is named Peter.",
-    "image": "images/card_458.svg",
-    "id": 458
+    "image": "images/card_458.webp",
+    "id": 458,
+    "image_tier": "B",
+    "image_path": "images/card_458.webp"
   },
   {
     "german": "reisen",
@@ -8787,8 +8793,10 @@
     "antonym": null,
     "example_de": "Ich reise gern.",
     "example_en": "I like to travel.",
-    "image": "images/card_459.svg",
-    "id": 459
+    "image": "images/card_459.webp",
+    "id": 459,
+    "image_tier": "B",
+    "image_path": "images/card_459.webp"
   },
   {
     "german": "die Reparatur",
@@ -8803,8 +8811,10 @@
     "antonym": null,
     "example_de": "Die Reparatur ist sehr teuer.",
     "example_en": "The repair is very expensive.",
-    "image": "images/card_460.svg",
-    "id": 460
+    "image": "images/card_460.webp",
+    "id": 460,
+    "image_tier": "B",
+    "image_path": "images/card_460.webp"
   },
   {
     "german": "reparieren",
