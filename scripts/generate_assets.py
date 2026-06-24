@@ -704,8 +704,15 @@ METAPHOR_MAP = {
     "vermieter": "A proud 3D star character wearing a tiny golden cap, standing next to a beautiful 3D claymation apartment building, holding a glowing golden ring of keys in its hand, completely wordless, front-and-center, premium SOTA asset",
     "verstehen": "A cute 3D star character with a glowing, bright golden lightbulb lit up directly above its head, its face smiling with wide, happy eyes, representing complete understanding, completely wordless, front-and-center, premium SOTA asset",
     "der verwandte": "A beautiful, leafy 3D claymation family tree with glossy round frames as fruits showing smiling star character faces of different sizes connected by golden branches, completely wordless, front-and-center, premium SOTA asset",
-    "verwandte": "A beautiful, leafy 3D claymation family tree with glossy round frames as fruits showing smiling star character faces of different sizes connected by golden branches, completely wordless, front-and-center, premium SOTA asset"
+    "verwandte": "A beautiful, leafy 3D claymation family tree with glossy round frames as fruits showing smiling star character faces of different sizes connected by golden branches, completely wordless, front-and-center, premium SOTA asset",
+    "viel": "A cute 3D star character looking happily at an enormous, overflowing 3D glass bowl filled with countless colorful glossy marbles and golden coins spilling over the brim onto the ground, completely wordless, front-and-center, premium SOTA asset",
+    "vielleicht": "A cute 3D star character standing in front of a miniature wooden signpost that splits into two curved glowing paths, one going left with a blue aura, one going right with a pink aura, shrug gesture, completely wordless, front-and-center, premium SOTA asset",
+    "von": "A beautiful 3D claymation parcel package wrapped with twine, with a glowing golden curved arrow pointing directly from the package outward towards the viewer, completely wordless, front-and-center, premium SOTA asset",
+    "vor": "A cute, smiling 3D star character standing proudly directly in front of a large, beautiful white-painted house door, highlighted with a bright green spotlight, completely wordless, front-and-center, premium SOTA asset",
+    "der vorname": "A cute 3D glossy identity badge pin with a stylized picture of a smiling star character on it, with a golden hand pointing to a highlighted first line of a blank list, completely wordless, front-and-center, premium SOTA asset",
+    "vorname": "A cute 3D glossy identity badge pin with a stylized picture of a smiling star character on it, with a golden hand pointing to a highlighted first line of a blank list, completely wordless, front-and-center, premium SOTA asset"
 }
+
 
 
 def remove_black_background(img, threshold=50, feather=True):

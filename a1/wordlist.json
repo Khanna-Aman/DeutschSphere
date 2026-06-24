@@ -11059,8 +11059,10 @@
     "antonym": "wenig",
     "example_de": "Hier regnet es viel.",
     "example_en": "It rains a lot here.",
-    "image": "images/card_576.svg",
-    "id": 576
+    "image": "images/card_576.webp",
+    "id": 576,
+    "image_tier": "B",
+    "image_path": "images/card_576.webp"
   },
   {
     "german": "vielleicht",
@@ -11075,8 +11077,10 @@
     "antonym": "sicher",
     "example_de": "Ich komme vielleicht mit dem Bus.",
     "example_en": "I might come by bus.",
-    "image": "images/card_577.svg",
-    "id": 577
+    "image": "images/card_577.webp",
+    "id": 577,
+    "image_tier": "B",
+    "image_path": "images/card_577.webp"
   },
   {
     "german": "von",
@@ -11091,8 +11095,10 @@
     "antonym": "zu",
     "example_de": "Das Auto von Felix ist kaputt. Er kommt gerade von Köln/von zu Hause.",
     "example_en": "Felix's car is broken. He is just coming from Cologne/from home.",
-    "image": "images/card_578.svg",
-    "id": 578
+    "image": "images/card_578.webp",
+    "id": 578,
+    "image_tier": "B",
+    "image_path": "images/card_578.webp"
   },
   {
     "german": "vor",
@@ -11107,8 +11113,10 @@
     "antonym": "nach",
     "example_de": "Der Termin war vor einer Stunde. Das Auto steht vor der Tür.",
     "example_en": "The appointment was an hour ago. The car is standing in front of the door.",
-    "image": "images/card_579.svg",
-    "id": 579
+    "image": "images/card_579.webp",
+    "id": 579,
+    "image_tier": "B",
+    "image_path": "images/card_579.webp"
   },
   {
     "german": "der Vorname",
@@ -11123,8 +11131,10 @@
     "antonym": "der Familienname",
     "example_de": "Ich heiße Müller, mein Vorname ist Eva.",
     "example_en": "My name is Müller, my first name is Eva.",
-    "image": "images/card_580.svg",
-    "id": 580
+    "image": "images/card_580.webp",
+    "id": 580,
+    "image_tier": "B",
+    "image_path": "images/card_580.webp"
   },
   {
     "german": "die Vorsicht",
