@@ -395,7 +395,9 @@ METAPHOR_MAP = {
     "landen": "A beautiful, glossy 3D white passenger airplane touching down smoothly on a mini high-contrast runway segment, with a small green checkmark flag waving, front-and-center, premium SOTA asset",
     "land": "A stunning, stylized 3D miniature landscape segment of rolling green hills, a winding blue river, and a tiny rustic cottage with a flying heart-shaped flag, front-and-center, premium SOTA asset",
     "lang": "A sleek, incredibly long 3D limousine in ultra-glossy hot pink, stretching across a glass baseline grid, illustrating extreme length, front-and-center, premium SOTA asset",
-    "langsam": "An adorable, high-gloss 3D claymation snail crawling slowly along a shiny green leaf, leaving a trail of sparkling silver glitter, front-and-center, premium SOTA asset"
+    "lange": "A beautiful 3D pocket watch with glowing golden clock hands spinning slowly, trailing a soft trail of golden dust, front-and-center, premium SOTA asset",
+    "langsam": "An adorable, high-gloss 3D claymation snail crawling slowly along a shiny green leaf, leaving a trail of sparkling silver glitter, front-and-center, premium SOTA asset",
+    "laufen": "A pair of highly-detailed, ultra-glossy 3D athletic running shoes in hot pink and glowing cyan, dynamically running forward on a glowing glass path, front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

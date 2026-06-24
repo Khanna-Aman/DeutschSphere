@@ -6573,8 +6573,10 @@
     "antonym": "der Herd",
     "example_de": "Haben wir noch Milch? - Ja, im Kühlschrank.",
     "example_en": "Do we still have milk? - Yes, in the refrigerator.",
-    "image": "images/card_343.svg",
-    "id": 343
+    "image": "images/card_343.webp",
+    "id": 343,
+    "image_tier": "B",
+    "image_path": "images/card_343.webp"
   },
   {
     "german": "lachen",
@@ -6593,8 +6595,10 @@
     "antonym": "weinen",
     "example_de": "Die Kinder lachen viel.",
     "example_en": "The children laugh a lot.",
-    "image": "images/card_344.svg",
-    "id": 344
+    "image": "images/card_344.webp",
+    "id": 344,
+    "image_tier": "B",
+    "image_path": "images/card_344.webp"
   },
   {
     "german": "der Laden",
@@ -6609,8 +6613,10 @@
     "antonym": null,
     "example_de": "Im Buchladen können Sie Bücher kaufen.",
     "example_en": "In the bookstore you can buy books.",
-    "image": "images/card_345.svg",
-    "id": 345
+    "image": "images/card_345.webp",
+    "id": 345,
+    "image_tier": "B",
+    "image_path": "images/card_345.webp"
   },
   {
     "german": "das Land",
@@ -6625,8 +6631,10 @@
     "antonym": "die Stadt",
     "example_de": "Italien ist ein schönes Land.",
     "example_en": "Italy is a beautiful country.",
-    "image": "images/card_346.svg",
-    "id": 346
+    "image": "images/card_346.webp",
+    "id": 346,
+    "image_tier": "B",
+    "image_path": "images/card_346.webp"
   },
   {
     "german": "lang",
