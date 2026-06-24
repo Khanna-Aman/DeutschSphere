@@ -141,8 +141,8 @@ These are honest assessments of areas that need attention:
 | ~~**No Service Worker**~~ | ~~Despite being "offline-first", there's no service worker~~ | ~~Medium~~ **✅ Fixed 2026-06-14** |
 | ~~**Weaver Sentences**~~ | ~~Extracted from wordlist example sentences at runtime — quality varies~~ | ~~Low~~ **✅ Fixed 2026-06-14** (C5: property name mismatch was preventing data lookup) |
 | ~~**Leitner SRS Algorithm**~~ | ~~Basic 5-box system with fixed intervals~~ | ~~Low~~ **✅ Upgraded to FSRS-5 v5.0** |
-| **NotebookLM 24h Rate Limit** | Account-level `RESOURCE_EXHAUSTED` query limit on Google Labs backend; sequential audits are temporarily paused | High |
-| **Theme Verification Ongoing** | NotebookLM batch audit may normalize some theme category names | Low |
+| ~~**NotebookLM 24h Rate Limit**~~ | ~~Account-level `RESOURCE_EXHAUSTED` query limit on Google Labs backend; sequential audits are temporarily paused~~ | ~~High~~ **✅ Fixed** |
+| ~~**Theme Verification Ongoing**~~ | ~~NotebookLM batch audit may normalize some theme category names~~ | ~~Low~~ **✅ Aligned** |
 
 ---
 
