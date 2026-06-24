@@ -8274,8 +8274,10 @@
     "antonym": null,
     "example_de": "Sie ist meine Partnerin.",
     "example_en": "She is my partner.",
-    "image": "images/card_431.svg",
-    "id": 431
+    "image": "images/card_431.webp",
+    "id": 431,
+    "image_tier": "B",
+    "image_path": "images/card_431.webp"
   },
   {
     "german": "die Partnerin",
@@ -8290,8 +8292,10 @@
     "antonym": null,
     "example_de": "Sie ist meine Partnerin.",
     "example_en": "She is my partner.",
-    "image": "images/card_432.svg",
-    "id": 432
+    "image": "images/card_432.webp",
+    "id": 432,
+    "image_tier": "B",
+    "image_path": "images/card_432.webp"
   },
   {
     "german": "die Party",
@@ -8306,8 +8310,10 @@
     "antonym": null,
     "example_de": "Heute Abend machen wir eine Party.",
     "example_en": "Tonight we are having a party.",
-    "image": "images/card_433.svg",
-    "id": 433
+    "image": "images/card_433.webp",
+    "id": 433,
+    "image_tier": "B",
+    "image_path": "images/card_433.webp"
   },
   {
     "german": "der Pass",
@@ -8322,8 +8328,10 @@
     "antonym": null,
     "example_de": "Im Hotel brauchst du deinen Pass.",
     "example_en": "In the hotel you need your passport.",
-    "image": "images/card_434.svg",
-    "id": 434
+    "image": "images/card_434.webp",
+    "id": 434,
+    "image_tier": "B",
+    "image_path": "images/card_434.webp"
   },
   {
     "german": "die Pause",
@@ -8338,8 +8346,10 @@
     "antonym": null,
     "example_de": "Von 12.00 bis 12.30 Uhr haben wir Mittagspause.",
     "example_en": "From 12.00 to 12.30 we have a lunch break.",
-    "image": "images/card_435.svg",
-    "id": 435
+    "image": "images/card_435.webp",
+    "id": 435,
+    "image_tier": "B",
+    "image_path": "images/card_435.webp"
   },
   {
     "german": "der Plan",

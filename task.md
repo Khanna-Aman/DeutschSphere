@@ -79,8 +79,8 @@ To prevent rate-limiting and ensure pristine artistic quality, all generation MU
   - [x] Generate, manually check, and commit Batch 84 (Cards 416–420)
   - [x] Generate, manually check, and commit Batch 85 (Cards 421–425)
   - [x] Generate, manually check, and commit Batch 86 (Cards 426–430)
-  - [/] Generate, manually check, and commit Batch 87 (Cards 431–435)
-  - [ ] Generate, manually check, and commit Batch 88 (Cards 436–440)
+  - [x] Generate, manually check, and commit Batch 87 (Cards 431–435)
+  - [/] Generate, manually check, and commit Batch 88 (Cards 436–440)
   - [ ] Generate, manually check, and commit Batch 89 (Cards 441–445)
   - [ ] Generate, manually check, and commit Batch 90 (Cards 446–450)
 - [ ] **Milestone 5: Cards 451–550 (Batches 91–110)** *(Process in strict batches of 5 and manually check all cards)*
