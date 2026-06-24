@@ -8641,8 +8641,10 @@
     "antonym": null,
     "example_de": "Die Rechnung, bitte.",
     "example_en": "The bill, please.",
-    "image": "images/card_451.svg",
-    "id": 451
+    "image": "images/card_451.webp",
+    "id": 451,
+    "image_tier": "B",
+    "image_path": "images/card_451.webp"
   },
   {
     "german": "rechts",
@@ -8657,8 +8659,10 @@
     "antonym": "links",
     "example_de": "Die Schillerstraße ist hier rechts.",
     "example_en": "Schillerstraße is here on the right.",
-    "image": "images/card_452.svg",
-    "id": 452
+    "image": "images/card_452.webp",
+    "id": 452,
+    "image_tier": "B",
+    "image_path": "images/card_452.webp"
   },
   {
     "german": "der Regen",
@@ -8673,8 +8677,10 @@
     "antonym": "die Sonne",
     "example_de": "Bei diesem Regen gehe ich nicht raus.",
     "example_en": "In this rain I am not going out.",
-    "image": "images/card_453.svg",
-    "id": 453
+    "image": "images/card_453.webp",
+    "id": 453,
+    "image_tier": "B",
+    "image_path": "images/card_453.webp"
   },
   {
     "german": "regnen",
@@ -8693,8 +8699,10 @@
     "antonym": null,
     "example_de": "Heute regnet es.",
     "example_en": "Today it is raining.",
-    "image": "images/card_454.svg",
-    "id": 454
+    "image": "images/card_454.webp",
+    "id": 454,
+    "image_tier": "B",
+    "image_path": "images/card_454.webp"
   },
   {
     "german": "der Reis",
@@ -8709,8 +8717,10 @@
     "antonym": null,
     "example_de": "Ich esse gern Reis.",
     "example_en": "I like to eat rice.",
-    "image": "images/card_455.svg",
-    "id": 455
+    "image": "images/card_455.webp",
+    "id": 455,
+    "image_tier": "B",
+    "image_path": "images/card_455.webp"
   },
   {
     "german": "die Reise",
