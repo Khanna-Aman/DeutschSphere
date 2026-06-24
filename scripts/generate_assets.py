@@ -442,7 +442,12 @@ METAPHOR_MAP = {
     "mitmachen": "A group of cute, smiling 3D clay characters placing their colorful hands together in a circle, with tiny golden sparks of team spirit floating around, representing participating, front-and-center, premium SOTA asset",
     "mitnehmen": "An adorable 3D character walking with a cute little rolling pink suitcase and holding a smiling puppy under their arm, representing taking things along, front-and-center, premium SOTA asset",
     "mitte": "A glossy, modern 3D archery target board with a glowing golden arrow hitting exactly in the absolute center bullseye, with shiny star sparkles, representing the middle, front-and-center, premium SOTA asset",
-    "moment": "A magnificent, glowing 3D pocket watch with a cute stylized clock face, where a tiny, glossy golden camera flash goes off, capturing a single precious moment, front-and-center, premium SOTA asset"
+    "moment": "A magnificent, glowing 3D pocket watch with a cute stylized clock face, where a tiny, glossy golden camera flash goes off, capturing a single precious moment, front-and-center, premium SOTA asset",
+    "morgen": "A beautiful, premium 3D rising sun over rolling green hills, next to a cute glossy calendar page flipping to the next day, representing tomorrow, front-and-center, premium SOTA asset",
+    "mund": "An adorable, highly-stylized 3D glossy pink mouth smiling warmly and happily, with clean white teeth and a tiny sparkle on the side, front-and-center, premium SOTA asset",
+    "mutter": "An adorable 3D claymother character with warm, smiling eyes, tenderly hugging her small smiling child, surrounded by glowing golden hearts of love, front-and-center, premium SOTA asset",
+    "mädchen": "A cute, highly-polished 3D clay girl character with bright pink hair in twin pigtails, wearing a cheerful blue dress and a warm friendly smile, front-and-center, premium SOTA asset",
+    "männlich": "A stylish, highly-polished 3D glossy blue shield icon with a bold, glowing golden male gender symbol in the center, representing masculinity, front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

@@ -7610,8 +7610,10 @@
     "antonym": "gestern",
     "example_de": "Morgen beginnt die Schule um 10 Uhr.",
     "example_en": "Tomorrow school begins at 10 o'clock.",
-    "image": "images/card_396.svg",
-    "id": 396
+    "image": "images/card_396.webp",
+    "id": 396,
+    "image_tier": "B",
+    "image_path": "images/card_396.webp"
   },
   {
     "german": "der Mund",
@@ -7626,8 +7628,10 @@
     "antonym": null,
     "example_de": "Öffnen Sie den Mund.",
     "example_en": "Open your mouth.",
-    "image": "images/card_397.svg",
-    "id": 397
+    "image": "images/card_397.webp",
+    "id": 397,
+    "image_tier": "B",
+    "image_path": "images/card_397.webp"
   },
   {
     "german": "die Mutter",
@@ -7642,8 +7646,10 @@
     "antonym": "der Vater",
     "example_de": "Frau Berghäuser ist die Mutter von Michaela.",
     "example_en": "Mrs. Berghäuser is the mother of Michaela.",
-    "image": "images/card_398.svg",
-    "id": 398
+    "image": "images/card_398.webp",
+    "id": 398,
+    "image_tier": "B",
+    "image_path": "images/card_398.webp"
   },
   {
     "german": "das Mädchen",
@@ -7658,8 +7664,10 @@
     "antonym": "der Junge",
     "example_de": "Familie Kurz bekommt ein Baby. - Junge oder Mädchen?",
     "example_en": "The Kurz family is having a baby. - Boy or girl?",
-    "image": "images/card_399.svg",
-    "id": 399
+    "image": "images/card_399.webp",
+    "id": 399,
+    "image_tier": "B",
+    "image_path": "images/card_399.webp"
   },
   {
     "german": "männlich",
@@ -7677,8 +7685,10 @@
     "antonym": "weiblich",
     "example_de": "Kreuzen Sie bitte an: „weiblich“ oder „männlich“.",
     "example_en": "Please cross: \"female\" or \"male\".",
-    "image": "images/card_400.svg",
-    "id": 400
+    "image": "images/card_400.webp",
+    "id": 400,
+    "image_tier": "B",
+    "image_path": "images/card_400.webp"
   },
   {
     "german": "die Möbel",
