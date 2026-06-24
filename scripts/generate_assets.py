@@ -383,7 +383,19 @@ METAPHOR_MAP = {
     "kartoffel": "A pair of cute, rustic-brown 3D potatoes with realistic bumpy textures, resting on a bed of fresh green leaves, floating in mid-air, front-and-center",
     "kasse": "A vintage-style 3D cash register made of glossy teal and chrome, with its drawer popped open to show sparkling golden coins inside, front-and-center",
     "kaufen": "A cute, glossy 3D shopping bag in pastel pink, with a pair of hands happily handing a shiny gold credit card to the bag, front-and-center",
-    "kein": "A bright-red 3D circle with a diagonal slash (prohibition symbol) floating in front of an empty, clean glass pedestal, representing none or nothing, front-and-center"
+    "kein": "A bright-red 3D circle with a diagonal slash (prohibition symbol) floating in front of an empty, clean glass pedestal, representing none or nothing, front-and-center",
+    "kulturell": "A spectacular, highly-detailed 3D miniature model of a historic museum temple with glowing marble columns and floating cultural mask relics, front-and-center, premium SOTA asset",
+    "kunde": "An adorable 3D cartoon character holding a glossy shopping bag and a receipt, receiving a warm handshake, front-and-center, premium SOTA asset",
+    "kurs": "A majestic 3D graduation cap resting on a stack of colorful textbooks, surrounded by floating golden stars, front-and-center, premium SOTA asset",
+    "können": "An adorable, muscular 3D cartoon character lifting a giant glossy gold dumbbell with a single finger, smiling with supreme confidence, front-and-center, premium SOTA asset",
+    "kühlschrank": "A spectacular 3D retro-style refrigerator in high-gloss pastel blue with chrome handles, open to reveal colorful glossy food and glowing interior light, front-and-center, premium SOTA asset",
+    "lächeln": "A giant, radiant 3D yellow smiling face emoji with beautiful glistening starlit eyes and a warm glossy smile, surrounded by colorful sparkles, front-and-center, premium SOTA asset",
+    "laden": "A highly-detailed, cozy 3D brick shop storefront with a striped pink awning, glass display window showing tiny colorful items, and a glowing welcoming open door, front-and-center, premium SOTA asset",
+    "lampe": "An elegant, modern 3D designer desk lamp with a high-gloss pink shade, casting a warm glowing cone of yellow light onto a small green succulent plant, front-and-center, premium SOTA asset",
+    "landen": "A beautiful, glossy 3D white passenger airplane touching down smoothly on a mini high-contrast runway segment, with a small green checkmark flag waving, front-and-center, premium SOTA asset",
+    "land": "A stunning, stylized 3D miniature landscape segment of rolling green hills, a winding blue river, and a tiny rustic cottage with a flying heart-shaped flag, front-and-center, premium SOTA asset",
+    "lang": "A sleek, incredibly long 3D limousine in ultra-glossy hot pink, stretching across a glass baseline grid, illustrating extreme length, front-and-center, premium SOTA asset",
+    "langsam": "An adorable, high-gloss 3D claymation snail crawling slowly along a shiny green leaf, leaving a trail of sparkling silver glitter, front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

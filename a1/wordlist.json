@@ -6437,8 +6437,10 @@
     "antonym": "der Bleistift",
     "example_de": "Hast du einen Kugelschreiber für mich?",
     "example_en": "Do you have a ballpoint pen for me?",
-    "image": "images/card_336.svg",
-    "id": 336
+    "image": "images/card_336.webp",
+    "id": 336,
+    "image_tier": "B",
+    "image_path": "images/card_336.webp"
   },
   {
     "german": "kulturell",
@@ -6456,8 +6458,10 @@
     "antonym": null,
     "example_de": "Ich bin kulturell interessiert. Ich gehe oft ins Museum.",
     "example_en": "I am culturally interested. I often go to the museum.",
-    "image": "images/card_337.svg",
-    "id": 337
+    "image": "images/card_337.webp",
+    "id": 337,
+    "image_tier": "B",
+    "image_path": "images/card_337.webp"
   },
   {
     "german": "der Kunde",
@@ -6472,8 +6476,10 @@
     "antonym": "der Verkäufer",
     "example_de": "Einen Moment, bitte. Ich habe eine Kundin.",
     "example_en": "One moment, please. I have a customer.",
-    "image": "images/card_338.svg",
-    "id": 338
+    "image": "images/card_338.webp",
+    "id": 338,
+    "image_tier": "B",
+    "image_path": "images/card_338.webp"
   },
   {
     "german": "der Kurs",
@@ -6488,8 +6494,10 @@
     "antonym": null,
     "example_de": "Der Deutschkurs geht bis zum Sommer.",
     "example_en": "The German course goes until summer.",
-    "image": "images/card_339.svg",
-    "id": 339
+    "image": "images/card_339.webp",
+    "id": 339,
+    "image_tier": "B",
+    "image_path": "images/card_339.webp"
   },
   {
     "german": "kurz",
@@ -6507,8 +6515,10 @@
     "antonym": "lang",
     "example_de": "Ricardo hat kurzes Haar.",
     "example_en": "Ricardo has short hair.",
-    "image": "images/card_340.svg",
-    "id": 340
+    "image": "images/card_340.webp",
+    "id": 340,
+    "image_tier": "B",
+    "image_path": "images/card_340.webp"
   },
   {
     "german": "können",
@@ -6527,8 +6537,10 @@
     "antonym": null,
     "example_de": "Ich kann Deutsch und Russisch. Können Sie mir helfen?",
     "example_en": "I can speak German and Russian. Can you help me?",
-    "image": "images/card_341.svg",
-    "id": 341
+    "image": "images/card_341.webp",
+    "id": 341,
+    "image_tier": "B",
+    "image_path": "images/card_341.webp"
   },
   {
     "german": "die Küche",
@@ -6543,8 +6555,10 @@
     "antonym": null,
     "example_de": "Der neue Herd kommt in die Küche.",
     "example_en": "The new stove is going into the kitchen.",
-    "image": "images/card_342.svg",
-    "id": 342
+    "image": "images/card_342.webp",
+    "id": 342,
+    "image_tier": "B",
+    "image_path": "images/card_342.webp"
   },
   {
     "german": "der Kühlschrank",
