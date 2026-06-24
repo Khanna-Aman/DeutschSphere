@@ -10575,8 +10575,10 @@
     "antonym": "hallo",
     "example_de": "Junge Leute sagen meistens „tschüss!“ und nicht „auf Wiedersehen“.",
     "example_en": "Young people mostly say \"bye!\" and not \"goodbye\".",
-    "image": "images/card_551.svg",
-    "id": 551
+    "image": "images/card_551.webp",
+    "id": 551,
+    "image_tier": "B",
+    "image_path": "images/card_551.webp"
   },
   {
     "german": "tun",
@@ -10595,8 +10597,10 @@
     "antonym": null,
     "example_de": "Ich habe noch etwas zu tun. Was tut Ihr Mann?",
     "example_en": "I still have something to do. What does your husband do?",
-    "image": "images/card_552.svg",
-    "id": 552
+    "image": "images/card_552.webp",
+    "id": 552,
+    "image_tier": "B",
+    "image_path": "images/card_552.webp"
   },
   {
     "german": "die Uhr",
@@ -10611,8 +10615,10 @@
     "antonym": null,
     "example_de": "Es ist vier Uhr.",
     "example_en": "It is four o'clock.",
-    "image": "images/card_553.svg",
-    "id": 553
+    "image": "images/card_553.webp",
+    "id": 553,
+    "image_tier": "B",
+    "image_path": "images/card_553.webp"
   },
   {
     "german": "um",
@@ -10627,8 +10633,10 @@
     "antonym": null,
     "example_de": "Er kommt um sieben Uhr. Da kommt er gerade um die Ecke.",
     "example_en": "He is coming at seven o'clock. There he comes right around the corner.",
-    "image": "images/card_554.svg",
-    "id": 554
+    "image": "images/card_554.webp",
+    "id": 554,
+    "image_tier": "B",
+    "image_path": "images/card_554.webp"
   },
   {
     "german": "umziehen",
@@ -10647,8 +10655,10 @@
     "antonym": null,
     "example_de": "Nächsten Monat ziehen wir um.",
     "example_en": "Next month we are moving.",
-    "image": "images/card_555.svg",
-    "id": 555
+    "image": "images/card_555.webp",
+    "id": 555,
+    "image_tier": "B",
+    "image_path": "images/card_555.webp"
   },
   {
     "german": "und",

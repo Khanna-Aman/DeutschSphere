@@ -671,7 +671,13 @@ METAPHOR_MAP = {
     "tot": "A poetic, gentle 3D depiction of a withered, grey-and-white clay flower drooping low from its stalk, with a single dry petal gently falling onto a grey polished stone base, completely wordless, front-and-center, premium SOTA asset",
     "die treppe": "A beautiful, winding 3D spiral staircase made of elegant light-brown oak wood with a smooth golden banister, floating suspended, showing clean levels of ascending steps, completely wordless, front-and-center, premium SOTA asset",
     "treppe": "A beautiful, winding 3D spiral staircase made of elegant light-brown oak wood with a smooth golden banister, floating suspended, showing clean levels of ascending steps, completely wordless, front-and-center, premium SOTA asset",
-    "trinken": "A cute, smiling 3D star character holding a transparent glassmorphic cup filled with clean, blue sparkling water, with a tiny red-and-white striped paper straw, taking a drink, completely wordless, front-and-center, premium SOTA asset"
+    "trinken": "A cute, smiling 3D star character holding a transparent glassmorphic cup filled with clean, blue sparkling water, with a tiny red-and-white striped paper straw, taking a drink, completely wordless, front-and-center, premium SOTA asset",
+    "tschüss": "A cute, smiling 3D star character waving one hand happily, with a tiny paper airplane floating away behind it, completely wordless, front-and-center, premium SOTA asset",
+    "tun": "A pair of cute, stylized 3D gloved hands actively assembling a tiny, colorful wooden block tower, representing action and doing, completely wordless, front-and-center, premium SOTA asset",
+    "die uhr": "A beautiful, classic 3D retro pocket watch in polished gold, with a blank clock face showing only delicate hands and tick marks, absolutely no numbers or text, completely wordless, front-and-center, premium SOTA asset",
+    "uhr": "A beautiful, classic 3D retro pocket watch in polished gold, with a blank clock face showing only delicate hands and tick marks, absolutely no numbers or text, completely wordless, front-and-center, premium SOTA asset",
+    "um": "A cute 3D star character walking along a circular path looping around a central gold pedestal, clearly representing the concept of 'around', completely wordless, front-and-center, premium SOTA asset",
+    "umziehen": "A cute, stylized 3D brown cardboard moving box, taped shut, with a small glossy toy house and a rolling luggage trolley floating next to it, completely wordless, front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):
