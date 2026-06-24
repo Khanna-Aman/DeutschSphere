@@ -7410,8 +7410,10 @@
     "antonym": null,
     "example_de": "Die Miete für diese Wohnung ist 600 Euro.",
     "example_en": "The rent for this apartment is 600 euros.",
-    "image": "images/card_386.svg",
-    "id": 386
+    "image": "images/card_386.webp",
+    "id": 386,
+    "image_tier": "B",
+    "image_path": "images/card_386.webp"
   },
   {
     "german": "mieten",
@@ -7430,8 +7432,10 @@
     "antonym": "vermieten",
     "example_de": "Ich möchte ein Auto mieten.",
     "example_en": "I would like to rent a car.",
-    "image": "images/card_387.svg",
-    "id": 387
+    "image": "images/card_387.webp",
+    "id": 387,
+    "image_tier": "B",
+    "image_path": "images/card_387.webp"
   },
   {
     "german": "die Milch",
@@ -7446,8 +7450,10 @@
     "antonym": null,
     "example_de": "Die Milch steht im Kühlschrank.",
     "example_en": "The milk is in the refrigerator.",
-    "image": "images/card_388.svg",
-    "id": 388
+    "image": "images/card_388.webp",
+    "id": 388,
+    "image_tier": "B",
+    "image_path": "images/card_388.webp"
   },
   {
     "german": "mit",
@@ -7462,8 +7468,10 @@
     "antonym": "ohne",
     "example_de": "Trinken Sie den Kaffee mit Milch?",
     "example_en": "Do you drink the coffee with milk?",
-    "image": "images/card_389.svg",
-    "id": 389
+    "image": "images/card_389.webp",
+    "id": 389,
+    "image_tier": "B",
+    "image_path": "images/card_389.webp"
   },
   {
     "german": "mitbringen",
@@ -7482,8 +7490,10 @@
     "antonym": null,
     "example_de": "Ich gehe einkaufen. Soll ich dir was mitbringen?",
     "example_en": "I am going shopping. Should I bring you something?",
-    "image": "images/card_390.svg",
-    "id": 390
+    "image": "images/card_390.webp",
+    "id": 390,
+    "image_tier": "B",
+    "image_path": "images/card_390.webp"
   },
   {
     "german": "mitkommen",

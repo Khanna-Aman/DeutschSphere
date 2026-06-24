@@ -432,7 +432,12 @@ METAPHOR_MAP = {
     "mehr": "An ultra-premium, cute 3D glossy yellow bar chart where the columns grow taller from left to right, topped with a glowing golden plus sign and sparkling stars, representing 'more', front-and-center, premium SOTA asset",
     "mein": "An adorable, highly-polished 3D hand holding a sparkling, translucent pink heart closely to a stylized chest, representing personal ownership or 'my', surrounded by soft gold sparkles, front-and-center, premium SOTA asset",
     "meist": "A stunning, modern 3D circle chart with a huge, glossy blue section representing the majority, flanked by a tiny pastel pink section, with elegant gold stars floating around representing 'most', front-and-center, premium SOTA asset",
-    "mensch": "A cute, highly-polished 3D clay human figure standing confidently with open arms, featuring a warm friendly smile and a soft, pastel-colored circular halo background, representing humanity, front-and-center, premium SOTA asset"
+    "mensch": "A cute, highly-polished 3D clay human figure standing confidently with open arms, featuring a warm friendly smile and a soft, pastel-colored circular halo background, representing humanity, front-and-center, premium SOTA asset",
+    "miete": "A beautiful 3D model of a glossy small house being handed over with a sparkling gold coin and a tiny glowing document with a key on it, representing paying rent, front-and-center, premium SOTA asset",
+    "mieten": "A cute 3D glossy yellow car with a large, shiny tag reading 'RENTED' next to a smiling key character floating in mid-air, representing renting, front-and-center, premium SOTA asset",
+    "milch": "A highly-stylized 3D milk glass bottle with a cute light-blue cow spot pattern label and a beautiful splash of white liquid pouring out with small glossy stars around, front-and-center, premium SOTA asset",
+    "mit": "Two adorable, different colored 3D puzzle pieces fitting perfectly together, with a golden ring of connection and sparkling stars, representing being together or 'with', front-and-center, premium SOTA asset",
+    "mitbringen": "An adorable 3D character carrying a beautifully wrapped pink gift box with a glossy yellow ribbon while walking happily, representing bringing along, front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):
