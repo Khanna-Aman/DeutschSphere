@@ -9521,8 +9521,10 @@
     "antonym": null,
     "example_de": "Ich kann dich nicht sehen. Ich habe diesen Jungen schon einmal gesehen.",
     "example_en": "I cannot see you. I have seen this boy once before.",
-    "image": "images/card_496.svg",
-    "id": 496
+    "image": "images/card_496.webp",
+    "id": 496,
+    "image_tier": "B",
+    "image_path": "images/card_496.webp"
   },
   {
     "german": "die Sehenswürdigkeit",
@@ -9537,8 +9539,10 @@
     "antonym": null,
     "example_de": "Welche Sehenswürdigkeiten gibt es in Frankfurt?",
     "example_en": "What sights are there in Frankfurt?",
-    "image": "images/card_497.svg",
-    "id": 497
+    "image": "images/card_497.webp",
+    "id": 497,
+    "image_tier": "B",
+    "image_path": "images/card_497.webp"
   },
   {
     "german": "sehr",
@@ -9553,8 +9557,10 @@
     "antonym": "wenig",
     "example_de": "Danke sehr! Das ist sehr schwer.",
     "example_en": "Thank you very much! That is very heavy.",
-    "image": "images/card_498.svg",
-    "id": 498
+    "image": "images/card_498.webp",
+    "id": 498,
+    "image_tier": "B",
+    "image_path": "images/card_498.webp"
   },
   {
     "german": "sein",
@@ -9573,8 +9579,10 @@
     "antonym": null,
     "example_de": "Herr Müller ist in seinem Zimmer. Mir ist kalt. Ich bin dreiundzwanzig.",
     "example_en": "Mr. Müller is in his room. I am cold. I am twenty-three.",
-    "image": "images/card_499.svg",
-    "id": 499
+    "image": "images/card_499.webp",
+    "id": 499,
+    "image_tier": "B",
+    "image_path": "images/card_499.webp"
   },
   {
     "german": "seit",
@@ -9589,8 +9597,10 @@
     "antonym": null,
     "example_de": "Ich wohne seit drei Jahren in Köln.",
     "example_en": "I have been living in Cologne for three years.",
-    "image": "images/card_500.svg",
-    "id": 500
+    "image": "images/card_500.webp",
+    "id": 500,
+    "image_tier": "B",
+    "image_path": "images/card_500.webp"
   },
   {
     "german": "selbstständig",
