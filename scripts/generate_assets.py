@@ -690,7 +690,13 @@ METAPHOR_MAP = {
     "der urlaub": "A stunning 3D miniature tropical island floating in mid-air, with a tiny sand dune, a green palm tree with detailed coconuts, and a red-and-white striped beach lounge chair, completely wordless, front-and-center, premium SOTA asset",
     "urlaub": "A stunning 3D miniature tropical island floating in mid-air, with a tiny sand dune, a green palm tree with detailed coconuts, and a red-and-white striped beach lounge chair, completely wordless, front-and-center, premium SOTA asset",
     "der vater": "A heartwarming 3D scene of a tall, smiling star character wearing a cute blue tie, gently resting its arm around a smaller smiling star character, completely wordless, front-and-center, premium SOTA asset",
-    "vater": "A heartwarming 3D scene of a tall, smiling star character wearing a cute blue tie, gently resting its arm around a smaller smiling star character, completely wordless, front-and-center, premium SOTA asset"
+    "vater": "A heartwarming 3D scene of a tall, smiling star character wearing a cute blue tie, gently resting its arm around a smaller smiling star character, completely wordless, front-and-center, premium SOTA asset",
+    "verboten": "A bold, sleek 3D red circular shield with a solid white horizontal bar in the center, glowing with a soft neon red aura, completely wordless, front-and-center, premium SOTA asset",
+    "verdienen": "A pair of cute, stylized 3D gloved hands holding a glossy 3D golden coin, with small green dollar bills stacking up neatly next to them, completely wordless, front-and-center, premium SOTA asset",
+    "der verein": "A beautiful 3D glossy badge crest showing three stylized, smiling star characters standing together hand-in-hand in a circular embrace, completely wordless, front-and-center, premium SOTA asset",
+    "verein": "A beautiful 3D glossy badge crest showing three stylized, smiling star characters standing together hand-in-hand in a circular embrace, completely wordless, front-and-center, premium SOTA asset",
+    "verheiratet": "Two elegant, interlocking 3D wedding rings in polished gold, with a tiny glossy pink heart floating in the center of their intersection, completely wordless, front-and-center, premium SOTA asset",
+    "verkaufen": "A cute 3D star character dressed as a shopkeeper standing behind a beautiful, polished wooden market stall table, happily extending a small glossy box decorated with a ribbon, completely wordless, front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

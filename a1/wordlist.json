@@ -10860,8 +10860,10 @@
     "antonym": "erlaubt",
     "example_de": "Hier ist Rauchen verboten.",
     "example_en": "Smoking is forbidden here.",
-    "image": "images/card_566.svg",
-    "id": 566
+    "image": "images/card_566.webp",
+    "id": 566,
+    "image_tier": "B",
+    "image_path": "images/card_566.webp"
   },
   {
     "german": "verdienen",
@@ -10880,8 +10882,10 @@
     "antonym": "ausgeben",
     "example_de": "Ich verdiene 1.500 Euro im Monat.",
     "example_en": "I earn 1,500 euros a month.",
-    "image": "images/card_567.svg",
-    "id": 567
+    "image": "images/card_567.webp",
+    "id": 567,
+    "image_tier": "B",
+    "image_path": "images/card_567.webp"
   },
   {
     "german": "der Verein",
@@ -10896,8 +10900,10 @@
     "antonym": null,
     "example_de": "Es gibt einen neuen Sportverein in der Stadt.",
     "example_en": "There is a new sports club in the city.",
-    "image": "images/card_568.svg",
-    "id": 568
+    "image": "images/card_568.webp",
+    "id": 568,
+    "image_tier": "B",
+    "image_path": "images/card_568.webp"
   },
   {
     "german": "verheiratet",
@@ -10915,8 +10921,10 @@
     "antonym": "ledig",
     "example_de": "Ich bin verheiratet und habe drei Kinder.",
     "example_en": "I am married and have three children.",
-    "image": "images/card_569.svg",
-    "id": 569
+    "image": "images/card_569.webp",
+    "id": 569,
+    "image_tier": "B",
+    "image_path": "images/card_569.webp"
   },
   {
     "german": "verkaufen",
@@ -10935,8 +10943,10 @@
     "antonym": "kaufen",
     "example_de": "Er verkauft sein altes Auto.",
     "example_en": "He is selling his old car.",
-    "image": "images/card_570.svg",
-    "id": 570
+    "image": "images/card_570.webp",
+    "id": 570,
+    "image_tier": "B",
+    "image_path": "images/card_570.webp"
   },
   {
     "german": "der Verkäufer",
