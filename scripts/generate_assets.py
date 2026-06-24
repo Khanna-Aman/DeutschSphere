@@ -717,8 +717,16 @@ METAPHOR_MAP = {
     "vorwahl": "A sleek 3D rotary telephone dial hovering in front of a miniature globe where a specific slice/country is highlighted with a glowing golden border and a dashed golden connection arc, completely wordless, front-and-center, premium SOTA asset",
     "wandern": "A cute 3D star character wearing a tiny brown backpack and holding a polished wooden walking stick, walking happily along a winding grassy mountain path toward a small snowy peak in the background, completely wordless, front-and-center, premium SOTA asset",
     "wann": "A cute 3D star character looking curiously at a massive, beautiful golden pocket watch hovering in front of it, with its face showing stylized celestial phase icons instead of numbers, completely wordless, front-and-center, premium SOTA asset",
-    "warten": "A cute 3D star character sitting patiently on a stylish park bench under a streetlamp, next to a large glowing glass hourglass where the golden sand is slowly trickling down, completely wordless, front-and-center, premium SOTA asset"
+    "warten": "A cute 3D star character sitting patiently on a stylish park bench under a streetlamp, next to a large glowing glass hourglass where the golden sand is slowly trickling down, completely wordless, front-and-center, premium SOTA asset",
+    "warum": "A cute 3D star character looking up with huge, curious eyes, with a large glowing golden question mark floating above its head, completely wordless, front-and-center, premium SOTA asset",
+    "was": "A cute 3D star character with a large glowing green magnifying glass floating in front of it, examining a small, mysterious, shimmering golden box sitting on the ground, completely wordless, front-and-center, premium SOTA asset",
+    "waschen": "A beautiful 3D washing machine with a clear glass round door showing colorful water bubbles and swishing blue suds, completely wordless, front-and-center, premium SOTA asset",
+    "das wasser": "A beautiful, sparkling 3D glass of fresh water, with water droplets condensing on the outside of the glass, a glowing, pristine blue water drop splash on top, completely wordless, front-and-center, premium SOTA asset",
+    "wasser": "A beautiful, sparkling 3D glass of fresh water, with water droplets condensing on the outside of the glass, a glowing, pristine blue water drop splash on top, completely wordless, front-and-center, premium SOTA asset",
+    "weg sein": "A cute 3D star character standing next to a wooden chair that has a dotted white outline silhouette of where another character used to sit, waving goodbye to the empty space, completely wordless, front-and-center, premium SOTA asset",
+    "weg": "A cute 3D star character standing next to a wooden chair that has a dotted white outline silhouette of where another character used to sit, waving goodbye to the empty space, completely wordless, front-and-center, premium SOTA asset"
 }
+
 
 
 

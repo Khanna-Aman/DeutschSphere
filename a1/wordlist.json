@@ -11247,8 +11247,10 @@
     "antonym": null,
     "example_de": "Warum kommt er nicht?",
     "example_en": "Why is he not coming?",
-    "image": "images/card_586.svg",
-    "id": 586
+    "image": "images/card_586.webp",
+    "id": 586,
+    "image_tier": "B",
+    "image_path": "images/card_586.webp"
   },
   {
     "german": "was",
@@ -11263,8 +11265,10 @@
     "antonym": null,
     "example_de": "Was ist das? Was möchten Sie?",
     "example_en": "What is that? What would you like?",
-    "image": "images/card_587.svg",
-    "id": 587
+    "image": "images/card_587.webp",
+    "id": 587,
+    "image_tier": "B",
+    "image_path": "images/card_587.webp"
   },
   {
     "german": "waschen",
@@ -11283,8 +11287,10 @@
     "antonym": null,
     "example_de": "Wo kann ich mir die Hände waschen? Ich muss morgen waschen.",
     "example_en": "Where can I wash my hands? I must wash tomorrow.",
-    "image": "images/card_588.svg",
-    "id": 588
+    "image": "images/card_588.webp",
+    "id": 588,
+    "image_tier": "B",
+    "image_path": "images/card_588.webp"
   },
   {
     "german": "das Wasser",
@@ -11299,8 +11305,10 @@
     "antonym": null,
     "example_de": "Ein Glas Wasser, bitte.",
     "example_en": "A glass of water, please.",
-    "image": "images/card_589.svg",
-    "id": 589
+    "image": "images/card_589.webp",
+    "id": 589,
+    "image_tier": "B",
+    "image_path": "images/card_589.webp"
   },
   {
     "german": "weg sein",
@@ -11319,8 +11327,10 @@
     "antonym": "da sein",
     "example_de": "Herr Meier ist schon weg.",
     "example_en": "Mr. Meier is already gone.",
-    "image": "images/card_590.svg",
-    "id": 590
+    "image": "images/card_590.webp",
+    "id": 590,
+    "image_tier": "B",
+    "image_path": "images/card_590.webp"
   },
   {
     "german": "wehtun",
