@@ -7133,8 +7133,10 @@
     "antonym": "stehen",
     "example_de": "Um neun Uhr liegt Judith noch im Bett. Frankfurt liegt am Main.",
     "example_en": "At nine o'clock Judith is still lying in bed. Frankfurt is located on the Main.",
-    "image": "images/card_371.svg",
-    "id": 371
+    "image": "images/card_371.webp",
+    "id": 371,
+    "image_tier": "B",
+    "image_path": "images/card_371.webp"
   },
   {
     "german": "links",
@@ -7149,8 +7151,10 @@
     "antonym": "rechts",
     "example_de": "Gehen Sie die nächste Straße links.",
     "example_en": "Take the next street on the left.",
-    "image": "images/card_372.svg",
-    "id": 372
+    "image": "images/card_372.webp",
+    "id": 372,
+    "image_tier": "B",
+    "image_path": "images/card_372.webp"
   },
   {
     "german": "der Lkw",
@@ -7165,8 +7169,10 @@
     "antonym": "der Pkw",
     "example_de": "Dieser Lastkraftwagen ist sehr groß.",
     "example_en": "This truck is very big.",
-    "image": "images/card_373.svg",
-    "id": 373
+    "image": "images/card_373.webp",
+    "id": 373,
+    "image_tier": "B",
+    "image_path": "images/card_373.webp"
   },
   {
     "german": "das Lokal",
@@ -7181,8 +7187,10 @@
     "antonym": null,
     "example_de": "In unserer Straße gibt es ein neues Lokal.",
     "example_en": "There is a new pub in our street.",
-    "image": "images/card_374.svg",
-    "id": 374
+    "image": "images/card_374.webp",
+    "id": 374,
+    "image_tier": "B",
+    "image_path": "images/card_374.webp"
   },
   {
     "german": "lustig",
@@ -7200,8 +7208,10 @@
     "antonym": "traurig",
     "example_de": "Frau Mertens ist lustig. Sie lacht immer.",
     "example_en": "Mrs. Mertens is funny. She always laughs.",
-    "image": "images/card_375.svg",
-    "id": 375
+    "image": "images/card_375.webp",
+    "id": 375,
+    "image_tier": "B",
+    "image_path": "images/card_375.webp"
   },
   {
     "german": "die Lösung",
