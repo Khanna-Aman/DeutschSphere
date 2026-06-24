@@ -791,8 +791,10 @@
     "antonym": "fragen",
     "example_de": "Er antwortet nicht.",
     "example_en": "He does not answer.",
-    "image": "images/card_41.svg",
-    "id": 41
+    "image": "images/card_41.webp",
+    "id": 41,
+    "image_tier": "B",
+    "image_path": "images/card_41.webp"
   },
   {
     "german": "die Anzeige",
@@ -807,8 +809,10 @@
     "antonym": null,
     "example_de": "Ich habe Ihre Anzeige in der Zeitung gelesen.",
     "example_en": "I read your advertisement in the newspaper.",
-    "image": "images/card_42.svg",
-    "id": 42
+    "image": "images/card_42.webp",
+    "id": 42,
+    "image_tier": "B",
+    "image_path": "images/card_42.webp"
   },
   {
     "german": "der Anzug",
@@ -823,8 +827,10 @@
     "antonym": null,
     "example_de": "Mein Mann muss sich einen neuen Anzug kaufen.",
     "example_en": "My husband has to buy a new suit.",
-    "image": "images/card_43.svg",
-    "id": 43
+    "image": "images/card_43.webp",
+    "id": 43,
+    "image_tier": "B",
+    "image_path": "images/card_43.webp"
   },
   {
     "german": "der Apfel",
@@ -839,8 +845,10 @@
     "antonym": null,
     "example_de": "Ein Kilo Äpfel, bitte.",
     "example_en": "A kilo of apples, please.",
-    "image": "images/card_44.svg",
-    "id": 44
+    "image": "images/card_44.webp",
+    "id": 44,
+    "image_tier": "B",
+    "image_path": "images/card_44.webp"
   },
   {
     "german": "die Apotheke",
@@ -855,8 +863,10 @@
     "antonym": null,
     "example_de": "Das Medikament bekommen Sie in der Apotheke.",
     "example_en": "You get the medicine in the pharmacy.",
-    "image": "images/card_45.svg",
-    "id": 45
+    "image": "images/card_45.webp",
+    "id": 45,
+    "image_tier": "B",
+    "image_path": "images/card_45.webp"
   },
   {
     "german": "der Apparat",

@@ -114,7 +114,16 @@ METAPHOR_MAP = {
     "die antwort": "A big glowing green speech bubble containing a large glossy checkmark symbol floating next to a smaller purple question-mark speech bubble, representing an answer, completely wordless, front-and-center, premium SOTA asset",
     "antwort": "A big glowing green speech bubble containing a large glossy checkmark symbol floating next to a smaller purple question-mark speech bubble, representing an answer, completely wordless, front-and-center, premium SOTA asset",
 
-
+    # Handcrafted A2 early cards (Batch 9: 41 to 45)
+    "antworten": "A cute 3D character smiling and typing an answer on a large glowing glass tablet, with a stylized green paper-airplane letter with a checkmark soaring off the screen into the air, representing replying, completely wordless, front-and-center, premium SOTA asset",
+    "die anzeige": "A stylish 3D billboard with a glossy colorful display showing a giant glowing red price tag with a percentage symbol (%) and sparkling gold coins, representing a premium advertisement, completely wordless, front-and-center, premium SOTA asset",
+    "anzeige": "A stylish 3D billboard with a glossy colorful display showing a giant glowing red price tag with a percentage symbol (%) and sparkling gold coins, representing a premium advertisement, completely wordless, front-and-center, premium SOTA asset",
+    "der anzug": "A beautifully tailored, ultra-premium 3D royal-blue gentlemen's suit with a crisp white collar, a shiny red tie, and a golden pocket square, displayed on a sleek mahogany valet hanger stand, completely wordless, front-and-center, premium SOTA asset",
+    "anzug": "A beautifully tailored, ultra-premium 3D royal-blue gentlemen's suit with a crisp white collar, a shiny red tie, and a golden pocket square, displayed on a sleek mahogany valet hanger stand, completely wordless, front-and-center, premium SOTA asset",
+    "der apfel": "A perfectly polished, vibrant red 3D apple with a tiny brown stem and a glossy green leaf, catching sparkling reflections on its glassy wax skin, representing pure apple essence, completely wordless, front-and-center, premium SOTA asset",
+    "apfel": "A perfectly polished, vibrant red 3D apple with a tiny brown stem and a glossy green leaf, catching sparkling reflections on its glassy wax skin, representing pure apple essence, completely wordless, front-and-center, premium SOTA asset",
+    "die apotheke": "A miniature 3D medical clinic building with a clean white and grey facade, warm glowing glass windows displaying rows of tiny medicine bottles, with a giant glowing green neon medical cross sign floating above the flat roof, completely wordless, no letters, no characters, no signs, front-and-center, premium SOTA asset",
+    "apotheke": "A miniature 3D medical clinic building with a clean white and grey facade, warm glowing glass windows displaying rows of tiny medicine bottles, with a giant glowing green neon medical cross sign floating above the flat roof, completely wordless, no letters, no characters, no signs, front-and-center, premium SOTA asset",
 
     # Handcrafted A1 early cards (1 to 30)
     "abfliegen": "A magnificent, glossy 3D passenger airplane made of pristine white enamel, dramatically angled upwards as it climbs into the air, with glowing golden jet streams trailing behind its chrome engines, front-and-center",
