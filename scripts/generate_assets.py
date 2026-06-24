@@ -461,7 +461,14 @@ METAPHOR_MAP = {
     "nicht": "A giant, bold red 3D crossed-out circle symbol made of polished glossy plastic, hovering over a translucent blue checkmark to negate it, representing 'not' or negation, front-and-center, premium SOTA asset",
     "nichts": "An elegant, empty 3D transparent glass jar with a polished golden lid, showing absolute empty space inside with just a tiny floating sparkle of light, representing 'nothing', front-and-center, premium SOTA asset",
     "nie": "A magnificent 3D clock face with no clock-hands, featuring a giant, high-gloss red crossed-out circle symbol over the dial, representing 'never' or timeless impossibility, front-and-center, premium SOTA asset",
-    "noch": "A beautiful 3D hourglass made of translucent glassmorphism, with golden sand still actively flowing down from the top bulb, representing 'still' or 'yet' in progress, front-and-center, premium SOTA asset"
+    "noch": "A beautiful 3D hourglass made of translucent glassmorphism, with golden sand still actively flowing down from the top bulb, representing 'still' or 'yet' in progress, front-and-center, premium SOTA asset",
+    "normal": "A sleek 3D gauge meter with its glowing pointer perfectly centered on the green 'normal' status zone, with a gentle soft-green ambient glow, representing normal or standard state, front-and-center, premium SOTA asset",
+    "die nummer": "A towering, highly polished 3D arrangement of the numbers '1', '2', and '3' made of vibrant pink and blue enamel and gold trim, neatly floating together as a single block, representing numbers, front-and-center, premium SOTA asset",
+    "nummer": "A towering, highly polished 3D arrangement of the numbers '1', '2', and '3' made of vibrant pink and blue enamel and gold trim, neatly floating together as a single block, representing numbers, front-and-center, premium SOTA asset",
+    "nur": "A single, beautiful 3D pink rose resting in a minimalist, transparent glass vase, perfectly highlighted under a soft golden spotlight in a dark void, representing 'only' or 'just one', front-and-center, premium SOTA asset",
+    "nächst-": "A sleek 3D queue of glossy spheres on a track, with a glowing green arrow pointing sharply to the very next sphere in line which is illuminated in bright gold, representing 'next', front-and-center, premium SOTA asset",
+    "nächst": "A sleek 3D queue of glossy spheres on a track, with a glowing green arrow pointing sharply to the very next sphere in line which is illuminated in bright gold, representing 'next', front-and-center, premium SOTA asset",
+    "oben": "An elegant 3D model of a spiral staircase made of white polished wood, with a bold, glowing neon-pink arrow pointing sharply upwards to a cozy glowing light above, representing 'above' or 'upstairs', front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

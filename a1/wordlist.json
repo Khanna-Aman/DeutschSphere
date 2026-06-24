@@ -8001,8 +8001,10 @@
     "antonym": "unnormal",
     "example_de": "75 kg. Sein Gewicht ist normal.",
     "example_en": "75 kg. His weight is normal.",
-    "image": "images/card_416.svg",
-    "id": 416
+    "image": "images/card_416.webp",
+    "id": 416,
+    "image_tier": "B",
+    "image_path": "images/card_416.webp"
   },
   {
     "german": "die Nummer",
@@ -8017,8 +8019,10 @@
     "antonym": null,
     "example_de": "Sie haben Zimmer Nummer zwölf. Welche Hausnummer haben Sie? Können Sie mir Ihre Nummer geben?",
     "example_en": "You have room number twelve. What house number do you have? Can you give me your number?",
-    "image": "images/card_417.svg",
-    "id": 417
+    "image": "images/card_417.webp",
+    "id": 417,
+    "image_tier": "B",
+    "image_path": "images/card_417.webp"
   },
   {
     "german": "nur",
@@ -8033,8 +8037,10 @@
     "antonym": null,
     "example_de": "Ich möchte nur ein Glas Wasser.",
     "example_en": "I would only like a glass of water.",
-    "image": "images/card_418.svg",
-    "id": 418
+    "image": "images/card_418.webp",
+    "id": 418,
+    "image_tier": "B",
+    "image_path": "images/card_418.webp"
   },
   {
     "german": "nächst-",
@@ -8052,8 +8058,10 @@
     "antonym": "letzt-",
     "example_de": "Sehen wir uns nächste Woche?",
     "example_en": "Will we see each other next week?",
-    "image": "images/card_419.svg",
-    "id": 419
+    "image": "images/card_419.webp",
+    "id": 419,
+    "image_tier": "B",
+    "image_path": "images/card_419.webp"
   },
   {
     "german": "oben",
@@ -8068,8 +8076,10 @@
     "antonym": "unten",
     "example_de": "Ich wohne oben.",
     "example_en": "I live upstairs.",
-    "image": "images/card_420.svg",
-    "id": 420
+    "image": "images/card_420.webp",
+    "id": 420,
+    "image_tier": "B",
+    "image_path": "images/card_420.webp"
   },
   {
     "german": "das Obst",
