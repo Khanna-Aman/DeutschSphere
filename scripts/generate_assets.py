@@ -663,7 +663,15 @@ METAPHOR_MAP = {
     "der tisch": "A gorgeous, stylized mid-century modern 3D wooden dining table with a rich, polished woodgrain texture and elegant tapered legs, standing floating in mid-air, completely wordless, front-and-center, premium SOTA asset",
     "tisch": "A gorgeous, stylized mid-century modern 3D wooden dining table with a rich, polished woodgrain texture and elegant tapered legs, standing floating in mid-air, completely wordless, front-and-center, premium SOTA asset",
     "die tochter": "A heartwarming, stylized 3D claymation scene of a tall, proud star character with its arm gently around a smaller, smiling little girl star character wearing a cute pink hair bow, standing together, completely wordless, front-and-center, premium SOTA asset",
-    "tochter": "A heartwarming, stylized 3D claymation scene of a tall, proud star character with its arm gently around a smaller, smiling little girl star character wearing a cute pink hair bow, standing together, completely wordless, front-and-center, premium SOTA asset"
+    "tochter": "A heartwarming, stylized 3D claymation scene of a tall, proud star character with its arm gently around a smaller, smiling little girl star character wearing a cute pink hair bow, standing together, completely wordless, front-and-center, premium SOTA asset",
+    "die toilette": "A beautiful, modern 3D toilet bowl in pristine white porcelain, with a glossy silver flush button, standing next to a small floating rolled toilet paper roll, completely wordless, front-and-center, premium SOTA asset",
+    "toilette": "A beautiful, modern 3D toilet bowl in pristine white porcelain, with a glossy silver flush button, standing next to a small floating rolled toilet paper roll, completely wordless, front-and-center, premium SOTA asset",
+    "die tomate": "A plump, juicy 3D red tomato in glossy red claymation enamel, with a vibrant green leafy vine stem attached on top, floating in mid-air, with a tiny splash of water droplets, completely wordless, front-and-center, premium SOTA asset",
+    "tomate": "A plump, juicy 3D red tomato in glossy red claymation enamel, with a vibrant green leafy vine stem attached on top, floating in mid-air, with a tiny splash of water droplets, completely wordless, front-and-center, premium SOTA asset",
+    "tot": "A poetic, gentle 3D depiction of a withered, grey-and-white clay flower drooping low from its stalk, with a single dry petal gently falling onto a grey polished stone base, completely wordless, front-and-center, premium SOTA asset",
+    "die treppe": "A beautiful, winding 3D spiral staircase made of elegant light-brown oak wood with a smooth golden banister, floating suspended, showing clean levels of ascending steps, completely wordless, front-and-center, premium SOTA asset",
+    "treppe": "A beautiful, winding 3D spiral staircase made of elegant light-brown oak wood with a smooth golden banister, floating suspended, showing clean levels of ascending steps, completely wordless, front-and-center, premium SOTA asset",
+    "trinken": "A cute, smiling 3D star character holding a transparent glassmorphic cup filled with clean, blue sparkling water, with a tiny red-and-white striped paper straw, taking a drink, completely wordless, front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

@@ -10478,8 +10478,10 @@
     "antonym": null,
     "example_de": "Wo ist die Toilette, bitte?",
     "example_en": "Where is the toilet, please?",
-    "image": "images/card_546.svg",
-    "id": 546
+    "image": "images/card_546.webp",
+    "id": 546,
+    "image_tier": "B",
+    "image_path": "images/card_546.webp"
   },
   {
     "german": "die Tomate",
@@ -10494,8 +10496,10 @@
     "antonym": null,
     "example_de": "Die Tomate ist noch grün.",
     "example_en": "The tomato is still green.",
-    "image": "images/card_547.svg",
-    "id": 547
+    "image": "images/card_547.webp",
+    "id": 547,
+    "image_tier": "B",
+    "image_path": "images/card_547.webp"
   },
   {
     "german": "tot",
@@ -10513,8 +10517,10 @@
     "antonym": "lebendig",
     "example_de": "Sein Vater ist schon lange tot.",
     "example_en": "His father has been dead for a long time.",
-    "image": "images/card_548.svg",
-    "id": 548
+    "image": "images/card_548.webp",
+    "id": 548,
+    "image_tier": "B",
+    "image_path": "images/card_548.webp"
   },
   {
     "german": "die Treppe",
@@ -10529,8 +10535,10 @@
     "antonym": "der Aufzug",
     "example_de": "Die Toilette? Die Treppe hoch und dann links.",
     "example_en": "The toilet? Up the stairs and then left.",
-    "image": "images/card_549.svg",
-    "id": 549
+    "image": "images/card_549.webp",
+    "id": 549,
+    "image_tier": "B",
+    "image_path": "images/card_549.webp"
   },
   {
     "german": "trinken",
@@ -10549,8 +10557,10 @@
     "antonym": "essen",
     "example_de": "Möchtest du etwas trinken?",
     "example_en": "Would you like something to drink?",
-    "image": "images/card_550.svg",
-    "id": 550
+    "image": "images/card_550.webp",
+    "id": 550,
+    "image_tier": "B",
+    "image_path": "images/card_550.webp"
   },
   {
     "german": "tschüss",
