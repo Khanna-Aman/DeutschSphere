@@ -402,7 +402,15 @@ METAPHOR_MAP = {
     "leben": "An adorable, high-gloss 3D character watering a vibrant, glowing green seedling plant with a small pink heart floating over it, front-and-center, premium SOTA asset",
     "das leben": "A majestic 3D tree of life with glowing golden roots, translucent green glass leaves, and floating star sparkles, front-and-center, premium SOTA asset",
     "das lebensmittel": "A spectacular 3D grocery basket overflowing with high-gloss colorful fruits, vegetables, bread, and a carton of milk, front-and-center, premium SOTA asset",
-    "ledig": "An adorable single 3D puzzle piece with a little smiling face and tiny sparkles, standing proudly alone, representing single independence, front-and-center, premium SOTA asset"
+    "ledig": "An adorable single 3D puzzle piece with a little smiling face and tiny sparkles, standing proudly alone, representing single independence, front-and-center, premium SOTA asset",
+    "legen": "A gentle, stylized 3D hand carefully laying a beautiful glowing golden egg into a cozy, soft-blue bird nest, representing the action of laying or putting down, front-and-center, premium SOTA asset",
+    "leicht": "An elegant, glowing pink helium balloon floating gracefully in mid-air, with a tiny golden feather tied to its string, representing being lightweight and easy, front-and-center, premium SOTA asset",
+    "leider": "An adorable, sad 3D character looking downcast while a tiny, fluffy blue raincloud floats right above its head, dropping a single glistening blue raindrop, representing unfortunately, front-and-center, premium SOTA asset",
+    "links": "A stylized, high-gloss 3D highway sign with a bright-green board featuring a bold, glowing neon-pink arrow pointing sharply to the left, decorated with sparkling gold stars, floating in mid-air, front-and-center, premium SOTA 3D icon",
+    "löffel": "A glossy, chrome and pastel-pink 3D soup spoon, perfectly polished with bright studio reflections, holding a giant, cute smiling 3D honey drop with tiny sparkling stars around it, floating in mid-air, front-and-center, premium SOTA asset",
+    "lücke": "A highly-stylized, high-gloss 3D row of blue puzzle pieces aligned perfectly on a glass tray, with exactly one missing piece in the center creating a clean, cute glowing gap, surrounded by subtle questioning sparkles, front-and-center, premium SOTA asset",
+    "lustig": "An adorable, ultra-glossy 3D yellow emoji face laughing so hard it is crying happy blue crystal tears, slightly tilted in mid-air and surrounded by floating pink musical notes and colorful confetti bursts, front-and-center, premium SOTA asset",
+    "machen": "A cute 3D character with bright blue overalls, holding a gleaming wooden hammer, happily building a small, beautiful pink toy birdhouse on a modern glass workbench, with tiny golden sparks of creativity, front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

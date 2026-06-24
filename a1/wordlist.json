@@ -6835,8 +6835,10 @@
     "antonym": "nehmen",
     "example_de": "Legen Sie das Buch auf den Tisch.",
     "example_en": "Put the book on the table.",
-    "image": "images/card_356.svg",
-    "id": 356
+    "image": "images/card_356.webp",
+    "id": 356,
+    "image_tier": "B",
+    "image_path": "images/card_356.webp"
   },
   {
     "german": "der Lehrer",
@@ -6851,8 +6853,10 @@
     "antonym": "der Schüler",
     "example_de": "Unsere Deutschlehrerin heißt Frau Müller.",
     "example_en": "Our German teacher is Mrs. Müller.",
-    "image": "images/card_357.svg",
-    "id": 357
+    "image": "images/card_357.webp",
+    "id": 357,
+    "image_tier": "B",
+    "image_path": "images/card_357.webp"
   },
   {
     "german": "die Lehrerin",
@@ -6867,8 +6871,10 @@
     "antonym": "die Schülerin",
     "example_de": "Unsere Deutschlehrerin heißt Frau Müller.",
     "example_en": "Our German teacher is Mrs. Müller.",
-    "image": "images/card_358.svg",
-    "id": 358
+    "image": "images/card_358.webp",
+    "id": 358,
+    "image_tier": "B",
+    "image_path": "images/card_358.webp"
   },
   {
     "german": "leicht",
@@ -6886,8 +6892,10 @@
     "antonym": "schwer",
     "example_de": "Der Koffer ist leicht. Deutsch ist nicht leicht.",
     "example_en": "The suitcase is light. German is not easy.",
-    "image": "images/card_359.svg",
-    "id": 359
+    "image": "images/card_359.webp",
+    "id": 359,
+    "image_tier": "B",
+    "image_path": "images/card_359.webp"
   },
   {
     "german": "leider",
@@ -6902,8 +6910,10 @@
     "antonym": "zum Glück",
     "example_de": "Leider kann ich nicht kommen. Ich muss zum Arzt.",
     "example_en": "Unfortunately I cannot come. I have to go to the doctor.",
-    "image": "images/card_360.svg",
-    "id": 360
+    "image": "images/card_360.webp",
+    "id": 360,
+    "image_tier": "B",
+    "image_path": "images/card_360.webp"
   },
   {
     "german": "leise",
