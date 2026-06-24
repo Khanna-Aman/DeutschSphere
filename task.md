@@ -16,7 +16,7 @@ To prevent rate-limiting and ensure pristine artistic quality, all generation MU
 ---
 
 ## 📈 Global Curriculum Progress
-- **Level A1**: 595 / 640 cards complete (92.97%)
+- **Level A1**: 600 / 640 cards complete (93.75%)
 - **Level A2**: 0 / 1142 cards complete (0.0%)
 - **Level B1**: 0 / 2139 cards complete (0.0%)
 
@@ -114,7 +114,7 @@ To prevent rate-limiting and ensure pristine artistic quality, all generation MU
   - [x] Generate, manually check, and commit Batch 117 (Cards 581–585)
   - [x] Generate, manually check, and commit Batch 118 (Cards 586–590)
   - [x] Generate, manually check, and commit Batch 119 (Cards 591–595)
-  - [ ] Generate, manually check, and commit Batch 120 (Cards 596–600)
+  - [x] Generate, manually check, and commit Batch 120 (Cards 596–600)
   - [ ] Generate, manually check, and commit Batch 121 (Cards 601–605)
   - [ ] Generate, manually check, and commit Batch 122 (Cards 606–610)
   - [ ] Generate, manually check, and commit Batch 123 (Cards 611–615)
