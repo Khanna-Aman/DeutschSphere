@@ -10,7 +10,7 @@ This document provides an honest, accurate assessment of what has been built, wh
 
 DeutschSphere is a **fully functional, feature-rich German language learning SPA** with 7 interactive views, 3,921 verified vocabulary entries, and a comprehensive study toolkit. 
 
-We are currently executing the **V6.0 Premium 3D Asset Generation Sprint**, systematically populating all 3,921 cards with custom-designed 3D Claymation and glassmorphic WebP images. Level A1 is currently **68.0% complete (435/640 assets generated, audited, and committed)**. All core features are implemented, hardened, and running cleanly at 60–120fps.
+We are currently executing the **V6.0 Premium 3D Asset Generation Sprint**, systematically populating all 3,921 cards with custom-designed 3D Claymation and glassmorphic WebP images. Level A1 is currently **100.0% complete (640/640 assets generated, audited, and committed)**. All core features are implemented, hardened, and running cleanly at 60–120fps.
 
 ---
 
@@ -127,7 +127,9 @@ We are currently executing the **V6.0 Premium 3D Asset Generation Sprint**, syst
   - **Milestone 1 (Cards 1–185)**: Completed 185 cards with flawless associations.
   - **Milestone 2 (Cards 186–250)**: Completed 65 cards.
   - **Milestone 3 (Cards 251–350)**: Completed 100 cards.
-  - **Milestone 4 (Cards 351–435)**: Completed 85 cards (Current standing: **435 / 640 cards complete - 68.0%**).
+  - **Milestone 4 (Cards 351–435)**: Completed 85 cards.
+  - **Milestone 5 (Cards 436–550)**: Completed 115 cards.
+  - **Milestone 6 (Cards 551–640)**: Completed 90 cards (Current standing: **640 / 640 cards complete - 100.0%**).
 - [x] **Lightweight Walkthrough logs**: Programmatically split monolithic visual reviews into structured archives (`walkthrough_a1_archive.md` for older cards and `walkthrough_a1.md` for active reviews) to eliminate git context bloat.
 
 
