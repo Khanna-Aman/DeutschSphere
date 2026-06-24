@@ -5854,8 +5854,10 @@
     "antonym": "der Erwachsene",
     "example_de": "Viele Jugendliche kaufen gern ein.",
     "example_en": "Many young people like to shop.",
-    "image": "images/card_306.svg",
-    "id": 306
+    "image": "images/card_306.webp",
+    "id": 306,
+    "image_tier": "B",
+    "image_path": "images/card_306.webp"
   },
   {
     "german": "jung",
@@ -5873,8 +5875,10 @@
     "antonym": "alt",
     "example_de": "Claudia ist 21. - Was? Noch so jung?",
     "example_en": "Claudia is 21. - What? Still so young?",
-    "image": "images/card_307.svg",
-    "id": 307
+    "image": "images/card_307.webp",
+    "id": 307,
+    "image_tier": "B",
+    "image_path": "images/card_307.webp"
   },
   {
     "german": "der Junge",
@@ -5889,8 +5893,10 @@
     "antonym": "das Mädchen",
     "example_de": "Ich habe zwei Kinder. Einen Jungen und ein Mädchen.",
     "example_en": "I have two children. A boy and a girl.",
-    "image": "images/card_308.svg",
-    "id": 308
+    "image": "images/card_308.webp",
+    "id": 308,
+    "image_tier": "B",
+    "image_path": "images/card_308.webp"
   },
   {
     "german": "der Kaffee",
@@ -5905,8 +5911,10 @@
     "antonym": "der Tee",
     "example_de": "Zum Frühstück trinke ich immer Kaffee.",
     "example_en": "For breakfast I always drink coffee.",
-    "image": "images/card_309.svg",
-    "id": 309
+    "image": "images/card_309.webp",
+    "id": 309,
+    "image_tier": "B",
+    "image_path": "images/card_309.webp"
   },
   {
     "german": "kaputt",
@@ -5924,8 +5932,10 @@
     "antonym": "ganz",
     "example_de": "Das Glas war teuer. Es geht sehr leicht kaputt.",
     "example_en": "The glass was expensive. It breaks very easily.",
-    "image": "images/card_310.svg",
-    "id": 310
+    "image": "images/card_310.webp",
+    "id": 310,
+    "image_tier": "B",
+    "image_path": "images/card_310.webp"
   },
   {
     "german": "die Karte",
