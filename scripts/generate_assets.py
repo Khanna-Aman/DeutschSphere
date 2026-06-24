@@ -447,7 +447,12 @@ METAPHOR_MAP = {
     "mund": "An adorable, highly-stylized 3D glossy pink mouth smiling warmly and happily, with clean white teeth and a tiny sparkle on the side, front-and-center, premium SOTA asset",
     "mutter": "An adorable 3D claymother character with warm, smiling eyes, tenderly hugging her small smiling child, surrounded by glowing golden hearts of love, front-and-center, premium SOTA asset",
     "mädchen": "A cute, highly-polished 3D clay girl character with bright pink hair in twin pigtails, wearing a cheerful blue dress and a warm friendly smile, front-and-center, premium SOTA asset",
-    "männlich": "A stylish, highly-polished 3D glossy blue shield icon with a bold, glowing golden male gender symbol in the center, representing masculinity, front-and-center, premium SOTA asset"
+    "männlich": "A stylish, highly-polished 3D glossy blue shield icon with a bold, glowing golden male gender symbol in the center, representing masculinity, front-and-center, premium SOTA asset",
+    "möbel": "A cozy and stylish 3D modern living room furniture set, featuring a cute pink clay armchair, a small light-wood coffee table with a steaming cup of tea, and a sleek green potted plant, front-and-center, premium SOTA asset",
+    "möchten": "A delightful 3D representation of wishing or wanting, showing a cute clay character looking dreamily at a soft pink thinking bubble containing a golden star and a wrapped gift box, front-and-center, premium SOTA asset",
+    "mögen": "A beautiful 3D representation of liking something, featuring a vibrant glossy red heart icon surrounded by bright yellow spark stars and a golden thumbs-up emblem, front-and-center, premium SOTA asset",
+    "möglich": "A sleek 3D representation of possibility, displaying a glowing green road sign with an arrow pointing upward to a sunny sky, with a golden checkmark on the side, representing a path of potential, front-and-center, premium SOTA asset",
+    "müde": "An adorable, sleepy 3D crescent moon wearing a cozy nightcap, resting gently on a soft, fluffy white cloud with tiny floating 'Zzz' sleep symbols, representing tired, front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

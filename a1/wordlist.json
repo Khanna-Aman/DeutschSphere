@@ -7703,8 +7703,10 @@
     "antonym": null,
     "example_de": "Sind die Möbel neu?",
     "example_en": "Is the furniture new?",
-    "image": "images/card_401.svg",
-    "id": 401
+    "image": "images/card_401.webp",
+    "id": 401,
+    "image_tier": "B",
+    "image_path": "images/card_401.webp"
   },
   {
     "german": "möchten",
@@ -7723,8 +7725,10 @@
     "antonym": null,
     "example_de": "Was möchten Sie trinken?",
     "example_en": "What would you like to drink?",
-    "image": "images/card_402.svg",
-    "id": 402
+    "image": "images/card_402.webp",
+    "id": 402,
+    "image_tier": "B",
+    "image_path": "images/card_402.webp"
   },
   {
     "german": "mögen",
@@ -7743,8 +7747,10 @@
     "antonym": "hassen",
     "example_de": "Magst du Kaffee oder Tee?",
     "example_en": "Do you like coffee or tea?",
-    "image": "images/card_403.svg",
-    "id": 403
+    "image": "images/card_403.webp",
+    "id": 403,
+    "image_tier": "B",
+    "image_path": "images/card_403.webp"
   },
   {
     "german": "möglich",
@@ -7762,8 +7768,10 @@
     "antonym": "unmöglich",
     "example_de": "Mit dieser Fahrkarte ist die Fahrt ab 9 Uhr möglich.",
     "example_en": "With this ticket the journey is possible from 9 o'clock.",
-    "image": "images/card_404.svg",
-    "id": 404
+    "image": "images/card_404.webp",
+    "id": 404,
+    "image_tier": "B",
+    "image_path": "images/card_404.webp"
   },
   {
     "german": "müde",
@@ -7781,8 +7789,10 @@
     "antonym": "wach",
     "example_de": "Ich bin müde. Ich gehe schlafen.",
     "example_en": "I am tired. I am going to sleep.",
-    "image": "images/card_405.svg",
-    "id": 405
+    "image": "images/card_405.webp",
+    "id": 405,
+    "image_tier": "B",
+    "image_path": "images/card_405.webp"
   },
   {
     "german": "müssen",
