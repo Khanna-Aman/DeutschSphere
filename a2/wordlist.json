@@ -16,8 +16,10 @@
     "antonym": null,
     "example_de": "Ich fahre mit dem Auto zur Arbeit.",
     "example_en": "I drive to work by car.",
-    "image": "images/card_1.svg",
-    "id": 1
+    "image": "images/card_1.webp",
+    "id": 1,
+    "image_tier": "B",
+    "image_path": "images/card_1.webp"
   },
   {
     "german": "ab",
@@ -32,8 +34,10 @@
     "antonym": "bis",
     "example_de": "Ab morgen muss ich wieder arbeiten.",
     "example_en": "Starting tomorrow I must work again.",
-    "image": "images/card_2.svg",
-    "id": 2
+    "image": "images/card_2.webp",
+    "id": 2,
+    "image_tier": "B",
+    "image_path": "images/card_2.webp"
   },
   {
     "german": "aber",
@@ -48,8 +52,10 @@
     "antonym": null,
     "example_de": "Heute kann ich nicht kommen, aber morgen habe ich Zeit.",
     "example_en": "Today I cannot come, but tomorrow I have time.",
-    "image": "images/card_3.svg",
-    "id": 3
+    "image": "images/card_3.webp",
+    "id": 3,
+    "image_tier": "B",
+    "image_path": "images/card_3.webp"
   },
   {
     "german": "abfahren",
@@ -68,8 +74,10 @@
     "antonym": "ankommen",
     "example_de": "Achtung an Gleis 17! Der Zug München - Paris fährt jetzt ab.",
     "example_en": "Attention on track 17! The Munich - Paris train is departing now.",
-    "image": "images/card_4.svg",
-    "id": 4
+    "image": "images/card_4.webp",
+    "id": 4,
+    "image_tier": "B",
+    "image_path": "images/card_4.webp"
   },
   {
     "german": "die Abfahrt",
@@ -84,8 +92,10 @@
     "antonym": "die Ankunft",
     "example_de": "Wir haben noch zwanzig Minuten bis zur Abfahrt.",
     "example_en": "We still have twenty minutes until departure.",
-    "image": "images/card_5.svg",
-    "id": 5
+    "image": "images/card_5.webp",
+    "id": 5,
+    "image_tier": "B",
+    "image_path": "images/card_5.webp"
   },
   {
     "german": "abgeben",

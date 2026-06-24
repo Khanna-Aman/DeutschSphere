@@ -171,7 +171,6 @@ The `scripts/` directory contains Python utilities for data generation and verif
 | Script | Purpose |
 |--------|---------|
 | `verify_via_notebooklm.py` | Batch-verify wordlists against NotebookLM notebook |
-| `verify_curriculum_sync.py` | Cross-reference data against official Goethe PDFs |
 | `generate_assets.py` | Generate Twemoji SVG illustrations |
 | `e2e_comprehensive_tests.py` | Playwright-based E2E test suite |
 | `consolidate_database_categories.py` | Normalize category names across levels |
@@ -180,11 +179,10 @@ The `scripts/` directory contains Python utilities for data generation and verif
 
 ## 📄 Data Verification
 
-All 3,921 vocabulary entries are verified against the official Goethe-Institut A1, A2, and B1 wordlist PDFs using a strict pipeline:
+All 3,921 vocabulary entries are verified against the official Goethe-Institut A1, A2, and B1 wordlists using a strict pipeline:
 
-1. **NotebookLM MCP**: Translations, genders, plurals, and example sentences are cross-referenced against the uploaded Goethe-Institut source documents via the `notebooklm` MCP server.
-2. **Curriculum Sync**: The `verify_curriculum_sync.py` script parses the original PDFs and checks for parity.
-3. **Automated Audits**: The `verify_via_notebooklm.py` script batch-queries NotebookLM to audit every entry for accuracy.
+1. **NotebookLM MCP**: Translations, genders, plurals, and example sentences are cross-referenced and verified against the uploaded Goethe-Institut source documents via the `notebooklm` MCP server.
+2. **Automated Audits**: The `verify_via_notebooklm.py` script batch-queries NotebookLM to audit every entry for accuracy.
 
 ---
 

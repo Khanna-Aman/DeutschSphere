@@ -48,6 +48,13 @@ METAPHOR_MAP = {
     "aus": "a cute, smiling 3D bird happily popping out of a beautiful rustic wooden cuckoo clock",
     "aus sein": "a cute 3D wall light switch in a pink frame, with the toggle flipped down to the off position, cartoon style",
 
+    # Handcrafted A2 early cards (Batch 1: 1 to 5)
+    "(ab)fahren": "A sleek 3D red-and-white toy train departing from a cute train station platform with a clock, representing departure, completely wordless, front-and-center, premium SOTA asset",
+    "ab": "A cute 3D calendar with the first day of a month glowing in warm yellow and a shiny green arrow pointing forward from it, representing 'starting at', completely wordless, front-and-center, premium SOTA asset",
+    "abfahren": "A sleek 3D passenger train pulling away from a cute high-gloss station platform, representing to depart, completely wordless, front-and-center, premium SOTA asset",
+    "die abfahrt": "A stylized green-and-white 3D signpost with a train departure symbol and a tiny green flag, representing departure, completely wordless, front-and-center, premium SOTA asset",
+    "abfahrt": "A stylized green-and-white 3D signpost with a train departure symbol and a tiny green flag, representing departure, completely wordless, front-and-center, premium SOTA asset",
+
     # Handcrafted A1 early cards (1 to 30)
     "abfliegen": "A magnificent, glossy 3D passenger airplane made of pristine white enamel, dramatically angled upwards as it climbs into the air, with glowing golden jet streams trailing behind its chrome engines, front-and-center",
     "abflug": "A stylized, premium 3D terminal departure gate sign in glossy blue enamel, with a glowing translucent glass board showing a glowing yellow airplane departure symbol, front-and-center",
