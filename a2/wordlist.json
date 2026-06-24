@@ -595,8 +595,10 @@
     "antonym": "abfahren",
     "example_de": "Wann kommt dieser Zug in Hamburg an?",
     "example_en": "When does this train arrive in Hamburg?",
-    "image": "images/card_31.svg",
-    "id": 31
+    "image": "images/card_31.webp",
+    "id": 31,
+    "image_tier": "B",
+    "image_path": "images/card_31.webp"
   },
   {
     "german": "die Ankunft",
@@ -611,8 +613,10 @@
     "antonym": "die Abfahrt",
     "example_de": "Auf diesem Fahrplan steht nur die Ankunft der Züge.",
     "example_en": "On this timetable, only the arrival of the trains is listed.",
-    "image": "images/card_32.svg",
-    "id": 32
+    "image": "images/card_32.webp",
+    "id": 32,
+    "image_tier": "B",
+    "image_path": "images/card_32.webp"
   },
   {
     "german": "anmachen",
@@ -631,8 +635,10 @@
     "antonym": "ausmachen",
     "example_de": "Mach bitte das Licht an!",
     "example_en": "Please turn the light on!",
-    "image": "images/card_33.svg",
-    "id": 33
+    "image": "images/card_33.webp",
+    "id": 33,
+    "image_tier": "B",
+    "image_path": "images/card_33.webp"
   },
   {
     "german": "die Anmeldung",
@@ -647,8 +653,10 @@
     "antonym": "die Abmeldung",
     "example_de": "Wo bekomme ich das Formular für die Anmeldung?",
     "example_en": "Where do I get the form for the registration?",
-    "image": "images/card_34.svg",
-    "id": 34
+    "image": "images/card_34.webp",
+    "id": 34,
+    "image_tier": "B",
+    "image_path": "images/card_34.webp"
   },
   {
     "german": "der Anruf",
@@ -663,8 +671,10 @@
     "antonym": null,
     "example_de": "Eva bekommt viele Anrufe von ihrem Freund Juan.",
     "example_en": "Eva receives many calls from her friend Juan.",
-    "image": "images/card_35.svg",
-    "id": 35
+    "image": "images/card_35.webp",
+    "id": 35,
+    "image_tier": "B",
+    "image_path": "images/card_35.webp"
   },
   {
     "german": "der Anrufbeantworter",

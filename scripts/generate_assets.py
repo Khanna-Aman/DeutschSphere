@@ -94,6 +94,16 @@ METAPHOR_MAP = {
     "die angst": "A cute 3D character shivering and peeking nervously from behind a round wooden shield, with a giant but friendly purple shadow monster with round glowing yellow eyes cast on the wall behind them, representing fear, completely wordless, front-and-center, premium SOTA asset",
     "angst": "A cute 3D character shivering and peeking nervously from behind a round wooden shield, with a giant but friendly purple shadow monster with round glowing yellow eyes cast on the wall behind them, representing fear, completely wordless, front-and-center, premium SOTA asset",
 
+    # Handcrafted A2 early cards (Batch 7: 31 to 35)
+    "ankommen": "A sleek 3D red train engine arriving at a cute, high-gloss railway platform with a tiny passenger holding a suitcase and waving happily, representing arrival, completely wordless, front-and-center, premium SOTA asset",
+    "die ankunft": "A stylish 3D arrival signboard showing a large green plane landing arrow symbol next to a stylized airplane icon, with star sparkles and golden dust, representing arrival, completely wordless, front-and-center, premium SOTA asset",
+    "ankunft": "A stylish 3D arrival signboard showing a large green plane landing arrow symbol next to a stylized airplane icon, with star sparkles and golden dust, representing arrival, completely wordless, front-and-center, premium SOTA asset",
+    "anmachen": "A giant glossy yellow lightbulb glowing brilliantly inside a pink frame, with a large glossy red 3D toggle switch flipped upwards with shiny green cartoon starbursts, completely wordless with no text or letters on the toggle switch, representing turning on, front-and-center, premium SOTA asset",
+    "die anmeldung": "A premium 3D registration desk with a glowing green checkmark symbol above a giant glossy clipboard and a golden pen floating beside it, representing registration, completely wordless, front-and-center, premium SOTA asset",
+    "anmeldung": "A premium 3D registration desk with a glowing green checkmark symbol above a giant glossy clipboard and a golden pen floating beside it, representing registration, completely wordless, front-and-center, premium SOTA asset",
+    "der anruf": "A high-gloss retro red telephone with vibrating cartoon ring soundwave arcs in brilliant gold, and a green incoming call icon floating directly above, representing a phone call, completely wordless, front-and-center, premium SOTA asset",
+    "anruf": "A high-gloss retro red telephone with vibrating cartoon ring soundwave arcs in brilliant gold, and a green incoming call icon floating directly above, representing a phone call, completely wordless, front-and-center, premium SOTA asset",
+
 
 
     # Handcrafted A1 early cards (1 to 30)
