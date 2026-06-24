@@ -7512,8 +7512,10 @@
     "antonym": null,
     "example_de": "Ich gehe ins Kino. Kommst du mit?",
     "example_en": "I am going to the cinema. Are you coming along?",
-    "image": "images/card_391.svg",
-    "id": 391
+    "image": "images/card_391.webp",
+    "id": 391,
+    "image_tier": "B",
+    "image_path": "images/card_391.webp"
   },
   {
     "german": "mitmachen",
@@ -7532,8 +7534,10 @@
     "antonym": null,
     "example_de": "Warum macht ihr nicht mit?",
     "example_en": "Why don't you join in?",
-    "image": "images/card_392.svg",
-    "id": 392
+    "image": "images/card_392.webp",
+    "id": 392,
+    "image_tier": "B",
+    "image_path": "images/card_392.webp"
   },
   {
     "german": "mitnehmen",
@@ -7552,8 +7556,10 @@
     "antonym": "dalassen",
     "example_de": "Nehmen wir meine Schwester ins Kino mit?",
     "example_en": "Are we taking my sister along to the cinema?",
-    "image": "images/card_393.svg",
-    "id": 393
+    "image": "images/card_393.webp",
+    "id": 393,
+    "image_tier": "B",
+    "image_path": "images/card_393.webp"
   },
   {
     "german": "die Mitte",
@@ -7568,8 +7574,10 @@
     "antonym": "der Rand",
     "example_de": "Der Lehrer steht in der Mitte des Klassenzimmers.",
     "example_en": "The teacher stands in the middle of the classroom.",
-    "image": "images/card_394.svg",
-    "id": 394
+    "image": "images/card_394.webp",
+    "id": 394,
+    "image_tier": "B",
+    "image_path": "images/card_394.webp"
   },
   {
     "german": "der Moment",
@@ -7584,8 +7592,10 @@
     "antonym": null,
     "example_de": "Moment mal bitte! Einen Moment bitte.",
     "example_en": "Just a moment please! One moment please.",
-    "image": "images/card_395.svg",
-    "id": 395
+    "image": "images/card_395.webp",
+    "id": 395,
+    "image_tier": "B",
+    "image_path": "images/card_395.webp"
   },
   {
     "german": "morgen",

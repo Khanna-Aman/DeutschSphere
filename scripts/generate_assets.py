@@ -437,7 +437,12 @@ METAPHOR_MAP = {
     "mieten": "A cute 3D glossy yellow car with a large, shiny tag reading 'RENTED' next to a smiling key character floating in mid-air, representing renting, front-and-center, premium SOTA asset",
     "milch": "A highly-stylized 3D milk glass bottle with a cute light-blue cow spot pattern label and a beautiful splash of white liquid pouring out with small glossy stars around, front-and-center, premium SOTA asset",
     "mit": "Two adorable, different colored 3D puzzle pieces fitting perfectly together, with a golden ring of connection and sparkling stars, representing being together or 'with', front-and-center, premium SOTA asset",
-    "mitbringen": "An adorable 3D character carrying a beautifully wrapped pink gift box with a glossy yellow ribbon while walking happily, representing bringing along, front-and-center, premium SOTA asset"
+    "mitbringen": "An adorable 3D character carrying a beautifully wrapped pink gift box with a glossy yellow ribbon while walking happily, representing bringing along, front-and-center, premium SOTA asset",
+    "mitkommen": "An adorable 3D character waving happily to another character, inviting them to walk together on a winding golden path, representing coming along, front-and-center, premium SOTA asset",
+    "mitmachen": "A group of cute, smiling 3D clay characters placing their colorful hands together in a circle, with tiny golden sparks of team spirit floating around, representing participating, front-and-center, premium SOTA asset",
+    "mitnehmen": "An adorable 3D character walking with a cute little rolling pink suitcase and holding a smiling puppy under their arm, representing taking things along, front-and-center, premium SOTA asset",
+    "mitte": "A glossy, modern 3D archery target board with a glowing golden arrow hitting exactly in the absolute center bullseye, with shiny star sparkles, representing the middle, front-and-center, premium SOTA asset",
+    "moment": "A magnificent, glowing 3D pocket watch with a cute stylized clock face, where a tiny, glossy golden camera flash goes off, capturing a single precious moment, front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):
