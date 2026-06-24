@@ -104,6 +104,16 @@ METAPHOR_MAP = {
     "der anruf": "A high-gloss retro red telephone with vibrating cartoon ring soundwave arcs in brilliant gold, and a green incoming call icon floating directly above, representing a phone call, completely wordless, front-and-center, premium SOTA asset",
     "anruf": "A high-gloss retro red telephone with vibrating cartoon ring soundwave arcs in brilliant gold, and a green incoming call icon floating directly above, representing a phone call, completely wordless, front-and-center, premium SOTA asset",
 
+    # Handcrafted A2 early cards (Batch 8: 36 to 40)
+    "der anrufbeantworter": "A glossy 3D vintage cassette answering machine with a tiny glowing red tape reel spinning and a green message bubble with audio lines floating above it, representing message recording, completely wordless, front-and-center, premium SOTA asset",
+    "anrufbeantworter": "A glossy 3D vintage cassette answering machine with a tiny glowing red tape reel spinning and a green message bubble with audio lines floating above it, representing message recording, completely wordless, front-and-center, premium SOTA asset",
+    "anrufen": "A cute 3D character holding a retro green telephone receiver to their ear, talking happily with gold sound waves radiating outwards, representing to call, completely wordless, front-and-center, premium SOTA asset",
+    "der anschluss": "Two colorful cable plugs, one neon-blue and one neon-magenta, clipping together perfectly in mid-air with small electrical sparks and a green circular light around them, representing a connection, completely wordless, front-and-center, premium SOTA asset",
+    "anschluss": "Two colorful cable plugs, one neon-blue and one neon-magenta, clipping together perfectly in mid-air with small electrical sparks and a green circular light around them, representing a connection, completely wordless, front-and-center, premium SOTA asset",
+    "ansehen": "A cute 3D character wearing huge glossy eyeglasses looking admiringly at a large beautifully detailed painting on a wooden easel, holding a tiny magnifying glass, representing to look at, completely wordless, front-and-center, premium SOTA asset",
+    "die antwort": "A big glowing green speech bubble containing a large glossy checkmark symbol floating next to a smaller purple question-mark speech bubble, representing an answer, completely wordless, front-and-center, premium SOTA asset",
+    "antwort": "A big glowing green speech bubble containing a large glossy checkmark symbol floating next to a smaller purple question-mark speech bubble, representing an answer, completely wordless, front-and-center, premium SOTA asset",
+
 
 
     # Handcrafted A1 early cards (1 to 30)

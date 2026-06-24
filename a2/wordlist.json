@@ -689,8 +689,10 @@
     "antonym": null,
     "example_de": "Wir sind im Moment nicht da. Sprechen Sie bitte auf den Anrufbeantworter.",
     "example_en": "We are not here at the moment. Please leave a message on the answering machine.",
-    "image": "images/card_36.svg",
-    "id": 36
+    "image": "images/card_36.webp",
+    "id": 36,
+    "image_tier": "B",
+    "image_path": "images/card_36.webp"
   },
   {
     "german": "anrufen",
@@ -709,8 +711,10 @@
     "antonym": "auflegen",
     "example_de": "Kann ich Sie heute Abend anrufen?",
     "example_en": "Can I call you tonight?",
-    "image": "images/card_37.svg",
-    "id": 37
+    "image": "images/card_37.webp",
+    "id": 37,
+    "image_tier": "B",
+    "image_path": "images/card_37.webp"
   },
   {
     "german": "der Anschluss",
@@ -725,8 +729,10 @@
     "antonym": null,
     "example_de": "In Mannheim haben Sie Anschluss nach Saarbrücken.",
     "example_en": "In Mannheim you have a connection to Saarbrücken.",
-    "image": "images/card_38.svg",
-    "id": 38
+    "image": "images/card_38.webp",
+    "id": 38,
+    "image_tier": "B",
+    "image_path": "images/card_38.webp"
   },
   {
     "german": "ansehen",
@@ -745,8 +751,10 @@
     "antonym": "wegsehen",
     "example_de": "Darf ich eure Urlaubsfotos ansehen?",
     "example_en": "May I look at your vacation photos?",
-    "image": "images/card_39.svg",
-    "id": 39
+    "image": "images/card_39.webp",
+    "id": 39,
+    "image_tier": "B",
+    "image_path": "images/card_39.webp"
   },
   {
     "german": "die Antwort",
@@ -761,8 +769,10 @@
     "antonym": "die Frage",
     "example_de": "Er gibt leider keine Antwort.",
     "example_en": "Unfortunately, he gives no answer.",
-    "image": "images/card_40.svg",
-    "id": 40
+    "image": "images/card_40.webp",
+    "id": 40,
+    "image_tier": "B",
+    "image_path": "images/card_40.webp"
   },
   {
     "german": "antworten",
