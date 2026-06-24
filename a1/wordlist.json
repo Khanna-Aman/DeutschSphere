@@ -12118,8 +12118,10 @@
     "antonym": null,
     "example_de": "Zurzeit habe ich sehr viel zu tun.",
     "example_en": "At the moment I have a lot to do.",
-    "image": "images/card_631.svg",
-    "id": 631
+    "image": "images/card_631.webp",
+    "id": 631,
+    "image_tier": "B",
+    "image_path": "images/card_631.webp"
   },
   {
     "german": "zurück",
@@ -12134,8 +12136,10 @@
     "antonym": "vor",
     "example_de": "Einmal Frankfurt und zurück. Wann kommst du zurück?",
     "example_en": "Frankfurt and back once. When are you coming back?",
-    "image": "images/card_632.svg",
-    "id": 632
+    "image": "images/card_632.webp",
+    "id": 632,
+    "image_tier": "B",
+    "image_path": "images/card_632.webp"
   },
   {
     "german": "zusammen",
@@ -12150,8 +12154,10 @@
     "antonym": "getrennt",
     "example_de": "Sollen wir zusammen essen gehen? Das macht zusammen 2 Euro 80.",
     "example_en": "Should we go eat together? That makes 2 euros 80 together.",
-    "image": "images/card_633.svg",
-    "id": 633
+    "image": "images/card_633.webp",
+    "id": 633,
+    "image_tier": "B",
+    "image_path": "images/card_633.webp"
   },
   {
     "german": "zweit-",
@@ -12166,8 +12172,10 @@
     "antonym": "erst-",
     "example_de": "Lies bitte auch den zweiten Teil.",
     "example_en": "Please read the second part too.",
-    "image": "images/card_634.svg",
-    "id": 634
+    "image": "images/card_634.webp",
+    "id": 634,
+    "image_tier": "B",
+    "image_path": "images/card_634.webp"
   },
   {
     "german": "zwischen",
@@ -12182,8 +12190,10 @@
     "antonym": null,
     "example_de": "Heidelberg liegt zwischen Frankfurt und Stuttgart. Zwischen 8 und 10 Uhr bin ich zu Hause.",
     "example_en": "Heidelberg lies between Frankfurt and Stuttgart. Between 8 and 10 o'clock I am at home.",
-    "image": "images/card_635.svg",
-    "id": 635
+    "image": "images/card_635.webp",
+    "id": 635,
+    "image_tier": "B",
+    "image_path": "images/card_635.webp"
   },
   {
     "german": "öffnen",

@@ -780,7 +780,7 @@ METAPHOR_MAP = {
     "zurzeit": "A sleek 3D hourglass with the sand active, sitting next to a glowing golden clock face showing the current moment with glowing hands, completely wordless, front-and-center, premium SOTA asset",
     "zurück": "A sleek, glowing 3D double-arrow chevron in neon-pink pointing boldly to the left, representing return or going back, completely wordless, front-and-center, premium SOTA asset",
     "zusammen": "Two adorable, different colored 3D star characters happily holding hands and standing together inside a glowing warm-yellow heart-shaped ring, completely wordless, front-and-center, premium SOTA asset",
-    "zweit-": "A shiny 3D podium with three levels, where a cute star character stands proudly on the second-place step, holding a silver medal, completely wordless, front-and-center, premium SOTA asset",
+    "zweit-": "A beautiful 3D podium with three levels (left, middle, right). A cute star character stands on the second-tallest step, waving happily and holding a shiny silver medal. The tallest step is completely empty. Completely wordless, no numbers, front-and-center, premium SOTA asset",
     "öffnen": "A majestic, modern 3D arched wooden door swinging wide open, with a glowing golden key floating nearby, revealing a warm, welcoming light, completely wordless, front-and-center, premium SOTA asset",
     "das öl": "A highly-stylized 3D golden glass bottle filled with rich amber olive oil, with a single glossy green olive resting beside it, completely wordless, front-and-center, premium SOTA asset",
     "öl": "A highly-stylized 3D golden glass bottle filled with rich amber olive oil, with a single glossy green olive resting beside it, completely wordless, front-and-center, premium SOTA asset",
