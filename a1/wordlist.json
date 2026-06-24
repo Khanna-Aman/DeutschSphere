@@ -5950,8 +5950,10 @@
     "antonym": null,
     "example_de": "Ich schreibe meinen Bekannten eine Karte aus dem Urlaub. Wollen wir Karten spielen? Ich möchte auch etwas essen. Bringen Sie mir die Karte, bitte.",
     "example_en": "I write my acquaintances a card from vacation. Do we want to play cards? I would also like to eat something. Bring me the menu, please.",
-    "image": "images/card_311.svg",
-    "id": 311
+    "image": "images/card_311.webp",
+    "id": 311,
+    "image_tier": "B",
+    "image_path": "images/card_311.webp"
   },
   {
     "german": "die Kartoffel",
@@ -5966,8 +5968,10 @@
     "antonym": null,
     "example_de": "Für Pommes frites braucht man Kartoffeln.",
     "example_en": "For French fries you need potatoes.",
-    "image": "images/card_312.svg",
-    "id": 312
+    "image": "images/card_312.webp",
+    "id": 312,
+    "image_tier": "B",
+    "image_path": "images/card_312.webp"
   },
   {
     "german": "die Kasse",
@@ -5982,8 +5986,10 @@
     "antonym": null,
     "example_de": "Zahlen Sie bitte an der Kasse.",
     "example_en": "Please pay at the cash register.",
-    "image": "images/card_313.svg",
-    "id": 313
+    "image": "images/card_313.webp",
+    "id": 313,
+    "image_tier": "B",
+    "image_path": "images/card_313.webp"
   },
   {
     "german": "kaufen",
@@ -6002,8 +6008,10 @@
     "antonym": "verkaufen",
     "example_de": "Tim kauft sich ein neues Auto.",
     "example_en": "Tim buys himself a new car.",
-    "image": "images/card_314.svg",
-    "id": 314
+    "image": "images/card_314.webp",
+    "id": 314,
+    "image_tier": "B",
+    "image_path": "images/card_314.webp"
   },
   {
     "german": "kein",
@@ -6018,8 +6026,10 @@
     "antonym": "ein",
     "example_de": "Es gibt keine Eintrittskarten mehr.",
     "example_en": "There are no admission tickets left.",
-    "image": "images/card_315.svg",
-    "id": 315
+    "image": "images/card_315.webp",
+    "id": 315,
+    "image_tier": "B",
+    "image_path": "images/card_315.webp"
   },
   {
     "german": "kennen",
