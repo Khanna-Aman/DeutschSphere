@@ -10388,8 +10388,10 @@
     "antonym": null,
     "example_de": "Lesen Sie bitte diesen Text.",
     "example_en": "Please read this text.",
-    "image": "images/card_541.svg",
-    "id": 541
+    "image": "images/card_541.webp",
+    "id": 541,
+    "image_tier": "B",
+    "image_path": "images/card_541.webp"
   },
   {
     "german": "das Thema",
@@ -10404,8 +10406,10 @@
     "antonym": null,
     "example_de": "Wir sprechen heute über das Thema „Essen und Trinken“.",
     "example_en": "We are speaking today about the topic \"food and drink\".",
-    "image": "images/card_542.svg",
-    "id": 542
+    "image": "images/card_542.webp",
+    "id": 542,
+    "image_tier": "B",
+    "image_path": "images/card_542.webp"
   },
   {
     "german": "das Ticket",
@@ -10420,8 +10424,10 @@
     "antonym": null,
     "example_de": "Wie viel kostet das Ticket?",
     "example_en": "How much does the ticket cost?",
-    "image": "images/card_543.svg",
-    "id": 543
+    "image": "images/card_543.webp",
+    "id": 543,
+    "image_tier": "B",
+    "image_path": "images/card_543.webp"
   },
   {
     "german": "der Tisch",
@@ -10436,8 +10442,10 @@
     "antonym": null,
     "example_de": "Die Fotos liegen auf dem Tisch.",
     "example_en": "The photos are lying on the table.",
-    "image": "images/card_544.svg",
-    "id": 544
+    "image": "images/card_544.webp",
+    "id": 544,
+    "image_tier": "B",
+    "image_path": "images/card_544.webp"
   },
   {
     "german": "die Tochter",
@@ -10452,8 +10460,10 @@
     "antonym": "der Sohn",
     "example_de": "Das ist meine Tochter Katharina.",
     "example_en": "That is my daughter Katharina.",
-    "image": "images/card_545.svg",
-    "id": 545
+    "image": "images/card_545.webp",
+    "id": 545,
+    "image_tier": "B",
+    "image_path": "images/card_545.webp"
   },
   {
     "german": "die Toilette",
