@@ -302,8 +302,10 @@
     "antonym": null,
     "example_de": "Hector ist jünger als seine Schwester.",
     "example_en": "Hector is younger than his sister.",
-    "image": "images/card_16.svg",
-    "id": 16
+    "image": "images/card_16.webp",
+    "id": 16,
+    "image_tier": "B",
+    "image_path": "images/card_16.webp"
   },
   {
     "german": "also",
@@ -318,8 +320,10 @@
     "antonym": null,
     "example_de": "Er hat Zeit, also kann er uns helfen.",
     "example_en": "He has time, so he can help us.",
-    "image": "images/card_17.svg",
-    "id": 17
+    "image": "images/card_17.webp",
+    "id": 17,
+    "image_tier": "B",
+    "image_path": "images/card_17.webp"
   },
   {
     "german": "alt",
@@ -337,8 +341,10 @@
     "antonym": "neu / jung",
     "example_de": "Wie alt sind Sie?",
     "example_en": "How old are you?",
-    "image": "images/card_18.svg",
-    "id": 18
+    "image": "images/card_18.webp",
+    "id": 18,
+    "image_tier": "B",
+    "image_path": "images/card_18.webp"
   },
   {
     "german": "das Alter",
@@ -353,8 +359,10 @@
     "antonym": "die Jugend",
     "example_de": "Alter: 18 Jahre.",
     "example_en": "Age: 18 years.",
-    "image": "images/card_19.svg",
-    "id": 19
+    "image": "images/card_19.webp",
+    "id": 19,
+    "image_tier": "B",
+    "image_path": "images/card_19.webp"
   },
   {
     "german": "die Ampel",
@@ -369,8 +377,10 @@
     "antonym": null,
     "example_de": "Du kannst fahren, die Ampel ist grün.",
     "example_en": "You can drive, the traffic light is green.",
-    "image": "images/card_20.svg",
-    "id": 20
+    "image": "images/card_20.webp",
+    "id": 20,
+    "image_tier": "B",
+    "image_path": "images/card_20.webp"
   },
   {
     "german": "an",
