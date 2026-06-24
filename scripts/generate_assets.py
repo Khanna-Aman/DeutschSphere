@@ -628,7 +628,15 @@ METAPHOR_MAP = {
     "die straße": "A beautifully curving 3D asphalt road with clean white lane markings, bordered by tiny green grass patches and a miniature glassmorphic guardrail, completely wordless, front-and-center, premium SOTA asset",
     "straße": "A beautifully curving 3D asphalt road with clean white lane markings, bordered by tiny green grass patches and a miniature glassmorphic guardrail, completely wordless, front-and-center, premium SOTA asset",
     "die straßenbahn": "A sleek, modern 3D electric tram in glossy yellow and white enamel, sitting on tiny metal tracks with overhead power cables, completely wordless, front-and-center, premium SOTA asset",
-    "straßenbahn": "A sleek, modern 3D electric tram in glossy yellow and white enamel, sitting on tiny metal tracks with overhead power cables, completely wordless, front-and-center, premium SOTA asset"
+    "straßenbahn": "A sleek, modern 3D electric tram in glossy yellow and white enamel, sitting on tiny metal tracks with overhead power cables, completely wordless, front-and-center, premium SOTA asset",
+    "der student": "A cute, smiling 3D star character wearing a black academic mortarboard cap with a golden tassel, holding a large diploma scroll wrapped in a red ribbon under its arm, completely wordless, front-and-center, premium SOTA asset",
+    "student": "A cute, smiling 3D star character wearing a black academic mortarboard cap with a golden tassel, holding a large diploma scroll wrapped in a red ribbon under its arm, completely wordless, front-and-center, premium SOTA asset",
+    "studieren": "A cute 3D star character sitting behind a massive stack of thick, colorful hardcover textbooks, eagerly examining a small glowing book using a miniature magnifying glass, completely wordless, front-and-center, premium SOTA asset",
+    "das studium": "A beautiful 3D composition representing academic success: a large open book with glowing pages, a classic mortarboard graduation cap floating above it, and golden sparkles circling in a beautiful spiral, completely wordless, front-and-center, premium SOTA asset",
+    "studium": "A beautiful 3D composition representing academic success: a large open book with glowing pages, a classic mortarboard graduation cap floating above it, and golden sparkles circling in a beautiful spiral, completely wordless, front-and-center, premium SOTA asset",
+    "die stunde": "A classic 3D hourglass filled with glowing golden sand running down, standing next to a stylized retro wall clock showing a blank dark face with only golden clock hands and simple tick marks for hours, with absolutely no numbers, letters, or words, completely wordless, front-and-center, premium SOTA asset",
+    "stunde": "A classic 3D hourglass filled with glowing golden sand running down, standing next to a stylized retro wall clock showing a blank dark face with only golden clock hands and simple tick marks for hours, with absolutely no numbers, letters, or words, completely wordless, front-and-center, premium SOTA asset",
+    "suchen": "A cute 3D star character holding a giant, glossy magnifying glass with a chrome handle, leaning forward and looking through it, with golden sparkles indicating search, completely wordless, front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

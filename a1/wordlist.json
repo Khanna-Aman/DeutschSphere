@@ -10099,8 +10099,10 @@
     "antonym": null,
     "example_de": "Ich bin Studentin.",
     "example_en": "I am a university student.",
-    "image": "images/card_526.svg",
-    "id": 526
+    "image": "images/card_526.webp",
+    "id": 526,
+    "image_tier": "B",
+    "image_path": "images/card_526.webp"
   },
   {
     "german": "studieren",
@@ -10119,8 +10121,10 @@
     "antonym": null,
     "example_de": "Ich studiere in Mainz.",
     "example_en": "I study in Mainz.",
-    "image": "images/card_527.svg",
-    "id": 527
+    "image": "images/card_527.webp",
+    "id": 527,
+    "image_tier": "B",
+    "image_path": "images/card_527.webp"
   },
   {
     "german": "das Studium",
@@ -10135,8 +10139,10 @@
     "antonym": null,
     "example_de": "Das Studium beginnt im Oktober.",
     "example_en": "The degree program begins in October.",
-    "image": "images/card_528.svg",
-    "id": 528
+    "image": "images/card_528.webp",
+    "id": 528,
+    "image_tier": "B",
+    "image_path": "images/card_528.webp"
   },
   {
     "german": "die Stunde",
@@ -10151,8 +10157,10 @@
     "antonym": "die Minute",
     "example_de": "Ich bin in einer Stunde zurück.",
     "example_en": "I am back in an hour.",
-    "image": "images/card_529.svg",
-    "id": 529
+    "image": "images/card_529.webp",
+    "id": 529,
+    "image_tier": "B",
+    "image_path": "images/card_529.webp"
   },
   {
     "german": "suchen",
@@ -10171,8 +10179,10 @@
     "antonym": "finden",
     "example_de": "Suchst du etwas?",
     "example_en": "Are you looking for something?",
-    "image": "images/card_530.svg",
-    "id": 530
+    "image": "images/card_530.webp",
+    "id": 530,
+    "image_tier": "B",
+    "image_path": "images/card_530.webp"
   },
   {
     "german": "tanzen",
