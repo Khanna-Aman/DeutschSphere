@@ -7226,8 +7226,10 @@
     "antonym": "das Problem",
     "example_de": "Die Lösung ist ganz einfach.",
     "example_en": "The solution is quite simple.",
-    "image": "images/card_376.svg",
-    "id": 376
+    "image": "images/card_376.webp",
+    "id": 376,
+    "image_tier": "B",
+    "image_path": "images/card_376.webp"
   },
   {
     "german": "machen",
@@ -7246,8 +7248,10 @@
     "antonym": null,
     "example_de": "Was machst du heute Abend? Ich muss jetzt das Essen machen. Das macht 5 Euro 95. Das macht nichts.",
     "example_en": "What are you doing tonight? I have to make the food now. That makes 5 euros 95. That does not matter.",
-    "image": "images/card_377.svg",
-    "id": 377
+    "image": "images/card_377.webp",
+    "id": 377,
+    "image_tier": "B",
+    "image_path": "images/card_377.webp"
   },
   {
     "german": "man",
@@ -7262,8 +7266,10 @@
     "antonym": null,
     "example_de": "Hier darf man nicht rauchen.",
     "example_en": "One is not allowed to smoke here.",
-    "image": "images/card_378.svg",
-    "id": 378
+    "image": "images/card_378.webp",
+    "id": 378,
+    "image_tier": "B",
+    "image_path": "images/card_378.webp"
   },
   {
     "german": "der Mann",
@@ -7278,8 +7284,10 @@
     "antonym": "die Frau",
     "example_de": "Mein Mann arbeitet bei der Polizei.",
     "example_en": "My husband works for the police.",
-    "image": "images/card_379.svg",
-    "id": 379
+    "image": "images/card_379.webp",
+    "id": 379,
+    "image_tier": "B",
+    "image_path": "images/card_379.webp"
   },
   {
     "german": "die Maschine",
@@ -7294,8 +7302,10 @@
     "antonym": null,
     "example_de": "Die Waschmaschine ist günstig.",
     "example_en": "The washing machine is cheap.",
-    "image": "images/card_380.svg",
-    "id": 380
+    "image": "images/card_380.webp",
+    "id": 380,
+    "image_tier": "B",
+    "image_path": "images/card_380.webp"
   },
   {
     "german": "das Meer",

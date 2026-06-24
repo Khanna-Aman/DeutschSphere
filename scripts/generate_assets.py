@@ -422,8 +422,12 @@ METAPHOR_MAP = {
     "lokal": "A highly stylized, cozy 3D pub storefront with a colorful striped awning, warm glowing windows showing mini tables and mugs of beer, and a completely wordless hanging wooden sign, front-and-center, premium SOTA asset",
     "löffel": "A glossy, chrome and pastel-pink 3D soup spoon, perfectly polished with bright studio reflections, holding a giant, cute smiling 3D honey drop with tiny sparkling stars around it, floating in mid-air, front-and-center, premium SOTA asset",
     "lücke": "A highly-stylized, high-gloss 3D row of blue puzzle pieces aligned perfectly on a glass tray, with exactly one missing piece in the center creating a clean, cute glowing gap, surrounded by subtle questioning sparkles, front-and-center, premium SOTA asset",
+    "lösung": "A beautiful 3D puzzle sphere with its final glowing golden puzzle piece fitting perfectly into its slot, with golden stars and light rays shooting out, representing a brilliant solution, front-and-center, premium SOTA asset",
     "lustig": "An adorable, ultra-glossy 3D yellow emoji face laughing so hard it is crying happy blue crystal tears, slightly tilted in mid-air and surrounded by floating pink musical notes and colorful confetti bursts, front-and-center, premium SOTA asset",
-    "machen": "A cute 3D character with bright blue overalls, holding a gleaming wooden hammer, happily building a small, beautiful pink toy birdhouse on a modern glass workbench, with tiny golden sparks of creativity, front-and-center, premium SOTA asset"
+    "machen": "A cute 3D character with bright blue overalls, holding a gleaming wooden hammer, happily building a small, beautiful pink toy birdhouse on a modern glass workbench, with tiny golden sparks of creativity, front-and-center, premium SOTA asset",
+    "man": "A beautiful, abstract 3D stylized circular human silhouette surrounded by a soft pink glowing ring, representing 'one' or 'someone' in general, front-and-center, premium SOTA asset",
+    "mann": "A stylish, highly-polished 3D professional male character in a sharp modern blue suit, looking confident and smiling, representing a man, front-and-center, premium SOTA asset",
+    "maschine": "A highly-stylized, high-tech 3D factory machine made of glossy white panels and chrome gears, with a glowing green status bar and tiny floating sparkles of efficiency, front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):
