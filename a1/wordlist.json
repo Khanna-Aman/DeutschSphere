@@ -11931,8 +11931,10 @@
     "antonym": null,
     "example_de": "Ich habe heute keine Zeit.",
     "example_en": "I have no time today.",
-    "image": "images/card_621.svg",
-    "id": 621
+    "image": "images/card_621.webp",
+    "id": 621,
+    "image_tier": "B",
+    "image_path": "images/card_621.webp"
   },
   {
     "german": "die Zeitung",
@@ -11947,8 +11949,10 @@
     "antonym": null,
     "example_de": "Ich lese gern Zeitung.",
     "example_en": "I like to read the newspaper.",
-    "image": "images/card_622.svg",
-    "id": 622
+    "image": "images/card_622.webp",
+    "id": 622,
+    "image_tier": "B",
+    "image_path": "images/card_622.webp"
   },
   {
     "german": "die Zigarette",
@@ -11963,8 +11967,10 @@
     "antonym": null,
     "example_de": "Wie teuer sind die Zigaretten?",
     "example_en": "How expensive are the cigarettes?",
-    "image": "images/card_623.svg",
-    "id": 623
+    "image": "images/card_623.webp",
+    "id": 623,
+    "image_tier": "B",
+    "image_path": "images/card_623.webp"
   },
   {
     "german": "das Zimmer",
@@ -11979,8 +11985,10 @@
     "antonym": null,
     "example_de": "Das Zimmer ist groß. Öffne im Schlafzimmer das Fenster, bitte! Die Wohnung hat drei Zimmer. Ich habe ein Zimmer bestellt.",
     "example_en": "The room is big. Open the window in the bedroom, please! The apartment has three rooms. I have booked a room.",
-    "image": "images/card_624.svg",
-    "id": 624
+    "image": "images/card_624.webp",
+    "id": 624,
+    "image_tier": "B",
+    "image_path": "images/card_624.webp"
   },
   {
     "german": "der Zoll",
@@ -11995,8 +12003,10 @@
     "antonym": null,
     "example_de": "Wir müssen noch durch den Zoll.",
     "example_en": "We still have to go through customs.",
-    "image": "images/card_625.svg",
-    "id": 625
+    "image": "images/card_625.webp",
+    "id": 625,
+    "image_tier": "B",
+    "image_path": "images/card_625.webp"
   },
   {
     "german": "zu",
