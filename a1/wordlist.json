@@ -11736,8 +11736,10 @@
     "antonym": null,
     "example_de": "Weißt du, wie er heißt?",
     "example_en": "Do you know what his name is?",
-    "image": "images/card_611.svg",
-    "id": 611
+    "image": "images/card_611.webp",
+    "id": 611,
+    "image_tier": "B",
+    "image_path": "images/card_611.webp"
   },
   {
     "german": "wo",
@@ -11752,8 +11754,10 @@
     "antonym": null,
     "example_de": "Wo waren Sie im Urlaub? Wo ist die Post? Wo sind Sie geboren?",
     "example_en": "Where were you on vacation? Where is the post office? Where were you born?",
-    "image": "images/card_612.svg",
-    "id": 612
+    "image": "images/card_612.webp",
+    "id": 612,
+    "image_tier": "B",
+    "image_path": "images/card_612.webp"
   },
   {
     "german": "woher",
@@ -11768,8 +11772,10 @@
     "antonym": "wohin",
     "example_de": "Woher kommen Sie?",
     "example_en": "Where do you come from?",
-    "image": "images/card_613.svg",
-    "id": 613
+    "image": "images/card_613.webp",
+    "id": 613,
+    "image_tier": "B",
+    "image_path": "images/card_613.webp"
   },
   {
     "german": "wohin",
@@ -11784,8 +11790,10 @@
     "antonym": "woher",
     "example_de": "Wohin fährt dieser Bus? Wohin wollen Sie am Wochenende?",
     "example_en": "Where does this bus go? Where do you want to go on the weekend?",
-    "image": "images/card_614.svg",
-    "id": 614
+    "image": "images/card_614.webp",
+    "id": 614,
+    "image_tier": "B",
+    "image_path": "images/card_614.webp"
   },
   {
     "german": "wohnen",
@@ -11804,8 +11812,10 @@
     "antonym": null,
     "example_de": "Ich wohne in München.",
     "example_en": "I live in Munich.",
-    "image": "images/card_615.svg",
-    "id": 615
+    "image": "images/card_615.webp",
+    "id": 615,
+    "image_tier": "B",
+    "image_path": "images/card_615.webp"
   },
   {
     "german": "die Wohnung",
