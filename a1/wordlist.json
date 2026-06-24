@@ -10201,8 +10201,10 @@
     "antonym": null,
     "example_de": "Tanzen Sie gern?",
     "example_en": "Do you like to dance?",
-    "image": "images/card_531.svg",
-    "id": 531
+    "image": "images/card_531.webp",
+    "id": 531,
+    "image_tier": "B",
+    "image_path": "images/card_531.webp"
   },
   {
     "german": "die Tasche",
@@ -10217,8 +10219,10 @@
     "antonym": null,
     "example_de": "Ich habe die Schlüssel in der Tasche.",
     "example_en": "I have the keys in the bag.",
-    "image": "images/card_532.svg",
-    "id": 532
+    "image": "images/card_532.webp",
+    "id": 532,
+    "image_tier": "B",
+    "image_path": "images/card_532.webp"
   },
   {
     "german": "das Taxi",
@@ -10233,8 +10237,10 @@
     "antonym": null,
     "example_de": "Es gibt heute keinen Bus mehr. Er fährt mit dem Taxi.",
     "example_en": "There is no bus anymore today. He is traveling by taxi.",
-    "image": "images/card_533.svg",
-    "id": 533
+    "image": "images/card_533.webp",
+    "id": 533,
+    "image_tier": "B",
+    "image_path": "images/card_533.webp"
   },
   {
     "german": "der Tee",
@@ -10249,8 +10255,10 @@
     "antonym": "der Kaffee",
     "example_de": "Ich trinke morgens immer Tee.",
     "example_en": "I always drink tea in the morning.",
-    "image": "images/card_534.svg",
-    "id": 534
+    "image": "images/card_534.webp",
+    "id": 534,
+    "image_tier": "B",
+    "image_path": "images/card_534.webp"
   },
   {
     "german": "der Teil",
@@ -10265,8 +10273,10 @@
     "antonym": "das Ganze",
     "example_de": "Lies bitte auch den zweiten Teil.",
     "example_en": "Please read the second part too.",
-    "image": "images/card_535.svg",
-    "id": 535
+    "image": "images/card_535.webp",
+    "id": 535,
+    "image_tier": "B",
+    "image_path": "images/card_535.webp"
   },
   {
     "german": "das Telefon",
