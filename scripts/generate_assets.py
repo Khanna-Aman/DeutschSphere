@@ -55,6 +55,14 @@ METAPHOR_MAP = {
     "die abfahrt": "A stylized green-and-white 3D signpost with a train departure symbol and a tiny green flag, representing departure, completely wordless, front-and-center, premium SOTA asset",
     "abfahrt": "A stylized green-and-white 3D signpost with a train departure symbol and a tiny green flag, representing departure, completely wordless, front-and-center, premium SOTA asset",
 
+    # Handcrafted A2 early cards (Batch 2: 6 to 10)
+    "abgeben": "A friendly 3D hand dropping a small keys set into a glossy receptionist tray at a check-in desk, representing handing in, completely wordless, front-and-center, premium SOTA asset",
+    "abholen": "A friendly 3D hand picking up a package parcel from a beautiful high-gloss wooden counter table, representing picking up, completely wordless, front-and-center, premium SOTA asset",
+    "abschließen": "A stylized glossy 3D key turning inside a beautiful bronze vintage padlock, locked securely, representing to lock, completely wordless, front-and-center, premium SOTA asset",
+    "achtung": "A bold 3D warning exclamation mark (!) sign in glowing orange enamel, floating in mid-air with star sparkles, representing attention, completely wordless, front-and-center, premium SOTA asset",
+    "die adresse": "A stylized, glossy 3D envelope with a tiny glowing red map pin hovering right on top of its center, representing address, completely wordless, front-and-center, premium SOTA asset",
+    "adresse": "A stylized, glossy 3D envelope with a tiny glowing red map pin hovering right on top of its center, representing address, completely wordless, front-and-center, premium SOTA asset",
+
     # Handcrafted A1 early cards (1 to 30)
     "abfliegen": "A magnificent, glossy 3D passenger airplane made of pristine white enamel, dramatically angled upwards as it climbs into the air, with glowing golden jet streams trailing behind its chrome engines, front-and-center",
     "abflug": "A stylized, premium 3D terminal departure gate sign in glossy blue enamel, with a glowing translucent glass board showing a glowing yellow airplane departure symbol, front-and-center",

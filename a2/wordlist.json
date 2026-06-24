@@ -114,8 +114,10 @@
     "antonym": "annehmen",
     "example_de": "Ich muss meinen Schlüssel an der Rezeption abgeben.",
     "example_en": "I must hand in my key at the reception.",
-    "image": "images/card_6.svg",
-    "id": 6
+    "image": "images/card_6.webp",
+    "id": 6,
+    "image_tier": "B",
+    "image_path": "images/card_6.webp"
   },
   {
     "german": "abholen",
@@ -134,8 +136,10 @@
     "antonym": "bringen",
     "example_de": "Wann kann ich die Sachen bei dir abholen?",
     "example_en": "When can I pick up the things from you?",
-    "image": "images/card_7.svg",
-    "id": 7
+    "image": "images/card_7.webp",
+    "id": 7,
+    "image_tier": "B",
+    "image_path": "images/card_7.webp"
   },
   {
     "german": "abschließen",
@@ -154,8 +158,10 @@
     "antonym": "aufschließen",
     "example_de": "Hast du die Tür abgeschlossen?",
     "example_en": "Have you locked the door?",
-    "image": "images/card_8.svg",
-    "id": 8
+    "image": "images/card_8.webp",
+    "id": 8,
+    "image_tier": "B",
+    "image_path": "images/card_8.webp"
   },
   {
     "german": "Achtung",
@@ -170,8 +176,10 @@
     "antonym": null,
     "example_de": "Achtung an Gleis drei: Die Türen schließen. Der Zug fährt jetzt ab.",
     "example_en": "Attention on track three: The doors are closing. The train is departing now.",
-    "image": "images/card_9.svg",
-    "id": 9
+    "image": "images/card_9.webp",
+    "id": 9,
+    "image_tier": "B",
+    "image_path": "images/card_9.webp"
   },
   {
     "german": "die Adresse",
@@ -186,8 +194,10 @@
     "antonym": null,
     "example_de": "Können Sie mir Ihre Adresse geben?",
     "example_en": "Can you give me your address?",
-    "image": "images/card_10.svg",
-    "id": 10
+    "image": "images/card_10.webp",
+    "id": 10,
+    "image_tier": "B",
+    "image_path": "images/card_10.webp"
   },
   {
     "german": "die Ahnung",
