@@ -10763,8 +10763,10 @@
     "antonym": null,
     "example_de": "Wir haben Unterricht von 8.00 bis 12.00 Uhr.",
     "example_en": "We have class from 8.00 to 12.00.",
-    "image": "images/card_561.svg",
-    "id": 561
+    "image": "images/card_561.webp",
+    "id": 561,
+    "image_tier": "B",
+    "image_path": "images/card_561.webp"
   },
   {
     "german": "unterschreiben",
@@ -10783,8 +10785,10 @@
     "antonym": null,
     "example_de": "Wo muss ich unterschreiben?",
     "example_en": "Where must I sign?",
-    "image": "images/card_562.svg",
-    "id": 562
+    "image": "images/card_562.webp",
+    "id": 562,
+    "image_tier": "B",
+    "image_path": "images/card_562.webp"
   },
   {
     "german": "die Unterschrift",
@@ -10799,8 +10803,10 @@
     "antonym": null,
     "example_de": "Hier fehlt noch Ihre Unterschrift.",
     "example_en": "Your signature is still missing here.",
-    "image": "images/card_563.svg",
-    "id": 563
+    "image": "images/card_563.webp",
+    "id": 563,
+    "image_tier": "B",
+    "image_path": "images/card_563.webp"
   },
   {
     "german": "der Urlaub",
@@ -10815,8 +10821,10 @@
     "antonym": "die Arbeit",
     "example_de": "Ich nehme im September Urlaub.",
     "example_en": "I am taking a vacation in September.",
-    "image": "images/card_564.svg",
-    "id": 564
+    "image": "images/card_564.webp",
+    "id": 564,
+    "image_tier": "B",
+    "image_path": "images/card_564.webp"
   },
   {
     "german": "der Vater",
@@ -10831,8 +10839,10 @@
     "antonym": "die Mutter",
     "example_de": "Mein Vater ist Arbeiter.",
     "example_en": "My father is a worker.",
-    "image": "images/card_565.svg",
-    "id": 565
+    "image": "images/card_565.webp",
+    "id": 565,
+    "image_tier": "B",
+    "image_path": "images/card_565.webp"
   },
   {
     "german": "verboten",

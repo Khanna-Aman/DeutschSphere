@@ -681,7 +681,16 @@ METAPHOR_MAP = {
     "und": "A sleek 3D golden ampersand symbol, glowing with a soft ambient neon-yellow light, standing floating suspended in the center, completely wordless, premium SOTA asset",
     "unser-": "A cute group of three smiling 3D star characters standing together hand-in-hand, proudly presenting a glowing golden treasure chest, completely wordless, front-and-center, premium SOTA asset",
     "unten": "A modern 3D cutaway of a house with two floors, with a cute star character sitting happily on the bottom floor, which is highlighted with a glowing warm-yellow light, completely wordless, front-and-center, premium SOTA asset",
-    "unter": "A cute, smiling 3D star character peeking out from underneath a beautiful, polished cherry-wood dining table, completely wordless, front-and-center, premium SOTA asset"
+    "unter": "A cute, smiling 3D star character peeking out from underneath a beautiful, polished cherry-wood dining table, completely wordless, front-and-center, premium SOTA asset",
+    "der unterricht": "A modern 3D classroom blackboard in a wooden frame, with a small easel holding colorful chalk sticks and a shiny red glass apple sitting on the corner, completely wordless, front-and-center, premium SOTA asset",
+    "unterricht": "A modern 3D classroom blackboard in a wooden frame, with a small easel holding colorful chalk sticks and a shiny red glass apple sitting on the corner, completely wordless, front-and-center, premium SOTA asset",
+    "unterschreiben": "A stylish, glossy 3D fountain pen floating in mid-air at an angle, with its golden nib touching a crisp white paper scroll, creating an elegant glowing golden ink stroke, completely wordless, front-and-center, premium SOTA asset",
+    "die unterschrift": "A beautiful glossy 3D document resting on a gold platform, featuring a elegant glowing golden cursive loop signature on the bottom line, completely wordless, front-and-center, premium SOTA asset",
+    "unterschrift": "A beautiful glossy 3D document resting on a gold platform, featuring a elegant glowing golden cursive loop signature on the bottom line, completely wordless, front-and-center, premium SOTA asset",
+    "der urlaub": "A stunning 3D miniature tropical island floating in mid-air, with a tiny sand dune, a green palm tree with detailed coconuts, and a red-and-white striped beach lounge chair, completely wordless, front-and-center, premium SOTA asset",
+    "urlaub": "A stunning 3D miniature tropical island floating in mid-air, with a tiny sand dune, a green palm tree with detailed coconuts, and a red-and-white striped beach lounge chair, completely wordless, front-and-center, premium SOTA asset",
+    "der vater": "A heartwarming 3D scene of a tall, smiling star character wearing a cute blue tie, gently resting its arm around a smaller smiling star character, completely wordless, front-and-center, premium SOTA asset",
+    "vater": "A heartwarming 3D scene of a tall, smiling star character wearing a cute blue tie, gently resting its arm around a smaller smiling star character, completely wordless, front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):
