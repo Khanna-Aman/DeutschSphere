@@ -11830,8 +11830,10 @@
     "antonym": null,
     "example_de": "Seit wann haben Sie diese Wohnung?",
     "example_en": "Since when have you had this apartment?",
-    "image": "images/card_616.svg",
-    "id": 616
+    "image": "images/card_616.webp",
+    "id": 616,
+    "image_tier": "B",
+    "image_path": "images/card_616.webp"
   },
   {
     "german": "wollen",
@@ -11850,8 +11852,10 @@
     "antonym": null,
     "example_de": "Wollen Sie einen Kaffee trinken?",
     "example_en": "Do you want to drink a coffee?",
-    "image": "images/card_617.svg",
-    "id": 617
+    "image": "images/card_617.webp",
+    "id": 617,
+    "image_tier": "B",
+    "image_path": "images/card_617.webp"
   },
   {
     "german": "das Wort",
@@ -11866,8 +11870,10 @@
     "antonym": null,
     "example_de": "Ich kenne das Wort nicht.",
     "example_en": "I do not know the word.",
-    "image": "images/card_618.svg",
-    "id": 618
+    "image": "images/card_618.webp",
+    "id": 618,
+    "image_tier": "B",
+    "image_path": "images/card_618.webp"
   },
   {
     "german": "wunderbar",
@@ -11885,8 +11891,10 @@
     "antonym": "schrecklich",
     "example_de": "Das Essen schmeckt wunderbar.",
     "example_en": "The food tastes wonderful.",
-    "image": "images/card_619.svg",
-    "id": 619
+    "image": "images/card_619.webp",
+    "id": 619,
+    "image_tier": "B",
+    "image_path": "images/card_619.webp"
   },
   {
     "german": "zahlen",
@@ -11905,8 +11913,10 @@
     "antonym": null,
     "example_de": "Zahlen, bitte!",
     "example_en": "The bill, please!",
-    "image": "images/card_620.svg",
-    "id": 620
+    "image": "images/card_620.webp",
+    "id": 620,
+    "image_tier": "B",
+    "image_path": "images/card_620.webp"
   },
   {
     "german": "die Zeit",
