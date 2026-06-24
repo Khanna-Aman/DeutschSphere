@@ -9810,8 +9810,10 @@
     "antonym": "der Mond",
     "example_de": "Die Sonne scheint.",
     "example_en": "The sun is shining.",
-    "image": "images/card_511.svg",
-    "id": 511
+    "image": "images/card_511.webp",
+    "id": 511,
+    "image_tier": "B",
+    "image_path": "images/card_511.webp"
   },
   {
     "german": "die Speisekarte",
@@ -9826,8 +9828,10 @@
     "antonym": null,
     "example_de": "Bringen Sie mir die Speisekarte, bitte.",
     "example_en": "Bring me the menu, please.",
-    "image": "images/card_512.svg",
-    "id": 512
+    "image": "images/card_512.webp",
+    "id": 512,
+    "image_tier": "B",
+    "image_path": "images/card_512.webp"
   },
   {
     "german": "spielen",
@@ -9846,8 +9850,10 @@
     "antonym": null,
     "example_de": "Die Kinder spielen draußen. Spielen Sie Karten?",
     "example_en": "The children play outside. Do you play cards?",
-    "image": "images/card_513.svg",
-    "id": 513
+    "image": "images/card_513.webp",
+    "id": 513,
+    "image_tier": "B",
+    "image_path": "images/card_513.webp"
   },
   {
     "german": "der Sport",
@@ -9862,8 +9868,10 @@
     "antonym": null,
     "example_de": "Ich mache viel Sport.",
     "example_en": "I do a lot of sports.",
-    "image": "images/card_514.svg",
-    "id": 514
+    "image": "images/card_514.webp",
+    "id": 514,
+    "image_tier": "B",
+    "image_path": "images/card_514.webp"
   },
   {
     "german": "die Sprache",
@@ -9878,8 +9886,10 @@
     "antonym": null,
     "example_de": "Welche Sprachen sprichst du?",
     "example_en": "Which languages do you speak?",
-    "image": "images/card_515.svg",
-    "id": 515
+    "image": "images/card_515.webp",
+    "id": 515,
+    "image_tier": "B",
+    "image_path": "images/card_515.webp"
   },
   {
     "german": "sprechen",
