@@ -456,7 +456,12 @@ METAPHOR_MAP = {
     "müssen": "A bold 3D representation of necessity and obligation, featuring a bright orange traffic warning sign carrying a bold exclamation mark (!) beside a polished chrome ticking clock, representing urgent priority and duty, front-and-center, premium SOTA asset",
     "name": "A beautiful and elegant 3D glossy white name tag badge with a gold border, featuring a gold star in the center and a shiny gold cursive signature scroll hovering above it, representing name, front-and-center, premium SOTA asset",
     "nehmen": "An adorable and dynamic 3D clay hand reaching down and gently grasping a glowing, golden star from a dark rounded base, representing taking or selecting something, front-and-center, premium SOTA asset",
-    "nein": "A giant, sleek 3D red stop sign with a polished glossy finish, carrying a bold white hand palm-forward gesture in the center, symbolizing a clear and friendly 'no', front-and-center, premium SOTA asset"
+    "nein": "A giant, sleek 3D red stop sign with a polished glossy finish, carrying a bold white hand palm-forward gesture in the center, symbolizing a clear and friendly 'no', front-and-center, premium SOTA asset",
+    "neu": "A magnificent 3D gift box painted in ultra-glossy turquoise, bursting open to reveal a glowing, self-illuminating golden star rising up in a cloud of colorful sparkling confetti, representing something brand new, front-and-center, premium SOTA asset",
+    "nicht": "A giant, bold red 3D crossed-out circle symbol made of polished glossy plastic, hovering over a translucent blue checkmark to negate it, representing 'not' or negation, front-and-center, premium SOTA asset",
+    "nichts": "An elegant, empty 3D transparent glass jar with a polished golden lid, showing absolute empty space inside with just a tiny floating sparkle of light, representing 'nothing', front-and-center, premium SOTA asset",
+    "nie": "A magnificent 3D clock face with no clock-hands, featuring a giant, high-gloss red crossed-out circle symbol over the dial, representing 'never' or timeless impossibility, front-and-center, premium SOTA asset",
+    "noch": "A beautiful 3D hourglass made of translucent glassmorphism, with golden sand still actively flowing down from the top bulb, representing 'still' or 'yet' in progress, front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

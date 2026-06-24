@@ -7908,8 +7908,10 @@
     "antonym": "alt",
     "example_de": "Ich bin der neue Kollege. Wir haben eine neue Wohnung.",
     "example_en": "I am the new colleague. We have a new apartment.",
-    "image": "images/card_411.svg",
-    "id": 411
+    "image": "images/card_411.webp",
+    "id": 411,
+    "image_tier": "B",
+    "image_path": "images/card_411.webp"
   },
   {
     "german": "nicht",
@@ -7924,8 +7926,10 @@
     "antonym": "doch",
     "example_de": "Das stimmt nicht. Das ist doch schön, nicht?",
     "example_en": "That is not true. That is beautiful, isn't it?",
-    "image": "images/card_412.svg",
-    "id": 412
+    "image": "images/card_412.webp",
+    "id": 412,
+    "image_tier": "B",
+    "image_path": "images/card_412.webp"
   },
   {
     "german": "nichts",
@@ -7940,8 +7944,10 @@
     "antonym": "alles",
     "example_de": "Das macht nichts. Hier kaufe ich nichts. Der Laden gefällt mir nicht.",
     "example_en": "That does not matter. I buy nothing here. I do not like the store.",
-    "image": "images/card_413.svg",
-    "id": 413
+    "image": "images/card_413.webp",
+    "id": 413,
+    "image_tier": "B",
+    "image_path": "images/card_413.webp"
   },
   {
     "german": "nie",
@@ -7956,8 +7962,10 @@
     "antonym": "immer",
     "example_de": "Er kommt nie pünktlich.",
     "example_en": "He never comes on time.",
-    "image": "images/card_414.svg",
-    "id": 414
+    "image": "images/card_414.webp",
+    "id": 414,
+    "image_tier": "B",
+    "image_path": "images/card_414.webp"
   },
   {
     "german": "noch",
@@ -7972,8 +7980,10 @@
     "antonym": "schon",
     "example_de": "Vielleicht kommt er noch. Wir warten noch fünf Minuten. Ich habe noch 20 Euro.",
     "example_en": "Maybe he is still coming. We are waiting another five minutes. I still have 20 euros.",
-    "image": "images/card_415.svg",
-    "id": 415
+    "image": "images/card_415.webp",
+    "id": 415,
+    "image_tier": "B",
+    "image_path": "images/card_415.webp"
   },
   {
     "german": "normal",
