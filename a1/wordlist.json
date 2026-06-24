@@ -5764,8 +5764,10 @@
     "antonym": "nein",
     "example_de": "Sind Sie Herr Watanabe? - Ja.",
     "example_en": "Are you Mr. Watanabe? - Yes.",
-    "image": "images/card_301.svg",
-    "id": 301
+    "image": "images/card_301.webp",
+    "id": 301,
+    "image_tier": "B",
+    "image_path": "images/card_301.webp"
   },
   {
     "german": "die Jacke",
@@ -5780,8 +5782,10 @@
     "antonym": null,
     "example_de": "Zieh dir eine Jacke an. Es ist kalt.",
     "example_en": "Put on a jacket. It is cold.",
-    "image": "images/card_302.svg",
-    "id": 302
+    "image": "images/card_302.webp",
+    "id": 302,
+    "image_tier": "B",
+    "image_path": "images/card_302.webp"
   },
   {
     "german": "jed-",
@@ -5796,8 +5800,10 @@
     "antonym": "kein-",
     "example_de": "Blumen kannst du in jedem Bahnhof kaufen.",
     "example_en": "You can buy flowers in every station.",
-    "image": "images/card_303.svg",
-    "id": 303
+    "image": "images/card_303.webp",
+    "id": 303,
+    "image_tier": "B",
+    "image_path": "images/card_303.webp"
   },
   {
     "german": "jetzt",
@@ -5812,8 +5818,10 @@
     "antonym": "später",
     "example_de": "Jetzt machen wir eine Pause.",
     "example_en": "Now we are taking a break.",
-    "image": "images/card_304.svg",
-    "id": 304
+    "image": "images/card_304.webp",
+    "id": 304,
+    "image_tier": "B",
+    "image_path": "images/card_304.webp"
   },
   {
     "german": "der Job",
@@ -5828,8 +5836,10 @@
     "antonym": null,
     "example_de": "Jenny hat einen neuen Job bei der Post.",
     "example_en": "Jenny has a new job at the post office.",
-    "image": "images/card_305.svg",
-    "id": 305
+    "image": "images/card_305.webp",
+    "id": 305,
+    "image_tier": "B",
+    "image_path": "images/card_305.webp"
   },
   {
     "german": "der Jugendliche",
