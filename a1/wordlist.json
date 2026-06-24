@@ -9327,8 +9327,10 @@
     "antonym": "lesen",
     "example_de": "Er schreibt jeden Tag fünfzig E-Mails.",
     "example_en": "He writes fifty e-mails every day.",
-    "image": "images/card_486.svg",
-    "id": 486
+    "image": "images/card_486.webp",
+    "id": 486,
+    "image_tier": "B",
+    "image_path": "images/card_486.webp"
   },
   {
     "german": "der Schuh",
@@ -9343,8 +9345,10 @@
     "antonym": null,
     "example_de": "Zieh die Schuhe aus!",
     "example_en": "Take off your shoes!",
-    "image": "images/card_487.svg",
-    "id": 487
+    "image": "images/card_487.webp",
+    "id": 487,
+    "image_tier": "B",
+    "image_path": "images/card_487.webp"
   },
   {
     "german": "die Schule",
@@ -9359,8 +9363,10 @@
     "antonym": null,
     "example_de": "Meine Tochter geht schon in die Schule. Die Schule ist gleich hier um die Ecke.",
     "example_en": "My daughter already goes to school. The school is right around the corner.",
-    "image": "images/card_488.svg",
-    "id": 488
+    "image": "images/card_488.webp",
+    "id": 488,
+    "image_tier": "B",
+    "image_path": "images/card_488.webp"
   },
   {
     "german": "schwer",
@@ -9378,8 +9384,10 @@
     "antonym": "leicht",
     "example_de": "Ist Ihr Gepäck sehr schwer? Das ist eine schwere Arbeit.",
     "example_en": "Is your luggage very heavy? That is hard work.",
-    "image": "images/card_489.svg",
-    "id": 489
+    "image": "images/card_489.webp",
+    "id": 489,
+    "image_tier": "B",
+    "image_path": "images/card_489.webp"
   },
   {
     "german": "die Schwester",
@@ -9394,8 +9402,10 @@
     "antonym": "der Bruder",
     "example_de": "Meine Schwester kommt am Dienstag.",
     "example_en": "My sister is coming on Tuesday.",
-    "image": "images/card_490.svg",
-    "id": 490
+    "image": "images/card_490.webp",
+    "id": 490,
+    "image_tier": "B",
+    "image_path": "images/card_490.webp"
   },
   {
     "german": "das Schwimmbad",
