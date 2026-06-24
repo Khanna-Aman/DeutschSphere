@@ -11349,8 +11349,10 @@
     "antonym": null,
     "example_de": "Ich muss zum Arzt. Mein Bein tut weh.",
     "example_en": "I must go to the doctor. My leg hurts.",
-    "image": "images/card_591.svg",
-    "id": 591
+    "image": "images/card_591.webp",
+    "id": 591,
+    "image_tier": "B",
+    "image_path": "images/card_591.webp"
   },
   {
     "german": "weiblich",
@@ -11368,8 +11370,10 @@
     "antonym": "männlich",
     "example_de": "Kreuzen Sie bitte an: „weiblich“ oder „männlich“.",
     "example_en": "Please check: \"female\" or \"male\".",
-    "image": "images/card_592.svg",
-    "id": 592
+    "image": "images/card_592.webp",
+    "id": 592,
+    "image_tier": "B",
+    "image_path": "images/card_592.webp"
   },
   {
     "german": "der Wein",
@@ -11384,8 +11388,10 @@
     "antonym": "das Wasser",
     "example_de": "Nein danke, ich möchte keinen Wein.",
     "example_en": "No thank you, I do not want any wine.",
-    "image": "images/card_593.svg",
-    "id": 593
+    "image": "images/card_593.webp",
+    "id": 593,
+    "image_tier": "B",
+    "image_path": "images/card_593.webp"
   },
   {
     "german": "weit",
@@ -11403,8 +11409,10 @@
     "antonym": "nah",
     "example_de": "Zum Bahnhof ist es nicht weit.",
     "example_en": "It is not far to the train station.",
-    "image": "images/card_594.svg",
-    "id": 594
+    "image": "images/card_594.webp",
+    "id": 594,
+    "image_tier": "B",
+    "image_path": "images/card_594.webp"
   },
   {
     "german": "weiter",
@@ -11419,8 +11427,10 @@
     "antonym": "zurück",
     "example_de": "Der Bus fährt nicht weiter.",
     "example_en": "The bus does not go any further.",
-    "image": "images/card_595.svg",
-    "id": 595
+    "image": "images/card_595.webp",
+    "id": 595,
+    "image_tier": "B",
+    "image_path": "images/card_595.webp"
   },
   {
     "german": "welch-",

@@ -724,7 +724,13 @@ METAPHOR_MAP = {
     "das wasser": "A beautiful, sparkling 3D glass of fresh water, with water droplets condensing on the outside of the glass, a glowing, pristine blue water drop splash on top, completely wordless, front-and-center, premium SOTA asset",
     "wasser": "A beautiful, sparkling 3D glass of fresh water, with water droplets condensing on the outside of the glass, a glowing, pristine blue water drop splash on top, completely wordless, front-and-center, premium SOTA asset",
     "weg sein": "A cute 3D star character standing next to a wooden chair that has a dotted white outline silhouette of where another character used to sit, waving goodbye to the empty space, completely wordless, front-and-center, premium SOTA asset",
-    "weg": "A cute 3D star character standing next to a wooden chair that has a dotted white outline silhouette of where another character used to sit, waving goodbye to the empty space, completely wordless, front-and-center, premium SOTA asset"
+    "weg": "A cute 3D star character standing next to a wooden chair that has a dotted white outline silhouette of where another character used to sit, waving goodbye to the empty space, completely wordless, front-and-center, premium SOTA asset",
+    "wehtun": "A cute 3D star character with a small adhesive bandage on its arm, tearfully looking at its tiny bumped elbow which has a cartoonish glowing red throb effect, completely wordless, front-and-center, premium SOTA asset",
+    "weiblich": "A stylized, beautiful 3D mirror frame enclosing a glowing pink venus or female astrological symbol made of glossy enamel, floating in mid-air with soft pink studio lighting, completely wordless, front-and-center, premium SOTA asset",
+    "der wein": "A beautiful, elegant 3D glass of red wine, with rich dark ruby liquid swirling slightly, a glossy grape cluster resting beside its base, completely wordless, front-and-center, premium SOTA asset",
+    "wein": "A beautiful, elegant 3D glass of red wine, with rich dark ruby liquid swirling slightly, a glossy grape cluster resting beside its base, completely wordless, front-and-center, premium SOTA asset",
+    "weit": "A tiny cute 3D character standing on a grassy hill, looking through binoculars toward a minuscule, glowing gold castle on a very distant mountain peak across a deep valley, completely wordless, front-and-center, premium SOTA asset",
+    "weiter": "A sleek, glowing green 3D double-arrow chevron symbol pointing boldly to the right, floating over a tiny dotted path stretching toward the horizon, completely wordless, front-and-center, premium SOTA asset"
 }
 
 
