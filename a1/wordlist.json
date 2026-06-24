@@ -7811,8 +7811,10 @@
     "antonym": "dürfen",
     "example_de": "Ich muss jeden Tag von 8 Uhr bis 18 Uhr arbeiten.",
     "example_en": "I must work every day from 8 am to 6 pm.",
-    "image": "images/card_406.svg",
-    "id": 406
+    "image": "images/card_406.webp",
+    "id": 406,
+    "image_tier": "B",
+    "image_path": "images/card_406.webp"
   },
   {
     "german": "nach",
@@ -7827,8 +7829,10 @@
     "antonym": "vor",
     "example_de": "Ich gehe jetzt nach Hause. Ich fliege nach München. Es ist schon 5 nach 12.",
     "example_en": "I am going home now. I am flying to Munich. It is already 5 past 12.",
-    "image": "images/card_407.svg",
-    "id": 407
+    "image": "images/card_407.webp",
+    "id": 407,
+    "image_tier": "B",
+    "image_path": "images/card_407.webp"
   },
   {
     "german": "der Name",
@@ -7843,8 +7847,10 @@
     "antonym": null,
     "example_de": "Mein Name ist Thomas Schmidt. Mein Vorname ist Thomas; Schmidt ist der Familienname.",
     "example_en": "My name is Thomas Schmidt. My first name is Thomas; Schmidt is the family name.",
-    "image": "images/card_408.svg",
-    "id": 408
+    "image": "images/card_408.webp",
+    "id": 408,
+    "image_tier": "B",
+    "image_path": "images/card_408.webp"
   },
   {
     "german": "nehmen",
@@ -7863,8 +7869,10 @@
     "antonym": "geben",
     "example_de": "Heute gibt es Hähnchen. Das nehme ich. Ich nehme den Bus.",
     "example_en": "Today there is chicken. I will take that. I am taking the bus.",
-    "image": "images/card_409.svg",
-    "id": 409
+    "image": "images/card_409.webp",
+    "id": 409,
+    "image_tier": "B",
+    "image_path": "images/card_409.webp"
   },
   {
     "german": "nein",
@@ -7879,8 +7887,10 @@
     "antonym": "ja",
     "example_de": "Fährst du auch nach München? - Nein, ich habe keine Zeit.",
     "example_en": "Are you also driving to Munich? - No, I have no time.",
-    "image": "images/card_410.svg",
-    "id": 410
+    "image": "images/card_410.webp",
+    "id": 410,
+    "image_tier": "B",
+    "image_path": "images/card_410.webp"
   },
   {
     "german": "neu",

@@ -452,7 +452,11 @@ METAPHOR_MAP = {
     "möchten": "A delightful 3D representation of wishing or wanting, showing a cute clay character looking dreamily at a soft pink thinking bubble containing a golden star and a wrapped gift box, front-and-center, premium SOTA asset",
     "mögen": "A beautiful 3D representation of liking something, featuring a vibrant glossy red heart icon surrounded by bright yellow spark stars and a golden thumbs-up emblem, front-and-center, premium SOTA asset",
     "möglich": "A sleek 3D representation of possibility, displaying a glowing green road sign with an arrow pointing upward to a sunny sky, with a golden checkmark on the side, representing a path of potential, front-and-center, premium SOTA asset",
-    "müde": "An adorable, sleepy 3D crescent moon wearing a cozy nightcap, resting gently on a soft, fluffy white cloud with tiny floating 'Zzz' sleep symbols, representing tired, front-and-center, premium SOTA asset"
+    "müde": "An adorable, sleepy 3D crescent moon wearing a cozy nightcap, resting gently on a soft, fluffy white cloud with tiny floating 'Zzz' sleep symbols, representing tired, front-and-center, premium SOTA asset",
+    "müssen": "A bold 3D representation of necessity and obligation, featuring a bright orange traffic warning sign carrying a bold exclamation mark (!) beside a polished chrome ticking clock, representing urgent priority and duty, front-and-center, premium SOTA asset",
+    "name": "A beautiful and elegant 3D glossy white name tag badge with a gold border, featuring a gold star in the center and a shiny gold cursive signature scroll hovering above it, representing name, front-and-center, premium SOTA asset",
+    "nehmen": "An adorable and dynamic 3D clay hand reaching down and gently grasping a glowing, golden star from a dark rounded base, representing taking or selecting something, front-and-center, premium SOTA asset",
+    "nein": "A giant, sleek 3D red stop sign with a polished glossy finish, carrying a bold white hand palm-forward gesture in the center, symbolizing a clear and friendly 'no', front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):
