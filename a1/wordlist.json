@@ -5671,8 +5671,10 @@
     "antonym": "nie",
     "example_de": "Frau Bast kommt immer zu spät.",
     "example_en": "Mrs. Bast always comes too late.",
-    "image": "images/card_296.svg",
-    "id": 296
+    "image": "images/card_296.webp",
+    "id": 296,
+    "image_tier": "B",
+    "image_path": "images/card_296.webp"
   },
   {
     "german": "in",
@@ -5687,8 +5689,10 @@
     "antonym": "aus",
     "example_de": "Ich wohne in Wiesbaden. Der Zug kommt in fünf Minuten. Frau Rausch arbeitet in einem Geschäft. Komm, wir gehen ins Kino.",
     "example_en": "I live in Wiesbaden. The train comes in five minutes. Mrs. Rausch works in a shop. Come, we are going to the cinema.",
-    "image": "images/card_297.svg",
-    "id": 297
+    "image": "images/card_297.webp",
+    "id": 297,
+    "image_tier": "B",
+    "image_path": "images/card_297.webp"
   },
   {
     "german": "die Information",
@@ -5703,8 +5707,10 @@
     "antonym": null,
     "example_de": "Wenn Sie Fragen haben, gehen Sie zur Information. Wir haben hier wichtige Informationen für Sie.",
     "example_en": "If you have questions, go to the information desk. We have important information for you here.",
-    "image": "images/card_298.svg",
-    "id": 298
+    "image": "images/card_298.webp",
+    "id": 298,
+    "image_tier": "B",
+    "image_path": "images/card_298.webp"
   },
   {
     "german": "international",
@@ -5722,8 +5728,10 @@
     "antonym": "national",
     "example_de": "Unser Deutschkurs ist international: Silvana kommt aus Italien, Conchi aus Spanien, Yin aus China ...",
     "example_en": "Our German course is international: Silvana comes from Italy, Conchi from Spain, Yin from China ...",
-    "image": "images/card_299.svg",
-    "id": 299
+    "image": "images/card_299.webp",
+    "id": 299,
+    "image_tier": "B",
+    "image_path": "images/card_299.webp"
   },
   {
     "german": "das Internet",
@@ -5738,8 +5746,10 @@
     "antonym": null,
     "example_de": "Das findest du im Internet.",
     "example_en": "You find that on the internet.",
-    "image": "images/card_300.svg",
-    "id": 300
+    "image": "images/card_300.webp",
+    "id": 300,
+    "image_tier": "B",
+    "image_path": "images/card_300.webp"
   },
   {
     "german": "ja",
