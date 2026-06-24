@@ -7032,8 +7032,10 @@
     "antonym": "die Dunkelheit",
     "example_de": "Wo macht man hier das Licht an?",
     "example_en": "Where do you turn on the light here?",
-    "image": "images/card_366.svg",
-    "id": 366
+    "image": "images/card_366.webp",
+    "id": 366,
+    "image_tier": "B",
+    "image_path": "images/card_366.webp"
   },
   {
     "german": "lieb-",
@@ -7051,8 +7053,10 @@
     "antonym": "böse",
     "example_de": "Liebe Susanne, lieber Hans,",
     "example_en": "Dear Susanne, dear Hans,",
-    "image": "images/card_367.svg",
-    "id": 367
+    "image": "images/card_367.webp",
+    "id": 367,
+    "image_tier": "B",
+    "image_path": "images/card_367.webp"
   },
   {
     "german": "lieben",
@@ -7071,8 +7075,10 @@
     "antonym": "hassen",
     "example_de": "Ich liebe dich!",
     "example_en": "I love you!",
-    "image": "images/card_368.svg",
-    "id": 368
+    "image": "images/card_368.webp",
+    "id": 368,
+    "image_tier": "B",
+    "image_path": "images/card_368.webp"
   },
   {
     "german": "lieber",
@@ -7087,8 +7093,10 @@
     "antonym": null,
     "example_de": "Sie fährt lieber mit der Bahn.",
     "example_en": "She prefers to travel by train.",
-    "image": "images/card_369.svg",
-    "id": 369
+    "image": "images/card_369.webp",
+    "id": 369,
+    "image_tier": "B",
+    "image_path": "images/card_369.webp"
   },
   {
     "german": "das Lied",
@@ -7103,8 +7111,10 @@
     "antonym": null,
     "example_de": "Welches ist dein Lieblingslied?",
     "example_en": "Which is your favorite song?",
-    "image": "images/card_370.svg",
-    "id": 370
+    "image": "images/card_370.webp",
+    "id": 370,
+    "image_tier": "B",
+    "image_path": "images/card_370.webp"
   },
   {
     "german": "liegen",
