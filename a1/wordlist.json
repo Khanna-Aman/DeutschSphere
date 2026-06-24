@@ -8544,8 +8544,10 @@
     "antonym": null,
     "example_de": "Bitte schicken Sie mir einen Prospekt von Ihrem Hotel.",
     "example_en": "Please send me a brochure of your hotel.",
-    "image": "images/card_446.svg",
-    "id": 446
+    "image": "images/card_446.webp",
+    "id": 446,
+    "image_tier": "B",
+    "image_path": "images/card_446.webp"
   },
   {
     "german": "die Prüfung",
@@ -8560,8 +8562,10 @@
     "antonym": null,
     "example_de": "Die Prüfung ist am Montag um 8.00 Uhr.",
     "example_en": "The exam is on Monday at 8.00 am.",
-    "image": "images/card_447.svg",
-    "id": 447
+    "image": "images/card_447.webp",
+    "id": 447,
+    "image_tier": "B",
+    "image_path": "images/card_447.webp"
   },
   {
     "german": "pünktlich",
@@ -8579,8 +8583,10 @@
     "antonym": "unpünktlich",
     "example_de": "Der Bus fährt pünktlich um acht Uhr. Herr Müller ist immer pünktlich.",
     "example_en": "The bus departs punctually at eight o'clock. Mr. Müller is always punctual.",
-    "image": "images/card_448.svg",
-    "id": 448
+    "image": "images/card_448.webp",
+    "id": 448,
+    "image_tier": "B",
+    "image_path": "images/card_448.webp"
   },
   {
     "german": "rauchen",
@@ -8599,8 +8605,10 @@
     "antonym": null,
     "example_de": "Ich rauche nicht.",
     "example_en": "I do not smoke.",
-    "image": "images/card_449.svg",
-    "id": 449
+    "image": "images/card_449.webp",
+    "id": 449,
+    "image_tier": "B",
+    "image_path": "images/card_449.webp"
   },
   {
     "german": "der Raum",
@@ -8615,8 +8623,10 @@
     "antonym": null,
     "example_de": "Der Unterricht ist in Raum 332.",
     "example_en": "The class is in room 332.",
-    "image": "images/card_450.svg",
-    "id": 450
+    "image": "images/card_450.webp",
+    "id": 450,
+    "image_tier": "B",
+    "image_path": "images/card_450.webp"
   },
   {
     "german": "die Rechnung",
