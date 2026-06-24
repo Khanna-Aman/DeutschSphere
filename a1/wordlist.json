@@ -9226,8 +9226,10 @@
     "antonym": null,
     "example_de": "Ich gebe Ihnen noch den Zimmerschlüssel.",
     "example_en": "I will give you the room key.",
-    "image": "images/card_481.svg",
-    "id": 481
+    "image": "images/card_481.webp",
+    "id": 481,
+    "image_tier": "B",
+    "image_path": "images/card_481.webp"
   },
   {
     "german": "schmecken",
@@ -9246,8 +9248,10 @@
     "antonym": null,
     "example_de": "Schmeckt das gut?",
     "example_en": "Does that taste good?",
-    "image": "images/card_482.svg",
-    "id": 482
+    "image": "images/card_482.webp",
+    "id": 482,
+    "image_tier": "B",
+    "image_path": "images/card_482.webp"
   },
   {
     "german": "schnell",
@@ -9265,8 +9269,10 @@
     "antonym": "langsam",
     "example_de": "Er fährt schnell.",
     "example_en": "He drives fast.",
-    "image": "images/card_483.svg",
-    "id": 483
+    "image": "images/card_483.webp",
+    "id": 483,
+    "image_tier": "B",
+    "image_path": "images/card_483.webp"
   },
   {
     "german": "schon",
@@ -9281,8 +9287,10 @@
     "antonym": "noch nicht",
     "example_de": "Ist das Essen schon fertig?",
     "example_en": "Is the food already ready?",
-    "image": "images/card_484.svg",
-    "id": 484
+    "image": "images/card_484.webp",
+    "id": 484,
+    "image_tier": "B",
+    "image_path": "images/card_484.webp"
   },
   {
     "german": "der Schrank",
@@ -9297,8 +9305,10 @@
     "antonym": null,
     "example_de": "Die Gläser stehen im Schrank.",
     "example_en": "The glasses stand in the cupboard.",
-    "image": "images/card_485.svg",
-    "id": 485
+    "image": "images/card_485.webp",
+    "id": 485,
+    "image_tier": "B",
+    "image_path": "images/card_485.webp"
   },
   {
     "german": "schreiben",
