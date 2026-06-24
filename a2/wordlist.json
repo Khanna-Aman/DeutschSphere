@@ -395,8 +395,10 @@
     "antonym": "aus",
     "example_de": "Fahren Sie an der nächsten Kreuzung nach rechts.",
     "example_en": "Drive to the right at the next intersection.",
-    "image": "images/card_21.svg",
-    "id": 21
+    "image": "images/card_21.webp",
+    "id": 21,
+    "image_tier": "B",
+    "image_path": "images/card_21.webp"
   },
   {
     "german": "an sein",
@@ -415,8 +417,10 @@
     "antonym": "aus sein",
     "example_de": "Das Licht ist noch an.",
     "example_en": "The light is still on.",
-    "image": "images/card_22.svg",
-    "id": 22
+    "image": "images/card_22.webp",
+    "id": 22,
+    "image_tier": "B",
+    "image_path": "images/card_22.webp"
   },
   {
     "german": "anbieten",
@@ -435,8 +439,10 @@
     "antonym": "ablehnen",
     "example_de": "Er hat mir eine Stelle als Verkäuferin angeboten.",
     "example_en": "He offered me a job as a shop assistant.",
-    "image": "images/card_23.svg",
-    "id": 23
+    "image": "images/card_23.webp",
+    "id": 23,
+    "image_tier": "B",
+    "image_path": "images/card_23.webp"
   },
   {
     "german": "anbieten",
@@ -455,8 +461,10 @@
     "antonym": "ablehnen",
     "example_de": "Darf ich Ihnen/dir ein Stück Kuchen anbieten?",
     "example_en": "May I offer you a piece of cake?",
-    "image": "images/card_24.svg",
-    "id": 24
+    "image": "images/card_24.webp",
+    "id": 24,
+    "image_tier": "B",
+    "image_path": "images/card_24.webp"
   },
   {
     "german": "ander-",
@@ -471,8 +479,10 @@
     "antonym": "gleich-",
     "example_de": "Willst du diesen Mantel? - Nein, ich möchte den anderen.",
     "example_en": "Do you want this coat? - No, I would like the other one.",
-    "image": "images/card_25.svg",
-    "id": 25
+    "image": "images/card_25.webp",
+    "id": 25,
+    "image_tier": "B",
+    "image_path": "images/card_25.webp"
   },
   {
     "german": "anders",
