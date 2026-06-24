@@ -10291,8 +10291,10 @@
     "antonym": null,
     "example_de": "Haben Sie Telefon?",
     "example_en": "Do you have a telephone?",
-    "image": "images/card_536.svg",
-    "id": 536
+    "image": "images/card_536.webp",
+    "id": 536,
+    "image_tier": "B",
+    "image_path": "images/card_536.webp"
   },
   {
     "german": "telefonieren",
@@ -10311,8 +10313,10 @@
     "antonym": null,
     "example_de": "Darf ich mal telefonieren?",
     "example_en": "May I make a phone call?",
-    "image": "images/card_537.svg",
-    "id": 537
+    "image": "images/card_537.webp",
+    "id": 537,
+    "image_tier": "B",
+    "image_path": "images/card_537.webp"
   },
   {
     "german": "der Termin",
@@ -10327,8 +10331,10 @@
     "antonym": null,
     "example_de": "Am besten machen wir sofort einen Termin.",
     "example_en": "It is best if we make an appointment immediately.",
-    "image": "images/card_538.svg",
-    "id": 538
+    "image": "images/card_538.webp",
+    "id": 538,
+    "image_tier": "B",
+    "image_path": "images/card_538.webp"
   },
   {
     "german": "der Test",
@@ -10343,8 +10349,10 @@
     "antonym": null,
     "example_de": "Der Test war einfach.",
     "example_en": "The test was easy.",
-    "image": "images/card_539.svg",
-    "id": 539
+    "image": "images/card_539.webp",
+    "id": 539,
+    "image_tier": "B",
+    "image_path": "images/card_539.webp"
   },
   {
     "german": "teuer",
@@ -10362,8 +10370,10 @@
     "antonym": "billig",
     "example_de": "Das ist mir zu teuer.",
     "example_en": "That is too expensive for me.",
-    "image": "images/card_540.svg",
-    "id": 540
+    "image": "images/card_540.webp",
+    "id": 540,
+    "image_tier": "B",
+    "image_path": "images/card_540.webp"
   },
   {
     "german": "der Text",
