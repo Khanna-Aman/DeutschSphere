@@ -9027,8 +9027,10 @@
     "antonym": "das Auto",
     "example_de": "Ich nehme lieber die S-Bahn.",
     "example_en": "I prefer to take the S-Bahn.",
-    "image": "images/card_471.svg",
-    "id": 471
+    "image": "images/card_471.webp",
+    "id": 471,
+    "image_tier": "B",
+    "image_path": "images/card_471.webp"
   },
   {
     "german": "der Schalter",
@@ -9043,8 +9045,10 @@
     "antonym": null,
     "example_de": "Gehen Sie bitte zum Schalter drei!",
     "example_en": "Please go to counter three!",
-    "image": "images/card_472.svg",
-    "id": 472
+    "image": "images/card_472.webp",
+    "id": 472,
+    "image_tier": "B",
+    "image_path": "images/card_472.webp"
   },
   {
     "german": "scheinen",
@@ -9063,8 +9067,10 @@
     "antonym": null,
     "example_de": "Die Sonne scheint.",
     "example_en": "The sun is shining.",
-    "image": "images/card_473.svg",
-    "id": 473
+    "image": "images/card_473.webp",
+    "id": 473,
+    "image_tier": "B",
+    "image_path": "images/card_473.webp"
   },
   {
     "german": "schicken",
@@ -9083,8 +9089,10 @@
     "antonym": "bekommen",
     "example_de": "Bitte schicken Sie mir eine E-Mail.",
     "example_en": "Please send me an e-mail.",
-    "image": "images/card_474.svg",
-    "id": 474
+    "image": "images/card_474.webp",
+    "id": 474,
+    "image_tier": "B",
+    "image_path": "images/card_474.webp"
   },
   {
     "german": "das Schild",
@@ -9099,8 +9107,10 @@
     "antonym": null,
     "example_de": "Haben Sie nicht das Schild gesehen?",
     "example_en": "Did you not see the sign?",
-    "image": "images/card_475.svg",
-    "id": 475
+    "image": "images/card_475.webp",
+    "id": 475,
+    "image_tier": "B",
+    "image_path": "images/card_475.webp"
   },
   {
     "german": "der Schinken",
