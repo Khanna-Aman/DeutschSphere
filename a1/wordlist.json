@@ -6652,8 +6652,10 @@
     "antonym": "kurz",
     "example_de": "Die Jeans ist zu lang.",
     "example_en": "The jeans are too long.",
-    "image": "images/card_347.svg",
-    "id": 347
+    "image": "images/card_347.webp",
+    "id": 347,
+    "image_tier": "B",
+    "image_path": "images/card_347.webp"
   },
   {
     "german": "lange",
@@ -6668,8 +6670,10 @@
     "antonym": "kurz",
     "example_de": "Wie lange fährt der Zug von Hamburg nach Berlin?",
     "example_en": "How long does the train take from Hamburg to Berlin?",
-    "image": "images/card_348.svg",
-    "id": 348
+    "image": "images/card_348.webp",
+    "id": 348,
+    "image_tier": "B",
+    "image_path": "images/card_348.webp"
   },
   {
     "german": "langsam",
@@ -6687,8 +6691,10 @@
     "antonym": "schnell",
     "example_de": "Könnten Sie bitte etwas langsamer sprechen?",
     "example_en": "Could you please speak a little slower?",
-    "image": "images/card_349.svg",
-    "id": 349
+    "image": "images/card_349.webp",
+    "id": 349,
+    "image_tier": "B",
+    "image_path": "images/card_349.webp"
   },
   {
     "german": "laufen",
@@ -6707,8 +6713,10 @@
     "antonym": "stehen",
     "example_de": "Ich möchte nicht Auto fahren, ich möchte laufen.",
     "example_en": "I do not want to drive a car, I want to walk.",
-    "image": "images/card_350.svg",
-    "id": 350
+    "image": "images/card_350.webp",
+    "id": 350,
+    "image_tier": "B",
+    "image_path": "images/card_350.webp"
   },
   {
     "german": "laut",
