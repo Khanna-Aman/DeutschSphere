@@ -597,7 +597,14 @@ METAPHOR_MAP = {
     "sie / Sie": "Three cute, smiling 3D star characters of different pastel colors (pink, blue, yellow) standing together, with the central star wearing a stylish polished black top hat and bowing politely, completely wordless, front-and-center, premium SOTA asset",
     "sie": "Three cute, smiling 3D star characters of different pastel colors (pink, blue, yellow) standing together, with the central star wearing a stylish polished black top hat and bowing politely, completely wordless, front-and-center, premium SOTA asset",
     "Sie": "Three cute, smiling 3D star characters of different pastel colors (pink, blue, yellow) standing together, with the central star wearing a stylish polished black top hat and bowing politely, completely wordless, front-and-center, premium SOTA asset",
-    "sitzen": "A stylish, modern 3D armchair in vibrant turquoise enamel and light wood, standing floating suspended in mid-air, completely wordless, front-and-center, premium SOTA asset"
+    "sitzen": "A stylish, modern 3D armchair in vibrant turquoise enamel and light wood, standing floating suspended in mid-air, completely wordless, front-and-center, premium SOTA asset",
+    "so": "A cute, smiling 3D star character pointing one hand forward along a curving neon-pink light path, representing the direct path or 'this way', completely wordless, front-and-center, premium SOTA asset",
+    "das sofa": "A stylish, cozy 3D mid-century modern sofa in pastel pink velvet with light wood legs, sitting floating in mid-air, with a tiny, fluffy white pillow resting on it, completely wordless, front-and-center, premium SOTA asset",
+    "sofa": "A stylish, cozy 3D mid-century modern sofa in pastel pink velvet with light wood legs, sitting floating in mid-air, with a tiny, fluffy white pillow resting on it, completely wordless, front-and-center, premium SOTA asset",
+    "sofort": "A sleek 3D lightning bolt made of glowing yellow glassmorphic material, striking next to a small classic retro desk clock with hands in rapid motion, completely wordless, front-and-center, premium SOTA asset",
+    "der sohn": "A heartwarming, stylized 3D claymation scene of a tall, proud star character with its arm gently around a smaller, smiling little boy star character wearing a tiny red cap, standing together, completely wordless, front-and-center, premium SOTA asset",
+    "sohn": "A heartwarming, stylized 3D claymation scene of a tall, proud star character with its arm gently around a smaller, smiling little boy star character wearing a tiny red cap, standing together, completely wordless, front-and-center, premium SOTA asset",
+    "sollen": "A cute, thoughtful 3D star character looking at a miniature golden scales balance, with a green checkmark on one side representing duty and a small grey stone on the other, completely wordless, front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

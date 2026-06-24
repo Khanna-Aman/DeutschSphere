@@ -9716,8 +9716,10 @@
     "antonym": null,
     "example_de": "Sie müssen das so machen! Fahren Sie bitte nicht so schnell!",
     "example_en": "You must do it like this! Please do not drive so fast!",
-    "image": "images/card_506.svg",
-    "id": 506
+    "image": "images/card_506.webp",
+    "id": 506,
+    "image_tier": "B",
+    "image_path": "images/card_506.webp"
   },
   {
     "german": "das Sofa",
@@ -9732,8 +9734,10 @@
     "antonym": null,
     "example_de": "Das Sofa ist neu.",
     "example_en": "The sofa is new.",
-    "image": "images/card_507.svg",
-    "id": 507
+    "image": "images/card_507.webp",
+    "id": 507,
+    "image_tier": "B",
+    "image_path": "images/card_507.webp"
   },
   {
     "german": "sofort",
@@ -9748,8 +9752,10 @@
     "antonym": "später",
     "example_de": "Bitte antworten Sie sofort.",
     "example_en": "Please answer immediately.",
-    "image": "images/card_508.svg",
-    "id": 508
+    "image": "images/card_508.webp",
+    "id": 508,
+    "image_tier": "B",
+    "image_path": "images/card_508.webp"
   },
   {
     "german": "der Sohn",
@@ -9764,8 +9770,10 @@
     "antonym": "die Tochter",
     "example_de": "Das ist Hans, mein Sohn.",
     "example_en": "That is Hans, my son.",
-    "image": "images/card_509.svg",
-    "id": 509
+    "image": "images/card_509.webp",
+    "id": 509,
+    "image_tier": "B",
+    "image_path": "images/card_509.webp"
   },
   {
     "german": "sollen",
@@ -9784,8 +9792,10 @@
     "antonym": null,
     "example_de": "Soll ich kommen? Was soll ich mitbringen?",
     "example_en": "Should I come? What should I bring?",
-    "image": "images/card_510.svg",
-    "id": 510
+    "image": "images/card_510.webp",
+    "id": 510,
+    "image_tier": "B",
+    "image_path": "images/card_510.webp"
   },
   {
     "german": "die Sonne",
