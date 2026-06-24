@@ -554,7 +554,14 @@ METAPHOR_MAP = {
     "scheinen": "A cheerful, warm-yellow 3D sun character smiling gently, casting stylized solid golden light rays that illuminate a tiny glossy green leaf floating below, completely wordless, front-and-center, premium SOTA asset",
     "schicken": "A cute 3D parcel wrapped in bright brown paper with a glossy red ribbon and bow, flying through the air with a pair of tiny white wings, completely wordless, front-and-center, premium SOTA asset",
     "das schild": "An elegant, stylized 3D wooden street signpost standing in a tiny green grassy base, holding a glossy blank turquoise metal sign, completely wordless, front-and-center, premium SOTA asset",
-    "schild": "An elegant, stylized 3D wooden street signpost standing in a tiny green grassy base, holding a glossy blank turquoise metal sign, completely wordless, front-and-center, premium SOTA asset"
+    "schild": "An elegant, stylized 3D wooden street signpost standing in a tiny green grassy base, holding a glossy blank turquoise metal sign, completely wordless, front-and-center, premium SOTA asset",
+    "der schinken": "A delicious 3D dry-cured ham leg with a glossy dark-brown outer skin, sliced open to reveal marbled dark-pink meat, resting on an elegant, small light-wood carving rack, floating suspended in mid-air, completely wordless, front-and-center, premium SOTA asset",
+    "schinken": "A delicious 3D dry-cured ham leg with a glossy dark-brown outer skin, sliced open to reveal marbled dark-pink meat, resting on an elegant, small light-wood carving rack, floating suspended in mid-air, completely wordless, front-and-center, premium SOTA asset",
+    "schlafen": "A sleeping cute 3D star character with a peaceful smile and closed eyes, nestled snugly under a soft-touch pastel-blue blanket, floating suspended in mid-air with small glowing golden sparkles around it, completely wordless, front-and-center, premium SOTA asset",
+    "schlecht": "A funny, sick-looking green 3D emoji character with a thermometer in its mouth, a cold wet compress sitting on its head, and swirly dizzy eyes, representing feeling bad or sick, floating suspended in mid-air, completely wordless, front-and-center, premium SOTA asset",
+    "schließen": "A sleek 3D key turning inside a polished silver padlock that is snapping shut with a satisfying metallic action-effect sparkle, floating suspended in mid-air, completely wordless, front-and-center, premium SOTA asset",
+    "der schluss": "A beautiful 3D crimson theater stage curtain drawn completely closed, illuminated by a warm spotlight beam, with tiny golden confetti sparkles floating in the air, representing the end of a show, completely wordless, front-and-center, premium SOTA asset",
+    "schluss": "A beautiful 3D crimson theater stage curtain drawn completely closed, illuminated by a warm spotlight beam, with tiny golden confetti sparkles floating in the air, representing the end of a show, completely wordless, front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

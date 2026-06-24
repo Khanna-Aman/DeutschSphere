@@ -9125,8 +9125,10 @@
     "antonym": null,
     "example_de": "Ich möchte gern ein Schinkenbrot.",
     "example_en": "I would like a ham sandwich.",
-    "image": "images/card_476.svg",
-    "id": 476
+    "image": "images/card_476.webp",
+    "id": 476,
+    "image_tier": "B",
+    "image_path": "images/card_476.webp"
   },
   {
     "german": "schlafen",
@@ -9145,8 +9147,10 @@
     "antonym": "aufwachen",
     "example_de": "Ich schlafe meistens acht Stunden.",
     "example_en": "I usually sleep eight hours.",
-    "image": "images/card_477.svg",
-    "id": 477
+    "image": "images/card_477.webp",
+    "id": 477,
+    "image_tier": "B",
+    "image_path": "images/card_477.webp"
   },
   {
     "german": "schlecht",
@@ -9164,8 +9168,10 @@
     "antonym": "gut",
     "example_de": "Mir ist schlecht! Sie sehen schlecht aus. Wir haben schlechtes Wetter.",
     "example_en": "I feel sick! You look bad. We have bad weather.",
-    "image": "images/card_478.svg",
-    "id": 478
+    "image": "images/card_478.webp",
+    "id": 478,
+    "image_tier": "B",
+    "image_path": "images/card_478.webp"
   },
   {
     "german": "schließen",
@@ -9184,8 +9190,10 @@
     "antonym": "öffnen",
     "example_de": "Bitte, schließen Sie die Tür.",
     "example_en": "Please, close the door.",
-    "image": "images/card_479.svg",
-    "id": 479
+    "image": "images/card_479.webp",
+    "id": 479,
+    "image_tier": "B",
+    "image_path": "images/card_479.webp"
   },
   {
     "german": "der Schluss",
@@ -9200,8 +9208,10 @@
     "antonym": "der Anfang",
     "example_de": "Ich muss jetzt Schluss machen. Zum Schluss gibt er uns allen die Hand.",
     "example_en": "I must finish now. At the end he gives everyone his hand.",
-    "image": "images/card_480.svg",
-    "id": 480
+    "image": "images/card_480.webp",
+    "id": 480,
+    "image_tier": "B",
+    "image_path": "images/card_480.webp"
   },
   {
     "german": "der Schlüssel",
