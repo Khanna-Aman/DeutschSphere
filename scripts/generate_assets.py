@@ -427,7 +427,12 @@ METAPHOR_MAP = {
     "machen": "A cute 3D character with bright blue overalls, holding a gleaming wooden hammer, happily building a small, beautiful pink toy birdhouse on a modern glass workbench, with tiny golden sparks of creativity, front-and-center, premium SOTA asset",
     "man": "A beautiful, abstract 3D stylized circular human silhouette surrounded by a soft pink glowing ring, representing 'one' or 'someone' in general, front-and-center, premium SOTA asset",
     "mann": "A stylish, highly-polished 3D professional male character in a sharp modern blue suit, looking confident and smiling, representing a man, front-and-center, premium SOTA asset",
-    "maschine": "A highly-stylized, high-tech 3D factory machine made of glossy white panels and chrome gears, with a glowing green status bar and tiny floating sparkles of efficiency, front-and-center, premium SOTA asset"
+    "maschine": "A highly-stylized, high-tech 3D factory machine made of glossy white panels and chrome gears, with a glowing green status bar and tiny floating sparkles of efficiency, front-and-center, premium SOTA asset",
+    "meer": "A beautiful, premium 3D beach shore with stylized blue translucent clay ocean waves washing onto golden clay sand, with a tiny glossy pink umbrella and a shiny starfish, front-and-center, premium SOTA asset",
+    "mehr": "An ultra-premium, cute 3D glossy yellow bar chart where the columns grow taller from left to right, topped with a glowing golden plus sign and sparkling stars, representing 'more', front-and-center, premium SOTA asset",
+    "mein": "An adorable, highly-polished 3D hand holding a sparkling, translucent pink heart closely to a stylized chest, representing personal ownership or 'my', surrounded by soft gold sparkles, front-and-center, premium SOTA asset",
+    "meist": "A stunning, modern 3D circle chart with a huge, glossy blue section representing the majority, flanked by a tiny pastel pink section, with elegant gold stars floating around representing 'most', front-and-center, premium SOTA asset",
+    "mensch": "A cute, highly-polished 3D clay human figure standing confidently with open arms, featuring a warm friendly smile and a soft, pastel-colored circular halo background, representing humanity, front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

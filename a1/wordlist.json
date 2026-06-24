@@ -7320,8 +7320,10 @@
     "antonym": "das Land",
     "example_de": "Wir machen Urlaub am Meer.",
     "example_en": "We are taking a vacation by the sea.",
-    "image": "images/card_381.svg",
-    "id": 381
+    "image": "images/card_381.webp",
+    "id": 381,
+    "image_tier": "B",
+    "image_path": "images/card_381.webp"
   },
   {
     "german": "mehr",
@@ -7336,8 +7338,10 @@
     "antonym": "weniger",
     "example_de": "Dieses Auto kostet 1.000 Euro mehr als das andere.",
     "example_en": "This car costs 1,000 euros more than the other.",
-    "image": "images/card_382.svg",
-    "id": 382
+    "image": "images/card_382.webp",
+    "id": 382,
+    "image_tier": "B",
+    "image_path": "images/card_382.webp"
   },
   {
     "german": "mein",
@@ -7352,8 +7356,10 @@
     "antonym": "dein",
     "example_de": "Mein Vater ist Arzt.",
     "example_en": "My father is a doctor.",
-    "image": "images/card_383.svg",
-    "id": 383
+    "image": "images/card_383.webp",
+    "id": 383,
+    "image_tier": "B",
+    "image_path": "images/card_383.webp"
   },
   {
     "german": "meist-",
@@ -7368,8 +7374,10 @@
     "antonym": "wenigst-",
     "example_de": "Die meisten Norddeutschen sind sehr groß.",
     "example_en": "Most North Germans are very tall.",
-    "image": "images/card_384.svg",
-    "id": 384
+    "image": "images/card_384.webp",
+    "id": 384,
+    "image_tier": "B",
+    "image_path": "images/card_384.webp"
   },
   {
     "german": "der Mensch",
@@ -7384,8 +7392,10 @@
     "antonym": "das Tier",
     "example_de": "Die Menschen sind hier anders als bei uns.",
     "example_en": "The people here are different than where we live.",
-    "image": "images/card_385.svg",
-    "id": 385
+    "image": "images/card_385.webp",
+    "id": 385,
+    "image_tier": "B",
+    "image_path": "images/card_385.webp"
   },
   {
     "german": "die Miete",
