@@ -1,14 +1,16 @@
 # 🔮 VISION.md — Project Status & Roadmap
 
-> Last updated: 2026-06-21
+> Last updated: 2026-06-24
 
 This document provides an honest, accurate assessment of what has been built, what works, what's incomplete, and what's planned for the future.
 
 ---
 
-## 📍 Current Status: Production-Ready SPA
+## 📍 Current Status: Production-Ready SPA & V6.0 Asset Sprint
 
-DeutschSphere is a **fully functional, feature-rich German language learning SPA** with 6 interactive views, 3,921 verified vocabulary entries, and a comprehensive study toolkit. All core features are implemented and working.
+DeutschSphere is a **fully functional, feature-rich German language learning SPA** with 7 interactive views, 3,921 verified vocabulary entries, and a comprehensive study toolkit. 
+
+We are currently executing the **V6.0 Premium 3D Asset Generation Sprint**, systematically populating all 3,921 cards with custom-designed 3D Claymation and glassmorphic WebP images. Level A1 is currently **68.0% complete (435/640 assets generated, audited, and committed)**. All core features are implemented, hardened, and running cleanly at 60–120fps.
 
 ---
 
@@ -116,6 +118,17 @@ DeutschSphere is a **fully functional, feature-rich German language learning SPA
   - **A2**: 1,142 words audited, 273 factual updates applied (e.g., plural of `'die Bank'` -> `'die Banken'`, theme to `'Einkaufen, Geld & Konsum'`, and gender of `'das Glück'` -> `'das'`).
   - **B1**: 2,139 words audited, 154 factual updates applied (e.g., aligned grammatical categories, verb/adjective forms).
 - [x] **Dynamic Illustration Deactivation (Zero-404 Deployment Mode)**: Temporarily disabled image illustration loading for V1.0.0 to prevent 404 network errors, replacing the UI image box with a gorgeous glassmorphic "Coming Soon in V1.0.1" toast. Saved ~3,900 flat SVG assets from unnecessary network request overhead.
+
+
+### Phase 12: Premium 3D Claymation & Glassmorphic Asset Generation (In Progress)
+- [/] **Curriculum-Wide 3D Asset Populating**: Running an automated, high-fidelity Imagen 3-powered offline asset generation pipeline (`scripts/generate_assets.py`) to replace flat SVGs with stunning 3D Claymation characters and glassmorphic designs.
+- [x] **Strict Pacing & Multi-Step Verification Protocol**: All assets are generated in strict batches of 5, programmatically validated for format, manually inspected using the native `view_file` tool, and staged only after verifying they contain zero letters, text, or visual artifacts.
+- [x] **Progressive Milestones (A1)**:
+  - **Milestone 1 (Cards 1–185)**: Completed 185 cards with flawless associations.
+  - **Milestone 2 (Cards 186–250)**: Completed 65 cards.
+  - **Milestone 3 (Cards 251–350)**: Completed 100 cards.
+  - **Milestone 4 (Cards 351–435)**: Completed 85 cards (Current standing: **435 / 640 cards complete - 68.0%**).
+- [x] **Lightweight Walkthrough logs**: Programmatically split monolithic visual reviews into structured archives (`walkthrough_a1_archive.md` for older cards and `walkthrough_a1.md` for active reviews) to eliminate git context bloat.
 
 
 ### Cross-Cutting Concerns

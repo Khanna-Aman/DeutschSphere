@@ -34,9 +34,9 @@
 
 ## 📦 Vocabulary Coverage
 
-| Level | Words | Description | Verification Status |
+| Level | Words | Description | Verification Status & Asset Progress |
 |-------|-------|-------------|---------------------|
-| **A1** | 640 | Beginner (Anfänger) | ✅ 100% NotebookLM Verified & Active |
+| **A1** | 640 | Beginner (Anfänger) | ✅ 100% NotebookLM Verified & Active <br>🎨 **435 / 640 Premium 3D Images Complete (68.0%)** |
 | **A2** | 1,142 | Elementary (Grundlagen) | ✅ 100% NotebookLM Verified & Active |
 | **B1** | 2,139 | Intermediate (Fortgeschritten) | ✅ 100% NotebookLM Verified & Active |
 | **Total** | **3,921** | Full Goethe-Institut A1–B1 curriculum | 🚀 All Levels Active (A1, A2, B1 Fully Available) |
@@ -46,7 +46,7 @@ Each word includes: German headword, English translation, gender, plural form, w
 > [!NOTE]
 > All linguistic data is verified against the official Goethe-Institut wordlists via [NotebookLM](https://notebooklm.google.com/) as our exclusive translation and verification engine (using the curated *Goethe-Zertifikat Wortliste* workspace).
 > 
-> In **V1.0.0**, all illustration assets are deactivated to eliminate any network overhead and ensure a pristine 404-free E2E browser footprint. Curated SOTA 3D Glossy AI Illustrations will launch in **V1.0.1** (with in-app glassmorphic alerts guiding users).
+> In **V1.0.0**, static flat SVG assets are deactivated to guarantee a pristine 404-free E2E footprint. We are actively running a premium V1.0.1 sprint to populate all vocabulary cards with high-fidelity, optimized 3D Claymation and glassmorphic WebP assets (averaging <9.5 KB per image). Level A1 is currently **68.0% complete (435/640 assets generated, audited, and committed)**.
 
 ---
 
