@@ -6048,8 +6048,10 @@
     "antonym": null,
     "example_de": "Kennen Sie diese Frau? – Nein, leider nicht.",
     "example_en": "Do you know this woman? – No, unfortunately not.",
-    "image": "images/card_316.svg",
-    "id": 316
+    "image": "images/card_316.webp",
+    "id": 316,
+    "image_tier": "B",
+    "image_path": "images/card_316.webp"
   },
   {
     "german": "kennenlernen",
@@ -6068,8 +6070,10 @@
     "antonym": null,
     "example_de": "Wir sind neu hier. Wir möchten Sie kennenlernen.",
     "example_en": "We are new here. We would like to get to know you.",
-    "image": "images/card_317.svg",
-    "id": 317
+    "image": "images/card_317.webp",
+    "id": 317,
+    "image_tier": "B",
+    "image_path": "images/card_317.webp"
   },
   {
     "german": "das Kind",
@@ -6084,8 +6088,10 @@
     "antonym": "der Erwachsene",
     "example_de": "Wie viele Kinder haben Sie?",
     "example_en": "How many children do you have?",
-    "image": "images/card_318.svg",
-    "id": 318
+    "image": "images/card_318.webp",
+    "id": 318,
+    "image_tier": "B",
+    "image_path": "images/card_318.webp"
   },
   {
     "german": "der Kindergarten",
@@ -6100,8 +6106,10 @@
     "antonym": null,
     "example_de": "Die kleine Laura geht schon in den Kindergarten.",
     "example_en": "Little Laura already goes to kindergarten.",
-    "image": "images/card_319.svg",
-    "id": 319
+    "image": "images/card_319.webp",
+    "id": 319,
+    "image_tier": "B",
+    "image_path": "images/card_319.webp"
   },
   {
     "german": "das Kino",
@@ -6116,8 +6124,10 @@
     "antonym": null,
     "example_de": "Wir sehen heute Abend im Kino einen schönen Film.",
     "example_en": "We are seeing a beautiful film in the cinema tonight.",
-    "image": "images/card_320.svg",
-    "id": 320
+    "image": "images/card_320.webp",
+    "id": 320,
+    "image_tier": "B",
+    "image_path": "images/card_320.webp"
   },
   {
     "german": "der Kiosk",
