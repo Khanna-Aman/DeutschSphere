@@ -12021,8 +12021,10 @@
     "antonym": "auf",
     "example_de": "Der Bus fährt zum Bahnhof. Ich gehe zu Fuß. Ich bin zu Hause.",
     "example_en": "The bus goes to the train station. I am going on foot. I am at home.",
-    "image": "images/card_626.svg",
-    "id": 626
+    "image": "images/card_626.webp",
+    "id": 626,
+    "image_tier": "B",
+    "image_path": "images/card_626.webp"
   },
   {
     "german": "zu sein",
@@ -12041,8 +12043,10 @@
     "antonym": "auf sein",
     "example_de": "Die Tür ist zu.",
     "example_en": "The door is closed.",
-    "image": "images/card_627.svg",
-    "id": 627
+    "image": "images/card_627.webp",
+    "id": 627,
+    "image_tier": "B",
+    "image_path": "images/card_627.webp"
   },
   {
     "german": "zufrieden",
@@ -12060,8 +12064,10 @@
     "antonym": "unzufrieden",
     "example_de": "Ich bin mit der Wohnung zufrieden.",
     "example_en": "I am satisfied with the apartment.",
-    "image": "images/card_628.svg",
-    "id": 628
+    "image": "images/card_628.webp",
+    "id": 628,
+    "image_tier": "B",
+    "image_path": "images/card_628.webp"
   },
   {
     "german": "der Zug",
@@ -12076,8 +12082,10 @@
     "antonym": null,
     "example_de": "Ich fahre gern mit dem Zug.",
     "example_en": "I like to travel by train.",
-    "image": "images/card_629.svg",
-    "id": 629
+    "image": "images/card_629.webp",
+    "id": 629,
+    "image_tier": "B",
+    "image_path": "images/card_629.webp"
   },
   {
     "german": "zum Beispiel (z. B.)",
@@ -12092,8 +12100,10 @@
     "antonym": null,
     "example_de": "Viele meiner Verwandten, z. B. meine beiden Brüder, arbeiten auch hier.",
     "example_en": "Many of my relatives, e.g. my two brothers, also work here.",
-    "image": "images/card_630.svg",
-    "id": 630
+    "image": "images/card_630.webp",
+    "id": 630,
+    "image_tier": "B",
+    "image_path": "images/card_630.webp"
   },
   {
     "german": "zurzeit",
