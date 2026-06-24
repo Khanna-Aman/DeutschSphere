@@ -497,8 +497,10 @@
     "antonym": "genauso",
     "example_de": "Oliver ist anders als seine Freunde.",
     "example_en": "Oliver is different from his friends.",
-    "image": "images/card_26.svg",
-    "id": 26
+    "image": "images/card_26.webp",
+    "id": 26,
+    "image_tier": "B",
+    "image_path": "images/card_26.webp"
   },
   {
     "german": "der Anfang",
@@ -513,8 +515,10 @@
     "antonym": "das Ende",
     "example_de": "Sie wohnt am Anfang der Straße.",
     "example_en": "She lives at the beginning of the street.",
-    "image": "images/card_27.svg",
-    "id": 27
+    "image": "images/card_27.webp",
+    "id": 27,
+    "image_tier": "B",
+    "image_path": "images/card_27.webp"
   },
   {
     "german": "anfangen",
@@ -533,8 +537,10 @@
     "antonym": "aufhören",
     "example_de": "Der Unterricht fängt gleich an.",
     "example_en": "The lesson is starting right away.",
-    "image": "images/card_28.svg",
-    "id": 28
+    "image": "images/card_28.webp",
+    "id": 28,
+    "image_tier": "B",
+    "image_path": "images/card_28.webp"
   },
   {
     "german": "das Angebot",
@@ -549,8 +555,10 @@
     "antonym": "die Nachfrage",
     "example_de": "Heute sind Bananen im Angebot.",
     "example_en": "Today bananas are on special offer.",
-    "image": "images/card_29.svg",
-    "id": 29
+    "image": "images/card_29.webp",
+    "id": 29,
+    "image_tier": "B",
+    "image_path": "images/card_29.webp"
   },
   {
     "german": "die Angst",
@@ -565,8 +573,10 @@
     "antonym": "der Mut",
     "example_de": "Ich habe Angst vor großen Hunden.",
     "example_en": "I am afraid of big dogs.",
-    "image": "images/card_30.svg",
-    "id": 30
+    "image": "images/card_30.webp",
+    "id": 30,
+    "image_tier": "B",
+    "image_path": "images/card_30.webp"
   },
   {
     "german": "ankommen",

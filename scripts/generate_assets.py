@@ -84,6 +84,17 @@ METAPHOR_MAP = {
     "anbieten": "A premium 3D hand holding a beautifully arranged tray containing a high-gloss golden star and a wrapped gift, representing offering something, completely wordless, front-and-center, premium SOTA asset",
     "ander": "A row of three identical glossy blue spheres with a single vibrant pink star sitting prominently among them, representing the other/different option, completely wordless, front-and-center, premium SOTA asset",
 
+    # Handcrafted A2 early cards (Batch 6: 26 to 30)
+    "anders": "A row of four identical glossy white chess pawns, with one pawn in the center painted a vibrant glowing pink and wearing a tiny golden crown, representing being different, completely wordless, front-and-center, premium SOTA asset",
+    "der anfang": "A premium 3D racetrack starting line with checkered red-and-white pattern, a glossy green starting flag waving, and a high-gloss race starting block, representing the beginning, completely wordless, front-and-center, premium SOTA asset",
+    "anfang": "A premium 3D racetrack starting line with checkered red-and-white pattern, a glossy green starting flag waving, and a high-gloss race starting block, representing the beginning, completely wordless, front-and-center, premium SOTA asset",
+    "anfangen": "A beautiful glossy 3D character crouched at a sleek starting block, dynamically starting a race with golden wind trails and sparks shooting from behind, representing to begin or start, completely wordless, front-and-center, premium SOTA asset",
+    "das angebot": "A stylized premium 3D shopping bag in vibrant cyan, with a giant glowing gold '% (percent)' discount tag hanging from its handle, surrounded by shiny gold coins, representing a special offer, completely wordless, front-and-center, premium SOTA asset",
+    "angebot": "A stylized premium 3D shopping bag in vibrant cyan, with a giant glowing gold '% (percent)' discount tag hanging from its handle, surrounded by shiny gold coins, representing a special offer, completely wordless, front-and-center, premium SOTA asset",
+    "die angst": "A cute 3D character shivering and peeking nervously from behind a round wooden shield, with a giant but friendly purple shadow monster with round glowing yellow eyes cast on the wall behind them, representing fear, completely wordless, front-and-center, premium SOTA asset",
+    "angst": "A cute 3D character shivering and peeking nervously from behind a round wooden shield, with a giant but friendly purple shadow monster with round glowing yellow eyes cast on the wall behind them, representing fear, completely wordless, front-and-center, premium SOTA asset",
+
+
 
     # Handcrafted A1 early cards (1 to 30)
     "abfliegen": "A magnificent, glossy 3D passenger airplane made of pristine white enamel, dramatically angled upwards as it climbs into the air, with glowing golden jet streams trailing behind its chrome engines, front-and-center",
