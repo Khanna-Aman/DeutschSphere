@@ -8454,8 +8454,10 @@
     "antonym": null,
     "example_de": "Wie ist Ihre Postleitzahl?",
     "example_en": "What is your postal code?",
-    "image": "images/card_441.svg",
-    "id": 441
+    "image": "images/card_441.webp",
+    "id": 441,
+    "image_tier": "B",
+    "image_path": "images/card_441.webp"
   },
   {
     "german": "das Praktikum",
@@ -8470,8 +8472,10 @@
     "antonym": null,
     "example_de": "Ich mache ein Praktikum bei Siemens.",
     "example_en": "I am doing an internship at Siemens.",
-    "image": "images/card_442.svg",
-    "id": 442
+    "image": "images/card_442.webp",
+    "id": 442,
+    "image_tier": "B",
+    "image_path": "images/card_442.webp"
   },
   {
     "german": "die Praxis",
@@ -8486,8 +8490,10 @@
     "antonym": "die Theorie",
     "example_de": "Die Praxis ist ab acht Uhr geöffnet.",
     "example_en": "The practice is open from eight o'clock.",
-    "image": "images/card_443.svg",
-    "id": 443
+    "image": "images/card_443.webp",
+    "id": 443,
+    "image_tier": "B",
+    "image_path": "images/card_443.webp"
   },
   {
     "german": "der Preis",
@@ -8502,8 +8508,10 @@
     "antonym": null,
     "example_de": "Die Preise sind hoch.",
     "example_en": "The prices are high.",
-    "image": "images/card_444.svg",
-    "id": 444
+    "image": "images/card_444.webp",
+    "id": 444,
+    "image_tier": "B",
+    "image_path": "images/card_444.webp"
   },
   {
     "german": "das Problem",
@@ -8518,8 +8526,10 @@
     "antonym": "die Lösung",
     "example_de": "Mein Problem ist die Sprache.",
     "example_en": "My problem is the language.",
-    "image": "images/card_445.svg",
-    "id": 445
+    "image": "images/card_445.webp",
+    "id": 445,
+    "image_tier": "B",
+    "image_path": "images/card_445.webp"
   },
   {
     "german": "der Prospekt",
