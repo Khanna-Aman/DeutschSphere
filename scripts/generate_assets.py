@@ -63,6 +63,28 @@ METAPHOR_MAP = {
     "die adresse": "A stylized, glossy 3D envelope with a tiny glowing red map pin hovering right on top of its center, representing address, completely wordless, front-and-center, premium SOTA asset",
     "adresse": "A stylized, glossy 3D envelope with a tiny glowing red map pin hovering right on top of its center, representing address, completely wordless, front-and-center, premium SOTA asset",
 
+    # Handcrafted A2 early cards (Batch 3: 11 to 15)
+    "die ahnung": "A beautiful, translucent 3D human head silhouette glowing internally with a warm yellow light, with a giant glossy yellow 3D lightbulb inside, representing a sudden bright idea or clue, completely wordless, front-and-center, premium SOTA asset",
+    "ahnung": "A beautiful, translucent 3D human head silhouette glowing internally with a warm yellow light, with a giant glossy yellow 3D lightbulb inside, representing a sudden bright idea or clue, completely wordless, front-and-center, premium SOTA asset",
+    "aktiv": "A stylized, high-gloss 3D running sneaker floating at an energetic angle, with neon wind trails and golden sparkles wrapping around it to represent activity, completely wordless, front-and-center, premium SOTA asset",
+    "aktuell": "A stylish 3D tablet showing a colorful globe and a large glossy green checkmark badge next to a glowing calendar page, representing current and up-to-date information, completely wordless, front-and-center, premium SOTA asset",
+    "all": "A cute, sparkling 3D treasure chest overflowing with a complete collection of different colorful items like glossy stars, spheres, gold coins, and jewels, representing everything combined, completely wordless, front-and-center, premium SOTA asset",
+    "allein": "A cute, single 3D toy character sitting happily on a small glowing floating island, gazing up at a tiny crescent moon in a quiet night sky, representing being peacefully alone, completely wordless, front-and-center, premium SOTA asset",
+
+    # Handcrafted A2 early cards (Batch 4: 16 to 20)
+    "als": "A polished 3D balance scale with a tall golden cylinder on one side and a short blue cylinder on the other side, showing comparison, completely wordless, front-and-center, premium SOTA asset",
+    "also": "A set of glossy 3D wooden dominoes lined up with the first domino tipping and knocking down the next one in a perfect chain reaction, representing cause-and-effect, completely wordless, front-and-center, premium SOTA asset",
+    "alt": "A beautifully aged 3D scroll made of textured yellow parchment paper with rustic wooden spindles, showing age, completely wordless, front-and-center, premium SOTA asset",
+    "das alter": "A beautiful, stylized 3D tree stump showing perfectly concentric, high-contrast tree rings, representing growth and age over time, completely wordless, front-and-center, premium SOTA asset",
+    "alter": "A beautiful, stylized 3D tree stump showing perfectly concentric, high-contrast tree rings, representing growth and age over time, completely wordless, front-and-center, premium SOTA asset",
+    "die ampel": "A vibrant 3D modern traffic light standing on a sleek black metal pole with its green light shining brilliantly, completely wordless, front-and-center, premium SOTA asset",
+    "ampel": "A vibrant 3D modern traffic light standing on a sleek black metal pole with its green light shining brilliantly, completely wordless, front-and-center, premium SOTA asset",
+
+    # Handcrafted A2 early cards (Batch 5: 21 to 25)
+    "anbieten": "A premium 3D hand holding a beautifully arranged tray containing a high-gloss golden star and a wrapped gift, representing offering something, completely wordless, front-and-center, premium SOTA asset",
+    "ander": "A row of three identical glossy blue spheres with a single vibrant pink star sitting prominently among them, representing the other/different option, completely wordless, front-and-center, premium SOTA asset",
+
+
     # Handcrafted A1 early cards (1 to 30)
     "abfliegen": "A magnificent, glossy 3D passenger airplane made of pristine white enamel, dramatically angled upwards as it climbs into the air, with glowing golden jet streams trailing behind its chrome engines, front-and-center",
     "abflug": "A stylized, premium 3D terminal departure gate sign in glossy blue enamel, with a glowing translucent glass board showing a glowing yellow airplane departure symbol, front-and-center",

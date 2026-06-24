@@ -212,8 +212,10 @@
     "antonym": null,
     "example_de": "Ich hatte keine Ahnung, dass du heute Geburtstag hast.",
     "example_en": "I had no idea that you have a birthday today.",
-    "image": "images/card_11.svg",
-    "id": 11
+    "image": "images/card_11.webp",
+    "id": 11,
+    "image_tier": "B",
+    "image_path": "images/card_11.webp"
   },
   {
     "german": "aktiv",
@@ -228,8 +230,10 @@
     "antonym": "passiv",
     "example_de": "Peter ist sehr aktiv und macht viel Sport.",
     "example_en": "Peter is very active and does a lot of sports.",
-    "image": "images/card_12.svg",
-    "id": 12
+    "image": "images/card_12.webp",
+    "id": 12,
+    "image_tier": "B",
+    "image_path": "images/card_12.webp"
   },
   {
     "german": "aktuell",
@@ -244,8 +248,10 @@
     "antonym": null,
     "example_de": "Das ist das aktuelle Kinoprogramm.",
     "example_en": "That is the current cinema program.",
-    "image": "images/card_13.svg",
-    "id": 13
+    "image": "images/card_13.webp",
+    "id": 13,
+    "image_tier": "B",
+    "image_path": "images/card_13.webp"
   },
   {
     "german": "all-",
@@ -260,8 +266,10 @@
     "antonym": "kein- / nichts",
     "example_de": "Ich wünsche dir alles Gute! Sind alle da?",
     "example_en": "I wish you all the best! Is everyone here?",
-    "image": "images/card_14.svg",
-    "id": 14
+    "image": "images/card_14.webp",
+    "id": 14,
+    "image_tier": "B",
+    "image_path": "images/card_14.webp"
   },
   {
     "german": "allein",
@@ -276,8 +284,10 @@
     "antonym": "zusammen",
     "example_de": "Kommt seine Freundin mit? - Nein, er kommt allein.",
     "example_en": "Is his girlfriend coming along? - No, he is coming alone.",
-    "image": "images/card_15.svg",
-    "id": 15
+    "image": "images/card_15.webp",
+    "id": 15,
+    "image_tier": "B",
+    "image_path": "images/card_15.webp"
   },
   {
     "german": "als",
