@@ -6931,8 +6931,10 @@
     "antonym": "laut",
     "example_de": "Seid leise. Die anderen schlafen schon.",
     "example_en": "Be quiet. The others are already sleeping.",
-    "image": "images/card_361.svg",
-    "id": 361
+    "image": "images/card_361.webp",
+    "id": 361,
+    "image_tier": "B",
+    "image_path": "images/card_361.webp"
   },
   {
     "german": "lernen",
@@ -6951,8 +6953,10 @@
     "antonym": "verlernen",
     "example_de": "Wie lange lernen Sie schon Deutsch?",
     "example_en": "How long have you been learning German?",
-    "image": "images/card_362.svg",
-    "id": 362
+    "image": "images/card_362.webp",
+    "id": 362,
+    "image_tier": "B",
+    "image_path": "images/card_362.webp"
   },
   {
     "german": "lesen",
@@ -6971,8 +6975,10 @@
     "antonym": null,
     "example_de": "Ich lese ein Buch von García Márquez.",
     "example_en": "I am reading a book by García Márquez.",
-    "image": "images/card_363.svg",
-    "id": 363
+    "image": "images/card_363.webp",
+    "id": 363,
+    "image_tier": "B",
+    "image_path": "images/card_363.webp"
   },
   {
     "german": "letzt-",
@@ -6990,8 +6996,10 @@
     "antonym": "erst-",
     "example_de": "Morgen ist der letzte Kurstag.",
     "example_en": "Tomorrow is the last day of the course.",
-    "image": "images/card_364.svg",
-    "id": 364
+    "image": "images/card_364.webp",
+    "id": 364,
+    "image_tier": "B",
+    "image_path": "images/card_364.webp"
   },
   {
     "german": "die Leute",
@@ -7006,8 +7014,10 @@
     "antonym": null,
     "example_de": "In der Disko sind viele Leute.",
     "example_en": "There are many people in the disco.",
-    "image": "images/card_365.svg",
-    "id": 365
+    "image": "images/card_365.webp",
+    "id": 365,
+    "image_tier": "B",
+    "image_path": "images/card_365.webp"
   },
   {
     "german": "das Licht",
