@@ -677,7 +677,11 @@ METAPHOR_MAP = {
     "die uhr": "A beautiful, classic 3D retro pocket watch in polished gold, with a blank clock face showing only delicate hands and tick marks, absolutely no numbers or text, completely wordless, front-and-center, premium SOTA asset",
     "uhr": "A beautiful, classic 3D retro pocket watch in polished gold, with a blank clock face showing only delicate hands and tick marks, absolutely no numbers or text, completely wordless, front-and-center, premium SOTA asset",
     "um": "A cute 3D star character walking along a circular path looping around a central gold pedestal, clearly representing the concept of 'around', completely wordless, front-and-center, premium SOTA asset",
-    "umziehen": "A cute, stylized 3D brown cardboard moving box, taped shut, with a small glossy toy house and a rolling luggage trolley floating next to it, completely wordless, front-and-center, premium SOTA asset"
+    "umziehen": "A cute, stylized 3D brown cardboard moving box, taped shut, with a small glossy toy house and a rolling luggage trolley floating next to it, completely wordless, front-and-center, premium SOTA asset",
+    "und": "A sleek 3D golden ampersand symbol, glowing with a soft ambient neon-yellow light, standing floating suspended in the center, completely wordless, premium SOTA asset",
+    "unser-": "A cute group of three smiling 3D star characters standing together hand-in-hand, proudly presenting a glowing golden treasure chest, completely wordless, front-and-center, premium SOTA asset",
+    "unten": "A modern 3D cutaway of a house with two floors, with a cute star character sitting happily on the bottom floor, which is highlighted with a glowing warm-yellow light, completely wordless, front-and-center, premium SOTA asset",
+    "unter": "A cute, smiling 3D star character peeking out from underneath a beautiful, polished cherry-wood dining table, completely wordless, front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

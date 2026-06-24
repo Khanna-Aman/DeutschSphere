@@ -10673,8 +10673,10 @@
     "antonym": "oder",
     "example_de": "Peter und Helmut sind meine Söhne.",
     "example_en": "Peter and Helmut are my sons.",
-    "image": "images/card_556.svg",
-    "id": 556
+    "image": "images/card_556.webp",
+    "id": 556,
+    "image_tier": "B",
+    "image_path": "images/card_556.webp"
   },
   {
     "german": "und",
@@ -10689,8 +10691,10 @@
     "antonym": "oder",
     "example_de": "Peter und Helmut sind meine Söhne.",
     "example_en": "Peter and Helmut are my sons.",
-    "image": "images/card_557.svg",
-    "id": 557
+    "image": "images/card_557.webp",
+    "id": 557,
+    "image_tier": "B",
+    "image_path": "images/card_557.webp"
   },
   {
     "german": "unser-",
@@ -10705,8 +10709,10 @@
     "antonym": "euer-",
     "example_de": "Das ist unsere Lehrerin.",
     "example_en": "That is our teacher.",
-    "image": "images/card_558.svg",
-    "id": 558
+    "image": "images/card_558.webp",
+    "id": 558,
+    "image_tier": "B",
+    "image_path": "images/card_558.webp"
   },
   {
     "german": "unten",
@@ -10721,8 +10727,10 @@
     "antonym": "oben",
     "example_de": "Er wohnt ganz unten im Haus.",
     "example_en": "He lives right at the bottom of the house.",
-    "image": "images/card_559.svg",
-    "id": 559
+    "image": "images/card_559.webp",
+    "id": 559,
+    "image_tier": "B",
+    "image_path": "images/card_559.webp"
   },
   {
     "german": "unter",
@@ -10737,8 +10745,10 @@
     "antonym": "über",
     "example_de": "Unter uns wohnt eine Familie mit drei Kindern.",
     "example_en": "A family with three children lives below us.",
-    "image": "images/card_560.svg",
-    "id": 560
+    "image": "images/card_560.webp",
+    "id": 560,
+    "image_tier": "B",
+    "image_path": "images/card_560.webp"
   },
   {
     "german": "der Unterricht",
