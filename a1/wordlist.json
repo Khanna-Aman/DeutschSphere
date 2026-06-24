@@ -12212,8 +12212,10 @@
     "antonym": "schließen",
     "example_de": "Ich öffne die Tür.",
     "example_en": "I open the door.",
-    "image": "images/card_636.svg",
-    "id": 636
+    "image": "images/card_636.webp",
+    "id": 636,
+    "image_tier": "B",
+    "image_path": "images/card_636.webp"
   },
   {
     "german": "das Öl",
@@ -12228,8 +12230,10 @@
     "antonym": null,
     "example_de": "Den Salat machen wir ohne Öl.",
     "example_en": "We make the salad without oil.",
-    "image": "images/card_637.svg",
-    "id": 637
+    "image": "images/card_637.webp",
+    "id": 637,
+    "image_tier": "B",
+    "image_path": "images/card_637.webp"
   },
   {
     "german": "über",
@@ -12244,8 +12248,10 @@
     "antonym": "unter",
     "example_de": "Gehen Sie hier über die Straße.",
     "example_en": "Go across the street here.",
-    "image": "images/card_638.svg",
-    "id": 638
+    "image": "images/card_638.webp",
+    "id": 638,
+    "image_tier": "B",
+    "image_path": "images/card_638.webp"
   },
   {
     "german": "übernachten",
@@ -12264,8 +12270,10 @@
     "antonym": null,
     "example_de": "Du kannst bei mir übernachten.",
     "example_en": "You can stay overnight at my place.",
-    "image": "images/card_639.svg",
-    "id": 639
+    "image": "images/card_639.webp",
+    "id": 639,
+    "image_tier": "B",
+    "image_path": "images/card_639.webp"
   },
   {
     "german": "überweisen",
@@ -12284,7 +12292,9 @@
     "antonym": null,
     "example_de": "Sie können das Geld auch überweisen.",
     "example_en": "You can also transfer the money.",
-    "image": "images/card_640.svg",
-    "id": 640
+    "image": "images/card_640.webp",
+    "id": 640,
+    "image_tier": "B",
+    "image_path": "images/card_640.webp"
   }
 ]
