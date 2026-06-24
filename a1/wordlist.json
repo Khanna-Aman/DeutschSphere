@@ -9908,8 +9908,10 @@
     "antonym": "schweigen",
     "example_de": "Kann ich (mit) Herrn Klein sprechen?",
     "example_en": "Can I speak with Mr. Klein?",
-    "image": "images/card_516.svg",
-    "id": 516
+    "image": "images/card_516.webp",
+    "id": 516,
+    "image_tier": "B",
+    "image_path": "images/card_516.webp"
   },
   {
     "german": "spät",
@@ -9927,8 +9929,10 @@
     "antonym": "früh",
     "example_de": "Es ist schon spät, ich muss gehen.",
     "example_en": "It is already late, I must go.",
-    "image": "images/card_517.svg",
-    "id": 517
+    "image": "images/card_517.webp",
+    "id": 517,
+    "image_tier": "B",
+    "image_path": "images/card_517.webp"
   },
   {
     "german": "später",
@@ -9943,8 +9947,10 @@
     "antonym": "früher",
     "example_de": "Das können wir später machen.",
     "example_en": "We can do that later.",
-    "image": "images/card_518.svg",
-    "id": 518
+    "image": "images/card_518.webp",
+    "id": 518,
+    "image_tier": "B",
+    "image_path": "images/card_518.webp"
   },
   {
     "german": "die Stadt",
@@ -9959,8 +9965,10 @@
     "antonym": "das Dorf",
     "example_de": "Heidelberg ist eine alte Stadt.",
     "example_en": "Heidelberg is an old city.",
-    "image": "images/card_519.svg",
-    "id": 519
+    "image": "images/card_519.webp",
+    "id": 519,
+    "image_tier": "B",
+    "image_path": "images/card_519.webp"
   },
   {
     "german": "stehen",
@@ -9979,8 +9987,10 @@
     "antonym": "sitzen",
     "example_de": "Ich glaube es nicht, aber es steht in der Zeitung. Der Bus steht schon an der Haltestelle.",
     "example_en": "I do not believe it, but it says so in the newspaper. The bus is already standing at the bus stop.",
-    "image": "images/card_520.svg",
-    "id": 520
+    "image": "images/card_520.webp",
+    "id": 520,
+    "image_tier": "B",
+    "image_path": "images/card_520.webp"
   },
   {
     "german": "die Stelle",

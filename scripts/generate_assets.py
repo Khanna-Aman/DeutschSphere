@@ -613,7 +613,13 @@ METAPHOR_MAP = {
     "der sport": "A beautiful, dynamic 3D collage of sport assets: a high-gloss orange basketball, a gleaming white-and-black soccer ball, and a metallic silver whistle, floating together, completely wordless, front-and-center, premium SOTA asset",
     "sport": "A beautiful, dynamic 3D collage of sport assets: a high-gloss orange basketball, a gleaming white-and-black soccer ball, and a metallic silver whistle, floating together, completely wordless, front-and-center, premium SOTA asset",
     "die sprache": "Two vibrant 3D speech bubbles (one pastel blue, one pastel pink) interlocking in mid-air, with a tiny, glowing golden musical note and a heart floating between them, representing speech and understanding, completely wordless, front-and-center, premium SOTA asset",
-    "sprache": "Two vibrant 3D speech bubbles (one pastel blue, one pastel pink) interlocking in mid-air, with a tiny, glowing golden musical note and a heart floating between them, representing speech and understanding, completely wordless, front-and-center, premium SOTA asset"
+    "sprache": "Two vibrant 3D speech bubbles (one pastel blue, one pastel pink) interlocking in mid-air, with a tiny, glowing golden musical note and a heart floating between them, representing speech and understanding, completely wordless, front-and-center, premium SOTA asset",
+    "sprechen": "A cute, smiling 3D star character with an open mouth, emitting smooth glowing golden soundwave rings that ripple outward, completely wordless, front-and-center, premium SOTA asset",
+    "spät": "A classic 3D retro alarm clock with its metal bells, showing the time near midnight, with a glowing crescent moon floating in the background to represent lateness, completely wordless, front-and-center, premium SOTA asset",
+    "später": "A beautifully polished 3D hourglass tilted slightly, next to a curved neon-pink arrow pointing forward to represent time passing or later, completely wordless, front-and-center, premium SOTA asset",
+    "die stadt": "A gorgeous miniature 3D isometric cutaway model of a clean modern city, with tiny colorful glass skyscrapers, green trees, and glowing streetlights, completely wordless, front-and-center, premium SOTA asset",
+    "stadt": "A gorgeous miniature 3D isometric cutaway model of a clean modern city, with tiny colorful glass skyscrapers, green trees, and glowing streetlights, completely wordless, front-and-center, premium SOTA asset",
+    "stehen": "A cute, proud 3D star character standing tall and perfectly straight on a tiny polished marble pedestal, completely wordless, front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):
