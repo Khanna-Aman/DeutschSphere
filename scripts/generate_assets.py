@@ -710,8 +710,16 @@ METAPHOR_MAP = {
     "von": "A beautiful 3D claymation parcel package wrapped with twine, with a glowing golden curved arrow pointing directly from the package outward towards the viewer, completely wordless, front-and-center, premium SOTA asset",
     "vor": "A cute, smiling 3D star character standing proudly directly in front of a large, beautiful white-painted house door, highlighted with a bright green spotlight, completely wordless, front-and-center, premium SOTA asset",
     "der vorname": "A cute 3D glossy identity badge pin with a stylized picture of a smiling star character on it, with a golden hand pointing to a highlighted first line of a blank list, completely wordless, front-and-center, premium SOTA asset",
-    "vorname": "A cute 3D glossy identity badge pin with a stylized picture of a smiling star character on it, with a golden hand pointing to a highlighted first line of a blank list, completely wordless, front-and-center, premium SOTA asset"
+    "vorname": "A cute 3D glossy identity badge pin with a stylized picture of a smiling star character on it, with a golden hand pointing to a highlighted first line of a blank list, completely wordless, front-and-center, premium SOTA asset",
+    "die vorsicht": "A bold, glowing 3D yellow triangular warning shield with an exclamation mark in the center, floating in mid-air, with a soft neon-yellow backlight glow, completely wordless, front-and-center, premium SOTA asset",
+    "vorsicht": "A bold, glowing 3D yellow triangular warning shield with an exclamation mark in the center, floating in mid-air, with a soft neon-yellow backlight glow, completely wordless, front-and-center, premium SOTA asset",
+    "die vorwahl": "A sleek 3D rotary telephone dial hovering in front of a miniature globe where a specific slice/country is highlighted with a glowing golden border and a dashed golden connection arc, completely wordless, front-and-center, premium SOTA asset",
+    "vorwahl": "A sleek 3D rotary telephone dial hovering in front of a miniature globe where a specific slice/country is highlighted with a glowing golden border and a dashed golden connection arc, completely wordless, front-and-center, premium SOTA asset",
+    "wandern": "A cute 3D star character wearing a tiny brown backpack and holding a polished wooden walking stick, walking happily along a winding grassy mountain path toward a small snowy peak in the background, completely wordless, front-and-center, premium SOTA asset",
+    "wann": "A cute 3D star character looking curiously at a massive, beautiful golden pocket watch hovering in front of it, with its face showing stylized celestial phase icons instead of numbers, completely wordless, front-and-center, premium SOTA asset",
+    "warten": "A cute 3D star character sitting patiently on a stylish park bench under a streetlamp, next to a large glowing glass hourglass where the golden sand is slowly trickling down, completely wordless, front-and-center, premium SOTA asset"
 }
+
 
 
 

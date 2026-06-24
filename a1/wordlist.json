@@ -11149,8 +11149,10 @@
     "antonym": null,
     "example_de": "Vorsicht! Da kommt ein Auto.",
     "example_en": "Careful! A car is coming.",
-    "image": "images/card_581.svg",
-    "id": 581
+    "image": "images/card_581.webp",
+    "id": 581,
+    "image_tier": "B",
+    "image_path": "images/card_581.webp"
   },
   {
     "german": "die Vorwahl",
@@ -11165,8 +11167,10 @@
     "antonym": null,
     "example_de": "Wie ist die Vorwahl von München?",
     "example_en": "What is the area code of Munich?",
-    "image": "images/card_582.svg",
-    "id": 582
+    "image": "images/card_582.webp",
+    "id": 582,
+    "image_tier": "B",
+    "image_path": "images/card_582.webp"
   },
   {
     "german": "wandern",
@@ -11185,8 +11189,10 @@
     "antonym": null,
     "example_de": "Wir wandern um den Chiemsee.",
     "example_en": "We are hiking around the Chiemsee.",
-    "image": "images/card_583.svg",
-    "id": 583
+    "image": "images/card_583.webp",
+    "id": 583,
+    "image_tier": "B",
+    "image_path": "images/card_583.webp"
   },
   {
     "german": "wann",
@@ -11201,8 +11207,10 @@
     "antonym": null,
     "example_de": "Wann bist du fertig? Wann kann ich Sie anrufen?",
     "example_en": "When are you ready? When can I call you?",
-    "image": "images/card_584.svg",
-    "id": 584
+    "image": "images/card_584.webp",
+    "id": 584,
+    "image_tier": "B",
+    "image_path": "images/card_584.webp"
   },
   {
     "german": "warten",
@@ -11221,8 +11229,10 @@
     "antonym": null,
     "example_de": "Können Sie ein paar Minuten warten? Auf wen warten Sie?",
     "example_en": "Can you wait a few minutes? Who are you waiting for?",
-    "image": "images/card_585.svg",
-    "id": 585
+    "image": "images/card_585.webp",
+    "id": 585,
+    "image_tier": "B",
+    "image_path": "images/card_585.webp"
   },
   {
     "german": "warum",
