@@ -8833,8 +8833,10 @@
     "antonym": "kaputtmachen",
     "example_de": "Er hat das Fahrrad repariert.",
     "example_en": "He repaired the bicycle.",
-    "image": "images/card_461.svg",
-    "id": 461
+    "image": "images/card_461.webp",
+    "id": 461,
+    "image_tier": "B",
+    "image_path": "images/card_461.webp"
   },
   {
     "german": "das Restaurant",
@@ -8849,8 +8851,10 @@
     "antonym": null,
     "example_de": "Wir essen heute in einem Restaurant.",
     "example_en": "We are eating in a restaurant today.",
-    "image": "images/card_462.svg",
-    "id": 462
+    "image": "images/card_462.webp",
+    "id": 462,
+    "image_tier": "B",
+    "image_path": "images/card_462.webp"
   },
   {
     "german": "die Rezeption",
@@ -8865,8 +8869,10 @@
     "antonym": null,
     "example_de": "Fragen Sie bitte im Hotel an der Rezeption.",
     "example_en": "Please ask at the reception in the hotel.",
-    "image": "images/card_463.svg",
-    "id": 463
+    "image": "images/card_463.webp",
+    "id": 463,
+    "image_tier": "B",
+    "image_path": "images/card_463.webp"
   },
   {
     "german": "richtig",
@@ -8884,8 +8890,10 @@
     "antonym": "falsch",
     "example_de": "Habe ich das richtig verstanden? Das ist richtig.",
     "example_en": "Did I understand that correctly? That is correct.",
-    "image": "images/card_464.svg",
-    "id": 464
+    "image": "images/card_464.webp",
+    "id": 464,
+    "image_tier": "B",
+    "image_path": "images/card_464.webp"
   },
   {
     "german": "riechen",
@@ -8904,8 +8912,10 @@
     "antonym": "stinken",
     "example_de": "Dieser Wein riecht gut.",
     "example_en": "This wine smells good.",
-    "image": "images/card_465.svg",
-    "id": 465
+    "image": "images/card_465.webp",
+    "id": 465,
+    "image_tier": "B",
+    "image_path": "images/card_465.webp"
   },
   {
     "german": "ruhig",
