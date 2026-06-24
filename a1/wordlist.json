@@ -11445,8 +11445,10 @@
     "antonym": null,
     "example_de": "Welches Buch möchtest du?",
     "example_en": "Which book would you like?",
-    "image": "images/card_596.svg",
-    "id": 596
+    "image": "images/card_596.webp",
+    "id": 596,
+    "image_tier": "B",
+    "image_path": "images/card_596.webp"
   },
   {
     "german": "die Welt",
@@ -11461,8 +11463,10 @@
     "antonym": null,
     "example_de": "Es gibt viele Probleme auf der Welt.",
     "example_en": "There are many problems in the world.",
-    "image": "images/card_597.svg",
-    "id": 597
+    "image": "images/card_597.webp",
+    "id": 597,
+    "image_tier": "B",
+    "image_path": "images/card_597.webp"
   },
   {
     "german": "wenig",
@@ -11480,8 +11484,10 @@
     "antonym": "viel",
     "example_de": "Ich habe leider nur wenig verstanden. Er verdient wenig.",
     "example_en": "Unfortunately I only understood a little. He earns little.",
-    "image": "images/card_598.svg",
-    "id": 598
+    "image": "images/card_598.webp",
+    "id": 598,
+    "image_tier": "B",
+    "image_path": "images/card_598.webp"
   },
   {
     "german": "wer",
@@ -11496,8 +11502,10 @@
     "antonym": null,
     "example_de": "Wer ist das?",
     "example_en": "Who is that?",
-    "image": "images/card_599.svg",
-    "id": 599
+    "image": "images/card_599.webp",
+    "id": 599,
+    "image_tier": "B",
+    "image_path": "images/card_599.webp"
   },
   {
     "german": "werden",
@@ -11516,8 +11524,10 @@
     "antonym": "bleiben",
     "example_de": "Mein Sohn will Arzt werden.",
     "example_en": "My son wants to become a doctor.",
-    "image": "images/card_600.svg",
-    "id": 600
+    "image": "images/card_600.webp",
+    "id": 600,
+    "image_tier": "B",
+    "image_path": "images/card_600.webp"
   },
   {
     "german": "das Wetter",

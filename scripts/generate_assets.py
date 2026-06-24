@@ -730,7 +730,13 @@ METAPHOR_MAP = {
     "der wein": "A beautiful, elegant 3D glass of red wine, with rich dark ruby liquid swirling slightly, a glossy grape cluster resting beside its base, completely wordless, front-and-center, premium SOTA asset",
     "wein": "A beautiful, elegant 3D glass of red wine, with rich dark ruby liquid swirling slightly, a glossy grape cluster resting beside its base, completely wordless, front-and-center, premium SOTA asset",
     "weit": "A tiny cute 3D character standing on a grassy hill, looking through binoculars toward a minuscule, glowing gold castle on a very distant mountain peak across a deep valley, completely wordless, front-and-center, premium SOTA asset",
-    "weiter": "A sleek, glowing green 3D double-arrow chevron symbol pointing boldly to the right, floating over a tiny dotted path stretching toward the horizon, completely wordless, front-and-center, premium SOTA asset"
+    "weiter": "A sleek, glowing green 3D double-arrow chevron symbol pointing boldly to the right, floating over a tiny dotted path stretching toward the horizon, completely wordless, front-and-center, premium SOTA asset",
+    "welch-": "A cute 3D character looking at three glowing doors (one red, one green, one blue) with a glossy question mark floating above its head, pointing its finger questioningly, completely wordless, front-and-center, premium SOTA asset",
+    "die welt": "A stunning, highly polished 3D Earth globe floating suspended in a dark studio space with glowing turquoise gridlines and miniature glittering stars orbiting it, completely wordless, front-and-center, premium SOTA asset",
+    "welt": "A stunning, highly polished 3D Earth globe floating suspended in a dark studio space with glowing turquoise gridlines and miniature glittering stars orbiting it, completely wordless, front-and-center, premium SOTA asset",
+    "wenig": "A cute, high-gloss 3D glass cookie jar sitting on a dark surface, mostly empty, containing only two small, beautifully detailed chocolate chip cookies sitting at the very bottom, completely wordless, front-and-center, premium SOTA asset",
+    "wer": "A stylized, cute 3D silhouette of an anonymous character's face made of glossy purple plastic, with a massive golden glowing question mark floating directly in front of it, completely wordless, front-and-center, premium SOTA asset",
+    "werden": "A beautiful sequence of a tiny green seedling growing inside a miniature glass capsule, showing three stages: a seed, a tiny sprout, and a blooming plant, with glowing golden transition arrows, completely wordless, front-and-center, premium SOTA asset"
 }
 
 
