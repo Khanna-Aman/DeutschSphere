@@ -8184,8 +8184,10 @@
     "antonym": "die Oma",
     "example_de": "Mein Opa heißt Hans.",
     "example_en": "My grandpa's name is Hans.",
-    "image": "images/card_426.svg",
-    "id": 426
+    "image": "images/card_426.webp",
+    "id": 426,
+    "image_tier": "B",
+    "image_path": "images/card_426.webp"
   },
   {
     "german": "die Ordnung",
@@ -8200,8 +8202,10 @@
     "antonym": "die Unordnung",
     "example_de": "Das ist in Ordnung.",
     "example_en": "That is fine.",
-    "image": "images/card_427.svg",
-    "id": 427
+    "image": "images/card_427.webp",
+    "id": 427,
+    "image_tier": "B",
+    "image_path": "images/card_427.webp"
   },
   {
     "german": "der Ort",
@@ -8216,8 +8220,10 @@
     "antonym": null,
     "example_de": "Der Ort liegt am Meer.",
     "example_en": "The place is located by the sea.",
-    "image": "images/card_428.svg",
-    "id": 428
+    "image": "images/card_428.webp",
+    "id": 428,
+    "image_tier": "B",
+    "image_path": "images/card_428.webp"
   },
   {
     "german": "das Papier",
@@ -8232,8 +8238,10 @@
     "antonym": null,
     "example_de": "Hier sind Papier und Bleistift.",
     "example_en": "Here are paper and a pencil.",
-    "image": "images/card_429.svg",
-    "id": 429
+    "image": "images/card_429.webp",
+    "id": 429,
+    "image_tier": "B",
+    "image_path": "images/card_429.webp"
   },
   {
     "german": "die Papiere",
@@ -8248,8 +8256,10 @@
     "antonym": null,
     "example_de": "Haben Sie Ihre Papiere dabei?",
     "example_en": "Do you have your papers with you?",
-    "image": "images/card_430.svg",
-    "id": 430
+    "image": "images/card_430.webp",
+    "id": 430,
+    "image_tier": "B",
+    "image_path": "images/card_430.webp"
   },
   {
     "german": "der Partner",
