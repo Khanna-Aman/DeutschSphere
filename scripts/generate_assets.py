@@ -468,7 +468,12 @@ METAPHOR_MAP = {
     "nur": "A single, beautiful 3D pink rose resting in a minimalist, transparent glass vase, perfectly highlighted under a soft golden spotlight in a dark void, representing 'only' or 'just one', front-and-center, premium SOTA asset",
     "nächst-": "A sleek 3D queue of glossy spheres on a track, with a glowing green arrow pointing sharply to the very next sphere in line which is illuminated in bright gold, representing 'next', front-and-center, premium SOTA asset",
     "nächst": "A sleek 3D queue of glossy spheres on a track, with a glowing green arrow pointing sharply to the very next sphere in line which is illuminated in bright gold, representing 'next', front-and-center, premium SOTA asset",
-    "oben": "An elegant 3D model of a spiral staircase made of white polished wood, with a bold, glowing neon-pink arrow pointing sharply upwards to a cozy glowing light above, representing 'above' or 'upstairs', front-and-center, premium SOTA asset"
+    "oben": "An elegant 3D model of a spiral staircase made of white polished wood, with a bold, glowing neon-pink arrow pointing sharply upwards to a cozy glowing light above, representing 'above' or 'upstairs', front-and-center, premium SOTA asset",
+    "das obst": "A premium, highly-detailed 3D arrangement of fresh, glossy fruits such as a beautiful bunch of purple grapes, a sliced shiny orange, and a glossy red apple sitting beautifully together, representing fruit, front-and-center, premium SOTA asset",
+    "obst": "A premium, highly-detailed 3D arrangement of fresh, glossy fruits such as a beautiful bunch of purple grapes, a sliced shiny orange, and a glossy red apple sitting beautifully together, representing fruit, front-and-center, premium SOTA asset",
+    "oft": "A stylized 3D desk calendar showing a week where almost every single day is marked with a beautiful, glowing golden checkmark sticker, representing high frequency or doing something often, front-and-center, premium SOTA asset",
+    "die oma": "An adorable, smiling 3D claymation grandmother character wearing cute round glasses, a cozy hand-knitted lavender cardigan, and her silver hair tied in a neat bun, with glowing golden hearts around her, representing grandma, front-and-center, premium SOTA asset",
+    "oma": "An adorable, smiling 3D claymation grandmother character wearing cute round glasses, a cozy hand-knitted lavender cardigan, and her silver hair tied in a neat bun, with glowing golden hearts around her, representing grandma, front-and-center, premium SOTA asset"
 }
 
 def remove_black_background(img, threshold=50, feather=True):

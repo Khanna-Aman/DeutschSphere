@@ -8094,8 +8094,10 @@
     "antonym": "das Gemüse",
     "example_de": "Im Sommer ist das Obst billig.",
     "example_en": "In summer fruit is cheap.",
-    "image": "images/card_421.svg",
-    "id": 421
+    "image": "images/card_421.webp",
+    "id": 421,
+    "image_tier": "B",
+    "image_path": "images/card_421.webp"
   },
   {
     "german": "oder",
@@ -8110,8 +8112,10 @@
     "antonym": "und",
     "example_de": "Wann können Sie kommen - heute oder morgen?",
     "example_en": "When can you come - today or tomorrow?",
-    "image": "images/card_422.svg",
-    "id": 422
+    "image": "images/card_422.webp",
+    "id": 422,
+    "image_tier": "B",
+    "image_path": "images/card_422.webp"
   },
   {
     "german": "oft",
@@ -8126,8 +8130,10 @@
     "antonym": "selten",
     "example_de": "Petra treffe ich oft.",
     "example_en": "I meet Petra often.",
-    "image": "images/card_423.svg",
-    "id": 423
+    "image": "images/card_423.webp",
+    "id": 423,
+    "image_tier": "B",
+    "image_path": "images/card_423.webp"
   },
   {
     "german": "ohne",
@@ -8142,8 +8148,10 @@
     "antonym": "mit",
     "example_de": "Ohne Geld kann er nichts kaufen.",
     "example_en": "Without money he can buy nothing.",
-    "image": "images/card_424.svg",
-    "id": 424
+    "image": "images/card_424.webp",
+    "id": 424,
+    "image_tier": "B",
+    "image_path": "images/card_424.webp"
   },
   {
     "german": "die Oma",
@@ -8158,8 +8166,10 @@
     "antonym": "der Opa",
     "example_de": "Meine Oma ist schon tot.",
     "example_en": "My grandma is already dead.",
-    "image": "images/card_425.svg",
-    "id": 425
+    "image": "images/card_425.webp",
+    "id": 425,
+    "image_tier": "B",
+    "image_path": "images/card_425.webp"
   },
   {
     "german": "der Opa",
