@@ -6142,8 +6142,10 @@
     "antonym": null,
     "example_de": "Am Kiosk bekommen Sie Getränke, Zigaretten und Zeitungen.",
     "example_en": "At the kiosk you get drinks, cigarettes and newspapers.",
-    "image": "images/card_321.svg",
-    "id": 321
+    "image": "images/card_321.webp",
+    "id": 321,
+    "image_tier": "B",
+    "image_path": "images/card_321.webp"
   },
   {
     "german": "klar",
@@ -6161,8 +6163,10 @@
     "antonym": "unklar",
     "example_de": "Kommst du mit? - Klar!",
     "example_en": "Are you coming along? - Sure!",
-    "image": "images/card_322.svg",
-    "id": 322
+    "image": "images/card_322.webp",
+    "id": 322,
+    "image_tier": "B",
+    "image_path": "images/card_322.webp"
   },
   {
     "german": "die Klasse",
@@ -6177,8 +6181,10 @@
     "antonym": null,
     "example_de": "In unserer Klasse sind fünfundzwanzig Schüler. Im Zug fahre ich immer 2. Klasse.",
     "example_en": "In our class there are twenty-five students. On the train I always travel 2nd class.",
-    "image": "images/card_323.svg",
-    "id": 323
+    "image": "images/card_323.webp",
+    "id": 323,
+    "image_tier": "B",
+    "image_path": "images/card_323.webp"
   },
   {
     "german": "die Kleidung",
@@ -6193,8 +6199,10 @@
     "antonym": null,
     "example_de": "Wo finde ich Kleidung? - Jacken im ersten, Jeans im zweiten Stock.",
     "example_en": "Where do I find clothes? - Jackets on the first floor, jeans on the second floor.",
-    "image": "images/card_324.svg",
-    "id": 324
+    "image": "images/card_324.webp",
+    "id": 324,
+    "image_tier": "B",
+    "image_path": "images/card_324.webp"
   },
   {
     "german": "klein",
@@ -6212,8 +6220,10 @@
     "antonym": "groß",
     "example_de": "Eltville ist eine kleine Stadt am Rhein.",
     "example_en": "Eltville is a small town on the Rhine.",
-    "image": "images/card_325.svg",
-    "id": 325
+    "image": "images/card_325.webp",
+    "id": 325,
+    "image_tier": "B",
+    "image_path": "images/card_325.webp"
   },
   {
     "german": "kochen",
