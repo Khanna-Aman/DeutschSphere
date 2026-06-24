@@ -8364,8 +8364,10 @@
     "antonym": null,
     "example_de": "Ich kaufe mir einen Stadtplan.",
     "example_en": "I am buying a city map.",
-    "image": "images/card_436.svg",
-    "id": 436
+    "image": "images/card_436.webp",
+    "id": 436,
+    "image_tier": "B",
+    "image_path": "images/card_436.webp"
   },
   {
     "german": "der Platz",
@@ -8380,8 +8382,10 @@
     "antonym": null,
     "example_de": "Tut mir leid, der Platz ist besetzt. Bitte nehmen Sie Platz! Ich wohne Messeplatz 5.",
     "example_en": "I am sorry, the seat is taken. Please take a seat! I live at Messeplatz 5.",
-    "image": "images/card_437.svg",
-    "id": 437
+    "image": "images/card_437.webp",
+    "id": 437,
+    "image_tier": "B",
+    "image_path": "images/card_437.webp"
   },
   {
     "german": "die Polizei",
@@ -8396,8 +8400,10 @@
     "antonym": null,
     "example_de": "Holen Sie die Polizei!",
     "example_en": "Call the police!",
-    "image": "images/card_438.svg",
-    "id": 438
+    "image": "images/card_438.webp",
+    "id": 438,
+    "image_tier": "B",
+    "image_path": "images/card_438.webp"
   },
   {
     "german": "die Pommes frites",
@@ -8412,8 +8418,10 @@
     "antonym": null,
     "example_de": "Die Kinder essen Hähnchen mit Pommes frites.",
     "example_en": "The children eat chicken with French fries.",
-    "image": "images/card_439.svg",
-    "id": 439
+    "image": "images/card_439.webp",
+    "id": 439,
+    "image_tier": "B",
+    "image_path": "images/card_439.webp"
   },
   {
     "german": "die Post",
@@ -8428,8 +8436,10 @@
     "antonym": null,
     "example_de": "Wo ist die Post, bitte? Ist Post da?",
     "example_en": "Where is the post office, please? Is there mail?",
-    "image": "images/card_440.svg",
-    "id": 440
+    "image": "images/card_440.webp",
+    "id": 440,
+    "image_tier": "B",
+    "image_path": "images/card_440.webp"
   },
   {
     "german": "die Postleitzahl",
