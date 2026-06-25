@@ -2869,8 +2869,10 @@
     "antonym": "teuer",
     "example_de": "Das Wörterbuch kostet nur fünf Euro. - Fünf Euro? Das ist aber billig!",
     "example_en": "The dictionary costs only five euros. - Five euros? That is really cheap!",
-    "image": "images/card_146.svg",
-    "id": 146
+    "image": "images/card_146.webp",
+    "id": 146,
+    "image_tier": "B",
+    "image_path": "images/card_146.webp"
   },
   {
     "german": "die Birne",
@@ -2885,8 +2887,10 @@
     "antonym": null,
     "example_de": "Ein Kilo Birnen, bitte!",
     "example_en": "One kilo of pears, please!",
-    "image": "images/card_147.svg",
-    "id": 147
+    "image": "images/card_147.webp",
+    "id": 147,
+    "image_tier": "B",
+    "image_path": "images/card_147.webp"
   },
   {
     "german": "bis",
@@ -2901,8 +2905,10 @@
     "antonym": "ab",
     "example_de": "Ich fahre nur bis Stuttgart. Ich warte bis Freitag. Tschüss, bis gleich!",
     "example_en": "I only travel as far as Stuttgart. I will wait until Friday. Bye, see you soon!",
-    "image": "images/card_148.svg",
-    "id": 148
+    "image": "images/card_148.webp",
+    "id": 148,
+    "image_tier": "B",
+    "image_path": "images/card_148.webp"
   },
   {
     "german": "bitte",
@@ -2917,8 +2923,10 @@
     "antonym": "danke",
     "example_de": "Eine Tasse Kaffee bitte! - Bitte schön! Wie bitte? Sprechen Sie bitte ein bisschen lauter!",
     "example_en": "A cup of coffee please! - Here you go! I beg your pardon? Please speak a little louder!",
-    "image": "images/card_149.svg",
-    "id": 149
+    "image": "images/card_149.webp",
+    "id": 149,
+    "image_tier": "B",
+    "image_path": "images/card_149.webp"
   },
   {
     "german": "die Bitte",
@@ -2933,8 +2941,10 @@
     "antonym": null,
     "example_de": "Ich habe noch eine Bitte.",
     "example_en": "I still have one request.",
-    "image": "images/card_150.svg",
-    "id": 150
+    "image": "images/card_150.webp",
+    "id": 150,
+    "image_tier": "B",
+    "image_path": "images/card_150.webp"
   },
   {
     "german": "bitten",
