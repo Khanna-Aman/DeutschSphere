@@ -2769,8 +2769,10 @@
     "antonym": null,
     "example_de": "Kannst du mir bei meiner Bewerbung helfen?",
     "example_en": "Can you help me with my application?",
-    "image": "images/card_141.svg",
-    "id": 141
+    "image": "images/card_141.webp",
+    "id": 141,
+    "image_tier": "B",
+    "image_path": "images/card_141.webp"
   },
   {
     "german": "bewölkt",
@@ -2788,8 +2790,10 @@
     "antonym": "heiter / wolkenlos",
     "example_de": "Heute ist es bewölkt.",
     "example_en": "Today it is cloudy.",
-    "image": "images/card_142.svg",
-    "id": 142
+    "image": "images/card_142.webp",
+    "id": 142,
+    "image_tier": "B",
+    "image_path": "images/card_142.webp"
   },
   {
     "german": "bezahlen",
@@ -2808,8 +2812,10 @@
     "antonym": null,
     "example_de": "Wo kann ich bezahlen?",
     "example_en": "Where can I pay?",
-    "image": "images/card_143.svg",
-    "id": 143
+    "image": "images/card_143.webp",
+    "id": 143,
+    "image_tier": "B",
+    "image_path": "images/card_143.webp"
   },
   {
     "german": "das Bier",
@@ -2824,8 +2830,10 @@
     "antonym": null,
     "example_de": "Noch ein Bier, bitte.",
     "example_en": "Another beer, please.",
-    "image": "images/card_144.svg",
-    "id": 144
+    "image": "images/card_144.webp",
+    "id": 144,
+    "image_tier": "B",
+    "image_path": "images/card_144.webp"
   },
   {
     "german": "das Bild",
@@ -2840,8 +2848,10 @@
     "antonym": null,
     "example_de": "Hast du ein Bild von deinem Sohn?",
     "example_en": "Do you have a picture of your son?",
-    "image": "images/card_145.svg",
-    "id": 145
+    "image": "images/card_145.webp",
+    "id": 145,
+    "image_tier": "B",
+    "image_path": "images/card_145.webp"
   },
   {
     "german": "billig",
