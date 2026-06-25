@@ -3156,8 +3156,10 @@
     "antonym": null,
     "example_de": "Hans isst nicht gern Bohnen.",
     "example_en": "Hans does not like eating beans.",
-    "image": "images/card_161.svg",
-    "id": 161
+    "image": "images/card_161.webp",
+    "id": 161,
+    "image_tier": "B",
+    "image_path": "images/card_161.webp"
   },
   {
     "german": "braten",
@@ -3176,8 +3178,10 @@
     "antonym": null,
     "example_de": "Braten Sie das Fleisch in etwas Öl! Der Fisch brät in der Pfanne.",
     "example_en": "Fry the meat in a little oil! The fish is frying in the pan.",
-    "image": "images/card_162.svg",
-    "id": 162
+    "image": "images/card_162.webp",
+    "id": 162,
+    "image_tier": "B",
+    "image_path": "images/card_162.webp"
   },
   {
     "german": "brauchen",
@@ -3196,8 +3200,10 @@
     "antonym": null,
     "example_de": "Ich brauche ein neues Auto. Brauchst du die Zeitung noch oder kann ich sie haben? Meine Großmutter ist krank. Sie braucht viel Ruhe.",
     "example_en": "I need a new car. Do you still need the newspaper or can I have it? My grandmother is sick. She needs a lot of rest.",
-    "image": "images/card_163.svg",
-    "id": 163
+    "image": "images/card_163.webp",
+    "id": 163,
+    "image_tier": "B",
+    "image_path": "images/card_163.webp"
   },
   {
     "german": "der Brief",
@@ -3212,8 +3218,10 @@
     "antonym": null,
     "example_de": "Haben Sie einen Brief für mich?",
     "example_en": "Do you have a letter for me?",
-    "image": "images/card_164.svg",
-    "id": 164
+    "image": "images/card_164.webp",
+    "id": 164,
+    "image_tier": "B",
+    "image_path": "images/card_164.webp"
   },
   {
     "german": "die Briefmarke",
@@ -3228,8 +3236,10 @@
     "antonym": null,
     "example_de": "Bitte die Briefmarke nicht vergessen!",
     "example_en": "Please do not forget the postage stamp!",
-    "image": "images/card_165.svg",
-    "id": 165
+    "image": "images/card_165.webp",
+    "id": 165,
+    "image_tier": "B",
+    "image_path": "images/card_165.webp"
   },
   {
     "german": "die Brille",
