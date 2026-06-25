@@ -917,8 +917,10 @@
     "antonym": "faulenzen",
     "example_de": "Wo arbeiten Sie? Ich arbeite als Krankenschwester in einem Krankenhaus.",
     "example_en": "Where do you work? I work as a nurse in a hospital.",
-    "image": "images/card_48.svg",
-    "id": 48
+    "image": "images/card_48.webp",
+    "id": 48,
+    "image_tier": "B",
+    "image_path": "images/card_48.webp"
   },
   {
     "german": "arbeitslos",
@@ -936,8 +938,10 @@
     "antonym": "berufstätig",
     "example_de": "Seit wann ist er schon arbeitslos? Es gibt bei uns viele Leute, die schon lange arbeitslos sind.",
     "example_en": "Since when has he been unemployed? There are many people here who have been unemployed for a long time.",
-    "image": "images/card_49.svg",
-    "id": 49
+    "image": "images/card_49.webp",
+    "id": 49,
+    "image_tier": "B",
+    "image_path": "images/card_49.webp"
   },
   {
     "german": "arm",
@@ -955,8 +959,10 @@
     "antonym": "reich",
     "example_de": "Sie haben nicht viel Geld, sie sind arm.",
     "example_en": "They do not have much money, they are poor.",
-    "image": "images/card_50.svg",
-    "id": 50
+    "image": "images/card_50.webp",
+    "id": 50,
+    "image_tier": "B",
+    "image_path": "images/card_50.webp"
   },
   {
     "german": "der Arm",

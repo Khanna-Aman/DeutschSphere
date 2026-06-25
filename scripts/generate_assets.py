@@ -125,6 +125,16 @@ METAPHOR_MAP = {
     "die apotheke": "A miniature 3D medical clinic building with a clean white and grey facade, warm glowing glass windows displaying rows of tiny medicine bottles, with a giant glowing green neon medical cross sign floating above the flat roof, completely wordless, no letters, no characters, no signs, front-and-center, premium SOTA asset",
     "apotheke": "A miniature 3D medical clinic building with a clean white and grey facade, warm glowing glass windows displaying rows of tiny medicine bottles, with a giant glowing green neon medical cross sign floating above the flat roof, completely wordless, no letters, no characters, no signs, front-and-center, premium SOTA asset",
 
+    # Handcrafted A2 early cards (Batch 10: 46 to 50)
+    "der apparat": "A beautiful retro-futuristic 3D camera device made of glossy red plastic and polished silver chrome, with a large glowing lens and floating golden soundwaves, representing a high-gloss premium apparatus, completely wordless, front-and-center, premium SOTA asset",
+    "apparat": "A beautiful retro-futuristic 3D camera device made of glossy red plastic and polished silver chrome, with a large glowing lens and floating golden soundwaves, representing a high-gloss premium apparatus, completely wordless, front-and-center, premium SOTA asset",
+    "die arbeit": "A professional, stylized arrangement of premium 3D glossy tools: a gleaming silver wrench, a blueprint roll, and a shiny gold compass, floating together, completely wordless, front-and-center, premium SOTA asset",
+    "arbeit": "A professional, stylized arrangement of premium 3D glossy tools: a gleaming silver wrench, a blueprint roll, and a shiny gold compass, floating together, completely wordless, front-and-center, premium SOTA asset",
+    "arbeiten": "A cute 3D character sitting at a sleek modern desk, typing happily on a glowing translucent computer keyboard, with tiny sparkles of productivity, completely wordless, front-and-center, premium SOTA asset",
+    "arbeitslos": "A cute 3D character sitting thoughtfully on a comfy park bench next to a closed briefcase with a tiny growing green seedling, representing a fresh start and transition, completely wordless, front-and-center, premium SOTA asset",
+    "arm": "An empty, beautifully crafted 3D leather wallet lying open, with tiny glowing dust particles floating out of it, next to a single shiny copper coin on a dark surface, representing having very little money, completely wordless, front-and-center, premium SOTA asset",
+
+
     # Handcrafted A1 early cards (1 to 30)
     "abfliegen": "A magnificent, glossy 3D passenger airplane made of pristine white enamel, dramatically angled upwards as it climbs into the air, with glowing golden jet streams trailing behind its chrome engines, front-and-center",
     "abflug": "A stylized, premium 3D terminal departure gate sign in glossy blue enamel, with a glowing translucent glass board showing a glowing yellow airplane departure symbol, front-and-center",
@@ -141,7 +151,7 @@ METAPHOR_MAP = {
     "arbeiten": "A cute 3D character sitting at a sleek modern desk, typing happily on a glowing translucent computer keyboard, with tiny sparkles of productivity, front-and-center",
     "arbeitslos": "A cute 3D character sitting thoughtfully on a comfy park bench next to a closed briefcase with a tiny growing green seedling, representing a fresh start and transition, front-and-center",
     "arbeitsplatz": "A modern, ultra-premium 3D desk setup with a sleek curved monitor displaying code, a designer lamp, and a small green succulent plant, floating in mid-air, front-and-center",
-    "arm": "A stylized, athletic 3D arm mannequin with a glowing neon pink sweatband on the wrist, flexed in a strong, energetic pose, front-and-center",
+    "der arm": "A stylized, athletic 3D arm mannequin with a glowing neon pink sweatband on the wrist, flexed in a strong, energetic pose, front-and-center",
     "arzt": "A stylized, premium 3D medical doctor's kit featuring a glowing red medical cross, a sleek stethoscope, and a shiny silver prescription clipboard, front-and-center",
     "auch": "A pair of beautiful, identical 3D golden star badges floating side-by-side in mid-air, representing addition and inclusion, front-and-center",
     "auf sein": "A majestic, minimalist 3D modern arched glass doorway with its double doors swung wide open, revealing a warm, welcoming glowing golden light inside, surrounded by floating star sparkles, with no buildings or signboards, front-and-center",
