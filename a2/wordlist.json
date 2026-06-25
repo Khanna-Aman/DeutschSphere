@@ -1176,8 +1176,10 @@
     "antonym": "langweilig",
     "example_de": "Die letzte Woche war sehr aufregend. Der Film ist nicht besonders aufregend.",
     "example_en": "The last week was very exciting. The film is not particularly exciting.",
-    "image": "images/card_61.svg",
-    "id": 61
+    "image": "images/card_61.webp",
+    "id": 61,
+    "image_tier": "B",
+    "image_path": "images/card_61.webp"
   },
   {
     "german": "aufräumen",
@@ -1196,8 +1198,10 @@
     "antonym": null,
     "example_de": "Die Kinder müssen ihr Zimmer aufräumen.",
     "example_en": "The children must clean up their room.",
-    "image": "images/card_62.svg",
-    "id": 62
+    "image": "images/card_62.webp",
+    "id": 62,
+    "image_tier": "B",
+    "image_path": "images/card_62.webp"
   },
   {
     "german": "aufstehen",
@@ -1216,8 +1220,10 @@
     "antonym": "sitzen bleiben",
     "example_de": "Ich stehe jeden Morgen um sieben Uhr auf.",
     "example_en": "I get up every morning at seven o'clock.",
-    "image": "images/card_63.svg",
-    "id": 63
+    "image": "images/card_63.webp",
+    "id": 63,
+    "image_tier": "B",
+    "image_path": "images/card_63.webp"
   },
   {
     "german": "der Aufzug",
@@ -1232,8 +1238,10 @@
     "antonym": "die Treppe",
     "example_de": "In diesem Haus gibt es keinen Aufzug. Der Aufzug ist leider kaputt.",
     "example_en": "There is no elevator in this house. The elevator is unfortunately broken.",
-    "image": "images/card_64.svg",
-    "id": 64
+    "image": "images/card_64.webp",
+    "id": 64,
+    "image_tier": "B",
+    "image_path": "images/card_64.webp"
   },
   {
     "german": "das Auge",
@@ -1248,8 +1256,10 @@
     "antonym": null,
     "example_de": "Er hat blaue Augen. Mein rechtes Auge tut seit Sonntag weh.",
     "example_en": "He has blue eyes. My right eye has been hurting since Sunday.",
-    "image": "images/card_65.svg",
-    "id": 65
+    "image": "images/card_65.webp",
+    "id": 65,
+    "image_tier": "B",
+    "image_path": "images/card_65.webp"
   },
   {
     "german": "aus sein",
