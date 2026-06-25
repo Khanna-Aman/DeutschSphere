@@ -2052,8 +2052,10 @@
     "antonym": "der Rücken",
     "example_de": "Seit gestern tut mir der Bauch weh.",
     "example_en": "Since yesterday my stomach hurts.",
-    "image": "images/card_106.svg",
-    "id": 106
+    "image": "images/card_106.webp",
+    "id": 106,
+    "image_tier": "B",
+    "image_path": "images/card_106.webp"
   },
   {
     "german": "bauen",
@@ -2072,8 +2074,10 @@
     "antonym": "abreißen",
     "example_de": "Unsere Nachbarn bauen ein neues Haus.",
     "example_en": "Our neighbors are building a new house.",
-    "image": "images/card_107.svg",
-    "id": 107
+    "image": "images/card_107.webp",
+    "id": 107,
+    "image_tier": "B",
+    "image_path": "images/card_107.webp"
   },
   {
     "german": "der Baum",
@@ -2088,8 +2092,10 @@
     "antonym": null,
     "example_de": "Der Baum ist über hundert Jahre alt. Wir haben zwei Apfelbäume im Garten.",
     "example_en": "The tree is over a hundred years old. We have two apple trees in the garden.",
-    "image": "images/card_108.svg",
-    "id": 108
+    "image": "images/card_108.webp",
+    "id": 108,
+    "image_tier": "B",
+    "image_path": "images/card_108.webp"
   },
   {
     "german": "die Baustelle",
@@ -2104,8 +2110,10 @@
     "antonym": null,
     "example_de": "Vor unserem Haus ist eine große Baustelle.",
     "example_en": "In front of our house is a large construction site.",
-    "image": "images/card_109.svg",
-    "id": 109
+    "image": "images/card_109.webp",
+    "id": 109,
+    "image_tier": "B",
+    "image_path": "images/card_109.webp"
   },
   {
     "german": "beantworten",
@@ -2124,8 +2132,10 @@
     "antonym": "fragen",
     "example_de": "Können Sie meine Frage bitte beantworten? Hast du die Mail schon beantwortet?",
     "example_en": "Can you please answer my question? Have you already answered the mail?",
-    "image": "images/card_110.svg",
-    "id": 110
+    "image": "images/card_110.webp",
+    "id": 110,
+    "image_tier": "B",
+    "image_path": "images/card_110.webp"
   },
   {
     "german": "bedeuten",
