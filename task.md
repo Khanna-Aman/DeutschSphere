@@ -149,11 +149,11 @@ To prevent rate-limiting and ensure pristine artistic quality, all generation MU
   - [x] Generate, manually check, and commit Batch 18 (Cards 86–90)
   - [x] Generate, manually check, and commit Batch 19 (Cards 91–95)
   - [x] Generate, manually check, and commit Batch 20 (Cards 96–100)
-- [ ] **Milestone 2: Cards 101–200 (Batches 21–40)** *(Process in strict batches of 5 and manually check all cards)*
-  - [ ] Generate, manually check, and commit Batch 21 (Cards 101–105)
-  - [ ] Generate, manually check, and commit Batch 22 (Cards 106–110)
-  - [ ] Generate, manually check, and commit Batch 23 (Cards 111–115)
-  - [ ] Generate, manually check, and commit Batch 24 (Cards 116–120)
+- [/] **Milestone 2: Cards 101–200 (Batches 21–40)** *(Process in strict batches of 5 and manually check all cards)*
+  - [x] Generate, manually check, and commit Batch 21 (Cards 101–105)
+  - [x] Generate, manually check, and commit Batch 22 (Cards 106–110)
+  - [x] Generate, manually check, and commit Batch 23 (Cards 111–115)
+  - [x] Generate, manually check, and commit Batch 24 (Cards 116–120)
   - [ ] Generate, manually check, and commit Batch 25 (Cards 121–125)
   - [ ] Generate, manually check, and commit Batch 26 (Cards 126–130)
   - [ ] Generate, manually check, and commit Batch 27 (Cards 131–135)
