@@ -1278,8 +1278,10 @@
     "antonym": "an sein",
     "example_de": "Ich sehe nichts. Das Licht ist aus.",
     "example_en": "I see nothing. The light is off.",
-    "image": "images/card_66.svg",
-    "id": 66
+    "image": "images/card_66.webp",
+    "id": 66,
+    "image_tier": "B",
+    "image_path": "images/card_66.webp"
   },
   {
     "german": "der Ausflug",
@@ -1294,8 +1296,10 @@
     "antonym": null,
     "example_de": "Morgen machen wir einen Ausflug nach Heidelberg/an die Ostsee.",
     "example_en": "Tomorrow we are taking an excursion to Heidelberg/to the Baltic Sea.",
-    "image": "images/card_67.svg",
-    "id": 67
+    "image": "images/card_67.webp",
+    "id": 67,
+    "image_tier": "B",
+    "image_path": "images/card_67.webp"
   },
   {
     "german": "ausfüllen",
@@ -1314,8 +1318,10 @@
     "antonym": null,
     "example_de": "Füllen Sie/Füll bitte dieses Formular aus!",
     "example_en": "Please fill out this form!",
-    "image": "images/card_68.svg",
-    "id": 68
+    "image": "images/card_68.webp",
+    "id": 68,
+    "image_tier": "B",
+    "image_path": "images/card_68.webp"
   },
   {
     "german": "der Ausgang",
@@ -1330,8 +1336,10 @@
     "antonym": "der Eingang",
     "example_de": "Entschuldigung, wo ist der Ausgang?",
     "example_en": "Excuse me, where is the exit?",
-    "image": "images/card_69.svg",
-    "id": 69
+    "image": "images/card_69.webp",
+    "id": 69,
+    "image_tier": "B",
+    "image_path": "images/card_69.webp"
   },
   {
     "german": "ausgeben",
@@ -1350,8 +1358,10 @@
     "antonym": "sparen",
     "example_de": "Agata gibt viel Geld für Bücher aus. Ich möchte nicht so viel Geld ausgeben.",
     "example_en": "Agata spends a lot of money on books. I do not want to spend so much money.",
-    "image": "images/card_70.svg",
-    "id": 70
+    "image": "images/card_70.webp",
+    "id": 70,
+    "image_tier": "B",
+    "image_path": "images/card_70.webp"
   },
   {
     "german": "ausgehen",
