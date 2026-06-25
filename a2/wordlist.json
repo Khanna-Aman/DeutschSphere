@@ -1380,8 +1380,10 @@
     "antonym": "zu Hause bleiben",
     "example_de": "Gehen wir am Freitag zusammen aus? Plötzlich ist das Licht ausgegangen.",
     "example_en": "Are we going out together on Friday? Suddenly the light went out.",
-    "image": "images/card_71.svg",
-    "id": 71
+    "image": "images/card_71.webp",
+    "id": 71,
+    "image_tier": "B",
+    "image_path": "images/card_71.webp"
   },
   {
     "german": "die Auskunft",
@@ -1396,8 +1398,10 @@
     "antonym": null,
     "example_de": "Wo ist die Auskunft? Können Sie mir bitte eine Auskunft geben?",
     "example_en": "Where is the information desk? Can you please give me some information?",
-    "image": "images/card_72.svg",
-    "id": 72
+    "image": "images/card_72.webp",
+    "id": 72,
+    "image_tier": "B",
+    "image_path": "images/card_72.webp"
   },
   {
     "german": "das Ausland",
@@ -1412,8 +1416,10 @@
     "antonym": "das Inland",
     "example_de": "Fahren Sie ins Ausland?",
     "example_en": "Are you traveling abroad?",
-    "image": "images/card_73.svg",
-    "id": 73
+    "image": "images/card_73.webp",
+    "id": 73,
+    "image_tier": "B",
+    "image_path": "images/card_73.webp"
   },
   {
     "german": "ausmachen",
@@ -1432,8 +1438,10 @@
     "antonym": "anmachen",
     "example_de": "Mach bitte das Licht aus!",
     "example_en": "Please turn the light off!",
-    "image": "images/card_74.svg",
-    "id": 74
+    "image": "images/card_74.webp",
+    "id": 74,
+    "image_tier": "B",
+    "image_path": "images/card_74.webp"
   },
   {
     "german": "auspacken",
@@ -1452,8 +1460,10 @@
     "antonym": "einpacken",
     "example_de": "Packst du bitte den Koffer aus?",
     "example_en": "Can you please unpack the suitcase?",
-    "image": "images/card_75.svg",
-    "id": 75
+    "image": "images/card_75.webp",
+    "id": 75,
+    "image_tier": "B",
+    "image_path": "images/card_75.webp"
   },
   {
     "german": "aussehen",
