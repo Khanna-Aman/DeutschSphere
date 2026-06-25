@@ -1584,8 +1584,10 @@
     "antonym": null,
     "example_de": "Er fährt mit dem Auto.",
     "example_en": "He travels by car.",
-    "image": "images/card_81.svg",
-    "id": 81
+    "image": "images/card_81.webp",
+    "id": 81,
+    "image_tier": "B",
+    "image_path": "images/card_81.webp"
   },
   {
     "german": "die Autobahn",
@@ -1600,8 +1602,10 @@
     "antonym": "die Landstraße",
     "example_de": "Darf ich mit dem Motorroller auf der Autobahn fahren? Das Dorf liegt direkt an der Autobahn.",
     "example_en": "May I drive on the highway with the motor scooter? The village lies directly on the highway.",
-    "image": "images/card_82.svg",
-    "id": 82
+    "image": "images/card_82.webp",
+    "id": 82,
+    "image_tier": "B",
+    "image_path": "images/card_82.webp"
   },
   {
     "german": "der Automat",
@@ -1616,8 +1620,10 @@
     "antonym": null,
     "example_de": "Fahrkarten gibt es nur am Automaten. In Berlin ist der Fahrkartenautomat auf dem Bahnsteig.",
     "example_en": "Tickets are only available at the ticket machine. In Berlin, the ticket machine is on the platform.",
-    "image": "images/card_83.svg",
-    "id": 83
+    "image": "images/card_83.webp",
+    "id": 83,
+    "image_tier": "B",
+    "image_path": "images/card_83.webp"
   },
   {
     "german": "automatisch",
@@ -1635,8 +1641,10 @@
     "antonym": "manuell",
     "example_de": "Achtung, die Türen schließen automatisch!",
     "example_en": "Attention, the doors close automatically!",
-    "image": "images/card_84.svg",
-    "id": 84
+    "image": "images/card_84.webp",
+    "id": 84,
+    "image_tier": "B",
+    "image_path": "images/card_84.webp"
   },
   {
     "german": "außer",
@@ -1651,8 +1659,10 @@
     "antonym": "inklusive",
     "example_de": "Außer Lisa möchte niemand den Film sehen. Wir haben täglich außer Samstag geöffnet.",
     "example_en": "Except for Lisa, nobody wants to see the film. We are open every day except Saturday.",
-    "image": "images/card_85.svg",
-    "id": 85
+    "image": "images/card_85.webp",
+    "id": 85,
+    "image_tier": "B",
+    "image_path": "images/card_85.webp"
   },
   {
     "german": "außerdem",
