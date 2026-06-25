@@ -2360,8 +2360,10 @@
     "antonym": null,
     "example_de": "Die Aufzüge bitte nicht benutzen!",
     "example_en": "Please do not use the elevators!",
-    "image": "images/card_121.svg",
-    "id": 121
+    "image": "images/card_121.webp",
+    "id": 121,
+    "image_tier": "B",
+    "image_path": "images/card_121.webp"
   },
   {
     "german": "bequem",
@@ -2379,8 +2381,10 @@
     "antonym": "unbequem",
     "example_de": "Das Sofa ist sehr bequem. Meine Kinder ziehen am liebsten bequeme Schuhe an.",
     "example_en": "The sofa is very comfortable. My children prefer to put on comfortable shoes.",
-    "image": "images/card_122.svg",
-    "id": 122
+    "image": "images/card_122.webp",
+    "id": 122,
+    "image_tier": "B",
+    "image_path": "images/card_122.webp"
   },
   {
     "german": "beraten",
@@ -2399,8 +2403,10 @@
     "antonym": null,
     "example_de": "Unsere Sekretärin berät Sie gern, wenn Sie Fragen haben.",
     "example_en": "Our secretary will gladly advise you if you have questions.",
-    "image": "images/card_123.svg",
-    "id": 123
+    "image": "images/card_123.webp",
+    "id": 123,
+    "image_tier": "B",
+    "image_path": "images/card_123.webp"
   },
   {
     "german": "der Berg",
@@ -2415,8 +2421,10 @@
     "antonym": "das Tal",
     "example_de": "Die Zugspitze ist der höchste Berg in Deutschland. Wir fahren am Wochenende in die Berge.",
     "example_en": "The Zugspitze is the highest mountain in Germany. We are traveling to the mountains on the weekend.",
-    "image": "images/card_124.svg",
-    "id": 124
+    "image": "images/card_124.webp",
+    "id": 124,
+    "image_tier": "B",
+    "image_path": "images/card_124.webp"
   },
   {
     "german": "berichten",
@@ -2435,8 +2443,10 @@
     "antonym": null,
     "example_de": "Alle Zeitungen berichten von dem Unfall.",
     "example_en": "All newspapers report on the accident.",
-    "image": "images/card_125.svg",
-    "id": 125
+    "image": "images/card_125.webp",
+    "id": 125,
+    "image_tier": "B",
+    "image_path": "images/card_125.webp"
   },
   {
     "german": "der Beruf",
