@@ -2671,8 +2671,10 @@
     "antonym": "abbestellen",
     "example_de": "Wir möchten bitte bestellen. Dieses Buch haben wir nicht da. Sollen wir es für Sie bestellen?",
     "example_en": "We would like to order, please. We do not have this book here. Should we order it for you?",
-    "image": "images/card_136.svg",
-    "id": 136
+    "image": "images/card_136.webp",
+    "id": 136,
+    "image_tier": "B",
+    "image_path": "images/card_136.webp"
   },
   {
     "german": "bestätigen",
@@ -2691,8 +2693,10 @@
     "antonym": "absagen",
     "example_de": "Ich kann bestätigen, dass er hier war.",
     "example_en": "I can confirm that he was here.",
-    "image": "images/card_137.svg",
-    "id": 137
+    "image": "images/card_137.webp",
+    "id": 137,
+    "image_tier": "B",
+    "image_path": "images/card_137.webp"
   },
   {
     "german": "der Besuch",
@@ -2707,8 +2711,10 @@
     "antonym": null,
     "example_de": "Wir bekommen am Wochenende Besuch. Ich mache einen Besuch im Krankenhaus.",
     "example_en": "We are getting visitors on the weekend. I am making a visit to the hospital.",
-    "image": "images/card_138.svg",
-    "id": 138
+    "image": "images/card_138.webp",
+    "id": 138,
+    "image_tier": "B",
+    "image_path": "images/card_138.webp"
   },
   {
     "german": "besuchen",
@@ -2727,8 +2733,10 @@
     "antonym": null,
     "example_de": "Darf ich dich mal besuchen? Möchtest du mich in den Ferien besuchen?",
     "example_en": "May I visit you sometime? Would you like to visit me during the holidays?",
-    "image": "images/card_139.svg",
-    "id": 139
+    "image": "images/card_139.webp",
+    "id": 139,
+    "image_tier": "B",
+    "image_path": "images/card_139.webp"
   },
   {
     "german": "das Bett",
@@ -2743,8 +2751,10 @@
     "antonym": null,
     "example_de": "Sie ist krank und muss heute im Bett bleiben.",
     "example_en": "She is sick and must stay in bed today.",
-    "image": "images/card_140.svg",
-    "id": 140
+    "image": "images/card_140.webp",
+    "id": 140,
+    "image_tier": "B",
+    "image_path": "images/card_140.webp"
   },
   {
     "german": "die Bewerbung",
