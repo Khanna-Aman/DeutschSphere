@@ -3449,8 +3449,10 @@
     "antonym": null,
     "example_de": "Wann kommt der nächste Bus?",
     "example_en": "When does the next bus come?",
-    "image": "images/card_176.svg",
-    "id": 176
+    "image": "images/card_176.webp",
+    "id": 176,
+    "image_tier": "B",
+    "image_path": "images/card_176.webp"
   },
   {
     "german": "die Butter",
@@ -3465,8 +3467,10 @@
     "antonym": "die Margarine",
     "example_de": "Möchtest du Butter aufs Brot oder nur Käse?",
     "example_en": "Would you like butter on your bread or only cheese?",
-    "image": "images/card_177.svg",
-    "id": 177
+    "image": "images/card_177.webp",
+    "id": 177,
+    "image_tier": "B",
+    "image_path": "images/card_177.webp"
   },
   {
     "german": "die Bäckerei",
@@ -3481,8 +3485,10 @@
     "antonym": null,
     "example_de": "Ich geh mal schnell zur Bäckerei.",
     "example_en": "I am going quickly to the bakery.",
-    "image": "images/card_178.svg",
-    "id": 178
+    "image": "images/card_178.webp",
+    "id": 178,
+    "image_tier": "B",
+    "image_path": "images/card_178.webp"
   },
   {
     "german": "böse",
@@ -3500,8 +3506,10 @@
     "antonym": "lieb / nett",
     "example_de": "Sie ist richtig böse auf mich. Ich habe dein Buch vergessen. Hoffentlich bist du mir nicht böse.",
     "example_en": "She is really angry with me. I forgot your book. Hopefully you are not angry with me.",
-    "image": "images/card_179.svg",
-    "id": 179
+    "image": "images/card_179.webp",
+    "id": 179,
+    "image_tier": "B",
+    "image_path": "images/card_179.webp"
   },
   {
     "german": "das Büro",
@@ -3516,8 +3524,10 @@
     "antonym": null,
     "example_de": "Ich arbeite in einem Büro. Unser Büro ist bis Dienstag geschlossen.",
     "example_en": "I work in an office. Our office is closed until Tuesday.",
-    "image": "images/card_180.svg",
-    "id": 180
+    "image": "images/card_180.webp",
+    "id": 180,
+    "image_tier": "B",
+    "image_path": "images/card_180.webp"
   },
   {
     "german": "die Cafeteria",
