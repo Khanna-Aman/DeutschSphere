@@ -1677,8 +1677,10 @@
     "antonym": null,
     "example_de": "Vier Brötchen, möchten Sie außerdem noch etwas?",
     "example_en": "Four bread rolls, would you like anything else in addition?",
-    "image": "images/card_86.svg",
-    "id": 86
+    "image": "images/card_86.webp",
+    "id": 86,
+    "image_tier": "B",
+    "image_path": "images/card_86.webp"
   },
   {
     "german": "außerhalb",
@@ -1693,8 +1695,10 @@
     "antonym": "innerhalb",
     "example_de": "Die Wohnung ist nicht in der Stadt, sie liegt etwas außerhalb.",
     "example_en": "The apartment is not in the city, it lies somewhat outside.",
-    "image": "images/card_87.svg",
-    "id": 87
+    "image": "images/card_87.webp",
+    "id": 87,
+    "image_tier": "B",
+    "image_path": "images/card_87.webp"
   },
   {
     "german": "das Baby",
@@ -1709,8 +1713,10 @@
     "antonym": "der Erwachsene",
     "example_de": "Wir haben ein Baby. Es ist sechs Wochen alt.",
     "example_en": "We have a baby. It is six weeks old.",
-    "image": "images/card_88.svg",
-    "id": 88
+    "image": "images/card_88.webp",
+    "id": 88,
+    "image_tier": "B",
+    "image_path": "images/card_88.webp"
   },
   {
     "german": "der Babysitter",
@@ -1725,8 +1731,10 @@
     "antonym": null,
     "example_de": "Meine Tochter arbeitet als Babysitter bei einer Familie mit vier Kindern.",
     "example_en": "My daughter works as a babysitter for a family with four children.",
-    "image": "images/card_89.svg",
-    "id": 89
+    "image": "images/card_89.webp",
+    "id": 89,
+    "image_tier": "B",
+    "image_path": "images/card_89.webp"
   },
   {
     "german": "backen",
@@ -1745,8 +1753,10 @@
     "antonym": null,
     "example_de": "Wenn du kommst, backe ich einen Kuchen.",
     "example_en": "When you come, I bake a cake.",
-    "image": "images/card_90.svg",
-    "id": 90
+    "image": "images/card_90.webp",
+    "id": 90,
+    "image_tier": "B",
+    "image_path": "images/card_90.webp"
   },
   {
     "german": "das Bad",
