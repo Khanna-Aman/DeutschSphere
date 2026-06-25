@@ -2566,8 +2566,10 @@
     "antonym": null,
     "example_de": "Kannst du mir den Weg zum Bahnhof beschreiben?",
     "example_en": "Can you describe the way to the train station to me?",
-    "image": "images/card_131.svg",
-    "id": 131
+    "image": "images/card_131.webp",
+    "id": 131,
+    "image_tier": "B",
+    "image_path": "images/card_131.webp"
   },
   {
     "german": "besetzt",
@@ -2585,8 +2587,10 @@
     "antonym": "frei",
     "example_de": "Ist dieser Platz frei? - Nein, er ist besetzt. Die Nummer ist immer besetzt.",
     "example_en": "Is this seat free? - No, it is occupied. The number is always busy.",
-    "image": "images/card_132.svg",
-    "id": 132
+    "image": "images/card_132.webp",
+    "id": 132,
+    "image_tier": "B",
+    "image_path": "images/card_132.webp"
   },
   {
     "german": "besichtigen",
@@ -2605,8 +2609,10 @@
     "antonym": null,
     "example_de": "Ich möchte gern das Schloss besichtigen. Sie können die Wohnung am Mittwochabend besichtigen.",
     "example_en": "I would like to visit the castle. You can view the apartment on Wednesday evening.",
-    "image": "images/card_133.svg",
-    "id": 133
+    "image": "images/card_133.webp",
+    "id": 133,
+    "image_tier": "B",
+    "image_path": "images/card_133.webp"
   },
   {
     "german": "besonders",
@@ -2621,8 +2627,10 @@
     "antonym": "überhaupt nicht",
     "example_de": "Dieses Angebot ist besonders günstig. Hier ist die Pizza besonders gut. Wie geht's? - Nicht besonders.",
     "example_en": "This offer is particularly favorable. The pizza is especially good here. How are you? - Not particularly well.",
-    "image": "images/card_134.svg",
-    "id": 134
+    "image": "images/card_134.webp",
+    "id": 134,
+    "image_tier": "B",
+    "image_path": "images/card_134.webp"
   },
   {
     "german": "bestehen",
@@ -2641,8 +2649,10 @@
     "antonym": "durchfallen",
     "example_de": "Ich habe die Prüfung bestanden! Die Prüfung besteht aus vier Teilen: Hören, Lesen, Schreiben und Sprechen.",
     "example_en": "I passed the exam! The exam consists of four parts: listening, reading, writing and speaking.",
-    "image": "images/card_135.svg",
-    "id": 135
+    "image": "images/card_135.webp",
+    "id": 135,
+    "image_tier": "B",
+    "image_path": "images/card_135.webp"
   },
   {
     "german": "bestellen",
