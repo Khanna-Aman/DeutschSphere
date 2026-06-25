@@ -167,6 +167,15 @@ METAPHOR_MAP = {
     "ausgang": "A minimalist bright-green rectangular board featuring only a simple white 3D silhouette of a running figure escaping through an open doorway next to a glowing green right-pointing arrow, completely wordless with absolutely no letters, characters, or words, front-and-center, premium SOTA asset",
     "ausgeben": "A cute 3D character happily shopping, placing shiny golden coins into a sleek 3D cash register, with small shopping bags and star sparkles surrounding it, representing spending money, completely wordless, front-and-center, premium SOTA asset",
 
+    # Handcrafted A2 early cards (Batch 15: 71 to 75)
+    "ausgehen": "A majestic 3D glass doorway of a glowing, vibrant retro-themed disco club, with tiny glossy characters walking out happily under starry sky beams, completely wordless, front-and-center, premium SOTA asset",
+    "die auskunft": "A premium 3D informational kiosk booth made of polished warm-wood and white glossy plastic, with a large, glowing green circular badge featuring a stylized information 'i' logo floating above it, completely wordless, no letters, front-and-center, premium SOTA asset",
+    "auskunft": "A premium 3D informational kiosk booth made of polished warm-wood and white glossy plastic, with a large, glowing green circular badge featuring a stylized information 'i' logo floating above it, completely wordless, no letters, front-and-center, premium SOTA asset",
+    "das ausland": "A beautiful 3D glossy globe rotating, with stylized glowing golden dotted lines linking together different miniature 3D country landmarks like the Eiffel Tower, Pyramids, and a miniature pagoda floating around it, completely wordless, front-and-center, premium SOTA asset",
+    "ausland": "A beautiful 3D glossy globe rotating, with stylized glowing golden dotted lines linking together different miniature 3D country landmarks like the Eiffel Tower, Pyramids, and a miniature pagoda floating around it, completely wordless, front-and-center, premium SOTA asset",
+    "ausmachen": "A sleek, dark-blue 3D remote control with a prominent glowing pink 'power' button symbol, with soft warm light rays turning off, completely wordless, front-and-center, premium SOTA asset",
+    "auspacken": "A beautifully crafted 3D cardboard delivery box opened wide, with a plush, glossy turquoise toy teddy bear being lifted out of it by floating sparkling golden dust particles, completely wordless, front-and-center, premium SOTA asset",
+
 
     # Handcrafted A1 early cards (1 to 30)
     "abfliegen": "A magnificent, glossy 3D passenger airplane made of pristine white enamel, dramatically angled upwards as it climbs into the air, with glowing golden jet streams trailing behind its chrome engines, front-and-center",
