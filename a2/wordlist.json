@@ -1955,8 +1955,10 @@
     "antonym": null,
     "example_de": "Bei welcher Bank haben Sie Ihr Konto?",
     "example_en": "At which bank do you have your account?",
-    "image": "images/card_101.svg",
-    "id": 101
+    "image": "images/card_101.webp",
+    "id": 101,
+    "image_tier": "B",
+    "image_path": "images/card_101.webp"
   },
   {
     "german": "die Bank",
@@ -1971,8 +1973,10 @@
     "antonym": null,
     "example_de": "Kommt, wir setzen uns auf diese Bank.",
     "example_en": "Come, let's sit on this bench.",
-    "image": "images/card_102.svg",
-    "id": 102
+    "image": "images/card_102.webp",
+    "id": 102,
+    "image_tier": "B",
+    "image_path": "images/card_102.webp"
   },
   {
     "german": "bar",
@@ -1990,8 +1994,10 @@
     "antonym": "mit Karte",
     "example_de": "Muss ich bar zahlen oder geht's auch mit Karte?",
     "example_en": "Must I pay in cash or is it also possible with a card?",
-    "image": "images/card_103.svg",
-    "id": 103
+    "image": "images/card_103.webp",
+    "id": 103,
+    "image_tier": "B",
+    "image_path": "images/card_103.webp"
   },
   {
     "german": "der Basketball",
@@ -2006,8 +2012,10 @@
     "antonym": null,
     "example_de": "Yannick spielt lieber Basketball als Fußball.",
     "example_en": "Yannick prefers playing basketball over football.",
-    "image": "images/card_104.svg",
-    "id": 104
+    "image": "images/card_104.webp",
+    "id": 104,
+    "image_tier": "B",
+    "image_path": "images/card_104.webp"
   },
   {
     "german": "basteln",
@@ -2026,8 +2034,10 @@
     "antonym": null,
     "example_de": "Die Kinder haben etwas gebastelt.",
     "example_en": "The children have crafted something.",
-    "image": "images/card_105.svg",
-    "id": 105
+    "image": "images/card_105.webp",
+    "id": 105,
+    "image_tier": "B",
+    "image_path": "images/card_105.webp"
   },
   {
     "german": "der Bauch",

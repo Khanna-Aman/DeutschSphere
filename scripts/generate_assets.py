@@ -263,7 +263,14 @@ METAPHOR_MAP = {
     "banane": "A single, vibrant yellow 3D banana, partially peeled to reveal glossy cream-white inside, suspended in mid-air, casting a subtle soft self-illuminating glow, front-and-center",
     "band": "A mini 3D glossy concert stage setup with a glittering drum set, a glossy red electric guitar on a stand, and a shiny vintage chrome microphone standing in front, representing a musical band, completely wordless, front-and-center",
     "bank": "An ultra-glossy pink glass 3D piggy bank sitting on a polished wooden park bench, with a giant golden coin floating above it, capturing both bank and bench meanings, floating in mid-air, front-and-center",
+    "bank (bank)": "A grand, miniature 3D classic bank building with glowing white marble columns, a shiny golden coin with a star emblem floating majestically in front of the door, and glossy golden coins spilling out onto a pitch-black studio floor, completely wordless, premium SOTA 3D asset",
+    "die bank (bank)": "A grand, miniature 3D classic bank building with glowing white marble columns, a shiny golden coin with a star emblem floating majestically in front of the door, and glossy golden coins spilling out onto a pitch-black studio floor, completely wordless, premium SOTA 3D asset",
+    "bank (bench)": "A highly detailed, beautiful 3D rustic wooden park bench with black cast iron armrests, sitting peacefully under a glowing streetlamp casting warm light, with a single dry autumn leaf resting on its seat, completely wordless, premium SOTA 3D asset",
+    "die bank (bench)": "A highly detailed, beautiful 3D rustic wooden park bench with black cast iron armrests, sitting peacefully under a glowing streetlamp casting warm light, with a single dry autumn leaf resting on its seat, completely wordless, premium SOTA 3D asset",
     "bar": "A thick, neat stack of vibrant green 3D cash banknotes with glowing golden bands, and shiny golden coins spilling around them, floating suspended in mid-air, front-and-center",
+    "der basketball": "A highly polished, vibrant orange 3D basketball with crisp black ribs, catching sharp studio reflections, flying dynamically through a glowing neon-cyan basketball hoop with a white net, completely wordless, front-and-center, premium SOTA 3D asset",
+    "basketball": "A highly polished, vibrant orange 3D basketball with crisp black ribs, catching sharp studio reflections, flying dynamically through a glowing neon-cyan basketball hoop with a white net, completely wordless, front-and-center, premium SOTA 3D asset",
+    "basteln": "A delightful 3D workspace showcasing creative handicrafts: a pair of glossy red kid's scissors, a bottle of white glue with a glowing orange cap, colorful paper stars, and curled paper ribbons floating together in a playful arrangement, completely wordless, front-and-center, premium SOTA 3D asset",
     "bauch": "A stylized, cute 3D anatomical silhouette of a stomach, glowing with a warm pink internal energy, surrounded by floating golden sparkles, representing comfort and health, floating in mid-air, front-and-center",
     "baum": "A beautiful, miniature 3D bonsai-style oak tree with vibrant emerald-green leaves and a polished rustic brown trunk, floating suspended in mid-air, front-and-center",
     "beamte": "A stylized 3D stamp icon made of gold and chrome, stamping a giant official document with a shiny green wax seal, representing official duties, floating in mid-air, front-and-center",
@@ -1081,8 +1088,22 @@ def generate_metaphor_prompt(word_de, word_en, word_class):
     de_exact = word_de.lower().strip()
     de_clean = re.sub(r'^(der|die|das)\s+', '', word_de.lower()).strip()
     
+    # Extract clean English base to resolve homonyms (e.g. bank (financial institution) vs bank (bench))
+    en_clean = word_en.lower().strip()
+    en_sub = re.sub(r'\(.*?\)', '', en_clean).strip()
+    
+    # Build list of candidate keys to try, from most specific (German + English) to generic (German only)
+    keys_to_try = [
+        f"{de_exact} ({en_clean})",
+        f"{de_clean} ({en_clean})",
+        f"{de_exact} ({en_sub})",
+        f"{de_clean} ({en_sub})",
+        de_exact,
+        de_clean
+    ]
+    
     metaphor = None
-    for item in [de_exact, de_clean]:
+    for item in keys_to_try:
         if item in METAPHOR_MAP:
             metaphor = METAPHOR_MAP[item]
             break
@@ -1090,7 +1111,15 @@ def generate_metaphor_prompt(word_de, word_en, word_class):
     if not metaphor:
         de_exact_strip = de_exact.rstrip('-')
         de_clean_strip = de_clean.rstrip('-')
-        for item in [de_exact_strip, de_clean_strip]:
+        keys_to_try_strip = [
+            f"{de_exact_strip} ({en_clean})",
+            f"{de_clean_strip} ({en_clean})",
+            f"{de_exact_strip} ({en_sub})",
+            f"{de_clean_strip} ({en_sub})",
+            de_exact_strip,
+            de_clean_strip
+        ]
+        for item in keys_to_try_strip:
             if item in METAPHOR_MAP:
                 metaphor = METAPHOR_MAP[item]
                 break
