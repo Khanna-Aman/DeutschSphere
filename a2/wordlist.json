@@ -3348,8 +3348,10 @@
     "antonym": null,
     "example_de": "Was kostet das Buch, bitte? In diesem Wörterbuch finden Sie mehr als 20.000 Wörter.",
     "example_en": "What does the book cost, please? In this dictionary you will find more than 20,000 words.",
-    "image": "images/card_171.svg",
-    "id": 171
+    "image": "images/card_171.webp",
+    "id": 171,
+    "image_tier": "B",
+    "image_path": "images/card_171.webp"
   },
   {
     "german": "buchen",
@@ -3368,8 +3370,10 @@
     "antonym": "stornieren",
     "example_de": "Morgen buche ich unsere Urlaubsreise.",
     "example_en": "Tomorrow I will book our holiday trip.",
-    "image": "images/card_172.svg",
-    "id": 172
+    "image": "images/card_172.webp",
+    "id": 172,
+    "image_tier": "B",
+    "image_path": "images/card_172.webp"
   },
   {
     "german": "der Buchstabe",
@@ -3384,8 +3388,10 @@
     "antonym": "die Zahl",
     "example_de": "Diesen Buchstaben gibt es in meiner Sprache nicht.",
     "example_en": "This letter does not exist in my language.",
-    "image": "images/card_173.svg",
-    "id": 173
+    "image": "images/card_173.webp",
+    "id": 173,
+    "image_tier": "B",
+    "image_path": "images/card_173.webp"
   },
   {
     "german": "buchstabieren",
@@ -3404,8 +3410,10 @@
     "antonym": null,
     "example_de": "Würden Sie bitte Ihren Namen buchstabieren?",
     "example_en": "Would you please spell your name?",
-    "image": "images/card_174.svg",
-    "id": 174
+    "image": "images/card_174.webp",
+    "id": 174,
+    "image_tier": "B",
+    "image_path": "images/card_174.webp"
   },
   {
     "german": "bunt",
@@ -3423,8 +3431,10 @@
     "antonym": "einfarbig",
     "example_de": "Anna trägt gern bunte Kleider. Meine Wohnung ist sehr bunt: Das Wohnzimmer ist rot, die Küche grün und das Bad blau.",
     "example_en": "Anna likes to wear colorful dresses. My apartment is very colorful: The living room is red, the kitchen green and the bathroom blue.",
-    "image": "images/card_175.svg",
-    "id": 175
+    "image": "images/card_175.webp",
+    "id": 175,
+    "image_tier": "B",
+    "image_path": "images/card_175.webp"
   },
   {
     "german": "der Bus",
