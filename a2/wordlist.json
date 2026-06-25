@@ -1482,8 +1482,10 @@
     "antonym": null,
     "example_de": "Wie sieht er aus? - Groß und blond. Sie sieht wie ihre Mutter aus. Das Kleid sieht hübsch aus.",
     "example_en": "What does he look like? - Tall and blond. She looks like her mother. The dress looks pretty.",
-    "image": "images/card_76.svg",
-    "id": 76
+    "image": "images/card_76.webp",
+    "id": 76,
+    "image_tier": "B",
+    "image_path": "images/card_76.webp"
   },
   {
     "german": "aussprechen",
@@ -1502,8 +1504,10 @@
     "antonym": null,
     "example_de": "Wie spricht man das Wort aus?",
     "example_en": "How do you pronounce the word?",
-    "image": "images/card_77.svg",
-    "id": 77
+    "image": "images/card_77.webp",
+    "id": 77,
+    "image_tier": "B",
+    "image_path": "images/card_77.webp"
   },
   {
     "german": "aussteigen",
@@ -1522,8 +1526,10 @@
     "antonym": "einsteigen",
     "example_de": "Wo müssen wir aussteigen? - An der nächsten Haltestelle.",
     "example_en": "Where do we have to get off? - At the next stop.",
-    "image": "images/card_78.svg",
-    "id": 78
+    "image": "images/card_78.webp",
+    "id": 78,
+    "image_tier": "B",
+    "image_path": "images/card_78.webp"
   },
   {
     "german": "austragen",
@@ -1542,8 +1548,10 @@
     "antonym": null,
     "example_de": "Er trägt jeden Morgen die Zeitung aus.",
     "example_en": "He delivers the newspaper every morning.",
-    "image": "images/card_79.svg",
-    "id": 79
+    "image": "images/card_79.webp",
+    "id": 79,
+    "image_tier": "B",
+    "image_path": "images/card_79.webp"
   },
   {
     "german": "der Ausweis",
@@ -1558,8 +1566,10 @@
     "antonym": null,
     "example_de": "Darf ich bitte mal Ihren Ausweis sehen? - Hier ist mein Ausweis.",
     "example_en": "May I please see your ID card? - Here is my ID card.",
-    "image": "images/card_80.svg",
-    "id": 80
+    "image": "images/card_80.webp",
+    "id": 80,
+    "image_tier": "B",
+    "image_path": "images/card_80.webp"
   },
   {
     "german": "das Auto",

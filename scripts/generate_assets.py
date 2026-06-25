@@ -175,6 +175,14 @@ METAPHOR_MAP = {
     "ausmachen": "A sleek, dark-blue 3D remote control with a prominent glowing pink 'power' button symbol, with soft warm light rays turning off, completely wordless, front-and-center, premium SOTA asset",
     "auspacken": "A beautifully crafted 3D cardboard delivery box opened wide, with a plush, glossy turquoise toy teddy bear being lifted out of it by floating sparkling golden dust particles, completely wordless, front-and-center, premium SOTA asset",
 
+    # Handcrafted A2 early cards (Batch 16: 76 to 80)
+    "aussehen": "A charming 3D glossy character standing before a tall, glowing modern full-length mirror, happily examining their reflection which smiles back wearing a tiny floating golden crown and surrounded by magical sparkles, representing looking or appearing beautiful, completely wordless, front-and-center, premium SOTA asset",
+    "aussprechen": "A beautifully stylized 3D set of smiling pink lips, with vibrant 3D sound waves of glowing golden rings and miniature colorful musical notes floating out into the air, symbolizing clear speech and pronunciation, completely wordless, front-and-center, premium SOTA asset",
+    "aussteigen": "A sleek, stylized 3D train carriage with its sliding door open, as a cute glossy blue character happily steps down onto a bright platform under a warm spotlight, representing getting off or exiting transit, completely wordless, front-and-center, premium SOTA asset",
+    "austragen": "A cute 3D mail delivery character riding a miniature glossy turquoise bicycle, happily dropping a rolled-up white newspaper into a glowing red wall-mounted mailbox, representing delivering newspapers or mail, completely wordless, front-and-center, premium SOTA asset",
+    "der ausweis": "A premium, glossy 3D identity card floating at an angle, featuring a cute 3D portrait of a character, a stylized golden shield security emblem, and elegant geometric wave graphics, completely wordless with absolutely zero text or letters, front-and-center, premium SOTA asset",
+    "ausweis": "A premium, glossy 3D identity card floating at an angle, featuring a cute 3D portrait of a character, a stylized golden shield security emblem, and elegant geometric wave graphics, completely wordless with absolutely zero text or letters, front-and-center, premium SOTA asset",
+
 
     # Handcrafted A1 early cards (1 to 30)
     "abfliegen": "A magnificent, glossy 3D passenger airplane made of pristine white enamel, dramatically angled upwards as it climbs into the air, with glowing golden jet streams trailing behind its chrome engines, front-and-center",
