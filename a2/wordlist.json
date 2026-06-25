@@ -2461,8 +2461,10 @@
     "antonym": "die Freizeit",
     "example_de": "Was bist du von Beruf?",
     "example_en": "What is your profession?",
-    "image": "images/card_126.svg",
-    "id": 126
+    "image": "images/card_126.webp",
+    "id": 126,
+    "image_tier": "B",
+    "image_path": "images/card_126.webp"
   },
   {
     "german": "berühmt",
@@ -2480,8 +2482,10 @@
     "antonym": "unbekannt",
     "example_de": "Thomas Müller ist ein berühmter Fußballspieler.",
     "example_en": "Thomas Müller is a famous football player.",
-    "image": "images/card_127.svg",
-    "id": 127
+    "image": "images/card_127.webp",
+    "id": 127,
+    "image_tier": "B",
+    "image_path": "images/card_127.webp"
   },
   {
     "german": "der Bescheid",
@@ -2496,8 +2500,10 @@
     "antonym": null,
     "example_de": "Kann Lisa in Heidelberg studieren? - Sie weiß es noch nicht. Sie bekommt erst nächste Woche Bescheid.",
     "example_en": "Can Lisa study in Heidelberg? - She doesn't know yet. She will get notification only next week.",
-    "image": "images/card_128.svg",
-    "id": 128
+    "image": "images/card_128.webp",
+    "id": 128,
+    "image_tier": "B",
+    "image_path": "images/card_128.webp"
   },
   {
     "german": "Bescheid bekommen",
@@ -2516,8 +2522,10 @@
     "antonym": null,
     "example_de": "Sie bekommt erst nächste Woche Bescheid.",
     "example_en": "She will get notification only next week.",
-    "image": "images/card_129.svg",
-    "id": 129
+    "image": "images/card_129.webp",
+    "id": 129,
+    "image_tier": "B",
+    "image_path": "images/card_129.webp"
   },
   {
     "german": "Bescheid geben / sagen",
@@ -2536,8 +2544,10 @@
     "antonym": null,
     "example_de": "Kannst du mir bis morgen Bescheid geben? Ich frage Herrn Maier und sage Ihnen dann Bescheid.",
     "example_en": "Can you let me know by tomorrow? I will ask Mr. Maier and then let you know.",
-    "image": "images/card_130.svg",
-    "id": 130
+    "image": "images/card_130.webp",
+    "id": 130,
+    "image_tier": "B",
+    "image_path": "images/card_130.webp"
   },
   {
     "german": "beschreiben",
