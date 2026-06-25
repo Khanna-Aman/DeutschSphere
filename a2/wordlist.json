@@ -1865,8 +1865,10 @@
     "antonym": null,
     "example_de": "Ich komme bald. Auf Wiedersehen! Bis bald!",
     "example_en": "I am coming soon. Goodbye! See you soon!",
-    "image": "images/card_96.svg",
-    "id": 96
+    "image": "images/card_96.webp",
+    "id": 96,
+    "image_tier": "B",
+    "image_path": "images/card_96.webp"
   },
   {
     "german": "der Balkon",
@@ -1881,8 +1883,10 @@
     "antonym": null,
     "example_de": "Die Wohnung hat auch einen kleinen Balkon.",
     "example_en": "The apartment also has a small balcony.",
-    "image": "images/card_97.svg",
-    "id": 97
+    "image": "images/card_97.webp",
+    "id": 97,
+    "image_tier": "B",
+    "image_path": "images/card_97.webp"
   },
   {
     "german": "der Ball",
@@ -1897,8 +1901,10 @@
     "antonym": null,
     "example_de": "Meine Kinder spielen gern Ball.",
     "example_en": "My children like to play ball.",
-    "image": "images/card_98.svg",
-    "id": 98
+    "image": "images/card_98.webp",
+    "id": 98,
+    "image_tier": "B",
+    "image_path": "images/card_98.webp"
   },
   {
     "german": "die Banane",
@@ -1913,8 +1919,10 @@
     "antonym": null,
     "example_de": "Drei Bananen, bitte!",
     "example_en": "Three bananas, please!",
-    "image": "images/card_99.svg",
-    "id": 99
+    "image": "images/card_99.webp",
+    "id": 99,
+    "image_tier": "B",
+    "image_path": "images/card_99.webp"
   },
   {
     "german": "die Band",
@@ -1929,8 +1937,10 @@
     "antonym": null,
     "example_de": "Was ist deine Lieblingsband? Anton spielt in einer Band.",
     "example_en": "What is your favorite band? Anton plays in a band.",
-    "image": "images/card_100.svg",
-    "id": 100
+    "image": "images/card_100.webp",
+    "id": 100,
+    "image_tier": "B",
+    "image_path": "images/card_100.webp"
   },
   {
     "german": "die Bank",
