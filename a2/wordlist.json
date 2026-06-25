@@ -2154,8 +2154,10 @@
     "antonym": null,
     "example_de": "Was bedeutet das Wort?",
     "example_en": "What does the word mean?",
-    "image": "images/card_111.svg",
-    "id": 111
+    "image": "images/card_111.webp",
+    "id": 111,
+    "image_tier": "B",
+    "image_path": "images/card_111.webp"
   },
   {
     "german": "beenden",
@@ -2174,8 +2176,10 @@
     "antonym": "beginnen",
     "example_de": "Du musst deine Ausbildung auf jeden Fall beenden.",
     "example_en": "You must finish your training in any case.",
-    "image": "images/card_112.svg",
-    "id": 112
+    "image": "images/card_112.webp",
+    "id": 112,
+    "image_tier": "B",
+    "image_path": "images/card_112.webp"
   },
   {
     "german": "beginnen",
@@ -2194,8 +2198,10 @@
     "antonym": "beenden",
     "example_de": "Das Spiel beginnt um 15.30 Uhr.",
     "example_en": "The game begins at 3:30 pm.",
-    "image": "images/card_113.svg",
-    "id": 113
+    "image": "images/card_113.webp",
+    "id": 113,
+    "image_tier": "B",
+    "image_path": "images/card_113.webp"
   },
   {
     "german": "begründen",
@@ -2214,8 +2220,10 @@
     "antonym": null,
     "example_de": "Bitte begründen Sie Ihre Meinung.",
     "example_en": "Please justify your opinion.",
-    "image": "images/card_114.svg",
-    "id": 114
+    "image": "images/card_114.webp",
+    "id": 114,
+    "image_tier": "B",
+    "image_path": "images/card_114.webp"
   },
   {
     "german": "bei",
@@ -2230,8 +2238,10 @@
     "antonym": null,
     "example_de": "Offenbach liegt bei Frankfurt. Ich wohne bei meinen Eltern.",
     "example_en": "Offenbach is near Frankfurt. I live with my parents.",
-    "image": "images/card_115.svg",
-    "id": 115
+    "image": "images/card_115.webp",
+    "id": 115,
+    "image_tier": "B",
+    "image_path": "images/card_115.webp"
   },
   {
     "german": "beide",
@@ -2246,8 +2256,10 @@
     "antonym": "kein-",
     "example_de": "Wir kommen beide. Welche Bluse möchten Sie, die rote oder die grüne? - Ich nehme beide.",
     "example_en": "We are both coming. Which blouse would you like, the red or the green one? - I will take both.",
-    "image": "images/card_116.svg",
-    "id": 116
+    "image": "images/card_116.webp",
+    "id": 116,
+    "image_tier": "B",
+    "image_path": "images/card_116.webp"
   },
   {
     "german": "das Bein",
@@ -2262,8 +2274,10 @@
     "antonym": "der Arm",
     "example_de": "Mein rechtes Bein tut weh.",
     "example_en": "My right leg hurts.",
-    "image": "images/card_117.svg",
-    "id": 117
+    "image": "images/card_117.webp",
+    "id": 117,
+    "image_tier": "B",
+    "image_path": "images/card_117.webp"
   },
   {
     "german": "bekannt",
@@ -2281,8 +2295,10 @@
     "antonym": "unbekannt",
     "example_de": "Picasso ist sehr bekannt. Er ist ein bekannter Maler.",
     "example_en": "Picasso is very well-known. He is a famous painter.",
-    "image": "images/card_118.svg",
-    "id": 118
+    "image": "images/card_118.webp",
+    "id": 118,
+    "image_tier": "B",
+    "image_path": "images/card_118.webp"
   },
   {
     "german": "bekommen",
@@ -2301,8 +2317,10 @@
     "antonym": "geben",
     "example_de": "Haben Sie meinen Brief bekommen? Aspirin bekommen Sie in der Apotheke.",
     "example_en": "Did you receive my letter? You get aspirin in the pharmacy.",
-    "image": "images/card_119.svg",
-    "id": 119
+    "image": "images/card_119.webp",
+    "id": 119,
+    "image_tier": "B",
+    "image_path": "images/card_119.webp"
   },
   {
     "german": "beliebt",
@@ -2320,8 +2338,10 @@
     "antonym": "unbeliebt",
     "example_de": "Fußball ist bei vielen Menschen beliebt.",
     "example_en": "Football is popular with many people.",
-    "image": "images/card_120.svg",
-    "id": 120
+    "image": "images/card_120.webp",
+    "id": 120,
+    "image_tier": "B",
+    "image_path": "images/card_120.webp"
   },
   {
     "german": "benutzen",
