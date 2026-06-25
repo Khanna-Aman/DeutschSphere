@@ -2963,8 +2963,10 @@
     "antonym": "danken",
     "example_de": "Darf ich Sie um etwas bitten?",
     "example_en": "May I ask you for something?",
-    "image": "images/card_151.svg",
-    "id": 151
+    "image": "images/card_151.webp",
+    "id": 151,
+    "image_tier": "B",
+    "image_path": "images/card_151.webp"
   },
   {
     "german": "bitter",
@@ -2982,8 +2984,10 @@
     "antonym": "süß",
     "example_de": "Kaffee ohne Zucker schmeckt bitter.",
     "example_en": "Coffee without sugar tastes bitter.",
-    "image": "images/card_152.svg",
-    "id": 152
+    "image": "images/card_152.webp",
+    "id": 152,
+    "image_tier": "B",
+    "image_path": "images/card_152.webp"
   },
   {
     "german": "das Blatt",
@@ -2998,8 +3002,10 @@
     "antonym": null,
     "example_de": "Haben Sie ein Blatt Papier für mich? Die Bäume haben schon gelbe Blätter.",
     "example_en": "Do you have a sheet of paper for me? The trees already have yellow leaves.",
-    "image": "images/card_153.svg",
-    "id": 153
+    "image": "images/card_153.webp",
+    "id": 153,
+    "image_tier": "B",
+    "image_path": "images/card_153.webp"
   },
   {
     "german": "bleiben",
@@ -3018,8 +3024,10 @@
     "antonym": "gehen",
     "example_de": "Wir bleiben drei Tage in Berlin. Bitte bleiben Sie stehen! Oh nein, meine Uhr ist stehen geblieben. Wie spät ist es? Ich bleibe heute zu Hause.",
     "example_en": "We are staying in Berlin for three days. Please stand still! Oh no, my watch has stopped. What time is it? I am staying at home today.",
-    "image": "images/card_154.svg",
-    "id": 154
+    "image": "images/card_154.webp",
+    "id": 154,
+    "image_tier": "B",
+    "image_path": "images/card_154.webp"
   },
   {
     "german": "der Bleistift",
@@ -3034,8 +3042,10 @@
     "antonym": null,
     "example_de": "Hast du einen Bleistift?",
     "example_en": "Do you have a pencil?",
-    "image": "images/card_155.svg",
-    "id": 155
+    "image": "images/card_155.webp",
+    "id": 155,
+    "image_tier": "B",
+    "image_path": "images/card_155.webp"
   },
   {
     "german": "der Blog",
