@@ -1067,8 +1067,10 @@
     "antonym": "auf jeden Fall",
     "example_de": "Ich möchte auf jeden Fall den neuen James-Bond-Film sehen. - Wirklich? Ich finde James-Bond-Filme langweilig. Ich sehe ihn auf keinen Fall an!",
     "example_en": "I definitely want to see the new James Bond movie. - Really? I find James Bond movies boring. I will under no circumstances watch it!",
-    "image": "images/card_56.svg",
-    "id": 56
+    "image": "images/card_56.webp",
+    "id": 56,
+    "image_tier": "B",
+    "image_path": "images/card_56.webp"
   },
   {
     "german": "auf sein",
@@ -1087,8 +1089,10 @@
     "antonym": "zu sein",
     "example_de": "Das Fenster ist noch auf.",
     "example_en": "The window is still open.",
-    "image": "images/card_57.svg",
-    "id": 57
+    "image": "images/card_57.webp",
+    "id": 57,
+    "image_tier": "B",
+    "image_path": "images/card_57.webp"
   },
   {
     "german": "aufhören",
@@ -1107,8 +1111,10 @@
     "antonym": "anfangen",
     "example_de": "Wann hört ihr mit der Arbeit auf? Kannst du bitte damit aufhören? Ich muss jetzt arbeiten.",
     "example_en": "When do you stop working? Can you please stop that? I have to work now.",
-    "image": "images/card_58.svg",
-    "id": 58
+    "image": "images/card_58.webp",
+    "id": 58,
+    "image_tier": "B",
+    "image_path": "images/card_58.webp"
   },
   {
     "german": "aufmachen",
@@ -1127,8 +1133,10 @@
     "antonym": "zumachen",
     "example_de": "Kannst du bitte die Tür aufmachen?",
     "example_en": "Can you please open the door?",
-    "image": "images/card_59.svg",
-    "id": 59
+    "image": "images/card_59.webp",
+    "id": 59,
+    "image_tier": "B",
+    "image_path": "images/card_59.webp"
   },
   {
     "german": "aufpassen",
@@ -1147,8 +1155,10 @@
     "antonym": null,
     "example_de": "Pass auf, der Teller fällt gleich auf den Boden! Der Babysitter passt heute Abend auf die Kinder auf. Er passt im Unterricht nicht auf.",
     "example_en": "Watch out, the plate is about to fall on the floor! The babysitter is looking after the children tonight. He does not pay attention in class.",
-    "image": "images/card_60.svg",
-    "id": 60
+    "image": "images/card_60.webp",
+    "id": 60,
+    "image_tier": "B",
+    "image_path": "images/card_60.webp"
   },
   {
     "german": "aufregend",
