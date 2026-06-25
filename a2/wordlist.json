@@ -3060,8 +3060,10 @@
     "antonym": null,
     "example_de": "Ich schreibe einen Blog über Mode.",
     "example_en": "I write a blog about fashion.",
-    "image": "images/card_156.svg",
-    "id": 156
+    "image": "images/card_156.webp",
+    "id": 156,
+    "image_tier": "B",
+    "image_path": "images/card_156.webp"
   },
   {
     "german": "blond",
@@ -3079,8 +3081,10 @@
     "antonym": "dunkel",
     "example_de": "Lisa hat blonde Haare.",
     "example_en": "Lisa has blonde hair.",
-    "image": "images/card_157.svg",
-    "id": 157
+    "image": "images/card_157.webp",
+    "id": 157,
+    "image_tier": "B",
+    "image_path": "images/card_157.webp"
   },
   {
     "german": "die Blume",
@@ -3095,8 +3099,10 @@
     "antonym": null,
     "example_de": "Gefallen dir die Blumen?",
     "example_en": "Do you like the flowers?",
-    "image": "images/card_158.svg",
-    "id": 158
+    "image": "images/card_158.webp",
+    "id": 158,
+    "image_tier": "B",
+    "image_path": "images/card_158.webp"
   },
   {
     "german": "die Bluse",
@@ -3111,8 +3117,10 @@
     "antonym": null,
     "example_de": "Ich suche eine weiße Bluse.",
     "example_en": "I am looking for a white blouse.",
-    "image": "images/card_159.svg",
-    "id": 159
+    "image": "images/card_159.webp",
+    "id": 159,
+    "image_tier": "B",
+    "image_path": "images/card_159.webp"
   },
   {
     "german": "blöd",
@@ -3130,8 +3138,10 @@
     "antonym": "toll",
     "example_de": "Ich finde es blöd, dass du morgen gehen musst.",
     "example_en": "I think it is stupid that you have to go tomorrow.",
-    "image": "images/card_160.svg",
-    "id": 160
+    "image": "images/card_160.webp",
+    "id": 160,
+    "image_tier": "B",
+    "image_path": "images/card_160.webp"
   },
   {
     "german": "die Bohne",
