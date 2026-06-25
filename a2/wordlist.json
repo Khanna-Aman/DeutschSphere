@@ -977,8 +977,10 @@
     "antonym": "das Bein",
     "example_de": "Mein Arm tut weh.",
     "example_en": "My arm hurts.",
-    "image": "images/card_51.svg",
-    "id": 51
+    "image": "images/card_51.webp",
+    "id": 51,
+    "image_tier": "B",
+    "image_path": "images/card_51.webp"
   },
   {
     "german": "der Artikel",
@@ -993,8 +995,10 @@
     "antonym": null,
     "example_de": "Im Deutschen gibt es drei Artikel: der, die und das. Ich habe in der Zeitung einen interessanten Artikel gelesen.",
     "example_en": "In German there are three articles: der, die and das. I read an interesting article in the newspaper.",
-    "image": "images/card_52.svg",
-    "id": 52
+    "image": "images/card_52.webp",
+    "id": 52,
+    "image_tier": "B",
+    "image_path": "images/card_52.webp"
   },
   {
     "german": "auch",
@@ -1009,8 +1013,10 @@
     "antonym": null,
     "example_de": "Ich bin auch Spanier. Maria muss auch am Wochenende arbeiten.",
     "example_en": "I am also Spanish. Maria also has to work on the weekend.",
-    "image": "images/card_53.svg",
-    "id": 53
+    "image": "images/card_53.webp",
+    "id": 53,
+    "image_tier": "B",
+    "image_path": "images/card_53.webp"
   },
   {
     "german": "auf",
@@ -1025,8 +1031,10 @@
     "antonym": "unter",
     "example_de": "Das Wörterbuch liegt auf dem Tisch. Die Kinder spielen auf der Straße. Am Samstag gehen wir auf eine Party. Meine Eltern wohnen auf dem Land. Auf dem Foto ist auch meine Schwester. Die Tür ist auf, kommen Sie rein! Hat das Geschäft noch auf? Auf Wiedersehen. Wie heißt das auf Deutsch?",
     "example_en": "The dictionary is on the table. The children are playing on the street. On Saturday we are going to a party. My parents live in the country. My sister is also in the photo. The door is open, come in! Is the shop still open? Goodbye. What is that called in German?",
-    "image": "images/card_54.svg",
-    "id": 54
+    "image": "images/card_54.webp",
+    "id": 54,
+    "image_tier": "B",
+    "image_path": "images/card_54.webp"
   },
   {
     "german": "auf jeden Fall",
@@ -1041,8 +1049,10 @@
     "antonym": "auf keinen Fall",
     "example_de": "Ich möchte auf jeden Fall den neuen James-Bond-Film sehen. - Wirklich? Ich finde James-Bond-Filme langweilig. Ich sehe ihn auf keinen Fall an!",
     "example_en": "I definitely want to see the new James Bond movie. - Really? I find James Bond movies boring. I will under no circumstances watch it!",
-    "image": "images/card_55.svg",
-    "id": 55
+    "image": "images/card_55.webp",
+    "id": 55,
+    "image_tier": "B",
+    "image_path": "images/card_55.webp"
   },
   {
     "german": "auf keinen Fall",

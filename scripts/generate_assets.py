@@ -134,6 +134,39 @@ METAPHOR_MAP = {
     "arbeitslos": "A cute 3D character sitting thoughtfully on a comfy park bench next to a closed briefcase with a tiny growing green seedling, representing a fresh start and transition, completely wordless, front-and-center, premium SOTA asset",
     "arm": "An empty, beautifully crafted 3D leather wallet lying open, with tiny glowing dust particles floating out of it, next to a single shiny copper coin on a dark surface, representing having very little money, completely wordless, front-and-center, premium SOTA asset",
 
+    # Handcrafted A2 early cards (Batch 11: 51 to 55)
+    "der arm": "A stylized, athletic 3D arm mannequin with a glowing neon pink sweatband on the wrist, flexed in a strong, energetic pose, completely wordless, front-and-center, premium SOTA asset",
+    "der artikel": "A pristine 3D newspaper layout floating in mid-air, with a magnifying glass hovering over a beautifully formatted column section that features a mini glowing gold star icon, completely wordless, no real letters, front-and-center, premium SOTA asset",
+    "artikel": "A pristine 3D newspaper layout floating in mid-air, with a magnifying glass hovering over a beautifully formatted column section that features a mini glowing gold star icon, completely wordless, no real letters, front-and-center, premium SOTA asset",
+    "auch": "A pair of beautiful, identical 3D golden star badges floating side-by-side in mid-air, representing addition and inclusion, completely wordless, front-and-center, premium SOTA asset",
+    "auf": "A cute 3D kitten sitting on top of a comfortable wooden stool, looking happy, completely wordless, front-and-center, premium SOTA asset",
+    "auf jeden fall": "A bold glowing green circular 3D badge with a huge glossy green checkmark symbol inside, radiating bright gold star sparkles and light beams, representing absolute certainty and definitely, completely wordless, front-and-center, premium SOTA asset",
+
+    # Handcrafted A2 early cards (Batch 12: 56 to 60)
+    "auf keinen fall": "A bold glowing red circular 3D badge with a large glossy white 'X' symbol inside, with red warning sparkles and a subtle grey smoke swirl around it, representing absolute denial and definitely not, completely wordless, front-and-center, premium SOTA asset",
+    "auf sein": "A majestic, minimalist 3D modern arched glass doorway with its double doors swung wide open, revealing a warm, welcoming glowing golden light inside, surrounded by floating star sparkles, with no buildings or signboards, completely wordless, front-and-center, premium SOTA asset",
+    "aufhören": "A classic, bold red 3D stop sign with a polished chrome border, floating in a dark studio void, representing stopping or ending, completely wordless, front-and-center, premium SOTA asset",
+    "aufmachen": "A beautiful 3D glossy wooden box with its hinged lid being lifted wide open by a gentle golden light beam floating out from inside, with tiny sparkles, representing to open, completely wordless, front-and-center, premium SOTA asset",
+    "aufpassen": "A cute, alert 3D character wearing large glossy safety goggles, holding a massive magnifying glass and looking ahead attentively, with a glowing yellow exclamation mark bubble hovering nearby, representing paying attention, completely wordless, front-and-center, premium SOTA asset",
+
+    # Handcrafted A2 early cards (Batch 13: 61 to 65)
+    "aufregend": "A majestic 3D wooden roller coaster car rushing down a steep drop with a cute glossy character screaming happily, hands high, with wind lines and colorful starbursts, representing exciting, completely wordless, front-and-center, premium SOTA asset",
+    "aufräumen": "A cute 3D character happily sweeping sparkling golden dust on a polished wooden floor with a tiny glossy broom, next to a neat stack of colorful toy blocks, representing tidying up, completely wordless, front-and-center, premium SOTA asset",
+    "aufstehen": "A cute, stylized 3D character waking up and stretching happily as they rise from a cozy wooden bed, surrounded by a smiling glowing yellow sun, completely wordless, front-and-center, premium SOTA asset",
+    "der aufzug": "A high-tech, futuristic 3D elevator cabin made of translucent glowing glass and chrome, with green arrows pointing upward, floating suspended, completely wordless, front-and-center, premium SOTA asset",
+    "aufzug": "A high-tech, futuristic 3D elevator cabin made of translucent glowing glass and chrome, with green arrows pointing upward, floating suspended, completely wordless, front-and-center, premium SOTA asset",
+    "das auge": "A stunning, stylized 3D model of a beautiful blue eye with realistic glossy reflections and long thick eyelashes, capturing 100% eye essence, completely wordless, front-and-center, premium SOTA asset",
+    "auge": "A stunning, stylized 3D model of a beautiful blue eye with realistic glossy reflections and long thick eyelashes, capturing 100% eye essence, completely wordless, front-and-center, premium SOTA asset",
+
+    # Handcrafted A2 early cards (Batch 14: 66 to 70)
+    "aus sein": "A cute 3D wall light switch in a pink frame, with the toggle flipped down to the off position, completely wordless, front-and-center, premium SOTA asset",
+    "der ausflug": "A tiny cute 3D backpacker character happily hiking along a miniature mountain path, carrying a tiny blue backpack, completely wordless, front-and-center, premium SOTA asset",
+    "ausflug": "A tiny cute 3D backpacker character happily hiking along a miniature mountain path, carrying a tiny blue backpack, completely wordless, front-and-center, premium SOTA asset",
+    "ausfüllen": "A cute 3D character smilingly holding a giant pencil, drawing a checkmark on a completely blank list with simple empty square outlines and absolutely zero text, completely wordless, front-and-center, premium SOTA asset",
+    "der ausgang": "A minimalist bright-green rectangular board featuring only a simple white 3D silhouette of a running figure escaping through an open doorway next to a glowing green right-pointing arrow, completely wordless with absolutely no letters, characters, or words, front-and-center, premium SOTA asset",
+    "ausgang": "A minimalist bright-green rectangular board featuring only a simple white 3D silhouette of a running figure escaping through an open doorway next to a glowing green right-pointing arrow, completely wordless with absolutely no letters, characters, or words, front-and-center, premium SOTA asset",
+    "ausgeben": "A cute 3D character happily shopping, placing shiny golden coins into a sleek 3D cash register, with small shopping bags and star sparkles surrounding it, representing spending money, completely wordless, front-and-center, premium SOTA asset",
+
 
     # Handcrafted A1 early cards (1 to 30)
     "abfliegen": "A magnificent, glossy 3D passenger airplane made of pristine white enamel, dramatically angled upwards as it climbs into the air, with glowing golden jet streams trailing behind its chrome engines, front-and-center",
