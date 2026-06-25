@@ -35,7 +35,7 @@ Each category has been graded on a strict evaluation scale from **D** (substanda
 * **No Layout Shift (CLS):** Utilizing CSS Grid for accordion elements (`grid-template-rows: 0fr -> 1fr` transition) prevents vertical page jitter and layout-shift jankiness.
 
 #### 🔴 Friction Points
-* ~~**Missing Illustrations in V1.0.0:** To guarantee a 100% 404-free E2E footprint, image illustrations are temporarily deactivated in V1.0.0.~~ **✅ Resolved in V1.0.1 Sprint:** We are actively populating all vocabulary with premium, optimized 3D Claymation and glassmorphic WebP assets (averaging <9.5 KB per image for instant offline load). Level A1 is currently **100.0% complete (640/640 assets generated, audited, and committed)**, fully resolving this gap for visual learners!
+* ~~**Missing Illustrations in V1.0.0:** To guarantee a 100% 404-free E2E footprint, image illustrations are temporarily deactivated in V1.0.0.~~ **✅ Resolved in V1.0.1 Sprint:** We are actively populating all vocabulary with premium, optimized 3D Claymation and glassmorphic WebP assets (averaging <9.5 KB per image for instant offline load). Level A1 is **100.0% complete (640/640 assets generated, audited, and committed)**, and Level A2 is actively underway with **80 cards complete (Cards 1–80 generated, audited, and committed)**, fully resolving this gap for visual learners!
 
 ---
 
