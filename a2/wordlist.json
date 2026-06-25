@@ -3254,8 +3254,10 @@
     "antonym": null,
     "example_de": "Wo ist meine Brille? Mit dieser Brille kann ich nicht mehr gut sehen.",
     "example_en": "Where are my glasses? With these glasses I cannot see well anymore.",
-    "image": "images/card_166.svg",
-    "id": 166
+    "image": "images/card_166.webp",
+    "id": 166,
+    "image_tier": "B",
+    "image_path": "images/card_166.webp"
   },
   {
     "german": "bringen",
@@ -3274,8 +3276,10 @@
     "antonym": "holen",
     "example_de": "Bringen Sie mir bitte noch einen Kaffee! Wir müssen Max ins Krankenhaus bringen.",
     "example_en": "Bring me another coffee, please! We must take Max to the hospital.",
-    "image": "images/card_167.svg",
-    "id": 167
+    "image": "images/card_167.webp",
+    "id": 167,
+    "image_tier": "B",
+    "image_path": "images/card_167.webp"
   },
   {
     "german": "das Brot",
@@ -3290,8 +3294,10 @@
     "antonym": null,
     "example_de": "Nimm doch noch ein Brot für das Abendessen. Haben Sie auch Weißbrot?",
     "example_en": "Take another loaf of bread for dinner. Do you also have white bread?",
-    "image": "images/card_168.svg",
-    "id": 168
+    "image": "images/card_168.webp",
+    "id": 168,
+    "image_tier": "B",
+    "image_path": "images/card_168.webp"
   },
   {
     "german": "das Brötchen",
@@ -3306,8 +3312,10 @@
     "antonym": null,
     "example_de": "Möchtest du Brot oder Brötchen zum Frühstück?",
     "example_en": "Would you like bread or bread rolls for breakfast?",
-    "image": "images/card_169.svg",
-    "id": 169
+    "image": "images/card_169.webp",
+    "id": 169,
+    "image_tier": "B",
+    "image_path": "images/card_169.webp"
   },
   {
     "german": "die Brücke",
@@ -3322,8 +3330,10 @@
     "antonym": null,
     "example_de": "Fahren Sie über die nächste Brücke und dann nach links.",
     "example_en": "Drive over the next bridge and then to the left.",
-    "image": "images/card_170.svg",
-    "id": 170
+    "image": "images/card_170.webp",
+    "id": 170,
+    "image_tier": "B",
+    "image_path": "images/card_170.webp"
   },
   {
     "german": "das Buch",
