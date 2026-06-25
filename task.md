@@ -154,7 +154,7 @@ To prevent rate-limiting and ensure pristine artistic quality, all generation MU
   - [x] Generate, manually check, and commit Batch 22 (Cards 106–110)
   - [x] Generate, manually check, and commit Batch 23 (Cards 111–115)
   - [x] Generate, manually check, and commit Batch 24 (Cards 116–120)
-  - [ ] Generate, manually check, and commit Batch 25 (Cards 121–125)
+  - [x] Generate, manually check, and commit Batch 25 (Cards 121–125)
   - [ ] Generate, manually check, and commit Batch 26 (Cards 126–130)
   - [ ] Generate, manually check, and commit Batch 27 (Cards 131–135)
   - [ ] Generate, manually check, and commit Batch 28 (Cards 136–140)
