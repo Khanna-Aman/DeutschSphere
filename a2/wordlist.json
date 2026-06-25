@@ -1771,8 +1771,10 @@
     "antonym": null,
     "example_de": "Das Haus ist sehr alt. Es hat kein Bad. Im Winter nehme ich gern ein warmes Bad.",
     "example_en": "The house is very old. It has no bathroom. In winter I like to take a warm bath.",
-    "image": "images/card_91.svg",
-    "id": 91
+    "image": "images/card_91.webp",
+    "id": 91,
+    "image_tier": "B",
+    "image_path": "images/card_91.webp"
   },
   {
     "german": "baden",
@@ -1791,8 +1793,10 @@
     "antonym": null,
     "example_de": "Ich bade nicht so gern, ich dusche lieber. In diesem See darf man nicht baden.",
     "example_en": "I do not like bathing that much, I prefer showering. One may not swim in this lake.",
-    "image": "images/card_92.svg",
-    "id": 92
+    "image": "images/card_92.webp",
+    "id": 92,
+    "image_tier": "B",
+    "image_path": "images/card_92.webp"
   },
   {
     "german": "die Bahn",
@@ -1807,8 +1811,10 @@
     "antonym": null,
     "example_de": "Wir fahren lieber mit der Bahn als mit dem Bus. Ich nehme die nächste S-Bahn.",
     "example_en": "We prefer to travel by train rather than by bus. I will take the next S-Bahn.",
-    "image": "images/card_93.svg",
-    "id": 93
+    "image": "images/card_93.webp",
+    "id": 93,
+    "image_tier": "B",
+    "image_path": "images/card_93.webp"
   },
   {
     "german": "der Bahnhof",
@@ -1823,8 +1829,10 @@
     "antonym": null,
     "example_de": "Entschuldigung, komme ich hier zum Bahnhof?",
     "example_en": "Excuse me, do I get to the train station here?",
-    "image": "images/card_94.svg",
-    "id": 94
+    "image": "images/card_94.webp",
+    "id": 94,
+    "image_tier": "B",
+    "image_path": "images/card_94.webp"
   },
   {
     "german": "der Bahnsteig",
@@ -1839,8 +1847,10 @@
     "antonym": null,
     "example_de": "Auf Hauptbahnhöfen gibt es meist viele Bahnsteige.",
     "example_en": "At main train stations there are usually many platforms.",
-    "image": "images/card_95.svg",
-    "id": 95
+    "image": "images/card_95.webp",
+    "id": 95,
+    "image_tier": "B",
+    "image_path": "images/card_95.webp"
   },
   {
     "german": "bald",
