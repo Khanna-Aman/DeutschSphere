@@ -1132,7 +1132,7 @@ def trim_and_center(img, target_size=(256, 256), padding_percent=0.05):
     canvas.paste(resized, (px, py), resized)
     return canvas
 
-def generate_metaphor_prompt(word_de, word_en, word_class):
+def generate_metaphor_prompt(word_de, word_en, word_class, curated_metaphors=None):
     """
     Resolves the German word class and details to build a highly descriptive 
     visual prompt tailored for SOTA Cutting-Edge 3D Glossy and Tactile assets.
@@ -1176,6 +1176,15 @@ def generate_metaphor_prompt(word_de, word_en, word_class):
             if item in METAPHOR_MAP:
                 metaphor = METAPHOR_MAP[item]
                 break
+
+    # If not in METAPHOR_MAP, check curated_metaphors from our pre-curator
+    if not metaphor and curated_metaphors:
+        if word_de in curated_metaphors:
+            metaphor = curated_metaphors[word_de]
+        elif de_clean in curated_metaphors:
+            metaphor = curated_metaphors[de_clean]
+        elif de_exact in curated_metaphors:
+            metaphor = curated_metaphors[de_exact]
                 
     # If still not found, use dynamic fallback prompts based on word classes
     if not metaphor:
@@ -1257,7 +1266,7 @@ def main():
         if os.path.exists(gac_abs):
             os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = gac_abs
 
-    use_vertex = bool(os.environ.get("GOOGLE_APPLICATION_CREDENTIALS"))
+    use_vertex = bool(os.environ.get("GOOGLE_APPLICATION_CREDENTIALS")) or bool(os.environ.get("GCP_PROJECT"))
     
     if use_vertex:
         gcp_project = os.environ.get("GCP_PROJECT") or os.environ.get("GOOGLE_CLOUD_PROJECT")
@@ -1270,7 +1279,8 @@ def main():
         print(f"📡 Integration Path: Google Cloud Vertex AI Mode")
         print(f"   Project:  {gcp_project}")
         print(f"   Location: {gcp_location}")
-        print(f"   Key File: {os.environ.get('GOOGLE_APPLICATION_CREDENTIALS')}")
+        key_file_display = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS") or "None (Using Local Application Default Credentials via gcloud)"
+        print(f"   Key File: {key_file_display}")
         print("=========================================================")
         client = genai.Client(vertexai=True, project=gcp_project, location=gcp_location)
     else:
@@ -1301,6 +1311,17 @@ def main():
 
     with open(json_path, "r", encoding="utf-8") as f:
         wordlist = json.load(f)
+
+    # Load pre-curated metaphors lookahead if available
+    curated_json_path = os.path.join(level_dir, "curated_metaphors.json")
+    curated_metaphors = {}
+    if os.path.exists(curated_json_path):
+        try:
+            with open(curated_json_path, "r", encoding="utf-8") as f:
+                curated_metaphors = json.load(f)
+            print(f"Loaded {len(curated_metaphors)} pre-curated metaphors from cache.")
+        except Exception as e:
+            print(f"⚠️ Warning: Could not parse curated_metaphors.json: {e}")
 
     # Filter items that need generation
     skip_ids = [s.strip() for s in args.skip.split(",") if s.strip()]
@@ -1343,7 +1364,7 @@ def main():
         webp_filename = f"card_{card_id}.webp"
         output_webp_path = os.path.join(images_dir, webp_filename)
 
-        prompt = generate_metaphor_prompt(german, english, word_class)
+        prompt = generate_metaphor_prompt(german, english, word_class, curated_metaphors=curated_metaphors)
         
         # Add a pacing delay before we generate (if we have successfully generated some cards)
         if index > 0 and generated_count > 0:
@@ -1357,7 +1378,7 @@ def main():
 
         try:
             # Query SOTA Imagen 3 model via google-genai with exponential backoff on 429
-            max_retries = 4
+            max_retries = 15
             backoff_base = 15
             response = None
             
@@ -1379,8 +1400,8 @@ def main():
                 except Exception as e:
                     err_str = str(e).lower()
                     if "429" in err_str or "resource_exhausted" in err_str or "quota" in err_str:
-                        # Exponential backoff
-                        sleep_time = backoff_base * (2 ** attempt)
+                        # Exponential backoff with progressive capping at 180s
+                        sleep_time = min(backoff_base * (2 ** attempt), 180)
                         print(f"  ⚠️ Rate limited (429/Quota). Retrying in {sleep_time}s... (Attempt {attempt+1}/{max_retries})")
                         time.sleep(sleep_time)
                     else:
@@ -1424,6 +1445,21 @@ def main():
             
             generated_count += 1
             updated_wordlist = True
+
+            # Incremental save directly back to wordlist database to prevent data loss on crash/interrupt
+            try:
+                with open(json_path, "r", encoding="utf-8") as f_inc_r:
+                    inc_db = json.load(f_inc_r)
+                for inc_item in inc_db:
+                    if inc_item.get("id") == card_id:
+                        inc_item["image_tier"] = "B"
+                        inc_item["image_path"] = f"images/{webp_filename}"
+                        inc_item["image"] = f"images/{webp_filename}"
+                        break
+                with open(json_path, "w", encoding="utf-8") as f_inc_w:
+                    json.dump(inc_db, f_inc_w, indent=2, ensure_ascii=False)
+            except Exception as inc_err:
+                print(f"  ⚠️ Warning: Could not incrementally update {json_path} for card_{card_id}: {inc_err}")
 
         except Exception as e:
             print(f"  ❌ Error generating card_{card_id}: {e}")
