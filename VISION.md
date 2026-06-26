@@ -351,10 +351,19 @@ These are honest assessments of areas that need attention:
 - Implemented in `sw.js` (v1.5.0) with 4-strategy caching (cache-first, stale-while-revalidate, network-first, CDN cache)
 - Status: **Complete**
 
-#### ~~📈 Study Session Analytics~~ ✅ Completed
+#### 📈 ~~Study Session Analytics~~ ✅ Completed
 - Implemented in v5.0: `startSession()`, `endSession()`, `recordAnswer()` in state.js
 - Session history persistence (capped at 50 entries), retention rate, weak words, FSRS analytics panel
 - Status: **Complete**
+
+#### 🎙️ Premium GCP Voice & Speech Integration (Journey/Studio + Chirp v2)
+- **Objective**: Elevate the speech and pronunciation experience of DeutschSphere by replacing speed-adjustable Web Speech API browser synthesis with ultra-premium pre-rendered native German speakers and deploying Kölner Phonetik matching with advanced speech-to-text validation.
+- **Architectural Details**:
+  - **Ultra-Premium TTS (Journey & Studio Voices)**: Build an offline batch script (`scripts/generate_voice_cache.py`) that utilizes Google Cloud Text-to-Speech API (Journey, Studio, and Neural2 German voices). Translate and render high-fidelity `.mp3` files for all core vocabulary and example sentences (3,921 words).
+  - **Zero Cost Execution**: Optimize batching to fit within the 1-million-character monthly free tier of Google Cloud TTS ($0 out-of-pocket).
+  - **PWA Service Worker Pre-Caching**: Lazy-cache these high-quality native audio buffers on the Service Worker level (`sw.js`) to preserve the offline-first identity of the app.
+  - **Phonetik-Spiegel Pronunciation Grading (GCP Chirp STT v2)**: Integrate Google's premier Universal Speech Model (USM) **Chirp** under Speech-to-Text v2 for precise pronunciation feedback, syllable grading, and phonetic coaching when difficult German phonemes fail.
+- **Status**: Scheduled (Deferred until after V6.0 3D Claymation and Glassmorphic Asset Generation is fully complete).
 
 ### 💡 Long-Term Vision
 
