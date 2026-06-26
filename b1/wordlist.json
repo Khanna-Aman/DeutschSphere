@@ -6411,8 +6411,10 @@
     "antonym": null,
     "example_de": "Ich möchte gern mit dem Direktor sprechen.",
     "example_en": "I would like to speak with the director.",
-    "image": "images/card_342.svg",
-    "id": 342
+    "image": "images/card_342.webp",
+    "id": 342,
+    "image_tier": "B",
+    "image_path": "images/card_342.webp"
   },
   {
     "german": "die Diskothek",
@@ -6427,8 +6429,10 @@
     "antonym": null,
     "example_de": "Wir gehen heute Abend in die Disko(thek).",
     "example_en": "We are going to the disco(theque) tonight.",
-    "image": "images/card_343.svg",
-    "id": 343
+    "image": "images/card_343.webp",
+    "id": 343,
+    "image_tier": "B",
+    "image_path": "images/card_343.webp"
   },
   {
     "german": "die Diskussion",
@@ -6443,8 +6447,10 @@
     "antonym": null,
     "example_de": "Im Fernsehen gab es eine Diskussion zum Thema „Kinderbetreuung“.",
     "example_en": "There was a discussion on television about the topic of 'childcare'.",
-    "image": "images/card_344.svg",
-    "id": 344
+    "image": "images/card_344.webp",
+    "id": 344,
+    "image_tier": "B",
+    "image_path": "images/card_344.webp"
   },
   {
     "german": "diskutieren",
@@ -6463,8 +6469,10 @@
     "antonym": null,
     "example_de": "Wir haben lange diskutiert, wie wir das Büro einrichten sollen.",
     "example_en": "We discussed for a long time how we should furnish the office.",
-    "image": "images/card_345.svg",
-    "id": 345
+    "image": "images/card_345.webp",
+    "id": 345,
+    "image_tier": "B",
+    "image_path": "images/card_345.webp"
   },
   {
     "german": "die Distanz",
@@ -6479,8 +6487,10 @@
     "antonym": "die Nähe",
     "example_de": "Diese Firma transportiert Waren auch über große Distanzen.",
     "example_en": "This company also transports goods over large distances.",
-    "image": "images/card_346.svg",
-    "id": 346
+    "image": "images/card_346.webp",
+    "id": 346,
+    "image_tier": "B",
+    "image_path": "images/card_346.webp"
   },
   {
     "german": "die Diät",
@@ -6495,8 +6505,10 @@
     "antonym": null,
     "example_de": "Ich möchte abnehmen. Deshalb mache ich eine Diät.",
     "example_en": "I want to lose weight. Therefore I am on a diet.",
-    "image": "images/card_347.svg",
-    "id": 347
+    "image": "images/card_347.webp",
+    "id": 347,
+    "image_tier": "B",
+    "image_path": "images/card_347.webp"
   },
   {
     "german": "doch",
@@ -6511,8 +6523,10 @@
     "antonym": null,
     "example_de": "Isst du kein Fleisch? – Doch, manchmal schon. Ich habe es mir anders überlegt. Ich komme doch mit in die Stadt. Ihr kommt doch heute Abend? Fragen Sie doch Herrn Müller, der ist Computerspezialist. Ach, wenn doch schon Sonntag wäre!",
     "example_en": "Do you not eat meat? - Yes I do, sometimes. I changed my mind. I am coming to the city after all. You are coming tonight, aren't you? Why don't you ask Mr. Müller, he is a computer specialist. Oh, if only it were Sunday already!",
-    "image": "images/card_348.svg",
-    "id": 348
+    "image": "images/card_348.webp",
+    "id": 348,
+    "image_tier": "B",
+    "image_path": "images/card_348.webp"
   },
   {
     "german": "der Doktor",
@@ -6527,8 +6541,10 @@
     "antonym": null,
     "example_de": "Ist Frau Dr. Müller da? Meine Tochter ist krank. Wir gehen zum Doktor.",
     "example_en": "Is Dr. Müller there? My daughter is sick. We are going to the doctor.",
-    "image": "images/card_349.svg",
-    "id": 349
+    "image": "images/card_349.webp",
+    "id": 349,
+    "image_tier": "B",
+    "image_path": "images/card_349.webp"
   },
   {
     "german": "die Doktorin",
@@ -6543,8 +6559,10 @@
     "antonym": "die Patientin",
     "example_de": "Ist Frau Dr. Müller da? Meine Tochter ist krank. Wir gehen zum Doktor.",
     "example_en": "Is Dr. Müller there? My daughter is sick. We are going to the doctor.",
-    "image": "images/card_350.svg",
-    "id": 350
+    "image": "images/card_350.webp",
+    "id": 350,
+    "image_tier": "B",
+    "image_path": "images/card_350.webp"
   },
   {
     "german": "das Dokument",
@@ -6559,8 +6577,10 @@
     "antonym": null,
     "example_de": "Hast du alle Dokumente für die Anmeldung dabei? Dieser Stein ist ein wichtiges Dokument für die alte römische Kultur.",
     "example_en": "Do you have all the documents for the registration with you? This stone is an important document for ancient Roman culture.",
-    "image": "images/card_351.svg",
-    "id": 351
+    "image": "images/card_351.webp",
+    "id": 351,
+    "image_tier": "B",
+    "image_path": "images/card_351.webp"
   },
   {
     "german": "der Donner",
@@ -6575,8 +6595,10 @@
     "antonym": "der Blitz",
     "example_de": "Der Donner kam erst lange nach dem Blitz.",
     "example_en": "The thunder came only a long time after the lightning.",
-    "image": "images/card_352.svg",
-    "id": 352
+    "image": "images/card_352.webp",
+    "id": 352,
+    "image_tier": "B",
+    "image_path": "images/card_352.webp"
   },
   {
     "german": "das Dorf",
@@ -6591,8 +6613,10 @@
     "antonym": "die Stadt",
     "example_de": "Unser Dorf liegt direkt an der Autobahn.",
     "example_en": "Our village is located directly on the highway.",
-    "image": "images/card_353.svg",
-    "id": 353
+    "image": "images/card_353.webp",
+    "id": 353,
+    "image_tier": "B",
+    "image_path": "images/card_353.webp"
   },
   {
     "german": "dort",
@@ -6607,8 +6631,10 @@
     "antonym": "hier",
     "example_de": "Dort drüben ist der Bahnhof. Ich werde in fünf Minuten dort sein.",
     "example_en": "The train station is over there. I will be there in five minutes.",
-    "image": "images/card_354.svg",
-    "id": 354
+    "image": "images/card_354.webp",
+    "id": 354,
+    "image_tier": "B",
+    "image_path": "images/card_354.webp"
   },
   {
     "german": "dorthin",
@@ -6623,8 +6649,10 @@
     "antonym": "hierher",
     "example_de": "Deine Tasche kannst du dorthin stellen.",
     "example_en": "You can put your bag over there.",
-    "image": "images/card_355.svg",
-    "id": 355
+    "image": "images/card_355.webp",
+    "id": 355,
+    "image_tier": "B",
+    "image_path": "images/card_355.webp"
   },
   {
     "german": "die Dose",
@@ -6639,8 +6667,10 @@
     "antonym": null,
     "example_de": "Ich habe noch eine Dose Bohnen.",
     "example_en": "I still have a can of beans.",
-    "image": "images/card_356.svg",
-    "id": 356
+    "image": "images/card_356.webp",
+    "id": 356,
+    "image_tier": "B",
+    "image_path": "images/card_356.webp"
   },
   {
     "german": "draußen",
@@ -6655,8 +6685,10 @@
     "antonym": "drinnen",
     "example_de": "Es ist kalt draußen. Wir müssen draußen warten.",
     "example_en": "It is cold outside. We have to wait outside.",
-    "image": "images/card_357.svg",
-    "id": 357
+    "image": "images/card_357.webp",
+    "id": 357,
+    "image_tier": "B",
+    "image_path": "images/card_357.webp"
   },
   {
     "german": "der Dreck",
@@ -6671,8 +6703,10 @@
     "antonym": "die Sauberkeit",
     "example_de": "Iss den Apfel nicht! Der lag im Dreck. Ich konnte vor lauter Dreck auf dem Fenster nichts sehen. Kümmere dich um deinen eigenen Dreck!",
     "example_en": "Do not eat the apple! It was lying in the dirt. I could not see anything out the window because of all the dirt. Mind your own business!",
-    "image": "images/card_358.svg",
-    "id": 358
+    "image": "images/card_358.webp",
+    "id": 358,
+    "image_tier": "B",
+    "image_path": "images/card_358.webp"
   },
   {
     "german": "drehen",
@@ -6691,8 +6725,10 @@
     "antonym": null,
     "example_de": "Drehen Sie zum Einschalten den Schalter nach rechts. Die Kinder drehen sich zur Musik im Kreis. Bei Familie Huber dreht sich jetzt alles um das Baby.",
     "example_en": "Turn the switch to the right to turn it on. The children are spinning in a circle to the music. In the Huber family, everything now revolves around the baby.",
-    "image": "images/card_359.svg",
-    "id": 359
+    "image": "images/card_359.webp",
+    "id": 359,
+    "image_tier": "B",
+    "image_path": "images/card_359.webp"
   },
   {
     "german": "dringend",
@@ -6710,8 +6746,10 @@
     "antonym": null,
     "example_de": "Ich muss dich dringend sprechen. Ich erwarte einen dringenden Anruf. Bitte kommen Sie schnell. Es ist dringend.",
     "example_en": "I urgently need to speak with you. I am expecting an urgent call. Please come quickly. It is urgent.",
-    "image": "images/card_360.svg",
-    "id": 360
+    "image": "images/card_360.webp",
+    "id": 360,
+    "image_tier": "B",
+    "image_path": "images/card_360.webp"
   },
   {
     "german": "die Droge",
@@ -6726,8 +6764,10 @@
     "antonym": null,
     "example_de": "Nimmst du etwa Drogen?",
     "example_en": "Are you taking drugs?",
-    "image": "images/card_361.svg",
-    "id": 361
+    "image": "images/card_361.webp",
+    "id": 361,
+    "image_tier": "B",
+    "image_path": "images/card_361.webp"
   },
   {
     "german": "die Drogerie",
@@ -6742,8 +6782,10 @@
     "antonym": null,
     "example_de": "Waschmittel bekommst du in der Drogerie.",
     "example_en": "You can get laundry detergent at the drugstore.",
-    "image": "images/card_362.svg",
-    "id": 362
+    "image": "images/card_362.webp",
+    "id": 362,
+    "image_tier": "B",
+    "image_path": "images/card_362.webp"
   },
   {
     "german": "der Druck",
@@ -6758,8 +6800,10 @@
     "antonym": null,
     "example_de": "Mit einem Knopfdruck schaltet man das Gerät ein. Wie hoch muss der Druck in den vorderen Reifen sein?",
     "example_en": "You turn the device on with the push of a button. How high must the pressure be in the front tires?",
-    "image": "images/card_363.svg",
-    "id": 363
+    "image": "images/card_363.webp",
+    "id": 363,
+    "image_tier": "B",
+    "image_path": "images/card_363.webp"
   },
   {
     "german": "drucken",
@@ -6778,8 +6822,10 @@
     "antonym": null,
     "example_de": "Warum hast du den Brief noch nicht ausgedruckt? Bei welcher Firma haben Sie diese Prospekte drucken lassen? Du gehst einfach auf „Datei drucken“!",
     "example_en": "Why haven't you printed out the letter yet? At which company did you have these brochures printed? You just go to 'Print file'!",
-    "image": "images/card_364.svg",
-    "id": 364
+    "image": "images/card_364.webp",
+    "id": 364,
+    "image_tier": "B",
+    "image_path": "images/card_364.webp"
   },
   {
     "german": "der Drucker",
@@ -6794,8 +6840,10 @@
     "antonym": null,
     "example_de": "Ich brauche einen neuen Drucker für meinen Computer.",
     "example_en": "I need a new printer for my computer.",
-    "image": "images/card_365.svg",
-    "id": 365
+    "image": "images/card_365.webp",
+    "id": 365,
+    "image_tier": "B",
+    "image_path": "images/card_365.webp"
   },
   {
     "german": "dumm",
@@ -6813,8 +6861,10 @@
     "antonym": "klug",
     "example_de": "Entschuldigung, das war dumm von mir. Mir ist etwas Dummes passiert. Ich fand den Film wirklich sehr dumm.",
     "example_en": "Excuse me, that was stupid of me. Something stupid happened to me. I found the film really very stupid.",
-    "image": "images/card_366.svg",
-    "id": 366
+    "image": "images/card_366.webp",
+    "id": 366,
+    "image_tier": "B",
+    "image_path": "images/card_366.webp"
   },
   {
     "german": "dunkel",
@@ -6832,8 +6882,10 @@
     "antonym": "hell",
     "example_de": "Um sechs Uhr ist es schon dunkel. Meine Schwester hat dunkle Haare. Ich habe mir eine dunkelblaue Bluse gekauft.",
     "example_en": "At six o'clock it is already dark. My sister has dark hair. I bought myself a dark blue blouse.",
-    "image": "images/card_367.svg",
-    "id": 367
+    "image": "images/card_367.webp",
+    "id": 367,
+    "image_tier": "B",
+    "image_path": "images/card_367.webp"
   },
   {
     "german": "durch",
@@ -6848,8 +6900,10 @@
     "antonym": null,
     "example_de": "Wir sind mit dem Fahrrad durch den Wald gefahren. Wenn Sie zum Bahnhof gehen, kommen Sie durch die Goethestraße. Wir haben den ganzen Mai durch geheizt. Wir haben unsere Wohnung durch einen Freund bekommen.",
     "example_en": "We rode our bicycles through the forest. If you go to the train station, you will come through Goethestrasse. We heated throughout the whole of May. We got our apartment through a friend.",
-    "image": "images/card_368.svg",
-    "id": 368
+    "image": "images/card_368.webp",
+    "id": 368,
+    "image_tier": "B",
+    "image_path": "images/card_368.webp"
   },
   {
     "german": "durcheinander",
@@ -6864,8 +6918,10 @@
     "antonym": "geordnet",
     "example_de": "Alle meine Sachen sind durcheinander. Ich finde nichts mehr. Bitte redet nicht alle durcheinander. Sonst verstehe ich nichts.",
     "example_en": "All my things are in a mess. I cannot find anything anymore. Please do not all talk at once. Otherwise I will not understand anything.",
-    "image": "images/card_369.svg",
-    "id": 369
+    "image": "images/card_369.webp",
+    "id": 369,
+    "image_tier": "B",
+    "image_path": "images/card_369.webp"
   },
   {
     "german": "die Durchsage",
@@ -6880,8 +6936,10 @@
     "antonym": null,
     "example_de": "Achtung, Achtung, eine wichtige Durchsage! Ich habe die Durchsage nicht verstanden.",
     "example_en": "Attention, attention, an important announcement! I did not understand the announcement.",
-    "image": "images/card_370.svg",
-    "id": 370
+    "image": "images/card_370.webp",
+    "id": 370,
+    "image_tier": "B",
+    "image_path": "images/card_370.webp"
   },
   {
     "german": "der Durchschnitt",
@@ -6896,8 +6954,10 @@
     "antonym": null,
     "example_de": "Der Durchschnitt der Ausgaben liegt bei 150 Euro im Monat. Im Durchschnitt brauchen wir täglich 20 Minuten zur Arbeit. Die Studentin gehört zum Durchschnitt.",
     "example_en": "The average of the expenses is 150 euros per month. On average, we need 20 minutes to work every day. The student is average.",
-    "image": "images/card_371.svg",
-    "id": 371
+    "image": "images/card_371.webp",
+    "id": 371,
+    "image_tier": "B",
+    "image_path": "images/card_371.webp"
   },
   {
     "german": "der Durst",
@@ -6912,8 +6972,10 @@
     "antonym": "der Hunger",
     "example_de": "Ich hole Ihnen etwas zu trinken. Sie haben sicher Durst.",
     "example_en": "I will fetch you something to drink. You are surely thirsty.",
-    "image": "images/card_372.svg",
-    "id": 372
+    "image": "images/card_372.webp",
+    "id": 372,
+    "image_tier": "B",
+    "image_path": "images/card_372.webp"
   },
   {
     "german": "die Dusche",
@@ -6928,8 +6990,10 @@
     "antonym": "die Badewanne",
     "example_de": "Wir haben leider nur noch ein Zimmer mit Dusche. Unsere Wohnung hat nur eine Dusche.",
     "example_en": "Unfortunately we only have one room with a shower left. Our apartment only has a shower.",
-    "image": "images/card_373.svg",
-    "id": 373
+    "image": "images/card_373.webp",
+    "id": 373,
+    "image_tier": "B",
+    "image_path": "images/card_373.webp"
   },
   {
     "german": "duzen",
@@ -6948,8 +7012,10 @@
     "antonym": "siezen",
     "example_de": "Wollen wir Du zueinander sagen? Ja, wir können uns gern duzen?",
     "example_en": "Shall we say 'Du' to each other? Yes, we can gladly address each other with 'Du'.",
-    "image": "images/card_374.svg",
-    "id": 374
+    "image": "images/card_374.webp",
+    "id": 374,
+    "image_tier": "B",
+    "image_path": "images/card_374.webp"
   },
   {
     "german": "dünn",
@@ -6967,8 +7033,10 @@
     "antonym": "dick",
     "example_de": "Mein Sohn ist sehr dünn. Er isst zu wenig. Warum ziehst du nur so einen dünnen Mantel an? Es ist kalt draußen.",
     "example_en": "My son is very thin. He eats too little. Why are you only wearing such a thin coat? It is cold outside.",
-    "image": "images/card_375.svg",
-    "id": 375
+    "image": "images/card_375.webp",
+    "id": 375,
+    "image_tier": "B",
+    "image_path": "images/card_375.webp"
   },
   {
     "german": "dürfen",
@@ -6987,8 +7055,10 @@
     "antonym": "müssen",
     "example_de": "Dürfen wir heute länger fernsehen? Sie dürfen hier nicht parken.",
     "example_en": "May we watch TV longer today? You are not allowed to park here.",
-    "image": "images/card_376.svg",
-    "id": 376
+    "image": "images/card_376.webp",
+    "id": 376,
+    "image_tier": "B",
+    "image_path": "images/card_376.webp"
   },
   {
     "german": "dürfen",
@@ -7007,8 +7077,10 @@
     "antonym": "müssen",
     "example_de": "Was darf ich Ihnen anbieten? Es darf nicht mehr als 1000 Euro kosten.",
     "example_en": "What may I offer you? It must not cost more than 1000 euros.",
-    "image": "images/card_377.svg",
-    "id": 377
+    "image": "images/card_377.webp",
+    "id": 377,
+    "image_tier": "B",
+    "image_path": "images/card_377.webp"
   },
   {
     "german": "eben",
@@ -7023,8 +7095,10 @@
     "antonym": null,
     "example_de": "Ich bin eben erst angekommen. Ich gebe auf. Ich habe eben kein Glück!",
     "example_en": "I just arrived. I give up. I just don't have any luck!",
-    "image": "images/card_378.svg",
-    "id": 378
+    "image": "images/card_378.webp",
+    "id": 378,
+    "image_tier": "B",
+    "image_path": "images/card_378.webp"
   },
   {
     "german": "ebenfalls",
@@ -7039,8 +7113,10 @@
     "antonym": null,
     "example_de": "Ich wünsche Ihnen ein schönes Wochenende. – Danke, ebenfalls.",
     "example_en": "I wish you a nice weekend. – Thanks, likewise.",
-    "image": "images/card_379.svg",
-    "id": 379
+    "image": "images/card_379.webp",
+    "id": 379,
+    "image_tier": "B",
+    "image_path": "images/card_379.webp"
   },
   {
     "german": "die e-card (A)",
@@ -7055,8 +7131,10 @@
     "antonym": null,
     "example_de": "Haben Sie Ihre e-card dabei?",
     "example_en": "Do you have your e-card with you?",
-    "image": "images/card_380.svg",
-    "id": 380
+    "image": "images/card_380.webp",
+    "id": 380,
+    "image_tier": "B",
+    "image_path": "images/card_380.webp"
   },
   {
     "german": "echt",
@@ -7074,8 +7152,10 @@
     "antonym": "falsch",
     "example_de": "Ich träume von einem echten Perserteppich. Der Film war echt gut.",
     "example_en": "I dream of a real Persian carpet. The film was really good.",
-    "image": "images/card_381.svg",
-    "id": 381
+    "image": "images/card_381.webp",
+    "id": 381,
+    "image_tier": "B",
+    "image_path": "images/card_381.webp"
   },
   {
     "german": "das Eck",
@@ -7090,8 +7170,10 @@
     "antonym": null,
     "example_de": "Das Regal stellen wir hier ins Eck. Das bekommen Sie im Kiosk am Eck. Wo ist die Apotheke? - Gleich ums Eck.",
     "example_en": "We will put the shelf here in the corner. You can get that at the kiosk on the corner. Where is the pharmacy? - Right around the corner.",
-    "image": "images/card_382.svg",
-    "id": 382
+    "image": "images/card_382.webp",
+    "id": 382,
+    "image_tier": "B",
+    "image_path": "images/card_382.webp"
   },
   {
     "german": "die ec-Karte / EC-Karte",
@@ -7106,8 +7188,10 @@
     "antonym": "das Bargeld",
     "example_de": "Bezahlen Sie bar? Sie können auch mit der ec-Karte zahlen.",
     "example_en": "Are you paying cash? You can also pay with the debit card.",
-    "image": "images/card_383.svg",
-    "id": 383
+    "image": "images/card_383.webp",
+    "id": 383,
+    "image_tier": "B",
+    "image_path": "images/card_383.webp"
   },
   {
     "german": "die Ecke",
@@ -7122,8 +7206,10 @@
     "antonym": null,
     "example_de": "Das Regal stellen wir hier in die Ecke. Das bekommen Sie im Kiosk an der Ecke. Wo ist die Apotheke? - Gleich um die Ecke.",
     "example_en": "We will put the shelf here in the corner. You can get that at the kiosk on the corner. Where is the pharmacy? - Right around the corner.",
-    "image": "images/card_384.svg",
-    "id": 384
+    "image": "images/card_384.webp",
+    "id": 384,
+    "image_tier": "B",
+    "image_path": "images/card_384.webp"
   },
   {
     "german": "eckig",
@@ -7141,8 +7227,10 @@
     "antonym": "rund",
     "example_de": "Ich möchte einen eckigen Tisch, keinen runden.",
     "example_en": "I would like a square table, not a round one.",
-    "image": "images/card_385.svg",
-    "id": 385
+    "image": "images/card_385.webp",
+    "id": 385,
+    "image_tier": "B",
+    "image_path": "images/card_385.webp"
   },
   {
     "german": "egal",
@@ -7160,8 +7248,10 @@
     "antonym": "wichtig",
     "example_de": "Es ist mir ganz egal, was die Leute denken. Egal, wie das Wetter ist, ich gehe schwimmen.",
     "example_en": "I don't care at all what people think. No matter how the weather is, I am going swimming.",
-    "image": "images/card_386.svg",
-    "id": 386
+    "image": "images/card_386.webp",
+    "id": 386,
+    "image_tier": "B",
+    "image_path": "images/card_386.webp"
   },
   {
     "german": "die Ehe",
@@ -7176,8 +7266,10 @@
     "antonym": "die Scheidung",
     "example_de": "Sie hat zwei Kinder aus erster Ehe.",
     "example_en": "She has two children from her first marriage.",
-    "image": "images/card_387.svg",
-    "id": 387
+    "image": "images/card_387.webp",
+    "id": 387,
+    "image_tier": "B",
+    "image_path": "images/card_387.webp"
   },
   {
     "german": "die Ehefrau",
@@ -7192,8 +7284,10 @@
     "antonym": "der Ehemann",
     "example_de": "Wie heißt Ihre Ehefrau mit Vornamen?",
     "example_en": "What is your wife's first name?",
-    "image": "images/card_388.svg",
-    "id": 388
+    "image": "images/card_388.webp",
+    "id": 388,
+    "image_tier": "B",
+    "image_path": "images/card_388.webp"
   },
   {
     "german": "der Ehemann",
@@ -7208,8 +7302,10 @@
     "antonym": "die Ehefrau",
     "example_de": "Das ist mein Ehemann / meine Ehefrau.",
     "example_en": "That is my husband / my wife.",
-    "image": "images/card_389.svg",
-    "id": 389
+    "image": "images/card_389.webp",
+    "id": 389,
+    "image_tier": "B",
+    "image_path": "images/card_389.webp"
   },
   {
     "german": "das Ehepaar",
@@ -7224,8 +7320,10 @@
     "antonym": null,
     "example_de": "Das Ehepaar unter uns hat zwei Kinder.",
     "example_en": "The married couple below us has two children.",
-    "image": "images/card_390.svg",
-    "id": 390
+    "image": "images/card_390.webp",
+    "id": 390,
+    "image_tier": "B",
+    "image_path": "images/card_390.webp"
   },
   {
     "german": "eher",
@@ -7240,8 +7338,10 @@
     "antonym": "später",
     "example_de": "Ich stehe meist eher auf als mein Mann. Michael sieht gerne Serien, ich mag eher Krimis.",
     "example_en": "I usually get up earlier than my husband. Michael likes watching series, I rather like thrillers.",
-    "image": "images/card_391.svg",
-    "id": 391
+    "image": "images/card_391.webp",
+    "id": 391,
+    "image_tier": "B",
+    "image_path": "images/card_391.webp"
   },
   {
     "german": "ehrlich",
@@ -7259,8 +7359,10 @@
     "antonym": "unehrlich",
     "example_de": "Sie ist ein ehrlicher Mensch. Bitte sei in dieser Sache ehrlich. Die Pause haben wir uns ehrlich verdient.",
     "example_en": "She is an honest person. Please be honest in this matter. We honestly earned the break.",
-    "image": "images/card_392.svg",
-    "id": 392
+    "image": "images/card_392.webp",
+    "id": 392,
+    "image_tier": "B",
+    "image_path": "images/card_392.webp"
   },
   {
     "german": "das Ei",
@@ -7275,8 +7377,10 @@
     "antonym": null,
     "example_de": "Möchtest du zum Frühstück ein Ei?",
     "example_en": "Would you like an egg for breakfast?",
-    "image": "images/card_393.svg",
-    "id": 393
+    "image": "images/card_393.webp",
+    "id": 393,
+    "image_tier": "B",
+    "image_path": "images/card_393.webp"
   },
   {
     "german": "eigen- / eigentlich",
@@ -7294,8 +7398,10 @@
     "antonym": "fremd",
     "example_de": "Fast jedes Kind hat ein eigenes Zimmer. Wir wollten eigentlich Freunde besuchen, aber dann sind wir doch zu Hause geblieben.",
     "example_en": "Almost every child has their own room. We actually wanted to visit friends, but then we stayed at home after all.",
-    "image": "images/card_394.svg",
-    "id": 394
+    "image": "images/card_394.webp",
+    "id": 394,
+    "image_tier": "B",
+    "image_path": "images/card_394.webp"
   },
   {
     "german": "die Eile",
@@ -7310,8 +7416,10 @@
     "antonym": "die Ruhe",
     "example_de": "Ich bin sehr in Eile. Das hat keine Eile.",
     "example_en": "I am in a great hurry. There is no hurry for that.",
-    "image": "images/card_395.svg",
-    "id": 395
+    "image": "images/card_395.webp",
+    "id": 395,
+    "image_tier": "B",
+    "image_path": "images/card_395.webp"
   },
   {
     "german": "eilen",
@@ -7330,8 +7438,10 @@
     "antonym": null,
     "example_de": "Es eilt sehr. Bitte machen Sie schnell.",
     "example_en": "It is very urgent. Please hurry.",
-    "image": "images/card_396.svg",
-    "id": 396
+    "image": "images/card_396.webp",
+    "id": 396,
+    "image_tier": "B",
+    "image_path": "images/card_396.webp"
   },
   {
     "german": "eilig",
@@ -7349,8 +7459,10 @@
     "antonym": null,
     "example_de": "Hast du es eilig?",
     "example_en": "Are you in a hurry?",
-    "image": "images/card_397.svg",
-    "id": 397
+    "image": "images/card_397.webp",
+    "id": 397,
+    "image_tier": "B",
+    "image_path": "images/card_397.webp"
   },
   {
     "german": "ein- / die Einbahnstraße",
@@ -7365,8 +7477,10 @@
     "antonym": null,
     "example_de": "Ich nehme ein Bier. Willst du auch eins? Wir haben zu wenig Mitspieler. Wir brauchen noch einen. Die Goethestraße ist jetzt eine Einbahnstraße.",
     "example_en": "I am having a beer. Do you want one too? We have too few players. We need another one. Goethestrasse is now a one-way street.",
-    "image": "images/card_398.svg",
-    "id": 398
+    "image": "images/card_398.webp",
+    "id": 398,
+    "image_tier": "B",
+    "image_path": "images/card_398.webp"
   },
   {
     "german": "der Einbrecher",
@@ -7381,8 +7495,10 @@
     "antonym": null,
     "example_de": "Die Einbrecher haben nichts gestohlen.",
     "example_en": "The burglars stole nothing.",
-    "image": "images/card_399.svg",
-    "id": 399
+    "image": "images/card_399.webp",
+    "id": 399,
+    "image_tier": "B",
+    "image_path": "images/card_399.webp"
   },
   {
     "german": "der Einbruch",
@@ -7397,8 +7513,10 @@
     "antonym": null,
     "example_de": "In der Urlaubszeit gibt es viele Wohnungseinbrüche.",
     "example_en": "During the holiday season there are many residential burglaries.",
-    "image": "images/card_400.svg",
-    "id": 400
+    "image": "images/card_400.webp",
+    "id": 400,
+    "image_tier": "B",
+    "image_path": "images/card_400.webp"
   },
   {
     "german": "eindeutig",
@@ -7416,8 +7534,10 @@
     "antonym": "uneindeutig",
     "example_de": "Das Ergebnis ist eindeutig. Du hast gewonnen. Du kannst eindeutig besser kochen als ich.",
     "example_en": "The result is clear. You won. You can clearly cook better than me.",
-    "image": "images/card_401.svg",
-    "id": 401
+    "image": "images/card_401.webp",
+    "id": 401,
+    "image_tier": "B",
+    "image_path": "images/card_401.webp"
   },
   {
     "german": "der Eindruck",
@@ -7432,8 +7552,10 @@
     "antonym": null,
     "example_de": "Ich finde die Leute auf der Straße ziemlich unfreundlich. Wie ist dein Eindruck? Ich glaube, ich habe bei dem Vorstellungsgespräch einen guten Eindruck gemacht.",
     "example_en": "I find the people on the street quite unfriendly. What is your impression? I believe I made a good impression at the job interview.",
-    "image": "images/card_402.svg",
-    "id": 402
+    "image": "images/card_402.webp",
+    "id": 402,
+    "image_tier": "B",
+    "image_path": "images/card_402.webp"
   },
   {
     "german": "einerseits",
@@ -7448,8 +7570,10 @@
     "antonym": "andererseits",
     "example_de": "Einerseits möchte ich die Reise gern machen, andererseits ist sie zu teuer.",
     "example_en": "On the one hand I would like to take the trip, on the other hand it is too expensive.",
-    "image": "images/card_403.svg",
-    "id": 403
+    "image": "images/card_403.webp",
+    "id": 403,
+    "image_tier": "B",
+    "image_path": "images/card_403.webp"
   },
   {
     "german": "einfach",
@@ -7467,8 +7591,10 @@
     "antonym": "schwierig",
     "example_de": "Hin und zurück? – Nein, bitte nur einfach. Ich verstehe das nicht. Kannst du das bitte einfacher sagen? Wir haben am Wochenende einen Ausflug gemacht. Es war einfach toll.",
     "example_en": "Round trip? – No, just one-way please. I do not understand that. Can you please say that more simply? We went on an excursion on the weekend. It was simply great.",
-    "image": "images/card_404.svg",
-    "id": 404
+    "image": "images/card_404.webp",
+    "id": 404,
+    "image_tier": "B",
+    "image_path": "images/card_404.webp"
   },
   {
     "german": "die Einfahrt",
@@ -7483,8 +7609,10 @@
     "antonym": "die Ausfahrt",
     "example_de": "Da parkt wieder jemand vor unserer Einfahrt. Können Sie nicht lesen: Einfahrt freihalten!",
     "example_en": "Someone is parking in front of our driveway again. Can you not read: Keep driveway clear!",
-    "image": "images/card_405.svg",
-    "id": 405
+    "image": "images/card_405.webp",
+    "id": 405,
+    "image_tier": "B",
+    "image_path": "images/card_405.webp"
   },
   {
     "german": "der Einfall",
@@ -7499,8 +7627,10 @@
     "antonym": null,
     "example_de": "Frag einfach meine Freundin. Sie hat immer gute Einfälle.",
     "example_en": "Just ask my friend. She always has good ideas.",
-    "image": "images/card_406.svg",
-    "id": 406
+    "image": "images/card_406.webp",
+    "id": 406,
+    "image_tier": "B",
+    "image_path": "images/card_406.webp"
   },
   {
     "german": "der Einfluss",
@@ -7515,8 +7645,10 @@
     "antonym": null,
     "example_de": "Das Wetter hat Einfluss auf die Gesundheit der Menschen.",
     "example_en": "The weather has an influence on people's health.",
-    "image": "images/card_407.svg",
-    "id": 407
+    "image": "images/card_407.webp",
+    "id": 407,
+    "image_tier": "B",
+    "image_path": "images/card_407.webp"
   },
   {
     "german": "die Einführung",
@@ -7531,8 +7663,10 @@
     "antonym": null,
     "example_de": "Leider habe ich die Einführung des Kurses verpasst.",
     "example_en": "Unfortunately I missed the introduction of the course.",
-    "image": "images/card_408.svg",
-    "id": 408
+    "image": "images/card_408.webp",
+    "id": 408,
+    "image_tier": "B",
+    "image_path": "images/card_408.webp"
   },
   {
     "german": "der Eingang",
@@ -7547,8 +7681,10 @@
     "antonym": "der Ausgang",
     "example_de": "Das Gebäude hat zwei Eingänge. Der Eingang ist um die Ecke.",
     "example_en": "The building has two entrances. The entrance is around the corner.",
-    "image": "images/card_409.svg",
-    "id": 409
+    "image": "images/card_409.webp",
+    "id": 409,
+    "image_tier": "B",
+    "image_path": "images/card_409.webp"
   },
   {
     "german": "einheitlich",
@@ -7566,8 +7702,10 @@
     "antonym": "uneinheitlich",
     "example_de": "Die Schüler dieser Schule tragen einheitliche Kleidung.",
     "example_en": "The students of this school wear uniform clothing.",
-    "image": "images/card_410.svg",
-    "id": 410
+    "image": "images/card_410.webp",
+    "id": 410,
+    "image_tier": "B",
+    "image_path": "images/card_410.webp"
   },
   {
     "german": "einig- / sich einigen",
@@ -7586,8 +7724,10 @@
     "antonym": "sich streiten",
     "example_de": "In diesem Bericht sind einige Fehler. Wir können uns leider nicht einigen.",
     "example_en": "There are some errors in this report. Unfortunately we cannot agree.",
-    "image": "images/card_411.svg",
-    "id": 411
+    "image": "images/card_411.webp",
+    "id": 411,
+    "image_tier": "B",
+    "image_path": "images/card_411.webp"
   },
   {
     "german": "der Einkauf",
@@ -7602,8 +7742,10 @@
     "antonym": "der Verkauf",
     "example_de": "Achten Sie beim Einkauf auf Sonderangebote. Ich habe alle Einkäufe erledigt.",
     "example_en": "Pay attention to special offers when shopping. I have done all the shopping.",
-    "image": "images/card_412.svg",
-    "id": 412
+    "image": "images/card_412.webp",
+    "id": 412,
+    "image_tier": "B",
+    "image_path": "images/card_412.webp"
   },
   {
     "german": "das Einkommen",
@@ -7618,8 +7760,10 @@
     "antonym": "die Ausgabe",
     "example_de": "Bei einem höheren Einkommen muss man mehr Steuern zahlen.",
     "example_en": "With a higher income, one must pay more taxes.",
-    "image": "images/card_413.svg",
-    "id": 413
+    "image": "images/card_413.webp",
+    "id": 413,
+    "image_tier": "B",
+    "image_path": "images/card_413.webp"
   },
   {
     "german": "die Einladung",
@@ -7634,8 +7778,10 @@
     "antonym": null,
     "example_de": "Danke für die Einladung.",
     "example_en": "Thanks for the invitation.",
-    "image": "images/card_414.svg",
-    "id": 414
+    "image": "images/card_414.webp",
+    "id": 414,
+    "image_tier": "B",
+    "image_path": "images/card_414.webp"
   },
   {
     "german": "einmal / einnehmen",
@@ -7654,8 +7800,10 @@
     "antonym": null,
     "example_de": "Ich habe diese Oper leider nur einmal gesehen. Wie muss ich die Tropfen einnehmen?",
     "example_en": "Unfortunately, I have only seen this opera once. How must I take the drops?",
-    "image": "images/card_415.svg",
-    "id": 415
+    "image": "images/card_415.webp",
+    "id": 415,
+    "image_tier": "B",
+    "image_path": "images/card_415.webp"
   },
   {
     "german": "die Einnahme",
@@ -7670,8 +7818,10 @@
     "antonym": "die Ausgabe",
     "example_de": "Unser Geschäft läuft gut. Unsere Einnahmen waren in diesem Monat höher als im letzten.",
     "example_en": "Our business is going well. Our revenues were higher this month than in the last.",
-    "image": "images/card_416.svg",
-    "id": 416
+    "image": "images/card_416.webp",
+    "id": 416,
+    "image_tier": "B",
+    "image_path": "images/card_416.webp"
   },
   {
     "german": "die Einrichtung",
@@ -7686,8 +7836,10 @@
     "antonym": null,
     "example_de": "Deine Wohnung ist sehr gemütlich, die Einrichtung gefällt mir sehr gut.",
     "example_en": "Your apartment is very cozy, I like the furnishings very much.",
-    "image": "images/card_417.svg",
-    "id": 417
+    "image": "images/card_417.webp",
+    "id": 417,
+    "image_tier": "B",
+    "image_path": "images/card_417.webp"
   },
   {
     "german": "einsam / einschalten",
@@ -7706,8 +7858,10 @@
     "antonym": "gesellig / ausschalten",
     "example_de": "Ohne meine Familie fühle ich mich ein bisschen einsam. Können Sie bitte die Heizung einschalten?",
     "example_en": "Without my family I feel a little lonely. Can you please turn on the heating?",
-    "image": "images/card_418.svg",
-    "id": 418
+    "image": "images/card_418.webp",
+    "id": 418,
+    "image_tier": "B",
+    "image_path": "images/card_418.webp"
   },
   {
     "german": "einschließlich",
@@ -7722,8 +7876,10 @@
     "antonym": "ausschließlich",
     "example_de": "Alles zusammen kostet 200 Euro einschließlich Fahrtkosten.",
     "example_en": "Everything together costs 200 euros including travel costs.",
-    "image": "images/card_419.svg",
-    "id": 419
+    "image": "images/card_419.webp",
+    "id": 419,
+    "image_tier": "B",
+    "image_path": "images/card_419.webp"
   },
   {
     "german": "das Einschreiben",
@@ -7738,8 +7894,10 @@
     "antonym": null,
     "example_de": "Ich habe den Brief als Einschreiben geschickt.",
     "example_en": "I sent the letter as registered mail.",
-    "image": "images/card_420.svg",
-    "id": 420
+    "image": "images/card_420.webp",
+    "id": 420,
+    "image_tier": "B",
+    "image_path": "images/card_420.webp"
   },
   {
     "german": "der Eintritt",
@@ -7754,8 +7912,10 @@
     "antonym": "der Austritt",
     "example_de": "Kinder über 10 Jahre zahlen den vollen Eintritt. Der Eintritt ist frei.",
     "example_en": "Children over 10 years pay full admission. Admission is free.",
-    "image": "images/card_421.svg",
-    "id": 421
+    "image": "images/card_421.webp",
+    "id": 421,
+    "image_tier": "B",
+    "image_path": "images/card_421.webp"
   },
   {
     "german": "einverstanden",
@@ -7774,8 +7934,10 @@
     "antonym": null,
     "example_de": "Als Termin schlage ich den 3. Mai vor. – Gut, einverstanden! Bist du einverstanden, wenn wir bald nach Hause gehen?",
     "example_en": "I suggest May 3rd as a date. - Good, agreed! Do you agree if we go home soon?",
-    "image": "images/card_422.svg",
-    "id": 422
+    "image": "images/card_422.webp",
+    "id": 422,
+    "image_tier": "B",
+    "image_path": "images/card_422.webp"
   },
   {
     "german": "der Einwohner",
@@ -7790,8 +7952,10 @@
     "antonym": null,
     "example_de": "Berlin hat über drei Millionen Einwohner.",
     "example_en": "Berlin has over three million inhabitants.",
-    "image": "images/card_423.svg",
-    "id": 423
+    "image": "images/card_423.webp",
+    "id": 423,
+    "image_tier": "B",
+    "image_path": "images/card_423.webp"
   },
   {
     "german": "die Einzahlung",
@@ -7806,8 +7970,10 @@
     "antonym": "die Auszahlung",
     "example_de": "Sie sollten die Einzahlung pünktlich machen.",
     "example_en": "You should make the payment on time.",
-    "image": "images/card_424.svg",
-    "id": 424
+    "image": "images/card_424.webp",
+    "id": 424,
+    "image_tier": "B",
+    "image_path": "images/card_424.webp"
   },
   {
     "german": "die Einzelheit",
@@ -7822,8 +7988,10 @@
     "antonym": "das Ganze",
     "example_de": "Du musst mir das in allen Einzelheiten erzählen.",
     "example_en": "You must tell me that in all details.",
-    "image": "images/card_425.svg",
-    "id": 425
+    "image": "images/card_425.webp",
+    "id": 425,
+    "image_tier": "B",
+    "image_path": "images/card_425.webp"
   },
   {
     "german": "einzeln",
@@ -7838,8 +8006,10 @@
     "antonym": "gemeinsam",
     "example_de": "Dieses Mineralwasser gibt es nur als Sechserpack, nicht einzeln. Die Schüler mussten einzeln zum Schularzt kommen.",
     "example_en": "This mineral water is only available as a six-pack, not individually. The students had to come to the school doctor individually.",
-    "image": "images/card_426.svg",
-    "id": 426
+    "image": "images/card_426.webp",
+    "id": 426,
+    "image_tier": "B",
+    "image_path": "images/card_426.webp"
   },
   {
     "german": "einziehen",
@@ -7858,8 +8028,10 @@
     "antonym": "ausziehen",
     "example_de": "Die Wohnung ist fertig. Wir können nächste Woche einziehen.",
     "example_en": "The apartment is ready. We can move in next week.",
-    "image": "images/card_427.svg",
-    "id": 427
+    "image": "images/card_427.webp",
+    "id": 427,
+    "image_tier": "B",
+    "image_path": "images/card_427.webp"
   },
   {
     "german": "das Eis",
@@ -7874,8 +8046,10 @@
     "antonym": null,
     "example_de": "Im Winter gibt es Eis und Schnee. Bitte eine Cola ohne Eis.",
     "example_en": "In winter there is ice and snow. A cola without ice, please.",
-    "image": "images/card_428.svg",
-    "id": 428
+    "image": "images/card_428.webp",
+    "id": 428,
+    "image_tier": "B",
+    "image_path": "images/card_428.webp"
   },
   {
     "german": "das Eis (CH: die Glace)",
@@ -7890,8 +8064,10 @@
     "antonym": null,
     "example_de": "Zum Nachtisch gibt es Schokoladeneis.",
     "example_en": "For dessert there is chocolate ice cream.",
-    "image": "images/card_429.svg",
-    "id": 429
+    "image": "images/card_429.webp",
+    "id": 429,
+    "image_tier": "B",
+    "image_path": "images/card_429.webp"
   },
   {
     "german": "die Eisenbahn",
@@ -7906,8 +8082,10 @@
     "antonym": null,
     "example_de": "Die Kinder wünschen sich eine elektrische Eisenbahn.",
     "example_en": "The children wish for an electric train.",
-    "image": "images/card_430.svg",
-    "id": 430
+    "image": "images/card_430.webp",
+    "id": 430,
+    "image_tier": "B",
+    "image_path": "images/card_430.webp"
   },
   {
     "german": "elegant",
@@ -7925,8 +8103,10 @@
     "antonym": null,
     "example_de": "Ich finde dein Kleid sehr elegant.",
     "example_en": "I find your dress very elegant.",
-    "image": "images/card_431.svg",
-    "id": 431
+    "image": "images/card_431.webp",
+    "id": 431,
+    "image_tier": "B",
+    "image_path": "images/card_431.webp"
   },
   {
     "german": "elektrisch",
@@ -7944,8 +8124,10 @@
     "antonym": null,
     "example_de": "Wir kochen nicht mit Gas, sondern elektrisch.",
     "example_en": "We do not cook with gas, but electrically.",
-    "image": "images/card_432.svg",
-    "id": 432
+    "image": "images/card_432.webp",
+    "id": 432,
+    "image_tier": "B",
+    "image_path": "images/card_432.webp"
   },
   {
     "german": "Elektro- / elektronisch",
@@ -7963,8 +8145,10 @@
     "antonym": "analog",
     "example_de": "Wir sollten die Daten elektronisch bearbeiten, sonst dauert es zu lange.",
     "example_en": "We should process the data electronically, otherwise it takes too long.",
-    "image": "images/card_433.svg",
-    "id": 433
+    "image": "images/card_433.webp",
+    "id": 433,
+    "image_tier": "B",
+    "image_path": "images/card_433.webp"
   },
   {
     "german": "die Eltern",
@@ -7979,8 +8163,10 @@
     "antonym": "die Kinder",
     "example_de": "Ich wohne noch bei meinen Eltern.",
     "example_en": "I still live with my parents.",
-    "image": "images/card_434.svg",
-    "id": 434
+    "image": "images/card_434.webp",
+    "id": 434,
+    "image_tier": "B",
+    "image_path": "images/card_434.webp"
   },
   {
     "german": "der Empfang",
@@ -7995,8 +8181,10 @@
     "antonym": null,
     "example_de": "Bitte den Empfang bestätigen! Ich bin mit dem Fernseher nicht zufrieden. Der Empfang ist sehr schlecht. Zur Firmeneröffnung bitten wir zu einem kleinen Empfang.",
     "example_en": "Please confirm receipt! I am not satisfied with the television. The reception is very bad. For the company opening we invite you to a small reception.",
-    "image": "images/card_435.svg",
-    "id": 435
+    "image": "images/card_435.webp",
+    "id": 435,
+    "image_tier": "B",
+    "image_path": "images/card_435.webp"
   },
   {
     "german": "die Empfehlung",
@@ -8011,8 +8199,10 @@
     "antonym": null,
     "example_de": "Ich rufe auf Empfehlung von Herrn Weber an.",
     "example_en": "I am calling on the recommendation of Mr. Weber.",
-    "image": "images/card_436.svg",
-    "id": 436
+    "image": "images/card_436.webp",
+    "id": 436,
+    "image_tier": "B",
+    "image_path": "images/card_436.webp"
   },
   {
     "german": "der Empfänger",
@@ -8027,8 +8217,10 @@
     "antonym": "der Absender",
     "example_de": "Es fehlt die genaue Adresse des Empfängers.",
     "example_en": "The exact address of the recipient is missing.",
-    "image": "images/card_437.svg",
-    "id": 437
+    "image": "images/card_437.webp",
+    "id": 437,
+    "image_tier": "B",
+    "image_path": "images/card_437.webp"
   },
   {
     "german": "das Ende",
@@ -8043,8 +8235,10 @@
     "antonym": "der Anfang",
     "example_de": "Ich wohne am Ende der Straße. Die nächste Prüfung findet Ende August statt. Rinaldo ist Ende fünfzig. Am Dienstag gehen die Ferien zu Ende.",
     "example_en": "I live at the end of the street. The next exam takes place at the end of August. Rinaldo is in his late fifties. On Tuesday the holidays come to an end.",
-    "image": "images/card_438.svg",
-    "id": 438
+    "image": "images/card_438.webp",
+    "id": 438,
+    "image_tier": "B",
+    "image_path": "images/card_438.webp"
   },
   {
     "german": "enden",
@@ -8063,8 +8257,10 @@
     "antonym": "beginnen",
     "example_de": "Die Straße endet hier. Das Arbeitsverhältnis endet im Mai.",
     "example_en": "The street ends here. The employment relationship ends in May.",
-    "image": "images/card_439.svg",
-    "id": 439
+    "image": "images/card_439.webp",
+    "id": 439,
+    "image_tier": "B",
+    "image_path": "images/card_439.webp"
   },
   {
     "german": "endgültig",
@@ -8082,8 +8278,10 @@
     "antonym": "vorläufig",
     "example_de": "Damit ist das Problem endgültig gelöst. Der endgültige Termin steht noch nicht fest. Das Ergebnis ist noch nicht endgültig.",
     "example_en": "With that, the problem is finally solved. The final date is not yet set. The result is not yet final.",
-    "image": "images/card_440.svg",
-    "id": 440
+    "image": "images/card_440.webp",
+    "id": 440,
+    "image_tier": "B",
+    "image_path": "images/card_440.webp"
   },
   {
     "german": "endlich",
@@ -8098,8 +8296,10 @@
     "antonym": null,
     "example_de": "Endlich haben wir eine schöne Wohnung gefunden. Haben Sie sich nun endlich entschieden?",
     "example_en": "Finally we have found a beautiful apartment. Have you finally decided?",
-    "image": "images/card_441.svg",
-    "id": 441
+    "image": "images/card_441.webp",
+    "id": 441,
+    "image_tier": "B",
+    "image_path": "images/card_441.webp"
   },
   {
     "german": "die Energie",
@@ -8114,8 +8314,10 @@
     "antonym": null,
     "example_de": "Wir müssen Energie sparen. Abends habe ich keine Energie mehr, um Sport zu machen.",
     "example_en": "We must save energy. In the evening I have no more energy to do sports.",
-    "image": "images/card_442.svg",
-    "id": 442
+    "image": "images/card_442.webp",
+    "id": 442,
+    "image_tier": "B",
+    "image_path": "images/card_442.webp"
   },
   {
     "german": "eng",
@@ -8133,8 +8335,10 @@
     "antonym": "weit",
     "example_de": "Die Jacke ist mir zu eng. Wir arbeiten mit dieser Firma eng zusammen.",
     "example_en": "The jacket is too tight for me. We work closely together with this company.",
-    "image": "images/card_443.svg",
-    "id": 443
+    "image": "images/card_443.webp",
+    "id": 443,
+    "image_tier": "B",
+    "image_path": "images/card_443.webp"
   },
   {
     "german": "der Enkel",
@@ -8149,8 +8353,10 @@
     "antonym": null,
     "example_de": "Alle meine Enkel gehen schon zur Schule.",
     "example_en": "All my grandchildren already go to school.",
-    "image": "images/card_444.svg",
-    "id": 444
+    "image": "images/card_444.webp",
+    "id": 444,
+    "image_tier": "B",
+    "image_path": "images/card_444.webp"
   },
   {
     "german": "die Entfernung",
@@ -8165,8 +8371,10 @@
     "antonym": "die Nähe",
     "example_de": "Aus dieser Entfernung ist das nicht zu erkennen.",
     "example_en": "From this distance, that is not recognizable.",
-    "image": "images/card_445.svg",
-    "id": 445
+    "image": "images/card_445.webp",
+    "id": 445,
+    "image_tier": "B",
+    "image_path": "images/card_445.webp"
   },
   {
     "german": "enthalten",
@@ -8185,8 +8393,10 @@
     "antonym": null,
     "example_de": "Diese Schokolade enthält nur sehr wenig Zucker. Ist die Änderung im Preis enthalten?",
     "example_en": "This chocolate contains very little sugar. Is the change included in the price?",
-    "image": "images/card_446.svg",
-    "id": 446
+    "image": "images/card_446.webp",
+    "id": 446,
+    "image_tier": "B",
+    "image_path": "images/card_446.webp"
   },
   {
     "german": "entlassen",
@@ -8205,8 +8415,10 @@
     "antonym": "einstellen",
     "example_de": "Die Operation ist gut gelaufen. Wir können Sie nächste Woche aus dem Krankenhaus entlassen. Die Firma hat viele Mitarbeiter entlassen.",
     "example_en": "The operation went well. We can discharge you from the hospital next week. The company dismissed many employees.",
-    "image": "images/card_447.svg",
-    "id": 447
+    "image": "images/card_447.webp",
+    "id": 447,
+    "image_tier": "B",
+    "image_path": "images/card_447.webp"
   },
   {
     "german": "die Entlassung",
@@ -8221,8 +8433,10 @@
     "antonym": "die Einstellung",
     "example_de": "Seine Entlassung aus der Firma kam überraschend.",
     "example_en": "His dismissal from the company came as a surprise.",
-    "image": "images/card_448.svg",
-    "id": 448
+    "image": "images/card_448.webp",
+    "id": 448,
+    "image_tier": "B",
+    "image_path": "images/card_448.webp"
   },
   {
     "german": "die Entscheidung",
@@ -8237,8 +8451,10 @@
     "antonym": null,
     "example_de": "Diese wichtige Entscheidung möchte ich zuerst mit meinem Mann besprechen.",
     "example_en": "I would like to discuss this important decision with my husband first.",
-    "image": "images/card_449.svg",
-    "id": 449
+    "image": "images/card_449.webp",
+    "id": 449,
+    "image_tier": "B",
+    "image_path": "images/card_449.webp"
   },
   {
     "german": "entschuldigen",
@@ -8257,8 +8473,10 @@
     "antonym": null,
     "example_de": "Entschuldigen Sie bitte, dass ich Sie störe. Aber es gibt ein Problem. Herr Meier lässt sich entschuldigen, er ist stark erkältet.",
     "example_en": "Please excuse me for disturbing you. But there is a problem. Mr. Meier asks to be excused, he has a bad cold.",
-    "image": "images/card_450.svg",
-    "id": 450
+    "image": "images/card_450.webp",
+    "id": 450,
+    "image_tier": "B",
+    "image_path": "images/card_450.webp"
   },
   {
     "german": "die Entschuldigung",
@@ -8273,8 +8491,10 @@
     "antonym": null,
     "example_de": "Oh, Entschuldigung! – Macht nichts. Kein Problem.",
     "example_en": "Oh, excuse me! – It doesn't matter. No problem.",
-    "image": "images/card_451.svg",
-    "id": 451
+    "image": "images/card_451.webp",
+    "id": 451,
+    "image_tier": "B",
+    "image_path": "images/card_451.webp"
   },
   {
     "german": "entstehen",
@@ -8293,8 +8513,10 @@
     "antonym": "verschwinden",
     "example_de": "Hier entsteht ein neues Einkaufszentrum. Andere Kosten entstehen nicht.",
     "example_en": "A new shopping center is being built here. Other costs do not arise.",
-    "image": "images/card_452.svg",
-    "id": 452
+    "image": "images/card_452.webp",
+    "id": 452,
+    "image_tier": "B",
+    "image_path": "images/card_452.webp"
   },
   {
     "german": "die Enttäuschung",
@@ -8309,8 +8531,10 @@
     "antonym": "die Freude",
     "example_de": "Das Endspiel war eine große Enttäuschung.",
     "example_en": "The final game was a great disappointment.",
-    "image": "images/card_453.svg",
-    "id": 453
+    "image": "images/card_453.webp",
+    "id": 453,
+    "image_tier": "B",
+    "image_path": "images/card_453.webp"
   },
   {
     "german": "entweder ... oder",
@@ -8325,8 +8549,10 @@
     "antonym": "weder ... noch",
     "example_de": "Nur einer kann gewinnen, entweder du oder ich.",
     "example_en": "Only one can win, either you or me.",
-    "image": "images/card_454.svg",
-    "id": 454
+    "image": "images/card_454.webp",
+    "id": 454,
+    "image_tier": "B",
+    "image_path": "images/card_454.webp"
   },
   {
     "german": "die Entwicklung",
@@ -8341,8 +8567,10 @@
     "antonym": "der Rückschritt",
     "example_de": "Genug Schlaf ist wichtig für die Entwicklung Ihres Kindes.",
     "example_en": "Enough sleep is important for the development of your child.",
-    "image": "images/card_455.svg",
-    "id": 455
+    "image": "images/card_455.webp",
+    "id": 455,
+    "image_tier": "B",
+    "image_path": "images/card_455.webp"
   },
   {
     "german": "der Erdapfel",
@@ -8357,8 +8585,10 @@
     "antonym": null,
     "example_de": "Kann ich bitte noch Erdäpfel bekommen?",
     "example_en": "Can I please get some more potatoes?",
-    "image": "images/card_456.svg",
-    "id": 456
+    "image": "images/card_456.webp",
+    "id": 456,
+    "image_tier": "B",
+    "image_path": "images/card_456.webp"
   },
   {
     "german": "die Erde",
@@ -8373,8 +8603,10 @@
     "antonym": "der Himmel",
     "example_de": "Die Pflanzen brauchen neue Erde. Mein Sohn hat das Glas auf die Erde fallen lassen. An der Konferenz nehmen Vertreter aus fast allen Ländern der Erde teil.",
     "example_en": "The plants need new soil. My son dropped the glass on the ground. Representatives from almost all countries of the world are taking part in the conference.",
-    "image": "images/card_457.svg",
-    "id": 457
+    "image": "images/card_457.webp",
+    "id": 457,
+    "image_tier": "B",
+    "image_path": "images/card_457.webp"
   },
   {
     "german": "das Erdgeschoss",
@@ -8389,8 +8621,10 @@
     "antonym": "das Obergeschoss",
     "example_de": "Unsere Wohnung befindet sich im Erdgeschoss.",
     "example_en": "Our apartment is located on the ground floor.",
-    "image": "images/card_458.svg",
-    "id": 458
+    "image": "images/card_458.webp",
+    "id": 458,
+    "image_tier": "B",
+    "image_path": "images/card_458.webp"
   },
   {
     "german": "das Ereignis",
@@ -8405,8 +8639,10 @@
     "antonym": null,
     "example_de": "Alle Zeitungen haben über diese Ereignisse berichtet. Das Konzert war ein großes Ereignis.",
     "example_en": "All newspapers reported on these events. The concert was a great event.",
-    "image": "images/card_459.svg",
-    "id": 459
+    "image": "images/card_459.webp",
+    "id": 459,
+    "image_tier": "B",
+    "image_path": "images/card_459.webp"
   },
   {
     "german": "die Erfahrung",
@@ -8421,8 +8657,10 @@
     "antonym": null,
     "example_de": "Ich habe zehn Jahre Erfahrung in diesem Beruf. Mit diesem Gerät haben wir gute Erfahrungen gemacht.",
     "example_en": "I have ten years of experience in this profession. We have had good experiences with this device.",
-    "image": "images/card_460.svg",
-    "id": 460
+    "image": "images/card_460.webp",
+    "id": 460,
+    "image_tier": "B",
+    "image_path": "images/card_460.webp"
   },
   {
     "german": "die Erfindung",
@@ -8437,8 +8675,10 @@
     "antonym": null,
     "example_de": "Die Erfindung des Buchdrucks war sehr wichtig für die Menschen.",
     "example_en": "The invention of the printing press was very important for the people.",
-    "image": "images/card_461.svg",
-    "id": 461
+    "image": "images/card_461.webp",
+    "id": 461,
+    "image_tier": "B",
+    "image_path": "images/card_461.webp"
   },
   {
     "german": "der Erfolg",
@@ -8453,8 +8693,10 @@
     "antonym": "der Misserfolg",
     "example_de": "Der Film war ein großer Erfolg. Ich wünsche Ihnen viel Erfolg bei der Prüfung.",
     "example_en": "The film was a great success. I wish you much success in the exam.",
-    "image": "images/card_462.svg",
-    "id": 462
+    "image": "images/card_462.webp",
+    "id": 462,
+    "image_tier": "B",
+    "image_path": "images/card_462.webp"
   },
   {
     "german": "erfolgreich",
@@ -8472,8 +8714,10 @@
     "antonym": "erfolglos",
     "example_de": "Mein Großvater war ein erfolgreicher Geschäftsmann.",
     "example_en": "My grandfather was a successful businessman.",
-    "image": "images/card_463.svg",
-    "id": 463
+    "image": "images/card_463.webp",
+    "id": 463,
+    "image_tier": "B",
+    "image_path": "images/card_463.webp"
   },
   {
     "german": "erforderlich",
@@ -8491,8 +8735,10 @@
     "antonym": "unnötig",
     "example_de": "Hier ist die Liste der erforderlichen Zutaten für den Kuchen. Es ist erforderlich, dass man den Pass persönlich abholt.",
     "example_en": "Here is the list of required ingredients for the cake. It is necessary that you pick up the passport in person.",
-    "image": "images/card_464.svg",
-    "id": 464
+    "image": "images/card_464.webp",
+    "id": 464,
+    "image_tier": "B",
+    "image_path": "images/card_464.webp"
   },
   {
     "german": "das Ergebnis",
@@ -8507,8 +8753,10 @@
     "antonym": null,
     "example_de": "Ein so gutes Ergebnis hat uns alle überrascht.",
     "example_en": "Such a good result surprised us all.",
-    "image": "images/card_465.svg",
-    "id": 465
+    "image": "images/card_465.webp",
+    "id": 465,
+    "image_tier": "B",
+    "image_path": "images/card_465.webp"
   },
   {
     "german": "die Erholung",
@@ -8523,8 +8771,10 @@
     "antonym": "die Erschöpfung",
     "example_de": "Ich habe zu viel gearbeitet. Jetzt brauche ich etwas Erholung.",
     "example_en": "I have worked too much. Now I need some rest.",
-    "image": "images/card_466.svg",
-    "id": 466
+    "image": "images/card_466.webp",
+    "id": 466,
+    "image_tier": "B",
+    "image_path": "images/card_466.webp"
   },
   {
     "german": "die Erhöhung",
@@ -8539,8 +8789,10 @@
     "antonym": "die Senkung",
     "example_de": "Wir streiken für eine Lohnerhöhung.",
     "example_en": "We are striking for a wage increase.",
-    "image": "images/card_467.svg",
-    "id": 467
+    "image": "images/card_467.webp",
+    "id": 467,
+    "image_tier": "B",
+    "image_path": "images/card_467.webp"
   },
   {
     "german": "die Erinnerung",
@@ -8555,8 +8807,10 @@
     "antonym": "das Vergessen",
     "example_de": "An diese Zeit habe ich viele schöne Erinnerungen.",
     "example_en": "I have many beautiful memories of this time.",
-    "image": "images/card_468.svg",
-    "id": 468
+    "image": "images/card_468.webp",
+    "id": 468,
+    "image_tier": "B",
+    "image_path": "images/card_468.webp"
   },
   {
     "german": "die Erklärung",
@@ -8571,8 +8825,10 @@
     "antonym": null,
     "example_de": "Hast du schon die Steuererklärung gemacht? Die Erklärung der Lehrerin ist besser als die Erklärung im Buch.",
     "example_en": "Have you already done your tax return? The teacher's explanation is better than the explanation in the book.",
-    "image": "images/card_469.svg",
-    "id": 469
+    "image": "images/card_469.webp",
+    "id": 469,
+    "image_tier": "B",
+    "image_path": "images/card_469.webp"
   },
   {
     "german": "erkältet",
@@ -8587,8 +8843,10 @@
     "antonym": "gesund",
     "example_de": "Ich bin stark erkältet.",
     "example_en": "I have a bad cold.",
-    "image": "images/card_470.svg",
-    "id": 470
+    "image": "images/card_470.webp",
+    "id": 470,
+    "image_tier": "B",
+    "image_path": "images/card_470.webp"
   },
   {
     "german": "die Erkältung",
@@ -8603,8 +8861,10 @@
     "antonym": null,
     "example_de": "Du hast eine schlimme Erkältung!",
     "example_en": "You have a bad cold!",
-    "image": "images/card_471.svg",
-    "id": 471
+    "image": "images/card_471.webp",
+    "id": 471,
+    "image_tier": "B",
+    "image_path": "images/card_471.webp"
   },
   {
     "german": "die Erlaubnis",
@@ -8619,8 +8879,10 @@
     "antonym": "das Verbot",
     "example_de": "Sie hätten ihn vorher um Erlaubnis bitten müssen.",
     "example_en": "You should have asked him for permission beforehand.",
-    "image": "images/card_472.svg",
-    "id": 472
+    "image": "images/card_472.webp",
+    "id": 472,
+    "image_tier": "B",
+    "image_path": "images/card_472.webp"
   },
   {
     "german": "das Erlebnis",
@@ -8635,8 +8897,10 @@
     "antonym": null,
     "example_de": "Die Reise war ein tolles Erlebnis.",
     "example_en": "The trip was a great experience.",
-    "image": "images/card_473.svg",
-    "id": 473
+    "image": "images/card_473.webp",
+    "id": 473,
+    "image_tier": "B",
+    "image_path": "images/card_473.webp"
   },
   {
     "german": "erledigen",
@@ -8655,8 +8919,10 @@
     "antonym": "vernachlässigen",
     "example_de": "Diese zwei Pakete müssen zur Post. Könntest du das für mich erledigen?",
     "example_en": "These two packages must go to the post office. Could you take care of that for me?",
-    "image": "images/card_474.svg",
-    "id": 474
+    "image": "images/card_474.webp",
+    "id": 474,
+    "image_tier": "B",
+    "image_path": "images/card_474.webp"
   },
   {
     "german": "die Ermäßigung",
@@ -8671,8 +8937,10 @@
     "antonym": "der Aufschlag",
     "example_de": "Es gibt eine Ermäßigung für Kinder und Senioren.",
     "example_en": "There is a discount for children and seniors.",
-    "image": "images/card_475.svg",
-    "id": 475
+    "image": "images/card_475.webp",
+    "id": 475,
+    "image_tier": "B",
+    "image_path": "images/card_475.webp"
   },
   {
     "german": "ernst",
@@ -8690,8 +8958,10 @@
     "antonym": "unernst",
     "example_de": "Der starke Verkehr ist ein ernstes Problem.",
     "example_en": "Heavy traffic is a serious problem.",
-    "image": "images/card_476.svg",
-    "id": 476
+    "image": "images/card_476.webp",
+    "id": 476,
+    "image_tier": "B",
+    "image_path": "images/card_476.webp"
   },
   {
     "german": "ernsthaft",
@@ -8709,8 +8979,10 @@
     "antonym": "spaßhaft",
     "example_de": "Ich überlege ernsthaft, ob ich in eine andere Stadt ziehen soll.",
     "example_en": "I am seriously considering whether I should move to another city.",
-    "image": "images/card_477.svg",
-    "id": 477
+    "image": "images/card_477.webp",
+    "id": 477,
+    "image_tier": "B",
+    "image_path": "images/card_477.webp"
   },
   {
     "german": "die Ernte",
@@ -8725,8 +8997,10 @@
     "antonym": null,
     "example_de": "Die Ernte ist dieses Jahr gut.",
     "example_en": "The harvest is good this year.",
-    "image": "images/card_478.svg",
-    "id": 478
+    "image": "images/card_478.webp",
+    "id": 478,
+    "image_tier": "B",
+    "image_path": "images/card_478.webp"
   },
   {
     "german": "die Ernährung",

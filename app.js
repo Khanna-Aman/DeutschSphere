@@ -54,7 +54,7 @@ import {
   renderSidebarCategories
 } from './js/search.js';
 
-const WORDLIST_CACHE_VERSION = 'v1.0.0';
+const WORDLIST_CACHE_VERSION = 'v1.0.1';
 
 // Global hooks for early-paint theme execution inside HTML Head
 window.applyTheme = applyTheme;
@@ -127,6 +127,7 @@ export async function changeLevel(level) {
   migrateToFSRS();
   
   updateLevelUI();
+  updateImagesToggleUI();
   await fetchData();
   handleRouting();
 }

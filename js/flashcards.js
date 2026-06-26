@@ -1038,6 +1038,9 @@ export function updateImagesToggleUI() {
 
   if (!toggleBtn) return;
 
+  const icon = toggleBtn.querySelector('.toggle-icon');
+  const wrapper = icon ? icon.parentElement : null;
+
   if (state.currentLevel === 'b1') {
     // Force disabled / compilation notice
     toggleBtn.classList.remove('bg-indigo-600', 'border-indigo-500', 'text-white', 'hover:bg-indigo-500', 'hover:text-white');
@@ -1052,6 +1055,12 @@ export function updateImagesToggleUI() {
       sublabel.textContent = "Compiling for B1...";
       sublabel.classList.add('text-slate-500');
       sublabel.classList.remove('text-indigo-500/80');
+    }
+    if (icon) {
+      icon.className = "toggle-icon fa-solid fa-toggle-off text-xs text-slate-500/40";
+    }
+    if (wrapper) {
+      wrapper.className = "toggle-images-wrapper flex items-center justify-center w-8 h-8 rounded-lg text-sm font-medium transition-all bg-slate-950/40 border border-slate-900/80 text-slate-500/40";
     }
   } else {
     // A1 or A2: can be toggled
@@ -1072,6 +1081,12 @@ export function updateImagesToggleUI() {
         sublabel.classList.remove('text-slate-500');
         sublabel.classList.add('text-indigo-500/80');
       }
+      if (icon) {
+        icon.className = "toggle-icon fa-solid fa-toggle-on text-xs text-indigo-400";
+      }
+      if (wrapper) {
+        wrapper.className = "toggle-images-wrapper flex items-center justify-center w-8 h-8 rounded-lg text-sm font-medium transition-all bg-indigo-950/20 border border-indigo-500/30 text-indigo-400";
+      }
     } else {
       // Inactive state
       toggleBtn.classList.remove('bg-indigo-600', 'border-indigo-500', 'text-white', 'hover:bg-indigo-500', 'hover:text-white');
@@ -1085,6 +1100,12 @@ export function updateImagesToggleUI() {
         sublabel.textContent = "Deactivated";
         sublabel.classList.add('text-slate-500');
         sublabel.classList.remove('text-indigo-500/80');
+      }
+      if (icon) {
+        icon.className = "toggle-icon fa-solid fa-toggle-off text-xs text-slate-500";
+      }
+      if (wrapper) {
+        wrapper.className = "toggle-images-wrapper flex items-center justify-center w-8 h-8 rounded-lg text-sm font-medium transition-all bg-slate-900/80 border border-slate-800 text-slate-500 group-hover:border-indigo-500/30 group-hover:bg-indigo-950/20";
       }
     }
   }
