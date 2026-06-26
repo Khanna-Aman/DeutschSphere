@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeutschSphere V6.0 — Level A2 SOTA Visual Auditor</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS CDN (For visual layout) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050508;
+            color: #f3f4f6;
+            background-image: 
+                radial-gradient(at 10% 10%, rgba(59, 130, 246, 0.05) 0px, transparent 50%),
+                radial-gradient(at 90% 90%, rgba(236, 72, 153, 0.05) 0px, transparent 50%),
+                radial-gradient(at 50% 50%, rgba(139, 92, 246, 0.02) 0px, transparent 70%);
+            background-attachment: fixed;
+        }
+        
+        .glass-panel {
+            background: rgba(15, 17, 28, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .glass-card {
+            background: rgba(20, 22, 38, 0.55);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            transform: translateY(-4px) scale(1.02);
+            border-color: rgba(255, 255, 255, 0.1);
+            background: rgba(25, 28, 48, 0.7);
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        /* Deterministic Glow Styles matching GEMINI.md */
+        .glow-der {
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.15);
+            border-bottom: 3px solid #3b82f6;
+        }
+        .glow-der:hover {
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.3);
+        }
+
+        .glow-die {
+            box-shadow: 0 0 15px rgba(236, 72, 153, 0.15);
+            border-bottom: 3px solid #ec4899;
+        }
+        .glow-die:hover {
+            box-shadow: 0 0 25px rgba(236, 72, 153, 0.3);
+        }
+
+        .glow-das {
+            box-shadow: 0 0 15px rgba(34, 197, 94, 0.15);
+            border-bottom: 3px solid #22c55e;
+        }
+        .glow-das:hover {
+            box-shadow: 0 0 25px rgba(34, 197, 94, 0.3);
+        }
+
+        .glow-neutral {
+            box-shadow: 0 0 15px rgba(139, 92, 246, 0.15);
+            border-bottom: 3px solid #8b5cf6;
+        }
+        .glow-neutral:hover {
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.3);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050508;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="min-h-screen py-10 px-4 md:px-12 font-sans overflow-x-hidden">
+
+    <!-- Header Panel -->
+    <div class="max-w-7xl mx-auto glass-panel rounded-3xl p-6 md:p-8 mb-8 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div>
+            <div class="flex items-center gap-3 mb-2">
+                <span class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest font-outfit shadow-lg shadow-blue-500/20">V6.0 Premium</span>
+                <span class="text-xs text-gray-400 font-medium">DeutschSphere Curriculum</span>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-extrabold font-outfit tracking-tight bg-gradient-to-r from-white via-gray-100 to-gray-400 bg-clip-text text-transparent">
+                Level A2 Visual Asset Auditor
+            </h1>
+            <p class="text-sm text-gray-400 mt-2 font-light">
+                Programmatically tracking all 1,142 German flashcards. Visualizing high-gloss 3D claymation WebPs.
+            </p>
+        </div>
+        
+        <!-- Live Statistics Glass Counters -->
+        <div class="flex gap-4 flex-wrap justify-center">
+            <div class="bg-slate-900/40 border border-white/5 rounded-2xl px-5 py-3 text-center min-w-[100px] backdrop-blur-sm">
+                <div class="text-xs text-gray-400 font-medium mb-1 uppercase tracking-wider">Total Cards</div>
+                <div id="stat-total" class="text-2xl font-black font-outfit text-white">0</div>
+            </div>
+            <div class="bg-green-950/20 border border-green-500/10 rounded-2xl px-5 py-3 text-center min-w-[100px] backdrop-blur-sm">
+                <div class="text-xs text-green-400 font-medium mb-1 uppercase tracking-wider">Completed</div>
+                <div id="stat-completed" class="text-2xl font-black font-outfit text-green-400">0</div>
+            </div>
+            <div class="bg-yellow-950/20 border border-yellow-500/10 rounded-2xl px-5 py-3 text-center min-w-[100px] backdrop-blur-sm">
+                <div class="text-xs text-yellow-400 font-medium mb-1 uppercase tracking-wider">Pending</div>
+                <div id="stat-pending" class="text-2xl font-black font-outfit text-yellow-400">0</div>
+            </div>
+            <div class="bg-blue-950/20 border border-blue-500/10 rounded-2xl px-5 py-3 text-center min-w-[100px] backdrop-blur-sm">
+                <div class="text-xs text-blue-400 font-medium mb-1 uppercase tracking-wider">WebP %</div>
+                <div id="stat-percent" class="text-2xl font-black font-outfit text-blue-400">0%</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls Glass Bar -->
+    <div class="max-w-7xl mx-auto glass-panel rounded-2xl p-4 mb-8 flex flex-col md:flex-row gap-4 items-center justify-between">
+        <!-- Search -->
+        <div class="relative w-full md:w-80">
+            <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+            <input type="text" id="search-input" placeholder="Search German or English..." class="w-full bg-slate-900/60 border border-white/5 rounded-xl pl-11 pr-4 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all font-medium">
+        </div>
+
+        <!-- Filters Grid -->
+        <div class="flex flex-wrap gap-2 w-full md:w-auto">
+            <button onclick="filterCards('all')" id="filter-all" class="px-4 py-2 rounded-xl text-xs font-semibold uppercase tracking-wider border border-blue-500 bg-blue-500/10 text-blue-400 transition-all shadow-lg shadow-blue-500/10">
+                All Cards
+            </button>
+            <button onclick="filterCards('webp')" id="filter-webp" class="px-4 py-2 rounded-xl text-xs font-semibold uppercase tracking-wider border border-white/5 bg-slate-900/60 text-gray-400 hover:border-white/10 hover:text-white transition-all">
+                Completed (WebP)
+            </button>
+            <button onclick="filterCards('svg')" id="filter-svg" class="px-4 py-2 rounded-xl text-xs font-semibold uppercase tracking-wider border border-white/5 bg-slate-900/60 text-gray-400 hover:border-white/10 hover:text-white transition-all">
+                Pending (SVG/Empty)
+            </button>
+        </div>
+
+        <!-- CEFR Suffix Selector -->
+        <div class="flex gap-2">
+            <select id="gender-select" onchange="renderGrid()" class="bg-slate-900/60 border border-white/5 text-xs text-gray-300 font-semibold px-3 py-2 rounded-xl focus:outline-none focus:border-blue-500 cursor-pointer">
+                <option value="all">All Genders / Classes</option>
+                <option value="der">der (Nomen)</option>
+                <option value="die">die (Nomen)</option>
+                <option value="das">das (Nomen)</option>
+                <option value="Verb">Verben</option>
+                <option value="Adjektiv">Adjektive</option>
+                <option value="Andere">Andere Classes</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Active Filter Display Toast -->
+    <div class="max-w-7xl mx-auto mb-4 flex justify-between items-center px-2">
+        <span class="text-xs text-gray-400 font-semibold">
+            Showing <span id="visible-count" class="text-white font-bold">0</span> of <span id="total-count" class="text-white font-bold">0</span> cards
+        </span>
+        <span class="text-xs text-gray-400 font-medium">
+            Workspace: <code class="bg-slate-900 border border-white/5 px-1.5 py-0.5 rounded text-indigo-400">/a2/images/</code>
+        </span>
+    </div>
+
+    <!-- Grid Container -->
+    <div class="max-w-7xl mx-auto">
+        <div id="grid-container" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
+            <!-- Loading Indicator -->
+            <div class="col-span-full py-20 text-center flex flex-col items-center justify-center gap-4">
+                <i class="fa-solid fa-circle-notch fa-spin text-4xl text-blue-500"></i>
+                <p class="text-sm text-gray-400 font-light">Loading Level A2 wordlist database...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript Logical Orchestrator -->
+    <script>
+        let fullDatabase = [];
+        let currentFilter = 'all'; // all, webp, svg
+
+        // Fetch Level A2 Database
+        async function fetchDatabase() {
+            try {
+                // Since this auditor is in the root workspace directory, we load /a2/wordlist.json directly
+                const response = await fetch('./a2/wordlist.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                fullDatabase = await response.json();
+                
+                calculateStats();
+                renderGrid();
+            } catch (err) {
+                console.error("Failed to fetch Level A2 database: ", err);
+                document.getElementById('grid-container').innerHTML = `
+                    <div class="col-span-full bg-red-950/20 border border-red-500/10 rounded-2xl p-8 text-center max-w-md mx-auto mt-10">
+                        <i class="fa-solid fa-triangle-exclamation text-4xl text-red-500 mb-3"></i>
+                        <h3 class="text-lg font-bold font-outfit text-white mb-1">Database Load Failed</h3>
+                        <p class="text-xs text-gray-400">Could not read wordlist.json from "./a2/wordlist.json". Please check file paths.</p>
+                        <button onclick="fetchDatabase()" class="mt-4 px-4 py-2 bg-red-500/20 text-red-400 border border-red-500/20 rounded-xl text-xs font-semibold uppercase tracking-wider hover:bg-red-500/30 transition-all">Retry</button>
+                    </div>
+                `;
+            }
+        }
+
+        // Live stats calculations
+        function calculateStats() {
+            const total = fullDatabase.length;
+            
+            // Count WebP images (we can also check if image property ends in .webp or image_tier === "B")
+            const completed = fullDatabase.filter(item => {
+                const imageStr = item.image_path || item.image || '';
+                return imageStr.endsWith('.webp');
+            }).length;
+
+            const pending = total - completed;
+            const percent = total > 0 ? Math.round((completed / total) * 100) : 0;
+
+            document.getElementById('stat-total').innerText = total;
+            document.getElementById('stat-completed').innerText = completed;
+            document.getElementById('stat-pending').innerText = pending;
+            document.getElementById('stat-percent').innerText = `${percent}%`;
+            
+            document.getElementById('total-count').innerText = total;
+        }
+
+        // Filter buttons behavior
+        function filterCards(type) {
+            currentFilter = type;
+            
+            // Reset active button styling
+            const buttons = ['all', 'webp', 'svg'];
+            buttons.forEach(btn => {
+                const el = document.getElementById(`filter-${btn}`);
+                if (btn === type) {
+                    el.className = "px-4 py-2 rounded-xl text-xs font-semibold uppercase tracking-wider border border-blue-500 bg-blue-500/10 text-blue-400 transition-all shadow-lg shadow-blue-500/10";
+                } else {
+                    el.className = "px-4 py-2 rounded-xl text-xs font-semibold uppercase tracking-wider border border-white/5 bg-slate-900/60 text-gray-400 hover:border-white/10 hover:text-white transition-all";
+                }
+            });
+
+            renderGrid();
+        }
+
+        // Render card grids with filtering
+        function renderGrid() {
+            const gridContainer = document.getElementById('grid-container');
+            const searchQuery = document.getElementById('search-input').value.toLowerCase().trim();
+            const genderFilter = document.getElementById('gender-select').value;
+
+            // Apply all filters together
+            const filtered = fullDatabase.filter(item => {
+                const imageStr = item.image_path || item.image || '';
+                const isWebP = imageStr.endsWith('.webp');
+                
+                // 1. Completion Filter
+                if (currentFilter === 'webp' && !isWebP) return false;
+                if (currentFilter === 'svg' && isWebP) return false;
+
+                // 2. Class/Gender Filter
+                if (genderFilter !== 'all') {
+                    if (['der', 'die', 'das'].includes(genderFilter)) {
+                        if (item.word_class !== 'Nomen' || item.gender !== genderFilter) return false;
+                    } else if (genderFilter === 'Verb') {
+                        if (item.word_class !== 'Verb') return false;
+                    } else if (genderFilter === 'Adjektiv') {
+                        if (item.word_class !== 'Adjektiv' && !item.word_class?.toLowerCase().includes('adjective')) return false;
+                    } else if (genderFilter === 'Andere') {
+                        if (['Nomen', 'Verb', 'Adjektiv'].includes(item.word_class) || item.word_class?.toLowerCase().includes('adjective')) return false;
+                    }
+                }
+
+                // 3. Search Query
+                if (searchQuery) {
+                    const de = (item.german || '').toLowerCase();
+                    const en = (item.english || '').toLowerCase();
+                    if (!de.includes(searchQuery) && !en.includes(searchQuery)) return false;
+                }
+
+                return true;
+            });
+
+            document.getElementById('visible-count').innerText = filtered.length;
+
+            if (filtered.length === 0) {
+                gridContainer.innerHTML = `
+                    <div class="col-span-full py-16 text-center text-gray-500 font-light flex flex-col items-center gap-2">
+                        <i class="fa-regular fa-folder-open text-3xl opacity-30 mb-2"></i>
+                        <p class="text-sm">No cards match your current filters.</p>
+                        <p class="text-xs text-gray-600">Try adjusting your search query or gender select above.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Build grid HTML
+            let gridHtml = '';
+            filtered.forEach(item => {
+                const id = item.id;
+                const de = item.german;
+                const en = item.english;
+                const word_class = item.word_class || 'Andere';
+                const gender = item.gender || '';
+                
+                // Image handling
+                const imageStr = item.image_path || item.image || '';
+                const isWebP = imageStr.endsWith('.webp');
+                const imageSrc = `./a2/${imageStr}`; // prepend relative directory namespace
+
+                // Deterministic border class matching GEMINI.md
+                let borderGlowClass = 'glow-neutral';
+                let tagColorClass = 'bg-purple-500/10 text-purple-400 border-purple-500/20';
+                let classLabel = word_class;
+
+                if (word_class === 'Nomen') {
+                    if (gender === 'der') {
+                        borderGlowClass = 'glow-der';
+                        tagColorClass = 'bg-blue-500/10 text-blue-400 border-blue-500/20';
+                        classLabel = `der Nomen`;
+                    } else if (gender === 'die') {
+                        borderGlowClass = 'glow-die';
+                        tagColorClass = 'bg-pink-500/10 text-pink-400 border-pink-500/20';
+                        classLabel = `die Nomen`;
+                    } else if (gender === 'das') {
+                        borderGlowClass = 'glow-das';
+                        tagColorClass = 'bg-green-500/10 text-green-400 border-green-500/20';
+                        classLabel = `das Nomen`;
+                    }
+                } else if (word_class === 'Verb') {
+                    borderGlowClass = 'glow-neutral';
+                    tagColorClass = 'bg-yellow-500/10 text-yellow-400 border-yellow-500/20';
+                } else if (word_class === 'Adjektiv' || word_class.toLowerCase().includes('adjective')) {
+                    borderGlowClass = 'glow-neutral';
+                    tagColorClass = 'bg-orange-500/10 text-orange-400 border-orange-500/20';
+                }
+
+                gridHtml += `
+                    <div class="glass-card rounded-2xl overflow-hidden flex flex-col h-full ${borderGlowClass}">
+                        <!-- WebP Asset Window -->
+                        <div class="aspect-square bg-black relative flex items-center justify-center overflow-hidden border-b border-white/5 select-none">
+                            ${isWebP 
+                                ? `<img src="${imageSrc}" alt="${de}" loading="lazy" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" onerror="handleImageError(this, ${id})">`
+                                : `<div class="text-center p-4">
+                                       <div class="w-12 h-12 rounded-full bg-slate-900 flex items-center justify-center mx-auto mb-2 text-yellow-500/60 border border-yellow-500/10">
+                                           <i class="fa-solid fa-clock"></i>
+                                       </div>
+                                       <span class="text-[10px] text-gray-500 uppercase tracking-widest font-bold">SVG Pending</span>
+                                   </div>`
+                            }
+                            
+                            <!-- Card ID Floating Badge -->
+                            <span class="absolute top-2 left-2 bg-black/60 backdrop-blur-md border border-white/10 text-[10px] text-gray-400 font-bold font-outfit px-2 py-0.5 rounded-lg select-none">
+                                ID ${id}
+                            </span>
+
+                            <!-- Premium Verified Badge if image completed -->
+                            ${isWebP 
+                                ? `<span class="absolute top-2 right-2 bg-green-500/20 border border-green-500/30 text-green-400 text-[8px] font-bold font-outfit px-1.5 py-0.5 rounded-md flex items-center gap-1 uppercase tracking-wide select-none">
+                                       <i class="fa-solid fa-circle-check"></i> SOTA
+                                   </span>`
+                                : ''
+                            }
+                        </div>
+
+                        <!-- Card Meta Information -->
+                        <div class="p-3.5 flex flex-col flex-grow justify-between gap-2 bg-gradient-to-b from-transparent to-slate-950/20">
+                            <div>
+                                <h3 class="font-bold text-sm text-white font-outfit leading-tight line-clamp-1 truncate" title="${de}">
+                                    ${de}
+                                </h3>
+                                <p class="text-xs text-gray-400 font-light mt-0.5 line-clamp-1 truncate" title="${en}">
+                                    ${en}
+                                </p>
+                            </div>
+
+                            <div class="flex items-center justify-between mt-1 pt-1.5 border-t border-white/5">
+                                <span class="text-[9px] font-bold border rounded px-1.5 py-0.5 uppercase tracking-wide font-outfit ${tagColorClass}">
+                                    ${classLabel}
+                                </span>
+                                <span class="text-[9px] text-gray-500 truncate max-w-[50px]" title="${item.theme || 'Andere'}">
+                                    ${item.theme ? item.theme.split(',')[0].split('&')[0].trim() : 'Andere'}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            gridContainer.innerHTML = gridHtml;
+        }
+
+        // Handle image loading error nicely
+        function handleImageError(img, id) {
+            console.error(`Failed to load image for card ${id}`);
+            const parent = img.parentElement;
+            parent.innerHTML = `
+                <div class="text-center p-4 text-red-500">
+                    <i class="fa-solid fa-triangle-exclamation text-2xl mb-1"></i>
+                    <p class="text-[9px] font-bold uppercase tracking-widest text-red-400">404 Error</p>
+                    <p class="text-[8px] text-gray-500 font-light mt-1">Check /a2/images/card_${id}.webp</p>
+                </div>
+            `;
+        }
+
+        // Attach event listeners for real-time search typing
+        document.getElementById('search-input').addEventListener('input', renderGrid);
+
+        // Initial launch
+        fetchDatabase();
+    </script>
+</body>
+</html>
