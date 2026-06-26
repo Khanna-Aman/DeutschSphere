@@ -29,7 +29,8 @@ import {
 
 import {
   updateImagesToggleUI,
-  renderCard
+  renderCard,
+  initCompanionTabs
 } from './js/flashcards.js';
 
 import {
@@ -303,6 +304,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   fetchData();
   setupEventListeners();
   setupSwipeGestures();
+  initCompanionTabs();
   updateImagesToggleUI();
   initTTS();
 

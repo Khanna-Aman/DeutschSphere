@@ -1,6 +1,6 @@
 // js/flashcards.js — Leitner SRS Flashcards, Preferences & Phonetik-Spiegel Module
 
-import { state, elements, categoryTranslations, getSRSInfo, getCategoryIcon, saveSRSState, shuffleArray, safeSetItem, schedulePersist } from './state.js';
+import { state, elements, categoryTranslations, getSRSInfo, getCategoryIcon, saveSRSState, shuffleArray, safeSetItem, schedulePersist, getStreakInfo } from './state.js';
 import { prepareUtterance, speakWord, warmUpTTS, getSharedAudioContext } from './audio.js';
 import { updateOverallStats, unlockAchievement } from './stats.js';
 import { getSuffixRule, generateVerbConjugation, generateAdjectiveDeclension } from './nlp.js';
@@ -205,6 +205,7 @@ export function openAccordion() {
   if (elements.toggleRevealText) {
     elements.toggleRevealText.textContent = "Details verbergen";
   }
+  updateDesktopCompanionVisibility();
 }
 
 // Collapse the detail accordion with animation
@@ -220,6 +221,7 @@ export function closeAccordion() {
   if (elements.toggleRevealText) {
     elements.toggleRevealText.textContent = "Details anzeigen";
   }
+  updateDesktopCompanionVisibility();
 }
 
 // Collapse the detail accordion instantly without animation
@@ -242,6 +244,7 @@ export function closeAccordionInstantly() {
   if (elements.toggleRevealText) {
     elements.toggleRevealText.textContent = "Details anzeigen";
   }
+  updateDesktopCompanionVisibility();
 }
 
 // Render the active flashcard
@@ -419,9 +422,9 @@ export function renderCard() {
     elements.flashcard.className = `glass border rounded-2xl p-6 md:py-6 md:px-10 min-h-[150px] md:min-h-[180px] flex flex-col justify-between cursor-pointer transition-all duration-300 select-none relative group overflow-hidden ${glowClass}`;
   }
 
-  // Ensure card image container is hidden (illustrations disabled for V1.0.0; coming in V1.0.1)
+  // Ensure card image container is hidden for B1 but loaded for A1 and A2
   const activeImage = card.image_path || card.image;
-  const isImageAllowed = false; // Strictly disabled for now
+  const isImageAllowed = (state.currentLevel === 'a1' || state.currentLevel === 'a2');
   if (state.showImages && isImageAllowed) {
     if (elements.cardImageContainer) {
       elements.cardImageContainer.style.display = '';
@@ -697,6 +700,11 @@ export function renderCard() {
 
   // Pre-prepare utterance for immediate response on click
   prepareUtterance(card);
+
+  // Update Deck Companion Dashboard
+  renderCompanionWordList();
+  updateCompanionStats();
+  updateDesktopCompanionVisibility();
 
   // Autoplay or Continuous trainer handling
   if (state.trainer && state.trainer.active) {
@@ -986,24 +994,98 @@ function showToast(title, description, icon = 'fa-circle-info') {
 
 // Preferences: Toggle illustrations
 export function toggleImages() {
-  showToast(
-    "Premium-Illustrationen",
-    "Unsere handkuratierten, detailreichen AI-Illustrationen folgen in Kürze in Version 1.0.1! Freuen Sie sich auf ein visuell fesselndes Lernerlebnis! ✨",
-    "fa-image"
-  );
-  // Keep state.showImages false to ensure no 404 image requests are ever fired
-  state.showImages = false;
-  safeSetItem('show_images', 'false');
+  if (state.currentLevel === 'b1') {
+    showToast(
+      "Illustrations Compiling",
+      "Level B1 illustrations are currently compiling in the background! They will be ready in V1.0.1. Currently, illustrations are active for levels A1 and A2.",
+      "fa-image"
+    );
+    state.showImages = false;
+    safeSetItem('show_images', 'false');
+    updateImagesToggleUI();
+    return;
+  }
+
+  // Toggle state
+  state.showImages = !state.showImages;
+  safeSetItem('show_images', state.showImages ? 'true' : 'false');
   updateImagesToggleUI();
+
+  if (state.showImages) {
+    showToast(
+      "Premium-Illustrationen",
+      "Premium hand-curated illustrations are now active for Level A1 & A2! ✨",
+      "fa-image"
+    );
+  } else {
+    showToast(
+      "Illustrationen Deaktiviert",
+      "Premium illustrations are now deactivated.",
+      "fa-image"
+    );
+  }
+
+  // Re-render current card to apply image state change immediately
+  if (state.deck && state.deck[state.currentIndex]) {
+    renderCard(state.deck[state.currentIndex]);
+  }
 }
 
 export function updateImagesToggleUI() {
-  if (elements.toggleImagesBtn && elements.toggleImagesText) {
-    elements.toggleImagesBtn.classList.remove('bg-indigo-600', 'border-indigo-500', 'text-white', 'hover:bg-indigo-500', 'hover:text-white');
-    elements.toggleImagesBtn.classList.add('bg-slate-950/40', 'border-slate-900/80', 'text-slate-500/70', 'cursor-pointer');
-    elements.toggleImagesBtn.title = "Illustrationen folgen in Kürze in V1.0.1 (B)";
-    if (elements.toggleImagesText) {
-      elements.toggleImagesText.textContent = "Premium-Bilder: In Kürze...";
+  const toggleBtn = document.getElementById('toggle-images-btn');
+  const label = document.getElementById('toggle-images-label');
+  const sublabel = document.getElementById('toggle-images-sublabel');
+
+  if (!toggleBtn) return;
+
+  if (state.currentLevel === 'b1') {
+    // Force disabled / compilation notice
+    toggleBtn.classList.remove('bg-indigo-600', 'border-indigo-500', 'text-white', 'hover:bg-indigo-500', 'hover:text-white');
+    toggleBtn.classList.add('bg-slate-950/40', 'border-slate-900/80', 'text-slate-500/70', 'cursor-not-allowed');
+    toggleBtn.title = "Illustrationen für B1 werden kompiliert (B)";
+    if (label) {
+      label.textContent = "Premium Illustrations";
+      label.classList.add('text-slate-400');
+      label.classList.remove('text-indigo-400');
+    }
+    if (sublabel) {
+      sublabel.textContent = "Compiling for B1...";
+      sublabel.classList.add('text-slate-500');
+      sublabel.classList.remove('text-indigo-500/80');
+    }
+  } else {
+    // A1 or A2: can be toggled
+    toggleBtn.classList.remove('cursor-not-allowed');
+    toggleBtn.title = "Toggle Premium Illustrations (B)";
+    
+    if (state.showImages) {
+      // Active state
+      toggleBtn.classList.add('bg-indigo-600', 'border-indigo-500', 'text-white', 'hover:bg-indigo-500', 'hover:text-white');
+      toggleBtn.classList.remove('bg-slate-950/40', 'border-slate-900/80', 'text-slate-500/70');
+      if (label) {
+        label.textContent = "Premium Illustrations";
+        label.classList.remove('text-slate-400');
+        label.classList.add('text-indigo-400');
+      }
+      if (sublabel) {
+        sublabel.textContent = "Active (A1 & A2 supported)";
+        sublabel.classList.remove('text-slate-500');
+        sublabel.classList.add('text-indigo-500/80');
+      }
+    } else {
+      // Inactive state
+      toggleBtn.classList.remove('bg-indigo-600', 'border-indigo-500', 'text-white', 'hover:bg-indigo-500', 'hover:text-white');
+      toggleBtn.classList.add('bg-slate-950/40', 'border-slate-900/80', 'text-slate-500/70');
+      if (label) {
+        label.textContent = "Premium Illustrations";
+        label.classList.add('text-slate-400');
+        label.classList.remove('text-indigo-400');
+      }
+      if (sublabel) {
+        sublabel.textContent = "Deactivated";
+        sublabel.classList.add('text-slate-500');
+        sublabel.classList.remove('text-indigo-500/80');
+      }
     }
   }
 }
@@ -1058,6 +1140,8 @@ export function togglePhoneticMirror() {
     }
 
     state.phonetic.isOpen = true;
+    updateDesktopCompanionVisibility();
+    
     if (elements.phoneticMirrorPanel) {
       elements.phoneticMirrorPanel.classList.add('open');
       setTimeout(() => {
@@ -1089,6 +1173,7 @@ export function togglePhoneticMirror() {
 
 export function closePhoneticMirror() {
   state.phonetic.isOpen = false;
+  updateDesktopCompanionVisibility();
   
   if (elements.phoneticMirrorPanel) {
     elements.phoneticMirrorPanel.classList.remove('open');
@@ -1766,5 +1851,173 @@ export function toggleGrammarMatrix() {
     if (elements.grammarMatrixIcon) {
       elements.grammarMatrixIcon.classList.add('rotate-180');
     }
+  }
+}
+
+// ==========================================================
+// DECK COMPANION DASHBOARD CONTROLLER (DESKTOP OPTIMIZATION)
+// ==========================================================
+
+export function initCompanionTabs() {
+  const tabWordlist = document.getElementById('companion-tab-wordlist');
+  const tabStats = document.getElementById('companion-tab-stats');
+  const panelWordlist = document.getElementById('companion-panel-wordlist');
+  const panelStats = document.getElementById('companion-panel-stats');
+
+  if (!tabWordlist || !tabStats || !panelWordlist || !panelStats) return;
+
+  const selectTab = (activeTab, inactiveTab, activePanel, inactivePanel) => {
+    activeTab.setAttribute('aria-selected', 'true');
+    activeTab.classList.add('border-indigo-500', 'text-indigo-400');
+    activeTab.classList.remove('border-transparent', 'text-slate-400');
+
+    inactiveTab.setAttribute('aria-selected', 'false');
+    inactiveTab.classList.remove('border-indigo-500', 'text-indigo-400');
+    inactiveTab.classList.add('border-transparent', 'text-slate-400');
+
+    activePanel.classList.remove('hidden');
+    inactivePanel.classList.add('hidden');
+  };
+
+  tabWordlist.addEventListener('click', () => {
+    selectTab(tabWordlist, tabStats, panelWordlist, panelStats);
+  });
+
+  tabStats.addEventListener('click', () => {
+    selectTab(tabStats, tabWordlist, panelStats, panelWordlist);
+    updateCompanionStats(); // Dynamic update when switched
+  });
+}
+
+export function renderCompanionWordList() {
+  const container = document.getElementById('companion-word-list-items');
+  if (!container || !state.currentDeck || state.currentDeck.length === 0) return;
+
+  container.innerHTML = '';
+
+  state.currentDeck.forEach((card, idx) => {
+    const srsInfo = getSRSInfo(card.id);
+    const isCurrent = idx === state.currentIndex;
+
+    // Determine deterministic visual states based on category, gender or state
+    let genderGlowClass = 'text-slate-400';
+    if (card.gender === 'der') genderGlowClass = 'text-blue-400';
+    else if (card.gender === 'die') genderGlowClass = 'text-pink-400';
+    else if (card.gender === 'das') genderGlowClass = 'text-emerald-400';
+
+    const cardStateText = srsInfo.isNew ? 'New' : `Box ${srsInfo.box}`;
+    const cardStateColor = srsInfo.isNew ? 'text-blue-500/85 bg-blue-500/5' : 'text-indigo-400 bg-indigo-500/5';
+
+    // Item container style
+    const itemBtn = document.createElement('button');
+    itemBtn.className = `w-full flex items-center justify-between text-left py-2 px-3 rounded-xl border transition-all duration-200 cursor-pointer ${
+      isCurrent
+        ? 'bg-slate-900/90 border-indigo-500/60 shadow-md shadow-slate-950/40 translate-x-0.5'
+        : 'bg-slate-950/20 border-slate-900/60 hover:bg-slate-900/40 hover:border-slate-800/80'
+    }`;
+
+    itemBtn.innerHTML = `
+      <div class="flex flex-col gap-0.5 max-w-[70%]">
+        <span class="text-xs font-black tracking-wide truncate ${genderGlowClass}">${card.word}</span>
+        <span class="text-[10px] font-bold text-slate-500 truncate">${card.meaning}</span>
+      </div>
+      <div class="flex items-center gap-1.5">
+        <span class="text-[8px] px-1.5 py-0.5 rounded-md font-extrabold uppercase tracking-widest ${cardStateColor}">
+          ${cardStateText}
+        </span>
+        ${srsInfo.isDue ? '<span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span>' : ''}
+      </div>
+    `;
+
+    // Click handler to instantly jump to the card
+    itemBtn.addEventListener('click', () => {
+      state.currentIndex = idx;
+      renderCard();
+      speakWord();
+    });
+
+    container.appendChild(itemBtn);
+
+    // Auto-scroll current item into view inside the list
+    if (isCurrent) {
+      setTimeout(() => {
+        itemBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 50);
+    }
+  });
+}
+
+export function updateCompanionStats() {
+  const masteredEl = document.getElementById('companion-stat-mastered');
+  const dueEl = document.getElementById('companion-stat-due');
+  const reviewedEl = document.getElementById('companion-stat-reviewed');
+  const streakEl = document.getElementById('companion-stat-streak');
+  const retentionRateEl = document.getElementById('companion-retention-rate');
+  const retentionBarEl = document.getElementById('companion-retention-bar');
+
+  if (!state.currentDeck || state.currentDeck.length === 0) return;
+
+  // Calculate mastery (cards in Box 4 or 5) and due counts for the current filtered deck
+  let masteredCount = 0;
+  let dueCount = 0;
+  let totalFSRSRetrievability = 0;
+  let fsrsRatedCount = 0;
+
+  state.currentDeck.forEach(card => {
+    const srsInfo = getSRSInfo(card.id);
+    if (srsInfo.box >= 4) masteredCount++;
+    if (srsInfo.isDue) dueCount++;
+
+    // Calculate retrievability for retrievability retention rate
+    if (srsInfo.retrievability !== undefined && srsInfo.state !== 0) { // FSRSState.New is 0
+      totalFSRSRetrievability += srsInfo.retrievability;
+      fsrsRatedCount++;
+    }
+  });
+
+  const masteryPercent = Math.round((masteredCount / state.currentDeck.length) * 100);
+
+  // Update elements if they exist
+  if (masteredEl) masteredEl.textContent = `${masteryPercent}%`;
+  if (dueEl) dueEl.textContent = dueCount;
+  if (reviewedEl) reviewedEl.textContent = state.session ? state.session.cardsReviewed : 0;
+
+  // Get current streak
+  const streakInfo = getStreakInfo();
+  if (streakEl) streakEl.textContent = streakInfo.current;
+
+  // Average Retrievability (Retention Rate)
+  const averageRetention = fsrsRatedCount > 0 ? totalFSRSRetrievability / fsrsRatedCount : 0.95; // default starting expectation is 95%
+  const formattedRetention = Math.round(averageRetention * 100);
+
+  if (retentionRateEl) retentionRateEl.textContent = `${formattedRetention}%`;
+  if (retentionBarEl) {
+    retentionBarEl.style.width = `${formattedRetention}%`;
+    // Color coding based on retention
+    retentionBarEl.className = 'h-full transition-all duration-300 ';
+    if (formattedRetention >= 90) {
+      retentionBarEl.classList.add('bg-emerald-500');
+    } else if (formattedRetention >= 80) {
+      retentionBarEl.classList.add('bg-amber-500');
+    } else {
+      retentionBarEl.classList.add('bg-rose-500');
+    }
+  }
+}
+
+export function updateDesktopCompanionVisibility() {
+  const companion = document.getElementById('companion-dashboard');
+  if (!companion) return;
+
+  // If accordion details are open OR phonetic mirror is open, hide companion on desktop. Otherwise, show it.
+  const detailsOpen = state.isAccordionOpen;
+  const phoneticOpen = state.phonetic && state.phonetic.isOpen;
+
+  if (detailsOpen || phoneticOpen) {
+    companion.classList.add('lg:hidden');
+    companion.classList.remove('lg:block');
+  } else {
+    companion.classList.remove('lg:hidden');
+    companion.classList.add('lg:block');
   }
 }
