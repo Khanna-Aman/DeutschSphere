@@ -1,26 +1,29 @@
 import os
 import re
 import json
+import argparse
 from PIL import Image, ImageDraw, ImageFont
 
-def generate_collages():
+def generate_collages(level="a2"):
+    level_lower = level.lower()
+    level_upper = level_lower.upper()
     print("=========================================================")
     # Format success headers to avoid Unicode emoji print crashes on CP1252 Windows shells
-    print("[START] COMPILING LEVEL A2 COLLAGE SHEETS [START]")
+    print(f"[START] COMPILING LEVEL {level_upper} COLLAGE SHEETS [START]")
     print("=========================================================")
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
     project_root = os.path.dirname(script_dir)
     
-    a2_dir = os.path.join(project_root, "a2")
-    images_dir = os.path.join(a2_dir, "images")
-    collages_dir = os.path.join(a2_dir, "collages")
+    level_dir = os.path.join(project_root, level_lower)
+    images_dir = os.path.join(level_dir, "images")
+    collages_dir = os.path.join(level_dir, "collages")
     os.makedirs(collages_dir, exist_ok=True)
     
     if not os.path.exists(images_dir):
         print(f"Error: {images_dir} does not exist.")
         return
-
+    
     # Find all card webp files
     pattern = re.compile(r"card_(\d+)\.webp")
     image_files = []
@@ -33,7 +36,7 @@ def generate_collages():
     # Sort images by Card ID
     image_files.sort(key=lambda x: x[0])
     total_images = len(image_files)
-    print(f"Found {total_images} Level A2 WebP files on disk to process.")
+    print(f"Found {total_images} Level {level_upper} WebP files on disk to process.")
 
     if total_images == 0:
         print("No WebP files found to compile. Exiting.")
@@ -109,19 +112,22 @@ def generate_collages():
 
         # Save collage sheet
         sheet_num = sheet_idx + 1
-        output_filename = f"a2_collage_sheet_{sheet_num}.webp"
+        output_filename = f"{level_lower}_collage_sheet_{sheet_num}.webp"
         output_filepath = os.path.join(collages_dir, output_filename)
         
         try:
             collage_img.save(output_filepath, "WEBP", quality=85)
             # Display absolute file paths inside standard Markdown links as specified in guidelines
-            print(f"[SUCCESS] Saved Sheet {sheet_num}/{total_sheets}: Range #{sheet_images[0][0]}-#{sheet_images[-1][0]} -> a2/collages/{output_filename}")
+            print(f"[SUCCESS] Saved Sheet {sheet_num}/{total_sheets}: Range #{sheet_images[0][0]}-#{sheet_images[-1][0]} -> {level_lower}/collages/{output_filename}")
         except Exception as e:
             print(f"Error saving sheet {sheet_num}: {e}")
 
     print("=========================================================")
-    print("[SUCCESS] ALL A2 COLLAGE SHEETS COMPILED SUCCESSFULLY!")
+    print(f"[SUCCESS] ALL {level_upper} COLLAGE SHEETS COMPILED SUCCESSFULLY!")
     print("=========================================================")
 
 if __name__ == "__main__":
-    generate_collages()
+    parser = argparse.ArgumentParser(description="Compile Level Collage Sheets")
+    parser.add_argument("--level", type=str, default="a2", help="CEFR Level (a1, a2, b1)")
+    args = parser.parse_args()
+    generate_collages(level=args.level)
