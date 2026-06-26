@@ -16,8 +16,10 @@
     "antonym": "geradeaus fahren",
     "example_de": "An der nächsten Kreuzung müssen Sie links abbiegen.",
     "example_en": "At the next intersection you must turn left.",
-    "image": "images/card_1.svg",
-    "id": 1
+    "image": "images/card_1.webp",
+    "id": 1,
+    "image_tier": "B",
+    "image_path": "images/card_1.webp"
   },
   {
     "german": "die Abbildung",
@@ -32,8 +34,10 @@
     "antonym": null,
     "example_de": "Auf der Abbildung sehen Sie, wie man das Gerät einschaltet.",
     "example_en": "In the illustration you can see how to switch on the device.",
-    "image": "images/card_2.svg",
-    "id": 2
+    "image": "images/card_2.webp",
+    "id": 2,
+    "image_tier": "B",
+    "image_path": "images/card_2.webp"
   },
   {
     "german": "das Abenteuer",
@@ -48,8 +52,10 @@
     "antonym": "der Alltag",
     "example_de": "Unser Urlaub war ein tolles Abenteuer. Die Kinder lieben Abenteuergeschichten.",
     "example_en": "Our vacation was a great adventure. The children love adventure stories.",
-    "image": "images/card_3.svg",
-    "id": 3
+    "image": "images/card_3.webp",
+    "id": 3,
+    "image_tier": "B",
+    "image_path": "images/card_3.webp"
   },
   {
     "german": "die Abfahrt",
@@ -64,8 +70,10 @@
     "antonym": "die Ankunft",
     "example_de": "Es bleiben uns noch zwanzig Minuten bis zur Abfahrt.",
     "example_en": "We still have twenty minutes until departure.",
-    "image": "images/card_4.svg",
-    "id": 4
+    "image": "images/card_4.webp",
+    "id": 4,
+    "image_tier": "B",
+    "image_path": "images/card_4.webp"
   },
   {
     "german": "der Abfall",
@@ -80,8 +88,10 @@
     "antonym": null,
     "example_de": "Werfen Sie den Bioabfall bitte nicht zum normalen Müll.",
     "example_en": "Please do not throw the organic waste in with the normal trash.",
-    "image": "images/card_5.svg",
-    "id": 5
+    "image": "images/card_5.webp",
+    "id": 5,
+    "image_tier": "B",
+    "image_path": "images/card_5.webp"
   },
   {
     "german": "der Abfalleimer",
@@ -96,8 +106,10 @@
     "antonym": null,
     "example_de": "Wirf das bitte in den Abfalleimer!",
     "example_en": "Please throw that into the trash can!",
-    "image": "images/card_6.svg",
-    "id": 6
+    "image": "images/card_6.webp",
+    "id": 6,
+    "image_tier": "B",
+    "image_path": "images/card_6.webp"
   },
   {
     "german": "abheben",
@@ -116,8 +128,10 @@
     "antonym": "einzahlen",
     "example_de": "Für die Reise habe ich 500 Euro von meinem Konto abgehoben.",
     "example_en": "I withdrew 500 euros from my account for the trip.",
-    "image": "images/card_7.svg",
-    "id": 7
+    "image": "images/card_7.webp",
+    "id": 7,
+    "image_tier": "B",
+    "image_path": "images/card_7.webp"
   },
   {
     "german": "das Abitur",
@@ -132,8 +146,10 @@
     "antonym": null,
     "example_de": "Meine Tochter hat gerade Abitur gemacht.",
     "example_en": "My daughter just did her high school graduation exam.",
-    "image": "images/card_8.svg",
-    "id": 8
+    "image": "images/card_8.webp",
+    "id": 8,
+    "image_tier": "B",
+    "image_path": "images/card_8.webp"
   },
   {
     "german": "das Abonnement",
@@ -148,8 +164,10 @@
     "antonym": null,
     "example_de": "Ich habe das Abonnement gekündigt.",
     "example_en": "I have canceled the subscription.",
-    "image": "images/card_9.svg",
-    "id": 9
+    "image": "images/card_9.webp",
+    "id": 9,
+    "image_tier": "B",
+    "image_path": "images/card_9.webp"
   },
   {
     "german": "der Abschluss",
@@ -164,8 +182,10 @@
     "antonym": null,
     "example_de": "Ein guter Schulabschluss ist sehr wichtig.",
     "example_en": "A good school degree is very important.",
-    "image": "images/card_10.svg",
-    "id": 10
+    "image": "images/card_10.webp",
+    "id": 10,
+    "image_tier": "B",
+    "image_path": "images/card_10.webp"
   },
   {
     "german": "der Abschnitt",
@@ -180,8 +200,10 @@
     "antonym": null,
     "example_de": "Lesen Sie bitte den zweiten Abschnitt.",
     "example_en": "Please read the second section.",
-    "image": "images/card_11.svg",
-    "id": 11
+    "image": "images/card_11.webp",
+    "id": 11,
+    "image_tier": "B",
+    "image_path": "images/card_11.webp"
   },
   {
     "german": "abschreiben",
@@ -200,8 +222,10 @@
     "antonym": null,
     "example_de": "Er hat die Hausaufgaben von mir abgeschrieben.",
     "example_en": "He copied the homework from me.",
-    "image": "images/card_12.svg",
-    "id": 12
+    "image": "images/card_12.webp",
+    "id": 12,
+    "image_tier": "B",
+    "image_path": "images/card_12.webp"
   },
   {
     "german": "der Absender",
@@ -216,8 +240,10 @@
     "antonym": "der Empfänger",
     "example_de": "Schicken Sie das Paket an den Absender zurück.",
     "example_en": "Send the package back to the sender.",
-    "image": "images/card_13.svg",
-    "id": 13
+    "image": "images/card_13.webp",
+    "id": 13,
+    "image_tier": "B",
+    "image_path": "images/card_13.webp"
   },
   {
     "german": "die Absicht",
@@ -232,8 +258,10 @@
     "antonym": null,
     "example_de": "Entschuldigen Sie bitte. Meine Tochter hat das nicht mit Absicht gemacht. Hast du die Absicht zu studieren?",
     "example_en": "Excuse me please. My daughter did not do that on purpose. Do you have the intention to study?",
-    "image": "images/card_14.svg",
-    "id": 14
+    "image": "images/card_14.webp",
+    "id": 14,
+    "image_tier": "B",
+    "image_path": "images/card_14.webp"
   },
   {
     "german": "abstimmen",
@@ -252,8 +280,10 @@
     "antonym": null,
     "example_de": "Lasst uns über diesen Punkt abstimmen.",
     "example_en": "Let us vote on this point.",
-    "image": "images/card_15.svg",
-    "id": 15
+    "image": "images/card_15.webp",
+    "id": 15,
+    "image_tier": "B",
+    "image_path": "images/card_15.webp"
   },
   {
     "german": "die Abteilung",
@@ -268,8 +298,10 @@
     "antonym": null,
     "example_de": "Meine Freundin arbeitet in der Abteilung von Frau Kaufmann.",
     "example_en": "My friend works in Mrs. Kaufmann's department.",
-    "image": "images/card_16.svg",
-    "id": 16
+    "image": "images/card_16.webp",
+    "id": 16,
+    "image_tier": "B",
+    "image_path": "images/card_16.webp"
   },
   {
     "german": "der Abwart",
@@ -284,8 +316,10 @@
     "antonym": null,
     "example_de": "Der Abwart hat mir geholfen, den Schrank in die Wohnung zu tragen.",
     "example_en": "The caretaker helped me to carry the closet into the apartment.",
-    "image": "images/card_17.svg",
-    "id": 17
+    "image": "images/card_17.webp",
+    "id": 17,
+    "image_tier": "B",
+    "image_path": "images/card_17.webp"
   },
   {
     "german": "die Abwartin",
@@ -300,8 +334,10 @@
     "antonym": null,
     "example_de": "Die Abwartin hat mir geholfen, den Schrank in die Wohnung zu tragen.",
     "example_en": "The caretaker helped me carry the closet into the apartment.",
-    "image": "images/card_18.svg",
-    "id": 18
+    "image": "images/card_18.webp",
+    "id": 18,
+    "image_tier": "B",
+    "image_path": "images/card_18.webp"
   },
   {
     "german": "abwaschen",
@@ -320,8 +356,10 @@
     "antonym": "abtrocknen",
     "example_de": "Ich muss noch das Geschirr abwaschen.",
     "example_en": "I still have to wash the dishes.",
-    "image": "images/card_19.svg",
-    "id": 19
+    "image": "images/card_19.webp",
+    "id": 19,
+    "image_tier": "B",
+    "image_path": "images/card_19.webp"
   },
   {
     "german": "achten",
@@ -340,8 +378,10 @@
     "antonym": "ignorieren",
     "example_de": "Achten Sie bitte darauf, dass Sie abschließen, wenn Sie gehen.",
     "example_en": "Please make sure that you lock up when you leave.",
-    "image": "images/card_20.svg",
-    "id": 20
+    "image": "images/card_20.webp",
+    "id": 20,
+    "image_tier": "B",
+    "image_path": "images/card_20.webp"
   },
   {
     "german": "Achtung!",
@@ -356,8 +396,10 @@
     "antonym": null,
     "example_de": "Achtung, hier endet die Straße!",
     "example_en": "Attention, the street ends here!",
-    "image": "images/card_21.svg",
-    "id": 21
+    "image": "images/card_21.webp",
+    "id": 21,
+    "image_tier": "B",
+    "image_path": "images/card_21.webp"
   },
   {
     "german": "die Adresse",
@@ -372,8 +414,10 @@
     "antonym": null,
     "example_de": "Hast du schon meine neue Adresse?",
     "example_en": "Do you already have my new address?",
-    "image": "images/card_22.svg",
-    "id": 22
+    "image": "images/card_22.webp",
+    "id": 22,
+    "image_tier": "B",
+    "image_path": "images/card_22.webp"
   },
   {
     "german": "die Ahnung",
@@ -388,8 +432,10 @@
     "antonym": null,
     "example_de": "Ich hatte keine Ahnung, dass du heute Geburtstag hast.",
     "example_en": "I had no idea that you have a birthday today.",
-    "image": "images/card_23.svg",
-    "id": 23
+    "image": "images/card_23.webp",
+    "id": 23,
+    "image_tier": "B",
+    "image_path": "images/card_23.webp"
   },
   {
     "german": "die Aktion",
@@ -404,8 +450,10 @@
     "antonym": null,
     "example_de": "Die Stadt sollte eine Aktion für Familien planen.",
     "example_en": "The city should plan a campaign for families.",
-    "image": "images/card_24.svg",
-    "id": 24
+    "image": "images/card_24.webp",
+    "id": 24,
+    "image_tier": "B",
+    "image_path": "images/card_24.webp"
   },
   {
     "german": "aktiv",
@@ -423,8 +471,10 @@
     "antonym": "passiv",
     "example_de": "Ich bin sehr aktiv und mache viel Sport.",
     "example_en": "I am very active and do a lot of sports.",
-    "image": "images/card_25.svg",
-    "id": 25
+    "image": "images/card_25.webp",
+    "id": 25,
+    "image_tier": "B",
+    "image_path": "images/card_25.webp"
   },
   {
     "german": "die Aktivität",
@@ -439,8 +489,10 @@
     "antonym": null,
     "example_de": "In den Ferien bietet die Stadt für Kinder verschiedene Freizeitaktivitäten.",
     "example_en": "During the holidays, the city offers various leisure activities for children.",
-    "image": "images/card_26.svg",
-    "id": 26
+    "image": "images/card_26.webp",
+    "id": 26,
+    "image_tier": "B",
+    "image_path": "images/card_26.webp"
   },
   {
     "german": "akzeptieren",
@@ -459,8 +511,10 @@
     "antonym": "ablehnen",
     "example_de": "Ich kann diese Bedingungen nicht akzeptieren.",
     "example_en": "I cannot accept these conditions.",
-    "image": "images/card_27.svg",
-    "id": 27
+    "image": "images/card_27.webp",
+    "id": 27,
+    "image_tier": "B",
+    "image_path": "images/card_27.webp"
   },
   {
     "german": "der Alarm",
@@ -475,8 +529,10 @@
     "antonym": null,
     "example_de": "Bei Feueralarm dürfen Sie die Aufzüge nicht benutzen.",
     "example_en": "In case of fire alarm, you must not use the elevators.",
-    "image": "images/card_28.svg",
-    "id": 28
+    "image": "images/card_28.webp",
+    "id": 28,
+    "image_tier": "B",
+    "image_path": "images/card_28.webp"
   },
   {
     "german": "der Alkohol",
@@ -491,8 +547,10 @@
     "antonym": null,
     "example_de": "Du musst die Wunde mit Alkohol reinigen. Nein, danke! Ich trinke keinen Alkohol.",
     "example_en": "You have to clean the wound with alcohol. No, thank you! I do not drink alcohol.",
-    "image": "images/card_29.svg",
-    "id": 29
+    "image": "images/card_29.webp",
+    "id": 29,
+    "image_tier": "B",
+    "image_path": "images/card_29.webp"
   },
   {
     "german": "allein",
@@ -507,8 +565,10 @@
     "antonym": "zusammen",
     "example_de": "Ich gehe nicht gern allein spazieren. Soll ich Ihnen helfen? - Danke, ich schaffe es schon allein. Es war sehr teuer. Allein das Essen hat schon über 50 Euro gekostet.",
     "example_en": "I do not like to go for a walk alone. Should I help you? - Thanks, I can manage it alone. It was very expensive. The food alone cost over 50 euros.",
-    "image": "images/card_30.svg",
-    "id": 30
+    "image": "images/card_30.webp",
+    "id": 30,
+    "image_tier": "B",
+    "image_path": "images/card_30.webp"
   },
   {
     "german": "allerdings",
@@ -523,8 +583,10 @@
     "antonym": null,
     "example_de": "Wir können uns morgen treffen, allerdings habe ich erst ab Mittag Zeit.",
     "example_en": "We can meet tomorrow, however I only have time from noon.",
-    "image": "images/card_31.svg",
-    "id": 31
+    "image": "images/card_31.webp",
+    "id": 31,
+    "image_tier": "B",
+    "image_path": "images/card_31.webp"
   },
   {
     "german": "allgemein",
@@ -542,8 +604,10 @@
     "antonym": "speziell",
     "example_de": "Wir haben nur über allgemeine Probleme gesprochen. Es ist allgemein bekannt, dass man hier gut essen kann. Im Allgemeinen bin ich mit meiner Arbeit sehr zufrieden.",
     "example_en": "We only talked about general problems. It is generally known that you can eat well here. In general, I am very satisfied with my work.",
-    "image": "images/card_32.svg",
-    "id": 32
+    "image": "images/card_32.webp",
+    "id": 32,
+    "image_tier": "B",
+    "image_path": "images/card_32.webp"
   },
   {
     "german": "der Alltag",
@@ -558,8 +622,10 @@
     "antonym": "der Feiertag",
     "example_de": "Das ist mein Alltag: putzen, waschen, kochen.",
     "example_en": "That is my everyday life: cleaning, washing, cooking.",
-    "image": "images/card_33.svg",
-    "id": 33
+    "image": "images/card_33.webp",
+    "id": 33,
+    "image_tier": "B",
+    "image_path": "images/card_33.webp"
   },
   {
     "german": "alltäglich",
@@ -577,8 +643,10 @@
     "antonym": "außergewöhnlich",
     "example_de": "Das alltägliche Leben ist manchmal langweilig. Der Roman erzählt eine ganz alltägliche Geschichte.",
     "example_en": "Everyday life is sometimes boring. The novel tells a very ordinary story.",
-    "image": "images/card_34.svg",
-    "id": 34
+    "image": "images/card_34.webp",
+    "id": 34,
+    "image_tier": "B",
+    "image_path": "images/card_34.webp"
   },
   {
     "german": "das Alphabet",
@@ -593,8 +661,10 @@
     "antonym": null,
     "example_de": "Wie viele Buchstaben hat das Alphabet in Ihrer Sprache?",
     "example_en": "How many letters does the alphabet have in your language?",
-    "image": "images/card_35.svg",
-    "id": 35
+    "image": "images/card_35.webp",
+    "id": 35,
+    "image_tier": "B",
+    "image_path": "images/card_35.webp"
   },
   {
     "german": "als",
@@ -609,8 +679,10 @@
     "antonym": null,
     "example_de": "Als mein Mann kam, war die Party schon zu Ende. Sie können sich sowohl persönlich als auch im Internet anmelden. Meine Schwester ist älter als ich. Es ist später, als ich dachte.",
     "example_en": "When my husband came, the party was already over. You can register both in person and on the internet. My sister is older than I am. It is later than I thought.",
-    "image": "images/card_36.svg",
-    "id": 36
+    "image": "images/card_36.webp",
+    "id": 36,
+    "image_tier": "B",
+    "image_path": "images/card_36.webp"
   },
   {
     "german": "als ob",
@@ -625,8 +697,10 @@
     "antonym": null,
     "example_de": "Er tut so, als ob wir nie darüber gesprochen hätten.",
     "example_en": "He acts as if we had never talked about it.",
-    "image": "images/card_37.svg",
-    "id": 37
+    "image": "images/card_37.webp",
+    "id": 37,
+    "image_tier": "B",
+    "image_path": "images/card_37.webp"
   },
   {
     "german": "also",
@@ -641,8 +715,10 @@
     "antonym": null,
     "example_de": "Also, die Sache ist so: ... Irina hat Urlaub. Sie kann uns also helfen. Also wirklich, jetzt reicht es.",
     "example_en": "So, the matter is like this: ... Irina is on vacation. She can therefore help us. Honestly, that is enough now.",
-    "image": "images/card_38.svg",
-    "id": 38
+    "image": "images/card_38.webp",
+    "id": 38,
+    "image_tier": "B",
+    "image_path": "images/card_38.webp"
   },
   {
     "german": "alt",
@@ -660,8 +736,10 @@
     "antonym": "jung / neu",
     "example_de": "Wie alt sind Sie? Maria ist eine alte Freundin von mir.",
     "example_en": "How old are you? Maria is an old friend of mine.",
-    "image": "images/card_39.svg",
-    "id": 39
+    "image": "images/card_39.webp",
+    "id": 39,
+    "image_tier": "B",
+    "image_path": "images/card_39.webp"
   },
   {
     "german": "das Altenheim",
@@ -676,8 +754,10 @@
     "antonym": null,
     "example_de": "Die Großeltern unserer Nachbarn sind im Altenheim.",
     "example_en": "Our neighbors' grandparents are in the nursing home.",
-    "image": "images/card_40.svg",
-    "id": 40
+    "image": "images/card_40.webp",
+    "id": 40,
+    "image_tier": "B",
+    "image_path": "images/card_40.webp"
   },
   {
     "german": "das Alter",
@@ -692,8 +772,10 @@
     "antonym": "die Jugend",
     "example_de": "Wir sind etwa im gleichen Alter. Alter: 26 Jahre.",
     "example_en": "We are about the same age. Age: 26 years.",
-    "image": "images/card_41.svg",
-    "id": 41
+    "image": "images/card_41.webp",
+    "id": 41,
+    "image_tier": "B",
+    "image_path": "images/card_41.webp"
   },
   {
     "german": "alternativ",
@@ -711,8 +793,10 @@
     "antonym": null,
     "example_de": "Wir brauchen alternative Energien.",
     "example_en": "We need alternative energies.",
-    "image": "images/card_42.svg",
-    "id": 42
+    "image": "images/card_42.webp",
+    "id": 42,
+    "image_tier": "B",
+    "image_path": "images/card_42.webp"
   },
   {
     "german": "die Alternative",
@@ -727,8 +811,10 @@
     "antonym": null,
     "example_de": "Auf dieser Strecke ist der Zug eine gute Alternative zum Flugzeug.",
     "example_en": "On this route, the train is a good alternative to the plane.",
-    "image": "images/card_43.svg",
-    "id": 43
+    "image": "images/card_43.webp",
+    "id": 43,
+    "image_tier": "B",
+    "image_path": "images/card_43.webp"
   },
   {
     "german": "das Altersheim",
@@ -743,8 +829,10 @@
     "antonym": null,
     "example_de": "Die Großeltern unserer Nachbarn sind im Altersheim.",
     "example_en": "Our neighbors' grandparents are in the nursing home.",
-    "image": "images/card_44.svg",
-    "id": 44
+    "image": "images/card_44.webp",
+    "id": 44,
+    "image_tier": "B",
+    "image_path": "images/card_44.webp"
   },
   {
     "german": "die Ampel",
@@ -759,8 +847,10 @@
     "antonym": null,
     "example_de": "Dort an der Ampel kannst du über die Straße gehen.",
     "example_en": "There at the traffic light you can cross the street.",
-    "image": "images/card_45.svg",
-    "id": 45
+    "image": "images/card_45.webp",
+    "id": 45,
+    "image_tier": "B",
+    "image_path": "images/card_45.webp"
   },
   {
     "german": "das Amt",
@@ -775,8 +865,10 @@
     "antonym": null,
     "example_de": "Das Arbeitsamt befindet sich neben dem Busbahnhof.",
     "example_en": "The employment office is located next to the bus station.",
-    "image": "images/card_46.svg",
-    "id": 46
+    "image": "images/card_46.webp",
+    "id": 46,
+    "image_tier": "B",
+    "image_path": "images/card_46.webp"
   },
   {
     "german": "analysieren",
@@ -795,8 +887,10 @@
     "antonym": null,
     "example_de": "Die Politiker analysieren die Situation auf dem Arbeitsmarkt.",
     "example_en": "The politicians analyze the situation on the labor market.",
-    "image": "images/card_47.svg",
-    "id": 47
+    "image": "images/card_47.webp",
+    "id": 47,
+    "image_tier": "B",
+    "image_path": "images/card_47.webp"
   },
   {
     "german": "der Anbieter",
@@ -811,8 +905,10 @@
     "antonym": "der Kunde",
     "example_de": "Ist das ein privater Telefonanbieter?",
     "example_en": "Is that a private telephone provider?",
-    "image": "images/card_48.svg",
-    "id": 48
+    "image": "images/card_48.webp",
+    "id": 48,
+    "image_tier": "B",
+    "image_path": "images/card_48.webp"
   },
   {
     "german": "ander- andererseits ändern",
@@ -831,8 +927,10 @@
     "antonym": null,
     "example_de": "Die anderen sind schon nach Hause gegangen. Tarek möchte zwar studieren, aber andererseits möchte er auch gleich Geld verdienen. Das Wetter hat sich geändert.",
     "example_en": "The others have already gone home. Tarek wants to study, but on the other hand he also wants to earn money right away. The weather has changed.",
-    "image": "images/card_49.svg",
-    "id": 49
+    "image": "images/card_49.webp",
+    "id": 49,
+    "image_tier": "B",
+    "image_path": "images/card_49.webp"
   },
   {
     "german": "anders anerkennen",
@@ -851,8 +949,10 @@
     "antonym": "ablehnen",
     "example_de": "Anders geht das leider nicht. Meine Ausbildung wird hier nicht anerkannt.",
     "example_en": "Unfortunately, it does not work any differently. My training is not recognized here.",
-    "image": "images/card_50.svg",
-    "id": 50
+    "image": "images/card_50.webp",
+    "id": 50,
+    "image_tier": "B",
+    "image_path": "images/card_50.webp"
   },
   {
     "german": "der Anfang",
@@ -867,8 +967,10 @@
     "antonym": "das Ende",
     "example_de": "Wie war der Film? – Ich habe nur den Anfang gesehen. Am Anfang habe ich bei der Arbeit viele Fragen gestellt.",
     "example_en": "How was the film? – I only saw the beginning. At the beginning I asked many questions at work.",
-    "image": "images/card_51.svg",
-    "id": 51
+    "image": "images/card_51.webp",
+    "id": 51,
+    "image_tier": "B",
+    "image_path": "images/card_51.webp"
   },
   {
     "german": "anfangs angeben",
@@ -887,8 +989,10 @@
     "antonym": null,
     "example_de": "Anfangs ging alles gut. Bitte geben Sie Ihre genaue Adresse an.",
     "example_en": "At first everything went well. Please state your exact address.",
-    "image": "images/card_52.svg",
-    "id": 52
+    "image": "images/card_52.webp",
+    "id": 52,
+    "image_tier": "B",
+    "image_path": "images/card_52.webp"
   },
   {
     "german": "die Angabe",
@@ -903,8 +1007,10 @@
     "antonym": null,
     "example_de": "Wir brauchen von Ihnen folgende Angaben: Name, Adresse, Geburtsdatum.",
     "example_en": "We need the following information from you: name, address, date of birth.",
-    "image": "images/card_53.svg",
-    "id": 53
+    "image": "images/card_53.webp",
+    "id": 53,
+    "image_tier": "B",
+    "image_path": "images/card_53.webp"
   },
   {
     "german": "der Angehörige",
@@ -919,8 +1025,10 @@
     "antonym": null,
     "example_de": "Der Arzt darf nur Familienangehörigen Auskunft geben.",
     "example_en": "The doctor is only allowed to give information to family members.",
-    "image": "images/card_54.svg",
-    "id": 54
+    "image": "images/card_54.webp",
+    "id": 54,
+    "image_tier": "B",
+    "image_path": "images/card_54.webp"
   },
   {
     "german": "die Angehörige",
@@ -935,8 +1043,10 @@
     "antonym": null,
     "example_de": "Der Arzt darf nur Familienangehörigen Auskunft geben.",
     "example_en": "The doctor is only allowed to give information to family members.",
-    "image": "images/card_55.svg",
-    "id": 55
+    "image": "images/card_55.webp",
+    "id": 55,
+    "image_tier": "B",
+    "image_path": "images/card_55.webp"
   },
   {
     "german": "angenehm",
@@ -954,8 +1064,10 @@
     "antonym": "unangenehm",
     "example_de": "Wir wünschen Ihnen eine angenehme Reise.",
     "example_en": "We wish you a pleasant journey.",
-    "image": "images/card_56.svg",
-    "id": 56
+    "image": "images/card_56.webp",
+    "id": 56,
+    "image_tier": "B",
+    "image_path": "images/card_56.webp"
   },
   {
     "german": "der Angestellte",
@@ -970,8 +1082,10 @@
     "antonym": "der Arbeitgeber",
     "example_de": "Björn ist Angestellter in einem Reisebüro.",
     "example_en": "Björn is an employee in a travel agency.",
-    "image": "images/card_57.svg",
-    "id": 57
+    "image": "images/card_57.webp",
+    "id": 57,
+    "image_tier": "B",
+    "image_path": "images/card_57.webp"
   },
   {
     "german": "die Angestellte",
@@ -986,8 +1100,10 @@
     "antonym": "die Arbeitgeberin",
     "example_de": "Björn ist Angestellter in einem Reisebüro.",
     "example_en": "Björn is an employee in a travel agency.",
-    "image": "images/card_58.svg",
-    "id": 58
+    "image": "images/card_58.webp",
+    "id": 58,
+    "image_tier": "B",
+    "image_path": "images/card_58.webp"
   },
   {
     "german": "die Angst",
@@ -1002,8 +1118,10 @@
     "antonym": "der Mut",
     "example_de": "Du brauchst keine Angst zu haben. Der Hund tut dir nichts. Ich habe Angst, vielleicht ist etwas passiert.",
     "example_en": "You do not need to be afraid. The dog won't hurt you. I am afraid maybe something happened.",
-    "image": "images/card_59.svg",
-    "id": 59
+    "image": "images/card_59.webp",
+    "id": 59,
+    "image_tier": "B",
+    "image_path": "images/card_59.webp"
   },
   {
     "german": "anhaben",
@@ -1022,8 +1140,10 @@
     "antonym": null,
     "example_de": "Gestern hatte Julia ein rotes Kleid an.",
     "example_en": "Yesterday Julia had a red dress on.",
-    "image": "images/card_60.svg",
-    "id": 60
+    "image": "images/card_60.webp",
+    "id": 60,
+    "image_tier": "B",
+    "image_path": "images/card_60.webp"
   },
   {
     "german": "die Ankunft",
@@ -1038,8 +1158,10 @@
     "antonym": "die Abfahrt",
     "example_de": "Die Abfahrt ist um 0.55 Uhr, die Ankunft um 8.07 Uhr. Gleich nach der Ankunft habe ich meine Eltern angerufen.",
     "example_en": "The departure is at 12:55 am, the arrival at 8:07 am. Immediately after the arrival I called my parents.",
-    "image": "images/card_61.svg",
-    "id": 61
+    "image": "images/card_61.webp",
+    "id": 61,
+    "image_tier": "B",
+    "image_path": "images/card_61.webp"
   },
   {
     "german": "die Anlage",
@@ -1054,8 +1176,10 @@
     "antonym": null,
     "example_de": "Meine Musikanlage ist kaputt. In der Anlage der E-Mail finden Sie meinen Lebenslauf.",
     "example_en": "My music system is broken. In the attachment of the e-mail you will find my resume.",
-    "image": "images/card_62.svg",
-    "id": 62
+    "image": "images/card_62.webp",
+    "id": 62,
+    "image_tier": "B",
+    "image_path": "images/card_62.webp"
   },
   {
     "german": "die Anleitung",
@@ -1070,8 +1194,10 @@
     "antonym": null,
     "example_de": "In der Anleitung steht, dass bei diesem Spiel der Älteste beginnt.",
     "example_en": "The manual says that the oldest person starts this game.",
-    "image": "images/card_63.svg",
-    "id": 63
+    "image": "images/card_63.webp",
+    "id": 63,
+    "image_tier": "B",
+    "image_path": "images/card_63.webp"
   },
   {
     "german": "die Anmeldung",
@@ -1086,8 +1212,10 @@
     "antonym": "die Abmeldung",
     "example_de": "Wo bekomme ich die Formulare für die Anmeldung? Die Anmeldung ist im Erdgeschoss, Zimmer 55.",
     "example_en": "Where do I get the forms for the registration? The registration is on the ground floor, room 55.",
-    "image": "images/card_64.svg",
-    "id": 64
+    "image": "images/card_64.webp",
+    "id": 64,
+    "image_tier": "B",
+    "image_path": "images/card_64.webp"
   },
   {
     "german": "die Annonce",
@@ -1102,8 +1230,10 @@
     "antonym": null,
     "example_de": "Ich habe alle Annoncen gelesen, aber die Wohnungen sind zu teuer.",
     "example_en": "I read all the advertisements, but the apartments are too expensive.",
-    "image": "images/card_65.svg",
-    "id": 65
+    "image": "images/card_65.webp",
+    "id": 65,
+    "image_tier": "B",
+    "image_path": "images/card_65.webp"
   },
   {
     "german": "die Anrede",
@@ -1118,8 +1248,10 @@
     "antonym": "die Grußformel",
     "example_de": "Du darfst im Brief die Anrede nicht vergessen.",
     "example_en": "You must not forget the salutation in the letter.",
-    "image": "images/card_66.svg",
-    "id": 66
+    "image": "images/card_66.webp",
+    "id": 66,
+    "image_tier": "B",
+    "image_path": "images/card_66.webp"
   },
   {
     "german": "der Anruf",
@@ -1134,8 +1266,10 @@
     "antonym": null,
     "example_de": "Ich warte auf einen Anruf aus Berlin.",
     "example_en": "I am waiting for a call from Berlin.",
-    "image": "images/card_67.svg",
-    "id": 67
+    "image": "images/card_67.webp",
+    "id": 67,
+    "image_tier": "B",
+    "image_path": "images/card_67.webp"
   },
   {
     "german": "der Anrufbeantworter",
@@ -1150,8 +1284,10 @@
     "antonym": null,
     "example_de": "Ich habe dir eine Nachricht auf den Anrufbeantworter gesprochen.",
     "example_en": "I left you a message on the answering machine.",
-    "image": "images/card_68.svg",
-    "id": 68
+    "image": "images/card_68.webp",
+    "id": 68,
+    "image_tier": "B",
+    "image_path": "images/card_68.webp"
   },
   {
     "german": "der Anschluss",
@@ -1166,8 +1302,10 @@
     "antonym": null,
     "example_de": "In Mannheim haben Sie Anschluss nach Saarbrücken. Ich brauche in meiner Wohnung einen Telefonanschluss.",
     "example_en": "In Mannheim you have a connection to Saarbrücken. I need a telephone connection in my apartment.",
-    "image": "images/card_69.svg",
-    "id": 69
+    "image": "images/card_69.webp",
+    "id": 69,
+    "image_tier": "B",
+    "image_path": "images/card_69.webp"
   },
   {
     "german": "der Anspruch",
@@ -1182,8 +1320,10 @@
     "antonym": null,
     "example_de": "Sie wohnen im Stadtzentrum. Deshalb haben Sie keinen Anspruch auf Fahrgeld.",
     "example_en": "You live in the city center. Therefore you have no claim to travel money.",
-    "image": "images/card_70.svg",
-    "id": 70
+    "image": "images/card_70.webp",
+    "id": 70,
+    "image_tier": "B",
+    "image_path": "images/card_70.webp"
   },
   {
     "german": "anstrengend",
@@ -1201,8 +1341,10 @@
     "antonym": "entspannend",
     "example_de": "Ich finde diese Arbeit sehr anstrengend.",
     "example_en": "I find this work very exhausting.",
-    "image": "images/card_71.svg",
-    "id": 71
+    "image": "images/card_71.webp",
+    "id": 71,
+    "image_tier": "B",
+    "image_path": "images/card_71.webp"
   },
   {
     "german": "der Antrag",
@@ -1217,8 +1359,10 @@
     "antonym": null,
     "example_de": "Haben Sie schon einen Antrag für das Wohngeld ausgefüllt?",
     "example_en": "Have you already filled out an application for the housing benefit?",
-    "image": "images/card_72.svg",
-    "id": 72
+    "image": "images/card_72.webp",
+    "id": 72,
+    "image_tier": "B",
+    "image_path": "images/card_72.webp"
   },
   {
     "german": "die Antwort",
@@ -1233,8 +1377,10 @@
     "antonym": "die Frage",
     "example_de": "Leider habe ich keine Antwort bekommen.",
     "example_en": "Unfortunately, I have not received an answer.",
-    "image": "images/card_73.svg",
-    "id": 73
+    "image": "images/card_73.webp",
+    "id": 73,
+    "image_tier": "B",
+    "image_path": "images/card_73.webp"
   },
   {
     "german": "der Anwalt",
@@ -1249,8 +1395,10 @@
     "antonym": null,
     "example_de": "Ich werde das nicht bezahlen. Ich möchte zuerst mit meinem Anwalt sprechen.",
     "example_en": "I will not pay that. I would like to speak with my lawyer first.",
-    "image": "images/card_74.svg",
-    "id": 74
+    "image": "images/card_74.webp",
+    "id": 74,
+    "image_tier": "B",
+    "image_path": "images/card_74.webp"
   },
   {
     "german": "anwesend",
@@ -1268,8 +1416,10 @@
     "antonym": "abwesend",
     "example_de": "Bei dem Treffen waren alle Mitglieder anwesend.",
     "example_en": "All members were present at the meeting.",
-    "image": "images/card_75.svg",
-    "id": 75
+    "image": "images/card_75.webp",
+    "id": 75,
+    "image_tier": "B",
+    "image_path": "images/card_75.webp"
   },
   {
     "german": "die Anwältin",
@@ -1284,8 +1434,10 @@
     "antonym": null,
     "example_de": "Ich werde das nicht bezahlen. Ich möchte zuerst mit meinem Anwalt sprechen.",
     "example_en": "I will not pay that. I would like to speak with my lawyer first.",
-    "image": "images/card_76.svg",
-    "id": 76
+    "image": "images/card_76.webp",
+    "id": 76,
+    "image_tier": "B",
+    "image_path": "images/card_76.webp"
   },
   {
     "german": "die Anzahl",
@@ -1300,8 +1452,10 @@
     "antonym": null,
     "example_de": "Die Anzahl der Teilnehmer war groß.",
     "example_en": "The number of participants was large.",
-    "image": "images/card_77.svg",
-    "id": 77
+    "image": "images/card_77.webp",
+    "id": 77,
+    "image_tier": "B",
+    "image_path": "images/card_77.webp"
   },
   {
     "german": "die Anzeige",
@@ -1316,8 +1470,10 @@
     "antonym": null,
     "example_de": "Ich habe alle Anzeigen gelesen, aber die Wohnungen sind zu teuer. Hier dürfen Sie nicht parken, sonst bekommen Sie eine Anzeige.",
     "example_en": "I read all the advertisements, but the apartments are too expensive. You are not allowed to park here, otherwise you will get a report.",
-    "image": "images/card_78.svg",
-    "id": 78
+    "image": "images/card_78.webp",
+    "id": 78,
+    "image_tier": "B",
+    "image_path": "images/card_78.webp"
   },
   {
     "german": "der Anzug",
@@ -1332,8 +1488,10 @@
     "antonym": null,
     "example_de": "Mein Mann hat sich einen neuen Anzug gekauft.",
     "example_en": "My husband bought himself a new suit.",
-    "image": "images/card_79.svg",
-    "id": 79
+    "image": "images/card_79.webp",
+    "id": 79,
+    "image_tier": "B",
+    "image_path": "images/card_79.webp"
   },
   {
     "german": "das Apartment",
@@ -1348,8 +1506,10 @@
     "antonym": "das Haus",
     "example_de": "Wir haben ein Ferienapartment gemietet.",
     "example_en": "We rented a holiday apartment.",
-    "image": "images/card_80.svg",
-    "id": 80
+    "image": "images/card_80.webp",
+    "id": 80,
+    "image_tier": "B",
+    "image_path": "images/card_80.webp"
   },
   {
     "german": "der Apfel",
@@ -1364,8 +1524,10 @@
     "antonym": null,
     "example_de": "Zum Frühstück esse ich jeden Tag einen Apfel.",
     "example_en": "For breakfast I eat an apple every day.",
-    "image": "images/card_81.svg",
-    "id": 81
+    "image": "images/card_81.webp",
+    "id": 81,
+    "image_tier": "B",
+    "image_path": "images/card_81.webp"
   },
   {
     "german": "der Apparat",
@@ -1380,8 +1542,10 @@
     "antonym": null,
     "example_de": "Können Sie den Apparat bitte etwas leiser stellen? Wo ist mein Fotoapparat?",
     "example_en": "Can you please turn the device down a bit? Where is my camera?",
-    "image": "images/card_82.svg",
-    "id": 82
+    "image": "images/card_82.webp",
+    "id": 82,
+    "image_tier": "B",
+    "image_path": "images/card_82.webp"
   },
   {
     "german": "der Appetit",
@@ -1396,8 +1560,10 @@
     "antonym": null,
     "example_de": "Ich habe heute keinen Appetit. Ich mag nichts essen. Auf was hast du Appetit? Vielleicht auf einen Salat? Guten Appetit!",
     "example_en": "I have no appetite today. I do not want to eat anything. What do you have an appetite for? Maybe for a salad? Enjoy your meal!",
-    "image": "images/card_83.svg",
-    "id": 83
+    "image": "images/card_83.webp",
+    "id": 83,
+    "image_tier": "B",
+    "image_path": "images/card_83.webp"
   },
   {
     "german": "die Aprikose",
@@ -1412,8 +1578,10 @@
     "antonym": null,
     "example_de": "Schmecken dir die Aprikosen?",
     "example_en": "Do the apricots taste good to you?",
-    "image": "images/card_84.svg",
-    "id": 84
+    "image": "images/card_84.webp",
+    "id": 84,
+    "image_tier": "B",
+    "image_path": "images/card_84.webp"
   },
   {
     "german": "die Arbeit",
@@ -1428,8 +1596,10 @@
     "antonym": "die Freizeit",
     "example_de": "Wie gefällt dir deine Arbeit? Nach der Ausbildung hat Mohamed eine Arbeit gefunden.",
     "example_en": "How do you like your work? After the training Mohamed found a job.",
-    "image": "images/card_85.svg",
-    "id": 85
+    "image": "images/card_85.webp",
+    "id": 85,
+    "image_tier": "B",
+    "image_path": "images/card_85.webp"
   },
   {
     "german": "der Arbeiter",
@@ -1444,8 +1614,10 @@
     "antonym": "der Angestellte",
     "example_de": "Maria ist seit zwei Jahren Arbeiterin bei Siemens.",
     "example_en": "Maria has been a worker at Siemens for two years.",
-    "image": "images/card_86.svg",
-    "id": 86
+    "image": "images/card_86.webp",
+    "id": 86,
+    "image_tier": "B",
+    "image_path": "images/card_86.webp"
   },
   {
     "german": "die Arbeitserlaubnis",
@@ -1460,8 +1632,10 @@
     "antonym": null,
     "example_de": "Haben Sie eine Arbeitserlaubnis?",
     "example_en": "Do you have a work permit?",
-    "image": "images/card_87.svg",
-    "id": 87
+    "image": "images/card_87.webp",
+    "id": 87,
+    "image_tier": "B",
+    "image_path": "images/card_87.webp"
   },
   {
     "german": "arbeitslos",
@@ -1479,8 +1653,10 @@
     "antonym": "berufstätig",
     "example_de": "Wie lange sind Sie schon arbeitslos?",
     "example_en": "How long have you been unemployed?",
-    "image": "images/card_88.svg",
-    "id": 88
+    "image": "images/card_88.webp",
+    "id": 88,
+    "image_tier": "B",
+    "image_path": "images/card_88.webp"
   },
   {
     "german": "die Arbeitslosigkeit",
@@ -1495,8 +1671,10 @@
     "antonym": "die Beschäftigung",
     "example_de": "Die Arbeitslosigkeit ist gesunken.",
     "example_en": "Unemployment has decreased.",
-    "image": "images/card_89.svg",
-    "id": 89
+    "image": "images/card_89.webp",
+    "id": 89,
+    "image_tier": "B",
+    "image_path": "images/card_89.webp"
   },
   {
     "german": "der Arbeitsplatz",
@@ -1511,8 +1689,10 @@
     "antonym": null,
     "example_de": "In der Industrie gibt es immer weniger Arbeitsplätze.",
     "example_en": "There are fewer and fewer jobs in the industry.",
-    "image": "images/card_90.svg",
-    "id": 90
+    "image": "images/card_90.webp",
+    "id": 90,
+    "image_tier": "B",
+    "image_path": "images/card_90.webp"
   },
   {
     "german": "die Arbeitsstelle",
@@ -1527,8 +1707,10 @@
     "antonym": null,
     "example_de": "Meine Frau hat eine neue Arbeitsstelle gefunden.",
     "example_en": "My wife has found a new job.",
-    "image": "images/card_91.svg",
-    "id": 91
+    "image": "images/card_91.webp",
+    "id": 91,
+    "image_tier": "B",
+    "image_path": "images/card_91.webp"
   },
   {
     "german": "der Architekt",
@@ -1543,8 +1725,10 @@
     "antonym": null,
     "example_de": "Dieses Haus hat eine berühmte Architektin gebaut.",
     "example_en": "A famous architect built this house.",
-    "image": "images/card_92.svg",
-    "id": 92
+    "image": "images/card_92.webp",
+    "id": 92,
+    "image_tier": "B",
+    "image_path": "images/card_92.webp"
   },
   {
     "german": "die Architektin",
@@ -1559,8 +1743,10 @@
     "antonym": null,
     "example_de": "Dieses Haus hat eine berühmte Architektin gebaut.",
     "example_en": "A famous architect built this house.",
-    "image": "images/card_93.svg",
-    "id": 93
+    "image": "images/card_93.webp",
+    "id": 93,
+    "image_tier": "B",
+    "image_path": "images/card_93.webp"
   },
   {
     "german": "arm",
@@ -1578,8 +1764,10 @@
     "antonym": "reich",
     "example_de": "Die Regierung hilft armen Nachbarländern. Ich hätte gerne 200 g fettarmen Käse.",
     "example_en": "The government helps poor neighboring countries. I would like 200 g of low-fat cheese.",
-    "image": "images/card_94.svg",
-    "id": 94
+    "image": "images/card_94.webp",
+    "id": 94,
+    "image_tier": "B",
+    "image_path": "images/card_94.webp"
   },
   {
     "german": "der Arm",
@@ -1594,8 +1782,10 @@
     "antonym": null,
     "example_de": "Mein Freund hat sich den Arm gebrochen.",
     "example_en": "My friend broke his arm.",
-    "image": "images/card_95.svg",
-    "id": 95
+    "image": "images/card_95.webp",
+    "id": 95,
+    "image_tier": "B",
+    "image_path": "images/card_95.webp"
   },
   {
     "german": "die Art",
@@ -1610,8 +1800,10 @@
     "antonym": null,
     "example_de": "Im Zoo haben sie 34 verschiedene Arten von Vögeln. Seine Art gefällt mir nicht. Man kann auf unterschiedliche Art und Weise ein Fest feiern.",
     "example_en": "In the zoo they have 34 different kinds of birds. I do not like his manner. One can celebrate a festival in different ways.",
-    "image": "images/card_96.svg",
-    "id": 96
+    "image": "images/card_96.webp",
+    "id": 96,
+    "image_tier": "B",
+    "image_path": "images/card_96.webp"
   },
   {
     "german": "der Artikel",
@@ -1626,8 +1818,10 @@
     "antonym": null,
     "example_de": "Ich habe einen interessanten Artikel gelesen. Im Deutschen gibt es drei Artikel: der, die, das.",
     "example_en": "I read an interesting article. In German there are three articles: der, die, das.",
-    "image": "images/card_97.svg",
-    "id": 97
+    "image": "images/card_97.webp",
+    "id": 97,
+    "image_tier": "B",
+    "image_path": "images/card_97.webp"
   },
   {
     "german": "das Asyl",
@@ -1642,8 +1836,10 @@
     "antonym": null,
     "example_de": "Die Menschen sind auf der Flucht und bitten um Asyl.",
     "example_en": "The people are fleeing and asking for asylum.",
-    "image": "images/card_98.svg",
-    "id": 98
+    "image": "images/card_98.webp",
+    "id": 98,
+    "image_tier": "B",
+    "image_path": "images/card_98.webp"
   },
   {
     "german": "der Atem",
@@ -1658,8 +1854,10 @@
     "antonym": null,
     "example_de": "Bitte den Atem anhalten.",
     "example_en": "Please hold your breath.",
-    "image": "images/card_99.svg",
-    "id": 99
+    "image": "images/card_99.webp",
+    "id": 99,
+    "image_tier": "B",
+    "image_path": "images/card_99.webp"
   },
   {
     "german": "auch",
@@ -1674,8 +1872,10 @@
     "antonym": null,
     "example_de": "Ich muss leider gehen. - Ich auch. Ich arbeite die ganze Woche und muss auch am Wochenende arbeiten. Wir fahren auf jeden Fall, auch wenn es regnet. Der Zug ist gerade eben abgefahren. Warum kommst du auch so spät!",
     "example_en": "Unfortunately I have to go. - Me too. I work the whole week and also have to work on the weekend. We are going in any case, even if it rains. The train just left. Why are you so late!",
-    "image": "images/card_100.svg",
-    "id": 100
+    "image": "images/card_100.webp",
+    "id": 100,
+    "image_tier": "B",
+    "image_path": "images/card_100.webp"
   },
   {
     "german": "auf",
@@ -1690,8 +1890,10 @@
     "antonym": "unter",
     "example_de": "Deine Brille liegt auf dem Schreibtisch. Die Kinder spielen unten auf der Straße. Meine Eltern leben auf dem Land. Gestern waren wir auf einer Party. Auf unsere Anzeige in der Abendzeitung hat sich noch niemand gemeldet. Wie heißt das auf Deutsch?",
     "example_en": "Your glasses are on the desk. The children are playing down on the street. My parents live in the country. Yesterday we were at a party. Nobody has replied to our ad in the evening paper yet. What is that called in German?",
-    "image": "images/card_101.svg",
-    "id": 101
+    "image": "images/card_101.webp",
+    "id": 101,
+    "image_tier": "B",
+    "image_path": "images/card_101.webp"
   },
   {
     "german": "der Aufenthalt",
@@ -1706,8 +1908,10 @@
     "antonym": "die Abreise",
     "example_de": "Der Zug hat in München nur 20 Minuten Aufenthalt. Wir wünschen Ihnen einen angenehmen Aufenthalt.",
     "example_en": "The train only has a 20-minute layover in Munich. We wish you a pleasant stay.",
-    "image": "images/card_102.svg",
-    "id": 102
+    "image": "images/card_102.webp",
+    "id": 102,
+    "image_tier": "B",
+    "image_path": "images/card_102.webp"
   },
   {
     "german": "die Aufforderung",
@@ -1722,8 +1926,10 @@
     "antonym": null,
     "example_de": "Sie erhalten eine Aufforderung, den Betrag bis Juni zu zahlen.",
     "example_en": "You will receive a request to pay the amount by June.",
-    "image": "images/card_103.svg",
-    "id": 103
+    "image": "images/card_103.webp",
+    "id": 103,
+    "image_tier": "B",
+    "image_path": "images/card_103.webp"
   },
   {
     "german": "die Aufgabe",
@@ -1738,8 +1944,10 @@
     "antonym": "die Lösung",
     "example_de": "Hast du deine Hausaufgaben für die Schule schon gemacht? Das ist nicht meine Aufgabe.",
     "example_en": "Have you already done your homework for school? That is not my assignment.",
-    "image": "images/card_104.svg",
-    "id": 104
+    "image": "images/card_104.webp",
+    "id": 104,
+    "image_tier": "B",
+    "image_path": "images/card_104.webp"
   },
   {
     "german": "aufmerksam",
@@ -1757,8 +1965,10 @@
     "antonym": "unaufmerksam",
     "example_de": "Die Schülerin hörte aufmerksam zu. Ich mache Sie darauf aufmerksam, dass wir in einer halben Stunde schließen.",
     "example_en": "The student listened attentively. I would like to draw your attention to the fact that we close in half an hour.",
-    "image": "images/card_105.svg",
-    "id": 105
+    "image": "images/card_105.webp",
+    "id": 105,
+    "image_tier": "B",
+    "image_path": "images/card_105.webp"
   },
   {
     "german": "die Aufnahme",
@@ -1773,8 +1983,10 @@
     "antonym": null,
     "example_de": "Bitte seid leise! - Ich starte die Aufnahme.",
     "example_en": "Please be quiet! - I am starting the recording.",
-    "image": "images/card_106.svg",
-    "id": 106
+    "image": "images/card_106.webp",
+    "id": 106,
+    "image_tier": "B",
+    "image_path": "images/card_106.webp"
   },
   {
     "german": "aufschreiben",
@@ -1793,8 +2005,10 @@
     "antonym": null,
     "example_de": "Ich habe mir deine Telefonnummer aufgeschrieben.",
     "example_en": "I wrote down your phone number.",
-    "image": "images/card_107.svg",
-    "id": 107
+    "image": "images/card_107.webp",
+    "id": 107,
+    "image_tier": "B",
+    "image_path": "images/card_107.webp"
   },
   {
     "german": "der Auftrag",
@@ -1809,8 +2023,10 @@
     "antonym": null,
     "example_de": "Im Moment hat die Firma besonders viele Aufträge.",
     "example_en": "At the moment the company has particularly many orders.",
-    "image": "images/card_108.svg",
-    "id": 108
+    "image": "images/card_108.webp",
+    "id": 108,
+    "image_tier": "B",
+    "image_path": "images/card_108.webp"
   },
   {
     "german": "der Auftritt",
@@ -1825,8 +2041,10 @@
     "antonym": null,
     "example_de": "Nach dem Auftritt feiern die Musiker.",
     "example_en": "After the performance the musicians celebrate.",
-    "image": "images/card_109.svg",
-    "id": 109
+    "image": "images/card_109.webp",
+    "id": 109,
+    "image_tier": "B",
+    "image_path": "images/card_109.webp"
   },
   {
     "german": "aufwärts",
@@ -1841,8 +2059,10 @@
     "antonym": "abwärts",
     "example_de": "Sie müssen gute Schuhe anziehen. Der Weg geht immer aufwärts.",
     "example_en": "You must put on good shoes. The path always goes upwards.",
-    "image": "images/card_110.svg",
-    "id": 110
+    "image": "images/card_110.webp",
+    "id": 110,
+    "image_tier": "B",
+    "image_path": "images/card_110.webp"
   },
   {
     "german": "der Aufzug",
@@ -1857,8 +2077,10 @@
     "antonym": null,
     "example_de": "Im Büro ist leider der Aufzug kaputt.",
     "example_en": "Unfortunately, the elevator in the office is broken.",
-    "image": "images/card_111.svg",
-    "id": 111
+    "image": "images/card_111.webp",
+    "id": 111,
+    "image_tier": "B",
+    "image_path": "images/card_111.webp"
   },
   {
     "german": "das Auge",
@@ -1873,8 +2095,10 @@
     "antonym": null,
     "example_de": "Meine beiden Kinder haben blaue Augen.",
     "example_en": "Both of my children have blue eyes.",
-    "image": "images/card_112.svg",
-    "id": 112
+    "image": "images/card_112.webp",
+    "id": 112,
+    "image_tier": "B",
+    "image_path": "images/card_112.webp"
   },
   {
     "german": "der Augenblick",
@@ -1889,8 +2113,10 @@
     "antonym": null,
     "example_de": "Ich wollte gerade parken. In dem Augenblick ist ein Wagen aus der Ausfahrt gekommen. Einen Augenblick, bitte!",
     "example_en": "I was just about to park. At that moment a car came out of the driveway. One moment, please!",
-    "image": "images/card_113.svg",
-    "id": 113
+    "image": "images/card_113.webp",
+    "id": 113,
+    "image_tier": "B",
+    "image_path": "images/card_113.webp"
   },
   {
     "german": "aus",
@@ -1905,8 +2131,10 @@
     "antonym": "an / in",
     "example_de": "Frau Müller geht jeden Morgen um 8 Uhr aus dem Haus. Frau Özgen kommt aus der Türkei. Das Licht ist aus!",
     "example_en": "Mrs. Müller leaves the house every morning at 8 o'clock. Mrs. Özgen comes from Turkey. The light is off!",
-    "image": "images/card_114.svg",
-    "id": 114
+    "image": "images/card_114.webp",
+    "id": 114,
+    "image_tier": "B",
+    "image_path": "images/card_114.webp"
   },
   {
     "german": "die Ausbildung",
@@ -1921,8 +2149,10 @@
     "antonym": null,
     "example_de": "Ich habe meine Ausbildung abgeschlossen. Mit deiner guten Ausbildung findest du sicher eine Arbeit.",
     "example_en": "I have completed my training. With your good education, you will surely find a job.",
-    "image": "images/card_115.svg",
-    "id": 115
+    "image": "images/card_115.webp",
+    "id": 115,
+    "image_tier": "B",
+    "image_path": "images/card_115.webp"
   },
   {
     "german": "der Ausdruck",
@@ -1937,8 +2167,10 @@
     "antonym": null,
     "example_de": "Diesen Ausdruck habe ich noch nie gehört.",
     "example_en": "I have never heard this expression before.",
-    "image": "images/card_116.svg",
-    "id": 116
+    "image": "images/card_116.webp",
+    "id": 116,
+    "image_tier": "B",
+    "image_path": "images/card_116.webp"
   },
   {
     "german": "der Ausdruck",
@@ -1953,8 +2185,10 @@
     "antonym": null,
     "example_de": "Machen Sie doch bitte einen Ausdruck von der E-Mail.",
     "example_en": "Please make a printout of the e-mail.",
-    "image": "images/card_117.svg",
-    "id": 117
+    "image": "images/card_117.webp",
+    "id": 117,
+    "image_tier": "B",
+    "image_path": "images/card_117.webp"
   },
   {
     "german": "ausdrucken / ausgebildet",
@@ -1973,8 +2207,10 @@
     "antonym": null,
     "example_de": "Kann ich das auf deinem Drucker ausdrucken? Für diesen Beruf müssen Sie gut ausgebildet sein.",
     "example_en": "Can I print that out on your printer? You must be well trained for this profession.",
-    "image": "images/card_118.svg",
-    "id": 118
+    "image": "images/card_118.webp",
+    "id": 118,
+    "image_tier": "B",
+    "image_path": "images/card_118.webp"
   },
   {
     "german": "auseinander",
@@ -1989,8 +2225,10 @@
     "antonym": "zusammen",
     "example_de": "Wir wohnen nicht weit auseinander.",
     "example_en": "We do not live far apart.",
-    "image": "images/card_119.svg",
-    "id": 119
+    "image": "images/card_119.webp",
+    "id": 119,
+    "image_tier": "B",
+    "image_path": "images/card_119.webp"
   },
   {
     "german": "die Ausfahrt",
@@ -2005,8 +2243,10 @@
     "antonym": "die Einfahrt",
     "example_de": "Hier ist eine Ausfahrt, da dürfen Sie nicht parken.",
     "example_en": "Here is an exit, you are not allowed to park there.",
-    "image": "images/card_120.svg",
-    "id": 120
+    "image": "images/card_120.webp",
+    "id": 120,
+    "image_tier": "B",
+    "image_path": "images/card_120.webp"
   },
   {
     "german": "der Ausflug",
@@ -2021,8 +2261,10 @@
     "antonym": null,
     "example_de": "Am Wochenende machen wir mit Freunden einen Ausflug nach Heidelberg.",
     "example_en": "At the weekend we are going on an excursion to Heidelberg with friends.",
-    "image": "images/card_121.svg",
-    "id": 121
+    "image": "images/card_121.webp",
+    "id": 121,
+    "image_tier": "B",
+    "image_path": "images/card_121.webp"
   },
   {
     "german": "die Ausgabe",
@@ -2037,8 +2279,10 @@
     "antonym": "die Einnahme",
     "example_de": "Wie hoch sind Ihre Ausgaben in einem Monat? Wo ist die Essensausgabe? In welchem Buch hast du das gelesen? In welcher Ausgabe?",
     "example_en": "How high are your expenses in a month? Where is the food distribution? In which book did you read that? In which edition?",
-    "image": "images/card_122.svg",
-    "id": 122
+    "image": "images/card_122.webp",
+    "id": 122,
+    "image_tier": "B",
+    "image_path": "images/card_122.webp"
   },
   {
     "german": "der Ausgang",
@@ -2053,8 +2297,10 @@
     "antonym": "der Eingang",
     "example_de": "Wo ist der Ausgang bitte?",
     "example_en": "Where is the exit please?",
-    "image": "images/card_123.svg",
-    "id": 123
+    "image": "images/card_123.webp",
+    "id": 123,
+    "image_tier": "B",
+    "image_path": "images/card_123.webp"
   },
   {
     "german": "ausgezeichnet",
@@ -2072,8 +2318,10 @@
     "antonym": "schlecht",
     "example_de": "Essen und Unterkunft waren ausgezeichnet.",
     "example_en": "Food and accommodation were excellent.",
-    "image": "images/card_124.svg",
-    "id": 124
+    "image": "images/card_124.webp",
+    "id": 124,
+    "image_tier": "B",
+    "image_path": "images/card_124.webp"
   },
   {
     "german": "die Aushilfe",
@@ -2088,8 +2336,10 @@
     "antonym": null,
     "example_de": "Wir suchen eine freundliche Aushilfe für unser Geschäft.",
     "example_en": "We are looking for friendly temporary help for our shop.",
-    "image": "images/card_125.svg",
-    "id": 125
+    "image": "images/card_125.webp",
+    "id": 125,
+    "image_tier": "B",
+    "image_path": "images/card_125.webp"
   },
   {
     "german": "die Auskunft",
@@ -2104,8 +2354,10 @@
     "antonym": null,
     "example_de": "Ich hätte gern eine Auskunft. Die Firma hat eine neue Nummer. Bitte, rufen Sie die Auskunft an.",
     "example_en": "I would like some information. The company has a new number. Please, call directory assistance.",
-    "image": "images/card_126.svg",
-    "id": 126
+    "image": "images/card_126.webp",
+    "id": 126,
+    "image_tier": "B",
+    "image_path": "images/card_126.webp"
   },
   {
     "german": "das Ausland",
@@ -2120,8 +2372,10 @@
     "antonym": "das Inland",
     "example_de": "Wir fahren im Urlaub meistens ins Ausland.",
     "example_en": "We usually go abroad on vacation.",
-    "image": "images/card_127.svg",
-    "id": 127
+    "image": "images/card_127.webp",
+    "id": 127,
+    "image_tier": "B",
+    "image_path": "images/card_127.webp"
   },
   {
     "german": "der Ausländer",
@@ -2136,8 +2390,10 @@
     "antonym": "der Inländer",
     "example_de": "Viele Ausländer und Ausländerinnen lernen in der Volkshochschule Deutsch.",
     "example_en": "Many foreigners learn German at the adult education center.",
-    "image": "images/card_128.svg",
-    "id": 128
+    "image": "images/card_128.webp",
+    "id": 128,
+    "image_tier": "B",
+    "image_path": "images/card_128.webp"
   },
   {
     "german": "ausmachen",
@@ -2156,8 +2412,10 @@
     "antonym": "anmachen",
     "example_de": "Sie müssen leider warten. - Kein Problem. Das macht mir nichts aus. Machen Sie bitte das Licht aus! Wir hatten doch ausgemacht, dass du die Getränke besorgst. Haben Sie einen Termin ausgemacht?",
     "example_en": "Unfortunately, you have to wait. - No problem. That does not matter to me. Please turn off the light! We had agreed that you would get the drinks. Have you made an appointment?",
-    "image": "images/card_129.svg",
-    "id": 129
+    "image": "images/card_129.webp",
+    "id": 129,
+    "image_tier": "B",
+    "image_path": "images/card_129.webp"
   },
   {
     "german": "die Ausnahme",
@@ -2172,8 +2430,10 @@
     "antonym": "die Regel",
     "example_de": "Normalerweise muss ich am Wochenende arbeiten. Aber heute ist eine Ausnahme.",
     "example_en": "Normally I have to work on the weekend. But today is an exception.",
-    "image": "images/card_130.svg",
-    "id": 130
+    "image": "images/card_130.webp",
+    "id": 130,
+    "image_tier": "B",
+    "image_path": "images/card_130.webp"
   },
   {
     "german": "ausrichten",
@@ -2192,8 +2452,10 @@
     "antonym": null,
     "example_de": "Mein Mann ist nicht da. Soll ich ihm etwas ausrichten?",
     "example_en": "My husband is not here. Should I pass on a message to him?",
-    "image": "images/card_131.svg",
-    "id": 131
+    "image": "images/card_131.webp",
+    "id": 131,
+    "image_tier": "B",
+    "image_path": "images/card_131.webp"
   },
   {
     "german": "aussehen",
@@ -2212,8 +2474,10 @@
     "antonym": null,
     "example_de": "Sie sehen wieder besser aus. Sind Sie wieder gesund? Er sieht genauso aus wie sein Vater. Es sieht so aus, als ob es bald regnen würde.",
     "example_en": "You look better again. Are you healthy again? He looks exactly like his father. It looks as if it will rain soon.",
-    "image": "images/card_132.svg",
-    "id": 132
+    "image": "images/card_132.webp",
+    "id": 132,
+    "image_tier": "B",
+    "image_path": "images/card_132.webp"
   },
   {
     "german": "die Aussicht",
@@ -2228,8 +2492,10 @@
     "antonym": null,
     "example_de": "Von diesem Turm hat man eine tolle Aussicht. Mit mehreren Fremdsprachen hat man gute Aussichten im Beruf.",
     "example_en": "From this tower you have a great view. With several foreign languages you have good prospects in your career.",
-    "image": "images/card_133.svg",
-    "id": 133
+    "image": "images/card_133.webp",
+    "id": 133,
+    "image_tier": "B",
+    "image_path": "images/card_133.webp"
   },
   {
     "german": "die Aussprache",
@@ -2244,8 +2510,10 @@
     "antonym": null,
     "example_de": "Ali hat eine gute Aussprache.",
     "example_en": "Ali has good pronunciation.",
-    "image": "images/card_134.svg",
-    "id": 134
+    "image": "images/card_134.webp",
+    "id": 134,
+    "image_tier": "B",
+    "image_path": "images/card_134.webp"
   },
   {
     "german": "die Ausstellung",
@@ -2260,8 +2528,10 @@
     "antonym": null,
     "example_de": "Wir waren mit der Lehrerin in einer Ausstellung. Die Ausstellung eines neuen Passes dauert zwei Wochen.",
     "example_en": "We were at an exhibition with the teacher. The issuance of a new passport takes two weeks.",
-    "image": "images/card_135.svg",
-    "id": 135
+    "image": "images/card_135.webp",
+    "id": 135,
+    "image_tier": "B",
+    "image_path": "images/card_135.webp"
   },
   {
     "german": "die Auswahl",
@@ -2276,8 +2546,10 @@
     "antonym": null,
     "example_de": "Wir müssen eine Auswahl aus den Büchern treffen. Das Geschäft hat eine große Auswahl.",
     "example_en": "We have to make a selection from the books. The shop has a large selection.",
-    "image": "images/card_136.svg",
-    "id": 136
+    "image": "images/card_136.webp",
+    "id": 136,
+    "image_tier": "B",
+    "image_path": "images/card_136.webp"
   },
   {
     "german": "der Ausweis",
@@ -2292,8 +2564,10 @@
     "antonym": null,
     "example_de": "Darf ich mal Ihren Ausweis sehen?",
     "example_en": "May I see your ID card?",
-    "image": "images/card_137.svg",
-    "id": 137
+    "image": "images/card_137.webp",
+    "id": 137,
+    "image_tier": "B",
+    "image_path": "images/card_137.webp"
   },
   {
     "german": "das Auto",
@@ -2308,8 +2582,10 @@
     "antonym": null,
     "example_de": "Mario fährt mit dem Auto zur Arbeit.",
     "example_en": "Mario drives to work by car.",
-    "image": "images/card_138.svg",
-    "id": 138
+    "image": "images/card_138.webp",
+    "id": 138,
+    "image_tier": "B",
+    "image_path": "images/card_138.webp"
   },
   {
     "german": "die Autobahn",
@@ -2324,8 +2600,10 @@
     "antonym": null,
     "example_de": "Das Dorf liegt direkt an der Autobahn.",
     "example_en": "The village is located right on the highway.",
-    "image": "images/card_139.svg",
-    "id": 139
+    "image": "images/card_139.webp",
+    "id": 139,
+    "image_tier": "B",
+    "image_path": "images/card_139.webp"
   },
   {
     "german": "der Automat",
@@ -2340,8 +2618,10 @@
     "antonym": null,
     "example_de": "Zigaretten bekommst du am Automaten. Der Fahrkartenautomat ist auf dem Bahnsteig.",
     "example_en": "You get cigarettes at the vending machine. The ticket machine is on the platform.",
-    "image": "images/card_140.svg",
-    "id": 140
+    "image": "images/card_140.webp",
+    "id": 140,
+    "image_tier": "B",
+    "image_path": "images/card_140.webp"
   },
   {
     "german": "automatisch",
@@ -2356,8 +2636,10 @@
     "antonym": "manuell",
     "example_de": "Die Tür schließt automatisch. Das Zeugnis bekommen Sie automatisch zugeschickt.",
     "example_en": "The door closes automatically. You will receive the certificate automatically.",
-    "image": "images/card_141.svg",
-    "id": 141
+    "image": "images/card_141.webp",
+    "id": 141,
+    "image_tier": "B",
+    "image_path": "images/card_141.webp"
   },
   {
     "german": "der Autor",
@@ -2372,8 +2654,10 @@
     "antonym": null,
     "example_de": "Diese Autorin hat in diesem Jahr schon zwei Bücher geschrieben.",
     "example_en": "This author has already written two books this year.",
-    "image": "images/card_142.svg",
-    "id": 142
+    "image": "images/card_142.webp",
+    "id": 142,
+    "image_tier": "B",
+    "image_path": "images/card_142.webp"
   },
   {
     "german": "die Autorin",
@@ -2388,8 +2672,10 @@
     "antonym": null,
     "example_de": "Diese Autorin hat in diesem Jahr schon zwei Bücher geschrieben.",
     "example_en": "This author has already written two books this year.",
-    "image": "images/card_143.svg",
-    "id": 143
+    "image": "images/card_143.webp",
+    "id": 143,
+    "image_tier": "B",
+    "image_path": "images/card_143.webp"
   },
   {
     "german": "außen",
@@ -2404,8 +2690,10 @@
     "antonym": "innen",
     "example_de": "Wir haben das Schloss nur von außen gesehen. Außen ist das Haus nicht sehr schön.",
     "example_en": "We have only seen the castle from the outside. The house is not very nice on the outside.",
-    "image": "images/card_144.svg",
-    "id": 144
+    "image": "images/card_144.webp",
+    "id": 144,
+    "image_tier": "B",
+    "image_path": "images/card_144.webp"
   },
   {
     "german": "außer",
@@ -2420,8 +2708,10 @@
     "antonym": null,
     "example_de": "Außer Lisa hat sich niemand um die Stelle beworben. Der Aufzug ist außer Betrieb. Wir haben täglich außer Samstag geöffnet.",
     "example_en": "Except for Lisa, no one applied for the position. The elevator is out of order. We are open every day except Saturday.",
-    "image": "images/card_145.svg",
-    "id": 145
+    "image": "images/card_145.webp",
+    "id": 145,
+    "image_tier": "B",
+    "image_path": "images/card_145.webp"
   },
   {
     "german": "außerdem",
@@ -2436,8 +2726,10 @@
     "antonym": null,
     "example_de": "Möchten Sie außerdem noch etwas? Der Film war langweilig, und außerdem haben die Schauspieler schlecht gespielt.",
     "example_en": "Would you like anything else besides that? The film was boring, and furthermore the actors played poorly.",
-    "image": "images/card_146.svg",
-    "id": 146
+    "image": "images/card_146.webp",
+    "id": 146,
+    "image_tier": "B",
+    "image_path": "images/card_146.webp"
   },
   {
     "german": "außerhalb",
@@ -2452,8 +2744,10 @@
     "antonym": "innerhalb",
     "example_de": "Wir wohnen außerhalb von Berlin.",
     "example_en": "We live outside of Berlin.",
-    "image": "images/card_147.svg",
-    "id": 147
+    "image": "images/card_147.webp",
+    "id": 147,
+    "image_tier": "B",
+    "image_path": "images/card_147.webp"
   },
   {
     "german": "das Bad",
@@ -2468,8 +2762,10 @@
     "antonym": null,
     "example_de": "Nach einem warmen Bad fühlt man sich gleich viel besser. Ich möchte ein Zimmer mit Bad.",
     "example_en": "After a warm bath one feels much better immediately. I would like a room with a bath.",
-    "image": "images/card_148.svg",
-    "id": 148
+    "image": "images/card_148.webp",
+    "id": 148,
+    "image_tier": "B",
+    "image_path": "images/card_148.webp"
   },
   {
     "german": "baden",
@@ -2488,8 +2784,10 @@
     "antonym": "duschen",
     "example_de": "Wenn du baden möchtest: Das Badezimmer ist dort hinten links. Hier ist Baden verboten!",
     "example_en": "If you want to bathe: The bathroom is back there on the left. Bathing is forbidden here!",
-    "image": "images/card_149.svg",
-    "id": 149
+    "image": "images/card_149.webp",
+    "id": 149,
+    "image_tier": "B",
+    "image_path": "images/card_149.webp"
   },
   {
     "german": "die Badewanne",
@@ -2504,8 +2802,10 @@
     "antonym": "die Dusche",
     "example_de": "Nach einem langen Arbeitstag setzte sie sich in die Badewanne.",
     "example_en": "After a long workday she sat down in the bathtub.",
-    "image": "images/card_150.svg",
-    "id": 150
+    "image": "images/card_150.webp",
+    "id": 150,
+    "image_tier": "B",
+    "image_path": "images/card_150.webp"
   },
   {
     "german": "die Bahn",
@@ -2520,8 +2820,10 @@
     "antonym": "das Auto",
     "example_de": "Ich komme mit der Bahn.",
     "example_en": "I am coming by train.",
-    "image": "images/card_151.svg",
-    "id": 151
+    "image": "images/card_151.webp",
+    "id": 151,
+    "image_tier": "B",
+    "image_path": "images/card_151.webp"
   },
   {
     "german": "der Bahnhof",
@@ -2536,8 +2838,10 @@
     "antonym": null,
     "example_de": "Ich bringe Sie zum Bahnhof.",
     "example_en": "I will take you to the train station.",
-    "image": "images/card_152.svg",
-    "id": 152
+    "image": "images/card_152.webp",
+    "id": 152,
+    "image_tier": "B",
+    "image_path": "images/card_152.webp"
   },
   {
     "german": "der Bahnsteig",
@@ -2552,8 +2856,10 @@
     "antonym": null,
     "example_de": "Auf Hauptbahnhöfen gibt es meist viele Bahnsteige.",
     "example_en": "At main train stations there are usually many platforms.",
-    "image": "images/card_153.svg",
-    "id": 153
+    "image": "images/card_153.webp",
+    "id": 153,
+    "image_tier": "B",
+    "image_path": "images/card_153.webp"
   },
   {
     "german": "bald",
@@ -2568,8 +2874,10 @@
     "antonym": "später",
     "example_de": "Besuchen Sie uns doch bald mal. Geben Sie mir bitte so bald wie möglich Bescheid. Auf Wiedersehen, bis bald!",
     "example_en": "Visit us soon. Please let me know as soon as possible. Goodbye, see you soon!",
-    "image": "images/card_154.svg",
-    "id": 154
+    "image": "images/card_154.webp",
+    "id": 154,
+    "image_tier": "B",
+    "image_path": "images/card_154.webp"
   },
   {
     "german": "der Balkon",
@@ -2584,8 +2892,10 @@
     "antonym": null,
     "example_de": "Die Wohnung hat auch einen kleinen Balkon.",
     "example_en": "The apartment also has a small balcony.",
-    "image": "images/card_155.svg",
-    "id": 155
+    "image": "images/card_155.webp",
+    "id": 155,
+    "image_tier": "B",
+    "image_path": "images/card_155.webp"
   },
   {
     "german": "der Ball",
@@ -2600,8 +2910,10 @@
     "antonym": null,
     "example_de": "Ich spiele gern mit meinen Kindern Ball.",
     "example_en": "I like playing ball with my children.",
-    "image": "images/card_156.svg",
-    "id": 156
+    "image": "images/card_156.webp",
+    "id": 156,
+    "image_tier": "B",
+    "image_path": "images/card_156.webp"
   },
   {
     "german": "das Ballett",
@@ -2616,8 +2928,10 @@
     "antonym": null,
     "example_de": "Meine Tochter möchte gern Ballett tanzen.",
     "example_en": "My daughter would like to dance ballet.",
-    "image": "images/card_157.svg",
-    "id": 157
+    "image": "images/card_157.webp",
+    "id": 157,
+    "image_tier": "B",
+    "image_path": "images/card_157.webp"
   },
   {
     "german": "die Banane",
@@ -2632,8 +2946,10 @@
     "antonym": null,
     "example_de": "1 Kilo Bananen, bitte.",
     "example_en": "1 kilo of bananas, please.",
-    "image": "images/card_158.svg",
-    "id": 158
+    "image": "images/card_158.webp",
+    "id": 158,
+    "image_tier": "B",
+    "image_path": "images/card_158.webp"
   },
   {
     "german": "der Bancomat/Bankomat",
@@ -2648,8 +2964,10 @@
     "antonym": null,
     "example_de": "Ich hole noch schnell Geld vom Bankomaten.",
     "example_en": "I am quickly getting money from the ATM.",
-    "image": "images/card_159.svg",
-    "id": 159
+    "image": "images/card_159.webp",
+    "id": 159,
+    "image_tier": "B",
+    "image_path": "images/card_159.webp"
   },
   {
     "german": "die Bank",
@@ -2664,8 +2982,10 @@
     "antonym": null,
     "example_de": "Kommt, wir setzen uns auf die Bank da vorne.",
     "example_en": "Come, let's sit down on the bench over there.",
-    "image": "images/card_160.svg",
-    "id": 160
+    "image": "images/card_160.webp",
+    "id": 160,
+    "image_tier": "B",
+    "image_path": "images/card_160.webp"
   },
   {
     "german": "die Bank",
@@ -2680,8 +3000,10 @@
     "antonym": null,
     "example_de": "Bei welcher Bank haben Sie Ihr Konto?",
     "example_en": "At which bank do you have your account?",
-    "image": "images/card_161.svg",
-    "id": 161
+    "image": "images/card_161.webp",
+    "id": 161,
+    "image_tier": "B",
+    "image_path": "images/card_161.webp"
   },
   {
     "german": "die Bankleitzahl",
@@ -2696,8 +3018,10 @@
     "antonym": null,
     "example_de": "Bitte geben Sie Ihre Bankleitzahl an.",
     "example_en": "Please state your bank sort code.",
-    "image": "images/card_162.svg",
-    "id": 162
+    "image": "images/card_162.webp",
+    "id": 162,
+    "image_tier": "B",
+    "image_path": "images/card_162.webp"
   },
   {
     "german": "die Bankomat-Karte",
@@ -2712,8 +3036,10 @@
     "antonym": null,
     "example_de": "Sie können auch mit Bankomat-Karte zahlen.",
     "example_en": "You can also pay with a debit card.",
-    "image": "images/card_163.svg",
-    "id": 163
+    "image": "images/card_163.webp",
+    "id": 163,
+    "image_tier": "B",
+    "image_path": "images/card_163.webp"
   },
   {
     "german": "die Bar",
@@ -2728,8 +3054,10 @@
     "antonym": null,
     "example_de": "Setzen wir uns doch an die Bar! Ich treffe meine Freundin in der Hotelbar.",
     "example_en": "Let's sit down at the bar! I am meeting my friend in the hotel bar.",
-    "image": "images/card_164.svg",
-    "id": 164
+    "image": "images/card_164.webp",
+    "id": 164,
+    "image_tier": "B",
+    "image_path": "images/card_164.webp"
   },
   {
     "german": "bar",
@@ -2744,8 +3072,10 @@
     "antonym": "mit Karte",
     "example_de": "Zahlen Sie bar?",
     "example_en": "Are you paying in cash?",
-    "image": "images/card_165.svg",
-    "id": 165
+    "image": "images/card_165.webp",
+    "id": 165,
+    "image_tier": "B",
+    "image_path": "images/card_165.webp"
   },
   {
     "german": "das Bargeld",
@@ -2760,8 +3090,10 @@
     "antonym": "die Karte",
     "example_de": "Ich habe kein Bargeld mehr.",
     "example_en": "I have no more cash.",
-    "image": "images/card_166.svg",
-    "id": 166
+    "image": "images/card_166.webp",
+    "id": 166,
+    "image_tier": "B",
+    "image_path": "images/card_166.webp"
   },
   {
     "german": "der Bart",
@@ -2776,8 +3108,10 @@
     "antonym": null,
     "example_de": "John trägt jetzt einen Bart.",
     "example_en": "John is wearing a beard now.",
-    "image": "images/card_167.svg",
-    "id": 167
+    "image": "images/card_167.webp",
+    "id": 167,
+    "image_tier": "B",
+    "image_path": "images/card_167.webp"
   },
   {
     "german": "der Basketball",
@@ -2792,8 +3126,10 @@
     "antonym": null,
     "example_de": "Sie spielt sehr gern Basketball. Er hat zum Geburtstag einen neuen Basketball bekommen.",
     "example_en": "She likes playing basketball very much. He got a new basketball for his birthday.",
-    "image": "images/card_168.svg",
-    "id": 168
+    "image": "images/card_168.webp",
+    "id": 168,
+    "image_tier": "B",
+    "image_path": "images/card_168.webp"
   },
   {
     "german": "die Batterie",
@@ -2808,8 +3144,10 @@
     "antonym": null,
     "example_de": "Bringst du bitte Batterien für die Kamera mit?",
     "example_en": "Can you please bring batteries for the camera?",
-    "image": "images/card_169.svg",
-    "id": 169
+    "image": "images/card_169.webp",
+    "id": 169,
+    "image_tier": "B",
+    "image_path": "images/card_169.webp"
   },
   {
     "german": "der Bau",
@@ -2824,8 +3162,10 @@
     "antonym": null,
     "example_de": "Ich wohne in einer Neubauwohnung. Unser Haus ist ein Altbau.",
     "example_en": "I live in a newly built apartment. Our house is an old building.",
-    "image": "images/card_170.svg",
-    "id": 170
+    "image": "images/card_170.webp",
+    "id": 170,
+    "image_tier": "B",
+    "image_path": "images/card_170.webp"
   },
   {
     "german": "der Bauch",
@@ -2840,8 +3180,10 @@
     "antonym": "der Rücken",
     "example_de": "Mir tut der Bauch weh.",
     "example_en": "My stomach hurts.",
-    "image": "images/card_171.svg",
-    "id": 171
+    "image": "images/card_171.webp",
+    "id": 171,
+    "image_tier": "B",
+    "image_path": "images/card_171.webp"
   },
   {
     "german": "der Bauer",
@@ -2856,8 +3198,10 @@
     "antonym": null,
     "example_de": "Wir kaufen unser Gemüse beim Bauern.",
     "example_en": "We buy our vegetables from the farmer.",
-    "image": "images/card_172.svg",
-    "id": 172
+    "image": "images/card_172.webp",
+    "id": 172,
+    "image_tier": "B",
+    "image_path": "images/card_172.webp"
   },
   {
     "german": "der Bauernhof",
@@ -2872,8 +3216,10 @@
     "antonym": null,
     "example_de": "Meine Großeltern hatten einen Bauernhof.",
     "example_en": "My grandparents had a farm.",
-    "image": "images/card_173.svg",
-    "id": 173
+    "image": "images/card_173.webp",
+    "id": 173,
+    "image_tier": "B",
+    "image_path": "images/card_173.webp"
   },
   {
     "german": "der Baum",
@@ -2888,8 +3234,10 @@
     "antonym": null,
     "example_de": "Wir haben zwei Bäume im Garten.",
     "example_en": "We have two trees in the garden.",
-    "image": "images/card_174.svg",
-    "id": 174
+    "image": "images/card_174.webp",
+    "id": 174,
+    "image_tier": "B",
+    "image_path": "images/card_174.webp"
   },
   {
     "german": "die Baustelle",
@@ -2904,8 +3252,10 @@
     "antonym": null,
     "example_de": "Wir müssen die Baustelle umfahren.",
     "example_en": "We have to drive around the construction site.",
-    "image": "images/card_175.svg",
-    "id": 175
+    "image": "images/card_175.webp",
+    "id": 175,
+    "image_tier": "B",
+    "image_path": "images/card_175.webp"
   },
   {
     "german": "der Beamte",
@@ -2920,8 +3270,10 @@
     "antonym": null,
     "example_de": "Meine Frau ist Beamtin bei der Polizei.",
     "example_en": "My wife is a civil servant at the police.",
-    "image": "images/card_176.svg",
-    "id": 176
+    "image": "images/card_176.webp",
+    "id": 176,
+    "image_tier": "B",
+    "image_path": "images/card_176.webp"
   },
   {
     "german": "die Beamtin",
@@ -2936,8 +3288,10 @@
     "antonym": null,
     "example_de": "Meine Frau ist Beamtin bei der Polizei.",
     "example_en": "My wife is a civil servant at the police.",
-    "image": "images/card_177.svg",
-    "id": 177
+    "image": "images/card_177.webp",
+    "id": 177,
+    "image_tier": "B",
+    "image_path": "images/card_177.webp"
   },
   {
     "german": "der Bedarf",
@@ -2952,8 +3306,10 @@
     "antonym": null,
     "example_de": "An diesem Produkt besteht großer Bedarf.",
     "example_en": "There is a great demand for this product.",
-    "image": "images/card_178.svg",
-    "id": 178
+    "image": "images/card_178.webp",
+    "id": 178,
+    "image_tier": "B",
+    "image_path": "images/card_178.webp"
   },
   {
     "german": "die Bedeutung",
@@ -2968,8 +3324,10 @@
     "antonym": null,
     "example_de": "Das Wort „Maus“ hat inzwischen zwei Bedeutungen.",
     "example_en": "The word \"mouse\" now has two meanings.",
-    "image": "images/card_179.svg",
-    "id": 179
+    "image": "images/card_179.webp",
+    "id": 179,
+    "image_tier": "B",
+    "image_path": "images/card_179.webp"
   },
   {
     "german": "die Bedienungsanleitung",
@@ -2984,8 +3342,10 @@
     "antonym": null,
     "example_de": "Die Bedienungsanleitung verstehe ich nicht.",
     "example_en": "I do not understand the user manual.",
-    "image": "images/card_180.svg",
-    "id": 180
+    "image": "images/card_180.webp",
+    "id": 180,
+    "image_tier": "B",
+    "image_path": "images/card_180.webp"
   },
   {
     "german": "die Bedingung",
@@ -3000,8 +3360,10 @@
     "antonym": null,
     "example_de": "Wenn Sie unsere Bedingungen akzeptieren, können wir einen Vertrag machen. Wir haben in unserem Betrieb sehr gute Arbeitsbedingungen.",
     "example_en": "If you accept our conditions, we can make a contract. We have very good working conditions in our company.",
-    "image": "images/card_181.svg",
-    "id": 181
+    "image": "images/card_181.webp",
+    "id": 181,
+    "image_tier": "B",
+    "image_path": "images/card_181.webp"
   },
   {
     "german": "befreit",
@@ -3016,8 +3378,10 @@
     "antonym": null,
     "example_de": "Studenten und Studentinnen sind von den Rundfunk-Gebühren befreit.",
     "example_en": "Students are exempt from the broadcasting fees.",
-    "image": "images/card_182.svg",
-    "id": 182
+    "image": "images/card_182.webp",
+    "id": 182,
+    "image_tier": "B",
+    "image_path": "images/card_182.webp"
   },
   {
     "german": "begegnen",
@@ -3036,8 +3400,10 @@
     "antonym": null,
     "example_de": "Sind wir uns nicht schon mal irgendwann begegnet?",
     "example_en": "Haven't we met sometime before?",
-    "image": "images/card_183.svg",
-    "id": 183
+    "image": "images/card_183.webp",
+    "id": 183,
+    "image_tier": "B",
+    "image_path": "images/card_183.webp"
   },
   {
     "german": "der Beginn",
@@ -3052,8 +3418,10 @@
     "antonym": "das Ende",
     "example_de": "Zu Beginn der Stunde begrüßt die Lehrerin ihre Schüler.",
     "example_en": "At the beginning of the lesson the teacher greets her students.",
-    "image": "images/card_184.svg",
-    "id": 184
+    "image": "images/card_184.webp",
+    "id": 184,
+    "image_tier": "B",
+    "image_path": "images/card_184.webp"
   },
   {
     "german": "beginnen",
@@ -3072,8 +3440,10 @@
     "antonym": "beenden",
     "example_de": "In zwei Wochen beginnen die Sommerferien.",
     "example_en": "In two weeks the summer holidays begin.",
-    "image": "images/card_185.svg",
-    "id": 185
+    "image": "images/card_185.webp",
+    "id": 185,
+    "image_tier": "B",
+    "image_path": "images/card_185.webp"
   },
   {
     "german": "begründen",
@@ -3092,8 +3462,10 @@
     "antonym": null,
     "example_de": "Bitte begründen Sie Ihre Meinung.",
     "example_en": "Please justify your opinion.",
-    "image": "images/card_186.svg",
-    "id": 186
+    "image": "images/card_186.webp",
+    "id": 186,
+    "image_tier": "B",
+    "image_path": "images/card_186.webp"
   },
   {
     "german": "die Begründung",
@@ -3108,8 +3480,10 @@
     "antonym": null,
     "example_de": "Die Miete wurde ohne Begründung erhöht.",
     "example_en": "The rent was increased without a reason.",
-    "image": "images/card_187.svg",
-    "id": 187
+    "image": "images/card_187.webp",
+    "id": 187,
+    "image_tier": "B",
+    "image_path": "images/card_187.webp"
   },
   {
     "german": "behaupten",
@@ -3128,8 +3502,10 @@
     "antonym": null,
     "example_de": "Er behauptet, unsere Meinung sei nicht wichtig. Es ist schwer, sich gegen meinen Kollegen zu behaupten.",
     "example_en": "He claims our opinion is not important. It is difficult to assert oneself against my colleague.",
-    "image": "images/card_188.svg",
-    "id": 188
+    "image": "images/card_188.webp",
+    "id": 188,
+    "image_tier": "B",
+    "image_path": "images/card_188.webp"
   },
   {
     "german": "behindert",
@@ -3147,8 +3523,10 @@
     "antonym": null,
     "example_de": "Seit dem Unfall ist das Kind unserer Freunde behindert.",
     "example_en": "Since the accident, our friends' child has been disabled.",
-    "image": "images/card_189.svg",
-    "id": 189
+    "image": "images/card_189.webp",
+    "id": 189,
+    "image_tier": "B",
+    "image_path": "images/card_189.webp"
   },
   {
     "german": "die Behörde",
@@ -3163,8 +3541,10 @@
     "antonym": null,
     "example_de": "Sie erhalten ein Schreiben von der zuständigen Behörde.",
     "example_en": "You will receive a letter from the responsible authority.",
-    "image": "images/card_190.svg",
-    "id": 190
+    "image": "images/card_190.webp",
+    "id": 190,
+    "image_tier": "B",
+    "image_path": "images/card_190.webp"
   },
   {
     "german": "bei",
@@ -3179,8 +3559,10 @@
     "antonym": null,
     "example_de": "Potsdam liegt bei Berlin. Ich wohne bei meinen Eltern. Bei uns ist das anders als bei euch. Wir essen kein Fleisch. Ich habe kein Geld bei mir. Wir wollen euch nicht beim Essen stören.",
     "example_en": "Potsdam is located near Berlin. I live with my parents. With us it is different than with you. We do not eat meat. I have no money on me. We do not want to disturb you while eating.",
-    "image": "images/card_191.svg",
-    "id": 191
+    "image": "images/card_191.webp",
+    "id": 191,
+    "image_tier": "B",
+    "image_path": "images/card_191.webp"
   },
   {
     "german": "beide / das Bein",
@@ -3195,8 +3577,10 @@
     "antonym": null,
     "example_de": "Beide waren mit meinem Vorschlag einverstanden. Welche Bluse nehmen Sie, die rote oder die grüne? - Ich nehme beide. Andreas hat sich das Bein gebrochen.",
     "example_en": "Both agreed with my proposal. Which blouse are you taking, the red or the green one? - I will take both. Andreas broke his leg.",
-    "image": "images/card_192.svg",
-    "id": 192
+    "image": "images/card_192.webp",
+    "id": 192,
+    "image_tier": "B",
+    "image_path": "images/card_192.webp"
   },
   {
     "german": "beinahe",
@@ -3211,8 +3595,10 @@
     "antonym": null,
     "example_de": "Ich habe heute beinahe den Bus verpasst.",
     "example_en": "I almost missed the bus today.",
-    "image": "images/card_193.svg",
-    "id": 193
+    "image": "images/card_193.webp",
+    "id": 193,
+    "image_tier": "B",
+    "image_path": "images/card_193.webp"
   },
   {
     "german": "das Beispiel",
@@ -3227,8 +3613,10 @@
     "antonym": null,
     "example_de": "Können Sie mir ein Beispiel sagen? Mein Freund hat viele Hobbys wie zum Beispiel Kochen, Tanzen, Fußballspielen. Hier gibt's so viele Sachen: beispielsweise Wurst, Obst, Brot ...",
     "example_en": "Can you give me an example? My friend has many hobbies such as cooking, dancing, playing football. There are so many things here: for example sausage, fruit, bread ...",
-    "image": "images/card_194.svg",
-    "id": 194
+    "image": "images/card_194.webp",
+    "id": 194,
+    "image_tier": "B",
+    "image_path": "images/card_194.webp"
   },
   {
     "german": "der Beitrag",
@@ -3243,8 +3631,10 @@
     "antonym": null,
     "example_de": "Die Krankenkasse hat die Beiträge erhöht. Der Mitgliedsbeitrag für den Sportverein beträgt 34 Euro pro Monat.",
     "example_en": "The health insurance company has increased the contributions. The membership fee for the sports club is 34 euros per month.",
-    "image": "images/card_195.svg",
-    "id": 195
+    "image": "images/card_195.webp",
+    "id": 195,
+    "image_tier": "B",
+    "image_path": "images/card_195.webp"
   },
   {
     "german": "bekannt",
@@ -3262,8 +3652,10 @@
     "antonym": "unbekannt",
     "example_de": "Ein Onkel von mir ist ein bekannter Politiker. Dieses Lied ist sehr bekannt.",
     "example_en": "An uncle of mine is a well-known politician. This song is very well-known.",
-    "image": "images/card_196.svg",
-    "id": 196
+    "image": "images/card_196.webp",
+    "id": 196,
+    "image_tier": "B",
+    "image_path": "images/card_196.webp"
   },
   {
     "german": "bekannt geben",
@@ -3282,8 +3674,10 @@
     "antonym": null,
     "example_de": "Den Prüfungsort geben wir Ihnen noch rechtzeitig bekannt.",
     "example_en": "We will announce the exam location to you in good time.",
-    "image": "images/card_197.svg",
-    "id": 197
+    "image": "images/card_197.webp",
+    "id": 197,
+    "image_tier": "B",
+    "image_path": "images/card_197.webp"
   },
   {
     "german": "der Bekannte",
@@ -3298,8 +3692,10 @@
     "antonym": "der Fremde",
     "example_de": "In Hannover wohnen Bekannte von mir.",
     "example_en": "Acquaintances of mine live in Hanover.",
-    "image": "images/card_198.svg",
-    "id": 198
+    "image": "images/card_198.webp",
+    "id": 198,
+    "image_tier": "B",
+    "image_path": "images/card_198.webp"
   },
   {
     "german": "die Bekannte",
@@ -3314,8 +3710,10 @@
     "antonym": "die Fremde",
     "example_de": "In Hannover wohnen Bekannte von mir.",
     "example_en": "Acquaintances of mine live in Hanover.",
-    "image": "images/card_199.svg",
-    "id": 199
+    "image": "images/card_199.webp",
+    "id": 199,
+    "image_tier": "B",
+    "image_path": "images/card_199.webp"
   },
   {
     "german": "bekommen",
@@ -3334,8 +3732,10 @@
     "antonym": "geben",
     "example_de": "Haben Sie meinen Brief bekommen? Ich bekomme jeden Tag eine Spritze. Was bekommen Sie? - 5 kg Kartoffeln. Wir haben Besuch bekommen.",
     "example_en": "Did you receive my letter? I get an injection every day. What are you getting? - 5 kg of potatoes. We got visitors.",
-    "image": "images/card_200.svg",
-    "id": 200
+    "image": "images/card_200.webp",
+    "id": 200,
+    "image_tier": "B",
+    "image_path": "images/card_200.webp"
   },
   {
     "german": "der Beleg",
@@ -3350,8 +3750,10 @@
     "antonym": null,
     "example_de": "Brauchen Sie einen Beleg?",
     "example_en": "Do you need a receipt?",
-    "image": "images/card_201.svg",
-    "id": 201
+    "image": "images/card_201.webp",
+    "id": 201,
+    "image_tier": "B",
+    "image_path": "images/card_201.webp"
   },
   {
     "german": "bemerken",
@@ -3370,8 +3772,10 @@
     "antonym": null,
     "example_de": "Ich habe nicht bemerkt, dass das Fenster offen ist.",
     "example_en": "I did not notice that the window is open.",
-    "image": "images/card_202.svg",
-    "id": 202
+    "image": "images/card_202.webp",
+    "id": 202,
+    "image_tier": "B",
+    "image_path": "images/card_202.webp"
   },
   {
     "german": "das Benzin",
@@ -3386,8 +3790,10 @@
     "antonym": null,
     "example_de": "Das Benzin soll wieder teurer werden.",
     "example_en": "Gasoline is supposed to become more expensive again.",
-    "image": "images/card_203.svg",
-    "id": 203
+    "image": "images/card_203.webp",
+    "id": 203,
+    "image_tier": "B",
+    "image_path": "images/card_203.webp"
   },
   {
     "german": "bequem beraten",
@@ -3406,8 +3812,10 @@
     "antonym": null,
     "example_de": "Meine Kinder ziehen am liebsten bequeme Sachen an. Im Supermarkt einkaufen ist sehr bequem. Diesen Sessel finde ich sehr bequem. Unser Personal berät Sie gern, wenn Sie Fragen haben.",
     "example_en": "My children prefer wearing comfortable clothes. Shopping in the supermarket is very comfortable. I find this armchair very comfortable. Our staff will be happy to advise you if you have any questions.",
-    "image": "images/card_204.svg",
-    "id": 204
+    "image": "images/card_204.webp",
+    "id": 204,
+    "image_tier": "B",
+    "image_path": "images/card_204.webp"
   },
   {
     "german": "die Beratung",
@@ -3422,8 +3830,10 @@
     "antonym": null,
     "example_de": "Beratungen für Familien gibt es jeden Dienstag zwischen 14 und 16 Uhr.",
     "example_en": "Consultations for families are available every Tuesday between 2 and 4 pm.",
-    "image": "images/card_205.svg",
-    "id": 205
+    "image": "images/card_205.webp",
+    "id": 205,
+    "image_tier": "B",
+    "image_path": "images/card_205.webp"
   },
   {
     "german": "der Bereich",
@@ -3438,8 +3848,10 @@
     "antonym": null,
     "example_de": "In welchem Bereich möchten Sie arbeiten? Umfahren Sie den Baustellenbereich.",
     "example_en": "In which area would you like to work? Drive around the construction site area.",
-    "image": "images/card_206.svg",
-    "id": 206
+    "image": "images/card_206.webp",
+    "id": 206,
+    "image_tier": "B",
+    "image_path": "images/card_206.webp"
   },
   {
     "german": "bereit",
@@ -3457,8 +3869,10 @@
     "antonym": null,
     "example_de": "Ich bin jederzeit bereit, dir zu helfen. Das Paket liegt auf der Post für Sie bereit.",
     "example_en": "I am always ready to help you. The package is ready for you at the post office.",
-    "image": "images/card_207.svg",
-    "id": 207
+    "image": "images/card_207.webp",
+    "id": 207,
+    "image_tier": "B",
+    "image_path": "images/card_207.webp"
   },
   {
     "german": "bereits",
@@ -3473,8 +3887,10 @@
     "antonym": null,
     "example_de": "Bitte melde dich bei Frau Kaiser. Sie hat bereits dreimal angerufen.",
     "example_en": "Please get in touch with Mrs. Kaiser. She has already called three times.",
-    "image": "images/card_208.svg",
-    "id": 208
+    "image": "images/card_208.webp",
+    "id": 208,
+    "image_tier": "B",
+    "image_path": "images/card_208.webp"
   },
   {
     "german": "der Berg",
@@ -3489,8 +3905,10 @@
     "antonym": "das Tal",
     "example_de": "Die Zugspitze ist der höchste Berg in Deutschland. Wir fahren jeden Sonntag in die Berge. Auf dem Berg haben wir ein Picknick gemacht.",
     "example_en": "The Zugspitze is the highest mountain in Germany. We drive to the mountains every Sunday. We had a picnic on the mountain.",
-    "image": "images/card_209.svg",
-    "id": 209
+    "image": "images/card_209.webp",
+    "id": 209,
+    "image_tier": "B",
+    "image_path": "images/card_209.webp"
   },
   {
     "german": "der Bericht",
@@ -3505,8 +3923,10 @@
     "antonym": null,
     "example_de": "Ich habe gestern einen interessanten Bericht gelesen.",
     "example_en": "I read an interesting report yesterday.",
-    "image": "images/card_210.svg",
-    "id": 210
+    "image": "images/card_210.webp",
+    "id": 210,
+    "image_tier": "B",
+    "image_path": "images/card_210.webp"
   },
   {
     "german": "berichten",
@@ -3525,8 +3945,10 @@
     "antonym": null,
     "example_de": "Alle Zeitungen haben über den Unfall berichtet.",
     "example_en": "All newspapers have reported on the accident.",
-    "image": "images/card_211.svg",
-    "id": 211
+    "image": "images/card_211.webp",
+    "id": 211,
+    "image_tier": "B",
+    "image_path": "images/card_211.webp"
   },
   {
     "german": "der Beruf",
@@ -3541,8 +3963,10 @@
     "antonym": "die Freizeit",
     "example_de": "Was sind Sie von Beruf?",
     "example_en": "What is your profession?",
-    "image": "images/card_212.svg",
-    "id": 212
+    "image": "images/card_212.webp",
+    "id": 212,
+    "image_tier": "B",
+    "image_path": "images/card_212.webp"
   },
   {
     "german": "beruflich",
@@ -3560,8 +3984,10 @@
     "antonym": "privat",
     "example_de": "Was machen Sie beruflich?",
     "example_en": "What do you do professionally?",
-    "image": "images/card_213.svg",
-    "id": 213
+    "image": "images/card_213.webp",
+    "id": 213,
+    "image_tier": "B",
+    "image_path": "images/card_213.webp"
   },
   {
     "german": "beruhigen",
@@ -3580,8 +4006,10 @@
     "antonym": "aufregen",
     "example_de": "Beruhigen Sie sich bitte. Es ist alles in Ordnung. Ich kann Sie beruhigen. Ihrem Sohn ist nichts passiert.",
     "example_en": "Please calm down. Everything is fine. I can reassure you. Nothing has happened to your son.",
-    "image": "images/card_214.svg",
-    "id": 214
+    "image": "images/card_214.webp",
+    "id": 214,
+    "image_tier": "B",
+    "image_path": "images/card_214.webp"
   },
   {
     "german": "der Bescheid",
@@ -3596,8 +4024,10 @@
     "antonym": null,
     "example_de": "Den endgültigen Bescheid erhalten Sie in etwa vier Wochen. Ich erkundige mich nach den Terminen und sage Ihnen dann Bescheid. Kannst du mir bis morgen Bescheid geben?",
     "example_en": "You will receive the final decision in about four weeks. I will inquire about the dates and then let you know. Can you let me know by tomorrow?",
-    "image": "images/card_215.svg",
-    "id": 215
+    "image": "images/card_215.webp",
+    "id": 215,
+    "image_tier": "B",
+    "image_path": "images/card_215.webp"
   },
   {
     "german": "Bescheid sagen",
@@ -3616,8 +4046,10 @@
     "antonym": null,
     "example_de": "Ich erkundige mich nach den Terminen und sage Ihnen dann Bescheid.",
     "example_en": "I will inquire about the dates and then let you know.",
-    "image": "images/card_216.svg",
-    "id": 216
+    "image": "images/card_216.webp",
+    "id": 216,
+    "image_tier": "B",
+    "image_path": "images/card_216.webp"
   },
   {
     "german": "beschließen",
@@ -3636,8 +4068,10 @@
     "antonym": null,
     "example_de": "Wir haben beschlossen, uns ein kleineres Auto zu kaufen.",
     "example_en": "We have decided to buy a smaller car.",
-    "image": "images/card_217.svg",
-    "id": 217
+    "image": "images/card_217.webp",
+    "id": 217,
+    "image_tier": "B",
+    "image_path": "images/card_217.webp"
   },
   {
     "german": "beschreiben",
@@ -3656,8 +4090,10 @@
     "antonym": null,
     "example_de": "Kannst du mir den Weg zum Flughafen beschreiben?",
     "example_en": "Can you describe the way to the airport to me?",
-    "image": "images/card_218.svg",
-    "id": 218
+    "image": "images/card_218.webp",
+    "id": 218,
+    "image_tier": "B",
+    "image_path": "images/card_218.webp"
   },
   {
     "german": "die Beschreibung",
@@ -3672,8 +4108,10 @@
     "antonym": null,
     "example_de": "Eine Beschreibung des Geräts liegt bei.",
     "example_en": "A description of the device is included.",
-    "image": "images/card_219.svg",
-    "id": 219
+    "image": "images/card_219.webp",
+    "id": 219,
+    "image_tier": "B",
+    "image_path": "images/card_219.webp"
   },
   {
     "german": "beschädigen",
@@ -3692,8 +4130,10 @@
     "antonym": "reparieren",
     "example_de": "Bitte machen Sie eine Liste davon, was die Einbrecher beschädigt haben.",
     "example_en": "Please make a list of what the burglars have damaged.",
-    "image": "images/card_220.svg",
-    "id": 220
+    "image": "images/card_220.webp",
+    "id": 220,
+    "image_tier": "B",
+    "image_path": "images/card_220.webp"
   },
   {
     "german": "die Beschäftigung",
@@ -3708,8 +4148,10 @@
     "antonym": "die Arbeitslosigkeit",
     "example_de": "Ich suche eine Halbtagsbeschäftigung, weil ich ein kleines Kind habe.",
     "example_en": "I am looking for part-time employment because I have a small child.",
-    "image": "images/card_221.svg",
-    "id": 221
+    "image": "images/card_221.webp",
+    "id": 221,
+    "image_tier": "B",
+    "image_path": "images/card_221.webp"
   },
   {
     "german": "besorgen",
@@ -3728,8 +4170,10 @@
     "antonym": null,
     "example_de": "Soll ich die Eintrittskarten besorgen?",
     "example_en": "Should I get the admission tickets?",
-    "image": "images/card_222.svg",
-    "id": 222
+    "image": "images/card_222.webp",
+    "id": 222,
+    "image_tier": "B",
+    "image_path": "images/card_222.webp"
   },
   {
     "german": "die Besprechung",
@@ -3744,8 +4188,10 @@
     "antonym": null,
     "example_de": "Tut mir leid, Herr Schmidt ist noch in einer Besprechung.",
     "example_en": "I am sorry, Mr. Schmidt is still in a meeting.",
-    "image": "images/card_223.svg",
-    "id": 223
+    "image": "images/card_223.webp",
+    "id": 223,
+    "image_tier": "B",
+    "image_path": "images/card_223.webp"
   },
   {
     "german": "die Besserung",
@@ -3760,8 +4206,10 @@
     "antonym": null,
     "example_de": "Gute Besserung!",
     "example_en": "Get well soon!",
-    "image": "images/card_224.svg",
-    "id": 224
+    "image": "images/card_224.webp",
+    "id": 224,
+    "image_tier": "B",
+    "image_path": "images/card_224.webp"
   },
   {
     "german": "bestrafen",
@@ -3780,8 +4228,10 @@
     "antonym": "belohnen",
     "example_de": "Zu schnelles Fahren wird streng bestraft.",
     "example_en": "Driving too fast is strictly punished.",
-    "image": "images/card_225.svg",
-    "id": 225
+    "image": "images/card_225.webp",
+    "id": 225,
+    "image_tier": "B",
+    "image_path": "images/card_225.webp"
   },
   {
     "german": "die Bestätigung",
@@ -3796,8 +4246,10 @@
     "antonym": "die Absage",
     "example_de": "Ich brauche eine schriftliche Bestätigung für das Amt.",
     "example_en": "I need a written confirmation for the office.",
-    "image": "images/card_226.svg",
-    "id": 226
+    "image": "images/card_226.webp",
+    "id": 226,
+    "image_tier": "B",
+    "image_path": "images/card_226.webp"
   },
   {
     "german": "der Besuch",
@@ -3812,8 +4264,10 @@
     "antonym": null,
     "example_de": "Wir bekommen Besuch. Ich mache einen Besuch im Krankenhaus. Ich bin hier nur zu Besuch.",
     "example_en": "We are getting visitors. I am making a visit to the hospital. I am only here on a visit.",
-    "image": "images/card_227.svg",
-    "id": 227
+    "image": "images/card_227.webp",
+    "id": 227,
+    "image_tier": "B",
+    "image_path": "images/card_227.webp"
   },
   {
     "german": "der Betrag",
@@ -3828,8 +4282,10 @@
     "antonym": null,
     "example_de": "Bitte überweisen Sie den Betrag auf unser Konto.",
     "example_en": "Please transfer the amount to our account.",
-    "image": "images/card_228.svg",
-    "id": 228
+    "image": "images/card_228.webp",
+    "id": 228,
+    "image_tier": "B",
+    "image_path": "images/card_228.webp"
   },
   {
     "german": "der Betreuer",
@@ -3844,8 +4300,10 @@
     "antonym": null,
     "example_de": "Die Betreuerin der Kinder ist sehr nett.",
     "example_en": "The children's caregiver is very nice.",
-    "image": "images/card_229.svg",
-    "id": 229
+    "image": "images/card_229.webp",
+    "id": 229,
+    "image_tier": "B",
+    "image_path": "images/card_229.webp"
   },
   {
     "german": "die Betreuung",
@@ -3860,8 +4318,10 @@
     "antonym": null,
     "example_de": "Haben Sie eine Betreuung für Ihre Kinder?",
     "example_en": "Do you have care for your children?",
-    "image": "images/card_230.svg",
-    "id": 230
+    "image": "images/card_230.webp",
+    "id": 230,
+    "image_tier": "B",
+    "image_path": "images/card_230.webp"
   },
   {
     "german": "der Betrieb",
@@ -3876,8 +4336,10 @@
     "antonym": null,
     "example_de": "In diesem Betrieb arbeiten zehn Leute. Kurz vor Weihnachten ist in den Kaufhäusern immer viel Betrieb. Der Aufzug ist in Betrieb/außer Betrieb.",
     "example_en": "Ten people work in this company. Shortly before Christmas, there is always a lot of activity in the department stores. The elevator is in operation/out of order.",
-    "image": "images/card_231.svg",
-    "id": 231
+    "image": "images/card_231.webp",
+    "id": 231,
+    "image_tier": "B",
+    "image_path": "images/card_231.webp"
   },
   {
     "german": "der Betriebsrat",
@@ -3892,8 +4354,10 @@
     "antonym": null,
     "example_de": "Der Betriebsrat wird Sie über die neuen Arbeitszeiten informieren.",
     "example_en": "The works council will inform you about the new working hours.",
-    "image": "images/card_232.svg",
-    "id": 232
+    "image": "images/card_232.webp",
+    "id": 232,
+    "image_tier": "B",
+    "image_path": "images/card_232.webp"
   },
   {
     "german": "die Betriebsrätin",
@@ -3908,8 +4372,10 @@
     "antonym": null,
     "example_de": "Der Betriebsrat wird Sie über die neuen Arbeitszeiten informieren.",
     "example_en": "The works council will inform you about the new working hours.",
-    "image": "images/card_233.svg",
-    "id": 233
+    "image": "images/card_233.webp",
+    "id": 233,
+    "image_tier": "B",
+    "image_path": "images/card_233.webp"
   },
   {
     "german": "betrunken",
@@ -3927,8 +4393,10 @@
     "antonym": "nüchtern",
     "example_de": "Wenn Sie betrunken Auto fahren, verlieren Sie Ihren Führerschein.",
     "example_en": "If you drive drunk, you will lose your driver's license.",
-    "image": "images/card_234.svg",
-    "id": 234
+    "image": "images/card_234.webp",
+    "id": 234,
+    "image_tier": "B",
+    "image_path": "images/card_234.webp"
   },
   {
     "german": "das Bett",
@@ -3943,8 +4411,10 @@
     "antonym": null,
     "example_de": "Wir wollten uns neue Betten kaufen. Solange Sie Fieber haben, müssen Sie im Bett bleiben.",
     "example_en": "We wanted to buy new beds. As long as you have a fever, you must stay in bed.",
-    "image": "images/card_235.svg",
-    "id": 235
+    "image": "images/card_235.webp",
+    "id": 235,
+    "image_tier": "B",
+    "image_path": "images/card_235.webp"
   },
   {
     "german": "bevor / bewegen",
@@ -3963,8 +4433,10 @@
     "antonym": null,
     "example_de": "Bevor wir gehen, möchte ich noch etwas essen. Ich kann mich vor Schmerzen kaum noch bewegen.",
     "example_en": "Before we go, I would like to eat something else. I can hardly move from pain.",
-    "image": "images/card_236.svg",
-    "id": 236
+    "image": "images/card_236.webp",
+    "id": 236,
+    "image_tier": "B",
+    "image_path": "images/card_236.webp"
   },
   {
     "german": "die Bevölkerung",
@@ -3979,8 +4451,10 @@
     "antonym": null,
     "example_de": "11 % der Bevölkerung wurden nicht im Inland geboren.",
     "example_en": "11 % of the population were not born in the country.",
-    "image": "images/card_237.svg",
-    "id": 237
+    "image": "images/card_237.webp",
+    "id": 237,
+    "image_tier": "B",
+    "image_path": "images/card_237.webp"
   },
   {
     "german": "die Bewegung",
@@ -3995,8 +4469,10 @@
     "antonym": "der Stillstand",
     "example_de": "Sie brauchen mehr Bewegung. Sie müssen regelmäßig spazieren gehen.",
     "example_en": "You need more exercise. You have to go for a walk regularly.",
-    "image": "images/card_238.svg",
-    "id": 238
+    "image": "images/card_238.webp",
+    "id": 238,
+    "image_tier": "B",
+    "image_path": "images/card_238.webp"
   },
   {
     "german": "der Beweis",
@@ -4011,8 +4487,10 @@
     "antonym": null,
     "example_de": "Haben Sie dafür Beweise?",
     "example_en": "Do you have proof of that?",
-    "image": "images/card_239.svg",
-    "id": 239
+    "image": "images/card_239.webp",
+    "id": 239,
+    "image_tier": "B",
+    "image_path": "images/card_239.webp"
   },
   {
     "german": "die Bewerbung",
@@ -4027,8 +4505,10 @@
     "antonym": null,
     "example_de": "Wohin soll ich meine Bewerbung schicken? Hilfst du mir bei meiner Bewerbung?",
     "example_en": "Where should I send my application? Will you help me with my application?",
-    "image": "images/card_240.svg",
-    "id": 240
+    "image": "images/card_240.webp",
+    "id": 240,
+    "image_tier": "B",
+    "image_path": "images/card_240.webp"
   },
   {
     "german": "der Bewohner",
@@ -4043,8 +4523,10 @@
     "antonym": null,
     "example_de": "Ich kenne die anderen Hausbewohner nicht.",
     "example_en": "I do not know the other residents of the house.",
-    "image": "images/card_241.svg",
-    "id": 241
+    "image": "images/card_241.webp",
+    "id": 241,
+    "image_tier": "B",
+    "image_path": "images/card_241.webp"
   },
   {
     "german": "bewölkt",
@@ -4062,8 +4544,10 @@
     "antonym": "wolkenlos",
     "example_de": "Heute ist es stark bewölkt.",
     "example_en": "Today it is heavily cloudy.",
-    "image": "images/card_242.svg",
-    "id": 242
+    "image": "images/card_242.webp",
+    "id": 242,
+    "image_tier": "B",
+    "image_path": "images/card_242.webp"
   },
   {
     "german": "die Beziehung",
@@ -4078,8 +4562,10 @@
     "antonym": null,
     "example_de": "Wir haben gute Beziehungen zu unseren Nachbarn.",
     "example_en": "We have good relations with our neighbors.",
-    "image": "images/card_243.svg",
-    "id": 243
+    "image": "images/card_243.webp",
+    "id": 243,
+    "image_tier": "B",
+    "image_path": "images/card_243.webp"
   },
   {
     "german": "die Bibliothek",
@@ -4094,8 +4580,10 @@
     "antonym": null,
     "example_de": "Die Stadtbibliothek hat bereits geschlossen.",
     "example_en": "The city library has already closed.",
-    "image": "images/card_244.svg",
-    "id": 244
+    "image": "images/card_244.webp",
+    "id": 244,
+    "image_tier": "B",
+    "image_path": "images/card_244.webp"
   },
   {
     "german": "das Bier",
@@ -4110,8 +4598,10 @@
     "antonym": null,
     "example_de": "Ein Bier, bitte!",
     "example_en": "A beer, please!",
-    "image": "images/card_245.svg",
-    "id": 245
+    "image": "images/card_245.webp",
+    "id": 245,
+    "image_tier": "B",
+    "image_path": "images/card_245.webp"
   },
   {
     "german": "das Bild",
@@ -4126,8 +4616,10 @@
     "antonym": null,
     "example_de": "Ein Bild von meinen Kindern hängt über meinem Schreibtisch.",
     "example_en": "A picture of my children is hanging above my desk.",
-    "image": "images/card_246.svg",
-    "id": 246
+    "image": "images/card_246.webp",
+    "id": 246,
+    "image_tier": "B",
+    "image_path": "images/card_246.webp"
   },
   {
     "german": "der Bildschirm",
@@ -4142,8 +4634,10 @@
     "antonym": null,
     "example_de": "Ich brauche einen größeren Bildschirm für meinen Computer. Wir haben einen Fernsehapparat mit einem sehr großen Bildschirm.",
     "example_en": "I need a larger screen for my computer. We have a television set with a very large screen.",
-    "image": "images/card_247.svg",
-    "id": 247
+    "image": "images/card_247.webp",
+    "id": 247,
+    "image_tier": "B",
+    "image_path": "images/card_247.webp"
   },
   {
     "german": "das Billett",
@@ -4158,8 +4652,10 @@
     "antonym": null,
     "example_de": "Ein Billett können Sie am Schalter kaufen.",
     "example_en": "You can buy a ticket at the counter.",
-    "image": "images/card_248.svg",
-    "id": 248
+    "image": "images/card_248.webp",
+    "id": 248,
+    "image_tier": "B",
+    "image_path": "images/card_248.webp"
   },
   {
     "german": "billig",
@@ -4177,8 +4673,10 @@
     "antonym": "teuer",
     "example_de": "Dieses Buch ist nicht ganz billig.",
     "example_en": "This book is not exactly cheap.",
-    "image": "images/card_249.svg",
-    "id": 249
+    "image": "images/card_249.webp",
+    "id": 249,
+    "image_tier": "B",
+    "image_path": "images/card_249.webp"
   },
   {
     "german": "bio(logisch)",
@@ -4196,8 +4694,10 @@
     "antonym": "konventionell",
     "example_de": "Ich kaufe nur noch Biogemüse. Biologische Lebensmittel gibt es jetzt auch im Supermarkt.",
     "example_en": "I only buy organic vegetables now. Organic groceries are now also available in the supermarket.",
-    "image": "images/card_250.svg",
-    "id": 250
+    "image": "images/card_250.webp",
+    "id": 250,
+    "image_tier": "B",
+    "image_path": "images/card_250.webp"
   },
   {
     "german": "die Biologie",
@@ -4212,8 +4712,10 @@
     "antonym": null,
     "example_de": "Meine Freundin studiert Biologie.",
     "example_en": "My friend studies biology.",
-    "image": "images/card_251.svg",
-    "id": 251
+    "image": "images/card_251.webp",
+    "id": 251,
+    "image_tier": "B",
+    "image_path": "images/card_251.webp"
   },
   {
     "german": "die Birne",
@@ -4228,8 +4730,10 @@
     "antonym": null,
     "example_de": "Möchten Sie Obst? Die Birnen sind heute besonders schön.",
     "example_en": "Would you like some fruit? The pears are particularly nice today.",
-    "image": "images/card_252.svg",
-    "id": 252
+    "image": "images/card_252.webp",
+    "id": 252,
+    "image_tier": "B",
+    "image_path": "images/card_252.webp"
   },
   {
     "german": "bis",
@@ -4244,8 +4748,10 @@
     "antonym": "ab",
     "example_de": "Die Linie 8 fährt nur bis zum Hauptbahnhof. Bis wann können Sie bleiben? Tschüs. Bis gleich! Einige Züge hatten bis zu zwei Stunden Verspätung. Für die Renovierung brauchen wir drei bis vier Tage. Warte hier, bis ich zurückkomme.",
     "example_en": "Line 8 only goes as far as the main station. Until when can you stay? Bye. See you soon! Some trains had up to two hours of delay. We need three to four days for the renovation. Wait here until I come back.",
-    "image": "images/card_253.svg",
-    "id": 253
+    "image": "images/card_253.webp",
+    "id": 253,
+    "image_tier": "B",
+    "image_path": "images/card_253.webp"
   },
   {
     "german": "bisher",
@@ -4260,8 +4766,10 @@
     "antonym": "zukünftig",
     "example_de": "Bisher ist alles in Ordnung.",
     "example_en": "So far everything is fine.",
-    "image": "images/card_254.svg",
-    "id": 254
+    "image": "images/card_254.webp",
+    "id": 254,
+    "image_tier": "B",
+    "image_path": "images/card_254.webp"
   },
   {
     "german": "die Bitte",
@@ -4276,8 +4784,10 @@
     "antonym": null,
     "example_de": "Ich habe eine Bitte. Kann ich mal Ihr Handy benutzen?",
     "example_en": "I have a request. Can I use your cell phone for a moment?",
-    "image": "images/card_255.svg",
-    "id": 255
+    "image": "images/card_255.webp",
+    "id": 255,
+    "image_tier": "B",
+    "image_path": "images/card_255.webp"
   },
   {
     "german": "bitte",
@@ -4292,8 +4802,10 @@
     "antonym": "danke",
     "example_de": "Eine Tasse Kaffee, bitte! Bitte schön! Wie bitte? Was haben Sie gesagt? Sprechen Sie bitte langsam.",
     "example_en": "A cup of coffee, please! Here you go! I beg your pardon? What did you say? Please speak slowly.",
-    "image": "images/card_256.svg",
-    "id": 256
+    "image": "images/card_256.webp",
+    "id": 256,
+    "image_tier": "B",
+    "image_path": "images/card_256.webp"
   },
   {
     "german": "bitten",
@@ -4312,8 +4824,10 @@
     "antonym": "danken",
     "example_de": "Darf ich Sie bitten, kurz zuzuhören?",
     "example_en": "May I ask you to listen for a moment?",
-    "image": "images/card_257.svg",
-    "id": 257
+    "image": "images/card_257.webp",
+    "id": 257,
+    "image_tier": "B",
+    "image_path": "images/card_257.webp"
   },
   {
     "german": "bitter",
@@ -4331,8 +4845,10 @@
     "antonym": "süß",
     "example_de": "Hast du Zucker? Der Tee ist sehr bitter.",
     "example_en": "Do you have sugar? The tea is very bitter.",
-    "image": "images/card_258.svg",
-    "id": 258
+    "image": "images/card_258.webp",
+    "id": 258,
+    "image_tier": "B",
+    "image_path": "images/card_258.webp"
   },
   {
     "german": "blass",
@@ -4350,8 +4866,10 @@
     "antonym": "rosig",
     "example_de": "Du siehst ganz blass aus. Bist du krank?",
     "example_en": "You look very pale. Are you sick?",
-    "image": "images/card_259.svg",
-    "id": 259
+    "image": "images/card_259.webp",
+    "id": 259,
+    "image_tier": "B",
+    "image_path": "images/card_259.webp"
   },
   {
     "german": "das Blatt",
@@ -4366,8 +4884,10 @@
     "antonym": null,
     "example_de": "Die Bäume bekommen schon gelbe Blätter. Haben Sie ein Blatt Papier für mich?",
     "example_en": "The trees are already getting yellow leaves. Do you have a sheet of paper for me?",
-    "image": "images/card_260.svg",
-    "id": 260
+    "image": "images/card_260.webp",
+    "id": 260,
+    "image_tier": "B",
+    "image_path": "images/card_260.webp"
   },
   {
     "german": "der Bleistift",
@@ -4382,8 +4902,10 @@
     "antonym": "der Kugelschreiber",
     "example_de": "Hast du einen Bleistift für mich?",
     "example_en": "Do you have a pencil for me?",
-    "image": "images/card_261.svg",
-    "id": 261
+    "image": "images/card_261.webp",
+    "id": 261,
+    "image_tier": "B",
+    "image_path": "images/card_261.webp"
   },
   {
     "german": "der Blick",
@@ -4398,8 +4920,10 @@
     "antonym": null,
     "example_de": "Von hier hat man einen tollen Blick über die Stadt.",
     "example_en": "From here you have a great view over the city.",
-    "image": "images/card_262.svg",
-    "id": 262
+    "image": "images/card_262.webp",
+    "id": 262,
+    "image_tier": "B",
+    "image_path": "images/card_262.webp"
   },
   {
     "german": "blind blitzen",
@@ -4418,8 +4942,10 @@
     "antonym": null,
     "example_de": "Er ist von Geburt an blind. Gestern Abend gab es ein Gewitter. Es hat furchtbar geblitzt und gedonnert. Ihre Augen blitzen vor Freude.",
     "example_en": "He has been blind since birth. Yesterday evening there was a thunderstorm. There was terrible lightning and thunder. Her eyes flash with joy.",
-    "image": "images/card_263.svg",
-    "id": 263
+    "image": "images/card_263.webp",
+    "id": 263,
+    "image_tier": "B",
+    "image_path": "images/card_263.webp"
   },
   {
     "german": "der Blitz",
@@ -4434,8 +4960,10 @@
     "antonym": null,
     "example_de": "Was für ein Gewitter, hast du den Blitz gesehen? Hast du das Foto mit Blitz gemacht?",
     "example_en": "What a thunderstorm, did you see the lightning? Did you take the photo with a flash?",
-    "image": "images/card_264.svg",
-    "id": 264
+    "image": "images/card_264.webp",
+    "id": 264,
+    "image_tier": "B",
+    "image_path": "images/card_264.webp"
   },
   {
     "german": "blond",
@@ -4453,8 +4981,10 @@
     "antonym": "dunkelhaarig",
     "example_de": "Mein Sohn ist blond. Nina hat lange blonde Haare.",
     "example_en": "My son is blonde. Nina has long blonde hair.",
-    "image": "images/card_265.svg",
-    "id": 265
+    "image": "images/card_265.webp",
+    "id": 265,
+    "image_tier": "B",
+    "image_path": "images/card_265.webp"
   },
   {
     "german": "bloß blühen",
@@ -4473,8 +5003,10 @@
     "antonym": null,
     "example_de": "Ich möchte nichts kaufen. Ich möchte mich bloß umsehen. Die Bäume blühen schon. Es ist Frühling.",
     "example_en": "I do not want to buy anything. I just want to look around. The trees are already blooming. It is spring.",
-    "image": "images/card_266.svg",
-    "id": 266
+    "image": "images/card_266.webp",
+    "id": 266,
+    "image_tier": "B",
+    "image_path": "images/card_266.webp"
   },
   {
     "german": "die Blume",
@@ -4489,8 +5021,10 @@
     "antonym": null,
     "example_de": "Wir haben meiner Mutter Blumen zum Geburtstag geschenkt.",
     "example_en": "We gave my mother flowers for her birthday.",
-    "image": "images/card_267.svg",
-    "id": 267
+    "image": "images/card_267.webp",
+    "id": 267,
+    "image_tier": "B",
+    "image_path": "images/card_267.webp"
   },
   {
     "german": "die Bluse",
@@ -4505,8 +5039,10 @@
     "antonym": "das Hemd",
     "example_de": "Ich hätte gerne eine weiße Bluse.",
     "example_en": "I would like a white blouse.",
-    "image": "images/card_268.svg",
-    "id": 268
+    "image": "images/card_268.webp",
+    "id": 268,
+    "image_tier": "B",
+    "image_path": "images/card_268.webp"
   },
   {
     "german": "das Blut",
@@ -4521,8 +5057,10 @@
     "antonym": null,
     "example_de": "Der Verletzte hat viel Blut verloren.",
     "example_en": "The injured person lost a lot of blood.",
-    "image": "images/card_269.svg",
-    "id": 269
+    "image": "images/card_269.webp",
+    "id": 269,
+    "image_tier": "B",
+    "image_path": "images/card_269.webp"
   },
   {
     "german": "der Brief",
@@ -4537,8 +5075,10 @@
     "antonym": null,
     "example_de": "Ich schreibe nicht gern Briefe.",
     "example_en": "I do not like writing letters.",
-    "image": "images/card_270.svg",
-    "id": 270
+    "image": "images/card_270.webp",
+    "id": 270,
+    "image_tier": "B",
+    "image_path": "images/card_270.webp"
   },
   {
     "german": "der Briefkasten",
@@ -4553,8 +5093,10 @@
     "antonym": null,
     "example_de": "Ist hier in der Nähe ein Briefkasten? Hol bitte mal die Zeitung aus dem Briefkasten.",
     "example_en": "Is there a mailbox nearby? Please fetch the newspaper from the mailbox.",
-    "image": "images/card_271.svg",
-    "id": 271
+    "image": "images/card_271.webp",
+    "id": 271,
+    "image_tier": "B",
+    "image_path": "images/card_271.webp"
   },
   {
     "german": "der Briefträger",
@@ -4569,8 +5111,10 @@
     "antonym": null,
     "example_de": "War die Briefträgerin schon da?",
     "example_en": "Was the postwoman already here?",
-    "image": "images/card_272.svg",
-    "id": 272
+    "image": "images/card_272.webp",
+    "id": 272,
+    "image_tier": "B",
+    "image_path": "images/card_272.webp"
   },
   {
     "german": "der Briefumschlag",
@@ -4585,8 +5129,10 @@
     "antonym": null,
     "example_de": "Ich hätte gern 50 Briefumschläge und Briefmarken dazu.",
     "example_en": "I would like 50 envelopes and stamps to go with them.",
-    "image": "images/card_273.svg",
-    "id": 273
+    "image": "images/card_273.webp",
+    "id": 273,
+    "image_tier": "B",
+    "image_path": "images/card_273.webp"
   },
   {
     "german": "der Buchstabe",
@@ -4601,8 +5147,10 @@
     "antonym": null,
     "example_de": "Gibt es diesen Buchstaben auch in deiner Muttersprache? Ihr Name beginnt mit K. – Buchstabe K ist in Zimmer 3. Bitte warten Sie dort.",
     "example_en": "Does this letter also exist in your native language? Your name begins with K. – Letter K is in room 3. Please wait there.",
-    "image": "images/card_274.svg",
-    "id": 274
+    "image": "images/card_274.webp",
+    "id": 274,
+    "image_tier": "B",
+    "image_path": "images/card_274.webp"
   },
   {
     "german": "buchstabieren",
@@ -4621,8 +5169,10 @@
     "antonym": null,
     "example_de": "Würden Sie Ihren Namen bitte buchstabieren?",
     "example_en": "Would you please spell your name?",
-    "image": "images/card_275.svg",
-    "id": 275
+    "image": "images/card_275.webp",
+    "id": 275,
+    "image_tier": "B",
+    "image_path": "images/card_275.webp"
   },
   {
     "german": "das Buffet",
@@ -4637,8 +5187,10 @@
     "antonym": null,
     "example_de": "Das Buffet ist eröffnet!",
     "example_en": "The buffet is open!",
-    "image": "images/card_276.svg",
-    "id": 276
+    "image": "images/card_276.webp",
+    "id": 276,
+    "image_tier": "B",
+    "image_path": "images/card_276.webp"
   },
   {
     "german": "bunt",
@@ -4656,8 +5208,10 @@
     "antonym": "einfarbig",
     "example_de": "Das bunte Kleid gefällt mir gut.",
     "example_en": "I like the colorful dress.",
-    "image": "images/card_277.svg",
-    "id": 277
+    "image": "images/card_277.webp",
+    "id": 277,
+    "image_tier": "B",
+    "image_path": "images/card_277.webp"
   },
   {
     "german": "die Burg",
@@ -4672,8 +5226,10 @@
     "antonym": null,
     "example_de": "Von der Burg hat man eine schöne Aussicht.",
     "example_en": "You have a beautiful view from the castle.",
-    "image": "images/card_278.svg",
-    "id": 278
+    "image": "images/card_278.webp",
+    "id": 278,
+    "image_tier": "B",
+    "image_path": "images/card_278.webp"
   },
   {
     "german": "der Bus",
@@ -4688,8 +5244,10 @@
     "antonym": null,
     "example_de": "Ich fahre meistens mit dem Bus zur Arbeit.",
     "example_en": "I usually take the bus to work.",
-    "image": "images/card_279.svg",
-    "id": 279
+    "image": "images/card_279.webp",
+    "id": 279,
+    "image_tier": "B",
+    "image_path": "images/card_279.webp"
   },
   {
     "german": "die Butter",
@@ -4704,8 +5262,10 @@
     "antonym": "die Margarine",
     "example_de": "Ich möchte nur Butter aufs Brot.",
     "example_en": "I only want butter on my bread.",
-    "image": "images/card_280.svg",
-    "id": 280
+    "image": "images/card_280.webp",
+    "id": 280,
+    "image_tier": "B",
+    "image_path": "images/card_280.webp"
   },
   {
     "german": "die Bäckerei",
@@ -4720,8 +5280,10 @@
     "antonym": null,
     "example_de": "Wir kaufen unser Brot immer in der Bäckerei am Markt.",
     "example_en": "We always buy our bread at the bakery in the market.",
-    "image": "images/card_281.svg",
-    "id": 281
+    "image": "images/card_281.webp",
+    "id": 281,
+    "image_tier": "B",
+    "image_path": "images/card_281.webp"
   },
   {
     "german": "die Büchse",
@@ -4736,8 +5298,10 @@
     "antonym": null,
     "example_de": "Ich habe noch eine Büchse Bohnen.",
     "example_en": "I still have a can of beans.",
-    "image": "images/card_282.svg",
-    "id": 282
+    "image": "images/card_282.webp",
+    "id": 282,
+    "image_tier": "B",
+    "image_path": "images/card_282.webp"
   },
   {
     "german": "die Bühne",
@@ -4752,8 +5316,10 @@
     "antonym": null,
     "example_de": "Er steht gern auf der Bühne.",
     "example_en": "He likes to stand on the stage.",
-    "image": "images/card_283.svg",
-    "id": 283
+    "image": "images/card_283.webp",
+    "id": 283,
+    "image_tier": "B",
+    "image_path": "images/card_283.webp"
   },
   {
     "german": "der Bürger",
@@ -4768,8 +5334,10 @@
     "antonym": null,
     "example_de": "EU-Bürgerinnen und Bürger können überall in Europa arbeiten.",
     "example_en": "EU citizens can work anywhere in Europe.",
-    "image": "images/card_284.svg",
-    "id": 284
+    "image": "images/card_284.webp",
+    "id": 284,
+    "image_tier": "B",
+    "image_path": "images/card_284.webp"
   },
   {
     "german": "das Büro",
@@ -4784,8 +5352,10 @@
     "antonym": null,
     "example_de": "Unser Büro bleibt samstags geschlossen. Ich möchte in einem Büro arbeiten.",
     "example_en": "Our office remains closed on Saturdays. I would like to work in an office.",
-    "image": "images/card_285.svg",
-    "id": 285
+    "image": "images/card_285.webp",
+    "id": 285,
+    "image_tier": "B",
+    "image_path": "images/card_285.webp"
   },
   {
     "german": "die Bürste",
@@ -4800,8 +5370,10 @@
     "antonym": null,
     "example_de": "Hast du eine Bürste? Meine Schuhe sind so schmutzig. Ich brauche eine Bürste für meine Haare.",
     "example_en": "Do you have a brush? My shoes are so dirty. I need a brush for my hair.",
-    "image": "images/card_286.svg",
-    "id": 286
+    "image": "images/card_286.webp",
+    "id": 286,
+    "image_tier": "B",
+    "image_path": "images/card_286.webp"
   },
   {
     "german": "die Cafeteria",
@@ -4816,8 +5388,10 @@
     "antonym": null,
     "example_de": "Ich hole mir schnell etwas aus der Cafeteria.",
     "example_en": "I will quickly get something from the cafeteria.",
-    "image": "images/card_287.svg",
-    "id": 287
+    "image": "images/card_287.webp",
+    "id": 287,
+    "image_tier": "B",
+    "image_path": "images/card_287.webp"
   },
   {
     "german": "das Café",
@@ -4832,8 +5406,10 @@
     "antonym": null,
     "example_de": "Hier in der Nähe ist ein Café. Lass uns einen Kaffee trinken.",
     "example_en": "There is a café nearby. Let's have a coffee.",
-    "image": "images/card_288.svg",
-    "id": 288
+    "image": "images/card_288.webp",
+    "id": 288,
+    "image_tier": "B",
+    "image_path": "images/card_288.webp"
   },
   {
     "german": "die Chance",
@@ -4848,8 +5424,10 @@
     "antonym": null,
     "example_de": "Mein Mann hat gute Chancen, die Stelle zu bekommen.",
     "example_en": "My husband has good chances of getting the job.",
-    "image": "images/card_289.svg",
-    "id": 289
+    "image": "images/card_289.webp",
+    "id": 289,
+    "image_tier": "B",
+    "image_path": "images/card_289.webp"
   },
   {
     "german": "der Chef",
@@ -4864,8 +5442,10 @@
     "antonym": "der Angestellte",
     "example_de": "Das kann ich nicht allein entscheiden, da muss ich erst die Chefin fragen.",
     "example_en": "I cannot decide that alone, I have to ask the boss first.",
-    "image": "images/card_290.svg",
-    "id": 290
+    "image": "images/card_290.webp",
+    "id": 290,
+    "image_tier": "B",
+    "image_path": "images/card_290.webp"
   },
   {
     "german": "die Chefin",
@@ -4880,8 +5460,10 @@
     "antonym": "die Angestellte",
     "example_de": "Das kann ich nicht allein entscheiden, da muss ich erst die Chefin fragen.",
     "example_en": "I cannot decide that alone, I have to ask the boss first.",
-    "image": "images/card_291.svg",
-    "id": 291
+    "image": "images/card_291.webp",
+    "id": 291,
+    "image_tier": "B",
+    "image_path": "images/card_291.webp"
   },
   {
     "german": "der Coiffeur",
@@ -4896,8 +5478,10 @@
     "antonym": null,
     "example_de": "Du siehst toll aus! Wer ist dein Coiffeur?",
     "example_en": "You look great! Who is your hairdresser?",
-    "image": "images/card_292.svg",
-    "id": 292
+    "image": "images/card_292.webp",
+    "id": 292,
+    "image_tier": "B",
+    "image_path": "images/card_292.webp"
   },
   {
     "german": "die Coiffeuse",
@@ -4912,8 +5496,10 @@
     "antonym": null,
     "example_de": "Meine Tochter will Coiffeuse werden.",
     "example_en": "My daughter wants to become a hairdresser.",
-    "image": "images/card_293.svg",
-    "id": 293
+    "image": "images/card_293.webp",
+    "id": 293,
+    "image_tier": "B",
+    "image_path": "images/card_293.webp"
   },
   {
     "german": "die Couch",
@@ -4928,8 +5514,10 @@
     "antonym": null,
     "example_de": "Wir haben uns eine Couch und neue Sessel gekauft.",
     "example_en": "We bought ourselves a couch and new armchairs.",
-    "image": "images/card_294.svg",
-    "id": 294
+    "image": "images/card_294.webp",
+    "id": 294,
+    "image_tier": "B",
+    "image_path": "images/card_294.webp"
   },
   {
     "german": "der Cousin",
@@ -4944,8 +5532,10 @@
     "antonym": null,
     "example_de": "Meine Cousine wohnt jetzt in Brasilien.",
     "example_en": "My cousin lives in Brazil now.",
-    "image": "images/card_295.svg",
-    "id": 295
+    "image": "images/card_295.webp",
+    "id": 295,
+    "image_tier": "B",
+    "image_path": "images/card_295.webp"
   },
   {
     "german": "die Cousine",
@@ -4960,8 +5550,10 @@
     "antonym": null,
     "example_de": "Meine Cousine wohnt jetzt in Brasilien.",
     "example_en": "My cousin lives in Brazil now.",
-    "image": "images/card_296.svg",
-    "id": 296
+    "image": "images/card_296.webp",
+    "id": 296,
+    "image_tier": "B",
+    "image_path": "images/card_296.webp"
   },
   {
     "german": "das Couvert",
@@ -4976,8 +5568,10 @@
     "antonym": null,
     "example_de": "Ich hätte gern 50 Couverts und Briefmarken dazu.",
     "example_en": "I would like 50 envelopes and stamps to go with them.",
-    "image": "images/card_297.svg",
-    "id": 297
+    "image": "images/card_297.webp",
+    "id": 297,
+    "image_tier": "B",
+    "image_path": "images/card_297.webp"
   },
   {
     "german": "die Creme",
@@ -4992,8 +5586,10 @@
     "antonym": null,
     "example_de": "Ich hätte gern eine Creme für die Hände. Für die Creme habe ich Butter und Schokolade genommen.",
     "example_en": "I would like a cream for my hands. I used butter and chocolate for the cream.",
-    "image": "images/card_298.svg",
-    "id": 298
+    "image": "images/card_298.webp",
+    "id": 298,
+    "image_tier": "B",
+    "image_path": "images/card_298.webp"
   },
   {
     "german": "da",
@@ -5008,8 +5604,10 @@
     "antonym": null,
     "example_de": "Da drüben ist ein Getränkeautomat. Da Sie keinen Mitgliedsausweis haben, ist es etwas teurer. Ist Herr Klein schon da?",
     "example_en": "There is a beverage vending machine over there. Since you do not have a membership card, it is a little more expensive. Is Mr. Klein already there?",
-    "image": "images/card_299.svg",
-    "id": 299
+    "image": "images/card_299.webp",
+    "id": 299,
+    "image_tier": "B",
+    "image_path": "images/card_299.webp"
   },
   {
     "german": "dabei",
@@ -5024,8 +5622,10 @@
     "antonym": null,
     "example_de": "Was hast du dir dabei gedacht? Schön, dass du da bist. Ist deine Familie auch dabei? Hast du einen Stift dabei?",
     "example_en": "What were you thinking? Nice that you are here. Is your family present too? Do you have a pen with you?",
-    "image": "images/card_300.svg",
-    "id": 300
+    "image": "images/card_300.webp",
+    "id": 300,
+    "image_tier": "B",
+    "image_path": "images/card_300.webp"
   },
   {
     "german": "das Dach",
@@ -5040,8 +5640,10 @@
     "antonym": null,
     "example_de": "Wir müssen das Dach reparieren lassen. Wir wohnen direkt unter dem Dach.",
     "example_en": "We have to have the roof repaired. We live directly under the roof.",
-    "image": "images/card_301.svg",
-    "id": 301
+    "image": "images/card_301.webp",
+    "id": 301,
+    "image_tier": "B",
+    "image_path": "images/card_301.webp"
   },
   {
     "german": "dafür",
@@ -5056,8 +5658,10 @@
     "antonym": "dagegen",
     "example_de": "Meine Schwester interessiert sich für Politik. Ich interessiere mich nicht dafür. Ich bin dafür, dass wir möglichst früh losfahren.",
     "example_en": "My sister is interested in politics. I am not interested in it. I am in favor of us leaving as early as possible.",
-    "image": "images/card_302.svg",
-    "id": 302
+    "image": "images/card_302.webp",
+    "id": 302,
+    "image_tier": "B",
+    "image_path": "images/card_302.webp"
   },
   {
     "german": "dagegen",
@@ -5072,8 +5676,10 @@
     "antonym": "dafür",
     "example_de": "Vorsicht, da ist ein Baum! Fahr nicht dagegen! Sind Sie für oder gegen ein Rauchverbot? - Ich bin dagegen. Ich habe nichts dagegen, dass wir schon nach Hause gehen.",
     "example_en": "Careful, there is a tree! Do not drive into it! Are you for or against a smoking ban? - I am against it. I have nothing against us going home already.",
-    "image": "images/card_303.svg",
-    "id": 303
+    "image": "images/card_303.webp",
+    "id": 303,
+    "image_tier": "B",
+    "image_path": "images/card_303.webp"
   },
   {
     "german": "daher",
@@ -5088,8 +5694,10 @@
     "antonym": null,
     "example_de": "Ich bin erkältet, daher kann ich heute nicht kommen.",
     "example_en": "I have a cold, therefore I cannot come today.",
-    "image": "images/card_304.svg",
-    "id": 304
+    "image": "images/card_304.webp",
+    "id": 304,
+    "image_tier": "B",
+    "image_path": "images/card_304.webp"
   },
   {
     "german": "damals",
@@ -5104,8 +5712,10 @@
     "antonym": "heute",
     "example_de": "Mit 15 wollte ich gerne Klavier spielen lernen. Aber damals hatte ich kein Geld dafür.",
     "example_en": "At 15 I wanted to learn to play the piano. But back then I had no money for it.",
-    "image": "images/card_305.svg",
-    "id": 305
+    "image": "images/card_305.webp",
+    "id": 305,
+    "image_tier": "B",
+    "image_path": "images/card_305.webp"
   },
   {
     "german": "die Dame",
@@ -5120,8 +5730,10 @@
     "antonym": "der Herr",
     "example_de": "Sie ist eine nette alte Dame. Meine Damen und Herren! Sehr geehrte Damen und Herren.",
     "example_en": "She is a nice old lady. Ladies and gentlemen! Dear Sir or Madam.",
-    "image": "images/card_306.svg",
-    "id": 306
+    "image": "images/card_306.webp",
+    "id": 306,
+    "image_tier": "B",
+    "image_path": "images/card_306.webp"
   },
   {
     "german": "damit",
@@ -5136,8 +5748,10 @@
     "antonym": null,
     "example_de": "Mach schnell, damit wir nicht zu spät kommen. Was macht man mit diesem Ding? - Damit kann man Dosen aufmachen.",
     "example_en": "Hurry up so that we are not late. What do you do with this thing? - You can open cans with it.",
-    "image": "images/card_307.svg",
-    "id": 307
+    "image": "images/card_307.webp",
+    "id": 307,
+    "image_tier": "B",
+    "image_path": "images/card_307.webp"
   },
   {
     "german": "danach",
@@ -5152,8 +5766,10 @@
     "antonym": "davor",
     "example_de": "Zuerst gehen wir einkaufen, danach grillen wir auf unserem Balkon.",
     "example_en": "First we go shopping, afterwards we grill on our balcony.",
-    "image": "images/card_308.svg",
-    "id": 308
+    "image": "images/card_308.webp",
+    "id": 308,
+    "image_tier": "B",
+    "image_path": "images/card_308.webp"
   },
   {
     "german": "der Dank",
@@ -5168,8 +5784,10 @@
     "antonym": null,
     "example_de": "Vielen Dank für Ihre Mühe. Hier ist Ihr Kaffee. – Vielen Dank! Herzlichen Dank! Gott sei Dank hat es nicht geregnet.",
     "example_en": "Many thanks for your effort. Here is your coffee. - Thank you very much! Heartfelt thanks! Thank God it did not rain.",
-    "image": "images/card_309.svg",
-    "id": 309
+    "image": "images/card_309.webp",
+    "id": 309,
+    "image_tier": "B",
+    "image_path": "images/card_309.webp"
   },
   {
     "german": "dankbar",
@@ -5187,8 +5805,10 @@
     "antonym": "undankbar",
     "example_de": "Ich bin Ihnen sehr dankbar für Ihre Hilfe.",
     "example_en": "I am very grateful to you for your help.",
-    "image": "images/card_310.svg",
-    "id": 310
+    "image": "images/card_310.webp",
+    "id": 310,
+    "image_tier": "B",
+    "image_path": "images/card_310.webp"
   },
   {
     "german": "danke",
@@ -5203,8 +5823,10 @@
     "antonym": "bitte",
     "example_de": "Soll ich Ihnen helfen? Nein, danke, nicht nötig. Guten Appetit! – Danke gleichfalls.",
     "example_en": "Should I help you? No, thanks, not necessary. Enjoy your meal! - Thanks, same to you.",
-    "image": "images/card_311.svg",
-    "id": 311
+    "image": "images/card_311.webp",
+    "id": 311,
+    "image_tier": "B",
+    "image_path": "images/card_311.webp"
   },
   {
     "german": "danken",
@@ -5223,8 +5845,10 @@
     "antonym": null,
     "example_de": "Ich danke dir für die Einladung.",
     "example_en": "I thank you for the invitation.",
-    "image": "images/card_312.svg",
-    "id": 312
+    "image": "images/card_312.webp",
+    "id": 312,
+    "image_tier": "B",
+    "image_path": "images/card_312.webp"
   },
   {
     "german": "darstellen",
@@ -5243,8 +5867,10 @@
     "antonym": null,
     "example_de": "Er konnte das Problem sehr gut darstellen.",
     "example_en": "He could represent the problem very well.",
-    "image": "images/card_313.svg",
-    "id": 313
+    "image": "images/card_313.webp",
+    "id": 313,
+    "image_tier": "B",
+    "image_path": "images/card_313.webp"
   },
   {
     "german": "die Darstellung",
@@ -5259,8 +5885,10 @@
     "antonym": null,
     "example_de": "Ihr Buch enthält eine klare Darstellung dieser Probleme.",
     "example_en": "Her book contains a clear representation of these problems.",
-    "image": "images/card_314.svg",
-    "id": 314
+    "image": "images/card_314.webp",
+    "id": 314,
+    "image_tier": "B",
+    "image_path": "images/card_314.webp"
   },
   {
     "german": "dass",
@@ -5275,8 +5903,10 @@
     "antonym": null,
     "example_de": "Rico hat mir gesagt, dass er auch zur Party kommt.",
     "example_en": "Rico told me that he is also coming to the party.",
-    "image": "images/card_315.svg",
-    "id": 315
+    "image": "images/card_315.webp",
+    "id": 315,
+    "image_tier": "B",
+    "image_path": "images/card_315.webp"
   },
   {
     "german": "die Datei",
@@ -5291,8 +5921,10 @@
     "antonym": null,
     "example_de": "Wo hast du die Datei gespeichert?",
     "example_en": "Where did you save the file?",
-    "image": "images/card_316.svg",
-    "id": 316
+    "image": "images/card_316.webp",
+    "id": 316,
+    "image_tier": "B",
+    "image_path": "images/card_316.webp"
   },
   {
     "german": "die Daten",
@@ -5307,8 +5939,10 @@
     "antonym": null,
     "example_de": "Wir haben alle Ihre Daten im Computer.",
     "example_en": "We have all your data in the computer.",
-    "image": "images/card_317.svg",
-    "id": 317
+    "image": "images/card_317.webp",
+    "id": 317,
+    "image_tier": "B",
+    "image_path": "images/card_317.webp"
   },
   {
     "german": "das Datum",
@@ -5323,8 +5957,10 @@
     "antonym": null,
     "example_de": "Welches Datum haben wir heute? Bitte Datum und Unterschrift nicht vergessen. Ich brauche noch ein paar Daten von Ihnen.",
     "example_en": "What date is it today? Please do not forget date and signature. I still need some data from you.",
-    "image": "images/card_318.svg",
-    "id": 318
+    "image": "images/card_318.webp",
+    "id": 318,
+    "image_tier": "B",
+    "image_path": "images/card_318.webp"
   },
   {
     "german": "die Dauer",
@@ -5339,8 +5975,10 @@
     "antonym": null,
     "example_de": "Sie können das Buch für die Dauer einer Woche ausleihen. Auf Dauer ist die Arbeit nicht interessant.",
     "example_en": "You can borrow the book for the duration of one week. In the long run, the work is not interesting.",
-    "image": "images/card_319.svg",
-    "id": 319
+    "image": "images/card_319.webp",
+    "id": 319,
+    "image_tier": "B",
+    "image_path": "images/card_319.webp"
   },
   {
     "german": "dauern",
@@ -5359,8 +5997,10 @@
     "antonym": null,
     "example_de": "Wie lange dauert die Pause? – Eine halbe Stunde.",
     "example_en": "How long does the break last? – Half an hour.",
-    "image": "images/card_320.svg",
-    "id": 320
+    "image": "images/card_320.webp",
+    "id": 320,
+    "image_tier": "B",
+    "image_path": "images/card_320.webp"
   },
   {
     "german": "dauernd",
@@ -5378,8 +6018,10 @@
     "antonym": "selten",
     "example_de": "Das dauernde Klingeln des Telefons stört mich. Er ist dauernd krank.",
     "example_en": "The constant ringing of the telephone bothers me. He is constantly sick.",
-    "image": "images/card_321.svg",
-    "id": 321
+    "image": "images/card_321.webp",
+    "id": 321,
+    "image_tier": "B",
+    "image_path": "images/card_321.webp"
   },
   {
     "german": "die Decke",
@@ -5394,8 +6036,10 @@
     "antonym": "der Boden",
     "example_de": "Im Wohnzimmer haben wir keine Lampe an der Decke. Kann ich noch eine Decke bekommen? Mir ist kalt.",
     "example_en": "In the living room we have no lamp on the ceiling. Can I get another blanket? I am cold.",
-    "image": "images/card_322.svg",
-    "id": 322
+    "image": "images/card_322.webp",
+    "id": 322,
+    "image_tier": "B",
+    "image_path": "images/card_322.webp"
   },
   {
     "german": "das Denkmal",
@@ -5410,8 +6054,10 @@
     "antonym": null,
     "example_de": "In dieser Stadt gibt es viele berühmte Denkmäler.",
     "example_en": "There are many famous monuments in this city.",
-    "image": "images/card_323.svg",
-    "id": 323
+    "image": "images/card_323.webp",
+    "id": 323,
+    "image_tier": "B",
+    "image_path": "images/card_323.webp"
   },
   {
     "german": "denn / derselbe",
@@ -5426,8 +6072,10 @@
     "antonym": null,
     "example_de": "Ich lerne jetzt auch Portugiesisch, denn ich möchte nach Südamerika reisen. Wie ist das Spiel denn ausgegangen? Mein Freund und ich gehen in dieselbe Schule.",
     "example_en": "I am learning Portuguese now because I want to travel to South America. How did the game end then? My friend and I go to the same school.",
-    "image": "images/card_324.svg",
-    "id": 324
+    "image": "images/card_324.webp",
+    "id": 324,
+    "image_tier": "B",
+    "image_path": "images/card_324.webp"
   },
   {
     "german": "deshalb",
@@ -5442,8 +6090,10 @@
     "antonym": null,
     "example_de": "Ich war krank. Deshalb war ich nicht im Büro.",
     "example_en": "I was sick. Therefore I was not in the office.",
-    "image": "images/card_325.svg",
-    "id": 325
+    "image": "images/card_325.webp",
+    "id": 325,
+    "image_tier": "B",
+    "image_path": "images/card_325.webp"
   },
   {
     "german": "das Dessert",
@@ -5458,8 +6108,10 @@
     "antonym": "die Vorspeise",
     "example_de": "Nach dem Essen gab es noch ein leckeres Dessert.",
     "example_en": "After the meal there was still a delicious dessert.",
-    "image": "images/card_326.svg",
-    "id": 326
+    "image": "images/card_326.webp",
+    "id": 326,
+    "image_tier": "B",
+    "image_path": "images/card_326.webp"
   },
   {
     "german": "deswegen",
@@ -5474,8 +6126,10 @@
     "antonym": null,
     "example_de": "Ich habe falsch geparkt. Deswegen habe ich einen Strafzettel bekommen.",
     "example_en": "I parked incorrectly. Therefore I got a parking ticket.",
-    "image": "images/card_327.svg",
-    "id": 327
+    "image": "images/card_327.webp",
+    "id": 327,
+    "image_tier": "B",
+    "image_path": "images/card_327.webp"
   },
   {
     "german": "das Detail",
@@ -5490,8 +6144,10 @@
     "antonym": null,
     "example_de": "Dieses Detail ist unwichtig. Ich habe alles bis ins kleinste Detail vorbereitet.",
     "example_en": "This detail is unimportant. I have prepared everything down to the smallest detail.",
-    "image": "images/card_328.svg",
-    "id": 328
+    "image": "images/card_328.webp",
+    "id": 328,
+    "image_tier": "B",
+    "image_path": "images/card_328.webp"
   },
   {
     "german": "deutlich",
@@ -5509,8 +6165,10 @@
     "antonym": "undeutlich",
     "example_de": "Schreiben Sie bitte deutlich!",
     "example_en": "Please write clearly!",
-    "image": "images/card_329.svg",
-    "id": 329
+    "image": "images/card_329.webp",
+    "id": 329,
+    "image_tier": "B",
+    "image_path": "images/card_329.webp"
   },
   {
     "german": "der Dialekt",
@@ -5525,8 +6183,10 @@
     "antonym": "die Hochsprache",
     "example_de": "Ich verstehe dich besser, wenn du nicht Dialekt sprichst.",
     "example_en": "I understand you better when you do not speak dialect.",
-    "image": "images/card_330.svg",
-    "id": 330
+    "image": "images/card_330.webp",
+    "id": 330,
+    "image_tier": "B",
+    "image_path": "images/card_330.webp"
   },
   {
     "german": "der Dialog",
@@ -5541,8 +6201,10 @@
     "antonym": "der Monolog",
     "example_de": "Sie hören jetzt einen Dialog.",
     "example_en": "You are now hearing a dialogue.",
-    "image": "images/card_331.svg",
-    "id": 331
+    "image": "images/card_331.webp",
+    "id": 331,
+    "image_tier": "B",
+    "image_path": "images/card_331.webp"
   },
   {
     "german": "dicht",
@@ -5560,8 +6222,10 @@
     "antonym": "undicht",
     "example_de": "Unsere Fenster sind nicht dicht. Es zieht immer.",
     "example_en": "Our windows are not tight. There is always a draft.",
-    "image": "images/card_332.svg",
-    "id": 332
+    "image": "images/card_332.webp",
+    "id": 332,
+    "image_tier": "B",
+    "image_path": "images/card_332.webp"
   },
   {
     "german": "dick",
@@ -5579,8 +6243,10 @@
     "antonym": "dünn",
     "example_de": "Ich bin zu dick. Ich muss weniger essen. Die Wände sind hier sehr dick.",
     "example_en": "I am too fat. I have to eat less. The walls here are very thick.",
-    "image": "images/card_333.svg",
-    "id": 333
+    "image": "images/card_333.webp",
+    "id": 333,
+    "image_tier": "B",
+    "image_path": "images/card_333.webp"
   },
   {
     "german": "der Dieb",
@@ -5595,8 +6261,10 @@
     "antonym": null,
     "example_de": "Ein Dieb hat mir auf dem Markt die Tasche gestohlen.",
     "example_en": "A thief stole my bag at the market.",
-    "image": "images/card_334.svg",
-    "id": 334
+    "image": "images/card_334.webp",
+    "id": 334,
+    "image_tier": "B",
+    "image_path": "images/card_334.webp"
   },
   {
     "german": "der Dienst",
@@ -5611,8 +6279,10 @@
     "antonym": null,
     "example_de": "Als Krankenschwester habe ich oft Frühdienst. Morgen habe ich Dienst. Deshalb kann ich nicht kommen.",
     "example_en": "As a nurse, I often have early shift. Tomorrow I am on duty. Therefore I cannot come.",
-    "image": "images/card_335.svg",
-    "id": 335
+    "image": "images/card_335.webp",
+    "id": 335,
+    "image_tier": "B",
+    "image_path": "images/card_335.webp"
   },
   {
     "german": "dies- / diesmal",
@@ -5627,8 +6297,10 @@
     "antonym": "nächstes Mal",
     "example_de": "Wohin fährst du dieses Jahr in Urlaub? Welche Hose nehmen Sie? – Diese hier. Die letzten Spiele haben wir verloren. Diesmal haben wir zum Glück gewonnen.",
     "example_en": "Where are you going on vacation this year? Which pants are you taking? - This one here. We lost the last games. This time we won, luckily.",
-    "image": "images/card_336.svg",
-    "id": 336
+    "image": "images/card_336.webp",
+    "id": 336,
+    "image_tier": "B",
+    "image_path": "images/card_336.webp"
   },
   {
     "german": "digital",
@@ -5646,8 +6318,10 @@
     "antonym": "analog",
     "example_de": "Ich habe eine Digitaluhr gekauft. Die geht genauer als meine alte Uhr.",
     "example_en": "I bought a digital watch. It keeps better time than my old watch.",
-    "image": "images/card_337.svg",
-    "id": 337
+    "image": "images/card_337.webp",
+    "id": 337,
+    "image_tier": "B",
+    "image_path": "images/card_337.webp"
   },
   {
     "german": "das Ding",
@@ -5662,8 +6336,10 @@
     "antonym": null,
     "example_de": "Gib mir bitte mal das Ding da drüben.",
     "example_en": "Please give me that thing over there.",
-    "image": "images/card_338.svg",
-    "id": 338
+    "image": "images/card_338.webp",
+    "id": 338,
+    "image_tier": "B",
+    "image_path": "images/card_338.webp"
   },
   {
     "german": "das Diplom",
@@ -5678,8 +6354,10 @@
     "antonym": null,
     "example_de": "Wo kann ich mein Diplom abholen?",
     "example_en": "Where can I pick up my diploma?",
-    "image": "images/card_339.svg",
-    "id": 339
+    "image": "images/card_339.webp",
+    "id": 339,
+    "image_tier": "B",
+    "image_path": "images/card_339.webp"
   },
   {
     "german": "direkt",
@@ -5697,8 +6375,10 @@
     "antonym": "indirekt",
     "example_de": "Wir liefern Ihnen die Waren direkt ins Haus. Das Dorf liegt direkt an der Autobahn. Gibt es keinen direkten Zug nach Hamburg? Sie übertragen das Fußballspiel direkt.",
     "example_en": "We deliver the goods directly to your house. The village is located directly on the highway. Is there no direct train to Hamburg? They are broadcasting the football game live.",
-    "image": "images/card_340.svg",
-    "id": 340
+    "image": "images/card_340.webp",
+    "id": 340,
+    "image_tier": "B",
+    "image_path": "images/card_340.webp"
   },
   {
     "german": "der Direktor",
@@ -5713,8 +6393,10 @@
     "antonym": null,
     "example_de": "Ich möchte gern mit dem Direktor sprechen.",
     "example_en": "I would like to speak with the director.",
-    "image": "images/card_341.svg",
-    "id": 341
+    "image": "images/card_341.webp",
+    "id": 341,
+    "image_tier": "B",
+    "image_path": "images/card_341.webp"
   },
   {
     "german": "die Direktorin",
