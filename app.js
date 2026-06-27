@@ -52,6 +52,10 @@ import {
   renderSidebarCategories
 } from './js/search.js';
 
+// ⚠️  DATA UPDATE CHECKLIST — BUMP THIS VERSION whenever any /a1, /a2, or /b1
+// JSON data file is modified. Failing to bump invalidates all users' IDB wordlist
+// caches and causes them to see stale data until they manually clear storage.
+// Format: 'v<major>.<minor>.<patch>'  e.g., v1.0.1 → v1.0.2
 const WORDLIST_CACHE_VERSION = 'v1.0.1';
 
 // Global hooks for early-paint theme execution inside HTML Head

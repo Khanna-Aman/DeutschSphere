@@ -1125,46 +1125,86 @@ export function importBackup(e) {
     try {
       const backup = JSON.parse(evt.target.result);
       if (!backup || typeof backup !== 'object' || !backup.data) {
-        throw new Error("Invalid file format. It must be a valid .json backup file.");
+        throw new Error('Invalid file format. It must be a valid .json backup file.');
       }
-      
+
       const data = backup.data;
-      
-      // Asynchronously write to IndexedDB
+
+      // ── Schema validation (mirrors restoreFromSyncKey guards) ──────────────
+      const isArrayOfStrings = (v) => Array.isArray(v) && v.every(x => typeof x === 'string');
+      const isPlainObject    = (v) => v !== null && typeof v === 'object' && !Array.isArray(v);
+      const isSrsStateObj    = (v) => {
+        if (!isPlainObject(v)) return false;
+        return Object.values(v).every(entry => isPlainObject(entry));
+      };
+      const VALID_LEVELS = new Set(['a1', 'a2', 'b1']);
+
+      const learnedKeys = ['learned_cards_a1', 'learned_cards_a2', 'learned_cards_b1'];
+      const srsKeys     = ['srs_state_a1', 'srs_state_a2', 'srs_state_b1'];
+      const customKeys  = ['custom_cards_a1', 'custom_cards_a2', 'custom_cards_b1'];
+
+      learnedKeys.forEach(k => {
+        if (data[k] !== undefined && !isArrayOfStrings(data[k])) {
+          throw new Error(`Invalid schema: "${k}" must be an array of strings.`);
+        }
+      });
+
+      srsKeys.forEach(k => {
+        if (data[k] !== undefined && !isSrsStateObj(data[k])) {
+          throw new Error(`Invalid schema: "${k}" must be a plain object of FSRS state objects.`);
+        }
+      });
+
+      customKeys.forEach(k => {
+        if (data[k] !== undefined && !Array.isArray(data[k])) {
+          throw new Error(`Invalid schema: "${k}" must be an array.`);
+        }
+      });
+
+      if (data.current_level !== undefined && !VALID_LEVELS.has(String(data.current_level))) {
+        throw new Error(`Invalid schema: "current_level" must be one of: a1, a2, b1.`);
+      }
+
+      if (data.show_images !== undefined && !['true', 'false', true, false].includes(data.show_images)) {
+        throw new Error('Invalid schema: "show_images" must be a boolean.');
+      }
+      // ── End validation ─────────────────────────────────────────────────────
+
+      // Write validated data to IndexedDB
       if (data.learned_cards_a1) await idb.set('learned_cards_a1', JSON.stringify(data.learned_cards_a1));
       if (data.learned_cards_a2) await idb.set('learned_cards_a2', JSON.stringify(data.learned_cards_a2));
       if (data.learned_cards_b1) await idb.set('learned_cards_b1', JSON.stringify(data.learned_cards_b1));
-      
+
       if (data.srs_state_a1) await idb.set('srs_state_a1', JSON.stringify(data.srs_state_a1));
       if (data.srs_state_a2) await idb.set('srs_state_a2', JSON.stringify(data.srs_state_a2));
       if (data.srs_state_b1) await idb.set('srs_state_b1', JSON.stringify(data.srs_state_b1));
-      
+
       if (data.custom_cards_a1) await idb.set('custom_cards_a1', JSON.stringify(data.custom_cards_a1));
       if (data.custom_cards_a2) await idb.set('custom_cards_a2', JSON.stringify(data.custom_cards_a2));
       if (data.custom_cards_b1) await idb.set('custom_cards_b1', JSON.stringify(data.custom_cards_b1));
-      
+
       if (data.show_images !== undefined) safeSetItem('show_images', String(data.show_images));
       if (data.current_level !== undefined) safeSetItem('current_level', String(data.current_level));
-      
-      elements.backupImportFeedback.className = "text-[10px] text-center font-bold text-emerald-400 mt-3";
-      elements.backupImportFeedback.textContent = "✓ Backup loaded! Refreshing dashboard...";
-      
+
+      elements.backupImportFeedback.className = 'text-[10px] text-center font-bold text-emerald-400 mt-3';
+      elements.backupImportFeedback.textContent = '✓ Backup loaded! Refreshing dashboard...';
+
       setTimeout(() => {
         window.location.reload();
       }, 1500);
-      
+
     } catch (err) {
-      console.error("Backup restore failed:", err);
-      elements.backupImportFeedback.className = "text-[10px] text-center font-bold text-rose-400 mt-3";
-      elements.backupImportFeedback.textContent = "✕ Import failed: " + err.message;
+      console.error('Backup restore failed:', err);
+      elements.backupImportFeedback.className = 'text-[10px] text-center font-bold text-rose-400 mt-3';
+      elements.backupImportFeedback.textContent = '✕ Import failed: ' + err.message;
     }
   };
-  
+
   reader.onerror = function() {
-    elements.backupImportFeedback.className = "text-[10px] text-center font-bold text-rose-400 mt-3";
-    elements.backupImportFeedback.textContent = "✕ Error reading the backup file.";
+    elements.backupImportFeedback.className = 'text-[10px] text-center font-bold text-rose-400 mt-3';
+    elements.backupImportFeedback.textContent = '✕ Error reading the backup file.';
   };
-  
+
   reader.readAsText(file);
 }
 
@@ -1183,8 +1223,13 @@ export async function copySyncKey() {
       btn.innerHTML = originalText;
     }, 2000);
   } catch (err) {
-    console.error("Failed to generate or copy sync key:", err);
-    alert("Copy failed: " + err.message);
+    console.error('Failed to generate or copy sync key:', err);
+    // Show error inline in the button itself — no blocking alert()
+    if (btn) {
+      const originalText = btn.innerHTML;
+      btn.innerHTML = `<i class="fa-solid fa-xmark text-sm text-rose-400"></i> <span class="text-rose-400">Copy failed</span>`;
+      setTimeout(() => { btn.innerHTML = originalText; }, 3000);
+    }
   }
 }
 
@@ -1193,16 +1238,23 @@ export async function restoreSyncKey() {
   if (!input) return;
   
   const key = input.value.trim();
+  const feedback = document.getElementById('backup-import-feedback');
+
+  const showFeedbackError = (msg) => {
+    if (feedback) {
+      feedback.className = 'text-[10px] text-center font-bold text-rose-400 mt-3';
+      feedback.textContent = msg;
+    }
+  };
+
   if (!key) {
-    alert("Please paste a valid Sync Key.");
+    showFeedbackError('✕ Please paste a valid Sync Key.');
     return;
   }
-  
-  const feedback = document.getElementById('backup-import-feedback');
   if (feedback) {
     feedback.classList.remove('hidden', 'text-rose-400', 'text-emerald-400');
     feedback.classList.add('text-slate-400');
-    feedback.textContent = "Validating Sync Key...";
+    feedback.textContent = 'Validating Sync Key...';
   }
   
   try {
@@ -1454,18 +1506,19 @@ export async function restoreSyncKey() {
         }, 1500);
 
       } catch (err) {
-        console.error("Merge and combine failed:", err);
-        alert("Error merging profiles: " + err.message);
+        console.error('Merge and combine failed:', err);
+        if (feedback) {
+          feedback.className = 'text-[10px] text-center font-bold text-rose-400 mt-3';
+          feedback.textContent = '✕ Merge failed: ' + err.message;
+        }
       }
     });
 
   } catch (err) {
-    console.error("Sync key restore failed:", err);
+    console.error('Sync key restore failed:', err);
     if (feedback) {
-      feedback.className = "text-[10px] text-center font-bold text-rose-400 mt-3";
-      feedback.textContent = "✕ Recovery failed: " + err.message;
-    } else {
-      alert("Recovery failed: " + err.message);
+      feedback.className = 'text-[10px] text-center font-bold text-rose-400 mt-3';
+      feedback.textContent = '✕ Recovery failed: ' + err.message;
     }
   }
 }

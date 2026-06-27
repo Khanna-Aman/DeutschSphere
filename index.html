@@ -375,12 +375,12 @@
   <div id="sidebar-backdrop" class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-[35] hidden md:hidden"></div>
 
   <!-- Main Content Workspace -->
-  <main id="main-content" class="flex-1 flex flex-col min-h-0 overflow-y-auto relative z-10 px-4 pt-4 pb-28 md:py-6 md:px-8 lg:py-6 lg:px-12" tabindex="-1">
+  <main id="main-content" class="flex-1 flex flex-col min-h-0 overflow-y-auto relative z-10 px-4 pt-4 pb-28 md:py-6 md:px-6 lg:py-6 lg:px-8 xl:px-10" tabindex="-1">
     
     <!-- Flashcards View Container -->
     <section id="flashcards-view" class="flex flex-col flex-1">
       <!-- Top Stats and Filters Info -->
-    <div class="w-full max-w-3xl mx-auto flex items-center justify-between mb-5">
+    <div class="w-full flex items-center justify-between mb-5">
       <div class="flex flex-col">
         <h2 id="current-category-title" class="text-xl md:text-2xl font-bold font-display tracking-tight text-white notranslate">All Categories</h2>
         <p id="deck-stats" class="text-sm text-slate-400 mt-1">Loading cards...</p>
@@ -557,7 +557,7 @@
     </div>
 
     <!-- Active Flashcard Workspace -->
-    <div id="flashcard-workspace-container" class="flex-1 flex flex-col justify-start items-center w-full max-w-3xl mx-auto pt-6 sm:pt-10 transition-all duration-300">
+    <div id="flashcard-workspace-container" class="flex-1 flex flex-col justify-start w-full pt-4 sm:pt-6 transition-all duration-300">
       
       <!-- Progress Bar Indicator -->
       <div class="w-full mb-4 space-y-2">
@@ -570,11 +570,11 @@
         </div>
       </div>
 
-      <!-- Unified Centered Workspace Layout -->
-      <div id="flashcard-workspace-grid" class="w-full flex flex-col gap-6 items-center mt-2">
+      <!-- Unified Workspace Layout — 1 col mobile/tablet, 2 col lg+ desktop -->
+      <div id="flashcard-workspace-grid" class="w-full flex flex-col lg:flex-row gap-6 mt-2 items-start">
         
-        <!-- Main Column: Audio Trainer, Flashcard, Details, Controls & Companion -->
-        <div id="flashcard-workspace-left" class="space-y-4 w-full">
+        <!-- Main Column: Audio Trainer, Flashcard, Details, Controls -->
+        <div id="flashcard-workspace-left" class="space-y-4 w-full lg:flex-1 min-w-0">
 
           <!-- Continuous Audio Trainer Panel -->
           <div id="audio-trainer-panel" class="w-full bg-slate-900/60 glass border border-slate-800/85 rounded-2xl py-2.5 px-4 flex flex-col sm:flex-row items-center justify-between gap-4 transition-all duration-300 shadow-xl shadow-slate-950/20">
@@ -826,7 +826,7 @@
           </button>
         </div>
 
-        <!-- Deck Companion Dashboard -->
+        <!-- Deck Companion Dashboard (mobile: below controls, desktop: moves to right column via JS) -->
         <div id="companion-dashboard" class="glass border border-slate-800/80 rounded-2xl p-5 shadow-xl shadow-slate-950/40 space-y-4 transition-all duration-300 mt-4 hidden lg:block">
           <!-- Tabs Header -->
           <div class="flex items-center justify-between border-b border-slate-800/60 pb-2.5">
@@ -887,7 +887,67 @@
 
         </div> <!-- End of Main Column / flashcard-workspace-left -->
 
-      </div> <!-- End of Unified Centered Workspace Layout / flashcard-workspace-grid -->
+        <!-- Desktop Right Companion Column (lg+) — sticky sidebar panel -->
+        <aside id="companion-right-col" class="hidden lg:flex flex-col gap-4 lg:w-[300px] xl:w-[340px] shrink-0 sticky top-4 self-start">
+          <!-- Companion Panel Right (populated by JS: updateDesktopCompanionVisibility) -->
+          <div id="companion-dashboard-desktop" class="glass border border-slate-800/80 rounded-2xl p-5 shadow-xl shadow-slate-950/40 space-y-4 transition-all duration-300">
+            <!-- Tabs Header -->
+            <div class="flex items-center justify-between border-b border-slate-800/60 pb-2.5">
+              <div class="flex gap-2" id="companion-tabs-desktop" role="tablist">
+                <button id="companion-tab-wordlist-desktop" role="tab" aria-selected="true" aria-controls="companion-panel-wordlist-desktop" class="text-xs font-bold uppercase tracking-wider pb-1 border-b-2 border-indigo-500 text-indigo-400 transition-all cursor-pointer hover:text-indigo-300">
+                  Category Words
+                </button>
+                <button id="companion-tab-stats-desktop" role="tab" aria-selected="false" aria-controls="companion-panel-stats-desktop" class="text-xs font-bold uppercase tracking-wider pb-1 border-b-2 border-transparent text-slate-400 transition-all cursor-pointer hover:text-slate-300">
+                  Session Stats
+                </button>
+              </div>
+              <span class="text-[9px] text-slate-500 font-bold uppercase tracking-widest font-sans">Companion</span>
+            </div>
+
+            <!-- Panel 1: Category Words -->
+            <div id="companion-panel-wordlist-desktop" role="tabpanel" class="space-y-3">
+              <div class="text-[10px] text-slate-400 leading-normal font-semibold">
+                Quick-jump to other words in this category:
+              </div>
+              <div id="companion-word-list-items-desktop" class="max-h-[340px] overflow-y-auto pr-1 space-y-1.5 custom-scrollbar font-display">
+                <!-- Injected dynamically -->
+              </div>
+            </div>
+
+            <!-- Panel 2: Live Statistics -->
+            <div id="companion-panel-stats-desktop" role="tabpanel" class="hidden space-y-4">
+              <div class="grid grid-cols-3 gap-2">
+                <div class="bg-slate-950/40 border border-slate-900 rounded-xl p-3 text-center">
+                  <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block">SRS Mastery</span>
+                  <span id="companion-stat-mastered-desktop" class="text-lg font-black text-emerald-400 font-mono block mt-1">0%</span>
+                  <span class="text-[9px] text-slate-400 block">Stability ≥ 7d</span>
+                </div>
+                <div class="bg-slate-950/40 border border-slate-900 rounded-xl p-3 text-center">
+                  <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block">Due Cards</span>
+                  <span id="companion-stat-due-desktop" class="text-lg font-black text-indigo-400 font-mono block mt-1">0</span>
+                  <span class="text-[9px] text-slate-400 block">Review required</span>
+                </div>
+                <div class="bg-slate-950/40 border border-slate-900 rounded-xl p-3 text-center">
+                  <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block">Reviewed</span>
+                  <span id="companion-stat-reviewed-desktop" class="text-lg font-black text-pink-400 font-mono block mt-1">0</span>
+                  <span class="text-[9px] text-slate-400 block">Today</span>
+                </div>
+              </div>
+              <!-- Retrievability Indicator -->
+              <div class="space-y-1.5 pt-2 border-t border-slate-800/40">
+                <div class="flex justify-between text-[10px] font-bold text-slate-400">
+                  <span class="uppercase tracking-wider">Estimated Retention</span>
+                  <span id="companion-retention-rate-desktop" class="font-mono text-emerald-400">0%</span>
+                </div>
+                <div class="w-full bg-slate-950/50 rounded-full h-1.5 overflow-hidden border border-slate-900/50">
+                  <div id="companion-retention-bar-desktop" class="bg-emerald-500 h-full w-0 transition-all duration-300"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+      </div> <!-- End of Unified Workspace Layout / flashcard-workspace-grid -->
 
     </div> <!-- End of Active Flashcard Workspace / flashcard-workspace-container -->
 
@@ -906,7 +966,7 @@
     </section> <!-- End of flashcards-view -->
 
     <!-- Quiz View Container -->
-    <section id="quiz-view" class="hidden flex-1 flex flex-col w-full max-w-3xl mx-auto pb-12">
+    <section id="quiz-view" class="hidden flex-1 flex flex-col w-full max-w-4xl mx-auto pb-12">
       <!-- Header Block -->
       <div class="mb-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div class="flex flex-col">

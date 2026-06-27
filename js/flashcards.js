@@ -1665,42 +1665,61 @@ export function toggleGrammarMatrix() {
 // ==========================================================
 
 export function initCompanionTabs() {
-  const tabWordlist = document.getElementById('companion-tab-wordlist');
-  const tabStats = document.getElementById('companion-tab-stats');
-  const panelWordlist = document.getElementById('companion-panel-wordlist');
-  const panelStats = document.getElementById('companion-panel-stats');
+  // Wire BOTH the bottom panel (mobile) and the right-column panel (desktop)
+  const pairs = [
+    {
+      tabWordlist: document.getElementById('companion-tab-wordlist'),
+      tabStats: document.getElementById('companion-tab-stats'),
+      panelWordlist: document.getElementById('companion-panel-wordlist'),
+      panelStats: document.getElementById('companion-panel-stats'),
+    },
+    {
+      tabWordlist: document.getElementById('companion-tab-wordlist-desktop'),
+      tabStats: document.getElementById('companion-tab-stats-desktop'),
+      panelWordlist: document.getElementById('companion-panel-wordlist-desktop'),
+      panelStats: document.getElementById('companion-panel-stats-desktop'),
+    }
+  ];
 
-  if (!tabWordlist || !tabStats || !panelWordlist || !panelStats) return;
+  pairs.forEach(({ tabWordlist, tabStats, panelWordlist, panelStats }) => {
+    if (!tabWordlist || !tabStats || !panelWordlist || !panelStats) return;
 
-  const selectTab = (activeTab, inactiveTab, activePanel, inactivePanel) => {
-    activeTab.setAttribute('aria-selected', 'true');
-    activeTab.classList.add('border-indigo-500', 'text-indigo-400');
-    activeTab.classList.remove('border-transparent', 'text-slate-400');
+    const selectTab = (activeTab, inactiveTab, activePanel, inactivePanel) => {
+      activeTab.setAttribute('aria-selected', 'true');
+      activeTab.classList.add('border-indigo-500', 'text-indigo-400');
+      activeTab.classList.remove('border-transparent', 'text-slate-400');
 
-    inactiveTab.setAttribute('aria-selected', 'false');
-    inactiveTab.classList.remove('border-indigo-500', 'text-indigo-400');
-    inactiveTab.classList.add('border-transparent', 'text-slate-400');
+      inactiveTab.setAttribute('aria-selected', 'false');
+      inactiveTab.classList.remove('border-indigo-500', 'text-indigo-400');
+      inactiveTab.classList.add('border-transparent', 'text-slate-400');
 
-    activePanel.classList.remove('hidden');
-    inactivePanel.classList.add('hidden');
-  };
+      activePanel.classList.remove('hidden');
+      inactivePanel.classList.add('hidden');
+    };
 
-  tabWordlist.addEventListener('click', () => {
-    selectTab(tabWordlist, tabStats, panelWordlist, panelStats);
-  });
+    tabWordlist.addEventListener('click', () => {
+      selectTab(tabWordlist, tabStats, panelWordlist, panelStats);
+    });
 
-  tabStats.addEventListener('click', () => {
-    selectTab(tabStats, tabWordlist, panelStats, panelWordlist);
-    updateCompanionStats(); // Dynamic update when switched
+    tabStats.addEventListener('click', () => {
+      selectTab(tabStats, tabWordlist, panelStats, panelWordlist);
+      updateCompanionStats();
+    });
   });
 }
 
 let companionScrollListenerAdded = false;
 
-export function updateCompanionVirtualScroll(force = false) {
-  const container = document.getElementById('companion-word-list-items');
-  const scrollerHeight = document.getElementById('companion-list-scroller-height');
-  const visibleContainer = document.getElementById('companion-list-visible-items');
+/**
+ * Generic virtual-scroll renderer for any companion word-list container.
+ * @param {HTMLElement} container  - The scrollable outer div
+ * @param {string} scrollerHeightId - ID of the invisible height-spacer element
+ * @param {string} visibleContainerId - ID of the absolutely-positioned visible items div
+ * @param {boolean} force - Force a re-render even if range didn't change
+ */
+function updateCompanionVirtualScrollForContainer(container, scrollerHeightId, visibleContainerId, force = false) {
+  const scrollerHeight = document.getElementById(scrollerHeightId);
+  const visibleContainer = document.getElementById(visibleContainerId);
 
   if (!container || !scrollerHeight || !visibleContainer || !state.currentDeck || state.currentDeck.length === 0) return;
 
@@ -1708,29 +1727,21 @@ export function updateCompanionVirtualScroll(force = false) {
   const scrollTop = container.scrollTop;
   const viewportHeight = container.clientHeight || 220;
 
-  // Calculate visible range
   const totalItems = state.currentDeck.length;
   const rawStartIndex = Math.floor(scrollTop / ITEM_HEIGHT);
   const startIndex = Math.max(0, rawStartIndex - 5);
   const endIndex = Math.min(totalItems, Math.ceil((scrollTop + viewportHeight) / ITEM_HEIGHT) + 5);
 
-  // Check if we actually need to re-render (optimization to avoid unnecessary DOM thrashing on small scroll adjustments)
   const currentStart = parseInt(visibleContainer.dataset.startIndex || '-1', 10);
   const currentEnd = parseInt(visibleContainer.dataset.endIndex || '-1', 10);
 
-  if (!force && currentStart === startIndex && currentEnd === endIndex) {
-    return;
-  }
+  if (!force && currentStart === startIndex && currentEnd === endIndex) return;
 
   visibleContainer.dataset.startIndex = startIndex;
   visibleContainer.dataset.endIndex = endIndex;
 
-  // Ensure absolute scroll-height placeholder is correct
   scrollerHeight.style.height = `${totalItems * ITEM_HEIGHT}px`;
-  // Position the visible container absolutely
   visibleContainer.style.top = `${startIndex * ITEM_HEIGHT}px`;
-
-  // Render visible segment
   visibleContainer.innerHTML = '';
 
   for (let idx = startIndex; idx < endIndex; idx++) {
@@ -1738,7 +1749,6 @@ export function updateCompanionVirtualScroll(force = false) {
     const srsInfo = getSRSInfo(card.id);
     const isCurrent = idx === state.currentIndex;
 
-    // Determine deterministic visual states based on category, gender or state
     let genderGlowClass = 'text-slate-400';
     if (card.gender === 'der') genderGlowClass = 'text-blue-400';
     else if (card.gender === 'die') genderGlowClass = 'text-pink-400';
@@ -1746,13 +1756,13 @@ export function updateCompanionVirtualScroll(force = false) {
 
     let cardStateText = '';
     let cardStateColor = '';
-    if (srsInfo.state === 0) { // State.New
+    if (srsInfo.state === 0) {
       cardStateText = 'New';
       cardStateColor = 'text-blue-500 bg-blue-500/10 border border-blue-500/20';
-    } else if (srsInfo.state === 1 || srsInfo.state === 3) { // State.Learning / State.Relearning
+    } else if (srsInfo.state === 1 || srsInfo.state === 3) {
       cardStateText = 'Learning';
       cardStateColor = 'text-rose-500 bg-rose-500/10 border border-rose-500/20';
-    } else { // State.Review
+    } else {
       cardStateText = `S: ${srsInfo.stability.toFixed(1)}d`;
       cardStateColor = srsInfo.stability >= 15
         ? 'text-emerald-500 bg-emerald-500/10 border border-emerald-500/20'
@@ -1760,7 +1770,6 @@ export function updateCompanionVirtualScroll(force = false) {
     }
 
     const itemBtn = document.createElement('button');
-    // Enforce strict fixed height of 48px to align perfectly with our 54px offset (48px item + 6px space-y-1.5)
     itemBtn.className = `w-full h-[48px] flex-shrink-0 min-h-[48px] max-h-[48px] flex items-center justify-between text-left py-2 px-3 rounded-xl border transition-all duration-200 cursor-pointer ${
       isCurrent
         ? 'bg-slate-900/90 border-indigo-500/60 shadow-md shadow-slate-950/40 translate-x-0.5'
@@ -1780,7 +1789,6 @@ export function updateCompanionVirtualScroll(force = false) {
       </div>
     `;
 
-    // Click handler to instantly jump to the card
     itemBtn.addEventListener('click', () => {
       state.currentIndex = idx;
       renderCard();
@@ -1791,57 +1799,66 @@ export function updateCompanionVirtualScroll(force = false) {
   }
 }
 
-export function renderCompanionWordList() {
+/** Backward-compat wrapper for the original mobile-only container */
+export function updateCompanionVirtualScroll(force = false) {
   const container = document.getElementById('companion-word-list-items');
-  if (!container || !state.currentDeck || state.currentDeck.length === 0) return;
+  if (!container) return;
+  updateCompanionVirtualScrollForContainer(
+    container,
+    'companion-word-list-items-scroller-height',
+    'companion-word-list-items-visible-items',
+    force
+  );
+}
 
-  const ITEM_HEIGHT = 54;
-  const totalItems = state.currentDeck.length;
+export function renderCompanionWordList() {
+  // Render into both mobile bottom panel and desktop right-column panel
+  const containerIds = ['companion-word-list-items', 'companion-word-list-items-desktop'];
 
-  // Ensure position relative for absolute children mapping
-  container.style.position = 'relative';
+  containerIds.forEach(containerId => {
+    const container = document.getElementById(containerId);
+    if (!container || !state.currentDeck || state.currentDeck.length === 0) return;
 
-  // Initialize structural components
-  let scrollerHeight = document.getElementById('companion-list-scroller-height');
-  let visibleContainer = document.getElementById('companion-list-visible-items');
+    const ITEM_HEIGHT = 54;
+    const totalItems = state.currentDeck.length;
 
-  if (!scrollerHeight || !visibleContainer) {
-    container.innerHTML = `
-      <div id="companion-list-scroller-height" style="height: ${totalItems * ITEM_HEIGHT}px; width: 1px; pointer-events: none; visibility: hidden;"></div>
-      <div id="companion-list-visible-items" class="space-y-1.5 flex flex-col absolute left-0 right-0" style="top: 0px;"></div>
-    `;
-    scrollerHeight = document.getElementById('companion-list-scroller-height');
-    visibleContainer = document.getElementById('companion-list-visible-items');
-  } else {
-    scrollerHeight.style.height = `${totalItems * ITEM_HEIGHT}px`;
-  }
+    container.style.position = 'relative';
 
-  // Register scroll event listener (only once)
-  if (!companionScrollListenerAdded) {
-    container.addEventListener('scroll', () => {
-      updateCompanionVirtualScroll();
-    });
-    companionScrollListenerAdded = true;
-  }
+    const scrollerId = containerId + '-scroller-height';
+    const visibleId = containerId + '-visible-items';
 
-  // Calculate and trigger initial scroll position to the current active card
-  const targetScrollTop = state.currentIndex * ITEM_HEIGHT - (container.clientHeight - ITEM_HEIGHT) / 2;
-  container.scrollTop = Math.max(0, targetScrollTop);
+    let scrollerHeight = document.getElementById(scrollerId);
+    let visibleContainer = document.getElementById(visibleId);
 
-  // Perform immediate synchronous render of the visible range
-  updateCompanionVirtualScroll(true);
+    if (!scrollerHeight || !visibleContainer) {
+      container.innerHTML = `
+        <div id="${scrollerId}" style="height: ${totalItems * ITEM_HEIGHT}px; width: 1px; pointer-events: none; visibility: hidden;"></div>
+        <div id="${visibleId}" class="space-y-1.5 flex flex-col absolute left-0 right-0" style="top: 0px;"></div>
+      `;
+      scrollerHeight = document.getElementById(scrollerId);
+      visibleContainer = document.getElementById(visibleId);
+    } else {
+      scrollerHeight.style.height = `${totalItems * ITEM_HEIGHT}px`;
+    }
+
+    // Register scroll event listener once per container
+    if (!container.__companionScrollBound) {
+      container.addEventListener('scroll', () => updateCompanionVirtualScrollForContainer(container, scrollerId, visibleId));
+      container.__companionScrollBound = true;
+    }
+
+    // Scroll to current card
+    const targetScrollTop = state.currentIndex * ITEM_HEIGHT - (container.clientHeight - ITEM_HEIGHT) / 2;
+    container.scrollTop = Math.max(0, targetScrollTop);
+
+    // Initial render
+    updateCompanionVirtualScrollForContainer(container, scrollerId, visibleId, true);
+  });
 }
 
 export function updateCompanionStats() {
-  const masteredEl = document.getElementById('companion-stat-mastered');
-  const dueEl = document.getElementById('companion-stat-due');
-  const reviewedEl = document.getElementById('companion-stat-reviewed');
-  const retentionRateEl = document.getElementById('companion-retention-rate');
-  const retentionBarEl = document.getElementById('companion-retention-bar');
-
   if (!state.currentDeck || state.currentDeck.length === 0) return;
 
-  // Calculate mastery (cards in Box 4 or 5) and due counts for the current filtered deck
   let masteredCount = 0;
   let dueCount = 0;
   let totalFSRSRetrievability = 0;
@@ -1851,38 +1868,42 @@ export function updateCompanionStats() {
     const srsInfo = getSRSInfo(card.id);
     if (srsInfo.stability >= 7) masteredCount++;
     if (srsInfo.isDue) dueCount++;
-
-    // Calculate retrievability for retrievability retention rate
-    if (srsInfo.retrievability !== undefined && srsInfo.state !== 0) { // FSRSState.New is 0
+    if (srsInfo.retrievability !== undefined && srsInfo.state !== 0) {
       totalFSRSRetrievability += srsInfo.retrievability;
       fsrsRatedCount++;
     }
   });
 
   const masteryPercent = Math.round((masteredCount / state.currentDeck.length) * 100);
-
-  // Update elements if they exist
-  if (masteredEl) masteredEl.textContent = `${masteryPercent}%`;
-  if (dueEl) dueEl.textContent = dueCount;
-  if (reviewedEl) reviewedEl.textContent = state.session ? state.session.cardsReviewed : 0;
-
-  // Average Retrievability (Retention Rate)
-  const averageRetention = fsrsRatedCount > 0 ? totalFSRSRetrievability / fsrsRatedCount : 0.95; // default starting expectation is 95%
+  const reviewedCount = state.session ? state.session.cardsReviewed : 0;
+  const averageRetention = fsrsRatedCount > 0 ? totalFSRSRetrievability / fsrsRatedCount : 0.95;
   const formattedRetention = Math.round(averageRetention * 100);
 
-  if (retentionRateEl) retentionRateEl.textContent = `${formattedRetention}%`;
-  if (retentionBarEl) {
-    retentionBarEl.style.width = `${formattedRetention}%`;
-    // Color coding based on retention
-    retentionBarEl.className = 'h-full transition-all duration-300 ';
-    if (formattedRetention >= 90) {
-      retentionBarEl.classList.add('bg-emerald-500');
-    } else if (formattedRetention >= 80) {
-      retentionBarEl.classList.add('bg-amber-500');
-    } else {
-      retentionBarEl.classList.add('bg-rose-500');
-    }
-  }
+  // Helper to update a bar element with colour coding
+  const updateBar = (barEl, pct) => {
+    if (!barEl) return;
+    barEl.style.width = `${pct}%`;
+    barEl.className = 'h-full transition-all duration-300 ';
+    if (pct >= 90) barEl.classList.add('bg-emerald-500');
+    else if (pct >= 80) barEl.classList.add('bg-amber-500');
+    else barEl.classList.add('bg-rose-500');
+  };
+
+  // Populate both mobile (bottom) and desktop (right column) panels
+  const suffixes = ['', '-desktop'];
+  suffixes.forEach(s => {
+    const masteredEl  = document.getElementById(`companion-stat-mastered${s}`);
+    const dueEl       = document.getElementById(`companion-stat-due${s}`);
+    const reviewedEl  = document.getElementById(`companion-stat-reviewed${s}`);
+    const rateEl      = document.getElementById(`companion-retention-rate${s}`);
+    const barEl       = document.getElementById(`companion-retention-bar${s}`);
+
+    if (masteredEl)  masteredEl.textContent  = `${masteryPercent}%`;
+    if (dueEl)       dueEl.textContent       = dueCount;
+    if (reviewedEl)  reviewedEl.textContent  = reviewedCount;
+    if (rateEl)      rateEl.textContent      = `${formattedRetention}%`;
+    updateBar(barEl, formattedRetention);
+  });
 }
 
 export function syncAdaptiveLayout() {
@@ -1898,9 +1919,11 @@ export function syncAdaptiveLayout() {
 }
 
 export function updateDesktopCompanionVisibility() {
-  const companion = document.getElementById('companion-dashboard');
-  if (!companion) return;
+  // On desktop, the right aside (companion-right-col) is always shown via lg:flex CSS.
+  // Hide the duplicate bottom companion panel on lg+ so we don't double-render.
+  const bottomCompanion = document.getElementById('companion-dashboard');
+  if (bottomCompanion) {
+    bottomCompanion.classList.add('lg:hidden');
+  }
   syncAdaptiveLayout();
-  companion.classList.remove('lg:hidden');
-  companion.classList.add('lg:block');
 }

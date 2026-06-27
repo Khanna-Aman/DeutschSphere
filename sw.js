@@ -2,7 +2,7 @@
 // Strategy: Cache-first for static assets, stale-while-revalidate for CDN resources.
 // NOTE: This SW only activates on HTTPS origins (GitHub Pages). It cannot run on file://.
 
-const CACHE_VERSION = 'v6.7.0'; // v6.7.0: Bug fixes — CSP formsubmit, quiz image null guard, telemetry unhandledrejection, manifest icon purpose, SW CSS cache miss, state.deck stale ref
+const CACHE_VERSION = 'v6.8.0'; // v6.8.0: Desktop layout 2-col, companion panel, importBackup validation, alert() UX, Tailwind warning
 const STATIC_CACHE = `deutschsphere-static-${CACHE_VERSION}`;
 const DATA_CACHE = `deutschsphere-data-${CACHE_VERSION}`;
 const CDN_CACHE = `deutschsphere-cdn-${CACHE_VERSION}`;
