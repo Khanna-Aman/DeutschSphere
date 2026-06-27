@@ -170,6 +170,7 @@ export const state = {
   hideLearned: safeGetItem('hide_learned', 'false') === 'true',     // Hide learned cards filter state
   isAutoPlaySpeech: safeGetItem('is_autoplay_speech', 'false') === 'true', // Auto-TTS speech on active card transitions
   showImages: safeGetItem('show_images', 'true') !== 'false', // Visual aids render flag
+  showExamples: safeGetItem('show_examples', 'true') !== 'false', // Example sentences render flag
   sfxVolume: parseFloat(safeGetItem('sfx_volume', '0.5')), // SFX Volume (0.0 to 1.0)
   audioTone: safeGetItem('audio_tone', 'synth'), // SFX sound tone ('synth' or 'acoustic')
   learnedCards: new Set(), // Set of active level-scoped learned card IDs
