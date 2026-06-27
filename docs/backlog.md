@@ -2,7 +2,7 @@
 
 This backlog tracks implemented features, their technical specifications, and outstanding tasks for the multi-level (A1, A2, B1) German vocabulary flashcard application.
 
-> Last updated: 2026-06-22
+> Last updated: 2026-06-27
 
 ---
 
@@ -12,7 +12,7 @@ This backlog tracks implemented features, their technical specifications, and ou
 - **Hash-Based SPA Routing**: The app uses `window.location.hash` for client-side routing across 7 views: `#/` (flashcards), `#/quiz`, `#/adventure`, `#/weaver`, `#/cheatcodes`, `#/stats`, `#/immersion`.
 - **Relative Path Data Loading**: Vocabulary is fetched dynamically from `./${level}/wordlist.json` where `${level}` is `"a1"`, `"a2"`, or `"b1"`.
 - **Default Level**: A2 (hardcoded in HTML `<select>`, overridden by `localStorage.current_level` on return visits).
-- **ES6 Module Architecture**: Application logic split across 9 modules in `js/` directory, loaded via `<script type="module">`.
+- **ES6 Module Architecture**: Application logic split across 17 modules in `js/` directory, loaded via `<script type="module">`.
 
 ### Vocabulary Entry JSON Schema
 Every word entry conforms to the following structure (actual field names from codebase):
