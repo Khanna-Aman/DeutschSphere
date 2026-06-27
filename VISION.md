@@ -29,6 +29,7 @@ DeutschSphere is designed to maximize vocabulary acquisition through distraction
 | **Sync & Backup Sync** | **Active** | Base64-compressed local IndexedDB profile copy/paste backup and restore. |
 | **Developer Feedback Form** | **Active** | Zero-cost serverless FormSubmit integration sending user feedback direct to developer email. |
 | **Adaptive Layout & Safe-Area** | **Active** | Responsive single-column card view on all screens with Android navigation bar safe-area insets. |
+| **Card View Preferences** | **Active** | Persistent settings drawer toggles for Fast Read, Autoplay, Illustrations, and Example Sentences. |
 | **Visual Assets** | **Active** | High-fidelity WebP visual aids (<10KB) completed for A1 (640/640) and A2 (1,142/1,142) entries. |
 
 ---

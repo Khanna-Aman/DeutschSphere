@@ -14,7 +14,7 @@
 
 ### 1. Spaced Repetition Engine (FSRS-5)
 Powered by a zero-dependency, pure client-side port of the **Free Spaced Repetition Scheduler (FSRS-5)**. It tracks individual word stability ($S$), difficulty ($D$), and retrievability ($R$) curves across **3,921 words**, outperforming traditional SM-2 algorithms by 20–30%.
-* Navigated via fluid mobile swiping or desktop hotkeys (`1-4` for review grading, `Space` to flip, `Enter` to submit).
+* Navigated via pure card navigation swiping (swipe left for next card, swipe right for previous card) or desktop hotkeys (`1-4` for review grading, `Space` to flip, `Enter` to submit).
 * Dynamic glassmorphic panels adapt with deterministic noun-gender glows: 🔵 `der` (masculine), 🔴 `die` (feminine), 🟢 `das` (neuter), and 🟣 neutral/other.
 
 ### 2. Phonetik-Spiegel (Pronunciation Trainer)
@@ -49,7 +49,7 @@ Direct communication pipeline embedded in the client UI.
 ### 8. Adaptive Widescreen & Mobile Safe-Area Layouts
 Optimized display architecture across all viewport dimensions.
 * **Desktop Zero-Scroll Layout**: Automatically aligns German cards alongside revealed English meanings side-by-side on laptops/desktops so users never have to scroll.
-* **Mobile Safe-Area Insets**: Accounts for Android navigation bars and OS gesture handles (`viewport-fit=cover` & `env(safe-area-inset-bottom)`) to prevent element cutoff.
+* **Mobile Safe-Area Insets**: Accounts for Android navigation bars and OS gesture handles (`viewport-fit=cover` & `env(safe-area-inset-bottom)`) to prevent element cutoff. Includes persistent preference toggles for Fast Read, Autoplay, Illustrations, and Example Sentences.
 
 ---
 
@@ -78,8 +78,9 @@ We cover **3,921 ground-truth entries** verified against official Goethe-Institu
 | `Space` | Flip card / Open accordion | `V` | Play word TTS |
 | `→` / `↓` | Next card | `A` | Toggle auto-play TTS |
 | `←` / `↑` | Previous card | `B` | Toggle card visual assets |
-| `1` - `4` | FSRS quality grades | `Esc` | Close panels / Exit quiz |
-| `L` | Toggle learned status | `?` | Toggle keyboard shortcuts |
+| `1` - `4` | FSRS quality grades | `E` | Toggle example sentences |
+| `L` | Toggle learned status | `Esc` | Close panels / Exit quiz |
+| `S` | Toggle card shuffle | `?` | Toggle keyboard shortcuts |
 
 ---
 
