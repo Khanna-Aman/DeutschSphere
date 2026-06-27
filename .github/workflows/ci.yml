@@ -95,12 +95,22 @@ jobs:
 
       - name: Validate wordlist schemas
         run: |
-          python3 -c "
+          python3 - <<'EOF'
           import json, sys
           
           REQUIRED_FIELDS = {'german', 'english', 'word_class', 'gender', 'plural', 'theme', 'example_de', 'example_en', 'image', 'id'}
-          VALID_GENDERS = {'der', 'die', 'das', None}
-          VALID_WORD_CLASSES = {'Nomen', 'Verb', 'Adjektiv', 'Andere'}
+          VALID_WORD_CLASSES = {
+              'Nomen', 'Verb', 'Adjektiv', 'Adverb', 'Pronomen', 'Präposition', 
+              'Konjunktion', 'Andere', 'Andere / Nomen', 'Interjektion', 'Numerale'
+          }
+          
+          def is_valid_gender(g):
+              if g is None:
+                  return True
+              if not isinstance(g, str):
+                  return False
+              parts = [part.strip() for part in g.split('/')]
+              return len(parts) > 0 and all(part in {'der', 'die', 'das'} for part in parts)
           
           errors = []
           for level in ['a1', 'a2', 'b1']:
@@ -115,11 +125,15 @@ jobs:
                   for i, entry in enumerate(data):
                       missing = REQUIRED_FIELDS - set(entry.keys())
                       if missing:
-                          errors.append(f'{path}[{i}] id={entry.get(\"id\",\"?\")}: Missing fields: {missing}')
-                      if entry.get('gender') not in VALID_GENDERS:
-                          errors.append(f'{path}[{i}] id={entry.get(\"id\",\"?\")}: Invalid gender: {entry.get(\"gender\")}')
-                      if entry.get('word_class') not in VALID_WORD_CLASSES:
-                          errors.append(f'{path}[{i}] id={entry.get(\"id\",\"?\")}: Invalid word_class: {entry.get(\"word_class\")}')
+                          errors.append(f'{path}[{i}] id={entry.get("id","?")}: Missing fields: {missing}')
+                      
+                      gender = entry.get('gender')
+                      if not is_valid_gender(gender):
+                          errors.append(f'{path}[{i}] id={entry.get("id","?")}: Invalid gender: {gender}')
+                          
+                      word_class = entry.get('word_class')
+                      if word_class not in VALID_WORD_CLASSES:
+                          errors.append(f'{path}[{i}] id={entry.get("id","?")}: Invalid word_class: {word_class}')
               except Exception as e:
                   errors.append(f'{path}: Failed to parse — {e}')
           
@@ -132,7 +146,7 @@ jobs:
               sys.exit(1)
           else:
               print('\n✅ All wordlist schemas valid')
-          "
+          EOF
 
   # ── Stage 3: Deploy to GitHub Pages ──
   deploy:
