@@ -274,6 +274,8 @@ export const elements = {
   autoplayText: document.getElementById('autoplay-text'),
   toggleImagesBtn: document.getElementById('toggle-images-btn'),
   toggleImagesText: document.getElementById('toggle-images-text'),
+  toggleExamplesBtn: document.getElementById('toggle-examples-btn'),
+  toggleExamplesText: document.getElementById('toggle-examples-text'),
   resetProgressBtnMain: document.getElementById('reset-progress-btn-main'),
   deckPrefsToggleBtn: document.getElementById('deck-prefs-toggle-btn'),
   deckPrefsDropdown: document.getElementById('deck-prefs-dropdown'),
