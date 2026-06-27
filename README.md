@@ -65,7 +65,9 @@ We cover **3,921 ground-truth entries** verified against official Goethe-Institu
 | **Total** | **3,921** | Goethe-Institut A1-B1 | **100% Pure Client-Side Execution** |
 
 > [!IMPORTANT]
-> **The Zero-Inference Clause**: All vocabulary data is verified strictly against the Goethe-Institut wordlists via NotebookLM. If conjugation tables, plurals, or contextual examples are not present in our verified source sheets, they are assigned to `null`. We strictly forbid generating speculative linguistic parameters or synthesizing placeholder data using generic LLM weights.
+> **The Zero-Inference Clause & Grounding**: All vocabulary data is verified strictly against official Goethe-Institut curricula using **Google NotebookLM** to ensure absolute linguistic truth. If conjugation tables, plurals, or contextual examples are not present in our source data sheets, they are assigned to `null`. We strictly forbid generating speculative translations or synthesizing placeholder grammar using generic LLM weights.
+>
+> **Curated Visual Assets**: The premium 3D illustrations for the active vocabulary lists were generated using Google Vertex AI's **Imagen 3** model, compressed to under 10KB each to maintain zero-latency offline loading.
 
 ---
 
