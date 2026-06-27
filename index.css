@@ -721,6 +721,101 @@ body.theme-weimar .text-pink-500 {
 }
 
 
+/* ==============================================================================
+   Theme-Specific Flashcard Gender Glow Specificity Overrides
+   Ensures blue (der), pink (die), and green (das) card outlines are visible 
+   across all themes by overriding specificity of ID selectors.
+   ============================================================================== */
+
+/* 🌌 Cyberpunk Theme Flashcard Glow overrides */
+body.theme-cyberpunk #flashcard.card-glow-der {
+  border: 3px solid rgba(6, 182, 212, 0.85) !important;
+  box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.4), 0 0 20px rgba(6, 182, 212, 0.25) !important;
+  background: linear-gradient(180deg, rgba(6, 182, 212, 0.15) 0%, rgba(10, 10, 18, 0.75) 100%) !important;
+}
+body.theme-cyberpunk #flashcard.card-glow-die {
+  border: 3px solid rgba(236, 72, 153, 0.85) !important;
+  box-shadow: 0 10px 30px -10px rgba(236, 72, 153, 0.4), 0 0 20px rgba(236, 72, 153, 0.25) !important;
+  background: linear-gradient(180deg, rgba(236, 72, 153, 0.15) 0%, rgba(10, 10, 18, 0.75) 100%) !important;
+}
+body.theme-cyberpunk #flashcard.card-glow-das {
+  border: 3px solid rgba(16, 185, 129, 0.85) !important;
+  box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.4), 0 0 20px rgba(16, 185, 129, 0.25) !important;
+  background: linear-gradient(180deg, rgba(16, 185, 129, 0.15) 0%, rgba(10, 10, 18, 0.75) 100%) !important;
+}
+body.theme-cyberpunk #flashcard.card-glow-neutral {
+  border: 1px solid rgba(168, 85, 247, 0.5) !important;
+  box-shadow: 0 10px 30px -10px rgba(168, 85, 247, 0.2), 0 0 15px rgba(168, 85, 247, 0.1) !important;
+  background: rgba(10, 10, 18, 0.75) !important;
+}
+
+/* 🌲 Schwarzwald Theme Flashcard Glow overrides */
+body.theme-schwarzwald #flashcard.card-glow-der {
+  border: 3px solid rgba(59, 130, 246, 0.75) !important;
+  box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.35), 0 0 20px rgba(59, 130, 246, 0.2) !important;
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.15) 0%, rgba(8, 16, 11, 0.75) 100%) !important;
+}
+body.theme-schwarzwald #flashcard.card-glow-die {
+  border: 3px solid rgba(236, 72, 153, 0.75) !important;
+  box-shadow: 0 10px 30px -10px rgba(236, 72, 153, 0.35), 0 0 20px rgba(236, 72, 153, 0.2) !important;
+  background: linear-gradient(180deg, rgba(236, 72, 153, 0.15) 0%, rgba(8, 16, 11, 0.75) 100%) !important;
+}
+body.theme-schwarzwald #flashcard.card-glow-das {
+  border: 3px solid rgba(16, 185, 129, 0.8) !important;
+  box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.35), 0 0 20px rgba(16, 185, 129, 0.2) !important;
+  background: linear-gradient(180deg, rgba(16, 185, 129, 0.15) 0%, rgba(8, 16, 11, 0.75) 100%) !important;
+}
+body.theme-schwarzwald #flashcard.card-glow-neutral {
+  border: 1px solid rgba(16, 185, 129, 0.3) !important;
+  box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.15) !important;
+  background: rgba(8, 16, 11, 0.75) !important;
+}
+
+/* 🍺 Oktoberfest Theme Flashcard Glow overrides */
+body.theme-oktoberfest #flashcard.card-glow-der {
+  border: 3px solid rgba(59, 130, 246, 0.75) !important;
+  box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.35), 0 0 20px rgba(59, 130, 246, 0.2) !important;
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.15) 0%, rgba(22, 10, 4, 0.75) 100%) !important;
+}
+body.theme-oktoberfest #flashcard.card-glow-die {
+  border: 3px solid rgba(236, 72, 153, 0.75) !important;
+  box-shadow: 0 10px 30px -10px rgba(236, 72, 153, 0.35), 0 0 20px rgba(236, 72, 153, 0.2) !important;
+  background: linear-gradient(180deg, rgba(236, 72, 153, 0.15) 0%, rgba(22, 10, 4, 0.75) 100%) !important;
+}
+body.theme-oktoberfest #flashcard.card-glow-das {
+  border: 3px solid rgba(16, 185, 129, 0.75) !important;
+  box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.35), 0 0 20px rgba(16, 185, 129, 0.2) !important;
+  background: linear-gradient(180deg, rgba(16, 185, 129, 0.15) 0%, rgba(22, 10, 4, 0.75) 100%) !important;
+}
+body.theme-oktoberfest #flashcard.card-glow-neutral {
+  border: 1px solid rgba(217, 119, 6, 0.4) !important;
+  box-shadow: 0 10px 30px -10px rgba(217, 119, 6, 0.15) !important;
+  background: rgba(22, 10, 4, 0.75) !important;
+}
+
+/* 🏛️ Weimar Classic (Light Theme) Flashcard Glow overrides */
+body.theme-weimar #flashcard.card-glow-der {
+  border: 3px solid rgba(59, 130, 246, 0.8) !important;
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.15), 0 4px 10px rgba(59, 130, 246, 0.1) !important;
+  background: linear-gradient(180deg, rgba(59, 130, 246, 0.05) 0%, rgba(255, 255, 255, 0.95) 100%) !important;
+}
+body.theme-weimar #flashcard.card-glow-die {
+  border: 3px solid rgba(236, 72, 153, 0.8) !important;
+  box-shadow: 0 10px 25px rgba(236, 72, 153, 0.15), 0 4px 10px rgba(236, 72, 153, 0.1) !important;
+  background: linear-gradient(180deg, rgba(236, 72, 153, 0.05) 0%, rgba(255, 255, 255, 0.95) 100%) !important;
+}
+body.theme-weimar #flashcard.card-glow-das {
+  border: 3px solid rgba(16, 185, 129, 0.8) !important;
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.15), 0 4px 10px rgba(16, 185, 129, 0.1) !important;
+  background: linear-gradient(180deg, rgba(16, 185, 129, 0.05) 0%, rgba(255, 255, 255, 0.95) 100%) !important;
+}
+body.theme-weimar #flashcard.card-glow-neutral {
+  border: 1px solid rgba(148, 163, 184, 0.4) !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05) !important;
+  background: rgba(255, 255, 255, 0.88) !important;
+}
+
+
 /* --- PHONETIK-SPIEGEL (PHONETIC MIRROR) PREMIUM STYLES --- */
 
 #phonetic-mirror-panel {
