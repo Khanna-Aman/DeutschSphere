@@ -1881,11 +1881,15 @@ export function updateCompanionStats() {
 }
 
 export function syncAdaptiveLayout() {
-  const container = elements.workspaceContainer;
-  const grid = elements.workspaceGrid;
-  if (!container || !grid) return;
-  container.classList.remove('workspace-split-active');
-  grid.classList.remove('workspace-split-active');
+  const displayArea = document.getElementById('card-display-area');
+  if (!displayArea) return;
+  
+  const isRevealed = state.isAccordionOpen || (state.phonetic && state.phonetic.isOpen);
+  if (isRevealed) {
+    displayArea.classList.add('lg:grid', 'lg:grid-cols-2', 'lg:gap-6', 'lg:items-start', 'lg:space-y-0');
+  } else {
+    displayArea.classList.remove('lg:grid', 'lg:grid-cols-2', 'lg:gap-6', 'lg:items-start', 'lg:space-y-0');
+  }
 }
 
 export function updateDesktopCompanionVisibility() {

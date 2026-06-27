@@ -593,188 +593,186 @@
               <i class="fa-solid fa-rotate text-[10px]"></i>
               <span id="trainer-loop-text">Loop off</span>
             </button>
-          </div>
-        </div>
+        <!-- The Core Card Display Area (Adapts to side-by-side grid on desktop when revealed) -->
+        <div id="card-display-area" class="w-full space-y-4 transition-all duration-300">
+          <!-- The Core Card Element (M6: aria-live for screen reader announcements) -->
+          <div id="flashcard" role="region" aria-live="polite" aria-label="Current flashcard" class="glass border rounded-2xl p-6 md:py-6 md:px-10 min-h-[220px] sm:min-h-[240px] md:min-h-[280px] flex flex-col justify-between cursor-pointer transition-all duration-300 select-none relative group overflow-hidden card-glow-neutral">
+            <!-- Subtle Glow Overlay on hover -->
+            <div class="absolute inset-0 bg-gradient-to-b from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
 
-        
-        <!-- The Core Card Element (M6: aria-live for screen reader announcements) -->
-        <div id="flashcard" role="region" aria-live="polite" aria-label="Current flashcard" class="glass border rounded-2xl p-6 md:py-6 md:px-10 min-h-[220px] sm:min-h-[240px] md:min-h-[280px] flex flex-col justify-between cursor-pointer transition-all duration-300 select-none relative group overflow-hidden card-glow-neutral">
-          <!-- Subtle Glow Overlay on hover -->
-          <div class="absolute inset-0 bg-gradient-to-b from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
-
-          <!-- Top metadata inside card (e.g. Word class / Gender Badge) -->
-          <div class="flex items-center justify-between w-full z-10">
-            <span id="card-index-indicator" class="text-xs font-semibold text-slate-500 font-mono tracking-wider">0 / 0</span>
-            <div id="card-metadata-badges" class="flex items-center gap-2">
-              <!-- Render word class, gender or plural badges here -->
-            </div>
-          </div>
-
-          <!-- Main German Word -->
-          <div class="flex-1 flex flex-col items-center justify-center py-6 text-center z-10 relative">
-            <!-- Dynamic Twemoji visual asset container -->
-            <div id="card-image-container" class="w-full h-32 md:h-40 flex items-center justify-center mb-6 transition-all duration-300 hover:scale-[1.05]">
-              <img id="card-image" src="" alt="Illustration" class="max-h-full max-w-full object-contain pointer-events-none drop-shadow-md transition-opacity duration-300" />
+            <!-- Top metadata inside card (e.g. Word class / Gender Badge) -->
+            <div class="flex items-center justify-between w-full z-10">
+              <span id="card-index-indicator" class="text-xs font-semibold text-slate-500 font-mono tracking-wider">0 / 0</span>
+              <div id="card-metadata-badges" class="flex items-center gap-2">
+                <!-- Render word class, gender or plural badges here -->
+              </div>
             </div>
 
-            <div class="flex flex-wrap items-baseline justify-center gap-3 relative">
-              <h2 id="card-word" class="text-3xl sm:text-4xl md:text-5xl font-black font-display tracking-tight text-white drop-shadow-md group-hover:scale-[1.02] transition-transform duration-300 leading-tight notranslate" aria-live="polite" role="status">Word</h2>
-              <button id="suffix-helper-trigger" aria-label="Show Grammar Tip" class="hidden p-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 hover:bg-amber-500/20 active:scale-95 transition-all text-xs z-20" title="Toggle Grammar Panel">
-                <i class="fa-solid fa-lightbulb"></i>
-              </button>
-              <span id="card-pronunciation" class="text-base sm:text-lg md:text-xl text-slate-400 font-mono italic tracking-wide hidden"></span>
-            </div>
+            <!-- Main German Word -->
+            <div class="flex-1 flex flex-col items-center justify-center py-6 text-center z-10 relative">
+              <!-- Dynamic Twemoji visual asset container -->
+              <div id="card-image-container" class="w-full h-32 md:h-40 flex items-center justify-center mb-6 transition-all duration-300 hover:scale-[1.05]">
+                <img id="card-image" src="" alt="Illustration" class="max-h-full max-w-full object-contain pointer-events-none drop-shadow-md transition-opacity duration-300" />
+              </div>
 
-            <!-- Inline Suffix Helper Drawer (CSS Grid auto-height and slide-in transition) -->
-            <div id="suffix-drawer" class="w-full max-w-sm mt-3 bg-amber-500/10 border border-amber-500/20 rounded-xl overflow-hidden hidden transition-all duration-300 pointer-events-none relative z-20 mx-auto">
-              <div class="p-3.5 space-y-1.5 text-left">
-                <div class="flex items-center justify-between">
-                  <div class="flex items-center gap-2 text-amber-400">
-                    <i class="fa-solid fa-lightbulb text-[10px] animate-pulse"></i>
-                    <span class="text-[9px] font-extrabold uppercase tracking-widest">Grammar Rule</span>
+              <div class="flex flex-wrap items-baseline justify-center gap-3 relative">
+                <h2 id="card-word" class="text-3xl sm:text-4xl md:text-5xl font-black font-display tracking-tight text-white drop-shadow-md group-hover:scale-[1.02] transition-transform duration-300 leading-tight notranslate" aria-live="polite" role="status">Word</h2>
+                <button id="suffix-helper-trigger" aria-label="Show Grammar Tip" class="hidden p-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 hover:bg-amber-500/20 active:scale-95 transition-all text-xs z-20" title="Toggle Grammar Panel">
+                  <i class="fa-solid fa-lightbulb"></i>
+                </button>
+                <span id="card-pronunciation" class="text-base sm:text-lg md:text-xl text-slate-400 font-mono italic tracking-wide hidden"></span>
+              </div>
+
+              <!-- Inline Suffix Helper Drawer (CSS Grid auto-height and slide-in transition) -->
+              <div id="suffix-drawer" class="w-full max-w-sm mt-3 bg-amber-500/10 border border-amber-500/20 rounded-xl overflow-hidden hidden transition-all duration-300 pointer-events-none relative z-20 mx-auto">
+                <div class="p-3.5 space-y-1.5 text-left">
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2 text-amber-400">
+                      <i class="fa-solid fa-lightbulb text-[10px] animate-pulse"></i>
+                      <span class="text-[9px] font-extrabold uppercase tracking-widest">Grammar Rule</span>
+                    </div>
+                    <span id="suffix-drawer-badge" class="px-1.5 py-0.5 bg-amber-500/20 text-amber-300 text-[8px] font-extrabold rounded uppercase tracking-wider">DIE (Feminin)</span>
                   </div>
-                  <span id="suffix-drawer-badge" class="px-1.5 py-0.5 bg-amber-500/20 text-amber-300 text-[8px] font-extrabold rounded uppercase tracking-wider">DIE (Feminin)</span>
+                  <h4 id="suffix-drawer-title" class="text-xs font-bold text-slate-200">Endung: -ung</h4>
+                  <p id="suffix-drawer-rule" class="text-[11px] text-slate-400 leading-normal font-medium">Substantive mit der Endung „-ung“ leiten sich meist von Verben ab und sind immer feminin.</p>
                 </div>
-                <h4 id="suffix-drawer-title" class="text-xs font-bold text-slate-200">Endung: -ung</h4>
-                <p id="suffix-drawer-rule" class="text-[11px] text-slate-400 leading-normal font-medium">Substantive mit der Endung „-ung“ leiten sich meist von Verben ab und sind immer feminin.</p>
+              </div>
+              <!-- Audio Controls Container -->
+              <div class="flex items-center gap-3 mt-4 z-20">
+                <!-- Audio Speaker Button -->
+                <button id="speak-btn" aria-label="Speak word" class="p-2.5 rounded-full bg-slate-900/80 border border-slate-800 hover:border-indigo-500 hover:text-indigo-400 text-slate-400 hover:bg-indigo-950/20 active:scale-95 transition-all shadow-md flex items-center justify-center" title="Aussprache anhören (Tastaturkürzel: V)">
+                  <i class="fa-solid fa-volume-high text-sm"></i>
+                </button>
+                <!-- Phonetic Mirror Button -->
+                <button id="phonetic-btn" aria-label="Open Phonetic Mirror" class="p-2.5 rounded-full bg-slate-900/80 border border-slate-800 hover:border-pink-500 hover:text-pink-400 text-slate-400 hover:bg-pink-950/20 active:scale-95 transition-all shadow-md flex items-center justify-center" title="Aussprache trainieren (Phonetik-Spiegel)">
+                  <i class="fa-solid fa-microphone text-sm"></i>
+                </button>
               </div>
             </div>
-            <!-- Audio Controls Container -->
-            <div class="flex items-center gap-3 mt-4 z-20">
-              <!-- Audio Speaker Button -->
-              <button id="speak-btn" aria-label="Speak word" class="p-2.5 rounded-full bg-slate-900/80 border border-slate-800 hover:border-indigo-500 hover:text-indigo-400 text-slate-400 hover:bg-indigo-950/20 active:scale-95 transition-all shadow-md flex items-center justify-center" title="Aussprache anhören (Tastaturkürzel: V)">
-                <i class="fa-solid fa-volume-high text-sm"></i>
+
+
+          </div>
+
+          <!-- Phonetic Mirror Panel (Phonetik-Spiegel) -->
+          <div id="phonetic-mirror-panel" class="accordion-content">
+            <div class="glass border border-pink-500/35 rounded-2xl p-6 md:p-8 space-y-6 shadow-xl shadow-pink-950/5 relative overflow-hidden">
+              
+              <!-- Close Button -->
+              <button id="phonetic-close-btn" aria-label="Close Phonetic Mirror" class="absolute top-4 right-4 z-10 p-2 text-slate-400 hover:text-white transition-colors" title="Schließen | Close">
+                <i class="fa-solid fa-xmark text-sm"></i>
               </button>
-              <!-- Phonetic Mirror Button -->
-              <button id="phonetic-btn" aria-label="Open Phonetic Mirror" class="p-2.5 rounded-full bg-slate-900/80 border border-slate-800 hover:border-pink-500 hover:text-pink-400 text-slate-400 hover:bg-pink-950/20 active:scale-95 transition-all shadow-md flex items-center justify-center" title="Aussprache trainieren (Phonetik-Spiegel)">
-                <i class="fa-solid fa-microphone text-sm"></i>
-              </button>
+
+              <!-- Header -->
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-400 shadow-lg shadow-pink-500/10">
+                  <i class="fa-solid fa-microphone"></i>
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-lg text-white">Phonetik-Spiegel</h3>
+                  <h3 class="font-display font-bold text-lg text-white">Pronunciation Trainer</h3>
+                  <p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Real-Time Pronunciation Coach</p>
+                </div>
+              </div>
+
+              <!-- Double Spectrogram Visualizer -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Native TTS wave -->
+                <div class="bg-slate-950/60 border border-slate-900 rounded-xl p-3 flex flex-col space-y-2">
+                  <div class="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                    <span>Model (TTS Voice)</span>
+                    <span class="text-indigo-400">Reference</span>
+                  </div>
+                  <div class="h-16 relative overflow-hidden rounded-lg bg-slate-950 border border-slate-900/50 flex items-center justify-center">
+                    <canvas id="phonetic-spec-native" class="absolute inset-0 w-full h-full"></canvas>
+                    <span id="native-spec-hint" class="text-[10px] text-slate-600 font-semibold uppercase tracking-widest z-10">Reference Spectrogram</span>
+                  </div>
+                </div>
+
+                <!-- Learner Recorded Wave -->
+                <div class="bg-slate-950/60 border border-slate-900 rounded-xl p-3 flex flex-col space-y-2">
+                  <div class="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                    <span>Your Voice</span>
+                    <span class="text-pink-400" id="learner-spec-status">Inactive</span>
+                  </div>
+                  <div class="h-16 relative overflow-hidden rounded-lg bg-slate-950 border border-slate-900/50 flex items-center justify-center">
+                    <canvas id="phonetic-spec-learner" class="absolute inset-0 w-full h-full"></canvas>
+                    <span id="learner-spec-hint" class="text-[10px] text-slate-600 font-semibold uppercase tracking-widest z-10">Your Spectrogram</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Central Control & Haptics Area -->
+              <div class="flex flex-col items-center justify-center py-2 space-y-4">
+                <!-- Huge glowing Microphone Record Button -->
+                <button id="phonetic-record-btn" aria-label="Record pronunciation" class="w-14 h-14 rounded-full bg-slate-900 border border-pink-500/30 hover:border-pink-500 text-pink-400 hover:text-white flex items-center justify-center transition-all duration-300 shadow-lg shadow-pink-500/5 hover:shadow-pink-500/20 active:scale-95 group relative" title="Start/Stop Recording">
+                  <i class="fa-solid fa-microphone text-lg group-hover:scale-110 transition-transform" id="phonetic-record-icon"></i>
+                  <span id="phonetic-pulse-ring" class="absolute inset-0 rounded-full border border-pink-500/40 animate-ping opacity-0"></span>
+                </button>
+                
+                <!-- Status and hints -->
+                <div class="text-center space-y-1">
+                  <p id="phonetic-status-msg" aria-live="polite" class="text-xs font-semibold text-slate-300">Click the microphone and speak the German word clearly.</p>
+                  <p class="text-[10px] text-slate-500 font-medium italic">Click the microphone, wait for the pulse, and speak clearly.</p>
+                </div>
+              </div>
+
+              <!-- Scoring & Character Matching Panel -->
+              <div id="phonetic-evaluation-panel" class="bg-slate-950/50 border border-slate-900/80 rounded-xl p-4 space-y-3 hidden animate-slide-in-right">
+                <!-- Score Badge -->
+                <div class="flex items-center justify-between border-b border-slate-900 pb-2">
+                  <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400">Übereinstimmung | Accuracy Match</span>
+                  <span id="phonetic-score-badge" class="px-2 py-0.5 bg-emerald-500/10 border border-emerald-500/35 text-emerald-400 text-xs font-black rounded font-mono">0% Match</span>
+                </div>
+
+                <!-- Word highlight output -->
+                <div class="flex flex-wrap items-center justify-center gap-2 py-1 text-center font-display text-lg font-extrabold" id="phonetic-matched-chars">
+                  <!-- Highlighted tokens go here -->
+                </div>
+
+                <!-- Feedback and Tip message -->
+                <p id="phonetic-feedback-msg" class="text-xs text-slate-400 leading-relaxed text-center font-medium"></p>
+                
+                <!-- Anatomical Mouth Positioning Guides (Phonemes) -->
+                <div id="phonetic-mouth-guide-container" class="hidden"></div>
+              </div>
+
             </div>
           </div>
 
 
-        </div>
-
-        <!-- Phonetic Mirror Panel (Phonetik-Spiegel) -->
-        <div id="phonetic-mirror-panel" class="accordion-content">
-          <div class="glass border border-pink-500/35 rounded-2xl p-6 md:p-8 space-y-6 shadow-xl shadow-pink-950/5 relative overflow-hidden">
-            
-            <!-- Close Button -->
-            <button id="phonetic-close-btn" aria-label="Close Phonetic Mirror" class="absolute top-4 right-4 z-10 p-2 text-slate-400 hover:text-white transition-colors" title="Schließen | Close">
-              <i class="fa-solid fa-xmark text-sm"></i>
-            </button>
-
-            <!-- Header -->
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-400 shadow-lg shadow-pink-500/10">
-                <i class="fa-solid fa-microphone"></i>
-              </div>
-              <div>
-                <h3 class="font-display font-bold text-lg text-white">Phonetik-Spiegel</h3>
-                <h3 class="font-display font-bold text-lg text-white">Pronunciation Trainer</h3>
-                <p class="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Real-Time Pronunciation Coach</p>
-              </div>
-            </div>
-
-            <!-- Double Spectrogram Visualizer -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <!-- Native TTS wave -->
-              <div class="bg-slate-950/60 border border-slate-900 rounded-xl p-3 flex flex-col space-y-2">
-                <div class="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-slate-400">
-                  <span>Model (TTS Voice)</span>
-                  <span class="text-indigo-400">Reference</span>
-                </div>
-                <div class="h-16 relative overflow-hidden rounded-lg bg-slate-950 border border-slate-900/50 flex items-center justify-center">
-                  <canvas id="phonetic-spec-native" class="absolute inset-0 w-full h-full"></canvas>
-                  <span id="native-spec-hint" class="text-[10px] text-slate-600 font-semibold uppercase tracking-widest z-10">Reference Spectrogram</span>
-                </div>
-              </div>
-
-              <!-- Learner Recorded Wave -->
-              <div class="bg-slate-950/60 border border-slate-900 rounded-xl p-3 flex flex-col space-y-2">
-                <div class="flex items-center justify-between text-[10px] font-bold uppercase tracking-wider text-slate-400">
-                  <span>Your Voice</span>
-                  <span class="text-pink-400" id="learner-spec-status">Inactive</span>
-                </div>
-                <div class="h-16 relative overflow-hidden rounded-lg bg-slate-950 border border-slate-900/50 flex items-center justify-center">
-                  <canvas id="phonetic-spec-learner" class="absolute inset-0 w-full h-full"></canvas>
-                  <span id="learner-spec-hint" class="text-[10px] text-slate-600 font-semibold uppercase tracking-widest z-10">Your Spectrogram</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Central Control & Haptics Area -->
-            <div class="flex flex-col items-center justify-center py-2 space-y-4">
-              <!-- Huge glowing Microphone Record Button -->
-              <button id="phonetic-record-btn" aria-label="Record pronunciation" class="w-14 h-14 rounded-full bg-slate-900 border border-pink-500/30 hover:border-pink-500 text-pink-400 hover:text-white flex items-center justify-center transition-all duration-300 shadow-lg shadow-pink-500/5 hover:shadow-pink-500/20 active:scale-95 group relative" title="Start/Stop Recording">
-                <i class="fa-solid fa-microphone text-lg group-hover:scale-110 transition-transform" id="phonetic-record-icon"></i>
-                <span id="phonetic-pulse-ring" class="absolute inset-0 rounded-full border border-pink-500/40 animate-ping opacity-0"></span>
-              </button>
+          <!-- Accordion Reveal Element (Meaning and Sentences) -->
+          <div id="accordion-reveal" class="accordion-content">
+            <div class="glass border border-slate-800/80 rounded-2xl p-6 md:p-8 space-y-6 shadow-xl shadow-slate-950/40">
               
-              <!-- Status and hints -->
-              <div class="text-center space-y-1">
-                <p id="phonetic-status-msg" aria-live="polite" class="text-xs font-semibold text-slate-300">Click the microphone and speak the German word clearly.</p>
-                <p class="text-[10px] text-slate-500 font-medium italic">Click the microphone, wait for the pulse, and speak clearly.</p>
-              </div>
-            </div>
-
-            <!-- Scoring & Character Matching Panel -->
-            <div id="phonetic-evaluation-panel" class="bg-slate-950/50 border border-slate-900/80 rounded-xl p-4 space-y-3 hidden animate-slide-in-right">
-              <!-- Score Badge -->
-              <div class="flex items-center justify-between border-b border-slate-900 pb-2">
-                <span class="text-[10px] font-extrabold uppercase tracking-wider text-slate-400">Übereinstimmung | Accuracy Match</span>
-                <span id="phonetic-score-badge" class="px-2 py-0.5 bg-emerald-500/10 border border-emerald-500/35 text-emerald-400 text-xs font-black rounded font-mono">0% Match</span>
+              <!-- Translation Section -->
+              <div class="space-y-2">
+                <h4 class="text-xs font-bold text-indigo-400 uppercase tracking-widest flex items-center gap-2">
+                  <i class="fa-solid fa-language text-sm"></i> Bedeutung (Englisch) | Meaning (English)
+                </h4>
+                <p id="card-meaning" class="text-lg md:text-xl font-semibold text-slate-100 pl-1 leading-relaxed">Meaning</p>
               </div>
 
-              <!-- Word highlight output -->
-              <div class="flex flex-wrap items-center justify-center gap-2 py-1 text-center font-display text-lg font-extrabold" id="phonetic-matched-chars">
-                <!-- Highlighted tokens go here -->
+              <!-- Example Sentences Section -->
+              <div id="card-examples-container" class="space-y-4 pt-4 border-t border-slate-800/40">
+                <h4 class="text-xs font-bold text-pink-400 uppercase tracking-widest flex items-center gap-2">
+                  <i class="fa-solid fa-quote-left text-xs"></i> Beispielsatz | Example Sentence
+                </h4>
+                <div class="bg-slate-950/40 border border-slate-900 rounded-xl p-4 md:p-5 space-y-2">
+                  <p id="card-example-de" class="text-base md:text-lg font-medium text-slate-200 leading-relaxed pl-1 notranslate">German example</p>
+                  <p id="card-example-en" class="text-sm text-slate-400 leading-relaxed pl-1">English example translation</p>
+                </div>
               </div>
 
-              <!-- Feedback and Tip message -->
-              <p id="phonetic-feedback-msg" class="text-xs text-slate-400 leading-relaxed text-center font-medium"></p>
+              <!-- Antonyms or Synonyms Section if available -->
+              <div id="card-antonym-container" class="pt-4 border-t border-slate-800/40 hidden">
+                <h4 class="text-xs font-bold text-emerald-400 uppercase tracking-widest flex items-center gap-2">
+                  <i class="fa-solid fa-circle-minus text-xs"></i> Gegenteil (Antonym) | Opposite (Antonym)
+                </h4>
+                <p id="card-antonym" class="text-sm font-semibold text-slate-300 pl-1 mt-1">Antonym</p>
+              </div>
+
               
-              <!-- Anatomical Mouth Positioning Guides (Phonemes) -->
-              <div id="phonetic-mouth-guide-container" class="hidden"></div>
             </div>
-
-          </div>
-        </div>
-
-
-        <!-- Accordion Reveal Element (Meaning and Sentences) -->
-        <div id="accordion-reveal" class="accordion-content">
-          <div class="glass border border-slate-800/80 rounded-2xl p-6 md:p-8 space-y-6 shadow-xl shadow-slate-950/40">
-            
-            <!-- Translation Section -->
-            <div class="space-y-2">
-              <h4 class="text-xs font-bold text-indigo-400 uppercase tracking-widest flex items-center gap-2">
-                <i class="fa-solid fa-language text-sm"></i> Bedeutung (Englisch) | Meaning (English)
-              </h4>
-              <p id="card-meaning" class="text-lg md:text-xl font-semibold text-slate-100 pl-1 leading-relaxed">Meaning</p>
-            </div>
-
-            <!-- Example Sentences Section -->
-            <div id="card-examples-container" class="space-y-4 pt-4 border-t border-slate-800/40">
-              <h4 class="text-xs font-bold text-pink-400 uppercase tracking-widest flex items-center gap-2">
-                <i class="fa-solid fa-quote-left text-xs"></i> Beispielsatz | Example Sentence
-              </h4>
-              <div class="bg-slate-950/40 border border-slate-900 rounded-xl p-4 md:p-5 space-y-2">
-                <p id="card-example-de" class="text-base md:text-lg font-medium text-slate-200 leading-relaxed pl-1 notranslate">German example</p>
-                <p id="card-example-en" class="text-sm text-slate-400 leading-relaxed pl-1">English example translation</p>
-              </div>
-            </div>
-
-            <!-- Antonyms or Synonyms Section if available -->
-            <div id="card-antonym-container" class="pt-4 border-t border-slate-800/40 hidden">
-              <h4 class="text-xs font-bold text-emerald-400 uppercase tracking-widest flex items-center gap-2">
-                <i class="fa-solid fa-circle-minus text-xs"></i> Gegenteil (Antonym) | Opposite (Antonym)
-              </h4>
-              <p id="card-antonym" class="text-sm font-semibold text-slate-300 pl-1 mt-1">Antonym</p>
-            </div>
-
-
-            
           </div>
         </div>
 
