@@ -155,7 +155,11 @@ export function setupEventListeners() {
 
 
   if (elements.flashcard) {
-    elements.flashcard.addEventListener('click', () => {
+    elements.flashcard.addEventListener('click', (e) => {
+      if (wasCardDragged) {
+        wasCardDragged = false;
+        return;
+      }
       toggleAccordion();
     });
   }
@@ -497,8 +501,10 @@ export function setupEventListeners() {
 
 }
 
+let wasCardDragged = false;
+
 /**
- * Captures PointerEvents on cards to process responsive swiping transitions (Rate Good / Rate Again)
+ * Captures Pointer & Touch Events on cards to process responsive swiping transitions
  */
 export function setupSwipeGestures() {
   const flashcard = document.getElementById('flashcard');
@@ -507,8 +513,19 @@ export function setupSwipeGestures() {
   let startX = 0;
   let startY = 0;
   let isDragging = false;
+  let currentDx = 0;
 
-  flashcard.addEventListener('pointerdown', (e) => {
+  const getClientPos = (e) => {
+    if (e.touches && e.touches.length > 0) {
+      return { x: e.touches[0].clientX, y: e.touches[0].clientY };
+    }
+    if (e.changedTouches && e.changedTouches.length > 0) {
+      return { x: e.changedTouches[0].clientX, y: e.changedTouches[0].clientY };
+    }
+    return { x: e.clientX, y: e.clientY };
+  };
+
+  const onStart = (e) => {
     const hash = window.location.hash || '#/';
     if (hash !== '#/' && hash !== '#') return;
 
@@ -517,34 +534,47 @@ export function setupSwipeGestures() {
     }
 
     isDragging = true;
-    startX = e.clientX;
-    startY = e.clientY;
+    wasCardDragged = false;
+    currentDx = 0;
+    const pos = getClientPos(e);
+    startX = pos.x;
+    startY = pos.y;
 
-    flashcard.setPointerCapture(e.pointerId);
+    if (e.pointerId !== undefined && typeof flashcard.setPointerCapture === 'function') {
+      try { flashcard.setPointerCapture(e.pointerId); } catch (_) {}
+    }
+
     flashcard.classList.add('drag-touch');
     flashcard.classList.remove('card-spring-back', 'swipe-left', 'swipe-right');
     flashcard.style.transform = '';
-  });
+  };
 
-  flashcard.addEventListener('pointermove', (e) => {
+  const onMove = (e) => {
     if (!isDragging) return;
 
-    const dx = e.clientX - startX;
-    const dy = e.clientY - startY;
+    const pos = getClientPos(e);
+    const dx = pos.x - startX;
+    const dy = pos.y - startY;
 
+    if (Math.abs(dx) > 6 || Math.abs(dy) > 6) {
+      wasCardDragged = true;
+    }
+
+    currentDx = dx;
     flashcard.style.transform = `translate(${dx}px, ${dy}px) rotate(${dx * 0.08}deg)`;
-  });
+  };
 
-  const handleSwipeEnd = (e) => {
+  const onEnd = (e) => {
     if (!isDragging) return;
     isDragging = false;
-    try {
-      flashcard.releasePointerCapture(e.pointerId);
-    } catch (_) {}
+
+    if (e.pointerId !== undefined && typeof flashcard.releasePointerCapture === 'function') {
+      try { flashcard.releasePointerCapture(e.pointerId); } catch (_) {}
+    }
     flashcard.classList.remove('drag-touch');
 
-    const dx = e.clientX - startX;
-    const threshold = 60;
+    const dx = currentDx;
+    const threshold = 45; // 45px threshold for effortless mobile swiping
 
     const card = state.currentDeck ? state.currentDeck[state.currentIndex] : null;
 
@@ -554,25 +584,37 @@ export function setupSwipeGestures() {
         prevCard();
         flashcard.classList.remove('swipe-right');
         flashcard.style.transform = '';
-      }, 300);
+        wasCardDragged = false;
+      }, 250);
     } else if (dx < -threshold && card) {
       flashcard.classList.add('swipe-left');
       setTimeout(() => {
         nextCard();
         flashcard.classList.remove('swipe-left');
         flashcard.style.transform = '';
-      }, 300);
+        wasCardDragged = false;
+      }, 250);
     } else {
       flashcard.classList.add('card-spring-back');
       flashcard.style.transform = '';
       setTimeout(() => {
         flashcard.classList.remove('card-spring-back');
-      }, 500);
+        wasCardDragged = false;
+      }, 350);
     }
   };
 
-  flashcard.addEventListener('pointerup', handleSwipeEnd);
-  flashcard.addEventListener('pointercancel', handleSwipeEnd);
+  // Attach Pointer Events
+  flashcard.addEventListener('pointerdown', onStart);
+  flashcard.addEventListener('pointermove', onMove);
+  flashcard.addEventListener('pointerup', onEnd);
+  flashcard.addEventListener('pointercancel', onEnd);
+
+  // Attach Touch Events fallback for older/quirky mobile webviews
+  flashcard.addEventListener('touchstart', onStart, { passive: true });
+  flashcard.addEventListener('touchmove', onMove, { passive: true });
+  flashcard.addEventListener('touchend', onEnd);
+  flashcard.addEventListener('touchcancel', onEnd);
 }
 
 /**

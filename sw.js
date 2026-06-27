@@ -2,7 +2,7 @@
 // Strategy: Cache-first for static assets, stale-while-revalidate for CDN resources.
 // NOTE: This SW only activates on HTTPS origins (GitHub Pages). It cannot run on file://.
 
-const CACHE_VERSION = 'v6.9.9'; // v6.9.9: fix(ui) — replace confusing mic icon with headphones icon in Audio Trainer header
+const CACHE_VERSION = 'v7.0.0'; // v7.0.0: fix(touch) — bulletproof hybrid Touch/Pointer gesture engine with 45px threshold and click-suppression
 const STATIC_CACHE = `deutschsphere-static-${CACHE_VERSION}`;
 const DATA_CACHE = `deutschsphere-data-${CACHE_VERSION}`;
 const CDN_CACHE = `deutschsphere-cdn-${CACHE_VERSION}`;

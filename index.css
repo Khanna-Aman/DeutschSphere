@@ -1213,7 +1213,7 @@ body.theme-weimar #phonetic-mirror-panel .bg-slate-950 {
    ============================================ */
 #flashcard {
   contain: content;
-  touch-action: pan-y;
+  touch-action: none;
 }
 
 .cheatcode-card {
