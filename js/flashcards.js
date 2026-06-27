@@ -248,65 +248,54 @@ export function closeAccordionInstantly() {
 }
 
 // Render the active flashcard
-export function renderCard() {
-  const deckLength = state.currentDeck.length;
-
-  // Update category title text
-  const germanTitle = state.activeCategory === 'All' ? 'All Categories' : state.activeCategory;
-  const englishTitle = categoryTranslations[state.activeCategory] || '';
-  let titleText = englishTitle ? `${englishTitle} (${germanTitle})` : germanTitle;
-  if (state.searchQuery) {
-    titleText += ` (Filtered: "${state.searchQuery}")`;
+/**
+ * Private helper to clear UI elements and disable controls when the deck is empty.
+ */
+function renderEmptyDeckState() {
+  if (elements.progressBarFill) elements.progressBarFill.style.width = `0%`;
+  if (elements.deckProgressText) elements.deckProgressText.textContent = `Card 0 of 0 (0%)`;
+  if (elements.cardIndexIndicator) elements.cardIndexIndicator.textContent = `0 / 0`;
+  if (elements.cardMetadataBadges) elements.cardMetadataBadges.innerHTML = '';
+  if (elements.cardWord) elements.cardWord.innerHTML = `<span class="text-slate-500 font-sans text-xl font-normal">No matching cards found.</span>`;
+  
+  if (elements.cardImageContainer) {
+    elements.cardImageContainer.classList.add('hidden');
   }
-  if (elements.currentCategoryTitle) elements.currentCategoryTitle.textContent = titleText;
-
-  // Update deck stats
-  if (elements.deckStats) elements.deckStats.textContent = `${deckLength} card(s) loaded${state.isShuffled ? ' • Shuffled' : ''}`;
-
-  // Check if deck is empty
-  if (deckLength === 0) {
-    if (elements.progressBarFill) elements.progressBarFill.style.width = `0%`;
-    if (elements.deckProgressText) elements.deckProgressText.textContent = `Card 0 of 0 (0%)`;
-    if (elements.cardIndexIndicator) elements.cardIndexIndicator.textContent = `0 / 0`;
-    if (elements.cardMetadataBadges) elements.cardMetadataBadges.innerHTML = '';
-    if (elements.cardWord) elements.cardWord.innerHTML = `<span class="text-slate-500 font-sans text-xl font-normal">No matching cards found.</span>`;
-    
-    if (elements.cardImageContainer) {
-      elements.cardImageContainer.classList.add('hidden');
-    }
-    
-    // Clear meaning accordion
-    if (elements.cardMeaning) elements.cardMeaning.textContent = '';
-    if (elements.cardExampleDe) elements.cardExampleDe.textContent = '';
-    if (elements.cardExampleEn) elements.cardExampleEn.textContent = '';
-    if (elements.cardAntonym) elements.cardAntonym.textContent = '';
-    if (elements.cardAntonymContainer) elements.cardAntonymContainer.classList.add('hidden');
-    if (elements.cardExamplesContainer) elements.cardExamplesContainer.classList.add('hidden');
-    
-    // Disable primary interaction buttons
-    if (elements.flashcard) {
-      elements.flashcard.className = "glass border border-slate-900 rounded-2xl p-6 md:py-6 md:px-10 min-h-[150px] md:min-h-[180px] flex flex-col justify-between cursor-not-allowed select-none relative card-glow-neutral";
-    }
-    if (elements.prevBtn) {
-      elements.prevBtn.disabled = true;
-      elements.prevBtn.classList.add('opacity-40', 'cursor-not-allowed');
-    }
-    if (elements.nextBtn) {
-      elements.nextBtn.disabled = true;
-      elements.nextBtn.classList.add('opacity-40', 'cursor-not-allowed');
-    }
-    if (elements.toggleRevealBtn) {
-      elements.toggleRevealBtn.disabled = true;
-      elements.toggleRevealBtn.classList.add('opacity-40', 'cursor-not-allowed');
-    }
-    if (elements.learnedBtn) {
-      elements.learnedBtn.disabled = true;
-      elements.learnedBtn.classList.add('opacity-40', 'cursor-not-allowed');
-    }
-    return;
+  
+  // Clear meaning accordion
+  if (elements.cardMeaning) elements.cardMeaning.textContent = '';
+  if (elements.cardExampleDe) elements.cardExampleDe.textContent = '';
+  if (elements.cardExampleEn) elements.cardExampleEn.textContent = '';
+  if (elements.cardAntonym) elements.cardAntonym.textContent = '';
+  if (elements.cardAntonymContainer) elements.cardAntonymContainer.classList.add('hidden');
+  if (elements.cardExamplesContainer) elements.cardExamplesContainer.classList.add('hidden');
+  
+  // Disable primary interaction buttons
+  if (elements.flashcard) {
+    elements.flashcard.className = "glass border border-slate-900 rounded-2xl p-6 md:py-6 md:px-10 min-h-[150px] md:min-h-[180px] flex flex-col justify-between cursor-not-allowed select-none relative card-glow-neutral";
   }
+  if (elements.prevBtn) {
+    elements.prevBtn.disabled = true;
+    elements.prevBtn.classList.add('opacity-40', 'cursor-not-allowed');
+  }
+  if (elements.nextBtn) {
+    elements.nextBtn.disabled = true;
+    elements.nextBtn.classList.add('opacity-40', 'cursor-not-allowed');
+  }
+  if (elements.toggleRevealBtn) {
+    elements.toggleRevealBtn.disabled = true;
+    elements.toggleRevealBtn.classList.add('opacity-40', 'cursor-not-allowed');
+  }
+  if (elements.learnedBtn) {
+    elements.learnedBtn.disabled = true;
+    elements.learnedBtn.classList.add('opacity-40', 'cursor-not-allowed');
+  }
+}
 
-  // Enable navigation elements
+/**
+ * Private helper to enable control buttons when a non-empty deck is loaded.
+ */
+function enableNavigationControls() {
   if (elements.prevBtn) {
     elements.prevBtn.disabled = false;
     elements.prevBtn.classList.remove('opacity-40', 'cursor-not-allowed');
@@ -323,22 +312,12 @@ export function renderCard() {
     elements.learnedBtn.disabled = false;
     elements.learnedBtn.classList.remove('opacity-40', 'cursor-not-allowed');
   }
+}
 
-  // Retrieve current card details
-  const card = state.currentDeck[state.currentIndex];
-
-  // Collapse grammar matrix drawer instantly when moving between cards
-  collapseGrammarMatrixInstantly();
-
-  // Update Progress values
-  if (elements.cardIndexIndicator) elements.cardIndexIndicator.textContent = `${state.currentIndex + 1} / ${deckLength}`;
-  const progressPercent = ((state.currentIndex + 1) / deckLength) * 100;
-  if (elements.progressBarFill) elements.progressBarFill.style.width = `${progressPercent}%`;
-  if (elements.deckProgressText) {
-    elements.deckProgressText.textContent = `Card ${state.currentIndex + 1} of ${deckLength} (${Math.round(progressPercent)}%)`;
-  }
-
-  // Render Metadata Badges (Word Class, Gender, Plural, Learned Status)
+/**
+ * Sub-renderer: Build and inject metadata badges for the card.
+ */
+function renderCardMetadataBadges(card, deckLength) {
   let badgesHTML = '';
   if (card.wordClass) {
     badgesHTML += `<span class="px-2 py-0.5 bg-slate-800 border border-slate-700 text-slate-300 text-[10px] uppercase font-bold tracking-wider rounded-md">${card.wordClass}</span>`;
@@ -408,21 +387,13 @@ export function renderCard() {
   }
 
   if (elements.cardMetadataBadges) elements.cardMetadataBadges.innerHTML = badgesHTML;
+}
 
-  // Apply Gender border glow style to flashcard
-  let glowClass = 'card-glow-neutral';
-  if (card.gender === 'der') {
-    glowClass = 'card-glow-der';
-  } else if (card.gender === 'die') {
-    glowClass = 'card-glow-die';
-  } else if (card.gender === 'das') {
-    glowClass = 'card-glow-das';
-  }
-  if (elements.flashcard) {
-    elements.flashcard.className = `glass border rounded-2xl p-6 md:py-6 md:px-10 min-h-[150px] md:min-h-[180px] flex flex-col justify-between cursor-pointer transition-all duration-300 select-none relative group overflow-hidden ${glowClass}`;
-  }
-
-  // Ensure card image container is hidden for B1 but loaded for A1 and A2
+/**
+ * Sub-renderer: Handle the illustration WebP asset.
+ * Also configures high-accessibility descriptive alt text (WCAG 2.1 SC 1.1.1).
+ */
+function renderCardImage(card) {
   const activeImage = card.image_path || card.image;
   const isImageAllowed = (state.currentLevel === 'a1' || state.currentLevel === 'a2');
   if (state.showImages && isImageAllowed) {
@@ -441,6 +412,11 @@ export function renderCard() {
       elements.cardImage.classList.add('hidden');
       elements.cardImage.classList.add('opacity-0');
       elements.cardImage.src = state.currentLevel + '/' + activeImage;
+      
+      // Dynamic ALT text for screen reader compliance (WCAG 2.1 SC 1.1.1)
+      const formattedGender = (card.wordClass === 'Noun' && card.gender) ? `${card.gender} ` : '';
+      elements.cardImage.alt = `${formattedGender}${card.word} — ${card.meaning}`;
+      
       elements.cardImage.onload = () => {
         elements.cardImage.classList.remove('hidden');
         elements.cardImage.classList.remove('opacity-0');
@@ -462,7 +438,26 @@ export function renderCard() {
     if (elements.cardImage) {
       elements.cardImage.src = '';
       elements.cardImage.classList.add('hidden');
+      elements.cardImage.alt = '';
     }
+  }
+}
+
+/**
+ * Sub-renderer: Apply deterministic gender glows and render the headword text with adaptive font scaling.
+ */
+function renderCardWord(card) {
+  // Apply Gender border glow style to flashcard
+  let glowClass = 'card-glow-neutral';
+  if (card.gender === 'der') {
+    glowClass = 'card-glow-der';
+  } else if (card.gender === 'die') {
+    glowClass = 'card-glow-die';
+  } else if (card.gender === 'das') {
+    glowClass = 'card-glow-das';
+  }
+  if (elements.flashcard) {
+    elements.flashcard.className = `glass border rounded-2xl p-6 md:py-6 md:px-10 min-h-[150px] md:min-h-[180px] flex flex-col justify-between cursor-pointer transition-all duration-300 select-none relative group overflow-hidden ${glowClass}`;
   }
 
   // Set German Word with dynamic scaling for long compounds
@@ -476,8 +471,12 @@ export function renderCard() {
       elements.cardWord.className = "text-3xl sm:text-4xl md:text-5xl font-black font-display tracking-tight text-white drop-shadow-md group-hover:scale-[1.02] transition-transform duration-300 leading-tight notranslate";
     }
   }
+}
 
-  // Suffix Grammar Rules integration
+/**
+ * Sub-renderer: Detect suffix rules and configure helper overlays.
+ */
+function renderSuffixGrammar(card) {
   if (elements.suffixHelperTrigger && elements.suffixDrawer) {
     const suffixRule = getSuffixRule(card.word, card.wordClass);
     if (suffixRule) {
@@ -511,8 +510,12 @@ export function renderCard() {
       elements.suffixDrawer.classList.remove('suffix-drawer-active');
     }
   }
+}
 
-  // Set Pronunciation
+/**
+ * Sub-renderer: Populate IPA phonetic transcriptions.
+ */
+function renderPronunciation(card) {
   if (elements.cardPronunciation) {
     if (card.pronunciation) {
       elements.cardPronunciation.textContent = `/ ${card.pronunciation} /`;
@@ -521,11 +524,19 @@ export function renderCard() {
       elements.cardPronunciation.classList.add('hidden');
     }
   }
+}
 
-  // Set Meaning text
+/**
+ * Sub-renderer: Populate English meaning.
+ */
+function renderCardMeaning(card) {
   if (elements.cardMeaning) elements.cardMeaning.textContent = card.meaning;
+}
 
-  // Handle Example Sentences
+/**
+ * Sub-renderer: Populate contextual example sentences.
+ */
+function renderExampleSentences(card) {
   if (elements.cardExampleDe && elements.cardExampleEn && elements.cardExamplesContainer) {
     if (card.exampleDe) {
       elements.cardExampleDe.textContent = card.exampleDe;
@@ -535,8 +546,12 @@ export function renderCard() {
       elements.cardExamplesContainer.classList.add('hidden');
     }
   }
+}
 
-  // Handle Antonyms
+/**
+ * Sub-renderer: Render the antonym section with O(1) pre-indexed metadata mapping.
+ */
+function renderCardAntonyms(card) {
   if (elements.cardAntonym && elements.cardAntonymContainer) {
     if (card.antonym) {
       let antonymText = card.antonym;
@@ -555,8 +570,12 @@ export function renderCard() {
       elements.cardAntonymContainer.classList.add('hidden');
     }
   }
+}
 
-  // Handle Dynamic Grammar Matrix Section (Verb Conjugation / Adjective Declension)
+/**
+ * Sub-renderer: Generate and bind conjugation/declension tables.
+ */
+function renderGrammarMatrix(card) {
   if (elements.cardGrammarMatrixContainer && elements.grammarMatrixTableContainer) {
     const wc = (card.wordClass || '').toLowerCase().trim();
     if (wc === 'verb' || wc === 'adjektiv' || wc === 'adjective') {
@@ -690,6 +709,60 @@ export function renderCard() {
       elements.cardGrammarMatrixContainer.classList.add('hidden');
     }
   }
+}
+
+/**
+ * Orchestrator: Main render function for the flashcard interface.
+ * Delegates individual sections to optimized private sub-renderers.
+ */
+export function renderCard() {
+  const deckLength = state.currentDeck.length;
+
+  // Update category title text
+  const germanTitle = state.activeCategory === 'All' ? 'All Categories' : state.activeCategory;
+  const englishTitle = categoryTranslations[state.activeCategory] || '';
+  let titleText = englishTitle ? `${englishTitle} (${germanTitle})` : germanTitle;
+  if (state.searchQuery) {
+    titleText += ` (Filtered: "${state.searchQuery}")`;
+  }
+  if (elements.currentCategoryTitle) elements.currentCategoryTitle.textContent = titleText;
+
+  // Update deck stats
+  if (elements.deckStats) elements.deckStats.textContent = `${deckLength} card(s) loaded${state.isShuffled ? ' • Shuffled' : ''}`;
+
+  // Check if deck is empty
+  if (deckLength === 0) {
+    renderEmptyDeckState();
+    return;
+  }
+
+  // Enable navigation elements
+  enableNavigationControls();
+
+  // Retrieve current card details
+  const card = state.currentDeck[state.currentIndex];
+
+  // Collapse grammar matrix drawer instantly when moving between cards
+  collapseGrammarMatrixInstantly();
+
+  // Update Progress values
+  if (elements.cardIndexIndicator) elements.cardIndexIndicator.textContent = `${state.currentIndex + 1} / ${deckLength}`;
+  const progressPercent = ((state.currentIndex + 1) / deckLength) * 100;
+  if (elements.progressBarFill) elements.progressBarFill.style.width = `${progressPercent}%`;
+  if (elements.deckProgressText) {
+    elements.deckProgressText.textContent = `Card ${state.currentIndex + 1} of ${deckLength} (${Math.round(progressPercent)}%)`;
+  }
+
+  // Delegate rendering tasks to dedicated modular helpers
+  renderCardMetadataBadges(card, deckLength);
+  renderCardImage(card);
+  renderCardWord(card);
+  renderSuffixGrammar(card);
+  renderPronunciation(card);
+  renderCardMeaning(card);
+  renderExampleSentences(card);
+  renderCardAntonyms(card);
+  renderGrammarMatrix(card);
 
   // Handle Fast Read / Slow Read accordion visibility state
   if (state.isFastRead) {

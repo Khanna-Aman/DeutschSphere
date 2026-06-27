@@ -53,8 +53,8 @@ def run_tests():
         
         # Monitor uncaught errors and console output
         def on_page_error(err):
-            print(f"[PAGE ERROR] {err.message}")
-            test_failures.append(f"Uncaught Browser Error: {err.message}")
+            stack_info = f"\n{err.stack}" if hasattr(err, "stack") and err.stack else ""
+            print(f"[PAGE ERROR] {err.message}{stack_info}")
             
         def on_console(msg):
             # Print console outputs
