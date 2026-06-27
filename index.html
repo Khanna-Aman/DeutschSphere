@@ -94,11 +94,11 @@
       </div>
     </div>
     <!-- Mobile Streak Counter -->
-    <div id="mobile-streak-display" class="flex items-center gap-1.5 text-sm" aria-label="Lernserie">
+    <div id="mobile-streak-display" class="flex items-center gap-1.5 text-sm" aria-label="Streak indicator">
       <i class="fa-solid fa-fire text-orange-500 streak-fire-icon"></i>
       <span id="mobile-streak-count" class="font-black font-mono text-orange-400">0</span>
     </div>
-    <button id="mobile-sidebar-toggle" class="p-2 text-slate-400 hover:text-white transition-colors" aria-label="Kategorie-Menü öffnen">
+    <button id="mobile-sidebar-toggle" class="p-2 text-slate-400 hover:text-white transition-colors" aria-label="Open categories menu">
       <i class="fa-solid fa-bars text-xl"></i>
     </button>
   </header>
@@ -126,7 +126,7 @@
   </div>
 
   <!-- Left Sidebar Panel (Categories & Navigation) -->
-  <aside id="sidebar" aria-label="Seitenleiste" class="fixed inset-y-0 left-0 w-80 h-screen md:h-screen bg-slate-900/80 border-r border-slate-800 backdrop-blur-xl z-40 transform -translate-x-full md:translate-x-0 md:static md:flex flex-col overflow-y-auto scrollbar-thin transition-transform duration-300 ease-in-out">
+  <aside id="sidebar" aria-label="Sidebar" class="fixed inset-y-0 left-0 w-80 h-screen md:h-screen bg-slate-900/80 border-r border-slate-800 backdrop-blur-xl z-40 transform -translate-x-full md:translate-x-0 md:static md:flex flex-col overflow-y-auto scrollbar-thin transition-transform duration-300 ease-in-out">
     <!-- Sidebar Header -->
     <div class="p-6 border-b border-slate-800/85 flex items-center justify-between">
       <div class="flex items-center gap-3">
@@ -138,7 +138,7 @@
           <p class="text-xs text-slate-400 font-medium">Personal Flashcards</p>
         </div>
       </div>
-      <button id="mobile-sidebar-close" aria-label="Seitenleiste schließen" class="md:hidden p-2 text-slate-400 hover:text-white transition-colors">
+      <button id="mobile-sidebar-close" aria-label="Close sidebar" class="md:hidden p-2 text-slate-400 hover:text-white transition-colors">
         <i class="fa-solid fa-xmark text-lg"></i>
       </button>
     </div>
@@ -178,18 +178,18 @@
     <!-- Search Input -->
     <div class="px-6 py-4 border-b border-slate-800/50">
       <div class="relative">
-        <button id="search-submit-btn" aria-label="Suche starten" class="z-10 absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 hover:text-indigo-400 transition-colors cursor-pointer" title="Suchen | Search">
+        <button id="search-submit-btn" aria-label="Search" class="z-10 absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 hover:text-indigo-400 transition-colors cursor-pointer" title="Suchen | Search">
           <i class="fa-solid fa-magnifying-glass text-sm"></i>
         </button>
         <label for="search-input" class="sr-only">Search dictionary (German or English)</label>
         <input type="text" id="search-input" class="w-full bg-slate-950/60 border border-slate-800 rounded-xl py-2.5 pl-10 pr-10 text-sm placeholder-slate-500 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-medium" placeholder="Search dictionary (German or English)..." autocomplete="off">
-        <button id="search-clear" aria-label="Suche löschen" class="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-500 hover:text-slate-300 hidden">
+        <button id="search-clear" aria-label="Clear search" class="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-500 hover:text-slate-300 hidden">
           <i class="fa-solid fa-circle-xmark text-sm"></i>
         </button>
       </div>
       
       <!-- Quick-filter Tutorial Chips (V6.1) -->
-      <div class="mt-2.5 flex flex-wrap gap-1.5" id="search-quick-tags" aria-label="Schnellfilter">
+      <div class="mt-2.5 flex flex-wrap gap-1.5" id="search-quick-tags" aria-label="Quick filters">
         <button class="search-tag-chip text-[9px] font-black tracking-wide px-1.5 py-0.5 rounded-md bg-slate-950/80 hover:bg-indigo-950/60 text-indigo-400 hover:text-indigo-300 border border-indigo-500/10 hover:border-indigo-500/30 transition-all cursor-pointer active:scale-95" data-tag="is:noun">is:noun</button>
         <button class="search-tag-chip text-[9px] font-black tracking-wide px-1.5 py-0.5 rounded-md bg-slate-950/80 hover:bg-pink-950/60 text-pink-400 hover:text-pink-300 border border-pink-500/10 hover:border-pink-500/30 transition-all cursor-pointer active:scale-95" data-tag="gender:die">g:die</button>
         <button class="search-tag-chip text-[9px] font-black tracking-wide px-1.5 py-0.5 rounded-md bg-slate-950/80 hover:bg-emerald-950/60 text-emerald-400 hover:text-emerald-300 border border-emerald-500/10 hover:border-emerald-500/30 transition-all cursor-pointer active:scale-95" data-tag="srs:due">srs:due</button>
@@ -650,15 +650,15 @@
 
           <!-- Controls -->
           <div class="flex items-center gap-3">
-            <button id="trainer-prev-btn" aria-label="Vorheriges Wort" class="p-2 rounded-xl bg-slate-950/40 border border-slate-900/80 text-slate-400 hover:text-white hover:border-slate-700 active:scale-95 transition-all flex items-center justify-center w-9 h-9" title="Vorherige Karte">
+            <button id="trainer-prev-btn" aria-label="Previous word" class="p-2 rounded-xl bg-slate-950/40 border border-slate-900/80 text-slate-400 hover:text-white hover:border-slate-700 active:scale-95 transition-all flex items-center justify-center w-9 h-9" title="Vorherige Karte">
               <i class="fa-solid fa-backward text-xs"></i>
             </button>
             
-            <button id="trainer-play-btn" aria-label="Trainer starten" class="w-10 h-10 rounded-full bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white flex items-center justify-center transition-all shadow-lg shadow-indigo-600/30" title="Trainer starten / pausieren">
+            <button id="trainer-play-btn" aria-label="Start trainer" class="w-10 h-10 rounded-full bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white flex items-center justify-center transition-all shadow-lg shadow-indigo-600/30" title="Trainer starten / pausieren">
               <i id="trainer-play-icon" class="fa-solid fa-play text-sm ml-0.5"></i>
             </button>
             
-            <button id="trainer-next-btn" aria-label="Nächstes Wort" class="p-2 rounded-xl bg-slate-950/40 border border-slate-900/80 text-slate-400 hover:text-white hover:border-slate-700 active:scale-95 transition-all flex items-center justify-center w-9 h-9" title="Nächste Karte">
+            <button id="trainer-next-btn" aria-label="Next word" class="p-2 rounded-xl bg-slate-950/40 border border-slate-900/80 text-slate-400 hover:text-white hover:border-slate-700 active:scale-95 transition-all flex items-center justify-center w-9 h-9" title="Nächste Karte">
               <i class="fa-solid fa-forward text-xs"></i>
             </button>
           </div>
@@ -673,7 +673,7 @@
             </div>
 
             <!-- Loop Mode Toggle -->
-            <button id="trainer-loop-btn" aria-label="Schleife umschalten" class="flex items-center gap-1.5 bg-slate-950/40 border border-slate-900/80 text-slate-400 hover:text-indigo-400 hover:border-indigo-500/30 px-2.5 py-1.5 rounded-xl text-[11px] font-semibold transition-all" title="Kategorie in Endlosschleife wiederholen">
+            <button id="trainer-loop-btn" aria-label="Toggle loop" class="flex items-center gap-1.5 bg-slate-950/40 border border-slate-900/80 text-slate-400 hover:text-indigo-400 hover:border-indigo-500/30 px-2.5 py-1.5 rounded-xl text-[11px] font-semibold transition-all" title="Kategorie in Endlosschleife wiederholen">
               <i class="fa-solid fa-rotate text-[10px]"></i>
               <span id="trainer-loop-text">Loop aus</span>
             </button>
@@ -682,7 +682,7 @@
 
         
         <!-- The Core Card Element (M6: aria-live for screen reader announcements) -->
-        <div id="flashcard" role="region" aria-live="polite" aria-label="Aktuelle Karteikarte" class="glass border rounded-2xl p-6 md:py-6 md:px-10 min-h-[220px] sm:min-h-[240px] md:min-h-[280px] flex flex-col justify-between cursor-pointer transition-all duration-300 select-none relative group overflow-hidden card-glow-neutral">
+        <div id="flashcard" role="region" aria-live="polite" aria-label="Current flashcard" class="glass border rounded-2xl p-6 md:py-6 md:px-10 min-h-[220px] sm:min-h-[240px] md:min-h-[280px] flex flex-col justify-between cursor-pointer transition-all duration-300 select-none relative group overflow-hidden card-glow-neutral">
           <!-- Subtle Glow Overlay on hover -->
           <div class="absolute inset-0 bg-gradient-to-b from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
 
@@ -726,11 +726,11 @@
             <!-- Audio Controls Container -->
             <div class="flex items-center gap-3 mt-4 z-20">
               <!-- Audio Speaker Button -->
-              <button id="speak-btn" aria-label="Wort aussprechen" class="p-2.5 rounded-full bg-slate-900/80 border border-slate-800 hover:border-indigo-500 hover:text-indigo-400 text-slate-400 hover:bg-indigo-950/20 active:scale-95 transition-all shadow-md flex items-center justify-center" title="Aussprache anhören (Tastaturkürzel: V)">
+              <button id="speak-btn" aria-label="Speak word" class="p-2.5 rounded-full bg-slate-900/80 border border-slate-800 hover:border-indigo-500 hover:text-indigo-400 text-slate-400 hover:bg-indigo-950/20 active:scale-95 transition-all shadow-md flex items-center justify-center" title="Aussprache anhören (Tastaturkürzel: V)">
                 <i class="fa-solid fa-volume-high text-sm"></i>
               </button>
               <!-- Phonetic Mirror Button -->
-              <button id="phonetic-btn" aria-label="Phonetik-Spiegel öffnen" class="p-2.5 rounded-full bg-slate-900/80 border border-slate-800 hover:border-pink-500 hover:text-pink-400 text-slate-400 hover:bg-pink-950/20 active:scale-95 transition-all shadow-md flex items-center justify-center" title="Aussprache trainieren (Phonetik-Spiegel)">
+              <button id="phonetic-btn" aria-label="Open Phonetic Mirror" class="p-2.5 rounded-full bg-slate-900/80 border border-slate-800 hover:border-pink-500 hover:text-pink-400 text-slate-400 hover:bg-pink-950/20 active:scale-95 transition-all shadow-md flex items-center justify-center" title="Aussprache trainieren (Phonetik-Spiegel)">
                 <i class="fa-solid fa-microphone text-sm"></i>
               </button>
             </div>
@@ -773,7 +773,7 @@
           <div class="glass border border-pink-500/35 rounded-2xl p-6 md:p-8 space-y-6 shadow-xl shadow-pink-950/5 relative overflow-hidden">
             
             <!-- Close Button -->
-            <button id="phonetic-close-btn" aria-label="Phonetik-Spiegel schließen" class="absolute top-4 right-4 z-10 p-2 text-slate-400 hover:text-white transition-colors" title="Schließen | Close">
+            <button id="phonetic-close-btn" aria-label="Close Phonetic Mirror" class="absolute top-4 right-4 z-10 p-2 text-slate-400 hover:text-white transition-colors" title="Schließen | Close">
               <i class="fa-solid fa-xmark text-sm"></i>
             </button>
 
@@ -818,7 +818,7 @@
             <!-- Central Control & Haptics Area -->
             <div class="flex flex-col items-center justify-center py-2 space-y-4">
               <!-- Huge glowing Microphone Record Button -->
-              <button id="phonetic-record-btn" aria-label="Aussprache aufnehmen" class="w-14 h-14 rounded-full bg-slate-900 border border-pink-500/30 hover:border-pink-500 text-pink-400 hover:text-white flex items-center justify-center transition-all duration-300 shadow-lg shadow-pink-500/5 hover:shadow-pink-500/20 active:scale-95 group relative" title="Aufnahme starten/stoppen">
+              <button id="phonetic-record-btn" aria-label="Record pronunciation" class="w-14 h-14 rounded-full bg-slate-900 border border-pink-500/30 hover:border-pink-500 text-pink-400 hover:text-white flex items-center justify-center transition-all duration-300 shadow-lg shadow-pink-500/5 hover:shadow-pink-500/20 active:scale-95 group relative" title="Aufnahme starten/stoppen">
                 <i class="fa-solid fa-microphone text-lg group-hover:scale-110 transition-transform" id="phonetic-record-icon"></i>
                 <span id="phonetic-pulse-ring" class="absolute inset-0 rounded-full border border-pink-500/40 animate-ping opacity-0"></span>
               </button>
@@ -2242,7 +2242,7 @@
       <div id="explorer-glow" class="absolute -inset-10 bg-indigo-500/5 blur-2xl rounded-full pointer-events-none transition-all duration-300"></div>
 
       <!-- Close Button -->
-      <button id="immersion-explorer-close-btn" class="absolute top-4 right-4 z-10 p-2 text-slate-400 hover:text-white transition-colors" aria-label="Schließen">
+      <button id="immersion-explorer-close-btn" class="absolute top-4 right-4 z-10 p-2 text-slate-400 hover:text-white transition-colors" aria-label="Close">
         <i class="fa-solid fa-xmark text-lg"></i>
       </button>
 
