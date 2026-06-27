@@ -1,17 +1,18 @@
 # 🔮 VISION.md — Project Roadmap & Technical Vision
 
-This document details the architectural direction, scope boundaries, and active milestones for **DeutschSphere v1.1.0**.
+This document details the active technical roadmap, scope boundaries, and development milestones for **DeutschSphere**.
 
 ---
 
-## 🎯 The V1.1.0 Mandate: Pure Cognitive Mastery
+## 🎯 The Core Mandate: Pure Cognitive Mastery
 
-DeutschSphere has undergone a systematic architectural course-correction. We reject cheap gamification loops, decorative sound effects, and distracting interactive layers. The focus of the application is absolute retention of **3,921 validated German vocabulary words** via mathematical cognitive modeling (FSRS-5).
+DeutschSphere is designed to maximize vocabulary acquisition through distraction-free, clinical spaced repetition. The application focuses on high-signal cognitive retention of **3,921 validated German vocabulary words** via mathematical memory modeling (FSRS-5).
 
 ### 🛑 Strict Scope Enforcements
-* **No Gamification Bloat**: XP meters, level indicators, unlocking achievements, and interactive progress badges are deprecated. The only driver is objective memory stability and retention percentages.
+* **Zero Gamification Bloat**: The interface excludes XP systems, progress metrics, artificial badges, and decorative animations. Cognitive engagement is driven purely by layout-stable feedback and objective retrievability projections.
 * **No Structural Grammar Engines**: The application does not parse natural sentence syntax or conjugation trees. If conjugation tables, plurals, or contextual examples are not present in our ground-truth source layers, they are not inferred or generated (*The Zero-Inference Clause*).
 * **Decoupled Client-First Core**: No Node modules, bundling pipelines, or external databases. The SPA remains flat standard HTML, CSS, and modular JS.
+
 
 ---
 

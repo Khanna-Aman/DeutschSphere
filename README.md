@@ -1,11 +1,12 @@
-# 🇩🇪 DeutschSphere (v1.1.0)
+# 🇩🇪 DeutschSphere
 
 [![Live Web App](https://img.shields.io/badge/Launch%20App-DeutschSphere-FF007F?style=for-the-badge&logo=google-translate&logoColor=white&labelColor=020617)](https://khanna-aman.github.io/DeutschSphere/)
 [![Deploy Status](https://img.shields.io/badge/Deploy-GitHub%20Pages-00F0FF?style=for-the-badge&logo=github&logoColor=white&labelColor=020617)](https://khanna-aman.github.io/DeutschSphere/)
 
-> **DeutschSphere v1.1.0** represents a deliberate, high-signal engineering reset. We have completely purged all gamification overhead—including XP metrics, sound chimes, and particle effects—along with auxiliary modules (such as the legacy Pomodoro focus timer) to deliver a clinically rigorous, high-contrast, client-side language mastery application. All user instructions, buttons, and status interfaces are fully localized in professional English.
+> **DeutschSphere** is a clinically rigorous, high-contrast, offline-first client-side German vocabulary mastery application. It features standard-setting spaced repetition modeling and advanced acoustic feedback designed entirely for high-efficiency cognitive focus. All user instructions, settings, and interactive modules are fully localized in professional English.
 
 👉 **[CLICK HERE TO LAUNCH WEB APP](https://khanna-aman.github.io/DeutschSphere/)**
+
 
 ---
 
