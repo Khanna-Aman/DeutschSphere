@@ -2,7 +2,7 @@
 // Strategy: Cache-first for static assets, stale-while-revalidate for CDN resources.
 // NOTE: This SW only activates on HTTPS origins (GitHub Pages). It cannot run on file://.
 
-const CACHE_VERSION = 'v7.0.0'; // v7.0.0: fix(touch) — bulletproof hybrid Touch/Pointer gesture engine with 45px threshold and click-suppression
+const CACHE_VERSION = 'v7.0.1'; // v7.0.1: docs — update system documentation to highlight 100% offline PWA & installation capabilities
 const STATIC_CACHE = `deutschsphere-static-${CACHE_VERSION}`;
 const DATA_CACHE = `deutschsphere-data-${CACHE_VERSION}`;
 const CDN_CACHE = `deutschsphere-cdn-${CACHE_VERSION}`;

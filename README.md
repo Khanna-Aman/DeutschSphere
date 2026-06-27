@@ -51,6 +51,11 @@ Optimized display architecture across all viewport dimensions.
 * **Desktop Zero-Scroll Layout**: Automatically aligns German cards alongside revealed English meanings side-by-side on laptops/desktops so users never have to scroll.
 * **Mobile Safe-Area Insets**: Accounts for Android navigation bars and OS gesture handles (`viewport-fit=cover` & `env(safe-area-inset-bottom)`) to prevent element cutoff. Includes persistent preference toggles for Fast Read, Autoplay, Illustrations, and Example Sentences.
 
+### 9. 100% Offline PWA & Instant Installation
+Full standalone application installation support across Android, iOS, and Desktop.
+* **Instant App Download**: Users can install DeutschSphere directly onto their mobile home screen via the in-app `📥 Install App (PWA)` button or browser menu.
+* **100% Offline Independence**: Pre-caches all 3,921 Goethe-verified vocabulary entries, Service Worker assets, and offline Web Speech API drivers so users experience complete functionality in Airplane Mode with zero network dependencies.
+
 ---
 
 ## 📦 Vocabulary Schema & Coverage
