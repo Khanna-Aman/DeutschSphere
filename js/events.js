@@ -324,6 +324,7 @@ export function setupEventListeners() {
   if (elements.hideLearnedBtn) elements.hideLearnedBtn.addEventListener('click', toggleHideLearned);
   if (elements.autoplayBtn) elements.autoplayBtn.addEventListener('click', toggleAutoplay);
   if (elements.toggleImagesBtn) elements.toggleImagesBtn.addEventListener('click', toggleImages);
+  if (elements.toggleExamplesBtn) elements.toggleExamplesBtn.addEventListener('click', toggleExamples);
 
   if (elements.deckPrefsToggleBtn) {
     elements.deckPrefsToggleBtn.addEventListener('click', toggleDeckPrefs);
@@ -737,6 +738,12 @@ export function handleKeyboardShortcuts(e) {
     case 'B':
       e.preventDefault();
       toggleImages();
+      break;
+
+    case 'e':
+    case 'E':
+      e.preventDefault();
+      toggleExamples();
       break;
       
     case 'Escape':
