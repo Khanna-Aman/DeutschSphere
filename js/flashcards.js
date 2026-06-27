@@ -1657,11 +1657,10 @@ let companionScrollListenerAdded = false;
 
 export function updateCompanionVirtualScroll(force = false) {
   const container = document.getElementById('companion-word-list-items');
-  const topSpacer = document.getElementById('companion-list-top-spacer');
+  const scrollerHeight = document.getElementById('companion-list-scroller-height');
   const visibleContainer = document.getElementById('companion-list-visible-items');
-  const bottomSpacer = document.getElementById('companion-list-bottom-spacer');
 
-  if (!container || !topSpacer || !visibleContainer || !bottomSpacer || !state.currentDeck || state.currentDeck.length === 0) return;
+  if (!container || !scrollerHeight || !visibleContainer || !state.currentDeck || state.currentDeck.length === 0) return;
 
   const ITEM_HEIGHT = 54;
   const scrollTop = container.scrollTop;
@@ -1684,9 +1683,10 @@ export function updateCompanionVirtualScroll(force = false) {
   visibleContainer.dataset.startIndex = startIndex;
   visibleContainer.dataset.endIndex = endIndex;
 
-  // Update spacers
-  topSpacer.style.height = `${startIndex * ITEM_HEIGHT}px`;
-  bottomSpacer.style.height = `${(totalItems - endIndex) * ITEM_HEIGHT}px`;
+  // Ensure absolute scroll-height placeholder is correct
+  scrollerHeight.style.height = `${totalItems * ITEM_HEIGHT}px`;
+  // Position the visible container absolutely
+  visibleContainer.style.top = `${startIndex * ITEM_HEIGHT}px`;
 
   // Render visible segment
   visibleContainer.innerHTML = '';
@@ -1741,20 +1741,25 @@ export function renderCompanionWordList() {
   const container = document.getElementById('companion-word-list-items');
   if (!container || !state.currentDeck || state.currentDeck.length === 0) return;
 
-  // Initialize structural components
-  let topSpacer = document.getElementById('companion-list-top-spacer');
-  let visibleContainer = document.getElementById('companion-list-visible-items');
-  let bottomSpacer = document.getElementById('companion-list-bottom-spacer');
+  const ITEM_HEIGHT = 54;
+  const totalItems = state.currentDeck.length;
 
-  if (!topSpacer || !visibleContainer || !bottomSpacer) {
+  // Ensure position relative for absolute children mapping
+  container.style.position = 'relative';
+
+  // Initialize structural components
+  let scrollerHeight = document.getElementById('companion-list-scroller-height');
+  let visibleContainer = document.getElementById('companion-list-visible-items');
+
+  if (!scrollerHeight || !visibleContainer) {
     container.innerHTML = `
-      <div id="companion-list-top-spacer" style="height: 0px; flex-shrink: 0;"></div>
-      <div id="companion-list-visible-items" class="space-y-1.5 flex flex-col flex-shrink-0"></div>
-      <div id="companion-list-bottom-spacer" style="height: 0px; flex-shrink: 0;"></div>
+      <div id="companion-list-scroller-height" style="height: ${totalItems * ITEM_HEIGHT}px; width: 1px; pointer-events: none; visibility: hidden;"></div>
+      <div id="companion-list-visible-items" class="space-y-1.5 flex flex-col absolute left-0 right-0" style="top: 0px;"></div>
     `;
-    topSpacer = document.getElementById('companion-list-top-spacer');
+    scrollerHeight = document.getElementById('companion-list-scroller-height');
     visibleContainer = document.getElementById('companion-list-visible-items');
-    bottomSpacer = document.getElementById('companion-list-bottom-spacer');
+  } else {
+    scrollerHeight.style.height = `${totalItems * ITEM_HEIGHT}px`;
   }
 
   // Register scroll event listener (only once)
@@ -1766,7 +1771,6 @@ export function renderCompanionWordList() {
   }
 
   // Calculate and trigger initial scroll position to the current active card
-  const ITEM_HEIGHT = 54;
   const targetScrollTop = state.currentIndex * ITEM_HEIGHT - (container.clientHeight - ITEM_HEIGHT) / 2;
   container.scrollTop = Math.max(0, targetScrollTop);
 

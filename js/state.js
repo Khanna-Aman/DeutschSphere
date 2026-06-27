@@ -172,7 +172,6 @@ export const state = {
   showImages: safeGetItem('show_images', 'true') !== 'false', // Visual aids render flag
   sfxVolume: parseFloat(safeGetItem('sfx_volume', '0.5')), // SFX Volume (0.0 to 1.0)
   audioTone: safeGetItem('audio_tone', 'synth'), // SFX sound tone ('synth' or 'acoustic')
-  particleBursts: safeGetItem('particle_bursts', 'true') !== 'false', // Particle effects enabled
   learnedCards: new Set(), // Set of active level-scoped learned card IDs
   
   // Quiz Arena Sub-State
@@ -347,7 +346,6 @@ export const elements = {
   sfxVolumeVal: document.getElementById('sfx-volume-val'),
   soundStyleBtn: document.getElementById('sound-style-btn'),
   soundStyleText: document.getElementById('sound-style-text'),
-  particlesBtn: document.getElementById('particles-btn'),
   helpModalOverlay: document.getElementById('help-modal-overlay'),
   helpModalClose: document.getElementById('help-modal-close'),
   helpModalAck: document.getElementById('help-modal-ack'),
@@ -498,14 +496,7 @@ export async function resetActiveLevelProgress() {
   updateLearnedCacheForActiveLevel();
 }
 
-// Track visited levels to trigger achievement badge
-export function trackVisitedLevels() {
-  let visited = safeJsonParse('visited_levels', []);
-  if (!visited.includes(state.currentLevel)) {
-    visited.push(state.currentLevel);
-    safeSetItem('visited_levels', JSON.stringify(visited));
-  }
-}
+
 
 // Category icon map helper
 export function getCategoryIcon(category) {

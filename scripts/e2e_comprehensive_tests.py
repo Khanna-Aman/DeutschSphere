@@ -340,8 +340,7 @@ try:
         toggles = [
             ("#read-mode-btn", "Fast-Read mode"),
             ("#autoplay-btn", "Autoplay voice"),
-            ("#sound-style-btn", "Sound effects toggle"),
-            ("#particles-btn", "Particles animation effects")
+            ("#sound-style-btn", "Sound effects toggle")
         ]
         
         for selector, name in toggles:

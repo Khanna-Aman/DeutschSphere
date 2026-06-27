@@ -76,23 +76,7 @@ export function updateSoundStyleUI() {
   }
 }
 
-/**
- * Ambient screen particle toggle indicator sync
- */
-export function updateParticlesUI() {
-  if (elements.particlesBtn) {
-    const icon = elements.particlesBtn.querySelector('.toggle-icon');
-    if (icon) {
-      if (state.particleBursts) {
-        icon.className = 'toggle-icon fa-solid fa-toggle-on text-xs text-indigo-400';
-        elements.particlesBtn.classList.remove('opacity-60');
-      } else {
-        icon.className = 'toggle-icon fa-solid fa-toggle-off text-xs text-slate-500';
-        elements.particlesBtn.classList.add('opacity-60');
-      }
-    }
-  }
-}
+
 
 /**
  * Loads and initializes ambient settings UI sliders
@@ -105,7 +89,6 @@ export function initSettingsUI() {
     elements.sfxVolumeVal.textContent = `${Math.round(state.sfxVolume * 100)}%`;
   }
   updateSoundStyleUI();
-  updateParticlesUI();
   updateReadModeUI();
   updateAutoplayUI();
   updateHideLearnedUI();
@@ -508,14 +491,7 @@ export function setupEventListeners() {
     });
   }
 
-  if (elements.particlesBtn) {
-    elements.particlesBtn.addEventListener('click', () => {
-      state.particleBursts = !state.particleBursts;
-      safeSetItem('particle_bursts', state.particleBursts.toString());
-      updateParticlesUI();
-      playSnapHaptic();
-    });
-  }
+
 }
 
 /**

@@ -2,7 +2,6 @@
 import {
   state,
   elements,
-  trackVisitedLevels,
   initProfileData,
   migrateToFSRS,
   startSession,
@@ -109,7 +108,6 @@ export async function changeLevel(level) {
   }
   
   safeSetItem('current_level', level);
-  trackVisitedLevels();
   
   await initProfileData();
   migrateToFSRS();
@@ -261,7 +259,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   initTheme();
   initSettingsUI();
   initShortcutsToggle();
-  trackVisitedLevels();
   initHelpModal();
 
   fetchData();

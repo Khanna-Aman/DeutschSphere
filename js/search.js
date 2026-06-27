@@ -399,7 +399,7 @@ export function filterDeck(preserveIndex = false) {
         if (filters.srs.length > 0) {
           const srsInfo = getSRSInfo(card.id);
           const matchesSrs = filters.srs.some(val => {
-            if (val === 'due') return srsInfo.isDue && !srsInfo.isNew;
+            if (val === 'due') return srsInfo.isDue;
             if (val === 'new') return srsInfo.isNew;
             if (val === 'learned' || val === 'review') return !srsInfo.isNew;
             return false;
