@@ -1575,33 +1575,8 @@ input:focus-visible {
   color: #ffffff !important;
 }
 
-/* Dynamic Adaptive Split-Screen Workspace */
-@media (min-width: 1024px) {
-  #flashcard-workspace-container.workspace-split-active {
-    max-width: 64rem !important; /* lg:max-w-5xl */
-  }
-  #flashcard-workspace-grid.workspace-split-active {
-    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
-  }
-  #flashcard-workspace-grid.workspace-split-active #flashcard-workspace-left {
-    grid-column: span 7 / span 7 !important;
-  }
-  #flashcard-workspace-grid.workspace-split-active #flashcard-workspace-right {
-    grid-column: span 5 / span 5 !important;
-  }
-}
-
-@media (min-width: 1280px) {
-  #flashcard-workspace-container.workspace-split-active {
-    max-width: 72rem !important; /* xl:max-w-6xl */
-  }
-  #flashcard-workspace-grid.workspace-split-active #flashcard-workspace-left {
-    grid-column: span 6 / span 6 !important;
-  }
-  #flashcard-workspace-grid.workspace-split-active #flashcard-workspace-right {
-    grid-column: span 6 / span 6 !important;
-  }
-}
+/* Dynamic Adaptive Unified Workspace */
+/* Retains centered single-column structural balance across all monitor resolutions */
 
 /* ==========================================================================
    Print Stylesheet — High Contrast, Clean Layouts for Paper & PDF Exports
