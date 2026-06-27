@@ -2,7 +2,7 @@
 // Strategy: Cache-first for static assets, stale-while-revalidate for CDN resources.
 // NOTE: This SW only activates on HTTPS origins (GitHub Pages). It cannot run on file://.
 
-const CACHE_VERSION = 'v6.2.1'; // v6.2.1: Android navigation bar safe-area inset fix & docs sync
+const CACHE_VERSION = 'v6.3.0'; // v6.3.0: SDD production audit fixes, telemetry integration & docs sync
 const STATIC_CACHE = `deutschsphere-static-${CACHE_VERSION}`;
 const DATA_CACHE = `deutschsphere-data-${CACHE_VERSION}`;
 const CDN_CACHE = `deutschsphere-cdn-${CACHE_VERSION}`;
@@ -20,6 +20,7 @@ const APP_SHELL = [
   './js/nlp.js',
   './js/immersion.js',
   './js/idb-keyval.js',
+  './js/telemetry.js',
   './manifest.json',
   './icons/icon-192.png',
   './icons/icon-512.png'
