@@ -115,11 +115,7 @@
         <h2 class="font-display font-bold text-lg tracking-wide bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-violet-400 level-title" id="mobile-level-title">German A2</h2>
       </div>
     </div>
-    <!-- Mobile Streak Counter -->
-    <div id="mobile-streak-display" class="flex items-center gap-1.5 text-sm" aria-label="Streak indicator">
-      <i class="fa-solid fa-fire text-orange-500 streak-fire-icon"></i>
-      <span id="mobile-streak-count" class="font-black font-mono text-orange-400">0</span>
-    </div>
+
     <button id="mobile-sidebar-toggle" class="p-2 text-slate-400 hover:text-white transition-colors" aria-label="Open categories menu">
       <i class="fa-solid fa-bars text-xl"></i>
     </button>
@@ -234,30 +230,7 @@
           <span class="font-semibold text-xs leading-none">Quiz Arena</span>
         </div>
       </a>
-      <a href="#/adventure" id="nav-adventure" class="w-full px-3 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2.5 text-slate-400 hover:text-white hover:bg-slate-800/40 border border-transparent">
-        <i class="fa-solid fa-compass text-xs text-indigo-400"></i>
-        <div class="flex flex-col">
-          <span class="font-semibold text-xs leading-none">RPG Adventure</span>
-        </div>
-      </a>
-      <a href="#/weaver" id="nav-weaver" class="w-full px-3 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2.5 text-slate-400 hover:text-white hover:bg-slate-800/40 border border-transparent">
-        <i class="fa-solid fa-puzzle-piece text-xs text-indigo-400"></i>
-        <div class="flex flex-col">
-          <span class="font-semibold text-xs leading-none">Grammar Weaver</span>
-        </div>
-      </a>
-      <a href="#/cheatcodes" id="nav-cheatcodes" class="w-full px-3 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2.5 text-slate-400 hover:text-white hover:bg-slate-800/40 border border-transparent">
-        <i class="fa-solid fa-key text-xs text-indigo-400"></i>
-        <div class="flex flex-col">
-          <span class="font-semibold text-xs leading-none">Grammar Cheatcodes</span>
-        </div>
-      </a>
-      <a href="#/stats" id="nav-stats" class="w-full px-3 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2.5 text-slate-400 hover:text-white hover:bg-slate-800/40 border border-transparent">
-        <i class="fa-solid fa-chart-pie text-xs text-indigo-400"></i>
-        <div class="flex flex-col">
-          <span class="font-semibold text-xs leading-none">Learning Stats</span>
-        </div>
-      </a>
+
       <a href="#/immersion" id="nav-immersion" class="w-full px-3 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2.5 text-slate-400 hover:text-white hover:bg-slate-800/40 border border-transparent">
         <i class="fa-solid fa-flask text-xs text-indigo-400"></i>
         <div class="flex flex-col">
@@ -272,32 +245,7 @@
       <!-- Dynamically filled with javascript -->
     </div>
 
-    <!-- Daily Streak Widget -->
-    <div class="px-6 py-4 border-t border-slate-800/60" id="streak-widget">
-      <div class="bg-gradient-to-r from-orange-950/30 to-amber-950/20 border border-orange-500/20 rounded-xl p-4">
-        <div class="flex items-center justify-between mb-2">
-          <div class="flex items-center gap-2">
-            <i class="fa-solid fa-fire text-orange-500 text-lg streak-fire-icon"></i>
-            <div class="flex flex-col">
-              <span class="text-xs font-bold text-orange-400 uppercase tracking-wider leading-none">Daily Streak</span>
-              <span class="text-[9px] text-slate-500 font-medium leading-none mt-1">Consecutive study days</span>
-            </div>
-          </div>
-          <span id="sidebar-streak-count" class="text-2xl font-black font-mono text-orange-400 streak-counter">0</span>
-        </div>
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-1.5">
-            <span class="text-[10px] text-slate-500 font-semibold">Best:</span>
-            <span id="sidebar-streak-best" class="text-[10px] font-mono font-bold text-amber-400/80">0</span>
-          </div>
-          <div class="flex items-center gap-1.5" id="streak-freeze-display">
-            <i class="fa-solid fa-snowflake text-sky-400 text-[10px]"></i>
-            <span id="sidebar-streak-freezes" class="text-[10px] font-mono font-bold text-sky-400">1</span>
-            <span class="text-[10px] text-slate-500 font-semibold">Freezes</span>
-          </div>
-        </div>
-      </div>
-    </div>
+
 
     <!-- Focus Booster (Pomodoro & Web Audio Soundscapes) -->
     <div class="px-6 py-4 border-t border-slate-800/60" id="pomodoro-sidebar-widget">
@@ -307,7 +255,7 @@
             <i class="fa-solid fa-clock-rotate-left text-indigo-400 text-lg animate-pulse"></i>
             <div class="flex flex-col">
               <span class="text-xs font-bold text-indigo-300 uppercase tracking-wider leading-none">Focus Booster</span>
-              <span class="text-[9px] text-slate-500 font-medium leading-none mt-1">XP Multiplier &amp; Timer</span>
+              <span class="text-[9px] text-slate-500 font-medium leading-none mt-1">Focus Timer</span>
             </div>
           </div>
           <!-- Timer Display with concentric circular ring indicator -->
@@ -907,27 +855,7 @@
               <p id="card-antonym" class="text-sm font-semibold text-slate-300 pl-1 mt-1">Antonym</p>
             </div>
 
-            <!-- Dynamic Grammar Matrix Section (Conjugation/Declension) -->
-            <div id="card-grammar-matrix-container" class="pt-4 border-t border-slate-800/40 hidden">
-              <button id="card-grammar-matrix-trigger" class="w-full py-2.5 px-4 rounded-xl bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-400 font-extrabold text-xs uppercase tracking-wider flex items-center justify-between transition-all border border-indigo-500/20 active:scale-98">
-                <span class="flex items-center gap-2">
-                  <i class="fa-solid fa-table text-sm"></i>
-                  <span id="grammar-matrix-title">Grammar Matrix</span>
-                </span>
-                <i id="grammar-matrix-icon" class="fa-solid fa-chevron-down transition-transform duration-300"></i>
-              </button>
-              
-              <!-- Smooth accordion wrapper using CSS Grid rows 0fr -> 1fr -->
-              <div id="card-grammar-matrix-drawer" class="grid transition-all duration-300 ease-out opacity-0 pointer-events-none" style="grid-template-rows: 0fr;">
-                <div class="overflow-hidden">
-                  <div class="mt-3 bg-slate-950/40 border border-slate-900 rounded-xl p-4 md:p-5">
-                    <div id="grammar-matrix-table-container" class="w-full overflow-x-auto">
-                      <!-- Tables dynamically injected by flashcards.js -->
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
             
           </div>
         </div>
@@ -959,7 +887,7 @@
 
           <!-- Panel 2: Live Statistics -->
           <div id="companion-panel-stats" role="tabpanel" class="hidden space-y-4">
-            <div class="grid grid-cols-2 gap-3">
+            <div class="grid grid-cols-3 gap-3">
               <div class="bg-slate-950/40 border border-slate-900 rounded-xl p-3 text-center">
                 <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block">SRS Mastery</span>
                 <span id="companion-stat-mastered" class="text-lg font-black text-emerald-400 font-mono block mt-1">0%</span>
@@ -974,11 +902,6 @@
                 <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block">Session Cards</span>
                 <span id="companion-stat-reviewed" class="text-lg font-black text-pink-400 font-mono block mt-1">0</span>
                 <span class="text-[9px] text-slate-400 block">Reviewed today</span>
-              </div>
-              <div class="bg-slate-950/40 border border-slate-900 rounded-xl p-3 text-center">
-                <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block">Current Streak</span>
-                <span id="companion-stat-streak" class="text-lg font-black text-amber-500 font-mono block mt-1">0</span>
-                <span class="text-[9px] text-slate-400 block">Days active</span>
               </div>
             </div>
 
@@ -1028,23 +951,7 @@
             <span class="text-xs text-slate-500 font-normal">Interactive training for permanent vocabulary mastery</span>
           </p>
         </div>
-        <!-- Streak & Analytics Badges -->
-        <div class="flex gap-3">
-          <div class="bg-slate-900 border border-slate-800 rounded-xl px-4 py-2 flex items-center gap-2 text-amber-500 shadow-md">
-            <i class="fa-solid fa-fire text-sm animate-pulse"></i>
-            <div class="flex flex-col">
-              <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider leading-none">Serie (Streak)</span>
-              <span id="quiz-streak-counter" class="text-sm font-black font-mono leading-none mt-1">0</span>
-            </div>
-          </div>
-          <div class="bg-slate-900 border border-slate-800 rounded-xl px-4 py-2 flex items-center gap-2 text-indigo-400 shadow-md">
-            <i class="fa-solid fa-trophy text-sm"></i>
-            <div class="flex flex-col">
-              <span class="text-[10px] text-slate-500 font-bold uppercase tracking-wider leading-none">Bestleistung</span>
-              <span id="quiz-best-streak" class="text-sm font-black font-mono leading-none mt-1">0</span>
-            </div>
-          </div>
-        </div>
+
       </div>
 
       <!-- Mode Selector Menu (Initial State) -->
@@ -1758,202 +1665,6 @@
         </div>
 
         <!-- Active Actions (Reset & Submit) -->
-        <div id="adventure-action-buttons" class="flex justify-end gap-3">
-          <button id="adventure-reset-btn" class="px-5 py-2.5 bg-slate-900 border border-slate-800 hover:bg-rose-950/10 hover:border-rose-900 hover:text-rose-400 rounded-xl text-xs font-bold transition-all active:scale-95 flex items-center gap-1.5">
-            <i class="fa-solid fa-rotate-left"></i> <span>Reset</span>
-          </button>
-          <button id="adventure-submit-btn" class="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-black transition-all shadow-lg shadow-indigo-600/10 active:scale-95 flex items-center gap-1.5">
-            <i class="fa-solid fa-paper-plane"></i> <span>Submit</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Scenario Complete / Results Screen -->
-      <div id="adventure-results" class="hidden flex-1 flex flex-col items-center justify-center text-center max-w-md mx-auto py-12 space-y-6">
-        <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-amber-400 to-yellow-500 flex items-center justify-center shadow-xl shadow-amber-500/20 text-white text-3xl animate-bounce">
-          <i class="fa-solid fa-circle-check"></i>
-        </div>
-        
-        <div class="space-y-2">
-          <h3 class="text-2xl md:text-3xl font-black font-display text-white tracking-tight">Scenario Completed!</h3>
-          <p class="text-sm text-slate-400 leading-relaxed">Excellent work! You have successfully mastered the conversation.</p>
-        </div>
-
-        <div class="w-full bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 grid grid-cols-2 gap-4">
-          <div class="flex flex-col items-center p-3 bg-slate-950/40 rounded-xl border border-slate-900">
-            <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">XP Earned</span>
-            <span id="adventure-results-xp" class="text-xl font-black font-mono text-amber-400 mt-1">+60 XP</span>
-          </div>
-          <div class="flex flex-col items-center p-3 bg-slate-950/40 rounded-xl border border-slate-900">
-            <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Sentence Precision</span>
-            <span class="text-xl font-black font-mono text-emerald-400 mt-1">100%</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col sm:flex-row gap-3 w-full">
-          <button id="adventure-results-retry-btn" class="flex-1 bg-slate-900 border border-slate-800 hover:border-indigo-500 hover:bg-indigo-950/20 text-slate-300 hover:text-indigo-400 py-3 px-4 rounded-xl text-xs font-bold transition-all active:scale-95">Repeat Scenario</button>
-          <button id="adventure-results-done-btn" class="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white py-3 px-4 rounded-xl text-xs font-black transition-all shadow-md shadow-indigo-600/10 active:scale-95">View Dashboard</button>
-        </div>
-      </div>
-    </section> <!-- End of adventure-view -->
-
-    <!-- Grammatik-Weberei View Container -->
-    <section id="weaver-view" class="hidden flex-1 flex flex-col w-full max-w-4xl mx-auto px-4 md:px-8 py-6 pb-12 overflow-y-auto">
-      <!-- Header Block -->
-      <div class="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div class="flex flex-col">
-          <h2 class="text-2xl md:text-3xl font-bold font-display tracking-tight text-white flex items-center gap-2">
-            <i class="fa-solid fa-puzzle-piece text-indigo-400"></i> Grammar Weaver
-          </h2>
-          <p class="text-sm text-slate-400 mt-1">Sentence Structure Trainer &amp; Word Order Physics | Syntax Game</p>
-        </div>
-        
-        <!-- Experience Points (XP) Dashboard -->
-        <div class="bg-slate-900 border border-slate-800 rounded-xl px-4 py-2 flex items-center gap-2.5 text-indigo-400 shadow-md">
-          <i class="fa-solid fa-star animate-pulse text-amber-500"></i>
-          <div class="flex flex-col font-mono text-xs font-bold uppercase tracking-wider">
-            <span class="text-[9px] text-slate-500">Experience Points (XP)</span>
-            <span id="weaver-xp-counter" class="text-sm text-white mt-0.5">0 XP</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Introduction Panel -->
-      <div id="weaver-intro-screen" class="space-y-6">
-        <div class="bg-indigo-950/20 border border-indigo-500/20 rounded-2xl p-6 md:p-8">
-          <h3 class="text-lg md:text-xl font-bold font-display text-white flex items-center gap-2">
-            <i class="fa-solid fa-lightbulb text-indigo-400"></i> Master German Word Order!
-          </h3>
-          <p class="text-sm text-slate-300 mt-2 leading-relaxed">
-            Arrange the word chips in the syntactically correct sequence. Pay close attention to German sentence structure rules: the conjugated verb stands at position 2 in main clauses (V2 rule), but travels to the very end in subordinate clauses (e.g., clauses starting with <em>weil</em>, <em>dass</em>)! Separable verbs split up. Let's start training!
-          </p>
-          <button id="weaver-start-btn" class="mt-4 bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2.5 rounded-xl text-xs font-extrabold transition-all shadow-md shadow-indigo-600/20 active:scale-95">
-            Start Training
-          </button>
-        </div>
-      </div>
-
-      <!-- Active Weaver Board -->
-      <div id="weaver-board" class="hidden flex-1 flex flex-col space-y-6">
-        <!-- Progress Bar -->
-        <div class="flex items-center justify-between border-b border-slate-900 pb-3">
-          <div class="flex items-center gap-2.5">
-            <button id="weaver-quit-btn" class="p-2 text-slate-400 hover:text-rose-400 transition-colors flex items-center justify-center w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 hover:border-rose-950" title="Quit">
-              <i class="fa-solid fa-arrow-left text-xs"></i>
-            </button>
-            <div>
-              <h3 id="weaver-active-title" class="text-lg font-extrabold text-white leading-tight">Sentence Builder</h3>
-              <span id="weaver-active-badge" class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 text-slate-400 text-[9px] font-bold rounded uppercase mt-0.5 block tracking-wider w-fit">A2</span>
-            </div>
-          </div>
-          <div class="flex items-center gap-3">
-            <div class="flex flex-col items-end">
-              <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Progress</span>
-              <span id="weaver-progress-text" class="text-xs font-bold font-mono text-slate-300 mt-0.5">Sentence 1 / 5</span>
-            </div>
-            <div class="w-24 bg-slate-950 rounded-full h-2 overflow-hidden border border-slate-800/80">
-              <div id="weaver-progress-bar-fill" class="bg-gradient-to-r from-indigo-500 to-violet-500 h-full w-0 transition-all duration-300"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Translation Hint (English context) -->
-        <div class="bg-slate-900/30 border border-slate-800/60 rounded-2xl p-4 flex gap-3.5 items-center">
-          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-lg flex-shrink-0">
-            <i class="fa-solid fa-language"></i>
-          </div>
-          <div class="flex-1 min-w-0">
-            <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block leading-none">Target Translation</span>
-            <p id="weaver-translation-hint" class="text-sm font-semibold text-slate-200 mt-1 truncate">Translate this sentence...</p>
-          </div>
-        </div>
-
-        <!-- Sentence Workspace (The Dotted Snap Zones) -->
-        <div class="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-6 space-y-4 shadow-lg shadow-slate-950/10">
-          <div class="flex items-center justify-between">
-            <span class="text-[9px] font-bold text-pink-400 uppercase tracking-widest block leading-none">Assembly Board</span>
-            <span class="text-[10px] text-slate-500 font-medium italic">Arrange the words in the dashed boxes</span>
-          </div>
-          
-          <!-- Dropzone area containing snap boxes -->
-          <div id="weaver-dropzone" role="group" aria-label="Sentence Building Area" class="min-h-[96px] border-2 border-dashed border-slate-800/80 rounded-xl p-4 bg-slate-950/40 flex flex-wrap gap-3.5 items-center justify-center transition-all duration-300 relative select-none">
-            <!-- Snap boxes are loaded dynamically via JS -->
-            <span id="weaver-dropzone-placeholder" class="text-slate-500 font-medium text-xs pointer-events-none">Workspace is empty. Choose words from the pool below...</span>
-          </div>
-
-          <!-- Dynamic word chips pool -->
-          <div id="weaver-chips-pool" role="group" aria-label="Words for dragging and dropping" class="flex flex-wrap gap-2.5 justify-center p-4 bg-slate-950/20 rounded-xl border border-slate-900/60 min-h-[64px] select-none">
-            <!-- Word chips are loaded dynamically via JS -->
-          </div>
-        </div>
-
-        <!-- Feedback & Grammatik Tips Drawer -->
-        <div id="weaver-feedback" role="status" aria-live="polite" class="p-5 rounded-2xl border border-slate-800 hidden flex-col space-y-3 bg-slate-950/60 backdrop-blur-md transition-all duration-300">
-          <div class="flex items-start gap-3.5">
-            <div id="weaver-feedback-icon" class="w-10 h-10 rounded-xl flex items-center justify-center text-white shrink-0 shadow-lg text-lg">
-              <i class="fa-solid fa-check"></i>
-            </div>
-            <div class="flex-1 space-y-1">
-              <h4 id="weaver-feedback-title" class="text-sm font-black text-white">Correctly woven!</h4>
-              <p id="weaver-feedback-text" class="text-xs text-slate-300 leading-relaxed"></p>
-            </div>
-          </div>
-          
-          <div id="weaver-feedback-tip" class="bg-indigo-950/20 border border-indigo-900/30 p-3.5 rounded-xl hidden flex items-start gap-2.5 text-indigo-300 text-xs leading-relaxed">
-            <i class="fa-solid fa-compass shrink-0 mt-0.5 text-amber-400"></i>
-            <div>
-              <span class="font-extrabold uppercase text-[9px] tracking-wider block mb-1">Syntax Analysis (Grammar Tip):</span>
-              <p id="weaver-feedback-tip-text"></p>
-            </div>
-          </div>
-          
-          <div class="flex justify-end pt-1">
-            <button id="weaver-next-btn" class="bg-indigo-600 hover:bg-indigo-500 text-white px-5 py-2 rounded-xl text-xs font-extrabold transition-all shadow-md shadow-indigo-600/20 active:scale-95">
-              Next Sentence | Continue <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i>
-            </button>
-          </div>
-        </div>
-
-        <!-- Control Buttons -->
-        <div id="weaver-action-buttons" class="flex justify-end gap-3">
-          <button id="weaver-reset-btn" class="px-5 py-2.5 bg-slate-900 border border-slate-800 hover:bg-rose-950/10 hover:border-rose-900 hover:text-rose-400 rounded-xl text-xs font-bold transition-all active:scale-95 flex items-center gap-1.5">
-            <i class="fa-solid fa-rotate-left"></i> <span>Reset Workspace</span>
-          </button>
-          <button id="weaver-submit-btn" class="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-black transition-all shadow-lg shadow-indigo-600/10 active:scale-95 flex items-center gap-1.5">
-            <i class="fa-solid fa-paper-plane"></i> <span>Verify Pattern</span>
-          </button>
-        </div>
-      </div>
-
-      <!-- Results Screen -->
-      <div id="weaver-results" class="hidden flex-1 flex flex-col items-center justify-center text-center max-w-md mx-auto py-12 space-y-6">
-        <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-indigo-500 to-violet-500 flex items-center justify-center shadow-xl shadow-indigo-500/20 text-white text-3xl animate-bounce">
-          <i class="fa-solid fa-award"></i>
-        </div>
-        
-        <div class="space-y-2">
-          <h3 class="text-2xl md:text-3xl font-black font-display text-white tracking-tight">Round Completed!</h3>
-          <p class="text-sm text-slate-400 leading-relaxed">Fantastic weaving! You are mastering German sentence structures.</p>
-        </div>
-
-        <div class="w-full bg-slate-900/60 border border-slate-800/80 rounded-2xl p-5 grid grid-cols-2 gap-4">
-          <div class="flex flex-col items-center p-3 bg-slate-950/40 rounded-xl border border-slate-900">
-            <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">XP Earned</span>
-            <span id="weaver-results-xp" class="text-xl font-black font-mono text-amber-400 mt-1">+125 XP</span>
-          </div>
-          <div class="flex flex-col items-center p-3 bg-slate-950/40 rounded-xl border border-slate-900">
-            <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest">Accuracy</span>
-            <span id="weaver-results-accuracy" class="text-xl font-black font-mono text-emerald-400 mt-1">100%</span>
-          </div>
-        </div>
-
-        <div class="flex flex-col sm:flex-row gap-3 w-full">
-          <button id="weaver-results-retry-btn" class="flex-1 bg-slate-900 border border-slate-800 hover:border-indigo-500 hover:bg-indigo-950/20 text-slate-300 hover:text-indigo-400 py-3 px-4 rounded-xl text-xs font-bold transition-all active:scale-95">Repeat Round</button>
-          <button id="weaver-results-done-btn" class="flex-1 bg-indigo-600 hover:bg-indigo-500 text-white py-3 px-4 rounded-xl text-xs font-black transition-all shadow-md shadow-indigo-600/10 active:scale-95">Back to Selection</button>
-        </div>
-      </div>
-    </section> <!-- End of weaver-view -->
-
     <!-- IMMERSION VIEW (NLP Lab) -->
     <section id="immersion-view" class="w-full max-w-4xl mx-auto h-full flex flex-col hidden pb-24">
       <header class="mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -1997,17 +1708,7 @@
 
   </main>
 
-  <!-- Achievement Unlock Toast Notification -->
-  <div id="achievement-toast" class="fixed bottom-6 right-6 z-50 glass border-2 border-amber-500/50 bg-slate-950/95 text-white rounded-2xl p-4 shadow-2xl flex items-center gap-4 max-w-sm pointer-events-none transition-all duration-500 transform translate-y-[150%] opacity-0">
-    <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-2xl shrink-0">
-      <i class="fa-solid fa-trophy"></i>
-    </div>
-    <div class="flex-1 flex flex-col">
-      <span class="text-[9px] text-amber-400 font-extrabold uppercase tracking-widest leading-none">Achievement Unlocked!</span>
-      <span id="achievement-toast-title" class="text-sm font-black font-display text-white mt-1 leading-snug">Early Bird</span>
-      <span id="achievement-toast-desc" class="text-xs text-slate-400 mt-0.5 leading-normal">Study a word before 7:00 AM.</span>
-    </div>
-  </div>
+
 
   <!-- Fullscreen Loading State Overlay -->
   <div id="loader-overlay" class="fixed inset-0 bg-slate-950 z-50 flex flex-col items-center justify-center transition-opacity duration-500">

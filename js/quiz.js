@@ -2,7 +2,6 @@
 
 import { state, elements, shuffleArray, safeSetItem, safeGetItem, escapeHtml } from './state.js';
 import { speakText, playSuccessArpeggio, playErrorGlide } from './audio.js';
-import { unlockAchievement } from './stats.js';
 
 // escapeHtml imported from state.js (shared utility)
 
@@ -333,9 +332,7 @@ export function handleMCOptionClick(opt, clickedBtn) {
       elements.quizFeedbackPanel.classList.remove('hidden');
     }
 
-    if (state.quiz.streak >= 10) {
-      unlockAchievement('streak_master');
-    }
+    // Streak master tracking removed
   } else {
     state.quiz.streak = 0;
     safeSetItem('quiz_streak', 0);
@@ -438,9 +435,7 @@ export function checkSpellingAnswer() {
       elements.quizFeedbackPanel.classList.remove('hidden');
     }
 
-    if (state.quiz.streak >= 10) {
-      unlockAchievement('streak_master');
-    }
+    // Streak master tracking removed
   } else {
     state.quiz.streak = 0;
     safeSetItem('quiz_streak', 0);
@@ -493,10 +488,7 @@ export function nextQuizQuestion() {
       }
     }
     
-    // F29: Marathon Achievement Unlock Check — use totalAnswered (survives buffer refills)
-    if (state.quiz.totalAnswered >= 30) {
-      unlockAchievement('marathon');
-    }
+    // Marathon check removed
 
     loadQuizQuestion();
   } else {
@@ -529,20 +521,7 @@ export function showQuizResults() {
     elements.quizStatsAccuracy.textContent = `${accuracy}%`;
   }
 
-  // Perfect Score Achievement check
-  if (accuracy === 100 && total >= 10) {
-    unlockAchievement('perfect_score');
-  }
-
-  // Onboarding: Quiz Rookie — first quiz completion with 5+ questions
-  if (total >= 5) {
-    unlockAchievement('quiz_rookie');
-  }
-
-  // Marathon check at finish early
-  if (total >= 30) {
-    unlockAchievement('marathon');
-  }
+  // Achievement checks removed
 }
 
 // Reset variables and replay active mode

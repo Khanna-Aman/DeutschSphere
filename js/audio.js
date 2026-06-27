@@ -130,51 +130,7 @@ function playAcousticPluck(ctx, freq, duration, now, volumeMultiplier = 1.0) {
 
 // Initialize Web Audio oscillator chime for unlocks and achievements
 export function playAchievementChime() {
-  try {
-    const ctx = getSharedAudioContext();
-    if (!ctx) return;
-    const now = ctx.currentTime;
-    const vol = state.sfxVolume;
-    if (vol <= 0) return;
-
-    if (state.audioTone === 'acoustic') {
-      // Arpeggiated sequence of physically modeled plucks
-      playAcousticPluck(ctx, 523.25, 0.6, now, 1.0); // C5
-      playAcousticPluck(ctx, 659.25, 0.6, now + 0.08, 0.9); // E5
-      playAcousticPluck(ctx, 880.00, 0.7, now + 0.16, 1.1); // A5
-      playAcousticPluck(ctx, 1046.50, 0.8, now + 0.24, 1.2); // C6
-    } else {
-      // First tone (fundamental pitch)
-      const osc1 = ctx.createOscillator();
-      const gain1 = ctx.createGain();
-      osc1.type = 'triangle';
-      osc1.frequency.setValueAtTime(523.25, now); // C5
-      osc1.frequency.exponentialRampToValueAtTime(880, now + 0.15); // A5
-      gain1.gain.setValueAtTime(0.15 * vol, now);
-      gain1.gain.exponentialRampToValueAtTime(0.001, now + 0.6);
-      osc1.connect(gain1);
-      gain1.connect(ctx.destination);
-      
-      // Second tone (harmonizing pitch, slightly offset in time)
-      const osc2 = ctx.createOscillator();
-      const gain2 = ctx.createGain();
-      osc2.type = 'sine';
-      osc2.frequency.setValueAtTime(659.25, now + 0.08); // E5
-      osc2.frequency.exponentialRampToValueAtTime(1046.5, now + 0.25); // C6
-      gain2.gain.setValueAtTime(0.12 * vol, now + 0.08);
-      gain2.gain.exponentialRampToValueAtTime(0.001, now + 0.7);
-      osc2.connect(gain2);
-      gain2.connect(ctx.destination);
-      
-      osc1.start(now);
-      osc1.stop(now + 0.6);
-      
-      osc2.start(now + 0.08);
-      osc2.stop(now + 0.75);
-    }
-  } catch (e) {
-    console.warn("Web Audio chime failed to play:", e);
-  }
+  // Silent no-op for zero-distraction focus
 }
 
 // Grammatik-Weberei / RPG Drag slide pitch tone generator
@@ -238,115 +194,17 @@ export function playSnapHaptic() {
 
 // Ascending C-Major chord cascade arpeggio on correct answer
 export function playSuccessArpeggio() {
-  try {
-    const ctx = getSharedAudioContext();
-    if (!ctx) return;
-    const vol = state.sfxVolume;
-    if (vol <= 0) return;
-
-    const now = ctx.currentTime;
-    const notes = [261.63, 329.63, 392.00, 523.25]; // C4, E4, G4, C5
-
-    if (state.audioTone === 'acoustic') {
-      notes.forEach((freq, idx) => {
-        playAcousticPluck(ctx, freq, 0.5, now + idx * 0.06, 0.7);
-      });
-    } else {
-      notes.forEach((freq, idx) => {
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(freq, now + idx * 0.08);
-        
-        gain.gain.setValueAtTime(0.08 * vol, now + idx * 0.08);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.08 + 0.35);
-        
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-        
-        osc.start(now + idx * 0.08);
-        osc.stop(now + idx * 0.08 + 0.4);
-      });
-    }
-  } catch (e) {}
+  // Silent no-op for zero-distraction focus
 }
 
 // Descending pitch sweep accompanied by wrong-shake animation
 export function playErrorGlide() {
-  try {
-    const ctx = getSharedAudioContext();
-    if (!ctx) return;
-    const vol = state.sfxVolume;
-    if (vol <= 0) return;
-
-    const now = ctx.currentTime;
-
-    if (state.audioTone === 'acoustic') {
-      // Physical low pitch damped string drop
-      playAcousticPluck(ctx, 130, 0.4, now, 1.2);
-      playAcousticPluck(ctx, 98, 0.4, now + 0.08, 1.0);
-    } else {
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      
-      osc.type = 'sawtooth';
-      osc.frequency.setValueAtTime(220, now); // A3
-      osc.frequency.linearRampToValueAtTime(110, now + 0.35); // A2
-      
-      // Low pass filter to reduce sawtooth harshness
-      const filter = ctx.createBiquadFilter();
-      filter.type = 'lowpass';
-      filter.frequency.setValueAtTime(400, now);
-      
-      gain.gain.setValueAtTime(0.08 * vol, now);
-      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
-      
-      osc.connect(filter);
-      filter.connect(gain);
-      gain.connect(ctx.destination);
-      
-      osc.start(now);
-      osc.stop(now + 0.36);
-    }
-  } catch (e) {}
+  // Silent no-op for zero-distraction focus
 }
 
 // Ascending 7-note epic arpeggio cascade for scenario/level completion
 export function playEpicArpeggio() {
-  try {
-    const ctx = getSharedAudioContext();
-    if (!ctx) return;
-    const vol = state.sfxVolume;
-    if (vol <= 0) return;
-
-    const now = ctx.currentTime;
-    // C4 → E4 → G4 → C5 → E5 → G5 → C6 rising cascade
-    const freqs = [261.63, 329.63, 392.00, 523.25, 659.25, 783.99, 1046.50];
-
-    if (state.audioTone === 'acoustic') {
-      freqs.forEach((freq, idx) => {
-        playAcousticPluck(ctx, freq, 0.5, now + idx * 0.1, 0.8);
-      });
-    } else {
-      freqs.forEach((freq, idx) => {
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(freq, now + idx * 0.1);
-
-        gain.gain.setValueAtTime(0.1 * vol, now + idx * 0.1);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.1 + 0.6);
-
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-
-        osc.start(now + idx * 0.1);
-        osc.stop(now + idx * 0.1 + 0.6);
-      });
-    }
-  } catch (e) {}
+  // Silent no-op for zero-distraction focus
 }
 
 // Initialize Text-to-Speech Engine

@@ -7,7 +7,6 @@ const STATIC_CACHE = `deutschsphere-static-${CACHE_VERSION}`;
 const DATA_CACHE = `deutschsphere-data-${CACHE_VERSION}`;
 const CDN_CACHE = `deutschsphere-cdn-${CACHE_VERSION}`;
 
-// Core app shell files to precache on install
 const APP_SHELL = [
   './',
   './index.html',
@@ -17,20 +16,13 @@ const APP_SHELL = [
   './js/audio.js',
   './js/flashcards.js',
   './js/quiz.js',
-  './js/adventure.js',
-  './js/weaver.js',
-  './js/stats.js',
-  './js/cheatcodes_db.js',
   './js/fsrs.js',
   './js/nlp.js',
   './js/immersion.js',
   './js/idb-keyval.js',
   './manifest.json',
   './icons/icon-192.png',
-  './icons/icon-512.png',
-  './lottie/streak.json',
-  './lottie/level-complete.json',
-  './lottie/achievement.json'
+  './icons/icon-512.png'
 ];
 
 // Install: precache core app shell

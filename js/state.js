@@ -426,12 +426,7 @@ export const elements = {
   deckPrefsDropdown: document.getElementById('deck-prefs-dropdown'),
   cardImageContainer: document.getElementById('card-image-container'),
   cardImage: document.getElementById('card-image'),
-  cardGrammarMatrixContainer: document.getElementById('card-grammar-matrix-container'),
-  cardGrammarMatrixTrigger: document.getElementById('card-grammar-matrix-trigger'),
-  cardGrammarMatrixDrawer: document.getElementById('card-grammar-matrix-drawer'),
-  grammarMatrixIcon: document.getElementById('grammar-matrix-icon'),
-  grammarMatrixTitle: document.getElementById('grammar-matrix-title'),
-  grammarMatrixTableContainer: document.getElementById('grammar-matrix-table-container'),
+
   suffixHelperTrigger: document.getElementById('suffix-helper-trigger'),
   suffixDrawer: document.getElementById('suffix-drawer'),
   suffixDrawerBadge: document.getElementById('suffix-drawer-badge'),
@@ -550,37 +545,6 @@ export const elements = {
   pomodoroTimeText: document.getElementById('pomodoro-time-text'),
   pomodoroTimerRing: document.getElementById('pomodoro-timer-ring'),
 
-  // Deutsch-Abenteuer (RPG)
-  adventureView: document.getElementById('adventure-view'),
-  navAdventure: document.getElementById('nav-adventure'),
-  adventureSelectorScreen: document.getElementById('adventure-selector-screen'),
-  adventureSelector: document.getElementById('adventure-selector'),
-  adventureBoard: document.getElementById('adventure-board'),
-  adventureActiveTitle: document.getElementById('adventure-active-title'),
-  adventureActiveBadge: document.getElementById('adventure-active-badge'),
-  adventureProgressText: document.getElementById('adventure-progress-text'),
-  adventureProgressBarFill: document.getElementById('adventure-progress-bar-fill'),
-  adventureNpcBubble: document.getElementById('adventure-npc-bubble'),
-  adventureNpcSpeakBtn: document.getElementById('adventure-npc-speak-btn'),
-  adventureDropzone: document.getElementById('adventure-dropzone'),
-  adventureChipsPool: document.getElementById('adventure-chips-pool'),
-  adventureFeedback: document.getElementById('adventure-feedback'),
-  adventureFeedbackIcon: document.getElementById('adventure-feedback-icon'),
-  adventureFeedbackTitle: document.getElementById('adventure-feedback-title'),
-  adventureFeedbackText: document.getElementById('adventure-feedback-text'),
-  adventureFeedbackTip: document.getElementById('adventure-feedback-tip'),
-  adventureFeedbackTipText: document.getElementById('adventure-feedback-tip-text'),
-  adventureNextNodeBtn: document.getElementById('adventure-next-node-btn'),
-  adventureResetBtn: document.getElementById('adventure-reset-btn'),
-  adventureSubmitBtn: document.getElementById('adventure-submit-btn'),
-  adventureActionButtons: document.getElementById('adventure-action-buttons'),
-  adventureQuitBtn: document.getElementById('adventure-quit-btn'),
-  adventureResults: document.getElementById('adventure-results'),
-  adventureResultsXp: document.getElementById('adventure-results-xp'),
-  adventureResultsRetryBtn: document.getElementById('adventure-results-retry-btn'),
-  adventureResultsDoneBtn: document.getElementById('adventure-results-done-btn'),
-  adventureXpCounter: document.getElementById('adventure-xp-counter'),
-
   // Phonetik-Spiegel (Voice Mirror)
   phoneticBtn: document.getElementById('phonetic-btn'),
   phoneticMirrorPanel: document.getElementById('phonetic-mirror-panel'),
@@ -599,38 +563,6 @@ export const elements = {
   nativeSpecHint: document.getElementById('native-spec-hint'),
   learnerSpecHint: document.getElementById('learner-spec-hint'),
   learnerSpecStatus: document.getElementById('learner-spec-status'),
-
-  // Grammatik-Weberei (Grammar Weaver)
-  navWeaver: document.getElementById('nav-weaver'),
-  weaverView: document.getElementById('weaver-view'),
-  weaverXpCounter: document.getElementById('weaver-xp-counter'),
-  weaverIntroScreen: document.getElementById('weaver-intro-screen'),
-  weaverStartBtn: document.getElementById('weaver-start-btn'),
-  weaverBoard: document.getElementById('weaver-board'),
-  weaverQuitBtn: document.getElementById('weaver-quit-btn'),
-  weaverActiveTitle: document.getElementById('weaver-active-title'),
-  weaverActiveBadge: document.getElementById('weaver-active-badge'),
-  weaverProgressText: document.getElementById('weaver-progress-text'),
-  weaverProgressBarFill: document.getElementById('weaver-progress-bar-fill'),
-  weaverTranslationHint: document.getElementById('weaver-translation-hint'),
-  weaverDropzone: document.getElementById('weaver-dropzone'),
-  weaverDropzonePlaceholder: document.getElementById('weaver-dropzone-placeholder'),
-  weaverChipsPool: document.getElementById('weaver-chips-pool'),
-  weaverFeedback: document.getElementById('weaver-feedback'),
-  weaverFeedbackIcon: document.getElementById('weaver-feedback-icon'),
-  weaverFeedbackTitle: document.getElementById('weaver-feedback-title'),
-  weaverFeedbackText: document.getElementById('weaver-feedback-text'),
-  weaverFeedbackTip: document.getElementById('weaver-feedback-tip'),
-  weaverFeedbackTipText: document.getElementById('weaver-feedback-tip-text'),
-  weaverNextBtn: document.getElementById('weaver-next-btn'),
-  weaverActionButtons: document.getElementById('weaver-action-buttons'),
-  weaverResetBtn: document.getElementById('weaver-reset-btn'),
-  weaverSubmitBtn: document.getElementById('weaver-submit-btn'),
-  weaverResults: document.getElementById('weaver-results'),
-  weaverResultsXp: document.getElementById('weaver-results-xp'),
-  weaverResultsAccuracy: document.getElementById('weaver-results-accuracy'),
-  weaverResultsRetryBtn: document.getElementById('weaver-results-retry-btn'),
-  weaverResultsDoneBtn: document.getElementById('weaver-results-done-btn'),
 
   // Immersions-Labor (NLP Engine)
   navImmersion: document.getElementById('nav-immersion'),
@@ -999,31 +931,13 @@ export function migrateToFSRS() {
     saveSRSState();
     // FSRS migration completed silently
   }
+}
+
 // Centralized XP addition helper (unifies weaver and adventure XP)
 export function addXP(amount) {
-  if (state.focus && state.focus.xpMultiplierActive) {
-    amount = Math.round(amount * 1.25);
-  }
-  let currentXP = parseInt(safeGetItem('adventure_xp', '0'), 10) || 0;
-  currentXP += amount;
-  safeSetItem('adventure_xp', String(currentXP));
-  
-  if (state.adventure) {
-    state.adventure.xp = currentXP;
-  }
-
-  // Dynamic bump & color animation for whichever counter is active/present
-  const counters = [elements.adventureXpCounter, elements.weaverXpCounter];
-  counters.forEach(counter => {
-    if (counter) {
-      counter.textContent = `${currentXP} XP`;
-      counter.classList.add('scale-110', 'text-amber-400');
-      setTimeout(() => {
-        counter.classList.remove('scale-110', 'text-amber-400');
-      }, 450);
-    }
-  });
+  // Silent no-op to support de-gamified focus
 }
+
 
 // ==========================================
 // DAILY STREAK SYSTEM
@@ -1222,9 +1136,7 @@ export async function generateSyncKey() {
       show_images: localStorage.getItem('show_images') || 'true',
       current_theme: localStorage.getItem('current_theme') || 'default',
       current_level: localStorage.getItem('current_level') || 'a2',
-      streak_data: safeJsonParse('streak_data', {}),
-      session_history: safeJsonParse('session_history', []),
-      unlocked_achievements: safeJsonParse('unlocked_achievements', [])
+      streak_data: safeJsonParse('streak_data', {})
     }
   };
   const jsonStr = JSON.stringify(payload);
@@ -1303,10 +1215,6 @@ export async function restoreFromSyncKey(base64Str) {
       localStorage.setItem('current_level', data.current_level);
     if (data.streak_data && isPlainObject(data.streak_data))
       localStorage.setItem('streak_data', JSON.stringify(data.streak_data));
-    if (data.session_history && Array.isArray(data.session_history))
-      localStorage.setItem('session_history', JSON.stringify(data.session_history));
-    if (data.unlocked_achievements && Array.isArray(data.unlocked_achievements))
-      localStorage.setItem('unlocked_achievements', JSON.stringify(data.unlocked_achievements));
     
     return true;
   } catch (e) {
@@ -1344,196 +1252,14 @@ export function shuffleArray(array) {
 }
 
 // Global high-performance Canvas-based Star-Glitter Particle Burst Engine
+// Redefined as silent no-op to support zero-distraction focus
 window.triggerParticleBurst = function(x, y) {
-  // Check user preference toggle
-  if (state.particleBursts === false) return;
-  const container = document.getElementById('particle-container');
-  if (!container) return;
-
-  const canvas = document.createElement('canvas');
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  canvas.className = "absolute inset-0 pointer-events-none";
-  container.appendChild(canvas);
-
-  const ctx = canvas.getContext('2d');
-  const particles = [];
-  const colors = ['#3b82f6', '#6366f1', '#ec4899', '#10b981', '#f59e0b', '#a855f7'];
-
-  // Spawn 24 high-fidelity particles
-  for (let i = 0; i < 24; i++) {
-    const angle = Math.random() * Math.PI * 2;
-    const speed = Math.random() * 5 + 3;
-    particles.push({
-      x: x || window.innerWidth / 2,
-      y: y || window.innerHeight / 2,
-      vx: Math.cos(angle) * speed,
-      vy: Math.sin(angle) * speed - (Math.random() * 2), // slight upward bias
-      size: Math.random() * 5 + 3,
-      color: colors[Math.floor(Math.random() * colors.length)],
-      alpha: 1,
-      decay: Math.random() * 0.02 + 0.015,
-      gravity: 0.12,
-      rotation: Math.random() * Math.PI,
-      rotSpeed: (Math.random() - 0.5) * 0.1
-    });
-  }
-
-  function drawStar(ctx, cx, cy, spikes, outerRadius, innerRadius) {
-    let rot = Math.PI / 2 * 3;
-    let x = cx;
-    let y = cy;
-    let step = Math.PI / spikes;
-
-    ctx.beginPath();
-    ctx.moveTo(cx, cy - outerRadius);
-    for (let i = 0; i < spikes; i++) {
-      x = cx + Math.cos(rot) * outerRadius;
-      y = cy + Math.sin(rot) * outerRadius;
-      ctx.lineTo(x, y);
-      rot += step;
-
-      x = cx + Math.cos(rot) * innerRadius;
-      y = cy + Math.sin(rot) * innerRadius;
-      ctx.lineTo(x, y);
-      rot += step;
-    }
-    ctx.lineTo(cx, cy - outerRadius);
-    ctx.closePath();
-    ctx.fill();
-  }
-
-  function animate() {
-    if (particles.length === 0) {
-      canvas.remove();
-      return;
-    }
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    for (let i = particles.length - 1; i >= 0; i--) {
-      const p = particles[i];
-      p.x += p.vx;
-      p.y += p.vy;
-      p.vy += p.gravity;
-      p.alpha -= p.decay;
-      p.rotation += p.rotSpeed;
-
-      if (p.alpha <= 0) {
-        particles.splice(i, 1);
-        continue;
-      }
-
-      ctx.save();
-      ctx.globalAlpha = p.alpha;
-      ctx.fillStyle = p.color;
-      ctx.translate(p.x, p.y);
-      ctx.rotate(p.rotation);
-
-      // Draw a beautiful 4-pointed sparkle star
-      drawStar(ctx, 0, 0, 4, p.size, p.size / 2.5);
-      
-      ctx.restore();
-    }
-
-    requestAnimationFrame(animate);
-  }
-
-  requestAnimationFrame(animate);
+  // Silent no-op
 };
 
-// Global Fullscreen Lottie Micro-Animation Milestones Player (Dynamic Fallback & Offline Caching Safe)
+// Redefined as silent no-op to support zero-distraction focus
 window.triggerPremiumAnimation = function(type) {
-  const container = document.getElementById('lottie-container');
-  if (!container) return;
-
-  // Clear previous animations
-  container.innerHTML = '';
-  container.classList.remove('pointer-events-none');
-
-  // Trigger volume-scaled Web Audio chimes and haptics based on type
-  import('./audio.js').then(audio => {
-    if (type === 'streak') {
-      audio.playSuccessArpeggio();
-      if (navigator.vibrate) navigator.vibrate([50, 100, 50]);
-    } else if (type === 'level-complete') {
-      audio.playSuccessArpeggio();
-      if (navigator.vibrate) navigator.vibrate([100, 50, 100, 50, 200]);
-    } else if (type === 'achievement') {
-      audio.playAchievementChime();
-      if (navigator.vibrate) navigator.vibrate(100);
-    }
-  }).catch(e => console.warn('[Sensory] Could not load audio chimes dynamically:', e));
-
-  // Determine if file protocol (file://) is active to bypass CORS fetch restrictions on local file opens
-  const isLocalFile = window.location.protocol === 'file:';
-
-  if (typeof lottie === 'undefined' || isLocalFile) {
-    console.log('[Lottie] Using high-performance Canvas-based fullscreen fallback.');
-    triggerFullscreenFallback(type);
-    return;
-  }
-
-  // Map to local pre-cached JSON assets
-  const localPaths = {
-    'streak': './lottie/streak.json',
-    'level-complete': './lottie/level-complete.json',
-    'achievement': './lottie/achievement.json'
-  };
-
-  try {
-    const anim = lottie.loadAnimation({
-      container: container,
-      renderer: 'svg',
-      loop: false,
-      autoplay: true,
-      path: localPaths[type] || localPaths['achievement']
-    });
-
-    anim.onComplete = () => {
-      container.innerHTML = '';
-      container.classList.add('pointer-events-none');
-    };
-
-    // Auto-dismiss safety backup
-    setTimeout(() => {
-      container.innerHTML = '';
-      container.classList.add('pointer-events-none');
-    }, 4500);
-
-  } catch (e) {
-    console.warn('[Lottie] Path load failed, launching fallback rendering:', e);
-    triggerFullscreenFallback(type);
-  }
-
-  // Custom fullscreen canvas fallback rendering for 100% offline-ready environments
-  function triggerFullscreenFallback(animType) {
-    const w = window.innerWidth;
-    const h = window.innerHeight;
-
-    if (animType === 'level-complete' || animType === 'achievement') {
-      // Trigger multiple massive starburst waves
-      for (let offset = 0; offset < 600; offset += 150) {
-        setTimeout(() => {
-          window.triggerParticleBurst(w / 4 + Math.random() * (w / 2), h / 3 + Math.random() * (h / 3));
-        }, offset);
-      }
-    } else if (animType === 'streak') {
-      // Spark flame bursts rising upwards
-      const steps = 6;
-      for (let i = 0; i < steps; i++) {
-        setTimeout(() => {
-          window.triggerParticleBurst(w / 2 + (Math.random() - 0.5) * 120, h / 2 - (i * 40));
-        }, i * 80);
-      }
-    }
-
-    // Dismiss layer
-    setTimeout(() => {
-      container.innerHTML = '';
-      container.classList.add('pointer-events-none');
-    }, 2000);
-  }
+  // Silent no-op
 };
 
 

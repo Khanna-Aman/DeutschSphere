@@ -34,9 +34,7 @@ import {
 } from './js/flashcards.js';
 
 import {
-  handleRouting,
-  cheatcodeState,
-  renderCheatcodes
+  handleRouting
 } from './js/router.js';
 
 import {
@@ -67,14 +65,7 @@ window.addEventListener('level:change-request', (e) => changeLevel(e.detail.leve
 window.addEventListener('theme:change-request', (e) => applyTheme(e.detail.theme));
 window.addEventListener('card:reviewed', (e) => reviewCardSRS(e.detail.id, e.detail.rating));
 window.addEventListener('audio:toggle-loop-request', () => toggleTrainerLoop());
-window.addEventListener('cheatcode:search-input', (e) => {
-  cheatcodeState.searchQuery = e.detail.query;
-  renderCheatcodes();
-});
-window.addEventListener('cheatcode:tab-change', (e) => {
-  cheatcodeState.currentTab = e.detail.tab;
-  renderCheatcodes();
-});
+
 
 // ==========================================
 // THEME CUSTOMIZER ENGINE
@@ -263,27 +254,7 @@ export async function fetchData() {
 // DAILY STREAK DISPLAY SYNCRONIZER
 // ==========================================
 export function updateStreakUI() {
-  try {
-    const streak = safeJsonParse('streak_data', { current: 0, longest: 0, freezesAvailable: 1 });
-    const current = streak.current || 0;
-    const longest = streak.longest || 0;
-    const freezes = streak.freezesAvailable ?? 1;
-
-    const sidebarCount = document.getElementById('sidebar-streak-count');
-    const sidebarBest = document.getElementById('sidebar-streak-best');
-    const sidebarFreezes = document.getElementById('sidebar-streak-freezes');
-    if (sidebarCount) sidebarCount.textContent = current;
-    if (sidebarBest) sidebarBest.textContent = longest;
-    if (sidebarFreezes) sidebarFreezes.textContent = freezes;
-
-    const mobileCount = document.getElementById('mobile-streak-count');
-    if (mobileCount) mobileCount.textContent = current;
-
-    const statsCount = document.getElementById('stats-streak-count');
-    if (statsCount) statsCount.textContent = current;
-  } catch (e) {
-    console.warn('[Streak] Failed to update UI:', e);
-  }
+  // Safe no-op as daily streak widget is gamified and removed
 }
 
 // ==========================================
