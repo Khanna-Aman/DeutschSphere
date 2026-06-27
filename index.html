@@ -504,6 +504,26 @@
               </div>
             </button>
 
+            <!-- Toggle 4: Beispielsätze -->
+            <button id="toggle-examples-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 border border-transparent transition-all group text-left" title="Show/hide example sentences (E)">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400 group-hover:border-pink-500/40 transition-colors">
+                  <i class="fa-solid fa-quote-left text-xs"></i>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-xs font-semibold text-slate-200">Example Sentences</span>
+                  <span class="text-[10px] text-slate-500 font-medium">Toggle card examples</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded text-[10px] font-mono text-slate-400 group-hover:text-slate-300">E</kbd>
+                <div class="toggle-examples-wrapper flex items-center justify-center w-8 h-8 rounded-lg text-sm font-medium transition-all bg-slate-900/80 border border-slate-800 text-slate-300 group-hover:border-indigo-500/30 group-hover:bg-indigo-950/20">
+                  <i class="toggle-icon fa-solid fa-toggle-off text-xs text-slate-500"></i>
+                </div>
+                <span id="toggle-examples-text" class="sr-only">Beispiele: EIN</span>
+              </div>
+            </button>
+
             <!-- Divider -->
             <div class="border-t border-slate-800/60 my-1"></div>
 
@@ -850,7 +870,8 @@
       <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">F</kbd> to toggle Fast Read |
       <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">H</kbd> to Hide Learned |
       <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">A</kbd> to toggle Autoplay |
-      <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">B</kbd> to toggle Images
+      <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">B</kbd> to toggle Images |
+      <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-800 rounded font-mono">E</kbd> to toggle Examples
     </footer>
     </section> <!-- End of flashcards-view -->
 
