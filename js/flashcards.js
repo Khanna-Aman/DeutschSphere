@@ -412,9 +412,12 @@ export function renderCard() {
   const deckLength = state.currentDeck.length;
 
   // Update category title text
-  const germanTitle = state.activeCategory === 'All' ? 'All Categories' : state.activeCategory;
-  const englishTitle = categoryTranslations[state.activeCategory] || '';
-  let titleText = englishTitle ? `${englishTitle} (${germanTitle})` : germanTitle;
+  let titleText = 'All Categories';
+  if (state.activeCategory !== 'All') {
+    const germanTitle = state.activeCategory;
+    const englishTitle = categoryTranslations[state.activeCategory] || '';
+    titleText = (englishTitle && englishTitle !== germanTitle) ? `${englishTitle} (${germanTitle})` : germanTitle;
+  }
   if (state.searchQuery) {
     titleText += ` (Filtered: "${state.searchQuery}")`;
   }

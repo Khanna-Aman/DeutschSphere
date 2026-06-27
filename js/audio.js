@@ -540,6 +540,10 @@ export function toggleTrainerLoop() {
   if (!state.trainer) return;
   state.trainer.loop = !state.trainer.loop;
   
+  if (elements.trainerLoopText) {
+    elements.trainerLoopText.textContent = state.trainer.loop ? 'Loop on' : 'Loop off';
+  }
+  
   if (elements.trainerLoopBtn) {
     if (state.trainer.loop) {
       elements.trainerLoopBtn.classList.add('bg-indigo-600', 'border-indigo-500', 'text-white', 'hover:bg-indigo-500', 'hover:text-white');

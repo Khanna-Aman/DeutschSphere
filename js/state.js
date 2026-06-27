@@ -297,6 +297,7 @@ export const elements = {
   trainerSpeedSlider: document.getElementById('trainer-speed-slider'),
   trainerSpeedVal: document.getElementById('trainer-speed-val'),
   trainerLoopBtn: document.getElementById('trainer-loop-btn'),
+  trainerLoopText: document.getElementById('trainer-loop-text'),
   trainerPlayIcon: document.getElementById('trainer-play-icon'),
   trainerStatusIcon: document.getElementById('trainer-status-icon'),
   trainerStatusText: document.getElementById('trainer-status-text'),
