@@ -535,15 +535,16 @@ export function setupSwipeGestures() {
     flashcard.style.transform = `translate(${dx}px, ${dy}px) rotate(${dx * 0.08}deg)`;
   });
 
-  flashcard.addEventListener('pointerup', (e) => {
+  const handleSwipeEnd = (e) => {
     if (!isDragging) return;
     isDragging = false;
-    flashcard.releasePointerCapture(e.pointerId);
+    try {
+      flashcard.releasePointerCapture(e.pointerId);
+    } catch (_) {}
     flashcard.classList.remove('drag-touch');
 
     const dx = e.clientX - startX;
-    const dy = e.clientY - startY;
-    const threshold = 120;
+    const threshold = 60;
 
     const card = state.currentDeck ? state.currentDeck[state.currentIndex] : null;
 
@@ -568,19 +569,10 @@ export function setupSwipeGestures() {
         flashcard.classList.remove('card-spring-back');
       }, 500);
     }
-  });
+  };
 
-  flashcard.addEventListener('pointercancel', (e) => {
-    if (!isDragging) return;
-    isDragging = false;
-    flashcard.releasePointerCapture(e.pointerId);
-    flashcard.classList.remove('drag-touch');
-    flashcard.classList.add('card-spring-back');
-    flashcard.style.transform = '';
-    setTimeout(() => {
-      flashcard.classList.remove('card-spring-back');
-    }, 500);
-  });
+  flashcard.addEventListener('pointerup', handleSwipeEnd);
+  flashcard.addEventListener('pointercancel', handleSwipeEnd);
 }
 
 /**
