@@ -405,7 +405,7 @@ export function stopAudioTrainer() {
     }
   }
   
-  if (elements.trainerStatusIcon) elements.trainerStatusIcon.className = "fa-solid fa-microphone-lines text-sm";
+  if (elements.trainerStatusIcon) elements.trainerStatusIcon.className = "fa-solid fa-headphones-simple text-sm";
   if (elements.trainerStatusText) elements.trainerStatusText.textContent = "Inactive (Ready)";
   if (elements.trainerPulseRing) elements.trainerPulseRing.classList.add('opacity-0');
 }
