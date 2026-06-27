@@ -511,12 +511,18 @@ export function renderCard() {
   updateCompanionStats();
   updateDesktopCompanionVisibility();
 
+  if (state.autoplayTimeoutId) {
+    clearTimeout(state.autoplayTimeoutId);
+    state.autoplayTimeoutId = null;
+  }
+
   // Autoplay or Continuous trainer handling
   if (state.trainer && state.trainer.active) {
     // If active and trainer is waiting, do nothing
   } else if (state.isAutoPlaySpeech && document.activeElement !== elements.searchInput) {
     // Speak the word after a short delay for smooth transition
-    setTimeout(() => {
+    state.autoplayTimeoutId = setTimeout(() => {
+      state.autoplayTimeoutId = null;
       if (state.currentDeck.length > 0 && state.currentDeck[state.currentIndex].id === card.id && !state.trainer.active) {
         speakWord();
       }

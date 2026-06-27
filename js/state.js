@@ -173,6 +173,7 @@ export const state = {
   sfxVolume: parseFloat(safeGetItem('sfx_volume', '0.5')), // SFX Volume (0.0 to 1.0)
   audioTone: safeGetItem('audio_tone', 'synth'), // SFX sound tone ('synth' or 'acoustic')
   learnedCards: new Set(), // Set of active level-scoped learned card IDs
+  autoplayTimeoutId: null, // Timer ID for auto-pronounce execution
   
   // Quiz Arena Sub-State
   quiz: {

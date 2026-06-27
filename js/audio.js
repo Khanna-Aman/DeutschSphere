@@ -284,6 +284,10 @@ export function prepareUtterance(card) {
 
 // Pronounce current German word
 export function speakWord() {
+  if (state.autoplayTimeoutId) {
+    clearTimeout(state.autoplayTimeoutId);
+    state.autoplayTimeoutId = null;
+  }
   if (state.currentDeck.length === 0) return;
   const card = state.currentDeck[state.currentIndex];
 
