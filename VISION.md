@@ -25,6 +25,8 @@ DeutschSphere is designed to maximize vocabulary acquisition through distraction
 | **Active Recall Quiz Arena** | **Active** | Bidirectional MC reservoir-sampled tests and text spelling with virtual keyboards. |
 | **Immersions-Labor** | **Active** | Custom local NLP for copy-pasted text block lemmatization and instant flashcard generation. |
 | **Sync & Backup Sync** | **Active** | Base64-encrypted local IndexedDB profile copy/paste backup and restore. |
+| **Developer Feedback Form** | **Active** | Zero-cost serverless FormSubmit integration sending user feedback direct to developer email. |
+| **Adaptive Layout & Safe-Area** | **Active** | Zero-scroll side-by-side desktop card reveal and Android navigation bar safe-area insets. |
 | **Visual Assets** | **Active** | High-fidelity WebP visual aids (<10KB) completed for A1 (640/640) and A2 (1,142/1,142) entries. |
 
 ---

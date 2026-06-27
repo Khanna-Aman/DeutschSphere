@@ -57,6 +57,22 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(148, 163, 184, 0.4);
 }
 
+/* Mobile Safe Area Insets (Android Gesture Bar & OS Navigation Bar Cutoff Prevention) */
+@supports (padding: env(safe-area-inset-bottom)) {
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  #sidebar {
+    padding-bottom: max(2rem, calc(1.5rem + env(safe-area-inset-bottom))) !important;
+  }
+  .confirm-modal-overlay {
+    padding-bottom: max(1.5rem, calc(1rem + env(safe-area-inset-bottom))) !important;
+  }
+  #flashcard-workspace-container {
+    padding-bottom: max(3rem, calc(2rem + env(safe-area-inset-bottom))) !important;
+  }
+}
+
 /* Card Glow States */
 .card-glow-der {
   box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.25), 0 0 20px rgba(59, 130, 246, 0.15);

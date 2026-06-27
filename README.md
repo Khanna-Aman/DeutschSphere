@@ -38,8 +38,18 @@ A lightweight client-side Natural Language Processing lab under `#/immersion`.
 * Highlights matching vocabulary already tracked in your FSRS progress database and lets you instantly convert unlearned terms to active flashcards.
 
 ### 6. Encrypted Profile Sync & Backup
-Ensure complete data ownership without external server overhead.
+Maintain complete data ownership without external server overhead.
 * Back up or restore your entire IndexedDB progress state instantly using a compressed, Base64-encoded copy/paste Sync Key or raw JSON profile files.
+
+### 7. Zero-Cost Developer Feedback System
+Direct communication pipeline embedded in the client UI.
+* Users can submit bug reports, feature requests, or general feedback directly to the developer's inbox via FormSubmit without external server costs or accounts.
+* Supports anonymous submissions and instant client status feedback.
+
+### 8. Adaptive Widescreen & Mobile Safe-Area Layouts
+Optimized display architecture across all viewport dimensions.
+* **Desktop Zero-Scroll Layout**: Automatically aligns German cards alongside revealed English meanings side-by-side on laptops/desktops so users never have to scroll.
+* **Mobile Safe-Area Insets**: Accounts for Android navigation bars and OS gesture handles (`viewport-fit=cover` & `env(safe-area-inset-bottom)`) to prevent element cutoff.
 
 ---
 
