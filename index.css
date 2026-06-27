@@ -1267,7 +1267,7 @@ input:focus-visible {
 
 @media (pointer: coarse) {
   /* Sidebar nav links */
-  nav[aria-label="Hauptnavigation"] a {
+  nav[aria-label="Main Navigation"] a {
     min-height: 44px;
     display: flex;
     align-items: center;

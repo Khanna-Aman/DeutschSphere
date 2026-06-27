@@ -7,6 +7,8 @@
   <title>DeutschSphere — A1-B1 German</title>
   <meta name="description" content="A zero-dependency, offline-first German vocabulary flashcard SPA covering 3,921 words across CEFR levels A1-B1, with SRS, quizzes, pronunciation coaching, and 5 premium themes.">
   <meta name="theme-color" content="#020617">
+  <!-- Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: blob:; connect-src 'self'; worker-src 'self'; media-src 'self' blob:;">
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="DeutschSphere — A1-B1 German">
@@ -179,6 +181,7 @@
         <button id="search-submit-btn" aria-label="Suche starten" class="z-10 absolute inset-y-0 left-0 flex items-center pl-3 text-slate-400 hover:text-indigo-400 transition-colors cursor-pointer" title="Suchen | Search">
           <i class="fa-solid fa-magnifying-glass text-sm"></i>
         </button>
+        <label for="search-input" class="sr-only">Search dictionary (German or English)</label>
         <input type="text" id="search-input" class="w-full bg-slate-950/60 border border-slate-800 rounded-xl py-2.5 pl-10 pr-10 text-sm placeholder-slate-500 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-medium" placeholder="Search dictionary (German or English)..." autocomplete="off">
         <button id="search-clear" aria-label="Suche löschen" class="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-500 hover:text-slate-300 hidden">
           <i class="fa-solid fa-circle-xmark text-sm"></i>
@@ -557,6 +560,7 @@
                 </div>
               </div>
               <div class="flex items-center gap-2">
+                <label for="sfx-volume-slider" class="sr-only">SFX Volume</label>
                 <input id="sfx-volume-slider" type="range" min="0" max="1" step="0.1" value="0.5" class="w-20 h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-indigo-500" title="Adjust SFX Volume">
                 <span id="sfx-volume-val" class="text-[10px] font-mono font-bold text-slate-400 w-8 text-right">50%</span>
               </div>
@@ -1112,6 +1116,7 @@
         <!-- Mode B Workspace: Spelling Input -->
         <div id="quiz-spelling-container" class="w-full flex flex-col space-y-4 mb-6 hidden">
           <div class="relative">
+            <label for="quiz-spelling-input" class="sr-only">Type your answer</label>
             <input type="text" id="quiz-spelling-input" class="w-full bg-slate-950/60 border border-slate-800 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 rounded-xl py-3.5 px-4 text-slate-200 placeholder-slate-600 focus:outline-none transition-all font-semibold text-lg text-center" placeholder="Type your answer here..." autocomplete="off">
           </div>
           
@@ -1567,6 +1572,7 @@
                   <span>Copy Sync Key</span>
                 </button>
                 <div class="relative w-full">
+                  <label for="sync-restore-input" class="sr-only">Paste Sync Key</label>
                   <input type="text" id="sync-restore-input" placeholder="Paste Sync Key here..." class="w-full px-3 py-2 bg-slate-950/80 border border-slate-800 rounded-xl text-xs font-medium text-slate-300 placeholder-slate-600 focus:outline-none focus:border-indigo-500 transition-colors" />
                 </div>
                 <button id="sync-restore-btn" class="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 active:scale-95 text-white py-2 px-4 rounded-xl text-xs font-bold transition-all shadow-sm">
@@ -1940,6 +1946,7 @@
               <i class="fa-solid fa-paste text-indigo-400"></i>
               <h2 class="text-sm font-bold uppercase tracking-wider text-slate-300">Paste Raw Text</h2>
           </div>
+          <label for="immersion-textarea" class="sr-only">Paste German text for analysis</label>
           <textarea id="immersion-textarea" class="w-full h-48 bg-slate-900/60 border border-slate-700 rounded-xl p-4 text-slate-200 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-medium resize-y" placeholder="Paste German text here (news, book excerpt, chat history)..."></textarea>
           <div class="flex justify-end">
               <button id="immersion-analyze-btn" class="px-6 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold transition-all shadow-[0_0_15px_rgba(79,70,229,0.3)] hover:shadow-[0_0_20px_rgba(79,70,229,0.5)] transform active:scale-95 flex items-center">

@@ -680,12 +680,24 @@ export async function initProfileData() {
     }
   }
 
-  // 2. Load active level into memory
+  // 2. Load active level into memory (with corruption recovery)
   const idbLearned = await idb.get(`learned_cards_${level}`);
-  state.learnedCards = new Set(idbLearned ? JSON.parse(idbLearned).map(id => Number(id)) : []);
+  try {
+    state.learnedCards = new Set(idbLearned ? JSON.parse(idbLearned).map(id => Number(id)) : []);
+  } catch (e) {
+    console.error(`[state] Corrupted learned_cards_${level} in IDB, resetting:`, e);
+    state.learnedCards = new Set();
+    await idb.set(`learned_cards_${level}`, '[]');
+  }
   
   const idbSrs = await idb.get(`srs_state_${level}`);
-  state.srs = idbSrs ? JSON.parse(idbSrs) : {};
+  try {
+    state.srs = idbSrs ? JSON.parse(idbSrs) : {};
+  } catch (e) {
+    console.error(`[state] Corrupted srs_state_${level} in IDB, resetting:`, e);
+    state.srs = {};
+    await idb.set(`srs_state_${level}`, '{}');
+  }
 
   // 3. Build global learned count cache asynchronously
   for (const lvl of CEFR_LEVELS) {
@@ -700,8 +712,14 @@ export async function initProfileData() {
           localStorage.removeItem(`learned_cards_${lvl}`);
         }
       }
-      const stored = raw ? JSON.parse(raw) : [];
-      learnedCountCache.set(lvl, stored.length);
+      try {
+        const stored = raw ? JSON.parse(raw) : [];
+        learnedCountCache.set(lvl, stored.length);
+      } catch (e) {
+        console.error(`[state] Corrupted learned_cards_${lvl} in IDB, resetting:`, e);
+        learnedCountCache.set(lvl, 0);
+        await idb.set(`learned_cards_${lvl}`, '[]');
+      }
     }
   }
 }
@@ -1131,6 +1149,13 @@ export async function getCustomCards(level) {
 
 // Add a custom card to a level and save to IndexedDB
 export async function addCustomCard(level, card) {
+  // Validate card schema — reject objects missing required fields
+  if (!card || typeof card !== 'object' ||
+      typeof card.german !== 'string' || !card.german.trim() ||
+      typeof card.english !== 'string' || !card.english.trim()) {
+    console.error('[state] addCustomCard rejected: card must have non-empty german and english string fields', card);
+    return;
+  }
   const customCards = await getCustomCards(level);
   customCards.push(card);
   await idb.set(`custom_cards_${level}`, JSON.stringify(customCards));
@@ -1140,7 +1165,7 @@ export async function addCustomCard(level, card) {
   
   // Re-index antonym index if applicable
   if (state.antonymIndex) {
-    const cleanWord = card.word.replace(/^(der|die|das)\s+/i, '').trim().toLowerCase();
+    const cleanWord = (card.word || card.german).replace(/^(der|die|das)\s+/i, '').trim().toLowerCase();
     state.antonymIndex.set(cleanWord, card);
   }
   
@@ -1149,7 +1174,8 @@ export async function addCustomCard(level, card) {
 }
 
 // ==========================================
-// BASE64 ENCRYPTED SYNC KEY UTILITIES
+// BASE64 ENCODED SYNC KEY UTILITIES
+// (Note: NOT encrypted — Base64 is reversible encoding. Treat keys as sensitive.)
 // ==========================================
 
 // Compresses and packages the entire IndexedDB SRS profile into a Base64 Sync Key
@@ -1181,7 +1207,8 @@ export async function generateSyncKey() {
   return btoa(unescape(encodeURIComponent(jsonStr)));
 }
 
-// Decrypts and restores the entire IndexedDB SRS profile from a Base64 Sync Key
+// Decodes and restores the entire IndexedDB SRS profile from a Base64 Sync Key
+// Note: The Sync Key is Base64-encoded (NOT encrypted). Treat it like a password.
 export async function restoreFromSyncKey(base64Str) {
   try {
     const decodedStr = decodeURIComponent(escape(atob(base64Str.trim())));
@@ -1191,29 +1218,71 @@ export async function restoreFromSyncKey(base64Str) {
     }
     
     const data = payload.data;
+
+    // --- Schema Validation Helpers ---
+    const isArrayOfNumbers = (arr) => Array.isArray(arr) && arr.every(v => typeof v === 'number' || (typeof v === 'string' && !isNaN(Number(v))));
+    const isPlainObject = (obj) => obj !== null && typeof obj === 'object' && !Array.isArray(obj);
+    const isArrayOfObjects = (arr) => Array.isArray(arr) && arr.every(v => isPlainObject(v));
+    const isSafeString = (val) => typeof val === 'string' && val.length < 256;
+    const isSafeNumber = (val) => typeof val === 'number' && isFinite(val);
+    const VALID_LEVELS = ['a1', 'a2', 'b1'];
+    const VALID_THEMES = ['default', 'cyberpunk', 'schwarzwald', 'oktoberfest', 'weimar'];
+
+    // --- Validate & write learned_cards (must be arrays of numeric IDs) ---
+    for (const lvl of VALID_LEVELS) {
+      const key = `learned_cards_${lvl}`;
+      if (data[key] !== undefined) {
+        if (!isArrayOfNumbers(data[key])) {
+          console.warn(`[sync] Rejected ${key}: not an array of numbers`);
+          continue;
+        }
+        await idb.set(key, JSON.stringify(data[key].map(Number)));
+      }
+    }
+
+    // --- Validate & write srs_state (must be plain objects) ---
+    for (const lvl of VALID_LEVELS) {
+      const key = `srs_state_${lvl}`;
+      if (data[key] !== undefined) {
+        if (!isPlainObject(data[key])) {
+          console.warn(`[sync] Rejected ${key}: not a plain object`);
+          continue;
+        }
+        await idb.set(key, JSON.stringify(data[key]));
+      }
+    }
+
+    // --- Validate & write custom_cards (must be arrays of objects with german/english) ---
+    for (const lvl of VALID_LEVELS) {
+      const key = `custom_cards_${lvl}`;
+      if (data[key] !== undefined) {
+        if (!isArrayOfObjects(data[key])) {
+          console.warn(`[sync] Rejected ${key}: not an array of objects`);
+          continue;
+        }
+        // Filter out cards missing required fields
+        const validCards = data[key].filter(c => typeof c.german === 'string' && typeof c.english === 'string');
+        await idb.set(key, JSON.stringify(validCards));
+      }
+    }
     
-    // Asynchronously write to IndexedDB
-    if (data.learned_cards_a1) await idb.set('learned_cards_a1', JSON.stringify(data.learned_cards_a1));
-    if (data.learned_cards_a2) await idb.set('learned_cards_a2', JSON.stringify(data.learned_cards_a2));
-    if (data.learned_cards_b1) await idb.set('learned_cards_b1', JSON.stringify(data.learned_cards_b1));
-    
-    if (data.srs_state_a1) await idb.set('srs_state_a1', JSON.stringify(data.srs_state_a1));
-    if (data.srs_state_a2) await idb.set('srs_state_a2', JSON.stringify(data.srs_state_a2));
-    if (data.srs_state_b1) await idb.set('srs_state_b1', JSON.stringify(data.srs_state_b1));
-    
-    if (data.custom_cards_a1) await idb.set('custom_cards_a1', JSON.stringify(data.custom_cards_a1));
-    if (data.custom_cards_a2) await idb.set('custom_cards_a2', JSON.stringify(data.custom_cards_a2));
-    if (data.custom_cards_b1) await idb.set('custom_cards_b1', JSON.stringify(data.custom_cards_b1));
-    
-    // Write to localStorage
-    if (data.quiz_streak !== undefined) localStorage.setItem('quiz_streak', String(data.quiz_streak));
-    if (data.quiz_best_streak !== undefined) localStorage.setItem('quiz_best_streak', String(data.quiz_best_streak));
-    if (data.show_images !== undefined) localStorage.setItem('show_images', String(data.show_images));
-    if (data.current_theme !== undefined) localStorage.setItem('current_theme', String(data.current_theme));
-    if (data.current_level !== undefined) localStorage.setItem('current_level', String(data.current_level));
-    if (data.streak_data) localStorage.setItem('streak_data', JSON.stringify(data.streak_data));
-    if (data.session_history) localStorage.setItem('session_history', JSON.stringify(data.session_history));
-    if (data.unlocked_achievements) localStorage.setItem('unlocked_achievements', JSON.stringify(data.unlocked_achievements));
+    // --- Validate & write localStorage scalars (strict type checks) ---
+    if (data.quiz_streak !== undefined && isSafeNumber(data.quiz_streak))
+      localStorage.setItem('quiz_streak', String(Math.max(0, Math.floor(data.quiz_streak))));
+    if (data.quiz_best_streak !== undefined && isSafeNumber(data.quiz_best_streak))
+      localStorage.setItem('quiz_best_streak', String(Math.max(0, Math.floor(data.quiz_best_streak))));
+    if (data.show_images !== undefined && typeof data.show_images === 'boolean')
+      localStorage.setItem('show_images', String(data.show_images));
+    if (data.current_theme !== undefined && isSafeString(data.current_theme) && VALID_THEMES.includes(data.current_theme))
+      localStorage.setItem('current_theme', data.current_theme);
+    if (data.current_level !== undefined && isSafeString(data.current_level) && VALID_LEVELS.includes(data.current_level))
+      localStorage.setItem('current_level', data.current_level);
+    if (data.streak_data && isPlainObject(data.streak_data))
+      localStorage.setItem('streak_data', JSON.stringify(data.streak_data));
+    if (data.session_history && Array.isArray(data.session_history))
+      localStorage.setItem('session_history', JSON.stringify(data.session_history));
+    if (data.unlocked_achievements && Array.isArray(data.unlocked_achievements))
+      localStorage.setItem('unlocked_achievements', JSON.stringify(data.unlocked_achievements));
     
     return true;
   } catch (e) {
