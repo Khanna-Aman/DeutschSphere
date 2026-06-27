@@ -220,7 +220,7 @@ function renderCardMetadataBadges(card, deckLength) {
 function renderCardImage(card) {
   const activeImage = card.image_path || card.image;
   const isImageAllowed = (state.currentLevel === 'a1' || state.currentLevel === 'a2');
-  if (state.showImages && isImageAllowed) {
+  if (state.showImages && isImageAllowed && activeImage) {
     if (elements.cardImageContainer) {
       elements.cardImageContainer.style.display = '';
       elements.cardImageContainer.classList.remove('hidden');
@@ -233,18 +233,25 @@ function renderCardImage(card) {
     }
     
     if (elements.cardImage) {
-      elements.cardImage.classList.add('hidden');
-      elements.cardImage.classList.add('opacity-0');
-      elements.cardImage.src = state.currentLevel + '/' + activeImage;
+      const targetSrc = state.currentLevel + '/' + activeImage;
       
       // Dynamic ALT text for screen reader compliance (WCAG 2.1 SC 1.1.1)
       const formattedGender = (card.wordClass === 'Noun' && card.gender) ? `${card.gender} ` : '';
       elements.cardImage.alt = `${formattedGender}${card.word} — ${card.meaning}`;
+
+      if (!elements.cardImage.src.endsWith(targetSrc)) {
+        elements.cardImage.classList.add('opacity-0');
+        elements.cardImage.src = targetSrc;
+      }
       
-      elements.cardImage.onload = () => {
-        elements.cardImage.classList.remove('hidden');
-        elements.cardImage.classList.remove('opacity-0');
-      };
+      if (elements.cardImage.complete && elements.cardImage.naturalWidth !== 0) {
+        elements.cardImage.classList.remove('hidden', 'opacity-0');
+      } else {
+        elements.cardImage.onload = () => {
+          elements.cardImage.classList.remove('hidden', 'opacity-0');
+        };
+      }
+      
       elements.cardImage.onerror = () => {
         elements.cardImage.src = '';
         elements.cardImage.classList.add('hidden');
@@ -265,6 +272,34 @@ function renderCardImage(card) {
       elements.cardImage.alt = '';
     }
   }
+}
+
+/**
+ * Intelligent Image Preloader: Preloads upcoming and previous card images
+ * into browser/service worker cache for 0ms latency during deck navigation.
+ */
+function preloadAdjacentCardImages() {
+  const isImageAllowed = (state.currentLevel === 'a1' || state.currentLevel === 'a2');
+  if (!state.showImages || !isImageAllowed || state.currentDeck.length === 0) return;
+  
+  const deckLength = state.currentDeck.length;
+  const indicesToPreload = [
+    (state.currentIndex + 1) % deckLength,
+    (state.currentIndex + 2) % deckLength,
+    (state.currentIndex + 3) % deckLength,
+    (state.currentIndex - 1 + deckLength) % deckLength
+  ];
+
+  indicesToPreload.forEach(idx => {
+    const targetCard = state.currentDeck[idx];
+    if (targetCard) {
+      const imgPath = targetCard.image_path || targetCard.image;
+      if (imgPath) {
+        const img = new Image();
+        img.src = state.currentLevel + '/' + imgPath;
+      }
+    }
+  });
 }
 
 /**
@@ -452,6 +487,7 @@ export function renderCard() {
   // Delegate rendering tasks to dedicated modular helpers
   renderCardMetadataBadges(card, deckLength);
   renderCardImage(card);
+  preloadAdjacentCardImages();
   renderCardWord(card);
   renderSuffixGrammar(card);
   renderPronunciation(card);
