@@ -272,9 +272,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initHelpModal();
   initFeedbackModal();
 
-  // BUG FIX: await fetchData() so state.allCards is populated before handleRouting()
-  // calls renderCard(). Without await, renderCard() fires on an empty deck.
-  await fetchData();
+  fetchData();
   setupEventListeners();
   setupSwipeGestures();
   initSidebarCategoryWords();
@@ -295,12 +293,50 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   handleRouting();
 
-  // SW caching for offline support & automatic background update checking
+  // SW registration with fully automatic zero-user-action update flow:
+  // 1. New SW installs → skipWaiting() fires immediately (in install handler)
+  // 2. New SW activates → broadcasts SW_ACTIVATED to all tabs
+  // 3. controllerchange fires in each tab → auto-reload fetches fresh files
+  // Net result: users always get new code on next page load, no manual clearing needed.
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+    let swReloading = false;
+
+    // When a new SW calls clients.claim(), reload to pick up fresh cached files
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (!swReloading) {
+        swReloading = true;
+        window.location.reload();
+      }
+    });
+
+    // Log SW_ACTIVATED messages from the service worker
+    navigator.serviceWorker.addEventListener('message', (event) => {
+      if (event.data && event.data.type === 'SW_ACTIVATED') {
+        console.log('[SW] New version activated:', event.data.version);
+      }
+    });
+
     navigator.serviceWorker.register('./sw.js')
       .then(reg => {
         console.log('[SW] Registered:', reg.scope);
-        // Periodically check for new version on GitHub Pages
+
+        // If a new SW is already waiting (tab was open during deploy), push it through now
+        if (reg.waiting) {
+          reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+        }
+
+        // When a new SW installs while the page is open, push it through immediately
+        reg.addEventListener('updatefound', () => {
+          const newWorker = reg.installing;
+          if (!newWorker) return;
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              newWorker.postMessage({ type: 'SKIP_WAITING' });
+            }
+          });
+        });
+
+        // Proactively check for updates on every page load
         reg.update();
       })
       .catch(err => console.warn('[SW] Registration failed:', err));

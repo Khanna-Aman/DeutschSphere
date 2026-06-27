@@ -2,7 +2,7 @@
 // Strategy: Cache-first for static assets, stale-while-revalidate for CDN resources.
 // NOTE: This SW only activates on HTTPS origins (GitHub Pages). It cannot run on file://.
 
-const CACHE_VERSION = 'v6.9.1'; // v6.9.1: fix(mobile) — overflow-x:hidden, CSS !important failsafe, audio trainer md: breakpoint
+const CACHE_VERSION = 'v6.9.2'; // v6.9.2: feat(pwa) — zero-friction automatic SW client reloads & SKIP_WAITING messaging
 const STATIC_CACHE = `deutschsphere-static-${CACHE_VERSION}`;
 const DATA_CACHE = `deutschsphere-data-${CACHE_VERSION}`;
 const CDN_CACHE = `deutschsphere-cdn-${CACHE_VERSION}`;
@@ -49,6 +49,12 @@ self.addEventListener('activate', (event) => {
           .map(name => caches.delete(name))
       );
     }).then(() => self.clients.claim())
+      .then(() => {
+        // Broadcast to all open tabs that a new version is now active
+        self.clients.matchAll({ type: 'window' }).then(clients => {
+          clients.forEach(client => client.postMessage({ type: 'SW_ACTIVATED', version: CACHE_VERSION }));
+        });
+      })
   );
 });
 
@@ -136,9 +142,11 @@ self.addEventListener('fetch', (event) => {
   );
 });
 
-// Dynamic background pre-caching message router
+// Dynamic background pre-caching message router & skip waiting listener
 self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'PRECACHE_RESOURCES') {
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  } else if (event.data && event.data.type === 'PRECACHE_RESOURCES') {
     const urls = event.data.urls || [];
     event.waitUntil(
       caches.open(DATA_CACHE).then(async (cache) => {
