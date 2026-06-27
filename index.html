@@ -97,10 +97,15 @@
   <!-- Active SPA Title (Single h1 for SEO & accessibility compliance) -->
   <h1 class="sr-only">DeutschSphere — A1-B1 Language Learning SPA</h1>
 
-  <!-- Desktop Help Button (Fixed Top-Right) -->
-  <button id="help-btn-desktop" class="help-btn-trigger hidden md:flex fixed top-6 right-6 lg:right-12 items-center justify-center p-2 text-indigo-400 hover:text-indigo-300 transition-colors z-40 cursor-pointer" title="Help & System Introduction (Hot-key: ?)">
-    <i class="fa-solid fa-circle-question text-2xl"></i>
-  </button>
+  <!-- Desktop Top Header Buttons (Fixed Top-Right) -->
+  <div class="hidden md:flex fixed top-6 right-6 lg:right-12 items-center gap-3 z-40">
+    <button id="feedback-btn-desktop" class="feedback-btn-trigger flex items-center justify-center p-2 text-indigo-400 hover:text-indigo-300 transition-colors cursor-pointer" title="Send Feedback directly to Developer">
+      <i class="fa-solid fa-comment-dots text-2xl"></i>
+    </button>
+    <button id="help-btn-desktop" class="help-btn-trigger flex items-center justify-center p-2 text-indigo-400 hover:text-indigo-300 transition-colors cursor-pointer" title="Help & System Introduction (Hot-key: ?)">
+      <i class="fa-solid fa-circle-question text-2xl"></i>
+    </button>
+  </div>
 
   <!-- Graceful fallback for JavaScript-disabled browsers -->
   <noscript>
@@ -122,6 +127,10 @@
     </div>
 
     <div class="flex items-center gap-2">
+      <!-- Feedback Button -->
+      <button id="feedback-btn-mobile" class="feedback-btn-trigger p-2 text-indigo-400 hover:text-indigo-300 transition-colors cursor-pointer" title="Send Feedback">
+        <i class="fa-solid fa-comment-dots text-xl"></i>
+      </button>
       <!-- Help Button -->
       <button id="help-btn-mobile" class="help-btn-trigger p-2 text-indigo-400 hover:text-indigo-300 transition-colors cursor-pointer" title="Help & System Introduction (Hot-key: ?)">
         <i class="fa-solid fa-circle-question text-xl"></i>
@@ -515,6 +524,20 @@
                 <span id="sound-style-text">Synth</span>
               </div>
             </button>
+            <!-- Action: Send Feedback -->
+            <button id="feedback-btn-settings" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group text-left cursor-pointer" title="Send feedback directly to developer">
+              <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:border-indigo-500/40 transition-colors">
+                  <i class="fa-solid fa-comment-dots text-xs"></i>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-xs font-semibold text-slate-200">Send Feedback</span>
+                  <span class="text-[10px] text-slate-500 font-medium">Message the developer</span>
+                </div>
+              </div>
+              <i class="fa-solid fa-chevron-right text-[10px] text-slate-500 group-hover:text-indigo-400"></i>
+            </button>
+
             <!-- Danger Zone: Reset Progress -->
             <div class="border-t border-slate-800 pt-3 mt-1">
               <button id="reset-progress-btn-main" class="w-full flex items-center justify-center gap-2 bg-slate-900/60 border border-slate-800/80 hover:border-rose-500 hover:bg-rose-950/20 text-slate-400 hover:text-rose-400 py-2.5 rounded-xl text-xs font-semibold transition-all shadow-sm" title="Reset entire learning progress">
@@ -1469,6 +1492,70 @@
           </button>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Feedback Modal -->
+  <div id="feedback-modal-overlay" class="confirm-modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="feedback-modal-title">
+    <div class="confirm-modal-card max-w-[32rem]">
+      <div class="flex items-center justify-between mb-5">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-lg">
+            <i class="fa-solid fa-comment-dots"></i>
+          </div>
+          <div>
+            <h3 id="feedback-modal-title" class="font-display font-bold text-base text-white">Send Feedback</h3>
+            <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Directly to Developer</span>
+          </div>
+        </div>
+        <button id="feedback-modal-close" class="p-2 text-slate-400 hover:text-white transition-colors cursor-pointer" aria-label="Close">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <form id="feedback-form" class="space-y-4">
+        <!-- Name Field with Anonymous Checkbox -->
+        <div class="space-y-1.5">
+          <div class="flex items-center justify-between">
+            <label for="feedback-name" class="text-xs font-semibold text-slate-300">Your Name (Optional)</label>
+            <label class="flex items-center gap-1.5 cursor-pointer text-xs text-slate-400 hover:text-slate-300">
+              <input type="checkbox" id="feedback-anonymous-check" class="rounded bg-slate-900 border-slate-800 text-indigo-600 focus:ring-0">
+              <span>Send Anonymously</span>
+            </label>
+          </div>
+          <input type="text" id="feedback-name" placeholder="Enter your name..." class="w-full px-3.5 py-2.5 bg-slate-950/50 border border-slate-800 rounded-xl text-xs text-slate-200 focus:outline-none focus:border-indigo-500 transition-all">
+        </div>
+
+        <!-- Category Dropdown -->
+        <div class="space-y-1.5">
+          <label for="feedback-category" class="text-xs font-semibold text-slate-300">Feedback Type</label>
+          <select id="feedback-category" class="w-full px-3.5 py-2.5 bg-slate-950/50 border border-slate-800 rounded-xl text-xs text-slate-200 focus:outline-none focus:border-indigo-500 transition-all">
+            <option value="General Feedback">⭐ General Feedback</option>
+            <option value="Bug Report">🐛 Bug Report</option>
+            <option value="Feature Request">💡 Feature Suggestion</option>
+          </select>
+        </div>
+
+        <!-- Message Field -->
+        <div class="space-y-1.5">
+          <label for="feedback-message" class="text-xs font-semibold text-slate-300">Your Message / Issue Details</label>
+          <textarea id="feedback-message" rows="4" required placeholder="Describe your feedback or feature idea..." class="w-full px-3.5 py-2.5 bg-slate-950/50 border border-slate-800 rounded-xl text-xs text-slate-200 focus:outline-none focus:border-indigo-500 transition-all resize-none"></textarea>
+        </div>
+
+        <!-- Submission Status Msg -->
+        <div id="feedback-status-msg" class="text-xs font-semibold text-center hidden"></div>
+
+        <!-- Action Buttons -->
+        <div class="flex items-center justify-end gap-3 pt-2">
+          <button type="button" id="feedback-modal-cancel" class="px-4 py-2.5 bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 rounded-xl text-xs font-semibold transition-all active:scale-95 cursor-pointer">
+            Cancel
+          </button>
+          <button type="submit" id="feedback-submit-btn" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-black transition-all shadow-lg shadow-indigo-600/20 active:scale-95 flex items-center gap-2 cursor-pointer">
+            <i class="fa-solid fa-paper-plane text-xs"></i>
+            <span id="feedback-submit-text">Send Feedback</span>
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 

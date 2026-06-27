@@ -944,6 +944,121 @@ export function initHelpModal() {
   }
 }
 
+export function initFeedbackModal() {
+  const triggers = document.querySelectorAll('.feedback-btn-trigger, #feedback-btn-settings');
+  const closeBtn = document.getElementById('feedback-modal-close');
+  const cancelBtn = document.getElementById('feedback-modal-cancel');
+  const overlay = document.getElementById('feedback-modal-overlay');
+  const form = document.getElementById('feedback-form');
+  const anonCheck = document.getElementById('feedback-anonymous-check');
+  const nameInput = document.getElementById('feedback-name');
+  const statusMsg = document.getElementById('feedback-status-msg');
+  const submitBtn = document.getElementById('feedback-submit-btn');
+  const submitText = document.getElementById('feedback-submit-text');
+
+  function openFeedbackModal() {
+    if (overlay) overlay.classList.remove('hidden');
+    if (statusMsg) {
+      statusMsg.classList.add('hidden');
+      statusMsg.textContent = '';
+    }
+  }
+
+  function closeFeedbackModal() {
+    if (overlay) overlay.classList.add('hidden');
+  }
+
+  triggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const dropdown = document.getElementById('deck-prefs-dropdown');
+      if (dropdown) {
+        dropdown.classList.add('scale-95', 'opacity-0', 'pointer-events-none');
+      }
+      openFeedbackModal();
+    });
+  });
+
+  if (closeBtn) closeBtn.addEventListener('click', closeFeedbackModal);
+  if (cancelBtn) cancelBtn.addEventListener('click', closeFeedbackModal);
+  if (overlay) {
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) closeFeedbackModal();
+    });
+  }
+
+  if (anonCheck && nameInput) {
+    anonCheck.addEventListener('change', () => {
+      if (anonCheck.checked) {
+        nameInput.value = '';
+        nameInput.disabled = true;
+        nameInput.placeholder = 'Anonymous Sender';
+        nameInput.classList.add('opacity-50', 'cursor-not-allowed');
+      } else {
+        nameInput.disabled = false;
+        nameInput.placeholder = 'Enter your name...';
+        nameInput.classList.remove('opacity-50', 'cursor-not-allowed');
+      }
+    });
+  }
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const name = anonCheck && anonCheck.checked ? 'Anonymous' : (nameInput ? nameInput.value.trim() || 'Anonymous' : 'Anonymous');
+      const category = document.getElementById('feedback-category')?.value || 'General Feedback';
+      const message = document.getElementById('feedback-message')?.value.trim();
+
+      if (!message) return;
+
+      if (submitBtn) submitBtn.disabled = true;
+      if (submitText) submitText.textContent = 'Sending...';
+
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/2002aman.khanna@gmail.com', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            name: name,
+            category: category,
+            message: message,
+            _subject: `[DeutschSphere Feedback] ${category} from ${name}`,
+            _template: 'table'
+          })
+        });
+
+        if (response.ok) {
+          if (statusMsg) {
+            statusMsg.className = 'text-xs font-semibold text-center text-emerald-400 mt-2';
+            statusMsg.textContent = '✓ Thank you! Your feedback has been sent to the developer.';
+            statusMsg.classList.remove('hidden');
+          }
+          form.reset();
+          if (anonCheck) anonCheck.checked = false;
+          if (nameInput) nameInput.disabled = false;
+          setTimeout(() => {
+            closeFeedbackModal();
+          }, 2200);
+        } else {
+          throw new Error('Network error');
+        }
+      } catch (err) {
+        if (statusMsg) {
+          statusMsg.className = 'text-xs font-semibold text-center text-rose-400 mt-2';
+          statusMsg.textContent = '✕ Error sending feedback. Please try again.';
+          statusMsg.classList.remove('hidden');
+        }
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+        if (submitText) submitText.textContent = 'Send Feedback';
+      }
+    });
+  }
+}
+
 // Private helper for speech recognition speed loop triggers
 function toggleTrainerLoop() {
   window.dispatchEvent(new CustomEvent('audio:toggle-loop-request'));

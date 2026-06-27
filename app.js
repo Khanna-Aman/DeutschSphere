@@ -23,7 +23,8 @@ import {
   setupEventListeners,
   setupSwipeGestures,
   initShortcutsToggle,
-  initHelpModal
+  initHelpModal,
+  initFeedbackModal
 } from './js/events.js';
 
 import {
@@ -260,6 +261,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initSettingsUI();
   initShortcutsToggle();
   initHelpModal();
+  initFeedbackModal();
 
   fetchData();
   setupEventListeners();
