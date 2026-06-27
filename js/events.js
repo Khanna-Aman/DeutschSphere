@@ -549,21 +549,13 @@ export function setupSwipeGestures() {
 
     if (dx > threshold && card) {
       flashcard.classList.add('swipe-right');
-      window.dispatchEvent(new CustomEvent('card:reviewed', { detail: { id: card.id, rating: 3 } })); // 3 = Good
-      if (typeof window.triggerParticleBurst === 'function') {
-        window.triggerParticleBurst(window.innerWidth / 2 + 100, window.innerHeight / 2.3);
-      }
       setTimeout(() => {
-        nextCard();
+        prevCard();
         flashcard.classList.remove('swipe-right');
         flashcard.style.transform = '';
       }, 300);
     } else if (dx < -threshold && card) {
       flashcard.classList.add('swipe-left');
-      window.dispatchEvent(new CustomEvent('card:reviewed', { detail: { id: card.id, rating: 1 } })); // 1 = Again
-      if (typeof window.triggerParticleBurst === 'function') {
-        window.triggerParticleBurst(window.innerWidth / 2 - 100, window.innerHeight / 2.3);
-      }
       setTimeout(() => {
         nextCard();
         flashcard.classList.remove('swipe-left');
