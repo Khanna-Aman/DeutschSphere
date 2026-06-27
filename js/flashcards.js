@@ -29,7 +29,7 @@ export function openAccordion() {
     elements.toggleRevealIcon.className = "fa-solid fa-chevron-up text-xs";
   }
   if (elements.toggleRevealText) {
-    elements.toggleRevealText.textContent = "Details verbergen";
+    elements.toggleRevealText.textContent = "Hide Details";
   }
   updateDesktopCompanionVisibility();
 }
@@ -45,7 +45,7 @@ export function closeAccordion() {
     elements.toggleRevealIcon.className = "fa-solid fa-chevron-down text-xs";
   }
   if (elements.toggleRevealText) {
-    elements.toggleRevealText.textContent = "Details anzeigen";
+    elements.toggleRevealText.textContent = "Show Details";
   }
   updateDesktopCompanionVisibility();
 }
@@ -68,7 +68,7 @@ export function closeAccordionInstantly() {
     elements.toggleRevealIcon.className = "fa-solid fa-chevron-down text-xs";
   }
   if (elements.toggleRevealText) {
-    elements.toggleRevealText.textContent = "Details anzeigen";
+    elements.toggleRevealText.textContent = "Show Details";
   }
   updateDesktopCompanionVisibility();
 }

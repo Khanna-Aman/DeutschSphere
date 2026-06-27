@@ -816,6 +816,64 @@ body.theme-weimar #flashcard.card-glow-neutral {
 }
 
 
+/* ==============================================================================
+   Theme-Specific Details Button Adaptations
+   Enforces distinct background and hover styling for #toggle-reveal-btn 
+   to match the primary/secondary color schemes of each theme.
+   ============================================================================== */
+body.theme-cyberpunk #toggle-reveal-btn {
+  background-color: #06b6d4 !important;
+  border-color: rgba(6, 182, 212, 0.4) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 12px rgba(6, 182, 212, 0.35) !important;
+}
+body.theme-cyberpunk #toggle-reveal-btn:hover {
+  background-color: #0891b2 !important;
+  box-shadow: 0 0 16px rgba(6, 182, 212, 0.5) !important;
+}
+
+body.theme-schwarzwald #toggle-reveal-btn {
+  background-color: #059669 !important;
+  border-color: rgba(16, 185, 129, 0.4) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.35) !important;
+}
+body.theme-schwarzwald #toggle-reveal-btn:hover {
+  background-color: #047857 !important;
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.5) !important;
+}
+
+body.theme-oktoberfest #toggle-reveal-btn {
+  background-color: #d97706 !important;
+  border-color: rgba(217, 119, 6, 0.4) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 12px rgba(217, 119, 6, 0.35) !important;
+}
+body.theme-oktoberfest #toggle-reveal-btn:hover {
+  background-color: #b45309 !important;
+  box-shadow: 0 0 16px rgba(217, 119, 6, 0.5) !important;
+}
+
+body.theme-weimar #toggle-reveal-btn {
+  background-color: #4f46e5 !important;
+  border-color: rgba(79, 70, 229, 0.4) !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.1) !important;
+}
+body.theme-weimar #toggle-reveal-btn:hover {
+  background-color: #4338ca !important;
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.15) !important;
+}
+
+/* ==============================================================================
+   Virtual Scroll Container Optimizations
+   Disables browser scroll anchoring to prevent sudden auto-scroll jumps.
+   ============================================================================== */
+#companion-word-list-items {
+  overflow-anchor: none !important;
+}
+
+
 /* --- PHONETIK-SPIEGEL (PHONETIC MIRROR) PREMIUM STYLES --- */
 
 #phonetic-mirror-panel {
