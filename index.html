@@ -267,6 +267,13 @@
         </div>
       </button>
 
+      <button id="nav-install-app" class="install-app-btn w-full px-3 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2.5 text-indigo-400 hover:text-white bg-indigo-500/10 hover:bg-indigo-600/30 border border-indigo-500/20 text-left cursor-pointer mt-1">
+        <i class="fa-solid fa-download text-xs text-indigo-400"></i>
+        <div class="flex flex-col">
+          <span class="font-semibold text-xs leading-none">Install App (PWA)</span>
+        </div>
+      </button>
+
     </nav>
 
     <!-- Categories Navigation List -->
@@ -1530,6 +1537,56 @@
           </button>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- PWA Install Guidance Modal -->
+  <div id="pwa-install-modal-overlay" class="confirm-modal-overlay hidden" role="dialog" aria-modal="true" aria-labelledby="pwa-install-modal-title">
+    <div class="confirm-modal-card max-w-[30rem]">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 text-lg">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <div>
+            <h3 id="pwa-install-modal-title" class="font-display font-bold text-base text-white">Install DeutschSphere App</h3>
+            <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Add to Home Screen</span>
+          </div>
+        </div>
+        <button id="pwa-install-modal-close" class="p-2 text-slate-400 hover:text-white transition-colors cursor-pointer" aria-label="Close">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <div class="space-y-4 text-xs text-slate-300 leading-relaxed font-medium">
+        <p>Install DeutschSphere on your phone to run 100% offline with full-screen focus!</p>
+
+        <div class="bg-slate-950/60 border border-slate-900 rounded-xl p-3.5 space-y-2">
+          <div class="flex items-center gap-2 text-indigo-400 font-bold">
+            <i class="fa-brands fa-android text-sm"></i>
+            <span>Android (Chrome / Edge / Firefox):</span>
+          </div>
+          <ol class="list-decimal list-inside space-y-1 text-slate-400 text-[11px] pl-1">
+            <li>Tap the <strong>3 dots menu (⋮)</strong> in the top-right corner.</li>
+            <li>Tap <strong>"Add to Home screen"</strong> or <strong>"Install app"</strong>.</li>
+          </ol>
+        </div>
+
+        <div class="bg-slate-950/60 border border-slate-900 rounded-xl p-3.5 space-y-2">
+          <div class="flex items-center gap-2 text-pink-400 font-bold">
+            <i class="fa-brands fa-apple text-sm"></i>
+            <span>iPhone / iPad (Safari):</span>
+          </div>
+          <ol class="list-decimal list-inside space-y-1 text-slate-400 text-[11px] pl-1">
+            <li>Tap the <strong>Share button (⎋)</strong> at the bottom of Safari.</li>
+            <li>Scroll down and tap <strong>"Add to Home Screen"</strong>.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="mt-5 flex justify-end">
+        <button id="pwa-install-modal-done" class="px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-xs transition-all shadow-md cursor-pointer active:scale-95">Got it!</button>
+      </div>
     </div>
   </div>
 

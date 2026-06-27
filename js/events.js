@@ -1516,3 +1516,42 @@ export async function restoreSyncKey() {
     }
   }
 }
+
+let deferredPrompt = null;
+
+export function initPwaInstallManager() {
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+  });
+
+  const installBtns = document.querySelectorAll('.install-app-btn');
+  installBtns.forEach(btn => {
+    btn.addEventListener('click', async (e) => {
+      e.preventDefault();
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        if (outcome === 'accepted') {
+          console.log('[PWA] User installed application');
+        }
+        deferredPrompt = null;
+      } else {
+        const modal = document.getElementById('pwa-install-modal-overlay');
+        if (modal) modal.classList.remove('hidden');
+      }
+    });
+  });
+
+  const closeBtn = document.getElementById('pwa-install-modal-close');
+  const doneBtn = document.getElementById('pwa-install-modal-done');
+  const modal = document.getElementById('pwa-install-modal-overlay');
+
+  if (closeBtn && modal) closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
+  if (doneBtn && modal) doneBtn.addEventListener('click', () => modal.classList.add('hidden'));
+  if (modal) {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) modal.classList.add('hidden');
+    });
+  }
+}

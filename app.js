@@ -24,7 +24,8 @@ import {
   setupSwipeGestures,
   initShortcutsToggle,
   initHelpModal,
-  initFeedbackModal
+  initFeedbackModal,
+  initPwaInstallManager
 } from './js/events.js';
 
 import {
@@ -271,6 +272,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initShortcutsToggle();
   initHelpModal();
   initFeedbackModal();
+  initPwaInstallManager();
 
   fetchData();
   setupEventListeners();
