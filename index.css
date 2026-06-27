@@ -1568,3 +1568,25 @@ input:focus-visible {
     font-size: 0.8125rem !important;
   }
 }
+
+/* Premium Settings Active State Highlights */
+#deck-prefs-dropdown button[data-active="true"] {
+  background-color: rgba(99, 102, 241, 0.16) !important;
+  border-color: rgba(99, 102, 241, 0.45) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 12px rgba(99, 102, 241, 0.15);
+}
+#deck-prefs-dropdown button[data-active="true"] .rounded-lg {
+  background-color: rgb(99, 102, 241) !important;
+  border-color: rgb(129, 140, 248) !important;
+  color: #ffffff !important;
+}
+#deck-prefs-dropdown button[data-active="true"] .text-slate-500 {
+  color: rgb(199, 210, 254) !important;
+}
+#deck-prefs-dropdown button[data-active="true"] kbd {
+  background-color: rgba(99, 102, 241, 0.4) !important;
+  border-color: rgba(99, 102, 241, 0.6) !important;
+  color: #ffffff !important;
+}
+

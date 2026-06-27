@@ -865,6 +865,7 @@ export function updateReadModeUI() {
         icon.className = "toggle-icon fa-solid fa-toggle-on text-xs text-indigo-400";
         elements.readModeBtn.classList.add('border-indigo-500/30', 'bg-indigo-950/20');
         elements.readModeBtn.classList.remove('border-slate-800', 'bg-slate-900/80');
+        elements.readModeBtn.setAttribute('data-active', 'true');
         if (wrapper) {
           wrapper.className = "read-mode-toggle-wrapper flex items-center justify-center w-8 h-8 rounded-lg text-sm font-medium transition-all bg-indigo-950/20 border border-indigo-500/30 text-indigo-400";
         }
@@ -872,6 +873,7 @@ export function updateReadModeUI() {
         icon.className = "toggle-icon fa-solid fa-toggle-off text-xs text-slate-500";
         elements.readModeBtn.classList.add('border-slate-800', 'bg-slate-900/80');
         elements.readModeBtn.classList.remove('border-indigo-500/30', 'bg-indigo-950/20');
+        elements.readModeBtn.removeAttribute('data-active');
         if (wrapper) {
           wrapper.className = "read-mode-toggle-wrapper flex items-center justify-center w-8 h-8 rounded-lg text-sm font-medium transition-all bg-slate-900/80 border border-slate-800 text-slate-500 group-hover:border-indigo-500/30 group-hover:bg-indigo-950/20";
         }
@@ -930,6 +932,7 @@ export function updateAutoplayUI() {
         icon.className = "toggle-icon fa-solid fa-toggle-on text-xs text-indigo-400";
         elements.autoplayBtn.classList.add('border-indigo-500/30', 'bg-indigo-950/20');
         elements.autoplayBtn.classList.remove('border-slate-800', 'bg-slate-900/80');
+        elements.autoplayBtn.setAttribute('data-active', 'true');
         if (wrapper) {
           wrapper.className = "autoplay-toggle-wrapper flex items-center justify-center w-8 h-8 rounded-lg text-sm font-medium transition-all bg-indigo-950/20 border border-indigo-500/30 text-indigo-400";
         }
@@ -937,6 +940,7 @@ export function updateAutoplayUI() {
         icon.className = "toggle-icon fa-solid fa-toggle-off text-xs text-slate-500";
         elements.autoplayBtn.classList.add('border-slate-800', 'bg-slate-900/80');
         elements.autoplayBtn.classList.remove('border-indigo-500/30', 'bg-indigo-950/20');
+        elements.autoplayBtn.removeAttribute('data-active');
         if (wrapper) {
           wrapper.className = "autoplay-toggle-wrapper flex items-center justify-center w-8 h-8 rounded-lg text-sm font-medium transition-all bg-slate-900/80 border border-slate-800 text-slate-500 group-hover:border-indigo-500/30 group-hover:bg-indigo-950/20";
         }
@@ -1071,6 +1075,7 @@ export function updateImagesToggleUI() {
       // Active state
       toggleBtn.classList.add('bg-indigo-600', 'border-indigo-500', 'text-white', 'hover:bg-indigo-500', 'hover:text-white');
       toggleBtn.classList.remove('bg-slate-950/40', 'border-slate-900/80', 'text-slate-500/70');
+      toggleBtn.setAttribute('data-active', 'true');
       if (label) {
         label.textContent = "Premium Illustrations";
         label.classList.remove('text-slate-400');
@@ -1091,6 +1096,7 @@ export function updateImagesToggleUI() {
       // Inactive state
       toggleBtn.classList.remove('bg-indigo-600', 'border-indigo-500', 'text-white', 'hover:bg-indigo-500', 'hover:text-white');
       toggleBtn.classList.add('bg-slate-950/40', 'border-slate-900/80', 'text-slate-500/70');
+      toggleBtn.removeAttribute('data-active');
       if (label) {
         label.textContent = "Premium Illustrations";
         label.classList.add('text-slate-400');

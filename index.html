@@ -424,7 +424,7 @@
   <div id="sidebar-backdrop" class="fixed inset-0 bg-slate-950/60 backdrop-blur-sm z-[35] hidden md:hidden"></div>
 
   <!-- Main Content Workspace -->
-  <main id="main-content" class="flex-1 flex flex-col min-h-0 overflow-y-auto relative z-10 px-4 py-4 md:py-6 md:px-8 lg:py-6 lg:px-12" tabindex="-1">
+  <main id="main-content" class="flex-1 flex flex-col min-h-0 overflow-y-auto relative z-10 px-4 pt-4 pb-28 md:py-6 md:px-8 lg:py-6 lg:px-12" tabindex="-1">
     
     <!-- Flashcards View Container -->
     <div id="flashcards-view" class="flex flex-col flex-1">
@@ -452,7 +452,7 @@
             </div>
             
             <!-- Action 1: Shuffle — most frequently used, at top -->
-            <button id="shuffle-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group" title="Shuffle card order randomly">
+            <button id="shuffle-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 border border-transparent transition-all group" title="Shuffle card order randomly">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:border-indigo-500/40 transition-colors">
                   <i class="fa-solid fa-shuffle text-xs"></i>
@@ -466,7 +466,7 @@
             </button>
 
             <!-- Action 2: Hide Learned -->
-            <button id="hide-learned-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group" title="Hide learned cards">
+            <button id="hide-learned-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 border border-transparent transition-all group" title="Hide learned cards">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:border-indigo-500/40 transition-colors">
                   <i class="fa-solid fa-eye-slash text-xs"></i>
@@ -483,7 +483,7 @@
             <div class="border-t border-slate-800/60 my-1"></div>
 
             <!-- Toggle 1: Schnell-Lesen -->
-            <button id="read-mode-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group text-left" title="Toggle read mode (F)">
+            <button id="read-mode-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 border border-transparent transition-all group text-left" title="Toggle read mode (F)">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 group-hover:border-amber-500/40 transition-colors">
                   <i class="fa-solid fa-bolt text-xs"></i>
@@ -503,7 +503,7 @@
             </button>
 
             <!-- Toggle 2: Autoplay -->
-            <button id="autoplay-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group text-left" title="Toggle pronunciation autoplay (A)">
+            <button id="autoplay-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 border border-transparent transition-all group text-left" title="Toggle pronunciation autoplay (A)">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:border-emerald-500/40 transition-colors">
                   <i class="fa-solid fa-circle-play text-xs"></i>
@@ -523,7 +523,7 @@
             </button>
 
             <!-- Toggle 3: Bilder anzeigen -->
-            <button id="toggle-images-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group text-left" title="Show/hide images (B)">
+            <button id="toggle-images-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 border border-transparent transition-all group text-left" title="Show/hide images (B)">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-lg bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400 group-hover:border-pink-500/40 transition-colors">
                   <i class="fa-solid fa-image text-xs"></i>
@@ -737,24 +737,24 @@
 
         <!-- Navigation & Primary Controls Below Card -->
         <div class="w-full flex items-center justify-between mt-4 gap-4">
-          <button id="prev-btn" aria-label="Vorherige Karte" class="flex-1 sm:flex-initial flex items-center justify-center gap-2 bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-slate-700 active:scale-95 text-slate-300 hover:text-white px-5 py-3 rounded-xl font-medium transition-all shadow-md" title="Vorherige Karte (Tastaturkürzel: Links/Oben)">
+          <button id="prev-btn" aria-label="Previous Card" class="flex-1 sm:flex-initial flex items-center justify-center gap-2 bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-slate-700 active:scale-95 text-slate-300 hover:text-white px-5 py-3 rounded-xl font-medium transition-all shadow-md" title="Previous Card (Hotkey: Left/Up Arrow)">
             <i class="fa-solid fa-arrow-left"></i>
-            <span>Zurück</span>
+            <span>Previous</span>
           </button>
 
           <div class="flex-1 sm:flex-initial flex items-center gap-3 justify-center">
-            <button id="toggle-reveal-btn" class="hidden sm:flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white px-6 py-3 rounded-xl font-semibold transition-all shadow-lg shadow-indigo-600/20" title="Bedeutung aufdecken (Tastaturkürzel: Leertaste)">
+            <button id="toggle-reveal-btn" class="hidden sm:flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white px-6 py-3 rounded-xl font-semibold transition-all shadow-lg shadow-indigo-600/20" title="Reveal Meaning (Hotkey: Spacebar)">
               <i class="fa-solid fa-eye" id="toggle-reveal-icon"></i>
-              <span id="toggle-reveal-text">Aufdecken</span>
+              <span id="toggle-reveal-text">Reveal</span>
             </button>
             
-            <button id="learned-btn" aria-label="Als gelernt markieren" class="flex items-center justify-center bg-slate-900 border border-slate-800 hover:border-emerald-500 hover:bg-emerald-950/20 text-slate-400 hover:text-emerald-400 w-12 h-12 rounded-xl transition-all shadow-md active:scale-95" title="Als gelernt markieren (Tastaturkürzel: L)">
+            <button id="learned-btn" aria-label="Mark as learned" class="flex items-center justify-center bg-slate-900 border border-slate-800 hover:border-emerald-500 hover:bg-emerald-950/20 text-slate-400 hover:text-emerald-400 w-12 h-12 rounded-xl transition-all shadow-md active:scale-95" title="Mark as learned (Hotkey: L)">
               <i class="fa-solid fa-check text-lg"></i>
             </button>
           </div>
 
-          <button id="next-btn" aria-label="Nächste Karte" class="flex-1 sm:flex-initial flex items-center justify-center gap-2 bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-slate-700 active:scale-95 text-slate-300 hover:text-white px-5 py-3 rounded-xl font-medium transition-all shadow-md" title="Nächste Karte (Tastaturkürzel: Rechts/Unten)">
-            <span>Weiter</span>
+          <button id="next-btn" aria-label="Next Card" class="flex-1 sm:flex-initial flex items-center justify-center gap-2 bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-slate-700 active:scale-95 text-slate-300 hover:text-white px-5 py-3 rounded-xl font-medium transition-all shadow-md" title="Next Card (Hotkey: Right/Down Arrow)">
+            <span>Next</span>
             <i class="fa-solid fa-arrow-right"></i>
           </button>
         </div>

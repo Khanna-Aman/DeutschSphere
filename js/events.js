@@ -138,6 +138,7 @@ export function initSettingsUI() {
   updateReadModeUI();
   updateAutoplayUI();
   updateHideLearnedUI();
+  updateImagesToggleUI();
 }
 
 /**
