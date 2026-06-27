@@ -1,6 +1,6 @@
 # 🔮 VISION.md — Project Status & Roadmap
 
-> Last updated: 2026-06-26
+> Last updated: 2026-06-27
 
 This document provides an honest, accurate assessment of what has been built, what works, what's incomplete, and what's planned for the future.
 
@@ -118,6 +118,9 @@ We are currently executing the **V6.0 Premium 3D Asset Generation Sprint**, syst
   - **A2**: 1,142 words audited, 273 factual updates applied (e.g., plural of `'die Bank'` -> `'die Banken'`, theme to `'Einkaufen, Geld & Konsum'`, and gender of `'das Glück'` -> `'das'`).
   - **B1**: 2,139 words audited, 154 factual updates applied (e.g., aligned grammatical categories, verb/adjective forms).
 - [x] **Dynamic Illustration Deactivation (Zero-404 Deployment Mode)**: Temporarily disabled image illustration loading for V1.0.0 to prevent 404 network errors, replacing the UI image box with a gorgeous glassmorphic "Coming Soon in V1.0.1" toast. Saved ~3,900 flat SVG assets from unnecessary network request overhead.
+- [x] **RegExp Query Cache**: Cached compiled user RegExp queries inside `filterDeck` (`js/search.js`) to prevent garbage collection and compilation overhead on rapid keystrokes.
+- [x] **Semantic HTML View Containers**: Converted major layout containers to semantic HTML5 `<section>` tags in `index.html` for better SEO structure and accessibility.
+- [x] **High-Contrast Print Layout Layouts**: Implemented dedicated `@media print` CSS rules in `index.css` supporting ink-conserving monochrome layouts and forcing card accordion disclosures for physical paper printing.
 
 
 ### Phase 12: Premium 3D Claymation & Glassmorphic Asset Generation (In Progress)
@@ -414,13 +417,13 @@ All `JSON.parse(localStorage...)` calls are now guarded. All `localStorage.setIt
 |--------|-------|
 | Total vocabulary entries | 3,921 |
 | Total SVG illustrations | ~3,900+ |
-| HTML lines | 1,763 |
-| CSS lines | 1,203 |
-| Total JS (all modules) | ~490KB across 12 files (1 orchestrator + 10 domain modules + 1 FSRS engine) |
+| HTML lines | 2,372 |
+| CSS lines | 1,784 |
+| Total JS (all modules) | ~508KB across 19 files (1 root orchestrator, 1 service worker, and 17 feature modules) |
 | External dependencies | 0 (Tailwind CDN, FontAwesome CDN, Google Fonts only) |
 | SPA routes | 7 |
 | Themes | 5 |
 | Keyboard shortcuts | 13 |
 | Achievement badges | 12 |
 | SRS algorithm | FSRS-5 (19-parameter model) |
-| Python automation scripts | 16 |
+| Python automation scripts | 30 |

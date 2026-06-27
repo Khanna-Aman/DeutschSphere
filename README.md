@@ -98,6 +98,7 @@ A1-B1_German/
 │   ├── fsrs.js             # FSRS-5 algorithm (pure client-side, zero deps)
 │   ├── nlp.js              # Pure-JS Offline NLP Engine (Lemmatization, Gender Prediction)
 │   ├── audio.js            # TTS, Web Audio singleton (shared AudioContext)
+│   ├── phoneme_guides.js   # Cybernetic mouth positioning guides for phonemes
 │   ├── flashcards.js       # Card rendering, SRS, phonetic mirror
 │   ├── quiz.js             # Quiz arena (MC + spelling) with XSS-safe rendering
 │   ├── adventure.js        # RPG conversational mode
