@@ -576,54 +576,51 @@
         <!-- Main Column: Audio Trainer, Flashcard, Details, Controls & Companion -->
         <div id="flashcard-workspace-left" class="space-y-4 w-full">
 
-          <!-- Main card wrapper -->
-          <div class="w-full space-y-4">
-        
-        <!-- Continuous Audio Trainer Panel -->
-        <div id="audio-trainer-panel" class="w-full mb-2 bg-slate-900/60 glass border border-slate-800/85 rounded-2xl py-2.5 px-4 flex flex-col sm:flex-row items-center justify-between gap-4 transition-all duration-300 shadow-xl shadow-slate-950/20">
-          <!-- Trainer Header & Info -->
-          <div class="flex items-center gap-3 w-full sm:w-auto">
-            <div class="relative flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-400">
-              <i id="trainer-status-icon" class="fa-solid fa-microphone-lines text-sm"></i>
-              <span id="trainer-pulse-ring" class="absolute inset-0 rounded-xl border border-indigo-500/50 animate-ping opacity-0"></span>
-            </div>
-            <div class="flex flex-col">
-              <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest flex items-center gap-1">Dual-Voice Trainer</span>
-              <span id="trainer-status-text" class="text-xs font-semibold text-slate-300">Inactive (Ready)</span>
-            </div>
-          </div>
-
-          <!-- Controls -->
-          <div class="flex items-center gap-3">
-            <button id="trainer-prev-btn" aria-label="Previous word" class="p-2 rounded-xl bg-slate-950/40 border border-slate-900/80 text-slate-400 hover:text-white hover:border-slate-700 active:scale-95 transition-all flex items-center justify-center w-9 h-9" title="Previous Card">
-              <i class="fa-solid fa-backward text-xs"></i>
-            </button>
-            
-            <button id="trainer-play-btn" aria-label="Play trainer" class="p-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white active:scale-95 transition-all flex items-center justify-center w-10 h-10 shadow-lg shadow-indigo-600/20" title="Start Continuous Audio Trainer">
-              <i id="trainer-play-icon" class="fa-solid fa-play text-xs pl-0.5"></i>
-            </button>
-            
-            <button id="trainer-next-btn" aria-label="Next word" class="p-2 rounded-xl bg-slate-950/40 border border-slate-900/80 text-slate-400 hover:text-white hover:border-slate-700 active:scale-95 transition-all flex items-center justify-center w-9 h-9" title="Next Card">
-              <i class="fa-solid fa-forward text-xs"></i>
-            </button>
-          </div>
-
-          <!-- Settings (Speed Slider & Loop Toggle) -->
-          <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
-            <!-- Speed Control -->
-            <div class="flex items-center gap-2 bg-slate-950/40 px-2.5 py-1.5 rounded-xl border border-slate-900/80 text-[11px] text-slate-400">
-              <span>Speed:</span>
-              <input id="trainer-speed-slider" type="range" min="0.7" max="1.5" step="0.1" value="1.0" class="w-14 sm:w-16 accent-indigo-500 h-1 bg-slate-800 rounded-lg cursor-pointer">
-              <span id="trainer-speed-val" class="font-mono text-indigo-400 w-7 text-right">1.0x</span>
+          <!-- Continuous Audio Trainer Panel -->
+          <div id="audio-trainer-panel" class="w-full bg-slate-900/60 glass border border-slate-800/85 rounded-2xl py-2.5 px-4 flex flex-col sm:flex-row items-center justify-between gap-4 transition-all duration-300 shadow-xl shadow-slate-950/20">
+            <!-- Trainer Header & Info -->
+            <div class="flex items-center gap-3 w-full sm:w-auto">
+              <div class="relative flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-400">
+                <i id="trainer-status-icon" class="fa-solid fa-microphone-lines text-sm"></i>
+                <span id="trainer-pulse-ring" class="absolute inset-0 rounded-xl border border-indigo-500/50 animate-ping opacity-0"></span>
+              </div>
+              <div class="flex flex-col">
+                <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest flex items-center gap-1">Dual-Voice Trainer</span>
+                <span id="trainer-status-text" class="text-xs font-semibold text-slate-300">Inactive (Ready)</span>
+              </div>
             </div>
 
-            <!-- Loop Mode Toggle -->
-            <button id="trainer-loop-btn" aria-label="Toggle loop" class="flex items-center gap-1.5 bg-slate-950/40 border border-slate-900/80 text-slate-400 hover:text-indigo-400 hover:border-indigo-500/30 px-2.5 py-1.5 rounded-xl text-[11px] font-semibold transition-all" title="Repeat category in infinite loop">
-              <i class="fa-solid fa-rotate text-[10px]"></i>
-              <span id="trainer-loop-text">Loop off</span>
-            </button>
-        <!-- The Core Card Display Area (Adapts to side-by-side grid on desktop when revealed) -->
-        <div id="card-display-area" class="w-full space-y-4 transition-all duration-300">
+            <!-- Controls -->
+            <div class="flex items-center gap-3">
+              <button id="trainer-prev-btn" aria-label="Previous word" class="p-2 rounded-xl bg-slate-950/40 border border-slate-900/80 text-slate-400 hover:text-white hover:border-slate-700 active:scale-95 transition-all flex items-center justify-center w-9 h-9" title="Previous Card">
+                <i class="fa-solid fa-backward text-xs"></i>
+              </button>
+              <button id="trainer-play-btn" aria-label="Play trainer" class="p-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white active:scale-95 transition-all flex items-center justify-center w-10 h-10 shadow-lg shadow-indigo-600/20" title="Start Continuous Audio Trainer">
+                <i id="trainer-play-icon" class="fa-solid fa-play text-xs pl-0.5"></i>
+              </button>
+              <button id="trainer-next-btn" aria-label="Next word" class="p-2 rounded-xl bg-slate-950/40 border border-slate-900/80 text-slate-400 hover:text-white hover:border-slate-700 active:scale-95 transition-all flex items-center justify-center w-9 h-9" title="Next Card">
+                <i class="fa-solid fa-forward text-xs"></i>
+              </button>
+            </div>
+
+            <!-- Settings (Speed Slider & Loop Toggle) -->
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+              <!-- Speed Control -->
+              <div class="flex items-center gap-2 bg-slate-950/40 px-2.5 py-1.5 rounded-xl border border-slate-900/80 text-[11px] text-slate-400">
+                <span>Speed:</span>
+                <input id="trainer-speed-slider" type="range" min="0.7" max="1.5" step="0.1" value="1.0" class="w-14 sm:w-16 accent-indigo-500 h-1 bg-slate-800 rounded-lg cursor-pointer">
+                <span id="trainer-speed-val" class="font-mono text-indigo-400 w-7 text-right">1.0x</span>
+              </div>
+              <!-- Loop Mode Toggle -->
+              <button id="trainer-loop-btn" aria-label="Toggle loop" class="flex items-center gap-1.5 bg-slate-950/40 border border-slate-900/80 text-slate-400 hover:text-indigo-400 hover:border-indigo-500/30 px-2.5 py-1.5 rounded-xl text-[11px] font-semibold transition-all" title="Repeat category in infinite loop">
+                <i class="fa-solid fa-rotate text-[10px]"></i>
+                <span id="trainer-loop-text">Loop off</span>
+              </button>
+            </div>
+          </div> <!-- End of audio-trainer-panel -->
+
+          <!-- The Core Card Display Area -->
+          <div id="card-display-area" class="w-full space-y-4 transition-all duration-300">
           <!-- The Core Card Element (M6: aria-live for screen reader announcements) -->
           <div id="flashcard" role="region" aria-live="polite" aria-label="Current flashcard" class="glass border rounded-2xl p-6 md:py-6 md:px-10 min-h-[220px] sm:min-h-[240px] md:min-h-[280px] flex flex-col justify-between cursor-pointer transition-all duration-300 select-none relative group overflow-hidden card-glow-neutral">
             <!-- Subtle Glow Overlay on hover -->
@@ -888,12 +885,11 @@
 
         </div> <!-- End of Deck Companion Dashboard -->
 
-          </div> <!-- End of card wrapper -->
-        </div> <!-- End of Main Column -->
+        </div> <!-- End of Main Column / flashcard-workspace-left -->
 
-      </div> <!-- End of Unified Centered Workspace Layout -->
+      </div> <!-- End of Unified Centered Workspace Layout / flashcard-workspace-grid -->
 
-    </div> <!-- End of Active Flashcard Workspace -->
+    </div> <!-- End of Active Flashcard Workspace / flashcard-workspace-container -->
 
     <!-- Hotkeys hint footer (Hidden on mobile) -->
     <footer class="mt-4 text-center text-[11px] font-medium text-slate-500/80 hidden sm:block">
