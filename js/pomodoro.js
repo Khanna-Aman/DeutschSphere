@@ -1,7 +1,6 @@
 // js/pomodoro.js — Pomodoro focus-booster timers, soundscapes, XP multipliers and screen particle toasts
-import { state, elements } from './state.js';
+import { state, elements, addXP } from './state.js';
 import { startFocusSound, stopFocusSound, playAchievementChime } from './audio.js';
-import { addAdventureXP } from './adventure.js';
 
 /**
  * Initializes the Pomodoro focus booster widgets and sets up listeners.
@@ -150,7 +149,7 @@ export function completeFocusTimer() {
   stopFocusTimer();
 
   // Award +25 XP
-  addAdventureXP(25);
+  addXP(25);
 
   // Play achievement sound cue
   playAchievementChime();

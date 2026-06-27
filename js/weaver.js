@@ -1,6 +1,6 @@
 // js/weaver.js — Grammatik-Weberei (Grammar Weaver) Game Engine Module
 
-import { state, elements, safeSetItem, safeGetItem, shuffleArray } from './state.js';
+import { state, elements, safeSetItem, safeGetItem, shuffleArray, addXP } from './state.js';
 import { playSnapHaptic, playSuccessArpeggio, playErrorGlide } from './audio.js';
 import { lemmatizeVerb } from './nlp.js';
 
@@ -640,7 +640,7 @@ export function submitWeaverSentence() {
     // Add XP points (25 XP Base)
     let xpGain = 25;
     state.weaver.xpEarned += xpGain;
-    addWeaverXP(xpGain);
+    addXP(xpGain);
 
     // Reveal Feedback panel with Success theme
     if (elements.weaverFeedback) {
@@ -779,24 +779,4 @@ export function getGrammarExplanation(sentenceText) {
   return `💡 Grammar Tip (V2 Rule): In a standard German declarative clause, the conjugated verb is always locked at the second structural position of the clause (Position 2).`;
 }
 
-/**
- * Persistent helper adding XP and syncing counter indicator.
- */
-export function addWeaverXP(amount) {
-  if (state.focus && state.focus.xpMultiplierActive) {
-    amount = Math.round(amount * 1.25);
-  }
-  let currentXP = parseInt(safeGetItem('adventure_xp', '0'), 10) || 0;
-  currentXP += amount;
-  safeSetItem('adventure_xp', String(currentXP));
-  
-  state.adventure.xp = currentXP;
 
-  if (elements.weaverXpCounter) {
-    elements.weaverXpCounter.textContent = `${currentXP} XP`;
-    elements.weaverXpCounter.classList.add('scale-115', 'text-amber-400');
-    setTimeout(() => {
-      elements.weaverXpCounter.classList.remove('scale-115', 'text-amber-400');
-    }, 450);
-  }
-}

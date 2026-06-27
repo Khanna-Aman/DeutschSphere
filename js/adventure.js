@@ -1,6 +1,6 @@
 // js/adventure.js — RPG Deutsch-Abenteuer Game Engine Module
 
-import { state, elements, safeJsonParse, safeSetItem, safeGetItem, escapeHtml } from './state.js';
+import { state, elements, safeJsonParse, safeSetItem, safeGetItem, escapeHtml, addXP } from './state.js';
 import { speakText, playSnapHaptic, playSuccessArpeggio, playErrorGlide, playEpicArpeggio } from './audio.js';
 
 // Get FontAwesome icon class for a given scenario theme
@@ -327,7 +327,7 @@ export function checkAdventureAnswer() {
     playSuccessArpeggio();
     
     // Earn 20 experience points
-    addAdventureXP(20);
+    addXP(20);
     
     // Show Feedback container styled with Success aesthetics
     if (elements.adventureFeedback) {
@@ -395,28 +395,7 @@ export function checkAdventureAnswer() {
   }
 }
 
-// Add XP points and persist to localStorage
-export function addAdventureXP(amount) {
-  if (state.focus && state.focus.xpMultiplierActive) {
-    amount = Math.round(amount * 1.25);
-  }
-  let currentXP = parseInt(safeGetItem('adventure_xp', '0'), 10) || 0;
-  currentXP += amount;
-  safeSetItem('adventure_xp', String(currentXP));
-  
-  if (state.adventure) {
-    state.adventure.xp = currentXP;
-  }
-  
-  // Bump animation for indicator
-  if (elements.adventureXpCounter) {
-    elements.adventureXpCounter.textContent = `${currentXP} XP`;
-    elements.adventureXpCounter.classList.add('scale-110', 'text-amber-400');
-    setTimeout(() => {
-      elements.adventureXpCounter.classList.remove('scale-110', 'text-amber-400');
-    }, 400);
-  }
-}
+
 
 // Transition to the next branching dialogue node or end scenario
 export function nextAdventureNode() {

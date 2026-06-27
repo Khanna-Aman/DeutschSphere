@@ -999,6 +999,30 @@ export function migrateToFSRS() {
     saveSRSState();
     // FSRS migration completed silently
   }
+// Centralized XP addition helper (unifies weaver and adventure XP)
+export function addXP(amount) {
+  if (state.focus && state.focus.xpMultiplierActive) {
+    amount = Math.round(amount * 1.25);
+  }
+  let currentXP = parseInt(safeGetItem('adventure_xp', '0'), 10) || 0;
+  currentXP += amount;
+  safeSetItem('adventure_xp', String(currentXP));
+  
+  if (state.adventure) {
+    state.adventure.xp = currentXP;
+  }
+
+  // Dynamic bump & color animation for whichever counter is active/present
+  const counters = [elements.adventureXpCounter, elements.weaverXpCounter];
+  counters.forEach(counter => {
+    if (counter) {
+      counter.textContent = `${currentXP} XP`;
+      counter.classList.add('scale-110', 'text-amber-400');
+      setTimeout(() => {
+        counter.classList.remove('scale-110', 'text-amber-400');
+      }, 450);
+    }
+  });
 }
 
 // ==========================================
@@ -1308,6 +1332,7 @@ state.getCustomCards = getCustomCards;
 state.addCustomCard = addCustomCard;
 state.generateSyncKey = generateSyncKey;
 state.restoreFromSyncKey = restoreFromSyncKey;
+state.addXP = addXP;
 
 // Generic helper to shuffle an array in-place (Fisher-Yates)
 export function shuffleArray(array) {
