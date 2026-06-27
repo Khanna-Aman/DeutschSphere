@@ -4,11 +4,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "fährt (ab)",
-      "perfekt": "ist (ab)gefahren",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to drive / to depart",
     "pronunciation": "fah-ren",
@@ -62,11 +58,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "fährt ab",
-      "perfekt": "ist abgefahren",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to depart / to leave",
     "pronunciation": "ahp-fah-ren",
@@ -102,11 +94,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "gibt ab",
-      "perfekt": "hat abgegeben",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to hand in / to drop off",
     "pronunciation": "ahp-gey-ben",
@@ -124,11 +112,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "holt ab",
-      "perfekt": "hat abgeholt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to pick up / to collect",
     "pronunciation": "ahp-ho-len",
@@ -146,11 +130,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "schließt ab",
-      "perfekt": "hat abgeschlossen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to lock / to finish",
     "pronunciation": "ahp-shlee-sen",
@@ -331,10 +311,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "älter",
-      "superlative": "am ältesten"
-    },
+    "adjective_forms": null,
     "english": "old",
     "pronunciation": "ahlt",
     "theme": "Eigenschaften & Adjektive",
@@ -405,11 +382,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "ist an",
-      "perfekt": "ist an gewesen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to be on / to be turned on",
     "pronunciation": "ahn zine",
@@ -427,11 +400,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "bietet an",
-      "perfekt": "hat angeboten",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to offer",
     "pronunciation": "ahn-bee-ten",
@@ -449,11 +418,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "bietet an",
-      "perfekt": "hat angeboten",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to offer",
     "pronunciation": "ahn-bee-ten",
@@ -525,11 +490,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "fängt an",
-      "perfekt": "hat angefangen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to begin / to start",
     "pronunciation": "ahn-fahng-en",
@@ -583,11 +544,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "kommt an",
-      "perfekt": "ist angekommen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to arrive",
     "pronunciation": "ahn-kom-men",
@@ -623,11 +580,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "macht an",
-      "perfekt": "hat angemacht",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to turn on / to switch on",
     "pronunciation": "ahn-mah-khen",
@@ -699,11 +652,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "ruft an",
-      "perfekt": "hat angerufen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to call / to phone",
     "pronunciation": "ahn-roo-fen",
@@ -739,11 +688,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "sieht an",
-      "perfekt": "hat angesehen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to look at / to watch",
     "pronunciation": "ahn-zey-en",
@@ -779,11 +724,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "antwortet",
-      "perfekt": "hat geantwortet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to answer / to reply",
     "pronunciation": "ahnt-vor-ten",
@@ -905,11 +846,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "arbeitet",
-      "perfekt": "hat gearbeitet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to work",
     "pronunciation": "ar-by-ten",
@@ -928,10 +865,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "",
-      "superlative": ""
-    },
+    "adjective_forms": null,
     "english": "unemployed / jobless",
     "pronunciation": "ar-bites-lohs",
     "theme": "Arbeit, Beruf & Karriere",
@@ -949,10 +883,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "ärmer",
-      "superlative": "am ärmsten"
-    },
+    "adjective_forms": null,
     "english": "poor",
     "pronunciation": "arm",
     "theme": "Eigenschaften & Adjektive",
@@ -1077,11 +1008,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "ist auf",
-      "perfekt": "ist auf gewesen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to be open",
     "pronunciation": "owf zine",
@@ -1099,11 +1026,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "hört auf",
-      "perfekt": "hat aufgehört",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to stop / to quit",
     "pronunciation": "owf-hur-en",
@@ -1121,11 +1044,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "macht auf",
-      "perfekt": "hat aufgemacht",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to open",
     "pronunciation": "owf-mah-khen",
@@ -1143,11 +1062,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "passt auf",
-      "perfekt": "hat aufgepasst",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to pay attention / to watch out",
     "pronunciation": "owf-pahs-sen",
@@ -1166,10 +1081,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "aufregender",
-      "superlative": "am aufregendsten"
-    },
+    "adjective_forms": null,
     "english": "exciting / thrilling",
     "pronunciation": "owf-rey-gent",
     "theme": "Eigenschaften & Adjektive",
@@ -1186,11 +1098,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "räumt auf",
-      "perfekt": "hat aufgeräumt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to clean up / to tidy up",
     "pronunciation": "owf-roy-men",
@@ -1208,11 +1116,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "steht auf",
-      "perfekt": "ist aufgestanden",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to get up / to stand up",
     "pronunciation": "owf-shtey-en",
@@ -1266,11 +1170,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "ist aus",
-      "perfekt": "ist aus gewesen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to be off / to be turned off",
     "pronunciation": "ows zine",
@@ -1306,11 +1206,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "füllt aus",
-      "perfekt": "hat ausgefüllt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to fill in / to fill out",
     "pronunciation": "ows-fül-len",
@@ -1346,11 +1242,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "gibt aus",
-      "perfekt": "hat ausgegeben",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to spend (money)",
     "pronunciation": "ows-gey-ben",
@@ -1368,11 +1260,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "geht aus",
-      "perfekt": "ist ausgegangen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to go out",
     "pronunciation": "ows-gey-en",
@@ -1426,11 +1314,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "macht aus",
-      "perfekt": "hat ausgemacht",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to turn off / to switch off",
     "pronunciation": "ows-mah-khen",
@@ -1448,11 +1332,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "packt aus",
-      "perfekt": "hat ausgepackt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to unpack",
     "pronunciation": "ows-pah-ken",
@@ -1470,11 +1350,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "sieht aus",
-      "perfekt": "hat ausgesehen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to look / to appear",
     "pronunciation": "ows-zay-en",
@@ -1492,11 +1368,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "spricht aus",
-      "perfekt": "hat ausgesprochen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to pronounce",
     "pronunciation": "ows-shprekh-en",
@@ -1514,11 +1386,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "steigt aus",
-      "perfekt": "ist ausgestiegen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to get off / to get out",
     "pronunciation": "ows-shty-gen",
@@ -1536,11 +1404,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "trägt aus",
-      "perfekt": "hat ausgetragen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to deliver / to distribute",
     "pronunciation": "ows-trah-gen",
@@ -1631,10 +1495,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "",
-      "superlative": ""
-    },
+    "adjective_forms": null,
     "english": "automatic / automatically",
     "pronunciation": "ow-toh-mah-tish",
     "theme": "Eigenschaften & Adjektive",
@@ -1741,11 +1602,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "bäckt/backt",
-      "perfekt": "hat gebacken",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to bake",
     "pronunciation": "bah-ken",
@@ -1781,11 +1638,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "badet",
-      "perfekt": "hat gebadet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to bathe / to take a bath / to swim",
     "pronunciation": "bah-den",
@@ -1984,10 +1837,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "",
-      "superlative": ""
-    },
+    "adjective_forms": null,
     "english": "in cash / cash",
     "pronunciation": "bar",
     "theme": "Einkaufen, Geld & Konsum",
@@ -2022,11 +1872,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "bastelt",
-      "perfekt": "hat gebastelt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to do handicrafts / to make by hand",
     "pronunciation": "bahs-teln",
@@ -2062,11 +1908,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "baut",
-      "perfekt": "hat gebaut",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to build",
     "pronunciation": "bow-en",
@@ -2120,11 +1962,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "beantwortet",
-      "perfekt": "hat beantwortet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to answer",
     "pronunciation": "be-ahnt-vor-ten",
@@ -2142,11 +1980,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "bedeutet",
-      "perfekt": "hat bedeutet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to mean",
     "pronunciation": "be-doy-ten",
@@ -2164,11 +1998,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "beendet",
-      "perfekt": "hat beendet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to finish / to end",
     "pronunciation": "be-en-den",
@@ -2186,11 +2016,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "beginnt",
-      "perfekt": "hat begonnen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to begin / to start",
     "pronunciation": "be-gin-nen",
@@ -2208,11 +2034,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "begründet",
-      "perfekt": "hat begründet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to justify / to give reasons for",
     "pronunciation": "be-grün-den",
@@ -2285,10 +2107,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "bekannter",
-      "superlative": "am bekanntesten"
-    },
+    "adjective_forms": null,
     "english": "known / well-known / famous",
     "pronunciation": "be-kahnt",
     "theme": "Eigenschaften & Adjektive",
@@ -2305,11 +2124,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "bekommt",
-      "perfekt": "hat bekommen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to get / to receive",
     "pronunciation": "be-kom-men",
@@ -2328,10 +2143,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "beliebter",
-      "superlative": "am beliebtesten"
-    },
+    "adjective_forms": null,
     "english": "popular",
     "pronunciation": "be-leept",
     "theme": "Eigenschaften & Adjektive",
@@ -2348,11 +2160,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "benutzt",
-      "perfekt": "hat benutzt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to use",
     "pronunciation": "be-noot-sen",
@@ -2371,10 +2179,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "bequemer",
-      "superlative": "am bequemsten"
-    },
+    "adjective_forms": null,
     "english": "comfortable",
     "pronunciation": "be-kweym",
     "theme": "Eigenschaften & Adjektive",
@@ -2391,11 +2196,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "berät",
-      "perfekt": "hat beraten",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to advise",
     "pronunciation": "be-rah-ten",
@@ -2431,11 +2232,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "berichtet",
-      "perfekt": "hat berichtet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to report",
     "pronunciation": "be-rikh-ten",
@@ -2472,10 +2269,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "berühmter",
-      "superlative": "am berühmtesten"
-    },
+    "adjective_forms": null,
     "english": "famous",
     "pronunciation": "be-ruemt",
     "theme": "Eigenschaften & Adjektive",
@@ -2510,11 +2304,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "bekommt Bescheid",
-      "perfekt": "hat Bescheid bekommen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to be informed / to get notification",
     "pronunciation": "be-shyde be-kom-men",
@@ -2532,11 +2322,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "gibt/sagt Bescheid",
-      "perfekt": "hat Bescheid gegeben/gesagt",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to let someone know / to inform",
     "pronunciation": "be-shyde gey-ben",
@@ -2554,11 +2340,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "beschreibt",
-      "perfekt": "hat beschrieben",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to describe",
     "pronunciation": "be-shry-ben",
@@ -2577,10 +2359,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "",
-      "superlative": ""
-    },
+    "adjective_forms": null,
     "english": "occupied / taken / engaged",
     "pronunciation": "be-zetst",
     "theme": "Eigenschaften & Adjektive",
@@ -2597,11 +2376,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er besichtigt",
-      "perfekt": "hat besichtigt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to visit / to sightsee / to view",
     "pronunciation": "be-zikh-ti-gen",
@@ -2637,11 +2412,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "besteht",
-      "perfekt": "hat bestanden",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to pass (an exam) / to consist of",
     "pronunciation": "be-shtey-en",
@@ -2659,11 +2430,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "bestellt",
-      "perfekt": "hat bestellt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to order",
     "pronunciation": "be-shtel-len",
@@ -2681,11 +2448,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "bestätigt",
-      "perfekt": "hat bestätigt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to confirm",
     "pronunciation": "be-shtay-ti-gen",
@@ -2721,11 +2484,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "besucht",
-      "perfekt": "hat besucht",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to visit",
     "pronunciation": "be-zoo-khen",
@@ -2780,10 +2539,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "",
-      "superlative": ""
-    },
+    "adjective_forms": null,
     "english": "cloudy / overcast",
     "pronunciation": "be-vurlkt",
     "theme": "Natur, Umwelt & Tiere",
@@ -2800,11 +2556,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "bezahlt",
-      "perfekt": "hat bezahlt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to pay",
     "pronunciation": "be-tsah-len",
@@ -2859,10 +2611,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "billiger",
-      "superlative": "am billigsten"
-    },
+    "adjective_forms": null,
     "english": "cheap / inexpensive",
     "pronunciation": "bil-likh",
     "theme": "Einkaufen, Geld & Konsum",
@@ -2951,11 +2700,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "bittet",
-      "perfekt": "hat gebeten",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to ask / to request",
     "pronunciation": "bit-ten",
@@ -2974,10 +2719,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "bitterer",
-      "superlative": "am bittersten"
-    },
+    "adjective_forms": null,
     "english": "bitter",
     "pronunciation": "bit-ter",
     "theme": "Essen, Kochen & Restaurant",
@@ -3012,11 +2754,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "bleibt",
-      "perfekt": "ist geblieben",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to stay / to remain",
     "pronunciation": "bly-ben",
@@ -3071,10 +2809,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "blonder",
-      "superlative": "am blondesten"
-    },
+    "adjective_forms": null,
     "english": "blond / blonde",
     "pronunciation": "blont",
     "theme": "Eigenschaften & Adjektive",
@@ -3128,10 +2863,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "blöder",
-      "superlative": "am blödesten"
-    },
+    "adjective_forms": null,
     "english": "stupid / silly",
     "pronunciation": "bluud",
     "theme": "Gefühle, Charakter & Meinung",
@@ -3166,11 +2898,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "brät",
-      "perfekt": "hat gebraten",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to fry / to roast",
     "pronunciation": "brah-ten",
@@ -3188,11 +2916,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "braucht",
-      "perfekt": "hat gebraucht",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to need",
     "pronunciation": "brow-khen",
@@ -3264,11 +2988,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "bringt",
-      "perfekt": "hat gebracht",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to bring / to take",
     "pronunciation": "bring-en",
@@ -3358,11 +3078,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "bucht",
-      "perfekt": "hat gebucht",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to book",
     "pronunciation": "boo-khen",
@@ -3398,11 +3114,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "buchstabiert",
-      "perfekt": "hat buchstabiert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to spell",
     "pronunciation": "bookh-shtah-bee-ren",
@@ -3421,10 +3133,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "bunter",
-      "superlative": "am buntesten"
-    },
+    "adjective_forms": null,
     "english": "colorful",
     "pronunciation": "boont",
     "theme": "Eigenschaften & Adjektive",
@@ -3496,10 +3205,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "böser",
-      "superlative": "am bösesten"
-    },
+    "adjective_forms": null,
     "english": "angry / mean / evil",
     "pronunciation": "buu-zeh",
     "theme": "Gefühle, Charakter & Meinung",
@@ -3570,11 +3276,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "chattet",
-      "perfekt": "hat gechattet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to chat (online)",
     "pronunciation": "chet-ten",
@@ -3754,11 +3456,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "ist dafür/dagegen",
-      "perfekt": "ist dafür/dagegen gewesen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to be against it",
     "pronunciation": "dah-gey-gen zine",
@@ -3866,11 +3564,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "dankt",
-      "perfekt": "hat gedankt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to thank",
     "pronunciation": "dahn-ken",
@@ -3960,11 +3654,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "dauert",
-      "perfekt": "hat gedauert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to last / to take (time)",
     "pronunciation": "dow-ern",
@@ -3982,11 +3672,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "denkt",
-      "perfekt": "hat gedacht",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to think",
     "pronunciation": "den-ken",
@@ -4077,10 +3763,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "deutlicher",
-      "superlative": "am deutlichsten"
-    },
+    "adjective_forms": null,
     "english": "clear / clearly",
     "pronunciation": "doyt-likh",
     "theme": "Eigenschaften & Adjektive",
@@ -4098,10 +3781,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "dicker",
-      "superlative": "am dicksten"
-    },
+    "adjective_forms": null,
     "english": "fat / thick",
     "pronunciation": "dik",
     "theme": "Eigenschaften & Adjektive",
@@ -4137,10 +3817,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "direkter",
-      "superlative": "am direktesten"
-    },
+    "adjective_forms": null,
     "english": "direct / directly",
     "pronunciation": "di-rekt",
     "theme": "Eigenschaften & Adjektive",
@@ -4193,11 +3870,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "diskutiert",
-      "perfekt": "hat diskutiert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to discuss",
     "pronunciation": "dis-koo-tee-ren",
@@ -4288,10 +3961,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "dringender",
-      "superlative": "am dringendsten"
-    },
+    "adjective_forms": null,
     "english": "urgent / urgently",
     "pronunciation": "dring-ent",
     "theme": "Eigenschaften & Adjektive",
@@ -4326,11 +3996,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "druckt",
-      "perfekt": "hat gedruckt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to print",
     "pronunciation": "droo-ken",
@@ -4384,11 +4050,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "drückt",
-      "perfekt": "hat gedrückt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to push / to press",
     "pronunciation": "drue-ken",
@@ -4407,10 +4069,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "dümmer",
-      "superlative": "am dümmsten"
-    },
+    "adjective_forms": null,
     "english": "stupid / dumb",
     "pronunciation": "doom",
     "theme": "Gefühle, Charakter & Meinung",
@@ -4428,10 +4087,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "dunkler",
-      "superlative": "am dunkelsten"
-    },
+    "adjective_forms": null,
     "english": "dark",
     "pronunciation": "doong-kel",
     "theme": "Eigenschaften & Adjektive",
@@ -4503,10 +4159,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "dünner",
-      "superlative": "am dünnsten"
-    },
+    "adjective_forms": null,
     "english": "thin / skinny",
     "pronunciation": "duen",
     "theme": "Eigenschaften & Adjektive",
@@ -4523,11 +4176,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "darf",
-      "perfekt": "hat gedurft",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "may / to be allowed to",
     "pronunciation": "duer-fen",
@@ -4564,10 +4213,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "echter",
-      "superlative": "am echtesten"
-    },
+    "adjective_forms": null,
     "english": "real / genuine / really",
     "pronunciation": "ekht",
     "theme": "Eigenschaften & Adjektive",
@@ -4603,10 +4249,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "",
-      "superlative": ""
-    },
+    "adjective_forms": null,
     "english": "equal / it doesn't matter",
     "pronunciation": "eh-gahl",
     "theme": "Eigenschaften & Adjektive",
@@ -4678,10 +4321,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "",
-      "superlative": ""
-    },
+    "adjective_forms": null,
     "english": "own",
     "pronunciation": "eye-gen",
     "theme": "Eigenschaften & Adjektive",
@@ -4717,10 +4357,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "eiliger",
-      "superlative": "am eiligsten"
-    },
+    "adjective_forms": null,
     "english": "in a hurry / urgent",
     "pronunciation": "eye-likh",
     "theme": "Eigenschaften & Adjektive",
@@ -4773,11 +4410,7 @@
     "word_class": "Verb",
     "gender": "der",
     "plural": "die Vorschläge",
-    "verb_conjugation": {
-      "present_3sg": "hat/macht einen Vorschlag",
-      "perfekt": "hat einen Vorschlag gehabt/gemacht",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to have / make a suggestion",
     "pronunciation": "i-nen for-shlahk hah-ben / mah-khen",
@@ -4796,10 +4429,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "einfacher",
-      "superlative": "am einfachsten"
-    },
+    "adjective_forms": null,
     "english": "simple / easy / one-way",
     "pronunciation": "ine-fahkh",
     "theme": "Eigenschaften & Adjektive",
@@ -4852,11 +4482,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "kauft ein",
-      "perfekt": "hat eingekauft",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to shop / to buy groceries",
     "pronunciation": "ine-kow-fen",
@@ -4892,11 +4518,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "lädt ein",
-      "perfekt": "hat eingeladen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to invite",
     "pronunciation": "ine-lah-den",
@@ -4950,11 +4572,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "packt ein",
-      "perfekt": "hat eingepackt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to pack / to wrap",
     "pronunciation": "ine-pah-ken",
@@ -4972,11 +4590,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "steigt ein",
-      "perfekt": "ist eingestiegen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to get in / to board",
     "pronunciation": "ine-shty-gen",
@@ -5048,11 +4662,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "zieht ein",
-      "perfekt": "ist eingezogen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to move in",
     "pronunciation": "ine-tsee-en",
@@ -5106,11 +4716,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "empfiehlt",
-      "perfekt": "hat empfohlen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to recommend",
     "pronunciation": "emp-fay-len",
@@ -5164,11 +4770,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "endet",
-      "perfekt": "hat geendet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to end / to finish",
     "pronunciation": "en-den",
@@ -5205,10 +4807,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "enger",
-      "superlative": "am engsten"
-    },
+    "adjective_forms": null,
     "english": "tight / narrow",
     "pronunciation": "eng",
     "theme": "Eigenschaften & Adjektive",
@@ -5225,11 +4824,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "entschuldigt",
-      "perfekt": "hat entschuldigt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to excuse / to apologize",
     "pronunciation": "ent-shool-di-gen",
@@ -5283,11 +4878,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "erklärt",
-      "perfekt": "hat erklärt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to explain",
     "pronunciation": "er-klay-ren",
@@ -5305,11 +4896,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "ist erkältet",
-      "perfekt": "ist erkältet gewesen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to have a cold",
     "pronunciation": "er-kel-tet zine",
@@ -5327,11 +4914,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "erlaubt",
-      "perfekt": "hat erlaubt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to allow / to permit",
     "pronunciation": "er-low-ben",
@@ -5367,11 +4950,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "ist erlaubt",
-      "perfekt": "ist erlaubt gewesen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to be allowed / to be permitted",
     "pronunciation": "er-lowpt zine",
@@ -5389,11 +4968,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "erreicht",
-      "perfekt": "hat erreicht",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to reach",
     "pronunciation": "er-ry-khen",
@@ -5429,11 +5004,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "erzählt",
-      "perfekt": "hat erzählt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to tell / to narrate",
     "pronunciation": "er-tsay-len",
@@ -5451,11 +5022,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "isst",
-      "perfekt": "hat gegessen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to eat",
     "pronunciation": "es-sen",
@@ -5563,11 +5130,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "fällt",
-      "perfekt": "ist gefallen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to fall",
     "pronunciation": "fahl-len",
@@ -5586,10 +5149,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "",
-      "superlative": ""
-    },
+    "adjective_forms": null,
     "english": "false / wrong",
     "pronunciation": "fahlsh",
     "theme": "Eigenschaften & Adjektive",
@@ -5661,10 +5221,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "fantastischer",
-      "superlative": "am fantastischsten"
-    },
+    "adjective_forms": null,
     "english": "fantastic",
     "pronunciation": "fahn-tahs-tish",
     "theme": "Eigenschaften & Adjektive",
@@ -5718,10 +5275,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "fauler",
-      "superlative": "am faulsten"
-    },
+    "adjective_forms": null,
     "english": "lazy",
     "pronunciation": "fowl",
     "theme": "Gefühle, Charakter & Meinung",
@@ -5738,11 +5292,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "fehlt",
-      "perfekt": "hat gefehlt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to be missing / to lack / to be absent",
     "pronunciation": "fay-len",
@@ -5850,11 +5400,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "sieht fern",
-      "perfekt": "hat ferngesehen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to watch TV",
     "pronunciation": "fairn-zey-en",
@@ -5891,10 +5437,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "",
-      "superlative": ""
-    },
+    "adjective_forms": null,
     "english": "ready / finished",
     "pronunciation": "fair-tikh",
     "theme": "Eigenschaften & Adjektive",
@@ -5948,10 +5491,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "fetter",
-      "superlative": "am fettesten"
-    },
+    "adjective_forms": null,
     "english": "fat / fatty / greasy",
     "pronunciation": "fet",
     "theme": "Eigenschaften & Adjektive",
@@ -6004,11 +5544,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "findet",
-      "perfekt": "hat gefunden",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to find / to think",
     "pronunciation": "fin-den",
@@ -6062,11 +5598,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "ist fit",
-      "perfekt": "ist fit gewesen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to be fit",
     "pronunciation": "fit zine",
@@ -6121,10 +5653,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "fleißiger",
-      "superlative": "am fleißigsten"
-    },
+    "adjective_forms": null,
     "english": "diligent / hard-working",
     "pronunciation": "fly-sikh",
     "theme": "Eigenschaften & Adjektive",
@@ -6141,11 +5670,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "fliegt (ab)",
-      "perfekt": "ist (ab)geflogen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to fly",
     "pronunciation": "flee-gen",
@@ -6289,11 +5814,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "fotografiert",
-      "perfekt": "hat fotografiert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to photograph / to take pictures",
     "pronunciation": "fo-to-grah-fee-ren",
@@ -6329,11 +5850,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "fragt",
-      "perfekt": "hat gefragt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to ask",
     "pronunciation": "frah-gen",
@@ -6370,10 +5887,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "freier",
-      "superlative": "am freisten"
-    },
+    "adjective_forms": null,
     "english": "free / available",
     "pronunciation": "fry",
     "theme": "Eigenschaften & Adjektive",
@@ -6391,10 +5905,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "freiwilliger",
-      "superlative": "am freiwilligsten"
-    },
+    "adjective_forms": null,
     "english": "voluntary / voluntarily",
     "pronunciation": "fry-vil-likh",
     "theme": "Eigenschaften & Adjektive",
@@ -6430,10 +5941,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "fremder",
-      "superlative": "am fremdesten"
-    },
+    "adjective_forms": null,
     "english": "foreign / strange / unknown",
     "pronunciation": "fremt",
     "theme": "Eigenschaften & Adjektive",
@@ -6487,10 +5995,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "freundlicher",
-      "superlative": "am freundlichsten"
-    },
+    "adjective_forms": null,
     "english": "friendly",
     "pronunciation": "froynt-likh",
     "theme": "Gefühle, Charakter & Meinung",
@@ -6508,10 +6013,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "frischer",
-      "superlative": "am frischesten"
-    },
+    "adjective_forms": null,
     "english": "fresh",
     "pronunciation": "frish",
     "theme": "Essen, Kochen & Restaurant",
@@ -6529,10 +6031,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "froher",
-      "superlative": "am frohsten"
-    },
+    "adjective_forms": null,
     "english": "glad / happy",
     "pronunciation": "fro",
     "theme": "Gefühle, Charakter & Meinung",
@@ -6550,10 +6049,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "früher",
-      "superlative": "am frühesten"
-    },
+    "adjective_forms": null,
     "english": "early",
     "pronunciation": "frue",
     "theme": "Uhrzeit, Datum & Kalender",
@@ -6588,11 +6084,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "frühstückt",
-      "perfekt": "hat gefrühstückt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to have breakfast",
     "pronunciation": "frue-shtue-ken",
@@ -6629,10 +6121,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "furchtbarer",
-      "superlative": "am furchtbarsten"
-    },
+    "adjective_forms": null,
     "english": "terrible / awful",
     "pronunciation": "foorkht-bar",
     "theme": "Eigenschaften & Adjektive",
@@ -6776,10 +6265,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "",
-      "superlative": ""
-    },
+    "adjective_forms": null,
     "english": "whole / entire / completely",
     "pronunciation": "gahnts",
     "theme": "Zahlen, Maße & Mengen",
@@ -6850,11 +6336,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "gibt",
-      "perfekt": "hat gegeben",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to give / (es gibt = there is/are)",
     "pronunciation": "gey-ben",
@@ -6872,11 +6354,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er ist geboren",
-      "perfekt": "ist geboren worden",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to be born",
     "pronunciation": "ge-bo-ren",
@@ -6931,10 +6409,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "",
-      "superlative": ""
-    },
+    "adjective_forms": null,
     "english": "honored / dear (formal greeting)",
     "pronunciation": "ge-airt",
     "theme": "Kommunikation, Medien & Sprache",
@@ -6951,11 +6426,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "gefällt",
-      "perfekt": "hat gefallen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to please / to appeal to / to like",
     "pronunciation": "ge-fahl-len",
@@ -6974,10 +6445,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "gefährlicher",
-      "superlative": "am gefährlichsten"
-    },
+    "adjective_forms": null,
     "english": "dangerous",
     "pronunciation": "ge-fair-likh",
     "theme": "Eigenschaften & Adjektive",
@@ -7066,11 +6534,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "geht",
-      "perfekt": "ist gegangen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to go / to walk",
     "pronunciation": "gey-en",
@@ -7088,11 +6552,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "hängt",
-      "perfekt": "hat gehangen/gehängt",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "hung (past participle)",
     "pronunciation": "ge-hengt / ge-hahng-en",
@@ -7110,11 +6570,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "gehört",
-      "perfekt": "hat gehört",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to belong to",
     "pronunciation": "ge-hoe-ren",
@@ -7457,10 +6913,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "gesünder",
-      "superlative": "am gesündesten"
-    },
+    "adjective_forms": null,
     "english": "healthy / well",
     "pronunciation": "ge-zoont",
     "theme": "Gesundheit, Körper & Pflege",
@@ -7513,11 +6966,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "ist",
-      "perfekt": "ist gewesen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to be",
     "pronunciation": "ge-vey-zen",
@@ -7535,11 +6984,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "ist",
-      "perfekt": "ist gewesen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to be",
     "pronunciation": "ge-vey-zen",
@@ -7557,11 +7002,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "gewinnt",
-      "perfekt": "hat gewonnen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to win",
     "pronunciation": "ge-vin-nen",
@@ -7597,11 +7038,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "zieht (an/aus)",
-      "perfekt": "hat/ist (an/aus)gezogen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to put on / to take off / to move out",
     "pronunciation": "ows-tsee-en",
@@ -7655,11 +7092,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "glaubt",
-      "perfekt": "hat geglaubt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to believe / to think",
     "pronunciation": "glow-ben",
@@ -7732,10 +7165,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "glücklicher",
-      "superlative": "am glücklichsten"
-    },
+    "adjective_forms": null,
     "english": "happy / lucky",
     "pronunciation": "gluek-likh",
     "theme": "Gefühle, Charakter & Meinung",
@@ -7770,11 +7200,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "gratuliert",
-      "perfekt": "hat gratuliert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to congratulate",
     "pronunciation": "grah-too-lee-ren",
@@ -7792,11 +7218,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "grillt",
-      "perfekt": "hat gegrillt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to grill / to barbecue",
     "pronunciation": "gril-len",
@@ -7833,10 +7255,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "größer",
-      "superlative": "am größten"
-    },
+    "adjective_forms": null,
     "english": "big / large / tall",
     "pronunciation": "grohs",
     "theme": "Eigenschaften & Adjektive",
@@ -7908,10 +7327,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "besser",
-      "superlative": "am besten"
-    },
+    "adjective_forms": null,
     "english": "good / well",
     "pronunciation": "goot",
     "theme": "Eigenschaften & Adjektive",
@@ -7928,11 +7344,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "ist gültig",
-      "perfekt": "ist gültig gewesen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to be valid",
     "pronunciation": "guel-tikh zine",
@@ -7951,10 +7363,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "günstiger",
-      "superlative": "am günstigsten"
-    },
+    "adjective_forms": null,
     "english": "cheap / favorable",
     "pronunciation": "guen-stikh",
     "theme": "Einkaufen, Geld & Konsum",
@@ -7989,11 +7398,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "hat",
-      "perfekt": "hat gehabt",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to have",
     "pronunciation": "hah-ben",
@@ -8065,11 +7470,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "hält",
-      "perfekt": "hat gehalten",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to hold / to stop",
     "pronunciation": "hahl-ten",
@@ -8160,10 +7561,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "härter",
-      "superlative": "am härtesten"
-    },
+    "adjective_forms": null,
     "english": "hard",
     "pronunciation": "hart",
     "theme": "Eigenschaften & Adjektive",
@@ -8252,11 +7650,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "heiratet",
-      "perfekt": "hat geheiratet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to marry / to get married",
     "pronunciation": "high-rah-ten",
@@ -8293,10 +7687,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "heißer",
-      "superlative": "am heißesten"
-    },
+    "adjective_forms": null,
     "english": "hot",
     "pronunciation": "hice",
     "theme": "Eigenschaften & Adjektive",
@@ -8313,11 +7704,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "heißt",
-      "perfekt": "hat geheißen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to be called / to be named",
     "pronunciation": "high-sen",
@@ -8335,11 +7722,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "hilft",
-      "perfekt": "hat geholfen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to help",
     "pronunciation": "hel-fen",
@@ -8358,10 +7741,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "heller",
-      "superlative": "am hellsten"
-    },
+    "adjective_forms": null,
     "english": "bright / light",
     "pronunciation": "hel",
     "theme": "Eigenschaften & Adjektive",
@@ -8486,11 +7866,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "stellt her",
-      "perfekt": "hat hergestellt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to produce / to manufacture",
     "pronunciation": "hair-shtel-len",
@@ -8508,11 +7884,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "lädt herunter",
-      "perfekt": "hat heruntergeladen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to download",
     "pronunciation": "he-roon-ter-lah-den",
@@ -8531,10 +7903,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "herzlicher",
-      "superlative": "am herzlichsten"
-    },
+    "adjective_forms": null,
     "english": "cordial / sincere / warm",
     "pronunciation": "hairts-likh",
     "theme": "Basiswortschatz & Floskeln",
@@ -8696,10 +8065,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "höher",
-      "superlative": "am höchsten"
-    },
+    "adjective_forms": null,
     "english": "high / tall",
     "pronunciation": "hohkh",
     "theme": "Eigenschaften & Adjektive",
@@ -8734,11 +8100,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "hofft",
-      "perfekt": "hat gehofft",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to hope",
     "pronunciation": "hof-fen",
@@ -8774,11 +8136,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "holt",
-      "perfekt": "hat geholt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to get / to fetch",
     "pronunciation": "ho-len",
@@ -8886,11 +8244,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "hustet",
-      "perfekt": "hat gehustet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to cough",
     "pronunciation": "hoos-ten",
@@ -8926,11 +8280,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "hängt",
-      "perfekt": "hat gehangen/gehängt",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to hang",
     "pronunciation": "heng-en",
@@ -8949,10 +8299,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "hässlicher",
-      "superlative": "am hässlichsten"
-    },
+    "adjective_forms": null,
     "english": "ugly",
     "pronunciation": "hes-likh",
     "theme": "Eigenschaften & Adjektive",
@@ -8969,11 +8316,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "hört",
-      "perfekt": "hat gehört",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to hear / to listen",
     "pronunciation": "hoe-ren",
@@ -9045,11 +8388,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "informiert (sich)",
-      "perfekt": "hat (sich) informiert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to inform (oneself) (about)",
     "pronunciation": "in-for-mee-ren",
@@ -9122,10 +8461,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "intelligenter",
-      "superlative": "am intelligentesten"
-    },
+    "adjective_forms": null,
     "english": "intelligent / smart",
     "pronunciation": "in-tel-li-gent",
     "theme": "Eigenschaften & Adjektive",
@@ -9143,10 +8479,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "interessanter",
-      "superlative": "am interessantesten"
-    },
+    "adjective_forms": null,
     "english": "interesting",
     "pronunciation": "in-te-res-sahnt",
     "theme": "Eigenschaften & Adjektive",
@@ -9182,10 +8515,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "interessierter",
-      "superlative": "am interessiertesten"
-    },
+    "adjective_forms": null,
     "english": "interested",
     "pronunciation": "in-te-res-seert",
     "theme": "Gefühle, Charakter & Meinung",
@@ -9382,11 +8712,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "joggt",
-      "perfekt": "ist/hat gejoggt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to jog",
     "pronunciation": "jog-gen",
@@ -9423,10 +8749,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "jünger",
-      "superlative": "am jüngsten"
-    },
+    "adjective_forms": null,
     "english": "young",
     "pronunciation": "yoong",
     "theme": "Eigenschaften & Adjektive",
@@ -9498,10 +8821,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "kälter",
-      "superlative": "am kältesten"
-    },
+    "adjective_forms": null,
     "english": "cold",
     "pronunciation": "kahlt",
     "theme": "Eigenschaften & Adjektive",
@@ -9537,10 +8857,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "",
-      "superlative": ""
-    },
+    "adjective_forms": null,
     "english": "broken",
     "pronunciation": "kah-poot",
     "theme": "Eigenschaften & Adjektive",
@@ -9647,11 +8964,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "kauft",
-      "perfekt": "hat gekauft",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to buy",
     "pronunciation": "kow-fen",
@@ -9723,11 +9036,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "kennt",
-      "perfekt": "hat gekannt",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to know / to be familiar with",
     "pronunciation": "ken-nen",
@@ -9745,11 +9054,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "lernt kennen",
-      "perfekt": "hat kennengelernt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to get to know / to meet",
     "pronunciation": "ken-nen-lair-nen",
@@ -9857,11 +9162,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "klappt",
-      "perfekt": "hat geklappt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to work out / to go smoothly",
     "pronunciation": "klahp-pen",
@@ -9952,10 +9253,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "kleiner",
-      "superlative": "am kleinsten"
-    },
+    "adjective_forms": null,
     "english": "small / little",
     "pronunciation": "kline",
     "theme": "Eigenschaften & Adjektive",
@@ -9991,10 +9289,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "klüger",
-      "superlative": "am klügsten"
-    },
+    "adjective_forms": null,
     "english": "smart / clever",
     "pronunciation": "kloog",
     "theme": "Eigenschaften & Adjektive",
@@ -10011,11 +9306,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "kocht",
-      "perfekt": "hat gekocht",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to cook / to boil",
     "pronunciation": "ko-khen",
@@ -10088,10 +9379,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "komischer",
-      "superlative": "am komischsten"
-    },
+    "adjective_forms": null,
     "english": "funny / strange / weird",
     "pronunciation": "ko-mish",
     "theme": "Eigenschaften & Adjektive",
@@ -10108,11 +9396,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "kommt",
-      "perfekt": "ist gekommen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to come",
     "pronunciation": "kom-men",
@@ -10166,11 +9450,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "kontrolliert",
-      "perfekt": "hat kontrolliert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to control / to check",
     "pronunciation": "kon-trol-lee-ren",
@@ -10242,11 +9522,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "kostet",
-      "perfekt": "hat gekostet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to cost",
     "pronunciation": "kos-ten",
@@ -10283,10 +9559,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "kränker",
-      "superlative": "am kränksten"
-    },
+    "adjective_forms": null,
     "english": "sick / ill",
     "pronunciation": "krahnk",
     "theme": "Gesundheit, Körper & Pflege",
@@ -10393,11 +9666,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "kriegt",
-      "perfekt": "hat gekriegt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to get / to receive",
     "pronunciation": "kree-gen",
@@ -10542,10 +9811,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "kürzer",
-      "superlative": "am kürzesten"
-    },
+    "adjective_forms": null,
     "english": "short / brief",
     "pronunciation": "koorts",
     "theme": "Eigenschaften & Adjektive",
@@ -10580,11 +9846,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "kann",
-      "perfekt": "hat gekonnt",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "can / to be able to",
     "pronunciation": "koen-nen",
@@ -10639,10 +9901,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "kühler",
-      "superlative": "am kühlsten"
-    },
+    "adjective_forms": null,
     "english": "cool / chilly",
     "pronunciation": "kuel",
     "theme": "Natur, Umwelt & Tiere",
@@ -10677,11 +9936,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "lacht",
-      "perfekt": "hat gelacht",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to laugh",
     "pronunciation": "lah-khen",
@@ -10754,10 +10009,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "länger",
-      "superlative": "am längsten"
-    },
+    "adjective_forms": null,
     "english": "long",
     "pronunciation": "lahng",
     "theme": "Eigenschaften & Adjektive",
@@ -10793,10 +10045,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "langsamer",
-      "superlative": "am langsamsten"
-    },
+    "adjective_forms": null,
     "english": "slow / slowly",
     "pronunciation": "lahng-zahm",
     "theme": "Eigenschaften & Adjektive",
@@ -10814,10 +10063,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "langweiliger",
-      "superlative": "am langweiligsten"
-    },
+    "adjective_forms": null,
     "english": "boring",
     "pronunciation": "lahng-vy-lig",
     "theme": "Eigenschaften & Adjektive",
@@ -10852,11 +10098,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "lässt",
-      "perfekt": "hat gelassen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to let / to leave",
     "pronunciation": "lahs-sen",
@@ -10874,11 +10116,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "läuft",
-      "perfekt": "ist gelaufen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to walk / to run",
     "pronunciation": "low-fen",
@@ -10897,10 +10135,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "lauter",
-      "superlative": "am lautesten"
-    },
+    "adjective_forms": null,
     "english": "loud / loudly",
     "pronunciation": "lowt",
     "theme": "Eigenschaften & Adjektive",
@@ -10917,11 +10152,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "lebt",
-      "perfekt": "hat gelebt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to live",
     "pronunciation": "lay-ben",
@@ -10976,10 +10207,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "leerer",
-      "superlative": "am leersten"
-    },
+    "adjective_forms": null,
     "english": "empty",
     "pronunciation": "lair",
     "theme": "Eigenschaften & Adjektive",
@@ -10996,11 +10224,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "legt",
-      "perfekt": "hat gelegt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to lay / to put",
     "pronunciation": "lay-gen",
@@ -11019,10 +10243,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "leichter",
-      "superlative": "am leichtesten"
-    },
+    "adjective_forms": null,
     "english": "light / easy",
     "pronunciation": "lycht",
     "theme": "Eigenschaften & Adjektive",
@@ -11057,11 +10278,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "tut leid",
-      "perfekt": "hat leidgetan",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to be sorry",
     "pronunciation": "lyte-toon",
@@ -11079,11 +10296,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "leiht",
-      "perfekt": "hat geliehen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to lend / to borrow",
     "pronunciation": "ly-en",
@@ -11102,10 +10315,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "leiser",
-      "superlative": "am leisesten"
-    },
+    "adjective_forms": null,
     "english": "quiet / softly",
     "pronunciation": "ly-zeh",
     "theme": "Eigenschaften & Adjektive",
@@ -11122,11 +10332,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "lernt",
-      "perfekt": "hat gelernt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to learn / to study",
     "pronunciation": "lair-nen",
@@ -11144,11 +10350,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "liest",
-      "perfekt": "hat gelesen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to read",
     "pronunciation": "lay-zen",
@@ -11238,11 +10440,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "liebt",
-      "perfekt": "hat geliebt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to love",
     "pronunciation": "lee-ben",
@@ -11296,11 +10494,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "liefert",
-      "perfekt": "hat geliefert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to deliver",
     "pronunciation": "lee-fern",
@@ -11318,11 +10512,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "liegt",
-      "perfekt": "hat/ist gelegen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to lie / to be situated",
     "pronunciation": "lee-gen",
@@ -11413,10 +10603,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "lustiger",
-      "superlative": "am lustigsten"
-    },
+    "adjective_forms": null,
     "english": "funny",
     "pronunciation": "loos-tig",
     "theme": "Eigenschaften & Adjektive",
@@ -11469,11 +10656,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "lügt",
-      "perfekt": "hat gelogen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to lie",
     "pronunciation": "lue-gen",
@@ -11491,11 +10674,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "macht",
-      "perfekt": "hat gemacht",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to do / to make",
     "pronunciation": "mah-khen",
@@ -11567,11 +10746,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "malt",
-      "perfekt": "hat gemalt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to paint / to draw",
     "pronunciation": "mah-len",
@@ -11751,11 +10926,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "meint",
-      "perfekt": "hat gemeint",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to mean / to think",
     "pronunciation": "my-nen",
@@ -11845,11 +11016,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "merkt",
-      "perfekt": "hat gemerkt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to notice / to remember",
     "pronunciation": "mair-ken",
@@ -11921,11 +11088,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "mietet",
-      "perfekt": "hat gemietet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to rent / to hire",
     "pronunciation": "mee-ten",
@@ -12033,11 +11196,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "bringt mit",
-      "perfekt": "hat mitgebracht",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to bring along",
     "pronunciation": "mit-bring-en",
@@ -12055,11 +11214,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "kommt mit",
-      "perfekt": "ist mitgekommen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to come along",
     "pronunciation": "mit-kom-men",
@@ -12168,10 +11323,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "moderner",
-      "superlative": "am modernsten"
-    },
+    "adjective_forms": null,
     "english": "modern",
     "pronunciation": "mo-dairn",
     "theme": "Eigenschaften & Adjektive",
@@ -12368,11 +11520,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "möchte",
-      "perfekt": "hat gemocht",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "would like",
     "pronunciation": "moech-ten",
@@ -12390,11 +11538,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "mag",
-      "perfekt": "hat gemocht",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to like",
     "pronunciation": "moe-gen",
@@ -12413,10 +11557,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "",
-      "superlative": ""
-    },
+    "adjective_forms": null,
     "english": "possible",
     "pronunciation": "moeg-likh",
     "theme": "Eigenschaften & Adjektive",
@@ -12434,10 +11575,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "müder",
-      "superlative": "am müdesten"
-    },
+    "adjective_forms": null,
     "english": "tired",
     "pronunciation": "mue-deh",
     "theme": "Gesundheit, Körper & Pflege",
@@ -12472,11 +11610,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "muss",
-      "perfekt": "hat gemusst",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "must / to have to",
     "pronunciation": "mues-sen",
@@ -12585,10 +11719,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "nässer",
-      "superlative": "am nässesten"
-    },
+    "adjective_forms": null,
     "english": "wet",
     "pronunciation": "nahs",
     "theme": "Eigenschaften & Adjektive",
@@ -12678,10 +11809,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "nebliger",
-      "superlative": "am nebligsten"
-    },
+    "adjective_forms": null,
     "english": "foggy",
     "pronunciation": "nay-blig",
     "theme": "Natur, Umwelt & Tiere",
@@ -12698,11 +11826,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "nimmt",
-      "perfekt": "hat genommen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to take",
     "pronunciation": "nay-men",
@@ -12738,11 +11862,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "nennt",
-      "perfekt": "hat genannt",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to call / to name",
     "pronunciation": "nen-nen",
@@ -12761,10 +11881,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "nervöser",
-      "superlative": "am nervösesten"
-    },
+    "adjective_forms": null,
     "english": "nervous",
     "pronunciation": "ner-voes",
     "theme": "Gefühle, Charakter & Meinung",
@@ -12782,10 +11899,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "netter",
-      "superlative": "am nettesten"
-    },
+    "adjective_forms": null,
     "english": "nice / kind",
     "pronunciation": "net",
     "theme": "Gefühle, Charakter & Meinung",
@@ -12803,10 +11917,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "neuer",
-      "superlative": "am neuesten"
-    },
+    "adjective_forms": null,
     "english": "new",
     "pronunciation": "noy",
     "theme": "Eigenschaften & Adjektive",
@@ -12932,10 +12043,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "normaler",
-      "superlative": "am normalsten"
-    },
+    "adjective_forms": null,
     "english": "normal",
     "pronunciation": "nor-mahl",
     "theme": "Eigenschaften & Adjektive",
@@ -12970,11 +12078,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "notiert",
-      "perfekt": "hat notiert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to note / to write down",
     "pronunciation": "no-tee-ren",
@@ -13011,10 +12115,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "notwendiger",
-      "superlative": "am notwendigsten"
-    },
+    "adjective_forms": null,
     "english": "necessary",
     "pronunciation": "noht-ven-dig",
     "theme": "Eigenschaften & Adjektive",
@@ -13122,10 +12223,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "nützlicher",
-      "superlative": "am nützlichsten"
-    },
+    "adjective_forms": null,
     "english": "useful",
     "pronunciation": "nuets-likh",
     "theme": "Eigenschaften & Adjektive",
@@ -13197,10 +12295,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "",
-      "superlative": ""
-    },
+    "adjective_forms": null,
     "english": "open",
     "pronunciation": "of-fen",
     "theme": "Eigenschaften & Adjektive",
@@ -13325,11 +12420,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "organisiert",
-      "perfekt": "hat organisiert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to organize",
     "pronunciation": "or-gah-ni-zee-ren",
@@ -13383,11 +12474,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "packt",
-      "perfekt": "hat gepackt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to pack",
     "pronunciation": "pahk-ken",
@@ -13495,11 +12582,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "parkt",
-      "perfekt": "hat geparkt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to park",
     "pronunciation": "pahr-ken",
@@ -13589,11 +12672,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "passt",
-      "perfekt": "hat gepasst",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to fit / to match",
     "pronunciation": "pahs-sen",
@@ -13611,11 +12690,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "passiert",
-      "perfekt": "ist passiert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to happen",
     "pronunciation": "pahs-see-ren",
@@ -13777,11 +12852,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "plant",
-      "perfekt": "hat geplant",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to plan",
     "pronunciation": "plah-nen",
@@ -13962,10 +13033,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "praktischer",
-      "superlative": "am praktischsten"
-    },
+    "adjective_forms": null,
     "english": "practical / handy",
     "pronunciation": "prahk-tish",
     "theme": "Eigenschaften & Adjektive",
@@ -14019,10 +13087,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "preiswerter",
-      "superlative": "am preiswertesten"
-    },
+    "adjective_forms": null,
     "english": "inexpensive / reasonably priced",
     "pronunciation": "price-vairt",
     "theme": "Einkaufen, Geld & Konsum",
@@ -14040,10 +13105,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "privater",
-      "superlative": "am privatesten"
-    },
+    "adjective_forms": null,
     "english": "private",
     "pronunciation": "pree-vaht",
     "theme": "Eigenschaften & Adjektive",
@@ -14078,11 +13140,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "probiert",
-      "perfekt": "hat probiert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to try / to taste",
     "pronunciation": "pro-bee-ren",
@@ -14190,11 +13248,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "prüft",
-      "perfekt": "hat geprüft",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to check / to examine",
     "pronunciation": "prue-fen",
@@ -14248,11 +13302,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "putzt",
-      "perfekt": "hat geputzt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to clean",
     "pronunciation": "poot-sen",
@@ -14271,10 +13321,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "pünktlicher",
-      "superlative": "am pünktlichsten"
-    },
+    "adjective_forms": null,
     "english": "punctual / on time",
     "pronunciation": "puenkt-likh",
     "theme": "Uhrzeit, Datum & Kalender",
@@ -14345,11 +13392,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "rät",
-      "perfekt": "hat geraten",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to advise / to guess",
     "pronunciation": "rah-ten",
@@ -14385,11 +13428,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "raucht",
-      "perfekt": "hat geraucht",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to smoke",
     "pronunciation": "row-khen",
@@ -14425,11 +13464,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "rechnet",
-      "perfekt": "hat gerechnet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to calculate / to do math",
     "pronunciation": "rekh-nen",
@@ -14465,11 +13500,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "hat recht",
-      "perfekt": "hat recht gehabt",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to be right",
     "pronunciation": "rekht hah-ben",
@@ -14505,11 +13536,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "redet",
-      "perfekt": "hat geredet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to talk / to speak",
     "pronunciation": "ray-den",
@@ -14545,11 +13572,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "regnet",
-      "perfekt": "hat geregnet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to rain",
     "pronunciation": "rayg-nen",
@@ -14568,10 +13591,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "reicher",
-      "superlative": "am reichsten"
-    },
+    "adjective_forms": null,
     "english": "rich / wealthy",
     "pronunciation": "rykh",
     "theme": "Eigenschaften & Adjektive",
@@ -14714,11 +13734,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "reist",
-      "perfekt": "ist gereist",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to travel",
     "pronunciation": "ry-zen",
@@ -14736,11 +13752,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "reitet",
-      "perfekt": "ist geritten",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to ride (a horse)",
     "pronunciation": "ry-ten",
@@ -14758,11 +13770,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "renoviert",
-      "perfekt": "hat renoviert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to renovate",
     "pronunciation": "re-no-vee-ren",
@@ -14834,11 +13842,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "repariert",
-      "perfekt": "hat repariert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to repair / to fix",
     "pronunciation": "re-pa-ree-ren",
@@ -14856,11 +13860,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "reserviert",
-      "perfekt": "hat reserviert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to reserve / to book",
     "pronunciation": "re-zer-vee-ren",
@@ -14951,10 +13951,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "richtiger",
-      "superlative": "am richtigsten"
-    },
+    "adjective_forms": null,
     "english": "right / correct",
     "pronunciation": "rikh-tig",
     "theme": "Eigenschaften & Adjektive",
@@ -14971,11 +13968,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "riecht",
-      "perfekt": "hat gerochen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to smell",
     "pronunciation": "ree-khen",
@@ -15048,10 +14041,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "romantischer",
-      "superlative": "am romantischsten"
-    },
+    "adjective_forms": null,
     "english": "romantic",
     "pronunciation": "ro-mahn-tish",
     "theme": "Eigenschaften & Adjektive",
@@ -15104,11 +14094,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "ruft",
-      "perfekt": "hat gerufen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to call",
     "pronunciation": "roo-fen",
@@ -15145,10 +14131,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "ruhiger",
-      "superlative": "am ruhigsten"
-    },
+    "adjective_forms": null,
     "english": "quiet / calm",
     "pronunciation": "roo-ig",
     "theme": "Eigenschaften & Adjektive",
@@ -15166,10 +14149,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "runder",
-      "superlative": "am rundesten"
-    },
+    "adjective_forms": null,
     "english": "round / around (approximately)",
     "pronunciation": "roont",
     "theme": "Eigenschaften & Adjektive",
@@ -15276,11 +14256,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "sagt",
-      "perfekt": "hat gesagt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to say / to tell",
     "pronunciation": "zah-gen",
@@ -15334,11 +14310,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "sammelt",
-      "perfekt": "hat gesammelt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to collect / to gather",
     "pronunciation": "zahm-meln",
@@ -15375,10 +14347,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "sauberer",
-      "superlative": "am saubersten"
-    },
+    "adjective_forms": null,
     "english": "clean",
     "pronunciation": "zow-ber",
     "theme": "Eigenschaften & Adjektive",
@@ -15396,10 +14365,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "saurer",
-      "superlative": "am sauersten"
-    },
+    "adjective_forms": null,
     "english": "sour / angry",
     "pronunciation": "zow-er",
     "theme": "Gefühle, Charakter & Meinung",
@@ -15434,11 +14400,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "schafft",
-      "perfekt": "hat geschafft",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to manage / to accomplish",
     "pronunciation": "shahf-fen",
@@ -15475,10 +14437,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "schärfer",
-      "superlative": "am schärfsten"
-    },
+    "adjective_forms": null,
     "english": "spicy / sharp",
     "pronunciation": "shahrf",
     "theme": "Eigenschaften & Adjektive",
@@ -15495,11 +14454,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "scheint",
-      "perfekt": "hat geschienen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to shine / to seem",
     "pronunciation": "shy-nen",
@@ -15517,11 +14472,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "schenkt",
-      "perfekt": "hat geschenkt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to give (as a gift)",
     "pronunciation": "sheng-ken",
@@ -15557,11 +14508,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "schickt",
-      "perfekt": "hat geschickt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to send",
     "pronunciation": "shik-ken",
@@ -15615,11 +14562,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "schimpft",
-      "perfekt": "hat geschimpft",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to scold / to complain",
     "pronunciation": "shimp-fen",
@@ -15655,11 +14598,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "schläft",
-      "perfekt": "hat geschlafen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to sleep",
     "pronunciation": "shlah-fen",
@@ -15678,10 +14617,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "schlechter",
-      "superlative": "am schlechtesten"
-    },
+    "adjective_forms": null,
     "english": "bad / poor",
     "pronunciation": "shlekht",
     "theme": "Eigenschaften & Adjektive",
@@ -15698,11 +14634,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "schließt",
-      "perfekt": "hat geschlossen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to close",
     "pronunciation": "shlee-sen",
@@ -15721,10 +14653,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "schlimmer",
-      "superlative": "am schlimmsten"
-    },
+    "adjective_forms": null,
     "english": "bad / awful / serious",
     "pronunciation": "shlim",
     "theme": "Eigenschaften & Adjektive",
@@ -15795,11 +14724,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "schmeckt",
-      "perfekt": "hat geschmeckt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to taste",
     "pronunciation": "shmek-ken",
@@ -15836,10 +14761,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "schmutziger",
-      "superlative": "am schmutzigsten"
-    },
+    "adjective_forms": null,
     "english": "dirty",
     "pronunciation": "shmoot-sig",
     "theme": "Eigenschaften & Adjektive",
@@ -15874,11 +14796,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er schneidet",
-      "perfekt": "hat geschnitten",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to cut",
     "pronunciation": "shny-den",
@@ -15896,11 +14814,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "schneit",
-      "perfekt": "hat geschneit",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to snow",
     "pronunciation": "shny-en",
@@ -15919,10 +14833,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "schneller",
-      "superlative": "am schnellsten"
-    },
+    "adjective_forms": null,
     "english": "fast / quick",
     "pronunciation": "shnel",
     "theme": "Eigenschaften & Adjektive",
@@ -16012,10 +14923,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "schrecklicher",
-      "superlative": "am schrecklichsten"
-    },
+    "adjective_forms": null,
     "english": "terrible / awful",
     "pronunciation": "shrek-likh",
     "theme": "Eigenschaften & Adjektive",
@@ -16032,11 +14940,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "schreibt",
-      "perfekt": "hat geschrieben",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to write",
     "pronunciation": "shry-ben",
@@ -16109,10 +15013,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "schwächer",
-      "superlative": "am schwächsten"
-    },
+    "adjective_forms": null,
     "english": "weak",
     "pronunciation": "shvahkh",
     "theme": "Gesundheit, Körper & Pflege",
@@ -16130,10 +15031,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "",
-      "superlative": ""
-    },
+    "adjective_forms": null,
     "english": "pregnant",
     "pronunciation": "shvahng-er",
     "theme": "Gesundheit, Körper & Pflege",
@@ -16169,10 +15067,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "schwerer",
-      "superlative": "am schwersten"
-    },
+    "adjective_forms": null,
     "english": "heavy / difficult",
     "pronunciation": "shvair",
     "theme": "Eigenschaften & Adjektive",
@@ -16190,10 +15085,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "schwieriger",
-      "superlative": "am schwierigsten"
-    },
+    "adjective_forms": null,
     "english": "difficult / hard",
     "pronunciation": "shvee-rig",
     "theme": "Eigenschaften & Adjektive",
@@ -16228,11 +15120,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "schwimmt",
-      "perfekt": "ist geschwommen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to swim",
     "pronunciation": "shvim-men",
@@ -16251,10 +15139,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "schädlicher",
-      "superlative": "am schädlichsten"
-    },
+    "adjective_forms": null,
     "english": "harmful / damaging",
     "pronunciation": "shaid-likh",
     "theme": "Gesundheit, Körper & Pflege",
@@ -16272,10 +15157,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "schöner",
-      "superlative": "am schönsten"
-    },
+    "adjective_forms": null,
     "english": "beautiful / nice",
     "pronunciation": "shoen",
     "theme": "Eigenschaften & Adjektive",
@@ -16346,11 +15228,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "sieht",
-      "perfekt": "hat gesehen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to see",
     "pronunciation": "zay-en",
@@ -16422,11 +15300,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "ist",
-      "perfekt": "ist gewesen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to be",
     "pronunciation": "zine",
@@ -16444,11 +15318,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er ist",
-      "perfekt": "ist gewesen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "his / its",
     "pronunciation": "zine",
@@ -16556,11 +15426,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er setzt sich",
-      "perfekt": "hat sich gesetzt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to sit down",
     "pronunciation": "zet-sen",
@@ -16578,11 +15444,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er meldet sich an",
-      "perfekt": "hat sich angemeldet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to register / to log in",
     "pronunciation": "ahn-mel-den",
@@ -16600,11 +15462,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er ruht sich aus",
-      "perfekt": "hat sich ausgeruht",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to rest / to relax",
     "pronunciation": "ows-roo-en",
@@ -16622,11 +15480,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er bedankt sich",
-      "perfekt": "hat sich bedankt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to thank",
     "pronunciation": "zikh be-dahn-ken",
@@ -16644,11 +15498,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er beeilt sich",
-      "perfekt": "hat sich beeilt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to hurry",
     "pronunciation": "zikh be-i-len",
@@ -16666,11 +15516,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er beschwert sich",
-      "perfekt": "hat sich beschwert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to complain",
     "pronunciation": "zikh be-shvey-ren",
@@ -16688,11 +15534,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er bewirbt sich",
-      "perfekt": "hat sich beworben",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to apply (for a job)",
     "pronunciation": "zikh be-vair-ben",
@@ -16710,11 +15552,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er duscht sich",
-      "perfekt": "hat sich geduscht",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to shower / to take a shower",
     "pronunciation": "zikh doo-shen",
@@ -16732,11 +15570,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er trägt sich ein",
-      "perfekt": "hat sich eingetragen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to register / to fill in",
     "pronunciation": "zikh ine-trah-gen",
@@ -16754,11 +15588,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er entschuldigt sich",
-      "perfekt": "hat sich entschuldigt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to apologize",
     "pronunciation": "zikh ent-shool-di-gen",
@@ -16776,11 +15606,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er erinnert sich",
-      "perfekt": "hat sich erinnert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to remember",
     "pronunciation": "zikh er-in-nern",
@@ -16798,11 +15624,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er freut sich",
-      "perfekt": "hat sich gefreut",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to be glad / to look forward to",
     "pronunciation": "zikh froy-en",
@@ -16820,11 +15642,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er fühlt sich",
-      "perfekt": "hat sich gefühlt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to feel",
     "pronunciation": "zikh fue-len",
@@ -16842,11 +15660,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "informiert (sich)",
-      "perfekt": "hat (sich) informiert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to inform oneself (about) / to find out",
     "pronunciation": "zikh in-for-mee-ren ue-ber",
@@ -16864,11 +15678,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "kümmert (sich)",
-      "perfekt": "hat (sich) gekümmert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to take care of / to look after",
     "pronunciation": "zikh kuem-mern",
@@ -16886,11 +15696,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "zieht sich um",
-      "perfekt": "hat sich umgezogen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to change clothes",
     "pronunciation": "zikh oom-tsee-en",
@@ -16908,11 +15714,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "ärgert (sich)",
-      "perfekt": "hat (sich) geärgert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to be annoyed / to get angry",
     "pronunciation": "er-gern",
@@ -16931,10 +15733,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "sicherer",
-      "superlative": "am sichersten"
-    },
+    "adjective_forms": null,
     "english": "safe / sure / certain",
     "pronunciation": "zi-kher",
     "theme": "Eigenschaften & Adjektive",
@@ -16951,11 +15750,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "singt",
-      "perfekt": "hat gesungen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to sing",
     "pronunciation": "zing-en",
@@ -16991,11 +15786,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "sitzt",
-      "perfekt": "hat/ist gesessen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to sit",
     "pronunciation": "zit-sen",
@@ -17103,11 +15894,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "soll",
-      "perfekt": "hat gesollt",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "should / ought to",
     "pronunciation": "zol-len",
@@ -17144,10 +15931,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "sonniger",
-      "superlative": "am sonnigsten"
-    },
+    "adjective_forms": null,
     "english": "sunny",
     "pronunciation": "zon-nig",
     "theme": "Natur, Umwelt & Tiere",
@@ -17183,10 +15967,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "spannender",
-      "superlative": "am spannendsten"
-    },
+    "adjective_forms": null,
     "english": "exciting / thrilling",
     "pronunciation": "shpahn-nent",
     "theme": "Eigenschaften & Adjektive",
@@ -17203,11 +15984,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "spart",
-      "perfekt": "hat gespart",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to save (money)",
     "pronunciation": "shpah-ren",
@@ -17225,11 +16002,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "geht spazieren",
-      "perfekt": "ist spazieren gegangen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to go for a walk",
     "pronunciation": "shpa-tsee-ren gay-en",
@@ -17283,11 +16056,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "speichert",
-      "perfekt": "hat gespeichert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to save / to store (data)",
     "pronunciation": "shpy-khern",
@@ -17341,11 +16110,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "spielt",
-      "perfekt": "hat gespielt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to play",
     "pronunciation": "shpee-len",
@@ -17382,10 +16147,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "sportlicher",
-      "superlative": "am sportlichsten"
-    },
+    "adjective_forms": null,
     "english": "athletic / sporty",
     "pronunciation": "shport-likh",
     "theme": "Eigenschaften & Adjektive",
@@ -17438,11 +16200,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "spricht",
-      "perfekt": "hat gesprochen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to speak / to talk",
     "pronunciation": "shprekh-en",
@@ -17479,10 +16237,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "später",
-      "superlative": "am spätesten"
-    },
+    "adjective_forms": null,
     "english": "late",
     "pronunciation": "shpayt",
     "theme": "Uhrzeit, Datum & Kalender",
@@ -17572,10 +16327,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "stärker",
-      "superlative": "am stärksten"
-    },
+    "adjective_forms": null,
     "english": "strong / severe",
     "pronunciation": "shtahrk",
     "theme": "Eigenschaften & Adjektive",
@@ -17592,11 +16344,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "findet statt",
-      "perfekt": "hat stattgefunden",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to take place",
     "pronunciation": "shtaht-fin-den",
@@ -17614,11 +16362,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "steht",
-      "perfekt": "hat/ist gestanden",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to stand / to be written",
     "pronunciation": "shtay-en",
@@ -17654,11 +16398,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "stellt",
-      "perfekt": "hat gestellt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to put / to place",
     "pronunciation": "shtel-len",
@@ -17676,11 +16416,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "stirbt",
-      "perfekt": "ist gestorben",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to die",
     "pronunciation": "shtair-ben",
@@ -17842,11 +16578,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "streitet (sich)",
-      "perfekt": "hat (sich) gestritten",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to argue / to fight",
     "pronunciation": "shtry-ten",
@@ -17883,10 +16615,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "stressiger",
-      "superlative": "am stressigsten"
-    },
+    "adjective_forms": null,
     "english": "stressful",
     "pronunciation": "shtres-sig",
     "theme": "Arbeit, Beruf & Karriere",
@@ -17939,11 +16668,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "studiert",
-      "perfekt": "hat studiert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to study (at university)",
     "pronunciation": "shtoo-dee-ren",
@@ -17997,11 +16722,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "stört",
-      "perfekt": "hat gestört",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to disturb / to bother",
     "pronunciation": "shtoe-ren",
@@ -18037,11 +16758,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "sucht",
-      "perfekt": "hat gesucht",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to search / to look for",
     "pronunciation": "zoo-khen",
@@ -18060,10 +16777,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "",
-      "superlative": ""
-    },
+    "adjective_forms": null,
     "english": "super / great",
     "pronunciation": "zoo-per",
     "theme": "Eigenschaften & Adjektive",
@@ -18116,11 +16830,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "surft",
-      "perfekt": "hat/ist gesurft",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to surf",
     "pronunciation": "ser-fen",
@@ -18139,10 +16849,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "sympathischer",
-      "superlative": "am sympathischsten"
-    },
+    "adjective_forms": null,
     "english": "sympathetic / likeable",
     "pronunciation": "zim-pah-tish",
     "theme": "Gefühle, Charakter & Meinung",
@@ -18160,10 +16867,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "süßer",
-      "superlative": "am süßesten"
-    },
+    "adjective_forms": null,
     "english": "sweet / cute",
     "pronunciation": "zues",
     "theme": "Eigenschaften & Adjektive",
@@ -18252,11 +16956,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "tanzt",
-      "perfekt": "hat getanzt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to dance",
     "pronunciation": "tahn-tsen",
@@ -18328,11 +17028,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "tauscht (aus)",
-      "perfekt": "hat (aus)getauscht",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to exchange / to swap",
     "pronunciation": "tow-shen / ows-tow-shen",
@@ -18404,11 +17100,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "teilt",
-      "perfekt": "hat geteilt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to share / to divide",
     "pronunciation": "ty-len",
@@ -18426,11 +17118,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "nimmt teil",
-      "perfekt": "hat teilgenommen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to take part / to participate",
     "pronunciation": "tile-nay-men",
@@ -18466,11 +17154,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "telefoniert",
-      "perfekt": "hat telefoniert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to make a phone call / to telephone",
     "pronunciation": "tay-le-fo-nee-ren",
@@ -18543,10 +17227,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "teurer",
-      "superlative": "am teuersten"
-    },
+    "adjective_forms": null,
     "english": "expensive",
     "pronunciation": "toy-er",
     "theme": "Einkaufen, Geld & Konsum",
@@ -18636,10 +17317,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "tiefer",
-      "superlative": "am tiefsten"
-    },
+    "adjective_forms": null,
     "english": "deep",
     "pronunciation": "teef",
     "theme": "Eigenschaften & Adjektive",
@@ -18747,10 +17425,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "toller",
-      "superlative": "am tollsten"
-    },
+    "adjective_forms": null,
     "english": "great / fantastic",
     "pronunciation": "tol",
     "theme": "Eigenschaften & Adjektive",
@@ -18822,10 +17497,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "",
-      "superlative": ""
-    },
+    "adjective_forms": null,
     "english": "dead",
     "pronunciation": "toht",
     "theme": "Gesundheit, Körper & Pflege",
@@ -18914,11 +17586,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "trägt",
-      "perfekt": "hat getragen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to carry / to wear",
     "pronunciation": "trah-gen",
@@ -18936,11 +17604,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "trainiert",
-      "perfekt": "hat trainiert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to train / to practice",
     "pronunciation": "tre-nee-ren",
@@ -18995,10 +17659,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "trauriger",
-      "superlative": "am traurigsten"
-    },
+    "adjective_forms": null,
     "english": "sad",
     "pronunciation": "trow-rig",
     "theme": "Gefühle, Charakter & Meinung",
@@ -19015,11 +17676,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "trifft (sich)",
-      "perfekt": "hat (sich) getroffen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to meet",
     "pronunciation": "tref-fen",
@@ -19037,11 +17694,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "trifft",
-      "perfekt": "hat getroffen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to meet",
     "pronunciation": "tref-fen",
@@ -19077,11 +17730,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "trinkt",
-      "perfekt": "hat getrunken",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to drink",
     "pronunciation": "tring-ken",
@@ -19100,10 +17749,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "trockener",
-      "superlative": "am trockensten"
-    },
+    "adjective_forms": null,
     "english": "dry",
     "pronunciation": "trok-ken",
     "theme": "Eigenschaften & Adjektive",
@@ -19120,11 +17766,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "träumt",
-      "perfekt": "hat geträumt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to dream",
     "pronunciation": "troy-men",
@@ -19178,11 +17820,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "tut",
-      "perfekt": "hat getan",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to do",
     "pronunciation": "toon",
@@ -19201,10 +17839,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "typischer",
-      "superlative": "am typischsten"
-    },
+    "adjective_forms": null,
     "english": "typical",
     "pronunciation": "tue-pish",
     "theme": "Eigenschaften & Adjektive",
@@ -19275,11 +17910,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "steigt um",
-      "perfekt": "ist umgestiegen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to change (trains/buses) / to transfer",
     "pronunciation": "oom-sty-gen",
@@ -19297,11 +17928,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "zieht um",
-      "perfekt": "ist umgezogen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to move (house)",
     "pronunciation": "oom-tsee-en",
@@ -19409,11 +18036,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "unterhält (sich)",
-      "perfekt": "hat (sich) unterhalten",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to converse / to talk",
     "pronunciation": "oon-ter-hahl-ten",
@@ -19431,11 +18054,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "unternimmt",
-      "perfekt": "hat unternommen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to undertake / to do",
     "pronunciation": "oon-ter-nay-men",
@@ -19453,11 +18072,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "unterschreibt",
-      "perfekt": "hat unterschrieben",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to sign",
     "pronunciation": "oon-ter-shry-ben",
@@ -19475,11 +18090,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "untersucht",
-      "perfekt": "hat untersucht",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to examine / to investigate",
     "pronunciation": "oon-ter-zoo-khen",
@@ -19497,11 +18108,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "ist unterwegs",
-      "perfekt": "ist unterwegs gewesen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to be on the way / to be en route",
     "pronunciation": "oon-ter-veks zine",
@@ -19537,11 +18144,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "ist verabredet",
-      "perfekt": "ist verabredet gewesen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to have an appointment / to have a date",
     "pronunciation": "fer-ahp-ray-det zine",
@@ -19577,11 +18180,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er verbietet",
-      "perfekt": "hat verboten",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to forbid / to prohibit",
     "pronunciation": "fer-bee-ten",
@@ -19599,11 +18198,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "verdient",
-      "perfekt": "hat verdient",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to earn / to deserve",
     "pronunciation": "fer-dee-nen",
@@ -19639,11 +18234,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "vereinbart",
-      "perfekt": "hat vereinbart",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to arrange / to agree upon",
     "pronunciation": "fer-ine-bah-ren",
@@ -19661,11 +18252,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "vergisst",
-      "perfekt": "hat vergessen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to forget",
     "pronunciation": "fer-ges-sen",
@@ -19683,11 +18270,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "vergleicht",
-      "perfekt": "hat verglichen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to compare",
     "pronunciation": "fer-gly-khen",
@@ -19705,11 +18288,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "verkauft",
-      "perfekt": "hat verkauft",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to sell",
     "pronunciation": "fer-kow-fen",
@@ -19763,11 +18342,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "verletzt (sich)",
-      "perfekt": "hat (sich) verletzt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to injure oneself / to hurt oneself",
     "pronunciation": "fer-let-sen",
@@ -19785,11 +18360,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er verliebt sich",
-      "perfekt": "hat sich verliebt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to fall in love",
     "pronunciation": "fer-lee-ben",
@@ -19807,11 +18378,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "verliert",
-      "perfekt": "hat verloren",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to lose",
     "pronunciation": "fer-lee-ren",
@@ -19829,11 +18396,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "vermietet",
-      "perfekt": "hat vermietet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to rent out / to let",
     "pronunciation": "fer-mee-ten",
@@ -19887,11 +18450,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "verpasst",
-      "perfekt": "hat verpasst",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to miss",
     "pronunciation": "fer-pahs-sen",
@@ -19909,11 +18468,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "verreist",
-      "perfekt": "ist verreist",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to travel / to go away",
     "pronunciation": "fer-ry-zen",
@@ -19931,11 +18486,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "verschiebt",
-      "perfekt": "hat verschoben",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to postpone / to move",
     "pronunciation": "fer-shee-ben",
@@ -19954,10 +18505,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "verschiedener",
-      "superlative": "am verschiedensten"
-    },
+    "adjective_forms": null,
     "english": "different / various",
     "pronunciation": "fer-shee-den",
     "theme": "Eigenschaften & Adjektive",
@@ -19974,11 +18522,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "versteht",
-      "perfekt": "hat verstanden",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to understand",
     "pronunciation": "fer-shtay-en",
@@ -19996,11 +18540,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "versucht",
-      "perfekt": "hat versucht",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to try / to attempt",
     "pronunciation": "fer-zoo-khen",
@@ -20091,10 +18631,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "voller",
-      "superlative": "am vollsten"
-    },
+    "adjective_forms": null,
     "english": "full / crowded",
     "pronunciation": "fol",
     "theme": "Eigenschaften & Adjektive",
@@ -20183,11 +18720,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "bereitet vor",
-      "perfekt": "hat vorbereitet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to prepare",
     "pronunciation": "for-be-ry-ten",
@@ -20296,10 +18829,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "vorsichtiger",
-      "superlative": "am vorsichtigsten"
-    },
+    "adjective_forms": null,
     "english": "careful / cautious",
     "pronunciation": "for-sikh-tig",
     "theme": "Eigenschaften & Adjektive",
@@ -20316,11 +18846,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er stellt sich vor",
-      "perfekt": "hat sich vorgestellt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to introduce oneself",
     "pronunciation": "for-shtel-len",
@@ -20357,10 +18883,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "wacher",
-      "superlative": "am wachsten"
-    },
+    "adjective_forms": null,
     "english": "awake",
     "pronunciation": "vahkh",
     "theme": "Eigenschaften & Adjektive",
@@ -20396,10 +18919,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "wahrer",
-      "superlative": "am wahrsten"
-    },
+    "adjective_forms": null,
     "english": "true",
     "pronunciation": "vahr",
     "theme": "Eigenschaften & Adjektive",
@@ -20452,11 +18972,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "wandert",
-      "perfekt": "ist gewandert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to hike",
     "pronunciation": "vahn-dern",
@@ -20493,10 +19009,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "wärmer",
-      "superlative": "am wärmsten"
-    },
+    "adjective_forms": null,
     "english": "warm",
     "pronunciation": "varm",
     "theme": "Eigenschaften & Adjektive",
@@ -20513,11 +19026,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "wartet",
-      "perfekt": "hat gewartet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to wait",
     "pronunciation": "var-ten",
@@ -20553,11 +19062,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er wäscht sich",
-      "perfekt": "hat sich gewaschen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to wash (oneself)",
     "pronunciation": "vah-shen",
@@ -20611,11 +19116,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "wechselt",
-      "perfekt": "hat gewechselt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to change / to exchange",
     "pronunciation": "vek-seln",
@@ -20633,11 +19134,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "weckt",
-      "perfekt": "hat geweckt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to wake up (someone)",
     "pronunciation": "vek-ken",
@@ -20673,11 +19170,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er ist weg",
-      "perfekt": "ist weg gewesen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to be gone / to be away",
     "pronunciation": "vek zine",
@@ -20695,11 +19188,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er bringt weg",
-      "perfekt": "hat weggebracht",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to take away",
     "pronunciation": "vek-bring-en",
@@ -20717,11 +19206,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er läuft weg / macht weg",
-      "perfekt": "ist weggelaufen / hat weggemacht",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to run away / to remove",
     "pronunciation": "vek-low-fen / vek-mah-khen",
@@ -20739,11 +19224,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er nimmt weg / wirft weg",
-      "perfekt": "hat weggenommen / hat weggeworfen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to take away / to throw away",
     "pronunciation": "vek-nay-men / vek-vair-fen",
@@ -20779,11 +19260,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "weint",
-      "perfekt": "hat geweint",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to cry",
     "pronunciation": "vy-nen",
@@ -20801,11 +19278,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er hilft weiter",
-      "perfekt": "hat weitergeholfen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to help further / to assist",
     "pronunciation": "vy-ter-hel-fen",
@@ -20823,11 +19296,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "er macht weiter",
-      "perfekt": "hat weitergemacht",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to continue / to carry on",
     "pronunciation": "vy-ter-mah-khen",
@@ -20917,11 +19386,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "wird",
-      "perfekt": "ist geworden",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to become / will (future tense)",
     "pronunciation": "vair-den",
@@ -20975,11 +19440,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "wiederholt",
-      "perfekt": "hat wiederholt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to repeat",
     "pronunciation": "vee-der-ho-len",
@@ -21033,11 +19494,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "weiß",
-      "perfekt": "hat gewusst",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to know (a fact)",
     "pronunciation": "vis-sen",
@@ -21073,11 +19530,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "wohnt",
-      "perfekt": "hat gewohnt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to live / to reside",
     "pronunciation": "vo-nen",
@@ -21149,11 +19602,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "will",
-      "perfekt": "hat gewollt",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to want",
     "pronunciation": "vol-len",
@@ -21208,10 +19657,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "wunderbarer",
-      "superlative": "am wunderbarsten"
-    },
+    "adjective_forms": null,
     "english": "wonderful",
     "pronunciation": "voon-der-bahr",
     "theme": "Eigenschaften & Adjektive",
@@ -21264,11 +19710,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "wählt",
-      "perfekt": "hat gewählt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to choose / to vote / to dial",
     "pronunciation": "vay-len",
@@ -21304,11 +19746,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "wünscht",
-      "perfekt": "hat gewünscht",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to wish",
     "pronunciation": "vuen-shen",
@@ -21344,11 +19782,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "zahlt",
-      "perfekt": "hat gezahlt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to pay",
     "pronunciation": "tsah-len",
@@ -21384,11 +19818,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "zeichnet",
-      "perfekt": "hat gezeichnet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to draw",
     "pronunciation": "tsykh-nen",
@@ -21406,11 +19836,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "zeigt",
-      "perfekt": "hat gezeigt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to show",
     "pronunciation": "tsy-gen",
@@ -21572,11 +19998,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "zieht (an/aus)",
-      "perfekt": "hat/ist (an/aus)gezogen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to put on / to take off (clothes)",
     "pronunciation": "ahn-tsee-en / ows-tsee-en",
@@ -21702,11 +20124,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "ist zu",
-      "perfekt": "ist zu gewesen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to be closed",
     "pronunciation": "tsoo zine",
@@ -21761,10 +20179,7 @@
     "gender": null,
     "plural": null,
     "verb_conjugation": null,
-    "adjective_forms": {
-      "comparative": "zufriedener",
-      "superlative": "am zufriedensten"
-    },
+    "adjective_forms": null,
     "english": "satisfied / content",
     "pronunciation": "tsoo-free-den",
     "theme": "Gefühle, Charakter & Meinung",
@@ -21799,11 +20214,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "hört zu",
-      "perfekt": "hat zugehört",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to listen",
     "pronunciation": "tsoo-hoe-ren",
@@ -21857,11 +20268,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "macht zu",
-      "perfekt": "hat zugemacht",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to close / to shut",
     "pronunciation": "tsoo-mah-khen",
@@ -21951,11 +20358,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "ändert",
-      "perfekt": "hat geändert",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to change / to alter",
     "pronunciation": "en-dern",
@@ -21973,11 +20376,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "öffnet",
-      "perfekt": "hat geöffnet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to open",
     "pronunciation": "oef-nen",
@@ -22013,11 +20412,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "übt",
-      "perfekt": "hat geübt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to practice",
     "pronunciation": "ue-ben",
@@ -22089,11 +20484,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "übernachtet",
-      "perfekt": "hat übernachtet",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to stay overnight",
     "pronunciation": "ue-ber-nakh-ten",
@@ -22111,11 +20502,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "übersetzt",
-      "perfekt": "hat übersetzt",
-      "is_irregular": false
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to translate",
     "pronunciation": "ue-ber-zet-sen",
@@ -22151,11 +20538,7 @@
     "word_class": "Verb",
     "gender": null,
     "plural": null,
-    "verb_conjugation": {
-      "present_3sg": "überweist",
-      "perfekt": "hat überwiesen",
-      "is_irregular": true
-    },
+    "verb_conjugation": null,
     "adjective_forms": null,
     "english": "to transfer (money)",
     "pronunciation": "ue-ber-vy-zen",
