@@ -3,12 +3,29 @@
 /* Base Styles */
 html {
   scrollbar-gutter: stable;
+  overflow-x: hidden; /* Belt + braces: also block horizontal scroll at html level */
 }
 
 body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; /* Prevent any horizontal overflow from breaking mobile layout */
+}
+
+/* Mobile layout failsafe — hard override for any dynamically-injected Tailwind grid classes */
+@media (max-width: 767px) {
+  #flashcard-workspace-grid,
+  #flashcard-workspace-left,
+  #card-display-area {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  #audio-trainer-panel {
+    flex-direction: column !important;
+  }
 }
 
 /* V3: Progressive enhancement — enables native auto-height transitions in Chromium 129+.

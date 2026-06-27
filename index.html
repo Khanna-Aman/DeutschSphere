@@ -587,9 +587,9 @@
         <div id="flashcard-workspace-left" class="space-y-4 w-full">
 
           <!-- Continuous Audio Trainer Panel -->
-          <div id="audio-trainer-panel" class="w-full bg-slate-900/60 glass border border-slate-800/85 rounded-2xl py-2.5 px-4 flex flex-col sm:flex-row items-center justify-between gap-4 transition-all duration-300 shadow-xl shadow-slate-950/20">
+          <div id="audio-trainer-panel" class="w-full bg-slate-900/60 glass border border-slate-800/85 rounded-2xl py-2.5 px-4 flex flex-col md:flex-row items-center justify-between gap-3 transition-all duration-300 shadow-xl shadow-slate-950/20">
             <!-- Trainer Header & Info -->
-            <div class="flex items-center gap-3 w-full sm:w-auto">
+            <div class="flex items-center gap-3 w-full md:w-auto">
               <div class="relative flex items-center justify-center w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-400">
                 <i id="trainer-status-icon" class="fa-solid fa-microphone-lines text-sm"></i>
                 <span id="trainer-pulse-ring" class="absolute inset-0 rounded-xl border border-indigo-500/50 animate-ping opacity-0"></span>
@@ -614,11 +614,11 @@
             </div>
 
             <!-- Settings (Speed Slider & Loop Toggle) -->
-            <div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
+            <div class="flex items-center gap-3 w-full md:w-auto justify-between md:justify-end">
               <!-- Speed Control -->
               <div class="flex items-center gap-2 bg-slate-950/40 px-2.5 py-1.5 rounded-xl border border-slate-900/80 text-[11px] text-slate-400">
                 <span>Speed:</span>
-                <input id="trainer-speed-slider" type="range" min="0.7" max="1.5" step="0.1" value="1.0" class="w-14 sm:w-16 accent-indigo-500 h-1 bg-slate-800 rounded-lg cursor-pointer">
+                <input id="trainer-speed-slider" type="range" min="0.7" max="1.5" step="0.1" value="1.0" class="w-16 md:w-20 accent-indigo-500 h-1 bg-slate-800 rounded-lg cursor-pointer">
                 <span id="trainer-speed-val" class="font-mono text-indigo-400 w-7 text-right">1.0x</span>
               </div>
               <!-- Loop Mode Toggle -->

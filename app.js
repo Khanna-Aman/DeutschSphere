@@ -272,7 +272,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   initHelpModal();
   initFeedbackModal();
 
-  fetchData();
+  // BUG FIX: await fetchData() so state.allCards is populated before handleRouting()
+  // calls renderCard(). Without await, renderCard() fires on an empty deck.
+  await fetchData();
   setupEventListeners();
   setupSwipeGestures();
   initSidebarCategoryWords();
