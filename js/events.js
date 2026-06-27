@@ -49,7 +49,6 @@ function handleSRSUpdate(e) {
     renderSidebarCategories();
   });
 }
-window.removeEventListener('srs:card-updated', handleSRSUpdate);
 window.addEventListener('srs:card-updated', handleSRSUpdate);
 
 window.addEventListener('deck:filter-request', (e) => {

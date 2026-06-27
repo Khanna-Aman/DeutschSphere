@@ -72,9 +72,9 @@ export function initTelemetry() {
     return false; // Allow standard browser reporting
   };
 
-  window.onunhandledrejection = function (event) {
-    logger.error('UnhandledPromiseRejection', event.reason ? event.reason.message || event.reason : 'Unknown Promise Rejection', { reason: event.reason });
-  };
+  window.addEventListener('unhandledrejection', function (event) {
+    logger.error('UnhandledPromiseRejection', event.reason ? (event.reason.message || String(event.reason)) : 'Unknown Promise Rejection', { reason: event.reason });
+  });
 
   logger.info('Telemetry', 'Global telemetry and observability hooks initialized successfully.');
 }

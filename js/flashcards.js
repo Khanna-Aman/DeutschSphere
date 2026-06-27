@@ -841,9 +841,8 @@ export function toggleImages() {
   }
 
   // Re-render current card to apply image state change immediately
-  if (state.deck && state.deck[state.currentIndex]) {
-    renderCard(state.deck[state.currentIndex]);
-  }
+  renderCard();
+
 }
 
 export function updateImagesToggleUI() {

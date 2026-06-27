@@ -137,8 +137,11 @@ export function loadQuizQuestion() {
   if (elements.quizCardImageContainer && elements.quizCardImage) {
     const activeImage = qCard.image_path || qCard.image;
     const isImageAllowed = (state.currentLevel === 'a1' || state.currentLevel === 'a2');
-    if (state.showImages && isImageAllowed) {
+    if (state.showImages && isImageAllowed && activeImage) {
       elements.quizCardImage.src = state.currentLevel + '/' + activeImage;
+      elements.quizCardImage.onerror = () => {
+        elements.quizCardImageContainer.classList.add('hidden');
+      };
       elements.quizCardImageContainer.classList.remove('hidden');
     } else {
       elements.quizCardImageContainer.classList.add('hidden');
