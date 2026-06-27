@@ -116,9 +116,16 @@
       </div>
     </div>
 
-    <button id="mobile-sidebar-toggle" class="p-2 text-slate-400 hover:text-white transition-colors" aria-label="Open categories menu">
-      <i class="fa-solid fa-bars text-xl"></i>
-    </button>
+    <div class="flex items-center gap-2">
+      <!-- Help Button -->
+      <button id="help-btn-mobile" class="help-btn-trigger p-2 text-indigo-400 hover:text-indigo-300 transition-colors cursor-pointer" title="Help & System Introduction (Hot-key: ?)">
+        <i class="fa-solid fa-circle-question text-xl"></i>
+      </button>
+      <!-- Hamburger Menu Button -->
+      <button id="mobile-sidebar-toggle" class="p-2 text-slate-400 hover:text-white transition-colors" aria-label="Open categories menu">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
   </header>
 
   <!-- PWA Install Banner (shown via beforeinstallprompt) -->
@@ -156,9 +163,15 @@
           <p class="text-xs text-slate-400 font-medium">Personal Flashcards</p>
         </div>
       </div>
-      <button id="mobile-sidebar-close" aria-label="Close sidebar" class="md:hidden p-2 text-slate-400 hover:text-white transition-colors">
-        <i class="fa-solid fa-xmark text-lg"></i>
-      </button>
+      <div class="flex items-center gap-1.5">
+        <!-- Desktop Help Button -->
+        <button id="help-btn-desktop" class="help-btn-trigger hidden md:flex items-center justify-center p-2 text-indigo-400 hover:text-indigo-300 transition-colors cursor-pointer" title="Help & System Introduction (Hot-key: ?)">
+          <i class="fa-solid fa-circle-question text-xl"></i>
+        </button>
+        <button id="mobile-sidebar-close" aria-label="Close sidebar" class="md:hidden p-2 text-slate-400 hover:text-white transition-colors">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
     </div>
 
     <!-- Level Selector -->
@@ -2009,10 +2022,6 @@
   <!-- Global Fullscreen Lottie Micro-Animation Layer -->
   <div id="lottie-container" class="fixed inset-0 pointer-events-none z-[58] flex items-center justify-center overflow-hidden"></div>
 
-  <!-- Floating Action Help Button (FAB) -->
-  <button id="help-fab" class="fixed bottom-6 right-6 w-14 h-14 bg-slate-900/80 border border-slate-700/60 hover:border-indigo-500 hover:shadow-[0_0_15px_rgba(99,102,241,0.4)] text-indigo-400 hover:text-indigo-300 rounded-full flex items-center justify-center shadow-2xl backdrop-blur-md z-[55] cursor-pointer transition-colors" title="Help & System Introduction (Hot-key: ?)">
-    <i class="fa-solid fa-question text-xl"></i>
-  </button>
 
   <!-- Premium Lottie Player Library via CDN (Cacheable) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" defer></script>

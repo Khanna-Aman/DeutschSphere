@@ -526,7 +526,9 @@ export const elements = {
   helpModalOverlay: document.getElementById('help-modal-overlay'),
   helpModalClose: document.getElementById('help-modal-close'),
   helpModalAck: document.getElementById('help-modal-ack'),
-  helpFab: document.getElementById('help-fab'),
+  helpFab: document.getElementById('help-btn-mobile') || document.getElementById('help-btn-desktop'),
+  helpBtnMobile: document.getElementById('help-btn-mobile'),
+  helpBtnDesktop: document.getElementById('help-btn-desktop'),
 
 
   // Phonetik-Spiegel (Voice Mirror)

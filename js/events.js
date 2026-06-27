@@ -928,17 +928,17 @@ export function toggleHelpModal() {
 }
 
 export function initHelpModal() {
-  const helpFab = document.getElementById('help-fab');
+  const helpTriggers = document.querySelectorAll('.help-btn-trigger, #help-fab');
   const closeBtn = document.getElementById('help-modal-close');
   const ackBtn = document.getElementById('help-modal-ack');
   const overlay = document.getElementById('help-modal-overlay');
 
-  if (helpFab) {
-    helpFab.addEventListener('click', (e) => {
+  helpTriggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
       e.preventDefault();
       toggleHelpModal();
     });
-  }
+  });
   if (closeBtn) {
     closeBtn.addEventListener('click', (e) => {
       e.preventDefault();
