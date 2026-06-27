@@ -282,10 +282,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   handleRouting();
 
-  // SW caching for offline support
+  // SW caching for offline support & automatic background update checking
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {
     navigator.serviceWorker.register('./sw.js')
-      .then(reg => console.log('[SW] Registered:', reg.scope))
+      .then(reg => {
+        console.log('[SW] Registered:', reg.scope);
+        // Periodically check for new version on GitHub Pages
+        reg.update();
+      })
       .catch(err => console.warn('[SW] Registration failed:', err));
   }
 
