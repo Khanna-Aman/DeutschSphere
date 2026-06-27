@@ -2,7 +2,7 @@
 // Strategy: Cache-first for static assets, stale-while-revalidate for CDN resources.
 // NOTE: This SW only activates on HTTPS origins (GitHub Pages). It cannot run on file://.
 
-const CACHE_VERSION = 'v6.8.1'; // v6.8.1: fix(mobile) — restore full-width stretch, scope items-start to lg+ only
+const CACHE_VERSION = 'v6.8.2'; // v6.8.2: fix(mobile) — companion visibility, responsive layout container centering & stats padding
 const STATIC_CACHE = `deutschsphere-static-${CACHE_VERSION}`;
 const DATA_CACHE = `deutschsphere-data-${CACHE_VERSION}`;
 const CDN_CACHE = `deutschsphere-cdn-${CACHE_VERSION}`;
