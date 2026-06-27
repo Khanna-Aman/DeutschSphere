@@ -390,7 +390,7 @@ function renderCardMeaning(card) {
  */
 function renderExampleSentences(card) {
   if (elements.cardExampleDe && elements.cardExampleEn && elements.cardExamplesContainer) {
-    if (card.exampleDe) {
+    if (card.exampleDe && state.showExamples) {
       elements.cardExampleDe.textContent = card.exampleDe;
       elements.cardExampleEn.textContent = card.exampleEn || '';
       elements.cardExamplesContainer.classList.remove('hidden');
@@ -918,6 +918,48 @@ export function updateImagesToggleUI() {
       }
     }
   }
+}
+
+export function updateExamplesToggleUI() {
+  if (elements.toggleExamplesBtn) {
+    const icon = elements.toggleExamplesBtn.querySelector('.toggle-icon');
+    if (icon) {
+      const wrapper = icon.parentElement;
+      if (state.showExamples) {
+        icon.className = "toggle-icon fa-solid fa-toggle-on text-xs text-indigo-400";
+        elements.toggleExamplesBtn.classList.add('border-indigo-500/30', 'bg-indigo-950/20');
+        elements.toggleExamplesBtn.classList.remove('border-slate-800', 'bg-slate-900/80');
+        elements.toggleExamplesBtn.setAttribute('data-active', 'true');
+        if (wrapper) {
+          wrapper.className = "toggle-examples-wrapper flex items-center justify-center w-8 h-8 rounded-lg text-sm font-medium transition-all bg-indigo-950/20 border border-indigo-500/30 text-indigo-400";
+        }
+      } else {
+        icon.className = "toggle-icon fa-solid fa-toggle-off text-xs text-slate-500";
+        elements.toggleExamplesBtn.classList.add('border-slate-800', 'bg-slate-900/80');
+        elements.toggleExamplesBtn.classList.remove('border-indigo-500/30', 'bg-indigo-950/20');
+        elements.toggleExamplesBtn.removeAttribute('data-active');
+        if (wrapper) {
+          wrapper.className = "toggle-examples-wrapper flex items-center justify-center w-8 h-8 rounded-lg text-sm font-medium transition-all bg-slate-900/80 border border-slate-800 text-slate-500 group-hover:border-indigo-500/30 group-hover:bg-indigo-950/20";
+        }
+      }
+    }
+    if (elements.toggleExamplesText) {
+      elements.toggleExamplesText.textContent = state.showExamples ? "Beispiele: EIN" : "Beispiele: AUS";
+    }
+  }
+}
+
+export function toggleExamples() {
+  state.showExamples = !state.showExamples;
+  safeSetItem('show_examples', state.showExamples ? 'true' : 'false');
+  updateExamplesToggleUI();
+  if (state.showExamples) {
+    showToast("Beispielsätze Aktiviert", "Example sentences are now active on flashcards.", "fa-quote-left");
+  } else {
+    showToast("Beispielsätze Deaktiviert", "Example sentences are now hidden for cleaner flashcards.", "fa-quote-left");
+  }
+  const card = state.currentDeck ? state.currentDeck[state.currentIndex] : null;
+  if (card) renderExampleSentences(card);
 }
 
 // Dropdown: Deck preferences open/close
