@@ -39,6 +39,7 @@ DeutschSphere is designed to maximize vocabulary acquisition through distraction
 * **WCAG 2.2 AA Accessibility**: Audit and refine WAI-ARIA roles, ensuring keyboard-only and screen-reader accessibility across all view transitions and accordions.
 
 ### 🔮 Medium-Term Evolutions (v1.2.0)
+* **Customizable FSRS-5 Parameters & Timing Weights**: Advanced power-user configuration console under Settings allowing users to customize FSRS-5 matrix weights, target request retention rates (e.g., 85%–95%), custom interval caps, and timing multipliers.
 * **High-Fidelity TTS Voices**: Transition from browser-specific speech synthesis to pre-rendered neural voice grids using Google Cloud Text-to-Speech (Studio voice layers) managed within free character tiers.
 * **Advanced Pronunciation Analytics**: Refine speech analysis by mapping local microphone recordings against Google's USM (Universal Speech Model - Chirp v2) for syllable-level coaching.
 * **Double-Sided Printable Flashcard Sheets**: Render a clean printable table of highly critical vocabulary ($D > 7$ under FSRS-5) with native CSS printing rules for physical spaced repetition review.
