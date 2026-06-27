@@ -108,7 +108,13 @@ export function schedulePersist(key, dataFn, delayMs = 300) {
 export function flushAllPending() {
   for (const [key, { dataFn, timerId }] of pendingWrites) {
     clearTimeout(timerId);
-    idb.set(key, dataFn()).catch(e => console.warn('[IDB] Flush failed:', e));
+    const data = dataFn();
+    idb.set(key, data).catch(e => console.warn('[IDB] Flush failed:', e));
+    try {
+      localStorage.setItem(key, data);
+    } catch (e) {
+      console.warn('[Storage] LocalStorage fallback write failed:', e);
+    }
   }
   pendingWrites.clear();
 }
@@ -147,115 +153,6 @@ export const categoryTranslations = {
   'Basiswortschatz & Floskeln': 'Basic Vocabulary & Phrases'
 };
 
-// Achievement Badge Definitions
-export const ACHIEVEMENTS = [
-  {
-    id: 'early_bird',
-    title: 'Early Bird',
-    desc: 'Learn a vocabulary word before 7:00 AM.',
-    icon: 'fa-regular fa-clock',
-    color: 'text-sky-400'
-  },
-  {
-    id: 'night_owl',
-    title: 'Night Owl',
-    desc: 'Learn a vocabulary word after 10:00 PM.',
-    icon: 'fa-solid fa-moon',
-    color: 'text-indigo-400'
-  },
-  {
-    id: 'sprech_deutsch',
-    title: 'Sprechen Sie Deutsch?',
-    desc: 'Learn a total of 100 vocabulary words (marked as learned).',
-    icon: 'fa-solid fa-comments',
-    color: 'text-emerald-400'
-  },
-  {
-    id: 'streak_master',
-    title: 'Streak Master',
-    desc: 'Achieve a quiz streak of 10 correct answers.',
-    icon: 'fa-solid fa-fire',
-    color: 'text-orange-500'
-  },
-  {
-    id: 'perfect_score',
-    title: 'Perfect Score',
-    desc: 'Complete a quiz with 100% accuracy (min. 10 questions).',
-    icon: 'fa-solid fa-crown',
-    color: 'text-amber-400'
-  },
-  {
-    id: 'polyglott',
-    title: 'Polyglot Traveler',
-    desc: 'Visit all three CEFR levels (A1, A2, and B1).',
-    icon: 'fa-solid fa-earth-europe',
-    color: 'text-blue-400'
-  },
-  {
-    id: 'srs_pioneer',
-    title: 'FSRS Pioneer',
-    desc: 'Promote at least 5 words beyond the learning phase.',
-    icon: 'fa-solid fa-box-archive',
-    color: 'text-purple-400'
-  },
-  {
-    id: 'marathon',
-    title: 'Quiz Marathon',
-    desc: 'Answer 30 questions in a single quiz round.',
-    icon: 'fa-solid fa-person-running',
-    color: 'text-rose-400'
-  },
-  {
-    id: 'streak_3',
-    title: 'Three-Day Flame',
-    desc: 'Reach a 3-day daily learning streak.',
-    icon: 'fa-solid fa-fire-flame-curved',
-    color: 'text-orange-400'
-  },
-  {
-    id: 'streak_7',
-    title: 'Weekly Warrior',
-    desc: 'Reach a 7-day daily learning streak.',
-    icon: 'fa-solid fa-fire-flame-simple',
-    color: 'text-orange-500'
-  },
-  {
-    id: 'streak_30',
-    title: 'Monthly Master',
-    desc: 'Reach a 30-day daily learning streak.',
-    icon: 'fa-solid fa-medal',
-    color: 'text-yellow-400'
-  },
-  {
-    id: 'retention_90',
-    title: 'Memory Genius',
-    desc: 'Achieve a retention rate above 90%.',
-    icon: 'fa-solid fa-brain',
-    color: 'text-fuchsia-400'
-  },
-  {
-    id: 'first_steps',
-    title: 'First Steps',
-    desc: 'Rate your first flashcard with the FSRS system.',
-    icon: 'fa-solid fa-shoe-prints',
-    color: 'text-lime-400'
-  },
-  {
-    id: 'quiz_rookie',
-    title: 'Quiz Rookie',
-    desc: 'Complete your first quiz (min. 5 questions).',
-    icon: 'fa-solid fa-circle-check',
-    color: 'text-cyan-400'
-  },
-  {
-    id: 'adventurer',
-    title: 'Adventurer',
-    desc: 'Complete your first German Adventure scenario.',
-    icon: 'fa-solid fa-dungeon',
-    color: 'text-amber-500'
-  }
-];
-
 // Central Reactive Application State
 export const state = {
   currentLevel: safeGetItem('current_level', 'a1'), // Active CEFR Level ('a1', 'a2', 'b1')
@@ -285,8 +182,6 @@ export const state = {
     questions: [],             // Question list in active round
     currentQuestionIndex: 0,
     score: 0,
-    streak: parseInt(safeGetItem('quiz_streak', '0'), 10) || 0,
-    bestStreak: parseInt(safeGetItem('quiz_best_streak', '0'), 10) || 0,
     roundLength: 10,
     isAnswered: false,
     currentQuestion: null,
@@ -297,15 +192,6 @@ export const state = {
   // FSRS Spaced Repetition database (migrated from Leitner)
   // Maps cardId -> { state, difficulty, stability, due, lastReview, reps, lapses, box, nextReview, lastReviewed }
   srs: {},
-
-  // Daily Streak Tracking
-  streak: safeJsonParse('streak_data', {
-    current: 0,
-    longest: 0,
-    lastStudyDate: null,    // ISO date string 'YYYY-MM-DD'
-    freezesAvailable: 1,
-    freezeUsedToday: false
-  }),
 
   // Session Analytics Tracking
   session: {
@@ -325,17 +211,6 @@ export const state = {
     isNaturalAdvance: false
   },
 
-
-  // RPG Adventure (Deutsch-Abenteuer) Sub-State
-  adventure: {
-    xp: parseInt(safeGetItem('adventure_xp', '0'), 10) || 0,
-    scenarios: [],
-    activeScenario: null,
-    currentNode: null,
-    constructedSentence: [],
-    completedScenarios: safeJsonParse('adventure_completed_scenarios', [])
-  },
-
   // Phonetik-Spiegel (Phonetic Voice Mirror) State
   phonetic: {
     isOpen: false,
@@ -347,19 +222,6 @@ export const state = {
     nativeAnimationId: null,
     learnerAnimationId: null,
     isNativePlaying: false
-  },
-
-  // Grammatik-Weberei (Grammar Weaver) State
-  weaver: {
-    active: false,
-    sentences: [],             // Curated sentences extracted for active CEFR level
-    currentSentenceIndex: 0,   // Active puzzle sentence index (0 to 4)
-    constructedTokens: [],     // Dynamic chips currently filled inside active slots
-    originalTokens: [],        // Standard syntax list { text, pos } in correct order
-    scrambledTokens: [],       // Shuffled pool list for assembly chip board
-    xpEarned: 0,               // Cumulative round XP
-    errorsCount: 0,            // Validation errors count in active puzzle
-    totalQuestionsCount: 5     // Sentences per game round
   }
 };
 
@@ -427,12 +289,7 @@ export const elements = {
   workspaceGrid: document.getElementById('flashcard-workspace-grid'),
   workspaceLeft: document.getElementById('flashcard-workspace-left'),
   workspaceRight: document.getElementById('flashcard-workspace-right'),
-  cheatcodesView: document.getElementById('cheatcodes-view'),
-  cheatcodeSearch: document.getElementById('cheatcode-search'),
-  cheatcodesGrid: document.getElementById('cheatcodes-grid'),
-  cheatcodesEmpty: document.getElementById('cheatcodes-empty'),
   navFlashcards: document.getElementById('nav-flashcards'),
-  navCheatcodes: document.getElementById('nav-cheatcodes'),
   
   // Continuous Dual-Voice Audio Trainer
   trainerPlayBtn: document.getElementById('trainer-play-btn'),
@@ -475,38 +332,6 @@ export const elements = {
   quizStatsAccuracy: document.getElementById('quiz-stats-accuracy'),
   quizRetryBtn: document.getElementById('quiz-retry-btn'),
   quizQuitBtn: document.getElementById('quiz-quit-btn'),
-  quizStreakCounter: document.getElementById('quiz-streak-counter'),
-  quizBestStreak: document.getElementById('quiz-best-streak'),
-  
-  // Spaced Repetition & Profile Analytics
-  statsView: document.getElementById('stats-view'),
-  navStats: document.getElementById('nav-stats'),
-  statsMasteredCount: document.getElementById('stats-mastered-count'),
-  statsLearnedCount: document.getElementById('stats-learned-count'),
-  statsStreakCount: document.getElementById('stats-streak-count'),
-  statsDueCount: document.getElementById('stats-due-count'),
-  statsRingA1: document.getElementById('stats-ring-a1'),
-  statsRingA2: document.getElementById('stats-ring-a2'),
-  statsRingB1: document.getElementById('stats-ring-b1'),
-  statsTextA1: document.getElementById('stats-text-a1'),
-  statsTextA2: document.getElementById('stats-text-a2'),
-  statsTextB1: document.getElementById('stats-text-b1'),
-  statsCountA1: document.getElementById('stats-count-a1'),
-  statsCountA2: document.getElementById('stats-count-a2'),
-  statsCountB1: document.getElementById('stats-count-b1'),
-  statsActiveLevelLabel: document.getElementById('stats-active-level-label'),
-  statsBox1Count: document.getElementById('stats-box1-count'),
-  statsBox2Count: document.getElementById('stats-box2-count'),
-  statsBox3Count: document.getElementById('stats-box3-count'),
-  statsBox4Count: document.getElementById('stats-box4-count'),
-  statsBox5Count: document.getElementById('stats-box5-count'),
-  statsBox1Bar: document.getElementById('stats-box1-bar'),
-  statsBox2Bar: document.getElementById('stats-box2-bar'),
-  statsBox3Bar: document.getElementById('stats-box3-bar'),
-  statsBox4Bar: document.getElementById('stats-box4-bar'),
-  statsBox5Bar: document.getElementById('stats-box5-bar'),
-  statsPartsOfSpeechContainer: document.getElementById('stats-parts-of-speech-container'),
-  statsCategoriesGrid: document.getElementById('stats-categories-grid'),
   backupExportBtn: document.getElementById('backup-export-btn'),
   backupImportFile: document.getElementById('backup-import-file'),
   backupImportFeedback: document.getElementById('backup-import-feedback'),
@@ -807,57 +632,10 @@ export function reviewCardSRS(cardId, rating) {
   }
   saveLearnedCards();
   saveSRSState();
-  
-  // Update streak on any review
-  updateStreak();
-  
   // Emit CustomEvent for UI refresh
   window.dispatchEvent(new CustomEvent('srs:card-updated', {
     detail: { cardId, newBox, action, level: state.currentLevel }
   }));
-
-  // Achievement checks
-  try {
-    // Onboarding: First Steps — first ever SRS review
-    window.dispatchEvent(new CustomEvent('srs:achievement', { detail: { id: 'first_steps' } }));
-    
-    const currentHour = new Date().getHours();
-    if (currentHour < 7) {
-      window.dispatchEvent(new CustomEvent('srs:achievement', { detail: { id: 'early_bird' } }));
-    }
-    if (currentHour >= 22 || currentHour < 4) {
-      window.dispatchEvent(new CustomEvent('srs:achievement', { detail: { id: 'night_owl' } }));
-    }
-    if (getGlobalLearnedCount() >= 100) {
-      window.dispatchEvent(new CustomEvent('srs:achievement', { detail: { id: 'sprech_deutsch' } }));
-    }
-    
-    // FSRS Pioneer: 5 cards past Learning phase (state >= Review)
-    let pioneerCount = 0;
-    for (const key in state.srs) {
-      const c = state.srs[key];
-      if (c && (c.state === FSRSState.Review || (c.box && c.box >= 3))) {
-        pioneerCount++;
-      }
-    }
-    if (pioneerCount >= 5) {
-      window.dispatchEvent(new CustomEvent('srs:achievement', { detail: { id: 'srs_pioneer' } }));
-    }
-    
-    // Streak achievements
-    const streakInfo = getStreakInfo();
-    if (streakInfo.current >= 3) {
-      window.dispatchEvent(new CustomEvent('srs:achievement', { detail: { id: 'streak_3' } }));
-    }
-    if (streakInfo.current >= 7) {
-      window.dispatchEvent(new CustomEvent('srs:achievement', { detail: { id: 'streak_7' } }));
-    }
-    if (streakInfo.current >= 30) {
-      window.dispatchEvent(new CustomEvent('srs:achievement', { detail: { id: 'streak_30' } }));
-    }
-  } catch (err) {
-    console.error("Achievement checks failed:", err);
-  }
 }
 
 // Sort cards based on FSRS retrievability (lowest retrievability first = most urgent)
@@ -925,84 +703,7 @@ export function addXP(amount) {
 }
 
 
-// ==========================================
-// DAILY STREAK SYSTEM
-// ==========================================
 
-function getTodayDateString() {
-  return new Date().toISOString().slice(0, 10);
-}
-
-function getYesterdayDateString() {
-  const d = new Date();
-  d.setDate(d.getDate() - 1);
-  return d.toISOString().slice(0, 10);
-}
-
-// Update streak based on today's study activity
-export function updateStreak() {
-  const today = getTodayDateString();
-  const streak = state.streak;
-  
-  if (streak.lastStudyDate === today) {
-    // Already studied today — no change
-    return;
-  }
-  
-  const yesterday = getYesterdayDateString();
-  
-  if (streak.lastStudyDate === yesterday) {
-    // Consecutive day — increment streak
-    streak.current += 1;
-  } else if (streak.lastStudyDate && streak.lastStudyDate < yesterday) {
-    // Missed day(s) — check for streak freeze
-    if (checkStreakFreeze()) {
-      // Freeze used — preserve streak and increment
-      streak.current += 1;
-    } else {
-      // No freeze — reset streak
-      streak.current = 1;
-    }
-  } else {
-    // First ever study or null state
-    streak.current = 1;
-  }
-  
-  // Update longest
-  if (streak.current > streak.longest) {
-    streak.longest = streak.current;
-  }
-  
-  streak.lastStudyDate = today;
-  streak.freezeUsedToday = false;
-  
-  // Persist
-  safeSetItem('streak_data', JSON.stringify(streak));
-}
-
-// Check and consume a streak freeze
-export function checkStreakFreeze() {
-  const streak = state.streak;
-  if (streak.freezesAvailable > 0 && !streak.freezeUsedToday) {
-    streak.freezesAvailable -= 1;
-    streak.freezeUsedToday = true;
-    safeSetItem('streak_data', JSON.stringify(streak));
-    return true;
-  }
-  return false;
-}
-
-// Get current streak info for display
-export function getStreakInfo() {
-  return {
-    current: state.streak.current || 0,
-    longest: state.streak.longest || 0,
-    lastStudyDate: state.streak.lastStudyDate || null,
-    freezesAvailable: state.streak.freezesAvailable || 0,
-    freezeUsedToday: state.streak.freezeUsedToday || false,
-    isActiveToday: state.streak.lastStudyDate === getTodayDateString()
-  };
-}
 
 // ==========================================
 // SESSION ANALYTICS TRACKING
@@ -1039,11 +740,6 @@ export function endSession() {
   history.push(summary);
   if (history.length > 50) history.splice(0, history.length - 50);
   safeSetItem('session_history', JSON.stringify(history));
-  
-  // Retention achievement check
-  if (summary.accuracy >= 90 && summary.cardsReviewed >= 10) {
-    window.dispatchEvent(new CustomEvent('srs:achievement', { detail: { id: 'retention_90' } }));
-  }
   
   // Reset session
   state.session = { startTime: null, cardsReviewed: 0, correctCount: 0, wrongCount: 0 };
@@ -1117,12 +813,9 @@ export async function generateSyncKey() {
       custom_cards_a1: JSON.parse(await idb.get('custom_cards_a1') || '[]'),
       custom_cards_a2: JSON.parse(await idb.get('custom_cards_a2') || '[]'),
       custom_cards_b1: JSON.parse(await idb.get('custom_cards_b1') || '[]'),
-      quiz_streak: localStorage.getItem('quiz_streak') || '0',
-      quiz_best_streak: localStorage.getItem('quiz_best_streak') || '0',
       show_images: localStorage.getItem('show_images') || 'true',
       current_theme: localStorage.getItem('current_theme') || 'default',
-      current_level: localStorage.getItem('current_level') || 'a2',
-      streak_data: safeJsonParse('streak_data', {})
+      current_level: localStorage.getItem('current_level') || 'a2'
     }
   };
   const jsonStr = JSON.stringify(payload);
@@ -1189,18 +882,12 @@ export async function restoreFromSyncKey(base64Str) {
     }
     
     // --- Validate & write localStorage scalars (strict type checks) ---
-    if (data.quiz_streak !== undefined && isSafeNumber(data.quiz_streak))
-      localStorage.setItem('quiz_streak', String(Math.max(0, Math.floor(data.quiz_streak))));
-    if (data.quiz_best_streak !== undefined && isSafeNumber(data.quiz_best_streak))
-      localStorage.setItem('quiz_best_streak', String(Math.max(0, Math.floor(data.quiz_best_streak))));
     if (data.show_images !== undefined && typeof data.show_images === 'boolean')
       localStorage.setItem('show_images', String(data.show_images));
     if (data.current_theme !== undefined && isSafeString(data.current_theme) && VALID_THEMES.includes(data.current_theme))
       localStorage.setItem('current_theme', data.current_theme);
     if (data.current_level !== undefined && isSafeString(data.current_level) && VALID_LEVELS.includes(data.current_level))
       localStorage.setItem('current_level', data.current_level);
-    if (data.streak_data && isPlainObject(data.streak_data))
-      localStorage.setItem('streak_data', JSON.stringify(data.streak_data));
     
     return true;
   } catch (e) {
@@ -1217,8 +904,7 @@ state.demoteCardSRS = demoteCardSRS;
 state.sortDeckBySRS = sortDeckBySRS;
 state.reviewCardSRS = reviewCardSRS;
 state.migrateToFSRS = migrateToFSRS;
-state.updateStreak = updateStreak;
-state.getStreakInfo = getStreakInfo;
+
 state.startSession = startSession;
 state.endSession = endSession;
 state.recordAnswer = recordAnswer;

@@ -20,14 +20,6 @@ export function initQuizView() {
   state.quiz.isAnswered = false;
   state.quiz.currentQuestion = null;
 
-  // Retrieve streaks from local storage
-  state.quiz.streak = parseInt(safeGetItem('quiz_streak', '0'), 10) || 0;
-  state.quiz.bestStreak = parseInt(safeGetItem('quiz_best_streak', '0'), 10) || 0;
-
-  // Update streak metrics UI
-  if (elements.quizStreakCounter) elements.quizStreakCounter.textContent = state.quiz.streak;
-  if (elements.quizBestStreak) elements.quizBestStreak.textContent = state.quiz.bestStreak;
-
   // Reset container visibility states
   if (elements.quizModeSelector) elements.quizModeSelector.classList.remove('hidden');
   if (elements.quizWorkspace) elements.quizWorkspace.classList.add('hidden');
@@ -306,12 +298,6 @@ export function handleMCOptionClick(opt, clickedBtn) {
       window.triggerParticleBurst(rect.left + rect.width / 2, rect.top + rect.height / 2);
     }
     state.quiz.score++;
-    state.quiz.streak++;
-    if (state.quiz.streak > state.quiz.bestStreak) {
-      state.quiz.bestStreak = state.quiz.streak;
-      safeSetItem('quiz_best_streak', state.quiz.bestStreak);
-    }
-    safeSetItem('quiz_streak', state.quiz.streak);
 
     clickedBtn.classList.remove('border-white/10', 'bg-white/5');
     clickedBtn.classList.add('border-emerald-500', 'bg-emerald-950/20', 'text-emerald-400');
@@ -334,8 +320,6 @@ export function handleMCOptionClick(opt, clickedBtn) {
 
     // Streak master tracking removed
   } else {
-    state.quiz.streak = 0;
-    safeSetItem('quiz_streak', 0);
     // C3: Haptic feedback on wrong answer (double buzz)
     if (navigator.vibrate) navigator.vibrate([50, 30, 50]);
     playErrorGlide();
@@ -369,9 +353,7 @@ export function handleMCOptionClick(opt, clickedBtn) {
     }
   }
 
-  // Update streak metrics UI
-  if (elements.quizStreakCounter) elements.quizStreakCounter.textContent = state.quiz.streak;
-  if (elements.quizBestStreak) elements.quizBestStreak.textContent = state.quiz.bestStreak;
+
 
   // Audio output
   if (qCard.word) {
@@ -410,12 +392,6 @@ export function checkSpellingAnswer() {
       window.triggerParticleBurst(rect.left + rect.width / 2, rect.top + rect.height / 2);
     }
     state.quiz.score++;
-    state.quiz.streak++;
-    if (state.quiz.streak > state.quiz.bestStreak) {
-      state.quiz.bestStreak = state.quiz.streak;
-      safeSetItem('quiz_best_streak', state.quiz.bestStreak);
-    }
-    safeSetItem('quiz_streak', state.quiz.streak);
 
     if (elements.quizSpellingInput) {
       elements.quizSpellingInput.classList.add('border-emerald-500', 'bg-emerald-950/15');
@@ -437,8 +413,6 @@ export function checkSpellingAnswer() {
 
     // Streak master tracking removed
   } else {
-    state.quiz.streak = 0;
-    safeSetItem('quiz_streak', 0);
     playErrorGlide();
 
     if (elements.quizSpellingInput) {
@@ -461,9 +435,7 @@ export function checkSpellingAnswer() {
     }
   }
 
-  // Update streak metrics UI
-  if (elements.quizStreakCounter) elements.quizStreakCounter.textContent = state.quiz.streak;
-  if (elements.quizBestStreak) elements.quizBestStreak.textContent = state.quiz.bestStreak;
+
 
   // Speak correct word
   speakText(correct, 'de');

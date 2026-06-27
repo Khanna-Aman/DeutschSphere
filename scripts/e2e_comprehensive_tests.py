@@ -147,11 +147,7 @@ try:
         views = {
             "#/": "#flashcards-view",
             "#/quiz": "#quiz-view",
-            "#/adventure": "#adventure-view",
-            "#/weaver": "#weaver-view",
-            "#/cheatcodes": "#cheatcodes-view",
-            "#/immersion": "#immersion-view",
-            "#/stats": "#stats-view"
+            "#/immersion": "#immersion-view"
         }
         
         for route, view_id in views.items():
@@ -224,12 +220,12 @@ try:
         assert not clear_btn.is_visible(), "Search clear button remains visible after clearing!"
         
         # Test Search Submit Button and Auto-Routing from another page
-        print(" Routing to #/stats to test auto-routing from search...")
-        page.evaluate("window.location.hash = '#/stats'")
+        print(" Routing to #/immersion to test auto-routing from search...")
+        page.evaluate("window.location.hash = '#/immersion'")
         time.sleep(0.5)
-        assert page.locator("#stats-view").is_visible(), "Failed to route to stats view!"
+        assert page.locator("#immersion-view").is_visible(), "Failed to route to immersion view!"
         
-        print(" Typing in search input while on #/stats...")
+        print(" Typing in search input while on #/immersion...")
         page.locator("#search-input").fill("Ankunft")
         time.sleep(0.5)
         assert page.locator("#flashcards-view").is_visible(), "Search did not auto-route back to flashcards view!"
@@ -256,10 +252,10 @@ try:
         time.sleep(0.5)
         
         # Test vocabulary search enter key submission and keyboard blur / mobile sidebar auto-close
-        print(" Routing to #/stats to test Enter-key search submission and auto-routing...")
-        page.evaluate("window.location.hash = '#/stats'")
+        print(" Routing to #/immersion to test Enter-key search submission and auto-routing...")
+        page.evaluate("window.location.hash = '#/immersion'")
         time.sleep(0.5)
-        assert page.locator("#stats-view").is_visible(), "Failed to route to stats view!"
+        assert page.locator("#immersion-view").is_visible(), "Failed to route to immersion view!"
         
         print(" Typing query 'Ankunft' and pressing Enter inside search input...")
         page.locator("#search-input").fill("Ankunft")
@@ -272,22 +268,7 @@ try:
         page.locator("#search-clear").click()
         time.sleep(0.5)
 
-        # Test cheatcodes search input Enter key behavior
-        print(" Routing to #/cheatcodes to test cheatcode Enter-key search...")
-        page.evaluate("window.location.hash = '#/cheatcodes'")
-        time.sleep(0.5)
-        assert page.locator("#cheatcodes-view").is_visible(), "Failed to route to cheatcodes view!"
-        
-        print(" Typing query '-heit' and pressing Enter in cheatcodes search input...")
-        page.locator("#cheatcode-search").fill("-heit")
-        page.locator("#cheatcode-search").press("Enter")
-        time.sleep(0.5)
-        assert page.locator("#cheatcode-search").input_value() == "-heit", "Cheatcode search query was not retained!"
-        
-        # Reset cheatcodes search input
-        page.locator("#cheatcode-search").fill("")
-        page.locator("#cheatcode-search").press("Enter")
-        time.sleep(0.5)
+
 
         # Test quick filter chips
         print(" Clicking quick search filter chip 'is:noun'...")
@@ -539,142 +520,8 @@ try:
         time.sleep(0.8)
         assert page.locator("#quiz-mode-selector").is_visible(), "Failed to exit Spelling quiz to selection lobby via Escape!"
         
-        # =========================================================================
-        # [STEP 7] RPG DEUTSCH-ABENTEUER (ADVENTURE GAMEBOARD)
-        # =========================================================================
-        print("\n[STEP 7] Testing RPG Deutsch-Abenteuer...")
-        page.evaluate("window.location.hash = '#/adventure'")
-        time.sleep(1.5)  # Wait for scenarios list fetch
-        assert page.locator("#adventure-view").is_visible(), "Failed to route to RPG Adventure view!"
+        # [STEP 7-9 Skip] RPG, Weaver, Cheatcodes skipped due to purge/remediation.
         
-        scenarios = page.locator("#adventure-selector > div")
-        scenario_count = scenarios.count()
-        print(f" Scenarios listed in lobby: {scenario_count}")
-        assert scenario_count > 0, "No RPG adventure scenarios found inside curriculum datasets!"
-        
-        print(" Starting first available RPG Scenario...")
-        scenarios.first.click()
-        time.sleep(1.5)
-        
-        assert page.locator("#adventure-board").is_visible(), "Active RPG adventure gameboard did not open!"
-        npc_speech = page.locator("#adventure-npc-bubble").inner_text().strip()
-        print(f"   NPC Scenario Dialogue: '{npc_speech}'")
-        assert len(npc_speech) > 0, "NPC dialog bubble is empty!"
-        
-        # NPC speaker TTS play click
-        print("   Clicking NPC audio synthesis pronouncer button...")
-        page.locator("#adventure-npc-speak-btn").click()
-        time.sleep(0.3)
-        
-        # Words chips list check
-        adv_chips = page.locator("#adventure-chips-pool .adventure-chip")
-        adv_chip_count = adv_chips.count()
-        print(f"   Scrambled word chips in pool: {adv_chip_count}")
-        assert adv_chip_count > 0, "No scramble chips generated for this RPG phrase!"
-        
-        print("   Clicking first scrambled chip to snap into slot...")
-        adv_chips.first.click()
-        time.sleep(0.4)
-        
-        # Reset board
-        print("   Clicking Reset button to return chips to pool...")
-        page.locator("#adventure-reset-btn").click()
-        time.sleep(0.4)
-        reset_adv_chip_count = page.locator("#adventure-chips-pool .adventure-chip").count()
-        assert reset_adv_chip_count == adv_chip_count, "Syntax reset failed to return chips to pool!"
-        
-        print("   Clicking first chip again and submitting syntax check...")
-        page.locator("#adventure-chips-pool .adventure-chip").first.click()
-        time.sleep(0.3)
-        page.locator("#adventure-submit-btn").click()
-        time.sleep(0.8)
-        
-        # Quit scenario and modal confirm
-        print("   Clicking 'Abbrechen' (Quit Scenario) button...")
-        page.locator("#adventure-quit-btn").click()
-        time.sleep(0.5)
-        
-        modal = page.locator("#confirm-modal-overlay")
-        assert modal.is_visible(), "Quit confirmation modal failed to open!"
-        print("   Custom confirmation modal is visible. Clicking Confirm ('Ja, abbrechen')...")
-        page.locator("#confirm-modal-confirm").click()
-        time.sleep(1.0)
-        assert page.locator("#adventure-selector").is_visible(), "Failed to return back to scenarios lobby!"
-        
-        # =========================================================================
-        # [STEP 8] GRAMMATIK-WEBEREI (WEAVER SYNTAX SNAPPER)
-        # =========================================================================
-        print("\n[STEP 8] Testing Grammatik-Weberei (Weaver Game Board)...")
-        page.evaluate("window.location.hash = '#/weaver'")
-        time.sleep(1.0)
-        assert page.locator("#weaver-view").is_visible(), "Failed to route to Grammar Weaver view!"
-        
-        print(" Clicking Weaver 'Training starten' button...")
-        page.locator("#weaver-start-btn").click()
-        time.sleep(1.5)
-        assert page.locator("#weaver-board").is_visible(), "Weaver active gaming board did not start!"
-        
-        weaver_chips = page.locator("#weaver-chips-pool .weaver-chip")
-        weaver_chip_count = weaver_chips.count()
-        print(f"   Scrambled Weaver chips rendered: {weaver_chip_count}")
-        assert weaver_chip_count > 0, "No scrambled chips loaded on the weaver board!"
-        
-        print("   Clicking first word chip to snap...")
-        weaver_chips.first.click()
-        time.sleep(0.4)
-        
-        print("   Clicking Weaver Reset button...")
-        page.locator("#weaver-reset-btn").click()
-        time.sleep(0.4)
-        reset_weaver_chip_count = page.locator("#weaver-chips-pool .weaver-chip").count()
-        assert reset_weaver_chip_count == weaver_chip_count, "Weaver reset failed to restore chip pool!"
-        
-        print("   Clicking first chip again and submitting Weaver check...")
-        page.locator("#weaver-chips-pool .weaver-chip").first.click()
-        time.sleep(0.3)
-        page.locator("#weaver-submit-btn").click()
-        time.sleep(0.8)
-        
-        print("   Clicking 'Spiel beenden' (Quit Weaver) button...")
-        page.locator("#weaver-quit-btn").click()
-        time.sleep(0.5)
-        assert modal.is_visible(), "Quit confirmation modal failed to open inside Weaver!"
-        print("   Clicking Confirm on exit modal...")
-        page.locator("#confirm-modal-confirm").click()
-        time.sleep(1.0)
-        assert page.locator("#flashcards-view").is_visible(), "Failed to return to home view after Weaver quit!"
-        
-        # =========================================================================
-        # [STEP 9] CHEATCODES SPICKZETTEL SECTIONS
-        # =========================================================================
-        print("\n[STEP 9] Testing Cheatcodes Spickzettel and Tab filters...")
-        page.evaluate("window.location.hash = '#/cheatcodes'")
-        time.sleep(1.0)
-        assert page.locator("#cheatcodes-view").is_visible(), "Failed to route to Cheatcodes view!"
-        
-        print(" Searching cheatcodes for 'die' suffix/rules...")
-        page.locator("#cheatcode-search").fill("die")
-        time.sleep(0.5)
-        
-        # Category Tabs clicking
-        tabs = ["nouns", "prefixes", "adjectives", "all"]
-        for tab in tabs:
-            print(f"   Clicking Cheatcode category filter tab: '{tab}'")
-            page.locator(f".cheatcode-tab-btn[data-tab='{tab}']").click()
-            time.sleep(0.4)
-            
-        print(" Clearing cheatcodes search queries...")
-        page.locator("#cheatcode-search").fill("")
-        time.sleep(0.4)
-        
-        # Expand cheatcode card accordion
-        print(" Clicking first cheatcode accordion header card to expand details...")
-        cheatcode_cards = page.locator(".cheatcode-card")
-        if cheatcode_cards.count() > 0:
-            cheatcode_cards.first.click()
-            time.sleep(0.5)
-            print("   Cheatcode detail expanded successfully.")
-            
         # =========================================================================
         # [STEP 10] IMMERSION LAB (NLP TEXT ANALYZER) - STRESS TESTING THE NLP ENGINE
         # =========================================================================
@@ -729,48 +576,7 @@ try:
         assert not explorer_overlay.is_visible() or "hidden" in explorer_overlay.get_attribute("class"), "Explorer overlay drawer failed to close!"
         print("   Word Explorer Drawer successfully dismissed.")
         
-        # =========================================================================
-        # [STEP 11] STATS DASHBOARD & FSRS DECAY SIMULATOR FORECASTER
-        # =========================================================================
-        print("\n[STEP 11] Testing Stats Achievements & FSRS Decay Simulator/Forecaster...")
-        page.evaluate("window.location.hash = '#/stats'")
-        time.sleep(1.0)
-        assert page.locator("#stats-view").is_visible(), "Failed to route to Stats view!"
-        
-        # Streak and Achievements check
-        badges = page.locator("#achievements-grid > div")
-        badge_count = badges.count()
-        print(f" Achievements grid cards count: {badge_count}")
-        assert badge_count > 0, "No achievement badges rendered in stats view grid!"
-        
-        # Canvas graph exist check
-        assert page.locator("#fsrs-decay-canvas").is_visible(), "FSRS memory decay canvas graph element missing!"
-        print("   FSRS stability decay graph canvas is present.")
-        
-        # FSRS Spaced Repetition Decay Simulator: click forecast buttons to simulate curves
-        forecast_chips = page.locator(".forecast-chip")
-        chip_count = forecast_chips.count()
-        print(f" Interactive Forecast Spacing chips rendered: {chip_count}")
-        assert chip_count > 0, "No .forecast-chip elements found inside FSRS simulator panel!"
-        
-        # Click each spacing forecast chip to verify decay curves simulations!
-        for i in range(chip_count):
-            chip = forecast_chips.nth(i)
-            chip_text = chip.inner_text().strip()
-            print(f"   Simulating user hover/click on forecast rating option: '{chip_text}'...")
-            chip.hover()
-            time.sleep(0.2)
-            chip.click()
-            time.sleep(0.3)
-            
-        # Verify JSON Backup Download
-        print(" Testing 'Datensicherung exportieren' (Backup Export) download handler...")
-        with page.expect_download() as download_info:
-            page.locator("#backup-export-btn").click()
-        download = download_info.value
-        filename = download.suggested_filename
-        print(f"   Backup file download intercepted. Suggested filename: '{filename}'")
-        assert "backup" in filename.lower() and ".json" in filename.lower(), f"Unexpected suggested backup filename: {filename}"
+        # [STEP 11 Skip] Stats view and FSRS simulator curves skipped due to purge/remediation.
         
         # =========================================================================
         # [STEP 11.5] SETTINGS PROFILE PROGRESS RESET FLOW
@@ -787,7 +593,7 @@ try:
         page.locator("#reset-progress-btn-main").click()
         time.sleep(0.5)
         
-        assert modal.is_visible(), "Progress reset confirmation modal failed to open!"
+        assert page.locator("#confirm-modal-overlay").is_visible(), "Progress reset confirmation modal failed to open!"
         print(" Clicking Confirm ('Zurücksetzen') on reset profile progress modal...")
         page.locator("#confirm-modal-confirm").click()
         time.sleep(1.0)
@@ -804,10 +610,7 @@ try:
         view_scenarios = [
             ("#/", "flashcards-view", "flashcard"),
             ("#/quiz", "quiz-view", "quiz"),
-            ("#/adventure", "adventure-view", "adventure"),
-            ("#/weaver", "weaver-view", "weaver"),
-            ("#/immersion", "immersion-view", "immersion"),
-            ("#/stats", "stats-view", "stats")
+            ("#/immersion", "immersion-view", "immersion")
         ]
         
         # 12a. Desktop Viewports Screenshot cycles

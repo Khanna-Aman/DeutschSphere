@@ -247,12 +247,7 @@ export async function fetchData() {
   }
 }
 
-// ==========================================
-// DAILY STREAK DISPLAY SYNCRONIZER
-// ==========================================
-export function updateStreakUI() {
-  // Safe no-op as daily streak widget is gamified and removed
-}
+
 
 // ==========================================
 // PWA SYSTEM BOOTSTRAP TERMINAL
@@ -297,10 +292,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       .catch(err => console.warn('[SW] Registration failed:', err));
   }
 
-  // Streak update observers
-  updateStreakUI();
-  window.addEventListener('srs:card-updated', updateStreakUI);
-  window.addEventListener('streak:updated', updateStreakUI);
+
 
   // Focus release on mobile background tab cycles
   document.addEventListener('visibilitychange', () => {

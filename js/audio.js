@@ -128,38 +128,6 @@ function playAcousticPluck(ctx, freq, duration, now, volumeMultiplier = 1.0) {
   osc2.stop(now + duration * 0.45);
 }
 
-// Initialize Web Audio oscillator chime for unlocks and achievements
-export function playAchievementChime() {
-  // Silent no-op for zero-distraction focus
-}
-
-// Grammatik-Weberei / RPG Drag slide pitch tone generator
-export function playDragTone(freq = 280) {
-  try {
-    const ctx = getSharedAudioContext();
-    if (!ctx) return null;
-    const vol = state.sfxVolume;
-    if (vol <= 0) return null;
-
-    const now = ctx.currentTime;
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
-    
-    osc.type = 'sine';
-    osc.frequency.setValueAtTime(freq, now);
-    
-    gain.gain.setValueAtTime(0.03 * vol, now);
-    osc.connect(gain);
-    gain.connect(ctx.destination);
-    osc.start(now);
-    
-    return { osc, gain, ctx };
-  } catch (e) {
-    return null;
-  }
-}
-
-// Standard Mechanical click sound on chip snapping
 export function playSnapHaptic() {
   try {
     const ctx = getSharedAudioContext();

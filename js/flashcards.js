@@ -1,6 +1,6 @@
 // js/flashcards.js — Leitner SRS Flashcards, Preferences & Phonetik-Spiegel Module
 
-import { state, elements, categoryTranslations, getSRSInfo, getCategoryIcon, saveSRSState, shuffleArray, safeSetItem, schedulePersist, getStreakInfo } from './state.js';
+import { state, elements, categoryTranslations, getSRSInfo, getCategoryIcon, saveSRSState, shuffleArray, safeSetItem, schedulePersist } from './state.js';
 import { prepareUtterance, speakWord, warmUpTTS, getSharedAudioContext } from './audio.js';
 import { getSuffixRule } from './nlp.js';
 

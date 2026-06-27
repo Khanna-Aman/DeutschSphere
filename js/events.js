@@ -846,7 +846,7 @@ export function resetProgress() {
       await resetActiveLevelProgress();
       
       renderCard();
-      updateOverallStats();
+
       renderSidebarCategories();
     }
   );
@@ -992,11 +992,8 @@ export async function exportBackup() {
         custom_cards_a1: JSON.parse(await idb.get('custom_cards_a1') || '[]'),
         custom_cards_a2: JSON.parse(await idb.get('custom_cards_a2') || '[]'),
         custom_cards_b1: JSON.parse(await idb.get('custom_cards_b1') || '[]'),
-        quiz_streak: safeGetItem('quiz_streak', '0'),
-        quiz_best_streak: safeGetItem('quiz_best_streak', '0'),
         show_images: safeGetItem('show_images', 'true'),
-        current_level: safeGetItem('current_level', 'a2'),
-        streak_data: safeJsonParse('streak_data', {})
+        current_level: safeGetItem('current_level', 'a2')
       }
     };
     
@@ -1056,12 +1053,8 @@ export function importBackup(e) {
       if (data.custom_cards_a2) await idb.set('custom_cards_a2', JSON.stringify(data.custom_cards_a2));
       if (data.custom_cards_b1) await idb.set('custom_cards_b1', JSON.stringify(data.custom_cards_b1));
       
-      // Write configurations to localStorage
-      if (data.quiz_streak !== undefined) safeSetItem('quiz_streak', String(data.quiz_streak));
-      if (data.quiz_best_streak !== undefined) safeSetItem('quiz_best_streak', String(data.quiz_best_streak));
       if (data.show_images !== undefined) safeSetItem('show_images', String(data.show_images));
       if (data.current_level !== undefined) safeSetItem('current_level', String(data.current_level));
-      if (data.streak_data) safeSetItem('streak_data', JSON.stringify(data.streak_data));
       
       elements.backupImportFeedback.className = "text-[10px] text-center font-bold text-emerald-400 mt-3";
       elements.backupImportFeedback.textContent = "✓ Backup loaded! Refreshing dashboard...";
@@ -1135,8 +1128,6 @@ export async function restoreSyncKey() {
     const impLearnedCount = (imp.learned_cards_a1?.length || 0) + (imp.learned_cards_a2?.length || 0) + (imp.learned_cards_b1?.length || 0);
     const impCustomCount = (imp.custom_cards_a1?.length || 0) + (imp.custom_cards_a2?.length || 0) + (imp.custom_cards_b1?.length || 0);
     const impSrsCount = Object.keys(imp.srs_state_a1 || {}).length + Object.keys(imp.srs_state_a2 || {}).length + Object.keys(imp.srs_state_b1 || {}).length;
-    const impStreak = Number(imp.quiz_streak || 0);
-    const impBestStreak = Number(imp.quiz_best_streak || 0);
     
     // 2. Fetch Local Metrics
     const localA1 = JSON.parse(await idb.get('learned_cards_a1') || '[]');
@@ -1154,16 +1145,12 @@ export async function restoreSyncKey() {
     const srsB1 = JSON.parse(await idb.get('srs_state_b1') || '{}');
     const localSrsCount = Object.keys(srsA1).length + Object.keys(srsA2).length + Object.keys(srsB1).length;
     
-    const localStreak = Number(localStorage.getItem('quiz_streak') || 0);
-    const localBestStreak = Number(localStorage.getItem('quiz_best_streak') || 0);
 
-    // 3. Determine if there is a real conflict
+
     const hasConflict = 
       impLearnedCount !== localLearnedCount ||
       impCustomCount !== localCustomCount ||
-      impSrsCount !== localSrsCount ||
-      impStreak !== localStreak ||
-      impBestStreak !== localBestStreak;
+      impSrsCount !== localSrsCount;
 
     if (!hasConflict) {
       // Profiles are identical, restore instantly
@@ -1209,8 +1196,6 @@ export async function restoreSyncKey() {
             <span class="text-xs font-bold text-slate-300 border-l-2 border-indigo-500/30 pl-2">Learned Cards</span>
             <span class="text-xs font-bold text-slate-300 border-l-2 border-indigo-500/30 pl-2">Custom Cards</span>
             <span class="text-xs font-bold text-slate-300 border-l-2 border-indigo-500/30 pl-2">FSRS-5 Cards</span>
-            <span class="text-xs font-bold text-slate-300 border-l-2 border-indigo-500/30 pl-2">Current Streak</span>
-            <span class="text-xs font-bold text-slate-300 border-l-2 border-indigo-500/30 pl-2">Best Streak</span>
           </div>
 
           <!-- Local Profile Column -->
@@ -1219,8 +1204,6 @@ export async function restoreSyncKey() {
             <span class="text-xs font-black text-slate-100">${localLearnedCount}</span>
             <span class="text-xs font-black text-slate-100">${localCustomCount}</span>
             <span class="text-xs font-black text-slate-100">${localSrsCount}</span>
-            <span class="text-xs font-black text-slate-100">${localStreak} days</span>
-            <span class="text-xs font-black text-slate-100">${localBestStreak} days</span>
           </div>
 
           <!-- Imported Key Column -->
@@ -1229,8 +1212,6 @@ export async function restoreSyncKey() {
             <span class="text-xs font-black text-slate-100">${impLearnedCount}</span>
             <span class="text-xs font-black text-slate-100">${impCustomCount}</span>
             <span class="text-xs font-black text-slate-100">${impSrsCount}</span>
-            <span class="text-xs font-black text-slate-100">${impStreak} days</span>
-            <span class="text-xs font-black text-slate-100">${impBestStreak} days</span>
           </div>
         </div>
 
@@ -1249,7 +1230,7 @@ export async function restoreSyncKey() {
                 <span class="px-1.5 py-0.5 bg-emerald-500/15 text-emerald-400 text-[8px] font-black uppercase tracking-widest rounded-md">Recommended</span>
               </div>
               <p class="text-[10px] text-slate-400 leading-relaxed mt-0.5 font-medium">
-                Combines learned, custom, and FSRS cards of both profiles without duplicates. Retains the longer daily learning streak. Safe and seamless progress preservation.
+                Combines learned, custom, and FSRS cards of both profiles without duplicates. Safe and seamless progress preservation.
               </p>
             </div>
           </button>
@@ -1372,20 +1353,7 @@ export async function restoreSyncKey() {
         await idb.set('srs_state_a2', JSON.stringify(mergedSrsA2));
         await idb.set('srs_state_b1', JSON.stringify(mergedSrsB1));
 
-        // D. Streaks
-        const mergedStreak = Math.max(localStreak, impStreak);
-        const mergedBestStreak = Math.max(localBestStreak, impBestStreak);
-        localStorage.setItem('quiz_streak', String(mergedStreak));
-        localStorage.setItem('quiz_best_streak', String(mergedBestStreak));
 
-        // E. Streak Data Log (Union of history)
-        const mergedStreakData = { ...safeJsonParse('streak_data', {}) };
-        const impStreakData = imp.streak_data || {};
-        if (impStreakData.history && Array.isArray(impStreakData.history)) {
-          if (!mergedStreakData.history) mergedStreakData.history = [];
-          mergedStreakData.history = Array.from(new Set([...mergedStreakData.history, ...impStreakData.history]));
-        }
-        localStorage.setItem('streak_data', JSON.stringify(mergedStreakData));
 
         if (feedback) {
           feedback.textContent = "✓ Merge successful! Reloading dashboard...";
