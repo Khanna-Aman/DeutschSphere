@@ -1,0 +1,160 @@
+name: CI — DeutschSphere
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  # ── Stage 1: Validate HTML, CSS, and JSON ──
+  lint:
+    name: Lint & Validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate JSON wordlists
+        run: |
+          echo "🔍 Validating JSON files..."
+          for f in a1/wordlist.json a2/wordlist.json b1/wordlist.json \
+                   a1/adventure.json a2/adventure.json b1/adventure.json \
+                   manifest.json lottie/*.json; do
+            if [ -f "$f" ]; then
+              python3 -m json.tool "$f" > /dev/null 2>&1
+              if [ $? -ne 0 ]; then
+                echo "❌ Invalid JSON: $f"
+                exit 1
+              else
+                echo "✅ Valid: $f"
+              fi
+            fi
+          done
+
+      - name: Validate HTML structure
+        run: |
+          echo "🔍 Checking critical HTML integrity..."
+          # Verify single h1
+          H1_COUNT=$(grep -c '<h1' index.html || true)
+          if [ "$H1_COUNT" -ne 1 ]; then
+            echo "❌ Expected exactly 1 <h1>, found $H1_COUNT"
+            exit 1
+          fi
+          echo "✅ Single <h1> element confirmed"
+          
+          # Verify CSP meta tag exists
+          if ! grep -q 'Content-Security-Policy' index.html; then
+            echo "❌ Missing Content-Security-Policy meta tag"
+            exit 1
+          fi
+          echo "✅ CSP meta tag present"
+          
+          # Verify manifest.json link exists
+          if ! grep -q 'rel="manifest"' index.html; then
+            echo "❌ Missing PWA manifest link"
+            exit 1
+          fi
+          echo "✅ PWA manifest link present"
+
+      - name: Check for exposed secrets
+        run: |
+          echo "🔍 Scanning for exposed secrets..."
+          # Check that no .env file is committed
+          if [ -f ".env" ]; then
+            echo "⚠️ .env file exists in repository — ensure it's in .gitignore"
+            if ! grep -q "^\.env$" .gitignore; then
+              echo "❌ .env is NOT in .gitignore!"
+              exit 1
+            fi
+          fi
+          # Check no API keys in JS files
+          if grep -rn "api_key\|apiKey\|API_KEY\|Bearer " js/ app.js 2>/dev/null | grep -v "//.*api_key\|//.*apiKey"; then
+            echo "❌ Potential API key found in source code!"
+            exit 1
+          fi
+          echo "✅ No exposed secrets detected"
+
+  # ── Stage 2: Wordlist Schema Validation ──
+  schema:
+    name: Wordlist Schema Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Validate wordlist schemas
+        run: |
+          python3 -c "
+          import json, sys
+          
+          REQUIRED_FIELDS = {'german', 'english', 'word_class', 'gender', 'plural', 'theme', 'example_de', 'example_en', 'image', 'id'}
+          VALID_GENDERS = {'der', 'die', 'das', None}
+          VALID_WORD_CLASSES = {'Nomen', 'Verb', 'Adjektiv', 'Andere'}
+          
+          errors = []
+          for level in ['a1', 'a2', 'b1']:
+              path = f'{level}/wordlist.json'
+              try:
+                  with open(path, 'r', encoding='utf-8') as f:
+                      data = json.load(f)
+                  if not isinstance(data, list):
+                      errors.append(f'{path}: Root must be a JSON array')
+                      continue
+                  print(f'✅ {path}: {len(data)} words loaded')
+                  for i, entry in enumerate(data):
+                      missing = REQUIRED_FIELDS - set(entry.keys())
+                      if missing:
+                          errors.append(f'{path}[{i}] id={entry.get(\"id\",\"?\")}: Missing fields: {missing}')
+                      if entry.get('gender') not in VALID_GENDERS:
+                          errors.append(f'{path}[{i}] id={entry.get(\"id\",\"?\")}: Invalid gender: {entry.get(\"gender\")}')
+                      if entry.get('word_class') not in VALID_WORD_CLASSES:
+                          errors.append(f'{path}[{i}] id={entry.get(\"id\",\"?\")}: Invalid word_class: {entry.get(\"word_class\")}')
+              except Exception as e:
+                  errors.append(f'{path}: Failed to parse — {e}')
+          
+          if errors:
+              print(f'\n❌ {len(errors)} schema violations found:')
+              for e in errors[:20]:
+                  print(f'  • {e}')
+              if len(errors) > 20:
+                  print(f'  ... and {len(errors) - 20} more')
+              sys.exit(1)
+          else:
+              print('\n✅ All wordlist schemas valid')
+          "
+
+  # ── Stage 3: Deploy to GitHub Pages ──
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: [lint, schema]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
