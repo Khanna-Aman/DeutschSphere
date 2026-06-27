@@ -38,8 +38,7 @@ import {
   quitQuiz,
   handleMCOptionClick,
   showQuizResults,
-  retryQuiz,
-  quitQuiz as forceQuitQuiz
+  retryQuiz
 } from './quiz.js';
 import {
   startScenario,

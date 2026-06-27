@@ -312,6 +312,43 @@ export function playErrorGlide() {
   } catch (e) {}
 }
 
+// Ascending 7-note epic arpeggio cascade for scenario/level completion
+export function playEpicArpeggio() {
+  try {
+    const ctx = getSharedAudioContext();
+    if (!ctx) return;
+    const vol = state.sfxVolume;
+    if (vol <= 0) return;
+
+    const now = ctx.currentTime;
+    // C4 → E4 → G4 → C5 → E5 → G5 → C6 rising cascade
+    const freqs = [261.63, 329.63, 392.00, 523.25, 659.25, 783.99, 1046.50];
+
+    if (state.audioTone === 'acoustic') {
+      freqs.forEach((freq, idx) => {
+        playAcousticPluck(ctx, freq, 0.5, now + idx * 0.1, 0.8);
+      });
+    } else {
+      freqs.forEach((freq, idx) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(freq, now + idx * 0.1);
+
+        gain.gain.setValueAtTime(0.1 * vol, now + idx * 0.1);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.1 + 0.6);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc.start(now + idx * 0.1);
+        osc.stop(now + idx * 0.1 + 0.6);
+      });
+    }
+  } catch (e) {}
+}
+
 // Initialize Text-to-Speech Engine
 export function initTTS() {
   if (!('speechSynthesis' in window)) return;

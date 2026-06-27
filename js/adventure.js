@@ -1,7 +1,7 @@
 // js/adventure.js — RPG Deutsch-Abenteuer Game Engine Module
 
 import { state, elements, safeJsonParse, safeSetItem, safeGetItem, escapeHtml } from './state.js';
-import { speakText, getSharedAudioContext } from './audio.js';
+import { speakText, playSnapHaptic, playSuccessArpeggio, playErrorGlide, playEpicArpeggio } from './audio.js';
 
 // Get FontAwesome icon class for a given scenario theme
 export function getThemeIconClass(theme) {
@@ -17,127 +17,8 @@ export function getThemeIconClass(theme) {
   }
 }
 
-// Generate short physical tap sound using shared AudioContext singleton
-export function playSyntheticClickSound() {
-  try {
-    const ctx = getSharedAudioContext();
-    if (!ctx) return;
-    const vol = state.sfxVolume !== undefined ? state.sfxVolume : 0.5;
-    if (vol <= 0) return;
-    const now = ctx.currentTime;
-    
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
-    
-    osc.type = 'sine';
-    osc.frequency.setValueAtTime(580, now);
-    osc.frequency.exponentialRampToValueAtTime(950, now + 0.04);
-    
-    gain.gain.setValueAtTime(0.04 * vol, now);
-    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.04);
-    
-    osc.connect(gain);
-    gain.connect(ctx.destination);
-    
-    osc.start(now);
-    osc.stop(now + 0.04);
-  } catch (e) {
-    // Web audio blocks or is unsupported
-  }
-}
-
-// Synthesize high-quality positive major chord chime on correct sentence construction
-export function playAdventureCorrectChime() {
-  try {
-    const ctx = getSharedAudioContext();
-    if (!ctx) return;
-    const vol = state.sfxVolume !== undefined ? state.sfxVolume : 0.5;
-    if (vol <= 0) return;
-    const now = ctx.currentTime;
-    
-    // Major chord chime (C5 -> E5 -> G5)
-    const tones = [523.25, 659.25, 783.99]; // C5, E5, G5
-    tones.forEach((freq, idx) => {
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      
-      osc.type = 'triangle';
-      osc.frequency.setValueAtTime(freq, now + idx * 0.08);
-      
-      gain.gain.setValueAtTime(0.12 * vol, now + idx * 0.08);
-      gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.08 + 0.45);
-      
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-      
-      osc.start(now + idx * 0.08);
-      osc.stop(now + idx * 0.08 + 0.5);
-    });
-  } catch (e) {
-    console.warn("Synthesizer correct chime failed:", e);
-  }
-}
-
-// Synthesize flat sawtooth frequency sliding downward on syntax error
-export function playAdventureErrorChime() {
-  try {
-    const ctx = getSharedAudioContext();
-    if (!ctx) return;
-    const vol = state.sfxVolume !== undefined ? state.sfxVolume : 0.5;
-    if (vol <= 0) return;
-    const now = ctx.currentTime;
-    
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
-    
-    osc.type = 'sawtooth';
-    osc.frequency.setValueAtTime(220.0, now); // A3
-    osc.frequency.linearRampToValueAtTime(174.61, now + 0.3); // F3 drop
-    
-    gain.gain.setValueAtTime(0.12 * vol, now);
-    gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
-    
-    osc.connect(gain);
-    gain.connect(ctx.destination);
-    
-    osc.start(now);
-    osc.stop(now + 0.4);
-  } catch (e) {
-    console.warn("Synthesizer error chime failed:", e);
-  }
-}
-
-// Synthesize epic final rising arpeggio cascade upon completing an entire scenario
-export function playAdventureScenarioSuccessChime() {
-  try {
-    const ctx = getSharedAudioContext();
-    if (!ctx) return;
-    const vol = state.sfxVolume !== undefined ? state.sfxVolume : 0.5;
-    if (vol <= 0) return;
-    const now = ctx.currentTime;
-    
-    // Arpeggio cascade: C4 -> E4 -> G4 -> C5 -> E5 -> G5 -> C6
-    const freqs = [261.63, 329.63, 392.00, 523.25, 659.25, 783.99, 1046.50];
-    freqs.forEach((freq, idx) => {
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(freq, now + idx * 0.1);
-      
-      gain.gain.setValueAtTime(0.1 * vol, now + idx * 0.1);
-      gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.1 + 0.6);
-      
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-      
-      osc.start(now + idx * 0.1);
-      osc.stop(now + idx * 0.1 + 0.6);
-    });
-  } catch (e) {
-    // Web audio blocked
-  }
-}
+// Audio SFX are now centralized in audio.js — imported above as
+// playSnapHaptic (click), playSuccessArpeggio (correct), playErrorGlide (error), playEpicArpeggio (completion)
 
 // Initialize the Adventure View dashboard, loading JSON files scoped by CEFR level
 export async function initAdventureView() {
@@ -356,7 +237,7 @@ export function renderChipsPool(chips) {
 export function handleChipClick(wordText, index, chipEl) {
   if (chipEl.classList.contains('adventure-chip-used')) return;
   
-  playSyntheticClickSound();
+  playSnapHaptic();
   
   // Add object to built list
   state.adventure.constructedSentence.push({
@@ -443,7 +324,7 @@ export function checkAdventureAnswer() {
   const isCorrect = constructed.length === correct.length && constructed.every((w, idx) => w === correct[idx]);
   
   if (isCorrect) {
-    playAdventureCorrectChime();
+    playSuccessArpeggio();
     
     // Earn 20 experience points
     addAdventureXP(20);
@@ -473,7 +354,7 @@ export function checkAdventureAnswer() {
     if (elements.adventureActionButtons) elements.adventureActionButtons.classList.add('hidden');
     
   } else {
-    playAdventureErrorChime();
+    playErrorGlide();
     state.adventure.errorsInScenario++;
     
     // Add horizontal shake animation to the dropzone for physical error feedback
@@ -601,7 +482,7 @@ export function showAdventureResults() {
   }
   
   // Play triumphant finish chime
-  playAdventureScenarioSuccessChime();
+  playEpicArpeggio();
 }
 
 // Quit scenario and return to scenario selector screen

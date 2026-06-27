@@ -1,7 +1,7 @@
 // js/weaver.js — Grammatik-Weberei (Grammar Weaver) Game Engine Module
 
 import { state, elements, safeSetItem, safeGetItem, shuffleArray } from './state.js';
-import { getSharedAudioContext } from './audio.js';
+import { playSnapHaptic, playSuccessArpeggio, playErrorGlide } from './audio.js';
 import { lemmatizeVerb } from './nlp.js';
 
 // Cached weaver slot DOM references (refreshed on each board render)
@@ -10,67 +10,8 @@ let cachedWeaverSlots = [];
 // Retry counter for curateWeaverSentences (guards against infinite setTimeout loop)
 let weaverCurateRetries = 0;
 
-/**
- * Synthesizes pure Web Audio SFX for haptic offline feedback.
- * @param {string} type - 'click', 'snap', 'success', or 'error'
- */
-export function playWeaverSound(type) {
-  try {
-    const ctx = getSharedAudioContext();
-    if (!ctx) return;
-    const vol = state.sfxVolume !== undefined ? state.sfxVolume : 0.5;
-    if (vol <= 0) return;
-
-    if (type === 'click' || type === 'snap') {
-      const osc = ctx.createOscillator();
-      const gainNode = ctx.createGain();
-      osc.type = 'sine';
-      osc.frequency.setValueAtTime(450, ctx.currentTime);
-      osc.frequency.exponentialRampToValueAtTime(150, ctx.currentTime + 0.06);
-      
-      gainNode.gain.setValueAtTime(0.12 * vol, ctx.currentTime);
-      gainNode.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.06);
-      
-      osc.connect(gainNode);
-      gainNode.connect(ctx.destination);
-      osc.start();
-      osc.stop(ctx.currentTime + 0.07);
-    } else if (type === 'success') {
-      const notes = [523.25, 659.25, 783.99, 1046.50]; // C5, E5, G5, C6 arpeggio
-      notes.forEach((freq, idx) => {
-        const timeOffset = idx * 0.09;
-        const osc = ctx.createOscillator();
-        const gainNode = ctx.createGain();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(freq, ctx.currentTime + timeOffset);
-        
-        gainNode.gain.setValueAtTime(0.08 * vol, ctx.currentTime + timeOffset);
-        gainNode.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + timeOffset + 0.35);
-        
-        osc.connect(gainNode);
-        gainNode.connect(ctx.destination);
-        osc.start(ctx.currentTime + timeOffset);
-        osc.stop(ctx.currentTime + timeOffset + 0.36);
-      });
-    } else if (type === 'error') {
-      const osc = ctx.createOscillator();
-      const gainNode = ctx.createGain();
-      osc.type = 'triangle';
-      osc.frequency.setValueAtTime(180, ctx.currentTime);
-      osc.frequency.linearRampToValueAtTime(90, ctx.currentTime + 0.28);
-      
-      gainNode.gain.setValueAtTime(0.2 * vol, ctx.currentTime);
-      gainNode.gain.linearRampToValueAtTime(0.001, ctx.currentTime + 0.28);
-      
-      osc.connect(gainNode);
-      gainNode.connect(ctx.destination);
-      osc.start();
-      osc.stop(ctx.currentTime + 0.29);
-    }
-  } catch (err) {
-    console.warn("Web Audio Synthesis blocked or unsupported in this environment:", err);
-  }
-}
+// Audio SFX are now centralized in audio.js — imported above as
+// playSnapHaptic (click/snap), playSuccessArpeggio (success), playErrorGlide (error)
 
 /**
  * Initializes the main Grammatik-Weberei view dashboard.
@@ -460,7 +401,7 @@ export function createWeaverChip(token, arrayIdx, isInDropzone) {
     // Prevent clicking if user is dragging
     if (chip.classList.contains('weaver-chip-dragging')) return;
     
-    playWeaverSound('click');
+    playSnapHaptic();
     if (isInDropzone) {
       // Remove clicked chip from dropzone and return to pool
       state.weaver.constructedTokens.splice(arrayIdx, 1);
@@ -567,7 +508,7 @@ export function setupWeaverChipPointerEvents(chip, token, arrayIdx, isInDropzone
     });
 
     if (snappedSlotIdx !== null && snappedSlotIdx >= 0) {
-      playWeaverSound('snap');
+      playSnapHaptic();
       
       // Determine target modifications based on snapped action
       if (snappedSlotIdx < state.weaver.constructedTokens.length) {
@@ -591,7 +532,7 @@ export function setupWeaverChipPointerEvents(chip, token, arrayIdx, isInDropzone
       // Released elsewhere - if started inside dropzone, remove it!
       if (drag.isInDropzone) {
         state.weaver.constructedTokens.splice(drag.originalIndex, 1);
-        playWeaverSound('click');
+        playSnapHaptic();
       }
     }
 
@@ -645,7 +586,7 @@ export function triggerSyntaxShiftCalculations() {
  * Resets the current question's drops back into Scrambled Pool.
  */
 export function resetWeaverSentence() {
-  playWeaverSound('click');
+  playSnapHaptic();
   state.weaver.constructedTokens = [];
   renderWeaverBoard();
 }
@@ -672,7 +613,7 @@ export function submitWeaverSentence() {
 
   // Strict check on array sizes
   if (constructedWords.length < correctWords.length) {
-    playWeaverSound('error');
+    playErrorGlide();
     if (elements.weaverDropzone) {
       elements.weaverDropzone.classList.add('shake-anim');
       setTimeout(() => elements.weaverDropzone.classList.remove('shake-anim'), 500);
@@ -694,7 +635,7 @@ export function submitWeaverSentence() {
 
   if (isPerfect) {
     // Correct order arpeggio
-    playWeaverSound('success');
+    playSuccessArpeggio();
     
     // Add XP points (25 XP Base)
     let xpGain = 25;
@@ -730,7 +671,7 @@ export function submitWeaverSentence() {
 
   } else {
     // Error sound & shake
-    playWeaverSound('error');
+    playErrorGlide();
     state.weaver.errorsCount++;
 
     if (elements.weaverDropzone) {
@@ -803,7 +744,7 @@ export function showWeaverResults() {
     }
   }
 
-  playWeaverSound('success');
+  playSuccessArpeggio();
 }
 
 /**

@@ -308,26 +308,12 @@ export class FSRS {
 
   // ==========================================
   // PRIVATE: Calculate next interval from stability
-  // I = S * 9 * (1/R - 1)  where R = desired retention
+  // I = round(S × 9 × (1/R − 1))  where R = desired retention (requestRetention)
   // ==========================================
   _nextInterval(stability) {
-    const interval = (stability / this._factor()) * 9;
+    const interval = stability * 9 * (1 / this.requestRetention - 1);
     return clamp(Math.round(Math.max(interval, 1)), 1, this.maximumInterval);
   }
-
-  // Desired retention → factor mapping
-  _factor() {
-    // Derived from: R = (1 + t/(9*S))^(-1)  →  t = 9*S*(R^(-1) - 1)
-    // We want interval = S * 9 * (1/R - 1), so factor = R / (1 - R) when rearranging
-    // Actually the direct formula: interval = stability * 9 * (1/requestRetention - 1)
-    // So we return 1 for the divisor and multiply directly
-    return 1;
-  }
-
-  // Override _nextInterval to use the direct formula
-  // I = round(S × 9 × (1/R − 1))
-  // This replaces the above _nextInterval
-  // (Keeping both for clarity; actual computation is here)
 
   // ==========================================
   // PRIVATE: Derive backward-compatible box number from FSRS state
@@ -350,12 +336,6 @@ export class FSRS {
     }
   }
 }
-
-// Override the _nextInterval to use the correct direct formula
-FSRS.prototype._nextInterval = function(stability) {
-  const interval = stability * 9 * (1 / this.requestRetention - 1);
-  return clamp(Math.round(Math.max(interval, 1)), 1, this.maximumInterval);
-};
 
 // ==========================================
 // MODULE-LEVEL SINGLETON INSTANCE
