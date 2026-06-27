@@ -111,7 +111,7 @@ def run_tests():
                         assert(nlp.koelnerPhonetik("Käse") === "48", "Käse -> 48");
                         console.log("[OK] koelnerPhonetik tests passed.");
 
-                        console.log("[TEST] Running FSRS-5 mathematical stability scheduling tests...");
+                        console.log("[TEST] Running FSRS-5 mathematical stability scheduling & boundary tests...");
                         const srs = new fsrsModule.FSRS({ requestRetention: 0.9 });
                         const newCard = srs.createCard(1000);
                         assert(newCard.state === fsrsModule.State.New, "new card state is New");
@@ -123,7 +123,19 @@ def run_tests():
 
                         const retrievability = srs.getRetrievability(reviewed, 1000 + 24 * 60 * 60 * 1000); // 1 day later
                         assert(retrievability > 0.8 && retrievability < 1.0, "retrievability decays realistically");
-                        console.log("[OK] FSRS math tests passed.");
+
+                        // Boundary test: Repeated Again ratings resets or reduces stability properly
+                        const lapsed = srs.reviewCard(reviewed, fsrsModule.Rating.Again, 1000 + 24 * 60 * 60 * 1000);
+                        assert(lapsed.lapses === 1, "card lapse counter incremented on Again rating");
+
+                        console.log("[OK] FSRS math & boundary tests passed.");
+
+                        console.log("[TEST] Running Suffix Helper Rule tests...");
+                        const ungRule = nlp.getSuffixRule("Zeitung");
+                        assert(ungRule && ungRule.gender === "die", "Zeitung -> die (-ung suffix rule)");
+                        const heitRule = nlp.getSuffixRule("Freiheit");
+                        assert(heitRule && heitRule.gender === "die", "Freiheit -> die (-heit suffix rule)");
+                        console.log("[OK] Suffix Helper Rule tests passed.");
 
                         console.log("[PASSED] ALL UNIT TESTS PASSED SUCCESSFULLY!");
                     } catch (e) {

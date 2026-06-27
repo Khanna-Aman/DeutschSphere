@@ -37,6 +37,9 @@ import {
   handleRouting
 } from './js/router.js';
 
+import { initTelemetry } from './js/telemetry.js';
+
+
 
 import {
   get as idbGet,
@@ -252,6 +255,7 @@ export async function fetchData() {
 // PWA SYSTEM BOOTSTRAP TERMINAL
 // ==========================================
 document.addEventListener('DOMContentLoaded', async () => {
+  initTelemetry();
   await initProfileData();
   migrateToFSRS();
   startSession();
