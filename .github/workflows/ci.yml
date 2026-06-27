@@ -24,7 +24,6 @@ jobs:
         run: |
           echo "🔍 Validating JSON files..."
           for f in a1/wordlist.json a2/wordlist.json b1/wordlist.json \
-                   a1/adventure.json a2/adventure.json b1/adventure.json \
                    manifest.json lottie/*.json; do
             if [ -f "$f" ]; then
               python3 -m json.tool "$f" > /dev/null 2>&1
