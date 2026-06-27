@@ -9,7 +9,7 @@ This backlog tracks implemented features, their technical specifications, and ou
 ## 🛠️ 1. Core Architecture & Data Layer
 
 ### Dynamic Level Routing & Loading
-- **Hash-Based SPA Routing**: The app uses `window.location.hash` for client-side routing across 7 views: `#/` (flashcards), `#/quiz`, `#/adventure`, `#/weaver`, `#/cheatcodes`, `#/stats`, `#/immersion`.
+- **Hash-Based SPA Routing**: The app uses `window.location.hash` for client-side routing across active views: `#/` (flashcards), `#/quiz`, `#/immersion`.
 - **Relative Path Data Loading**: Vocabulary is fetched dynamically from `./${level}/wordlist.json` where `${level}` is `"a1"`, `"a2"`, or `"b1"`.
 - **Default Level**: A2 (hardcoded in HTML `<select>`, overridden by `localStorage.current_level` on return visits).
 - **ES6 Module Architecture**: Application logic split across 17 modules in `js/` directory, loaded via `<script type="module">`.
@@ -215,14 +215,10 @@ Persisted via `localStorage.current_theme`. Each theme fully overrides: body bac
 | `srs_state_{level}` | JSON object | FSRS-5 SRS data per card (stability, difficulty, retrievability) |
 | `quiz_streak` | number | Current quiz streak |
 | `quiz_best_streak` | number | Best quiz streak ever |
-| `adventure_xp` | number | Total adventure XP |
-| `adventure_completed_scenarios` | JSON array | Completed scenario IDs |
 | `show_images` | boolean | Image visibility preference |
-| `achievements_unlocked` | JSON array | Unlocked achievement IDs |
 | `visited_levels` | JSON array | Set of visited CEFR levels |
-| `streak_data` | JSON object | Daily streak: current, longest, lastStudyDate, freezesAvailable |
+| `streak_data` | JSON object | Daily study streak data |
 | `session_history` | JSON array | Study session log (capped at 50 entries) |
-| `weaver_xp` | number | Total Grammar Weaver XP earned |
 
 ## 🛡️ 8. Persistence Safety Layer (Added 2026-06-14)
 
@@ -237,7 +233,7 @@ All localStorage operations now go through a safety abstraction in `state.js`:
 
 ### AudioContext Singleton
 
-`getSharedAudioContext()` in `audio.js` provides a single lazily-initialized `AudioContext` shared across all SFX functions in `audio.js` and `adventure.js`. Handles browser autoplay policy by auto-resuming suspended contexts.
+`getSharedAudioContext()` in `audio.js` provides a single lazily-initialized `AudioContext` shared across audio functions in `audio.js`. Handles browser autoplay policy by auto-resuming suspended contexts.
 
 ### ID Normalization
 

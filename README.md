@@ -37,7 +37,7 @@ A lightweight client-side Natural Language Processing lab under `#/immersion`.
 * Paste custom German text blocks to instantly lemmatize verbs, identify parts of speech, and extract noun genders via deterministic client-side regex rules.
 * Highlights matching vocabulary already tracked in your FSRS progress database and lets you instantly convert unlearned terms to active flashcards.
 
-### 6. Encrypted Profile Sync & Backup
+### 6. Portable Profile Sync & Backup
 Maintain complete data ownership without external server overhead.
 * Back up or restore your entire IndexedDB progress state instantly using a compressed, Base64-encoded copy/paste Sync Key or raw JSON profile files.
 
@@ -113,6 +113,7 @@ A1-B1_German/
 │   ├── stats.js            # Technical memory dashboard and technical charts renderer
 │   ├── router.js           # Client-side hash router
 │   ├── search.js           # Lexicon indexing and search sidebar categories
+│   ├── telemetry.js        # Structured logging, observability hooks, and error boundaries
 │   └── events.js           # Global keyboard and mouse event handlers
 │
 ├── a1/ , a2/ , b1/         # Verified datasets (JSON files + WebP graphical assets)
