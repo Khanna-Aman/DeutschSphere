@@ -608,7 +608,7 @@
     </div>
 
     <!-- Active Flashcard Workspace -->
-    <div class="flex-1 flex flex-col justify-start items-center w-full max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-auto pt-6 sm:pt-10 transition-all duration-300">
+    <div id="flashcard-workspace-container" class="flex-1 flex flex-col justify-start items-center w-full max-w-3xl mx-auto pt-6 sm:pt-10 transition-all duration-300">
       
       <!-- Progress Bar Indicator -->
       <div class="w-full mb-4 space-y-2">
@@ -622,10 +622,10 @@
       </div>
 
       <!-- Two-Column Grid Layout for Desktop Optimization -->
-      <div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-6 items-start mt-2">
+      <div id="flashcard-workspace-grid" class="w-full grid grid-cols-1 gap-6 items-start mt-2">
         
         <!-- Left Column: Audio Trainer, Flashcard, and Controls -->
-        <div class="lg:col-span-7 xl:col-span-6 space-y-4 w-full">
+        <div id="flashcard-workspace-left" class="space-y-4 w-full">
 
           <!-- Main card wrapper -->
           <div class="w-full space-y-4">
@@ -762,7 +762,7 @@
         </div> <!-- End of Left Column -->
 
         <!-- Right Column: Details Reveal & Desktop Companion Panels -->
-        <div class="lg:col-span-5 xl:col-span-6 lg:sticky lg:top-6 space-y-4 w-full">
+        <div id="flashcard-workspace-right" class="space-y-4 w-full lg:sticky lg:top-6">
 
         <!-- Phonetic Mirror Panel (Phonetik-Spiegel) -->
         <div id="phonetic-mirror-panel" class="accordion-content">

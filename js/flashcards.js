@@ -2032,9 +2032,28 @@ export function updateCompanionStats() {
   }
 }
 
+export function syncAdaptiveLayout() {
+  const container = elements.workspaceContainer;
+  const grid = elements.workspaceGrid;
+  if (!container || !grid) return;
+
+  const isSplitActive = state.isAccordionOpen || (state.phonetic && state.phonetic.isOpen);
+
+  if (isSplitActive) {
+    container.classList.add('workspace-split-active');
+    grid.classList.add('workspace-split-active');
+  } else {
+    container.classList.remove('workspace-split-active');
+    grid.classList.remove('workspace-split-active');
+  }
+}
+
 export function updateDesktopCompanionVisibility() {
   const companion = document.getElementById('companion-dashboard');
   if (!companion) return;
+
+  // Sync the dynamic adaptive split-screen layout state
+  syncAdaptiveLayout();
 
   // If accordion details are open OR phonetic mirror is open, hide companion on desktop. Otherwise, show it.
   const detailsOpen = state.isAccordionOpen;
