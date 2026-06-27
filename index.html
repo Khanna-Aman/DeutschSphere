@@ -1171,7 +1171,7 @@
           <i class="fa-solid fa-circle-info text-indigo-400 text-lg shrink-0 mt-0.5 animate-pulse"></i>
           <div class="space-y-1">
             <p class="text-sm font-semibold leading-relaxed text-slate-200">
-              Welcome to <strong>DeutschSphere</strong>! This ultra-premium platform seamlessly integrates clinical memory science with interactive immersion boards to accelerate your German acquisition.
+              Welcome to <strong>DeutschSphere</strong>! A free, ultra-premium, offline-first platform designed for serious German vocabulary mastery. Here is a simple guide to how everything works:
             </p>
           </div>
         </div>
@@ -1180,16 +1180,34 @@
         <div class="space-y-2">
           <div class="flex items-center gap-2 border-b border-slate-900 pb-1">
             <span class="text-indigo-400 text-sm font-bold">01.</span>
-            <h4 class="font-bold text-slate-200 text-sm">FSRS-5 Spaced Repetition</h4>
+            <h4 class="font-bold text-slate-200 text-sm">FSRS-5 Spaced Repetition (Smart Memory Scheduler)</h4>
           </div>
           <p class="text-xs leading-relaxed text-slate-300 font-medium">
-            Every card utilizes the state-of-the-art <strong>FSRS-5 (Free Spaced Repetition Scheduler)</strong> algorithm. It models memory using three key variables: <strong>Difficulty (D)</strong>, <strong>Stability (S)</strong>, and <strong>Retrievability (R)</strong>.
+            Instead of reviewing cards at random, DeutschSphere uses <strong>FSRS-5</strong> — a state-of-the-art memory algorithm that calculates your exact probability of recall and schedules card reviews right before you are about to forget them.
           </p>
-          <ul class="list-disc pl-5 text-xs text-slate-300 space-y-1 font-medium">
-            <li><strong>Stability (S)</strong>: The interval (in days) required for memory retrievability to drop to 90%. For example, an active card with <code class="text-indigo-400">S: 4.2d</code> will be scheduled for review in 4 days.</li>
-            <li><strong>Difficulty (D)</strong>: A metric (1 to 10) representing how difficult the card is to remember. It updates based on your recall ratings.</li>
-            <li><strong>Retrievability (R)</strong>: The estimated percentage chance of recall, calculated as: <code class="text-indigo-400">R = (1 + t / (9 * S))⁻¹</code> where <code class="text-indigo-400">t</code> is the elapsed days since the last review.</li>
-            <li><strong>Interval Modifiers</strong>: Ratings adjust stability dynamically. Failing a card (<code class="text-rose-400">Again</code>) introduces a stability penalty and resets the interval. Successful recall (<code class="text-indigo-400">Hard</code>, <code class="text-emerald-400">Good</code>, <code class="text-sky-400">Easy</code>) increases stability, with higher grades accelerating future intervals. Swipe left/right gestures are supported on mobile.</li>
+          <ul class="list-disc pl-5 text-xs text-slate-300 space-y-1.5 font-medium">
+            <li><strong>How Review Intervals Work (Days)</strong>: Each card tracks its memory <strong>Stability (S)</strong> in days. If a card shows <code class="text-indigo-400">S: 4.2d</code>, your next review is scheduled in <strong>4 days</strong> when memory retrievability reaches 90%. As stability grows past 15 days, cards become <strong>Mastered</strong>.</li>
+            <li><strong>How to Grade Cards (Hotkeys 1–4 or Mobile Swipes)</strong>:
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 font-sans">
+                <div class="bg-slate-950/50 border border-slate-900 p-2 rounded-lg flex items-center gap-2">
+                  <kbd class="px-1.5 py-0.5 bg-rose-500/20 text-rose-400 border border-rose-500/30 rounded font-mono font-bold text-[10px]">1</kbd>
+                  <span><strong>Again (Fail)</strong>: Reset interval & review soon.</span>
+                </div>
+                <div class="bg-slate-950/50 border border-slate-900 p-2 rounded-lg flex items-center gap-2">
+                  <kbd class="px-1.5 py-0.5 bg-amber-500/20 text-amber-400 border border-amber-500/30 rounded font-mono font-bold text-[10px]">2</kbd>
+                  <span><strong>Hard</strong>: Slight interval boost (~1.2 days).</span>
+                </div>
+                <div class="bg-slate-950/50 border border-slate-900 p-2 rounded-lg flex items-center gap-2">
+                  <kbd class="px-1.5 py-0.5 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded font-mono font-bold text-[10px]">3</kbd>
+                  <span><strong>Good</strong>: Standard recall (~3.5 days).</span>
+                </div>
+                <div class="bg-slate-950/50 border border-slate-900 p-2 rounded-lg flex items-center gap-2">
+                  <kbd class="px-1.5 py-0.5 bg-sky-500/20 text-sky-400 border border-sky-500/30 rounded font-mono font-bold text-[10px]">4</kbd>
+                  <span><strong>Easy</strong>: Long-term memory boost (15+ days).</span>
+                </div>
+              </div>
+            </li>
+            <li class="mt-1"><strong>Mobile Gestures</strong>: Swipe left for <code class="text-rose-400">Again (1)</code> or swipe right for <code class="text-emerald-400">Good (3)</code>.</li>
           </ul>
         </div>
 
@@ -1197,25 +1215,31 @@
         <div class="space-y-2">
           <div class="flex items-center gap-2 border-b border-slate-900 pb-1">
             <span class="text-indigo-400 text-sm font-bold">02.</span>
-            <h4 class="font-bold text-slate-200 text-sm">Keyboard Shortcuts & Fluid Navigation</h4>
+            <h4 class="font-bold text-slate-200 text-sm">Complete Keyboard Hotkeys</h4>
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
             <div class="bg-slate-950/40 border border-slate-900 p-3 rounded-xl space-y-1.5">
               <span class="text-[10px] font-bold text-indigo-400 uppercase tracking-wider block">Flashcard Arena</span>
               <ul class="space-y-1 text-[11px] text-slate-300 font-medium">
-                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">Space</kbd> Reveal translation & examples</li>
-                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">1</kbd> - <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">4</kbd> Rate FSRS recall rating (1: Again, 2: Hard, 3: Good, 4: Easy)</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">Space</kbd> Reveal / Hide translation & examples</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">1</kbd> - <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">4</kbd> Grade FSRS recall (Again, Hard, Good, Easy)</li>
                 <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">←</kbd> / <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">→</kbd> Navigate previous / next card</li>
-                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">L</kbd> Toggle marked as learned (advances deck)</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">L</kbd> Toggle marked as learned</li>
                 <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">V</kbd> Pronounce German word via TTS</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">A</kbd> Toggle auto-play audio mode</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">B</kbd> Toggle 3D visual illustrations</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">F</kbd> Toggle Fast Read mode</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">H</kbd> Toggle Hide Learned cards filter</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">S</kbd> Shuffle active card deck</li>
               </ul>
             </div>
             <div class="bg-slate-950/40 border border-slate-900 p-3 rounded-xl space-y-1.5">
-              <span class="text-[10px] font-bold text-indigo-400 uppercase tracking-wider block">Interactive Modes</span>
+              <span class="text-[10px] font-bold text-indigo-400 uppercase tracking-wider block">Interactive Quiz Arena</span>
               <ul class="space-y-1 text-[11px] text-slate-300 font-medium">
-                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">1</kbd> - <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">9</kbd> Select scrambled word chips</li>
-                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">Enter</kbd> Submit assembled answer</li>
-                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">Backspace</kbd> Undo/remove last selected chip</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">1</kbd> - <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">4</kbd> Select Multiple Choice options A–D</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">1</kbd> - <kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">9</kbd> Select scrambled spelling chips</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">Enter</kbd> Submit assembled spelling answer</li>
+                <li><kbd class="px-1.5 py-0.5 bg-slate-900 border border-slate-700 text-slate-200 text-[10px] rounded font-mono font-bold mr-1">Backspace</kbd> Remove last selected spelling chip</li>
               </ul>
             </div>
           </div>
@@ -1225,10 +1249,10 @@
         <div class="space-y-2">
           <div class="flex items-center gap-2 border-b border-slate-900 pb-1">
             <span class="text-indigo-400 text-sm font-bold">03.</span>
-            <h4 class="font-bold text-slate-200 text-sm">Interactive Immersion Lab (NLP)</h4>
+            <h4 class="font-bold text-slate-200 text-sm">Interactive Immersion Lab (NLP Sentence Deconstruction)</h4>
           </div>
           <p class="text-xs leading-relaxed text-slate-300 font-medium">
-            Deconstruct sentences inside the <strong>Immersion Lab</strong>. Click on any parsed word token in the text grid to reveal its Part-of-Speech (POS) category, CEFR status, active FSRS spacing records, hear its TTS pronunciation, and instantly import it as a custom card in your review deck.
+            Deconstruct custom German text blocks under <code class="text-indigo-400">#/immersion</code>. Click on any word in the text grid to analyze its part of speech, hear its pronunciation, view your active FSRS memory records, and instantly import it as a card in your deck.
           </p>
         </div>
 
@@ -1236,10 +1260,10 @@
         <div class="space-y-2">
           <div class="flex items-center gap-2 border-b border-slate-900 pb-1">
             <span class="text-indigo-400 text-sm font-bold">04.</span>
-            <h4 class="font-bold text-slate-200 text-sm">Suffix Grammar Contextualizer</h4>
+            <h4 class="font-bold text-slate-200 text-sm">Suffix Grammar Contextualizer (Noun Gender Tips)</h4>
           </div>
           <p class="text-xs leading-relaxed text-slate-300 font-medium">
-            The smart parser detects typical German noun endings (such as <code class="text-indigo-400">-ung</code>, <code class="text-indigo-400">-heit</code>, or <code class="text-indigo-400">-keit</code>) and renders an inline lightbulb tipped drawer showing the corresponding gender association rules (such as <code class="text-pink-400">die</code> for nouns ending in <code class="text-indigo-400">-ung</code>). Adjectives and verbs are protected from rules pollution.
+            The smart parser automatically detects German noun endings (such as <code class="text-indigo-400">-ung</code>, <code class="text-indigo-400">-heit</code>, or <code class="text-indigo-400">-keit</code>) and opens an inline lightbulb drawer showing the corresponding gender association rules (such as <code class="text-pink-400">die</code> for nouns ending in <code class="text-indigo-400">-ung</code>).
           </p>
         </div>
 
@@ -1250,7 +1274,7 @@
             <h4 class="font-bold text-slate-200 text-sm">Phonetik-Spiegel (Speech Pronunciation Coach)</h4>
           </div>
           <p class="text-xs leading-relaxed text-slate-300 font-medium">
-            Perfect your accent using our high-fidelity Speech Recognition engine. The pure-JS <strong>Kölner Phonetik</strong> algorithm scores your spoken input against target pronunciations. If you fail to pronounce tricky German phonemes like <code class="text-pink-400">ö</code>, <code class="text-pink-400">ü</code>, <code class="text-pink-400">ch</code>, <code class="text-pink-400">sch</code>, or <code class="text-pink-400">r</code>, an interactive mouth positioning drawer pops open with detailed anatomical illustrations and tongue positioning guides.
+            Click the microphone icon on any card to record your voice. Our <strong>Kölner Phonetik</strong> speech engine compares your pronunciation against native models. If you struggle with tricky phonemes like <code class="text-pink-400">ö</code>, <code class="text-pink-400">ü</code>, <code class="text-pink-400">ch</code>, <code class="text-pink-400">sch</code>, or <code class="text-pink-400">r</code>, an anatomical mouth positioning drawer pops up with tongue placement guides.
           </p>
         </div>
 
@@ -1258,10 +1282,10 @@
         <div class="space-y-2">
           <div class="flex items-center gap-2 border-b border-slate-900 pb-1">
             <span class="text-indigo-400 text-sm font-bold">06.</span>
-            <h4 class="font-bold text-slate-200 text-sm">Backup Sync & Profile Recovery</h4>
+            <h4 class="font-bold text-slate-200 text-sm">Encrypted Backup Sync & Device Recovery</h4>
           </div>
           <p class="text-xs leading-relaxed text-slate-300 font-medium">
-            Maintain complete control of your progress data. Import or export your progress profile instantly using a Base64-encrypted copy/paste Sync Key, or backup and restore raw JSON profile files directly.
+            Maintain complete ownership of your progress data without server accounts. Copy your Base64-encrypted Sync Key under Settings to transfer your card progress between phone and laptop instantly, or export/import raw backup JSON files.
           </p>
         </div>
 
@@ -1269,13 +1293,10 @@
         <div class="space-y-2">
           <div class="flex items-center gap-2 border-b border-slate-900 pb-1">
             <span class="text-indigo-400 text-sm font-bold">07.</span>
-            <h4 class="font-bold text-slate-200 text-sm">Offline Sandboxing & Multi-User Isolation</h4>
+            <h4 class="font-bold text-slate-200 text-sm">100% Client-Side Privacy & Offline Study</h4>
           </div>
           <p class="text-xs leading-relaxed text-slate-300 font-medium">
-            DeutschSphere is 100% client-side with no centralized database servers. Your learning progress is sandboxed inside your browser's private <code class="text-indigo-400">IndexedDB</code> storage. Multiple users can access the same URL independently; their learning records will remain perfectly isolated on their respective devices.
-          </p>
-          <p class="text-xs leading-relaxed text-slate-300 font-medium mt-1">
-            <strong>Run Offline Locally:</strong> You can download or clone this entire project repository to your device and double-click <code class="text-indigo-400">index.html</code> (or host it with any simple local web server, or install it as a PWA) to study 100% offline without an internet connection.
+            DeutschSphere has zero backend tracking databases. Your data stays in your browser's private <code class="text-indigo-400">IndexedDB</code> storage. You can install it as a Progressive Web App (PWA) to study 100% offline without an internet connection.
           </p>
         </div>
 
