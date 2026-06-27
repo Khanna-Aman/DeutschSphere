@@ -58,7 +58,7 @@ import {
 // JSON data file is modified. Failing to bump invalidates all users' IDB wordlist
 // caches and causes them to see stale data until they manually clear storage.
 // Format: 'v<major>.<minor>.<patch>'  e.g., v1.0.1 → v1.0.2
-const WORDLIST_CACHE_VERSION = 'v1.0.1';
+const WORDLIST_CACHE_VERSION = 'v1.0.2';
 
 // Global hooks for early-paint theme execution inside HTML Head
 window.applyTheme = applyTheme;
