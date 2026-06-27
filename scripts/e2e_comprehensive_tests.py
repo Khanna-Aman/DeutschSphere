@@ -300,48 +300,9 @@ try:
         page.locator("#search-clear").click()
         time.sleep(0.5)
 
-        # =========================================================================
-        # [STEP 2.7] POMODORO FOCUS BOOSTER & AMBIENT SOUNDSCAPES WIDGET TEST
-        # =========================================================================
-        print("\n[STEP 2.7] Testing Pomodoro Focus Booster Widget (Sidebar)...")
-        assert page.locator("#pomodoro-sidebar-widget").is_visible(), "Pomodoro sidebar widget is not visible!"
-        
-        # Change duration select value to 15 minutes
-        print(" Changing Pomodoro timer duration to 15 minutes...")
-        page.locator("#pomodoro-duration").select_option("15")
-        time.sleep(0.3)
-        assert page.locator("#pomodoro-time-text").inner_text().strip() == "15m", "Pomodoro timer display did not update to 15m!"
-        
-        # Start focus timer
-        print(" Clicking Pomodoro toggle button to START timer...")
-        page.locator("#pomodoro-toggle-btn").click()
-        time.sleep(1.5) # Let it tick at least one second
-        
-        # Verify it entered active focus mode (button changes to "Stoppen | Stop")
-        btn_text = page.locator("#pomodoro-toggle-btn").inner_text().lower()
-        assert "stop" in btn_text or "stoppen" in btn_text, f"Pomodoro button text '{btn_text}' does not indicate running state!"
-        
-        # Verify the timer ticked (display format is now MM:SS like 14:59 or 14:58)
-        timer_ticked_text = page.locator("#pomodoro-time-text").inner_text().strip()
-        print(f" Pomodoro timer running display ticked to: '{timer_ticked_text}'")
-        assert ":" in timer_ticked_text, f"Pomodoro timer display '{timer_ticked_text}' is not in active tick format MM:SS!"
-        
-        # Switch focus sound to pink / warm rain
-        print(" Changing Pomodoro soundscape option to 'pink'...")
-        page.locator("#pomodoro-sound").select_option("pink")
-        time.sleep(0.3)
-        
-        # Stop focus timer
-        print(" Clicking Pomodoro toggle button to STOP timer...")
-        page.locator("#pomodoro-toggle-btn").click()
-        time.sleep(0.5)
-        
-        # Verify it went back to initial default state
-        btn_text_stopped = page.locator("#pomodoro-toggle-btn").inner_text().lower()
-        assert "start" in btn_text_stopped or "starten" in btn_text_stopped, "Pomodoro button text did not return to Start!"
-        assert page.locator("#pomodoro-time-text").inner_text().strip() == "15m", "Pomodoro timer display did not reset to 15m!"
-        print(" Pomodoro Focus Booster widget passed stress test.")
-        
+        # [STEP 2.7] POMODORO FOCUS BOOSTER - DEPRECATED IN v1.1.0
+        # Systematically removed in v1.1.0 alignment.
+
         # =========================================================================
         # [STEP 3] FLASHCARD INTERACTIONS, ACCORDIONS & PREFS UI SYNCS
         # =========================================================================

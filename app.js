@@ -37,9 +37,6 @@ import {
   handleRouting
 } from './js/router.js';
 
-import {
-  initPomodoroFocusBooster
-} from './js/pomodoro.js';
 
 import {
   get as idbGet,
@@ -268,7 +265,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   updateLevelUI();
   initTheme();
   initSettingsUI();
-  initPomodoroFocusBooster();
   initShortcutsToggle();
   trackVisitedLevels();
   initHelpModal();

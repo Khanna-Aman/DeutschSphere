@@ -1,87 +1,49 @@
-# 🔮 VISION.md — Project Status & Roadmap
+# 🔮 VISION.md — Project Roadmap & Technical Vision
 
-> Last updated: June 2026
-
-This document provides a highly objective, factually accurate assessment of what has been built, what has been systematically purged for scope control, and the clinical data-science path planned for the future.
+This document details the architectural direction, scope boundaries, and active milestones for **DeutschSphere v1.1.0**.
 
 ---
 
-## 📍 Current Status: Pure Cognitive Vocabulary Utility (V6.0)
+## 🎯 The V1.1.0 Mandate: Pure Cognitive Mastery
 
-DeutschSphere is a high-performance, distraction-free Single Page Application (SPA) optimized for German vocabulary acquisition. The application operates entirely client-side across **4 core semantic views** governed by hash routing (`#/`, `#/quiz`, `#/stats`, `#/immersion`)[cite: 1]. 
+DeutschSphere has undergone a systematic architectural course-correction. We reject cheap gamification loops, decorative sound effects, and distracting interactive layers. The focus of the application is absolute retention of **3,921 validated German vocabulary words** via mathematical cognitive modeling (FSRS-5).
 
-We have successfully executed the **Scope Realignment & De-gamification Pass**, entirely deprecating auxiliary grammar-parsing mock modules and stripping out secondary gamification mechanics (XP tracking, arcade audio chimes, particle animations, and flashing badges)[cite: 1]. The codebase is now a locked, ultra-premium implementation of the **FSRS-5 spaced repetition model**[cite: 1] linked directly to 3,921 ground-truth vocabulary entries[cite: 1] verified against the **`A1-B1verification`** workspace[cite: 1].
-
----
-
-## 🛠️ Core Architectural Pillars & Feature Mapping
-
-### 1. Data Foundation & The Zero-Inference Clause
-* **3,921 Ground-Truth Entries:** Structured across three explicit CEFR tiers: A1 (640 words)[cite: 1], A2 (1,142 words)[cite: 1], and B1 (2,139 words)[cite: 1].
-* **Strict NotebookLM Alignment:** All lexicon data matrices (gender, plural, word class, explicit example sentences) are verified directly against the **`A1-B1verification`** Goethe-Institut wordlists[cite: 1]. 
-* **Zero-Inference Enforcement:** If conjugation variations, structural tenses, or contextual examples do not explicitly exist inside our verified data layouts, their schema properties are strictly assigned as `null`[cite: 1]. Speculative LLM generation or heuristic inference from pre-trained weights is strictly forbidden[cite: 1].
-* **Premium Asset Staging:** Populated with clean, transparent 3D WebP graphical assets generated offline using high-fidelity modeling[cite: 1]. All graphical assets undergo manual checking using a programmatic WebP validation pass to guarantee zero artifact or text bleeding[cite: 1].
-
-### 2. Spaced Repetition Engine (`#/` Flashcard View)
-* **Pure FSRS-5 Implementation:** Powered by a zero-dependency, pure-JS module (`js/fsrs.js`) utilizing 19 structural stability parameters to model cognitive decay via memory stability ($S$), difficulty ($D$), and real-time retrievability ($R$)[cite: 1].
-* **Deterministic Lighting Aesthetics:** Glassmorphic layout panels adapt dynamically using CSS glow profiles bounded exclusively by German noun genders[cite: 1]:
-  * 🔵 `der` ➔ `.card-glow-der`[cite: 1]
-  * 🔴 `die` ➔ `.card-glow-die`[cite: 1]
-  * 🟢 `das` ➔ `.card-glow-das`[cite: 1]
-  * 🟣 Neutral / Other ➔ Violet Card Glow[cite: 1]
-* **Dual Input Control:** Navigated seamlessly via fluid mobile touch swiping (left/right for paging) or high-efficiency desktop hotkeys (`1-4` for FSRS quality grading, `Spacebar` to flip, `Enter` to submit)[cite: 1].
-* **Unified Control Matrix:** Consolidated all deck sorting, filtration, and presentation configurations into a single high-contrast "Einstellungen" drop-panel[cite: 1].
-
-### 3. Quiz Arena (`#/quiz`)
-* **Vokabel-Test (Multiple Choice):** Generates bidirectional German ↔ English testing using deterministic contextual distractors pulled via reservoir sampling to eliminate compilation lag[cite: 1].
-* **Schreib-Arena (Spelling/Active Recall):** Free-text structural string comparison featuring an integrated virtual umlaut tray (`ä`, `ö`, `ü`, `ß`) and direct article quick-inputs[cite: 1].
-* **Clean Performance Feedback:** Replaced all arcade flashes with objective, layout-stable CSS micro-interactions: a muted green structural pulse for validated entries and a high-contrast red horizontal shake for failed matches[cite: 1].
-
-### 4. Audio, Phonetics & NLP (`#/immersion`)
-* **Hybrid Web Speech TTS:** Local offline-first speech synthesis supporting velocity adjustable pacing parameters controlled via user preferences[cite: 1].
-* **Phonetik-Spiegel (Pronunciation Spiegel):** Captures microphone streams, maps character-level distance matrices, and applies a client-side **Kölner Phonetik** algorithm to evaluate matches strictly by sound architecture rather than flat spelling variants[cite: 1].
-* **Immersions-Labor:** A lightweight (<10KB) client-side Natural Language Processing engine incorporating custom stop-word filtering, suffix-stripping lemmatization, and interactive click-to-explore triggers that analyze text blocks against active IndexedDB user tracking states[cite: 1].
+### 🛑 Strict Scope Enforcements
+* **No Gamification Bloat**: XP meters, level indicators, unlocking achievements, and interactive progress badges are deprecated. The only driver is objective memory stability and retention percentages.
+* **No Structural Grammar Engines**: The application does not parse natural sentence syntax or conjugation trees. If conjugation tables, plurals, or contextual examples are not present in our ground-truth source layers, they are not inferred or generated (*The Zero-Inference Clause*).
+* **Decoupled Client-First Core**: No Node modules, bundling pipelines, or external databases. The SPA remains flat standard HTML, CSS, and modular JS.
 
 ---
 
-## 🛑 Scope Containment & Deprecation Log
+## 🛠️ Feature Matrix Status
 
-To maintain absolute system scalability, eliminate memory overhead, and enforce extreme technical focus, the following historical modules have been completely deprecated and stripped from the repository[cite: 1]:
-
-* **`weaver.js` (Grammatik-Weberei):** **REMOVED**. Syntactic drag-and-drop chip components and algorithmic grammar slot validation are entirely out of scope[cite: 1]. The application does not parse structural syntax trees.
-* **`adventure.js` (Deutsch-Abenteuer):** **REMOVED**. Branching dialogue trees, RPG dialogue states, and fictional text nodes have been excised to keep the data footprint locked strictly to functional lexicon mapping[cite: 1].
-* **Gamification Frameworks:** **PURGED**. All instances of arbitrary dopamine metrics—including Experience Points (XP), leveling progress boundaries, graphic milestone achievement badges, decorative toast animations, and acoustic celebratory chimes—have been deleted[cite: 1]. User retention relies solely on the empirical tracking of future memory decay matrices and stability intervals[cite: 1].
-
----
-
-## ⚠️ Known Production Anomalies & Technical Gaps
-
-| Target Module | Functional Defect / Gap | Operational Severity | Mitigation Status |
-| :--- | :--- | :--- | :--- |
-| **HTML Shell Structure** | Root title block remains hardcoded to a legacy string value before runtime evaluation overrides it. | Low (Cosmetic) | Scheduled for synchronization in next core HTML cleanup pass. |
-| **B1 Level Verification** | Script verification sweeps are locked; ultimate recursive verification sweep is pending rate resets. | Medium (Data Integrity) | Queued to run via sequential unbuffered loops once daily API quotas reload[cite: 1]. |
-| **Interface Layout Defaults** | Dropdown level selections fallback to localized standard configurations before profile state hydration. | Low (UX Layout) | Pre-paint intercept handles structural validation prior to rendering tree initialization[cite: 1]. |
+| Component | Status | Description |
+| :--- | :--- | :--- |
+| **FSRS-5 Spaced Repetition** | **Active** | Clinical scheduling using 19 stability parameters to model cognitive decay. |
+| **Phonetik-Spiegel** | **Active** | Speech recording and audio waveform analysis against native models using Kölner Phonetik. |
+| **Active Recall Quiz Arena** | **Active** | Bidirectional MC reservoir-sampled tests and text spelling with virtual keyboards. |
+| **Immersions-Labor** | **Active** | Custom local NLP for copy-pasted text block lemmatization and instant flashcard generation. |
+| **Sync & Backup Sync** | **Active** | Base64-encrypted local IndexedDB profile copy/paste backup and restore. |
+| **Visual Assets** | **Active** | High-fidelity WebP visual aids (<10KB) completed for A1 (640/640) and A2 (1,142/1,142) entries. |
 
 ---
 
-## 🚀 Future Roadmap
+## 🚀 Active Roadmap
 
-### 🔜 Short-Term Engineering Tasks (Next Sprint)
-* **Complete Asset Populating (B1 Dataset):** Complete the deployment of the transparent WebP assets for the final 2,139 words of the B1 tier using the established multi-step verification protocol (ensuring zero text artifacts)[cite: 1].
-* **Asynchronous IndexedDB Cache Profiling:** Further optimize the asynchronous profile commits inside `js/state.js` to ensure zero main-thread blockages during massive multi-word FSRS state updates[cite: 1].
-* **WAI-ARIA Accessibility Validation:** Complete full structural audit of remaining interactive nodes, ensuring absolute WCAG 2.2 AA compliance across all touchpoints for screen readers and keyboard-only layouts[cite: 1].
+### 🔜 Short-Term Milestones (v1.1.x)
+* **B1 Asset Rollout**: Complete the final integration of audited 3D glassmorphic WebP assets for the remaining B1 (2,139 words) vocabulary entries following strict anti-bleeding checks.
+* **IndexedDB Thread Tuning**: Debounce and stream asynchronous profile writes in `js/state.js` to eliminate micro-stutters during massive bulk updates (e.g. after a large quiz session).
+* **WCAG 2.2 AA Accessibility**: Audit and refine WAI-ARIA roles, ensuring keyboard-only and screen-reader accessibility across all view transitions and accordions.
 
-### 🔮 Medium-Term Architectural Evolution
-* **Premium GCP Voice Isolation & Chirp Integration:** 
-  * Replace client-side browser synthesis with high-fidelity, native German pre-rendered audio matrices leveraging Google Cloud Text-to-Speech (Journey and Studio neural voice layers) managed cleanly under the monthly character free-tier[cite: 1].
-  * Refine the *Phonetik-Spiegel* pronunciation analysis loop by linking verification paths to Google's Universal Speech Model (**Chirp v2**) via Speech-to-Text v2 API arrays for highly precise syllable-level phonetic coaching[cite: 1].
-* **Client-Side Document Compilation:** Build an isolated utility to export current FSRS problem states (e.g., words with an active difficulty rating $D > 7$) into high-contrast, printable double-sided grid arrays using native browser print styles for offline reference[cite: 1].
+### 🔮 Medium-Term Evolutions (v1.2.0)
+* **High-Fidelity TTS Voices**: Transition from browser-specific speech synthesis to pre-rendered neural voice grids using Google Cloud Text-to-Speech (Studio voice layers) managed within free character tiers.
+* **Advanced Pronunciation Analytics**: Refine speech analysis by mapping local microphone recordings against Google's USM (Universal Speech Model - Chirp v2) for syllable-level coaching.
+* **Double-Sided Printable Flashcard Sheets**: Render a clean printable table of highly critical vocabulary ($D > 7$ under FSRS-5) with native CSS printing rules for physical spaced repetition review.
 
 ---
 
 ## 📊 Technical Metrics Ledger
-
-* **Lexicon Matrix Capacity:** 3,921 validated entries across three tiers[cite: 1].
-* **Dependency Footprint:** 0 production Node modules (Tailwind utility engine, Google Fonts, FontAwesome icons served cleanly via static CDNs)[cite: 1].
-* **Active Architecture Weight:** ~508KB cleanly modularized across 1 root orchestrator, 1 service worker shell, and 17 highly optimized feature modules[cite: 1].
-* **State Engine:** Pure asynchronous IndexedDB persistence layer mediated by an internal `idb-keyval` wrapper[cite: 1].
+* **Active Vocabulary Capacity**: 3,921 entries across CEFR A1, A2, and B1 levels.
+* **Production Dependencies**: 0 npm modules (Tailwind utility engine, FontAwesome, and Google Fonts served via static CDN).
+* **Codebase Weight**: ~450KB modular ES6 files, 1 HTML shell, and 1 global stylesheet.
+* **State Engine**: Client-side IndexedDB persistence managed via an asynchronous debounced `idb-keyval` pipeline.

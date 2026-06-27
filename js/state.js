@@ -325,16 +325,6 @@ export const state = {
     isNaturalAdvance: false
   },
 
-  // Focus Booster (Pomodoro & Soundscapes) Sub-State
-  focus: {
-    active: false,
-    timerId: null,
-    timeLeft: 0,
-    totalDuration: 0,
-    soundType: 'none',
-    xpMultiplierActive: false,
-    multiplierTimerId: null
-  },
 
   // RPG Adventure (Deutsch-Abenteuer) Sub-State
   adventure: {
@@ -538,12 +528,6 @@ export const elements = {
   helpModalAck: document.getElementById('help-modal-ack'),
   helpFab: document.getElementById('help-fab'),
 
-  // Pomodoro Focus-Booster
-  pomodoroDuration: document.getElementById('pomodoro-duration'),
-  pomodoroSound: document.getElementById('pomodoro-sound'),
-  pomodoroToggleBtn: document.getElementById('pomodoro-toggle-btn'),
-  pomodoroTimeText: document.getElementById('pomodoro-time-text'),
-  pomodoroTimerRing: document.getElementById('pomodoro-timer-ring'),
 
   // Phonetik-Spiegel (Voice Mirror)
   phoneticBtn: document.getElementById('phonetic-btn'),

@@ -1,198 +1,117 @@
-# 🇩🇪 DeutschSphere
-
-<div align="center">
-
-### 🚀 [CLICK HERE TO LAUNCH WEB APP](https://khanna-aman.github.io/DeutschSphere/)
+# 🇩🇪 DeutschSphere (v1.1.0)
 
 [![Live Web App](https://img.shields.io/badge/Launch%20App-DeutschSphere-FF007F?style=for-the-badge&logo=google-translate&logoColor=white&labelColor=020617)](https://khanna-aman.github.io/DeutschSphere/)
-[![GitHub Pages Status](https://img.shields.io/badge/Deploy-GitHub%20Pages-00F0FF?style=for-the-badge&logo=github&logoColor=white&labelColor=020617)](https://khanna-aman.github.io/DeutschSphere/)
+[![Deploy Status](https://img.shields.io/badge/Deploy-GitHub%20Pages-00F0FF?style=for-the-badge&logo=github&logoColor=white&labelColor=020617)](https://khanna-aman.github.io/DeutschSphere/)
 
-*A zero-dependency, offline-first, ultra-premium German language learning SPA covering **3,921 words** across CEFR levels A1-B1.*
+> **DeutschSphere v1.1.0** represents a deliberate, high-signal engineering reset. We have completely purged all gamification overhead—including XP metrics, sound chimes, and particle effects—along with auxiliary modules (such as the legacy Pomodoro focus timer) to deliver a clinically rigorous, high-contrast, client-side language mastery application. All user instructions, buttons, and status interfaces are fully localized in professional English.
 
-</div>
-
-
-## ✨ Features at a Glance
-
-| Feature | Description |
-|---------|-------------|
-| 📇 **Flashcard Engine** | Rich cards with gender-themed glows (🔵 der / 🔴 die / 🟢 das), accordion reveal, example sentences, antonyms, pronunciation hints, Twemoji illustrations, and kinetic spring physics |
-| 🧠 **FSRS-5 SRS** | Free Spaced Repetition Scheduler with per-card stability, difficulty, and retrievability tracking — 20-30% more efficient than SM-2. Unlimited offline scale via IndexedDB |
-| 🔬 **Immersions-Labor** | Zero-dependency offline NLP engine. Paste German text to automatically lemmatize roots, predict noun genders, and match against your known FSRS vocabulary |
-| 🎯 **Quiz Arena** | Multiple-choice (bidirectional DE↔EN) + spelling test with virtual umlaut keyboard (ä, ö, ü, ß) and article quick-keys |
-| 🗣️ **Audio Trainer** | Continuous dual-voice TTS: German word → English translation → German example sentence with speed control |
-| 🎙️ **Phonetik-Spiegel** | Speech recognition pronunciation coach with dual spectrograms and Levenshtein accuracy scoring |
-| 🏰 **Deutsch-Abenteuer** | Conversational RPG with branching dialogues, sentence builder, grammar tips, and XP progression |
-| 🧩 **Grammatik-Weberei** | Drag-and-drop sentence assembly with linguistically color-coded word chips and syntax verification |
-| 📝 **Spickzettel** | Searchable grammar cheatcode reference (noun suffixes, verb prefixes, adjective patterns) |
-| 📊 **Statistics Dashboard** | SVG progress rings, FSRS retention analytics, 7-day review forecast, parts-of-speech breakdown, streak tracking, and 12 unlockable achievements |
-| 🎨 **5 Premium Themes** | Slate Mesh (default), Berlin Cyberpunk, Schwarzwald Dark, Oktoberfest Gold, Weimar Classic (light) |
-| ⌨️ **Keyboard-First** | 10+ hotkeys for mouse-free navigation (Space, Arrows, L, S, V, F, H, A, B, Esc) |
-| 📱 **Responsive** | Full mobile support with collapsible sidebar, touch-friendly targets, and compound word hyphenation |
+👉 **[CLICK HERE TO LAUNCH WEB APP](https://khanna-aman.github.io/DeutschSphere/)**
 
 ---
 
-## 📦 Vocabulary Coverage
+## ⚡ Core Pillars of v1.1.0
 
-| Level | Words | Description | Verification Status & Asset Progress |
-|-------|-------|-------------|---------------------|
-| **A1** | 640 | Beginner (Anfänger) | ✅ 100% NotebookLM Verified & Active <br>🎨 **640 / 640 Premium 3D Images Complete (100.0%)** |
-| **A2** | 1,142 | Elementary (Grundlagen) | ✅ 100% NotebookLM Verified & Active <br>🎨 **1,142 / 1,142 Premium 3D Images Complete (100.0%)** |
-| **B1** | 2,139 | Intermediate (Fortgeschritten) | ✅ 100% NotebookLM Verified & Active |
-| **Total** | **3,921** | Full Goethe-Institut A1–B1 curriculum | 🚀 All Levels Active (A1, A2, B1 Fully Available) |
+### 1. Spaced Repetition Engine (FSRS-5)
+Powered by a zero-dependency, pure client-side port of the **Free Spaced Repetition Scheduler (FSRS-5)**. It tracks individual word stability ($S$), difficulty ($D$), and retrievability ($R$) curves across **3,921 words**, outperforming traditional SM-2 algorithms by 20–30%.
+* Navigated via fluid mobile swiping or desktop hotkeys (`1-4` for review grading, `Space` to flip, `Enter` to submit).
+* Dynamic glassmorphic panels adapt with deterministic noun-gender glows: 🔵 `der` (masculine), 🔴 `die` (feminine), 🟢 `das` (neuter), and 🟣 neutral/other.
 
-Each word includes: German headword, English translation, gender, plural form, word class, theme category, example sentence (DE + EN), pronunciation hint, antonym, verb conjugation (for verbs), adjective forms (for adjectives), and optional premium visual aid.
+### 2. Phonetik-Spiegel (Pronunciation Trainer)
+An interactive speech coach that captures microphone streams and evaluates pronunciation accuracy.
+* Uses a pure-JS **Kölner Phonetik** matching algorithm to assert spoken matches by sound characteristics rather than flat orthography.
+* Compares audio waveforms against native synthesis models and displays high-fidelity static mouth positioning guides for challenging German phonemes (`ä`, `ö`, `ü`, `ch`, `sch`, `r`).
 
-> [!NOTE]
-> All linguistic data is verified against the official Goethe-Institut wordlists via [NotebookLM](https://notebooklm.google.com/) as our exclusive translation and verification engine (using the curated *Goethe-Zertifikat Wortliste* workspace).
-> 
-> In **V1.0.0**, static flat SVG assets are deactivated to guarantee a pristine 404-free E2E footprint. We are actively running a premium V1.0.1 sprint to populate all vocabulary cards with high-fidelity, optimized 3D Claymation and glassmorphic WebP assets (averaging <9.5 KB per image). Levels A1 and A2 are currently **100.0% complete (A1: 640/640; A2: 1,142/1,142 assets generated, audited, and committed)**.
+### 3. Active Recall Quiz Arena
+A dedicated testing interface designed to challenge active vocabulary retention.
+* **Vokabel-Test (Multiple Choice)**: Generates DE ↔ EN challenges utilizing lightning-fast reservoir sampling to compile contextual distractors with zero runtime lag.
+* **Schreib-Arena (Active Spelling)**: Free-text spelling tests with an integrated virtual umlaut tray (`ä`, `ö`, `ü`, `ß`) and rapid-input shortcuts. Includes layout-stable feedback (muted green pulse on success, clean horizontal shake on error).
 
----
+### 4. Audio Trainer (Dual-Voice System)
+Continuous speed-adjustable synthesis designed to anchor listening comprehension.
+* Loops through vocabulary words, English meanings, and verified example sentences at pacing ranges from `0.7x` to `1.5x`.
+* Operates entirely offline-first, leveraging browser Web Speech API.
 
-## 🚀 Quick Start & Deployment
+### 5. Immersions-Labor (NLP Lab)
+A lightweight client-side Natural Language Processing lab under `#/immersion`.
+* Paste custom German text blocks to instantly lemmatize verbs, identify parts of speech, and extract noun genders via deterministic client-side regex rules.
+* Highlights matching vocabulary already tracked in your FSRS progress database and lets you instantly convert unlearned terms to active flashcards.
 
-### Option 1: Instant Access (Recommended)
-You do not need to install or compile anything! Run the application directly in your web browser:
-👉 **[Launch DeutschSphere Web App](https://khanna-aman.github.io/DeutschSphere/)**
-
----
-
-### Option 2: One-Click Self-Hosting (GitHub Pages)
-You can deploy your own private copy of DeutschSphere for free in under 60 seconds:
-1. **Fork** this repository to your GitHub account.
-2. Go to your fork's **Settings** tab.
-3. Click **Pages** in the left sidebar.
-4. Under *Build and deployment*, set the Source to **Deploy from a branch**.
-5. Select the **`main`** branch and the **`/ (root)`** folder, then click **Save**.
-6. Refresh the page after 30 seconds to get your public live URL!
+### 6. Encrypted Profile Sync & Backup
+Ensure complete data ownership without external server overhead.
+* Back up or restore your entire IndexedDB progress state instantly using a compressed, Base64-encoded copy/paste Sync Key or raw JSON profile files.
 
 ---
 
-### Option 3: Local Developer Server (Python)
-Because the app uses ES6 JavaScript modules, a local HTTP server is required to satisfy local browser security policies:
+## 📦 Vocabulary Schema & Coverage
+
+We cover **3,921 ground-truth entries** verified against official Goethe-Institut curricula:
+
+| Level | Entries | Classification | Verification Status & Asset Progress |
+| :--- | :---: | :--- | :--- |
+| **A1** | 640 | Beginner | ✅ 100% Verified | 🎨 640 / 640 Premium 3D WebP Assets Complete |
+| **A2** | 1,142 | Elementary | ✅ 100% Verified | 🎨 1,142 / 1,142 Premium 3D WebP Assets Complete |
+| **B1** | 2,139 | Intermediate | ✅ 100% Verified | 🚀 Complete Dataset Available |
+| **Total** | **3,921** | Goethe-Institut A1-B1 | **100% Pure Client-Side Execution** |
+
+> [!IMPORTANT]
+> **The Zero-Inference Clause**: All vocabulary data is verified strictly against the Goethe-Institut wordlists via NotebookLM. If conjugation tables, plurals, or contextual examples are not present in our verified source sheets, they are assigned to `null`. We strictly forbid generating speculative linguistic parameters or synthesizing placeholder data using generic LLM weights.
+
+---
+
+## ⌨️ Desktop Hotkeys
+
+| Key | Action | Key | Action |
+| :---: | :--- | :---: | :--- |
+| `Space` | Flip card / Open accordion | `V` | Play word TTS |
+| `→` / `↓` | Next card | `A` | Toggle auto-play TTS |
+| `←` / `↑` | Previous card | `B` | Toggle card visual assets |
+| `1` - `4` | FSRS quality grades | `Esc` | Close panels / Exit quiz |
+| `L` | Toggle learned status | `?` | Toggle keyboard shortcuts |
+
+---
+
+## 🛠️ Architecture & Setup
+
+### Local Development Server
+Because DeutschSphere relies entirely on native ES6 modules, a local HTTP server is required to bypass local file-access CORS restrictions:
 ```bash
-# Start a local HTTP server
+# Spin up local server in project directory
 python -m http.server 8080
 
-# Open your browser and navigate to:
-# http://localhost:8080
+# Navigate to: http://localhost:8080
 ```
 
-> **Note**: The app requires a modern web browser with ES6 module support (Chrome 61+, Firefox 60+, Safari 11+, Edge 16+) and IndexedDB for progress storage.
-
----
-
-## 🏗️ Architecture
-
-```
+### File Hierarchy
+```text
 A1-B1_German/
+├── index.html              # Core SPA HTML shell
+├── index.css               # Premium design tokens, high-contrast layouts, gender card glows
+├── app.js                  # Main orchestrator: boots PWA, handles hash routing & View Transitions
+├── sw.js                   # Service Worker (pre-caches static shell & CDN files for offline use)
+├── manifest.json           # Progressive Web App configuration manifest
 │
-├── index.html              # Core SPA layout
-├── index.css               # Global styling, gender glows, CSS Grid accordion, containment
-├── app.js                  # Main orchestrator: routing, themes, View Transitions, lifecycle
+├── js/                     # ES6 Modular controllers
+│   ├── state.js            # Unified app state, DOM selector maps, and IndexedDB debouncing
+│   ├── idb-keyval.js       # Asynchronous key-value IndexedDB driver for heavy client profiles
+│   ├── fsrs.js             # FSRS-5 mathematical modeling engine
+│   ├── nlp.js              # Lemmatizer, suffix analyzer, and regex noun gender matches
+│   ├── audio.js            # TTS speaker and Web Audio oscillators
+│   ├── flashcards.js       # Spaced repetition card renderer & swipe haptics
+│   ├── quiz.js             # Multiple-choice & text spelling test controllers
+│   ├── immersion.js        # Immersion lab text analyzer view controller
+│   ├── stats.js            # Technical memory dashboard and technical charts renderer
+│   ├── router.js           # Client-side hash router
+│   ├── search.js           # Lexicon indexing and search sidebar categories
+│   └── events.js           # Global keyboard and mouse event handlers
 │
-├── js/                     # ES6 modules
-│   ├── state.js            # Central state, DOM cache, IndexedDB persistence safety layer
-│   ├── idb-keyval.js       # Zero-dependency IndexedDB wrapper for massive payload storage
-│   ├── fsrs.js             # FSRS-5 algorithm (pure client-side, zero deps)
-│   ├── nlp.js              # Pure-JS Offline NLP Engine (Lemmatization, Gender Prediction)
-│   ├── audio.js            # TTS, Web Audio singleton (shared AudioContext)
-│   ├── phoneme_guides.js   # Cybernetic mouth positioning guides for phonemes
-│   ├── flashcards.js       # Card rendering, SRS, phonetic mirror
-│   ├── quiz.js             # Quiz arena (MC + spelling) with XSS-safe rendering
-│   ├── adventure.js        # RPG conversational mode
-│   ├── weaver.js           # Grammar Weaver sentence builder
-│   ├── immersion.js        # NLP Lab view controller
-│   ├── stats.js            # Statistics & achievements
-│   ├── router.js           # SPA client-side routing, view transitions, and route guards
-│   ├── events.js           # Keyboard shortcuts, click handlers, and global event listeners
-│   ├── search.js           # Vocabulary search indexing and category filters
-│   ├── pomodoro.js         # Pomodoro focus-booster timers, soundscapes, and multipliers
-│   └── cheatcodes_db.js    # Grammar reference database + sanitizeGermanEncoding()
-│
-├── a1/                     # Level A1 (640 words + SVGs + adventure)
-├── a2/                     # Level A2 (1,142 words + SVGs + adventure)
-├── b1/                     # Level B1 (2,139 words + SVGs + adventure)
-│
-├── icons/                  # PWA application icons (192px, 512px)
-├── sw.js                   # Service Worker (4-strategy offline caching)
-├── manifest.json           # PWA manifest with app icons
-├── scripts/                # Python automation & verification (32 scripts)
-└── docs/                   # Feature backlog & plans
+├── a1/ , a2/ , b1/         # Verified datasets (JSON files + WebP graphical assets)
+└── scripts/                # QA verification and unit testing automation
 ```
 
-### Key Design Decisions
-
-- **Zero dependencies**: Tailwind CSS via CDN, Google Fonts, FontAwesome. No `node_modules`, no bundling.
-- **Offline-first**: All data is local JSON. TTS uses the browser's `SpeechSynthesis` API. Sound effects are synthesized via a shared `AudioContext` singleton. No network required after initial page load.
-- **Hash-based routing**: 6 views — `#/` (flashcards), `#/quiz`, `#/adventure`, `#/weaver`, `#/cheatcodes`, `#/stats`.
-- **Per-level persistence**: Learned cards, SRS state, quiz streaks, and XP are all namespaced by CEFR level. Backed by asynchronous **IndexedDB** to completely bypass mobile 5MB storage limits.
-- **Event-driven architecture**: Module communication via `CustomEvent` dispatching (`srs:card-updated`, `srs:achievement`, `deck:filter-request`, `deck:render-active-card`, `audio:stop-trainer`) — eliminates tight coupling between all modules. Zero `window.*External` bridges.
-- **Hardened storage**: Automatic background migration from `localStorage` to IndexedDB upon boot. Rapid writes are debounced asynchronously to prevent main-thread UI locking.
-- **Kinesthetic Physics**: Eliminated rigid web-app easings. Swipes and animations use purely mathematical rigid-body spring physics via generated `linear()` functions for hyper-premium tactile feedback.
-
 ---
 
-## 🎹 Keyboard Shortcuts
+## 📄 QA Verification & Test Suites
 
-| Key | Action |
-|-----|--------|
-| `Space` | Toggle card detail accordion |
-| `→` / `↓` | Next card |
-| `←` / `↑` | Previous card |
-| `L` | Toggle learned |
-| `S` | Shuffle deck |
-| `V` | Speak word (TTS) |
-| `F` | Fast-Read mode |
-| `H` | Hide learned cards |
-| `A` | Autoplay TTS |
-| `B` | Toggle images |
-| `?` | Keyboard shortcut overlay |
-| `Esc` | Close sidebar / quit quiz |
-
----
-
-## 🎨 Themes
-
-| Theme | Description |
-|-------|-------------|
-| **Slate Mesh** | Default dark theme with indigo/pink mesh gradients |
-| **Berlin Cyberpunk** 🌌 | Deep cosmic black with neon cyan and magenta accents |
-| **Schwarzwald** 🌲 | Dark forest green with warm amber highlights |
-| **Oktoberfest Gold** 🍺 | Warm chocolate surfaces with amber-gold accents |
-| **Weimar Classic** 🏛️ | Light ivory mode with crisp dark-indigo borders |
-
----
-
-## 🛠️ Scripts
-
-The `scripts/` directory contains Python utilities for data generation and verification:
-
-| Script | Purpose |
-|--------|---------|
-| `verify_via_notebooklm.py` | Batch-verify wordlists against NotebookLM notebook |
-| `generate_assets.py` | Generate Twemoji SVG illustrations |
-| `e2e_comprehensive_tests.py` | Playwright-based E2E test suite |
-| `consolidate_database_categories.py` | Normalize category names across levels |
-
----
-
-## 📄 Data Verification
-
-All 3,921 vocabulary entries are verified against the official Goethe-Institut A1, A2, and B1 wordlists using a strict pipeline:
-
-1. **NotebookLM MCP**: Translations, genders, plurals, and example sentences are cross-referenced and verified against the uploaded Goethe-Institut source documents via the `notebooklm` MCP server.
-2. **Automated Audits**: The `verify_via_notebooklm.py` script batch-queries NotebookLM to audit every entry for accuracy.
-
----
-
-## 📝 License
-
-This project is open-source and created for the language learning community.
-
----
-
-## 🤝 Contributing
-
-Contributions from the language learning community are welcome! Feel free to open pull requests, report issues, or suggest vocabulary additions. See [VISION.md](VISION.md) for the project roadmap and milestones.
+We enforce high-reliability client-side state execution via dual test pipelines:
+* **Syntax Verification**: Run `python scripts/debug_syntax.py` to launch an automated browser session, verify module imports, and assert console clarity.
+* **Unit Testing**: Run `python scripts/run_unit_tests.py` to execute core FSRS mathematical stability scheduling, Kölner Phonetik phonemic tests, and verb/noun lemmatization modules.

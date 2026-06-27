@@ -1652,12 +1652,10 @@ input:focus-visible {
   #sidebar-backdrop,
   header, /* Covers mobile-header and internal view headers if redundant */
   footer, /* Covers hotkey footer hints */
-  #pomodoro-sidebar-widget,
   #deck-control-deck,
   #deck-preferences-menu,
   .audio-btn,
   .play-audio-btn,
-  #pomodoro-timer-widget,
   .tts-btn,
   button,
   select,

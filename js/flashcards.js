@@ -953,7 +953,7 @@ export function togglePhoneticMirror() {
       elements.phoneticEvaluationPanel.classList.add('hidden');
     }
     if (elements.phoneticStatusMsg) {
-      elements.phoneticStatusMsg.textContent = "Bereit. Klicken Sie auf das Mikrofon, um Ihre Aufnahme zu starten.";
+      elements.phoneticStatusMsg.textContent = "Ready. Click the microphone to start recording your pronunciation.";
     }
 
     drawNativeWave();
@@ -1161,7 +1161,7 @@ export function stopPhoneticRecording() {
     elements.phoneticRecordBtn.classList.remove('bg-pink-600', 'border-pink-500', 'text-white');
   }
   if (elements.learnerSpecStatus) {
-    elements.learnerSpecStatus.textContent = "Inaktiv";
+    elements.learnerSpecStatus.textContent = "Inactive";
     elements.learnerSpecStatus.className = "text-slate-500 font-bold";
   }
 }
