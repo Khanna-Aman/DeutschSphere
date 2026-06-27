@@ -20,12 +20,14 @@ import {
   toggleHideLearned,
   toggleAutoplay,
   toggleImages,
+  toggleExamples,
   toggleDeckPrefs,
   closeDeckPrefs,
   togglePhoneticMirror,
   closePhoneticMirror,
   togglePhoneticRecording,
   updateImagesToggleUI,
+  updateExamplesToggleUI,
   updateReadModeUI,
   updateAutoplayUI,
   updateHideLearnedUI
@@ -92,6 +94,7 @@ export function initSettingsUI() {
   updateAutoplayUI();
   updateHideLearnedUI();
   updateImagesToggleUI();
+  updateExamplesToggleUI();
 }
 
 /**
