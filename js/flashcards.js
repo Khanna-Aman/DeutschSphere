@@ -22,7 +22,6 @@ export function toggleAccordion() {
 export function openAccordion() {
   state.isAccordionOpen = true;
   if (elements.accordionReveal) {
-    // F4: Let CSS .open class handle max-height (2000px) — no scrollHeight read needed
     elements.accordionReveal.classList.add('open');
   }
   if (elements.toggleRevealIcon) {
@@ -31,14 +30,12 @@ export function openAccordion() {
   if (elements.toggleRevealText) {
     elements.toggleRevealText.textContent = "Hide Details";
   }
-  updateDesktopCompanionVisibility();
 }
 
 // Collapse the detail accordion with animation
 export function closeAccordion() {
   state.isAccordionOpen = false;
   if (elements.accordionReveal) {
-    // F4: Remove class to collapse — CSS handles the transition
     elements.accordionReveal.classList.remove('open');
   }
   if (elements.toggleRevealIcon) {
@@ -47,12 +44,9 @@ export function closeAccordion() {
   if (elements.toggleRevealText) {
     elements.toggleRevealText.textContent = "Show Details";
   }
-  updateDesktopCompanionVisibility();
 }
 
 // Collapse the detail accordion instantly without animation
-// V3: Uses CSS Grid accordion — no forced reflow (void offsetHeight) needed.
-// Temporarily removes transition, closes, then restores on next frame.
 export function closeAccordionInstantly() {
   state.isAccordionOpen = false;
   if (elements.accordionReveal) {
@@ -70,7 +64,6 @@ export function closeAccordionInstantly() {
   if (elements.toggleRevealText) {
     elements.toggleRevealText.textContent = "Show Details";
   }
-  updateDesktopCompanionVisibility();
 }
 
 // Render the active flashcard
@@ -977,7 +970,6 @@ export function togglePhoneticMirror() {
     }
 
     state.phonetic.isOpen = true;
-    updateDesktopCompanionVisibility();
     
     if (elements.phoneticMirrorPanel) {
       elements.phoneticMirrorPanel.classList.add('open');
@@ -1010,7 +1002,6 @@ export function togglePhoneticMirror() {
 
 export function closePhoneticMirror() {
   state.phonetic.isOpen = false;
-  updateDesktopCompanionVisibility();
   
   if (elements.phoneticMirrorPanel) {
     elements.phoneticMirrorPanel.classList.remove('open');
@@ -1660,62 +1651,38 @@ export function toggleGrammarMatrix() {
   // Purged to enforce zero-distraction focus
 }
 
-// ==========================================================
-// DECK COMPANION DASHBOARD CONTROLLER (DESKTOP OPTIMIZATION)
-// ==========================================================
+// ============================================================
+// SIDEBAR CATEGORY WORDS — replaces the old companion panels
+// ============================================================
 
-export function initCompanionTabs() {
-  // Wire BOTH the bottom panel (mobile) and the right-column panel (desktop)
-  const pairs = [
-    {
-      tabWordlist: document.getElementById('companion-tab-wordlist'),
-      tabStats: document.getElementById('companion-tab-stats'),
-      panelWordlist: document.getElementById('companion-panel-wordlist'),
-      panelStats: document.getElementById('companion-panel-stats'),
-    },
-    {
-      tabWordlist: document.getElementById('companion-tab-wordlist-desktop'),
-      tabStats: document.getElementById('companion-tab-stats-desktop'),
-      panelWordlist: document.getElementById('companion-panel-wordlist-desktop'),
-      panelStats: document.getElementById('companion-panel-stats-desktop'),
+/**
+ * Wire the sidebar "Category Words" toggle button.
+ * Called once on app init.
+ */
+export function initSidebarCategoryWords() {
+  const btn = document.getElementById('toggle-category-words-btn');
+  const content = document.getElementById('category-words-content');
+  const icon = document.getElementById('category-words-toggle-icon');
+  if (!btn || !content || !icon) return;
+
+  btn.addEventListener('click', () => {
+    const isOpen = !content.classList.contains('hidden');
+    if (isOpen) {
+      content.classList.add('hidden');
+      icon.style.transform = 'rotate(0deg)';
+    } else {
+      content.classList.remove('hidden');
+      icon.style.transform = 'rotate(180deg)';
+      // Refresh the word list when user opens the panel
+      renderCompanionWordList();
     }
-  ];
-
-  pairs.forEach(({ tabWordlist, tabStats, panelWordlist, panelStats }) => {
-    if (!tabWordlist || !tabStats || !panelWordlist || !panelStats) return;
-
-    const selectTab = (activeTab, inactiveTab, activePanel, inactivePanel) => {
-      activeTab.setAttribute('aria-selected', 'true');
-      activeTab.classList.add('border-indigo-500', 'text-indigo-400');
-      activeTab.classList.remove('border-transparent', 'text-slate-400');
-
-      inactiveTab.setAttribute('aria-selected', 'false');
-      inactiveTab.classList.remove('border-indigo-500', 'text-indigo-400');
-      inactiveTab.classList.add('border-transparent', 'text-slate-400');
-
-      activePanel.classList.remove('hidden');
-      inactivePanel.classList.add('hidden');
-    };
-
-    tabWordlist.addEventListener('click', () => {
-      selectTab(tabWordlist, tabStats, panelWordlist, panelStats);
-    });
-
-    tabStats.addEventListener('click', () => {
-      selectTab(tabStats, tabWordlist, panelStats, panelWordlist);
-      updateCompanionStats();
-    });
   });
 }
 
 let companionScrollListenerAdded = false;
 
 /**
- * Generic virtual-scroll renderer for any companion word-list container.
- * @param {HTMLElement} container  - The scrollable outer div
- * @param {string} scrollerHeightId - ID of the invisible height-spacer element
- * @param {string} visibleContainerId - ID of the absolutely-positioned visible items div
- * @param {boolean} force - Force a re-render even if range didn't change
+ * Virtual-scroll renderer for the sidebar category word list.
  */
 function updateCompanionVirtualScrollForContainer(container, scrollerHeightId, visibleContainerId, force = false) {
   const scrollerHeight = document.getElementById(scrollerHeightId);
@@ -1725,7 +1692,7 @@ function updateCompanionVirtualScrollForContainer(container, scrollerHeightId, v
 
   const ITEM_HEIGHT = 54;
   const scrollTop = container.scrollTop;
-  const viewportHeight = container.clientHeight || 220;
+  const viewportHeight = container.clientHeight || 260;
 
   const totalItems = state.currentDeck.length;
   const rawStartIndex = Math.floor(scrollTop / ITEM_HEIGHT);
@@ -1793,13 +1760,20 @@ function updateCompanionVirtualScrollForContainer(container, scrollerHeightId, v
       state.currentIndex = idx;
       renderCard();
       speakWord();
+      // On mobile: close sidebar after jumping to a word
+      const sidebar = document.getElementById('sidebar');
+      const backdrop = document.getElementById('sidebar-backdrop');
+      if (sidebar && window.innerWidth < 768) {
+        sidebar.classList.add('-translate-x-full');
+        if (backdrop) backdrop.classList.add('hidden');
+      }
     });
 
     visibleContainer.appendChild(itemBtn);
   }
 }
 
-/** Backward-compat wrapper for the original mobile-only container */
+/** Update virtual scroll for the sidebar word list container */
 export function updateCompanionVirtualScroll(force = false) {
   const container = document.getElementById('companion-word-list-items');
   if (!container) return;
@@ -1811,119 +1785,46 @@ export function updateCompanionVirtualScroll(force = false) {
   );
 }
 
+/** Render the word list into the sidebar Category Words panel */
 export function renderCompanionWordList() {
-  // Render into both mobile bottom panel and desktop right-column panel
-  const containerIds = ['companion-word-list-items', 'companion-word-list-items-desktop'];
+  const container = document.getElementById('companion-word-list-items');
+  if (!container || !state.currentDeck || state.currentDeck.length === 0) return;
 
-  containerIds.forEach(containerId => {
-    const container = document.getElementById(containerId);
-    if (!container || !state.currentDeck || state.currentDeck.length === 0) return;
+  const ITEM_HEIGHT = 54;
+  const totalItems = state.currentDeck.length;
 
-    const ITEM_HEIGHT = 54;
-    const totalItems = state.currentDeck.length;
+  container.style.position = 'relative';
 
-    container.style.position = 'relative';
+  const scrollerId = 'companion-word-list-items-scroller-height';
+  const visibleId = 'companion-word-list-items-visible-items';
 
-    const scrollerId = containerId + '-scroller-height';
-    const visibleId = containerId + '-visible-items';
+  let scrollerHeight = document.getElementById(scrollerId);
+  let visibleContainer = document.getElementById(visibleId);
 
-    let scrollerHeight = document.getElementById(scrollerId);
-    let visibleContainer = document.getElementById(visibleId);
-
-    if (!scrollerHeight || !visibleContainer) {
-      container.innerHTML = `
-        <div id="${scrollerId}" style="height: ${totalItems * ITEM_HEIGHT}px; width: 1px; pointer-events: none; visibility: hidden;"></div>
-        <div id="${visibleId}" class="space-y-1.5 flex flex-col absolute left-0 right-0" style="top: 0px;"></div>
-      `;
-      scrollerHeight = document.getElementById(scrollerId);
-      visibleContainer = document.getElementById(visibleId);
-    } else {
-      scrollerHeight.style.height = `${totalItems * ITEM_HEIGHT}px`;
-    }
-
-    // Register scroll event listener once per container
-    if (!container.__companionScrollBound) {
-      container.addEventListener('scroll', () => updateCompanionVirtualScrollForContainer(container, scrollerId, visibleId));
-      container.__companionScrollBound = true;
-    }
-
-    // Scroll to current card
-    const targetScrollTop = state.currentIndex * ITEM_HEIGHT - (container.clientHeight - ITEM_HEIGHT) / 2;
-    container.scrollTop = Math.max(0, targetScrollTop);
-
-    // Initial render
-    updateCompanionVirtualScrollForContainer(container, scrollerId, visibleId, true);
-  });
-}
-
-export function updateCompanionStats() {
-  if (!state.currentDeck || state.currentDeck.length === 0) return;
-
-  let masteredCount = 0;
-  let dueCount = 0;
-  let totalFSRSRetrievability = 0;
-  let fsrsRatedCount = 0;
-
-  state.currentDeck.forEach(card => {
-    const srsInfo = getSRSInfo(card.id);
-    if (srsInfo.stability >= 7) masteredCount++;
-    if (srsInfo.isDue) dueCount++;
-    if (srsInfo.retrievability !== undefined && srsInfo.state !== 0) {
-      totalFSRSRetrievability += srsInfo.retrievability;
-      fsrsRatedCount++;
-    }
-  });
-
-  const masteryPercent = Math.round((masteredCount / state.currentDeck.length) * 100);
-  const reviewedCount = state.session ? state.session.cardsReviewed : 0;
-  const averageRetention = fsrsRatedCount > 0 ? totalFSRSRetrievability / fsrsRatedCount : 0.95;
-  const formattedRetention = Math.round(averageRetention * 100);
-
-  // Helper to update a bar element with colour coding
-  const updateBar = (barEl, pct) => {
-    if (!barEl) return;
-    barEl.style.width = `${pct}%`;
-    barEl.className = 'h-full transition-all duration-300 ';
-    if (pct >= 90) barEl.classList.add('bg-emerald-500');
-    else if (pct >= 80) barEl.classList.add('bg-amber-500');
-    else barEl.classList.add('bg-rose-500');
-  };
-
-  // Populate both mobile (bottom) and desktop (right column) panels
-  const suffixes = ['', '-desktop'];
-  suffixes.forEach(s => {
-    const masteredEl  = document.getElementById(`companion-stat-mastered${s}`);
-    const dueEl       = document.getElementById(`companion-stat-due${s}`);
-    const reviewedEl  = document.getElementById(`companion-stat-reviewed${s}`);
-    const rateEl      = document.getElementById(`companion-retention-rate${s}`);
-    const barEl       = document.getElementById(`companion-retention-bar${s}`);
-
-    if (masteredEl)  masteredEl.textContent  = `${masteryPercent}%`;
-    if (dueEl)       dueEl.textContent       = dueCount;
-    if (reviewedEl)  reviewedEl.textContent  = reviewedCount;
-    if (rateEl)      rateEl.textContent      = `${formattedRetention}%`;
-    updateBar(barEl, formattedRetention);
-  });
-}
-
-export function syncAdaptiveLayout() {
-  const displayArea = document.getElementById('card-display-area');
-  if (!displayArea) return;
-  
-  const isRevealed = state.isAccordionOpen || (state.phonetic && state.phonetic.isOpen);
-  if (isRevealed) {
-    displayArea.classList.add('lg:grid', 'lg:grid-cols-2', 'lg:gap-6', 'lg:items-start', 'lg:space-y-0');
+  if (!scrollerHeight || !visibleContainer) {
+    container.innerHTML = `
+      <div id="${scrollerId}" style="height: ${totalItems * ITEM_HEIGHT}px; width: 1px; pointer-events: none; visibility: hidden;"></div>
+      <div id="${visibleId}" class="space-y-1.5 flex flex-col absolute left-0 right-0" style="top: 0px;"></div>
+    `;
+    scrollerHeight = document.getElementById(scrollerId);
+    visibleContainer = document.getElementById(visibleId);
   } else {
-    displayArea.classList.remove('lg:grid', 'lg:grid-cols-2', 'lg:gap-6', 'lg:items-start', 'lg:space-y-0');
+    scrollerHeight.style.height = `${totalItems * ITEM_HEIGHT}px`;
   }
+
+  if (!container.__companionScrollBound) {
+    container.addEventListener('scroll', () => updateCompanionVirtualScrollForContainer(container, scrollerId, visibleId));
+    container.__companionScrollBound = true;
+  }
+
+  const targetScrollTop = state.currentIndex * ITEM_HEIGHT - (container.clientHeight - ITEM_HEIGHT) / 2;
+  container.scrollTop = Math.max(0, targetScrollTop);
+
+  updateCompanionVirtualScrollForContainer(container, scrollerId, visibleId, true);
 }
 
-export function updateDesktopCompanionVisibility() {
-  // On desktop, the right aside (companion-right-col) is always shown via lg:flex CSS.
-  // Hide the duplicate bottom companion panel on lg+ so we don't double-render.
-  const bottomCompanion = document.getElementById('companion-dashboard');
-  if (bottomCompanion) {
-    bottomCompanion.classList.add('lg:hidden');
-  }
-  syncAdaptiveLayout();
-}
+/** No-op stubs — Session Stats removed. Retained to avoid reference errors in legacy call sites. */
+export function updateCompanionStats() {}
+export function initCompanionTabs() {}
+export function updateDesktopCompanionVisibility() {}
+export function syncAdaptiveLayout() {}

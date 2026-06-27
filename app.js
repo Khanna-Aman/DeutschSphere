@@ -30,8 +30,9 @@ import {
 import {
   updateImagesToggleUI,
   renderCard,
-  initCompanionTabs
+  initSidebarCategoryWords
 } from './js/flashcards.js';
+
 
 import {
   handleRouting
@@ -274,7 +275,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   fetchData();
   setupEventListeners();
   setupSwipeGestures();
-  initCompanionTabs();
+  initSidebarCategoryWords();
   updateImagesToggleUI();
   initTTS();
 

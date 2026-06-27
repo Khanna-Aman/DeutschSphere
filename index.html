@@ -266,6 +266,7 @@
           <span class="font-semibold text-xs leading-none">Send Feedback</span>
         </div>
       </button>
+
     </nav>
 
     <!-- Categories Navigation List -->
@@ -274,9 +275,20 @@
       <!-- Dynamically filled with javascript -->
     </div>
 
-
-
-
+    <!-- Category Words List (collapsible) -->
+    <div class="border-t border-slate-800/60" id="sidebar-category-words-section">
+      <button id="toggle-category-words-btn" class="w-full px-6 py-3.5 flex items-center justify-between text-xs font-bold text-slate-400 hover:text-white uppercase tracking-wider transition-all select-none">
+        <span class="flex items-center gap-2">
+          <i class="fa-solid fa-list-ul text-indigo-400"></i>
+          <span>Category Words</span>
+        </span>
+        <i id="category-words-toggle-icon" class="fa-solid fa-chevron-down text-[10px] transition-transform duration-300"></i>
+      </button>
+      <div id="category-words-content" class="px-3 pb-3 hidden">
+        <div class="text-[10px] text-slate-500 px-3 mb-2 font-semibold">Quick-jump to any word in current category:</div>
+        <div id="companion-word-list-items" class="max-h-[260px] overflow-y-auto pr-1 custom-scrollbar font-display"></div>
+      </div>
+    </div>
 
     <!-- Overall Mastery Progress -->
     <div class="px-6 py-4 border-t border-slate-800/60 bg-slate-950/10">
@@ -555,7 +567,7 @@
       </div>
     </div>
 
-    <div id="flashcard-workspace-container" class="flex-1 flex flex-col justify-start items-center w-full max-w-3xl lg:max-w-5xl xl:max-w-6xl mx-auto pt-4 sm:pt-6 transition-all duration-300">
+    <div id="flashcard-workspace-container" class="flex-1 flex flex-col justify-start items-center w-full max-w-3xl mx-auto pt-4 sm:pt-6 transition-all duration-300">
       
       <!-- Progress Bar Indicator -->
       <div class="w-full mb-4 space-y-2">
@@ -568,11 +580,11 @@
         </div>
       </div>
 
-      <!-- Unified Workspace Layout — 1 col mobile/tablet, 2 col lg+ desktop -->
-      <div id="flashcard-workspace-grid" class="w-full flex flex-col lg:flex-row gap-4 lg:gap-6 mt-2 lg:items-start">
-        
+      <!-- Workspace — single column on all breakpoints -->
+      <div id="flashcard-workspace-grid" class="w-full flex flex-col gap-4 mt-2">
+
         <!-- Main Column: Audio Trainer, Flashcard, Details, Controls -->
-        <div id="flashcard-workspace-left" class="space-y-4 w-full lg:flex-1 lg:min-w-0">
+        <div id="flashcard-workspace-left" class="space-y-4 w-full">
 
           <!-- Continuous Audio Trainer Panel -->
           <div id="audio-trainer-panel" class="w-full bg-slate-900/60 glass border border-slate-800/85 rounded-2xl py-2.5 px-4 flex flex-col sm:flex-row items-center justify-between gap-4 transition-all duration-300 shadow-xl shadow-slate-950/20">
@@ -824,127 +836,7 @@
           </button>
         </div>
 
-        <div id="companion-dashboard" class="glass border border-slate-800/80 rounded-2xl p-5 shadow-xl shadow-slate-950/40 space-y-4 transition-all duration-300 mt-4 lg:hidden">
-          <!-- Tabs Header -->
-          <div class="flex items-center justify-between border-b border-slate-800/60 pb-2.5">
-            <div class="flex gap-2" id="companion-tabs" role="tablist">
-              <button id="companion-tab-wordlist" role="tab" aria-selected="true" aria-controls="companion-panel-wordlist" class="text-xs font-bold uppercase tracking-wider pb-1 border-b-2 border-indigo-500 text-indigo-400 transition-all cursor-pointer hover:text-indigo-300">
-                Category Words
-              </button>
-              <button id="companion-tab-stats" role="tab" aria-selected="false" aria-controls="companion-panel-stats" class="text-xs font-bold uppercase tracking-wider pb-1 border-b-2 border-transparent text-slate-400 transition-all cursor-pointer hover:text-slate-300">
-                Session Stats
-              </button>
-            </div>
-            <span class="text-[9px] text-slate-500 font-bold uppercase tracking-widest font-sans">Companion</span>
-          </div>
-
-          <!-- Panel 1: Category Words (Wordlist scrollbox) -->
-          <div id="companion-panel-wordlist" role="tabpanel" class="space-y-3">
-            <div class="text-[10px] text-slate-400 leading-normal font-semibold">
-              Quick-jump to other words in this category:
-            </div>
-            <div id="companion-word-list-items" class="max-h-[220px] overflow-y-auto pr-1 space-y-1.5 custom-scrollbar font-display">
-              <!-- Injected dynamically in flashcards.js -->
-            </div>
-          </div>
-
-          <!-- Panel 2: Live Statistics -->
-          <div id="companion-panel-stats" role="tabpanel" class="hidden space-y-4">
-            <div class="grid grid-cols-3 gap-2 sm:gap-3">
-              <div class="bg-slate-950/40 border border-slate-900 rounded-xl p-2 sm:p-3 text-center">
-                <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block">SRS Mastery</span>
-                <span id="companion-stat-mastered" class="text-lg font-black text-emerald-400 font-mono block mt-1">0%</span>
-                <span class="text-[9px] text-slate-400 block">Stability ≥ 7d</span>
-              </div>
-              <div class="bg-slate-950/40 border border-slate-900 rounded-xl p-2 sm:p-3 text-center">
-                <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block">Due Cards</span>
-                <span id="companion-stat-due" class="text-lg font-black text-indigo-400 font-mono block mt-1">0</span>
-                <span class="text-[9px] text-slate-400 block">Review required</span>
-              </div>
-              <div class="bg-slate-950/40 border border-slate-900 rounded-xl p-2 sm:p-3 text-center">
-                <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block">Session Cards</span>
-                <span id="companion-stat-reviewed" class="text-lg font-black text-pink-400 font-mono block mt-1">0</span>
-                <span class="text-[9px] text-slate-400 block">Reviewed today</span>
-              </div>
-            </div>
-
-            <!-- Retrievability Indicator -->
-            <div class="space-y-1.5 pt-2 border-t border-slate-800/40">
-              <div class="flex justify-between text-[10px] font-bold text-slate-400">
-                <span class="uppercase tracking-wider">Estimated Retention Rate</span>
-                <span id="companion-retention-rate" class="font-mono text-emerald-400">0%</span>
-              </div>
-              <div class="w-full bg-slate-950/50 rounded-full h-1.5 overflow-hidden border border-slate-900/50">
-                <div id="companion-retention-bar" class="bg-emerald-500 h-full w-0 transition-all duration-300"></div>
-              </div>
-            </div>
-          </div>
-
-        </div> <!-- End of Deck Companion Dashboard -->
-
-        </div> <!-- End of Main Column / flashcard-workspace-left -->
-
-        <!-- Desktop Right Companion Column (lg+) — sticky sidebar panel -->
-        <aside id="companion-right-col" class="hidden lg:flex flex-col gap-4 lg:w-[300px] xl:w-[340px] shrink-0 sticky top-4 self-start">
-          <!-- Companion Panel Right (populated by JS: updateDesktopCompanionVisibility) -->
-          <div id="companion-dashboard-desktop" class="glass border border-slate-800/80 rounded-2xl p-5 shadow-xl shadow-slate-950/40 space-y-4 transition-all duration-300">
-            <!-- Tabs Header -->
-            <div class="flex items-center justify-between border-b border-slate-800/60 pb-2.5">
-              <div class="flex gap-2" id="companion-tabs-desktop" role="tablist">
-                <button id="companion-tab-wordlist-desktop" role="tab" aria-selected="true" aria-controls="companion-panel-wordlist-desktop" class="text-xs font-bold uppercase tracking-wider pb-1 border-b-2 border-indigo-500 text-indigo-400 transition-all cursor-pointer hover:text-indigo-300">
-                  Category Words
-                </button>
-                <button id="companion-tab-stats-desktop" role="tab" aria-selected="false" aria-controls="companion-panel-stats-desktop" class="text-xs font-bold uppercase tracking-wider pb-1 border-b-2 border-transparent text-slate-400 transition-all cursor-pointer hover:text-slate-300">
-                  Session Stats
-                </button>
-              </div>
-              <span class="text-[9px] text-slate-500 font-bold uppercase tracking-widest font-sans">Companion</span>
-            </div>
-
-            <!-- Panel 1: Category Words -->
-            <div id="companion-panel-wordlist-desktop" role="tabpanel" class="space-y-3">
-              <div class="text-[10px] text-slate-400 leading-normal font-semibold">
-                Quick-jump to other words in this category:
-              </div>
-              <div id="companion-word-list-items-desktop" class="max-h-[340px] overflow-y-auto pr-1 space-y-1.5 custom-scrollbar font-display">
-                <!-- Injected dynamically -->
-              </div>
-            </div>
-
-            <!-- Panel 2: Live Statistics -->
-            <div id="companion-panel-stats-desktop" role="tabpanel" class="hidden space-y-4">
-              <div class="grid grid-cols-3 gap-2">
-                <div class="bg-slate-950/40 border border-slate-900 rounded-xl p-3 text-center">
-                  <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block">SRS Mastery</span>
-                  <span id="companion-stat-mastered-desktop" class="text-lg font-black text-emerald-400 font-mono block mt-1">0%</span>
-                  <span class="text-[9px] text-slate-400 block">Stability ≥ 7d</span>
-                </div>
-                <div class="bg-slate-950/40 border border-slate-900 rounded-xl p-3 text-center">
-                  <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block">Due Cards</span>
-                  <span id="companion-stat-due-desktop" class="text-lg font-black text-indigo-400 font-mono block mt-1">0</span>
-                  <span class="text-[9px] text-slate-400 block">Review required</span>
-                </div>
-                <div class="bg-slate-950/40 border border-slate-900 rounded-xl p-3 text-center">
-                  <span class="text-[9px] font-bold text-slate-500 uppercase tracking-widest block">Reviewed</span>
-                  <span id="companion-stat-reviewed-desktop" class="text-lg font-black text-pink-400 font-mono block mt-1">0</span>
-                  <span class="text-[9px] text-slate-400 block">Today</span>
-                </div>
-              </div>
-              <!-- Retrievability Indicator -->
-              <div class="space-y-1.5 pt-2 border-t border-slate-800/40">
-                <div class="flex justify-between text-[10px] font-bold text-slate-400">
-                  <span class="uppercase tracking-wider">Estimated Retention</span>
-                  <span id="companion-retention-rate-desktop" class="font-mono text-emerald-400">0%</span>
-                </div>
-                <div class="w-full bg-slate-950/50 rounded-full h-1.5 overflow-hidden border border-slate-900/50">
-                  <div id="companion-retention-bar-desktop" class="bg-emerald-500 h-full w-0 transition-all duration-300"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </aside>
-
-      </div> <!-- End of Unified Workspace Layout / flashcard-workspace-grid -->
+      </div> <!-- End of Workspace / flashcard-workspace-grid -->
 
     </div> <!-- End of Active Flashcard Workspace / flashcard-workspace-container -->
 
