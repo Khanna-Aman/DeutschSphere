@@ -1,4 +1,4 @@
-// js/flashcards.js — Leitner SRS Flashcards, Preferences & Phonetik-Spiegel Module
+// js/flashcards.js — FSRS SRS Flashcards, Preferences & Phonetik-Spiegel Module
 
 import { state, elements, categoryTranslations, getSRSInfo, getCategoryIcon, saveSRSState, shuffleArray, safeSetItem, schedulePersist } from './state.js';
 import { prepareUtterance, speakWord, warmUpTTS, getSharedAudioContext } from './audio.js';
@@ -176,27 +176,25 @@ function renderCardMetadataBadges(card, deckLength) {
     badgesHTML += `<span class="px-2 py-0.5 bg-slate-900 border border-indigo-950 text-indigo-400 text-[10px] font-semibold rounded-md">Plural: ${card.plural}</span>`;
   }
 
-  // Add Leitner Spaced Repetition (SRS) Box badge
+  // Add FSRS Spaced Repetition (SRS) scheduling badge
   const srsInfo = getSRSInfo(card.id);
-  let boxBadgeHTML = '';
-  if (srsInfo.box === 1) {
-    if (srsInfo.lastReviewed > 0) {
-      boxBadgeHTML = `<span class="px-2 py-0.5 bg-rose-500/10 border border-rose-500/35 text-rose-400 text-[10px] font-bold rounded-md flex items-center gap-1" title="Incorrectly answered • Review immediately"><i class="fa-solid fa-circle-notch animate-spin text-[8px]"></i> Box 1</span>`;
+  let fsrsBadgeHTML = '';
+  
+  if (srsInfo.state === 0) { // State.New
+    fsrsBadgeHTML = `<span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-slate-400 text-[10px] font-semibold rounded-md flex items-center gap-1" title="Unstudied • New">New</span>`;
+  } else if (srsInfo.state === 1 || srsInfo.state === 3) { // State.Learning / State.Relearning
+    fsrsBadgeHTML = `<span class="px-2 py-0.5 bg-rose-500/10 border border-rose-500/35 text-rose-400 text-[10px] font-bold rounded-md flex items-center gap-1" title="Learning Card • Review soon"><i class="fa-solid fa-circle-notch animate-spin text-[8px]"></i> Learning</span>`;
+  } else if (srsInfo.state === 2) { // State.Review
+    const stabilityStr = `S: ${srsInfo.stability.toFixed(1)}d`;
+    if (srsInfo.stability >= 15) {
+      fsrsBadgeHTML = `<span class="px-2 py-0.5 bg-emerald-500/10 border border-emerald-500/35 text-emerald-400 text-[10px] font-bold rounded-md flex items-center gap-1" title="Mastered • Memory Stability: ${srsInfo.stability.toFixed(2)} days"><i class="fa-solid fa-crown text-[8px]"></i> ${stabilityStr} (Master)</span>`;
     } else {
-      boxBadgeHTML = `<span class="px-2 py-0.5 bg-slate-900 border border-slate-800 text-slate-400 text-[10px] font-semibold rounded-md flex items-center gap-1" title="Unstudied • New">Box 1 (New)</span>`;
+      fsrsBadgeHTML = `<span class="px-2 py-0.5 bg-indigo-500/10 border border-indigo-500/35 text-indigo-400 text-[10px] font-bold rounded-md flex items-center gap-1" title="Review Card • Memory Stability: ${srsInfo.stability.toFixed(2)} days"><i class="fa-solid fa-chart-line text-[8px]"></i> ${stabilityStr}</span>`;
     }
-  } else if (srsInfo.box === 2) {
-    boxBadgeHTML = `<span class="px-2 py-0.5 bg-indigo-500/10 border border-indigo-500/35 text-indigo-400 text-[10px] font-bold rounded-md flex items-center gap-1" title="Review every 2 days">Box 2</span>`;
-  } else if (srsInfo.box === 3) {
-    boxBadgeHTML = `<span class="px-2 py-0.5 bg-violet-500/10 border border-violet-500/35 text-violet-400 text-[10px] font-bold rounded-md flex items-center gap-1" title="Review every 5 days">Box 3</span>`;
-  } else if (srsInfo.box === 4) {
-    boxBadgeHTML = `<span class="px-2 py-0.5 bg-purple-500/10 border border-purple-500/35 text-purple-400 text-[10px] font-bold rounded-md flex items-center gap-1" title="Review every 9 days">Box 4</span>`;
-  } else if (srsInfo.box === 5) {
-    boxBadgeHTML = `<span class="px-2 py-0.5 bg-emerald-500/10 border border-emerald-500/35 text-emerald-400 text-[10px] font-bold rounded-md flex items-center gap-1" title="Mastered • Review every 15 days"><i class="fa-solid fa-crown text-[8px]"></i> Box 5 (Master)</span>`;
   }
   
-  if (boxBadgeHTML) {
-    badgesHTML += boxBadgeHTML;
+  if (fsrsBadgeHTML) {
+    badgesHTML += fsrsBadgeHTML;
   }
 
   // Add Learned status badge and format learned button
@@ -1702,8 +1700,20 @@ export function updateCompanionVirtualScroll(force = false) {
     else if (card.gender === 'die') genderGlowClass = 'text-pink-400';
     else if (card.gender === 'das') genderGlowClass = 'text-emerald-400';
 
-    const cardStateText = srsInfo.isNew ? 'New' : `Box ${srsInfo.box}`;
-    const cardStateColor = srsInfo.isNew ? 'text-blue-500/85 bg-blue-500/5' : 'text-indigo-400 bg-indigo-500/5';
+    let cardStateText = '';
+    let cardStateColor = '';
+    if (srsInfo.state === 0) { // State.New
+      cardStateText = 'New';
+      cardStateColor = 'text-blue-500 bg-blue-500/10 border border-blue-500/20';
+    } else if (srsInfo.state === 1 || srsInfo.state === 3) { // State.Learning / State.Relearning
+      cardStateText = 'Learning';
+      cardStateColor = 'text-rose-500 bg-rose-500/10 border border-rose-500/20';
+    } else { // State.Review
+      cardStateText = `S: ${srsInfo.stability.toFixed(1)}d`;
+      cardStateColor = srsInfo.stability >= 15
+        ? 'text-emerald-500 bg-emerald-500/10 border border-emerald-500/20'
+        : 'text-indigo-400 bg-indigo-500/10 border border-indigo-500/20';
+    }
 
     const itemBtn = document.createElement('button');
     // Enforce strict fixed height of 48px to align perfectly with our 54px offset (48px item + 6px space-y-1.5)
@@ -1795,7 +1805,7 @@ export function updateCompanionStats() {
 
   state.currentDeck.forEach(card => {
     const srsInfo = getSRSInfo(card.id);
-    if (srsInfo.box >= 4) masteredCount++;
+    if (srsInfo.stability >= 7) masteredCount++;
     if (srsInfo.isDue) dueCount++;
 
     // Calculate retrievability for retrievability retention rate
