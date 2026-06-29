@@ -58,7 +58,7 @@ import {
 // JSON data file is modified. Failing to bump invalidates all users' IDB wordlist
 // caches and causes them to see stale data until they manually clear storage.
 // Format: 'v<major>.<minor>.<patch>'  e.g., v1.0.1 → v1.0.2
-const WORDLIST_CACHE_VERSION = 'v1.0.4'; // b1: restored curated 1363-list, cleared dead/duplicate image refs; a1/a2: plural/english/word_class corrections + curated out bare function words
+const WORDLIST_CACHE_VERSION = 'v1.0.5'; // schema: collapsed redundant image_path field into single 'image' field across all levels
 
 // Global hooks for early-paint theme execution inside HTML Head
 window.applyTheme = applyTheme;
@@ -230,7 +230,7 @@ export async function fetchData() {
     // Trigger lazy background pre-caching for generated level images (disabled during automated tests to speed up navigation)
     if ('serviceWorker' in navigator && navigator.serviceWorker.controller && !navigator.webdriver) {
       const imageUrls = state.allCards
-        .map(c => c.image_path || c.image)
+        .map(c => c.image)
         .filter(img => !!img)
         .map(img => `./${level}/${img}`);
       

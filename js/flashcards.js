@@ -220,7 +220,7 @@ function renderCardMetadataBadges(card, deckLength) {
  * Also configures high-accessibility descriptive alt text (WCAG 2.1 SC 1.1.1).
  */
 function renderCardImage(card) {
-  const activeImage = card.image_path || card.image;
+  const activeImage = card.image;
   const isImageAllowed = (state.currentLevel === 'a1' || state.currentLevel === 'a2');
   if (state.showImages && isImageAllowed && activeImage) {
     if (elements.cardImageContainer) {
@@ -295,7 +295,7 @@ function preloadAdjacentCardImages() {
   indicesToPreload.forEach(idx => {
     const targetCard = state.currentDeck[idx];
     if (targetCard) {
-      const imgPath = targetCard.image_path || targetCard.image;
+      const imgPath = targetCard.image;
       if (imgPath) {
         const img = new Image();
         img.src = state.currentLevel + '/' + imgPath;

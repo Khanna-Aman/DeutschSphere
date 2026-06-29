@@ -14,8 +14,7 @@
     "example_en": "When do you take off?",
     "image": "images/card_1.webp",
     "id": 1,
-    "image_tier": "B",
-    "image_path": "images/card_1.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Abflug",
@@ -32,8 +31,7 @@
     "example_en": "The departure is at 11:20 AM.",
     "image": "images/card_2.webp",
     "id": 2,
-    "image_tier": "B",
-    "image_path": "images/card_2.webp"
+    "image_tier": "B"
   },
   {
     "german": "an",
@@ -50,8 +48,7 @@
     "example_en": "We are meeting at the train station.",
     "image": "images/card_3.webp",
     "id": 3,
-    "image_tier": "B",
-    "image_path": "images/card_3.webp"
+    "image_tier": "B"
   },
   {
     "german": "an sein",
@@ -68,8 +65,7 @@
     "example_en": "The light is still on.",
     "image": "images/card_4.webp",
     "id": 4,
-    "image_tier": "B",
-    "image_path": "images/card_4.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Ansage",
@@ -86,8 +82,7 @@
     "example_en": "Listen to the announcements.",
     "image": "images/card_5.webp",
     "id": 5,
-    "image_tier": "B",
-    "image_path": "images/card_5.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Anschluss",
@@ -104,8 +99,7 @@
     "example_en": "In Mannheim you have a connection to Saarbrücken.",
     "image": "images/card_6.webp",
     "id": 6,
-    "image_tier": "B",
-    "image_path": "images/card_6.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Antwort",
@@ -122,8 +116,7 @@
     "example_en": "Unfortunately, he gives no answer.",
     "image": "images/card_7.webp",
     "id": 7,
-    "image_tier": "B",
-    "image_path": "images/card_7.webp"
+    "image_tier": "B"
   },
   {
     "german": "antworten",
@@ -140,8 +133,7 @@
     "example_en": "He is not answering.",
     "image": "images/card_8.webp",
     "id": 8,
-    "image_tier": "B",
-    "image_path": "images/card_8.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Anzeige",
@@ -158,8 +150,7 @@
     "example_en": "I read your advertisement in the newspaper.",
     "image": "images/card_9.webp",
     "id": 9,
-    "image_tier": "B",
-    "image_path": "images/card_9.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Apartment",
@@ -176,8 +167,7 @@
     "example_en": "We have rented an apartment.",
     "image": "images/card_10.webp",
     "id": 10,
-    "image_tier": "B",
-    "image_path": "images/card_10.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Apfel",
@@ -194,8 +184,7 @@
     "example_en": "One pound of apples, please.",
     "image": "images/card_11.webp",
     "id": 11,
-    "image_tier": "B",
-    "image_path": "images/card_11.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Appetit",
@@ -212,8 +201,7 @@
     "example_en": "Enjoy your meal!",
     "image": "images/card_12.webp",
     "id": 12,
-    "image_tier": "B",
-    "image_path": "images/card_12.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Arbeit",
@@ -230,8 +218,7 @@
     "example_en": "My brother is looking for work.",
     "image": "images/card_13.webp",
     "id": 13,
-    "image_tier": "B",
-    "image_path": "images/card_13.webp"
+    "image_tier": "B"
   },
   {
     "german": "arbeiten",
@@ -248,8 +235,7 @@
     "example_en": "Where do you work?",
     "image": "images/card_14.webp",
     "id": 14,
-    "image_tier": "B",
-    "image_path": "images/card_14.webp"
+    "image_tier": "B"
   },
   {
     "german": "arbeitslos",
@@ -266,8 +252,7 @@
     "example_en": "There are many people here who have been unemployed for a long time.",
     "image": "images/card_15.webp",
     "id": 15,
-    "image_tier": "B",
-    "image_path": "images/card_15.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Arbeitsplatz",
@@ -284,8 +269,7 @@
     "example_en": "A printer is missing at my workplace.",
     "image": "images/card_16.webp",
     "id": 16,
-    "image_tier": "B",
-    "image_path": "images/card_16.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Arm",
@@ -302,8 +286,7 @@
     "example_en": "My arm hurts.",
     "image": "images/card_17.webp",
     "id": 17,
-    "image_tier": "B",
-    "image_path": "images/card_17.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Arzt",
@@ -320,8 +303,7 @@
     "example_en": "Tomorrow I have an appointment with my doctor.",
     "image": "images/card_18.webp",
     "id": 18,
-    "image_tier": "B",
-    "image_path": "images/card_18.webp"
+    "image_tier": "B"
   },
   {
     "german": "auch",
@@ -338,8 +320,7 @@
     "example_en": "I am also Spanish.",
     "image": "images/card_19.webp",
     "id": 19,
-    "image_tier": "B",
-    "image_path": "images/card_19.webp"
+    "image_tier": "B"
   },
   {
     "german": "auf",
@@ -356,8 +337,7 @@
     "example_en": "The children are playing on the street.",
     "image": "images/card_20.webp",
     "id": 20,
-    "image_tier": "B",
-    "image_path": "images/card_20.webp"
+    "image_tier": "B"
   },
   {
     "german": "auf sein",
@@ -374,8 +354,7 @@
     "example_en": "You don't need the key. The apartment is open.",
     "image": "images/card_22.webp",
     "id": 21,
-    "image_tier": "B",
-    "image_path": "images/card_22.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Aufgabe",
@@ -392,8 +371,7 @@
     "example_en": "That is a difficult task.",
     "image": "images/card_23.webp",
     "id": 22,
-    "image_tier": "B",
-    "image_path": "images/card_23.webp"
+    "image_tier": "B"
   },
   {
     "german": "aufhören",
@@ -410,8 +388,7 @@
     "example_en": "The course ends in a week.",
     "image": "images/card_24.webp",
     "id": 23,
-    "image_tier": "B",
-    "image_path": "images/card_24.webp"
+    "image_tier": "B"
   },
   {
     "german": "aufstehen",
@@ -428,8 +405,7 @@
     "example_en": "I always have to get up at four o'clock.",
     "image": "images/card_25.webp",
     "id": 24,
-    "image_tier": "B",
-    "image_path": "images/card_25.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Aufzug",
@@ -446,8 +422,7 @@
     "example_en": "There is no elevator in this house.",
     "image": "images/card_26.webp",
     "id": 25,
-    "image_tier": "B",
-    "image_path": "images/card_26.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Auge",
@@ -464,8 +439,7 @@
     "example_en": "He has blue eyes.",
     "image": "images/card_27.webp",
     "id": 26,
-    "image_tier": "B",
-    "image_path": "images/card_27.webp"
+    "image_tier": "B"
   },
   {
     "german": "aus",
@@ -482,8 +456,7 @@
     "example_en": "He comes from Brazil.",
     "image": "images/card_29.webp",
     "id": 27,
-    "image_tier": "B",
-    "image_path": "images/card_29.webp"
+    "image_tier": "B"
   },
   {
     "german": "aus sein",
@@ -500,8 +473,7 @@
     "example_en": "The light is off. School is over.",
     "image": "images/card_30.webp",
     "id": 28,
-    "image_tier": "B",
-    "image_path": "images/card_30.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Ausflug",
@@ -518,8 +490,7 @@
     "example_en": "Tomorrow we are taking a trip to Heidelberg.",
     "image": "images/card_31.webp",
     "id": 29,
-    "image_tier": "B",
-    "image_path": "images/card_31.webp"
+    "image_tier": "B"
   },
   {
     "german": "ausfüllen",
@@ -536,8 +507,7 @@
     "example_en": "Please fill out this form.",
     "image": "images/card_32.webp",
     "id": 30,
-    "image_tier": "B",
-    "image_path": "images/card_32.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Ausgang",
@@ -554,8 +524,7 @@
     "example_en": "Where is the exit?",
     "image": "images/card_33.webp",
     "id": 31,
-    "image_tier": "B",
-    "image_path": "images/card_33.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Auskunft",
@@ -572,8 +541,7 @@
     "example_en": "Can you give me some information?",
     "image": "images/card_34.webp",
     "id": 32,
-    "image_tier": "B",
-    "image_path": "images/card_34.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Ausland",
@@ -590,8 +558,7 @@
     "example_en": "Are you traveling abroad?",
     "image": "images/card_35.webp",
     "id": 33,
-    "image_tier": "B",
-    "image_path": "images/card_35.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Ausländer",
@@ -608,8 +575,7 @@
     "example_en": "Are you a foreigner?",
     "image": "images/card_36.webp",
     "id": 34,
-    "image_tier": "B",
-    "image_path": "images/card_36.webp"
+    "image_tier": "B"
   },
   {
     "german": "ausländisch",
@@ -626,8 +592,7 @@
     "example_en": "Unfortunately, I only have foreign money.",
     "image": "images/card_37.webp",
     "id": 35,
-    "image_tier": "B",
-    "image_path": "images/card_37.webp"
+    "image_tier": "B"
   },
   {
     "german": "ausmachen",
@@ -644,8 +609,7 @@
     "example_en": "Please turn off the light!",
     "image": "images/card_38.webp",
     "id": 36,
-    "image_tier": "B",
-    "image_path": "images/card_38.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Aussage",
@@ -662,8 +626,7 @@
     "example_en": "Is the statement true or false?",
     "image": "images/card_39.webp",
     "id": 37,
-    "image_tier": "B",
-    "image_path": "images/card_39.webp"
+    "image_tier": "B"
   },
   {
     "german": "aussehen",
@@ -680,8 +643,7 @@
     "example_en": "That looks nice.",
     "image": "images/card_40.webp",
     "id": 38,
-    "image_tier": "B",
-    "image_path": "images/card_40.webp"
+    "image_tier": "B"
   },
   {
     "german": "aussteigen",
@@ -698,8 +660,7 @@
     "example_en": "Where do I have to get off?",
     "image": "images/card_41.webp",
     "id": 39,
-    "image_tier": "B",
-    "image_path": "images/card_41.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Ausweis",
@@ -716,8 +677,7 @@
     "example_en": "Here is my ID card.",
     "image": "images/card_42.webp",
     "id": 40,
-    "image_tier": "B",
-    "image_path": "images/card_42.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Auto",
@@ -734,8 +694,7 @@
     "example_en": "He is coming by car.",
     "image": "images/card_43.webp",
     "id": 41,
-    "image_tier": "B",
-    "image_path": "images/card_43.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Autobahn",
@@ -752,8 +711,7 @@
     "example_en": "Which way to the highway, please?",
     "image": "images/card_44.webp",
     "id": 42,
-    "image_tier": "B",
-    "image_path": "images/card_44.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Automat",
@@ -770,8 +728,7 @@
     "example_en": "The tickets are only available at the ticket machine.",
     "image": "images/card_45.webp",
     "id": 43,
-    "image_tier": "B",
-    "image_path": "images/card_45.webp"
+    "image_tier": "B"
   },
   {
     "german": "automatisch",
@@ -788,8 +745,7 @@
     "example_en": "You don't have to do anything. It works automatically.",
     "image": "images/card_46.webp",
     "id": 44,
-    "image_tier": "B",
-    "image_path": "images/card_46.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Baby",
@@ -806,8 +762,7 @@
     "example_en": "My child is still a baby.",
     "image": "images/card_47.webp",
     "id": 45,
-    "image_tier": "B",
-    "image_path": "images/card_47.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Bad",
@@ -824,8 +779,7 @@
     "example_en": "We don't have a large bathroom.",
     "image": "images/card_48.webp",
     "id": 46,
-    "image_tier": "B",
-    "image_path": "images/card_48.webp"
+    "image_tier": "B"
   },
   {
     "german": "baden",
@@ -842,8 +796,7 @@
     "example_en": "I don't like bathing that much, I prefer to shower.",
     "image": "images/card_49.webp",
     "id": 47,
-    "image_tier": "B",
-    "image_path": "images/card_49.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Bahn",
@@ -860,8 +813,7 @@
     "example_en": "We prefer traveling by train.",
     "image": "images/card_50.webp",
     "id": 48,
-    "image_tier": "B",
-    "image_path": "images/card_50.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Bahnhof",
@@ -878,8 +830,7 @@
     "example_en": "Is this the way to the train station?",
     "image": "images/card_51.webp",
     "id": 49,
-    "image_tier": "B",
-    "image_path": "images/card_51.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Bahnsteig",
@@ -896,8 +847,7 @@
     "example_en": "From which platform does the train depart?",
     "image": "images/card_52.webp",
     "id": 50,
-    "image_tier": "B",
-    "image_path": "images/card_52.webp"
+    "image_tier": "B"
   },
   {
     "german": "bald",
@@ -914,8 +864,7 @@
     "example_en": "I am coming soon.",
     "image": "images/card_53.webp",
     "id": 51,
-    "image_tier": "B",
-    "image_path": "images/card_53.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Balkon",
@@ -932,8 +881,7 @@
     "example_en": "The apartment also has a small balcony.",
     "image": "images/card_54.webp",
     "id": 52,
-    "image_tier": "B",
-    "image_path": "images/card_54.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Banane",
@@ -950,8 +898,7 @@
     "example_en": "Three bananas, please!",
     "image": "images/card_55.webp",
     "id": 53,
-    "image_tier": "B",
-    "image_path": "images/card_55.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Bank",
@@ -968,8 +915,7 @@
     "example_en": "The bank closes already at four o'clock. He is sitting in the park on a bench and reading.",
     "image": "images/card_56.webp",
     "id": 54,
-    "image_tier": "B",
-    "image_path": "images/card_56.webp"
+    "image_tier": "B"
   },
   {
     "german": "bar",
@@ -986,8 +932,7 @@
     "example_en": "Do I have to pay in cash or is it also possible with a card?",
     "image": "images/card_57.webp",
     "id": 55,
-    "image_tier": "B",
-    "image_path": "images/card_57.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Bauch",
@@ -1004,8 +949,7 @@
     "example_en": "Since yesterday my stomach hurts.",
     "image": "images/card_58.webp",
     "id": 56,
-    "image_tier": "B",
-    "image_path": "images/card_58.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Baum",
@@ -1022,8 +966,7 @@
     "example_en": "Careful, do not drive into the tree!",
     "image": "images/card_59.webp",
     "id": 57,
-    "image_tier": "B",
-    "image_path": "images/card_59.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Beamte",
@@ -1040,8 +983,7 @@
     "example_en": "Ask the female civil servant at counter eight!",
     "image": "images/card_60.webp",
     "id": 58,
-    "image_tier": "B",
-    "image_path": "images/card_60.webp"
+    "image_tier": "B"
   },
   {
     "german": "bedeuten",
@@ -1058,8 +1000,7 @@
     "example_en": "What does the word mean?",
     "image": "images/card_61.webp",
     "id": 59,
-    "image_tier": "B",
-    "image_path": "images/card_61.webp"
+    "image_tier": "B"
   },
   {
     "german": "beginnen",
@@ -1076,8 +1017,7 @@
     "example_en": "The game begins at 3:30 p.m.",
     "image": "images/card_62.webp",
     "id": 60,
-    "image_tier": "B",
-    "image_path": "images/card_62.webp"
+    "image_tier": "B"
   },
   {
     "german": "bei",
@@ -1094,8 +1034,7 @@
     "example_en": "Offenbach is located near Frankfurt. I live with my parents. It is raining here today. He works for the police.",
     "image": "images/card_63.webp",
     "id": 61,
-    "image_tier": "B",
-    "image_path": "images/card_63.webp"
+    "image_tier": "B"
   },
   {
     "german": "beide",
@@ -1112,8 +1051,7 @@
     "example_en": "Both parents work. We are both coming.",
     "image": "images/card_64.webp",
     "id": 62,
-    "image_tier": "B",
-    "image_path": "images/card_64.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Bein",
@@ -1130,8 +1068,7 @@
     "example_en": "My right leg hurts.",
     "image": "images/card_65.webp",
     "id": 63,
-    "image_tier": "B",
-    "image_path": "images/card_65.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Beispiel",
@@ -1148,8 +1085,7 @@
     "example_en": "Can you give me an example?",
     "image": "images/card_66.webp",
     "id": 64,
-    "image_tier": "B",
-    "image_path": "images/card_66.webp"
+    "image_tier": "B"
   },
   {
     "german": "bekannt",
@@ -1166,8 +1102,7 @@
     "example_en": "Picasso is very famous.",
     "image": "images/card_67.webp",
     "id": 65,
-    "image_tier": "B",
-    "image_path": "images/card_67.webp"
+    "image_tier": "B"
   },
   {
     "german": "bekommen",
@@ -1184,8 +1119,7 @@
     "example_en": "Did you receive my letter? What are you getting? You get this medicine at the pharmacy.",
     "image": "images/card_68.webp",
     "id": 66,
-    "image_tier": "B",
-    "image_path": "images/card_68.webp"
+    "image_tier": "B"
   },
   {
     "german": "benutzen",
@@ -1202,8 +1136,7 @@
     "example_en": "Please do not use the elevators!",
     "image": "images/card_69.webp",
     "id": 67,
-    "image_tier": "B",
-    "image_path": "images/card_69.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Beruf",
@@ -1220,8 +1153,7 @@
     "example_en": "What is your profession? What is your job?",
     "image": "images/card_70.webp",
     "id": 68,
-    "image_tier": "B",
-    "image_path": "images/card_70.webp"
+    "image_tier": "B"
   },
   {
     "german": "besetzt",
@@ -1238,8 +1170,7 @@
     "example_en": "The number is always busy. The seat is taken.",
     "image": "images/card_71.webp",
     "id": 69,
-    "image_tier": "B",
-    "image_path": "images/card_71.webp"
+    "image_tier": "B"
   },
   {
     "german": "besichtigen",
@@ -1256,8 +1187,7 @@
     "example_en": "I would like to visit the cathedral.",
     "image": "images/card_72.webp",
     "id": 70,
-    "image_tier": "B",
-    "image_path": "images/card_72.webp"
+    "image_tier": "B"
   },
   {
     "german": "besser",
@@ -1274,8 +1204,7 @@
     "example_en": "I am already feeling better.",
     "image": "images/card_73.webp",
     "id": 71,
-    "image_tier": "B",
-    "image_path": "images/card_73.webp"
+    "image_tier": "B"
   },
   {
     "german": "best-",
@@ -1292,8 +1221,7 @@
     "example_en": "It is best if we meet tomorrow.",
     "image": "images/card_74.webp",
     "id": 72,
-    "image_tier": "B",
-    "image_path": "images/card_74.webp"
+    "image_tier": "B"
   },
   {
     "german": "bestellen",
@@ -1310,8 +1238,7 @@
     "example_en": "We would like to order, please. We do not have this book - should we order it for you?",
     "image": "images/card_75.webp",
     "id": 73,
-    "image_tier": "B",
-    "image_path": "images/card_75.webp"
+    "image_tier": "B"
   },
   {
     "german": "besuchen",
@@ -1328,8 +1255,7 @@
     "example_en": "May I visit you?",
     "image": "images/card_76.webp",
     "id": 74,
-    "image_tier": "B",
-    "image_path": "images/card_76.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Bett",
@@ -1346,8 +1272,7 @@
     "example_en": "We still need a child's bed.",
     "image": "images/card_77.webp",
     "id": 75,
-    "image_tier": "B",
-    "image_path": "images/card_77.webp"
+    "image_tier": "B"
   },
   {
     "german": "bezahlen",
@@ -1364,8 +1289,7 @@
     "example_en": "Where do I have to pay?",
     "image": "images/card_78.webp",
     "id": 76,
-    "image_tier": "B",
-    "image_path": "images/card_78.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Bier",
@@ -1382,8 +1306,7 @@
     "example_en": "Another beer, please.",
     "image": "images/card_79.webp",
     "id": 77,
-    "image_tier": "B",
-    "image_path": "images/card_79.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Bild",
@@ -1400,8 +1323,7 @@
     "example_en": "Do you have a picture of your son?",
     "image": "images/card_80.webp",
     "id": 78,
-    "image_tier": "B",
-    "image_path": "images/card_80.webp"
+    "image_tier": "B"
   },
   {
     "german": "billig",
@@ -1418,8 +1340,7 @@
     "example_en": "The jacket costs only 10 euros! It is really cheap!",
     "image": "images/card_81.webp",
     "id": 79,
-    "image_tier": "B",
-    "image_path": "images/card_81.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Birne",
@@ -1436,8 +1357,7 @@
     "example_en": "One kilo of pears, please!",
     "image": "images/card_82.webp",
     "id": 80,
-    "image_tier": "B",
-    "image_path": "images/card_82.webp"
+    "image_tier": "B"
   },
   {
     "german": "bis",
@@ -1454,8 +1374,7 @@
     "example_en": "I only travel as far as Stuttgart. I will wait until tomorrow.",
     "image": "images/card_83.webp",
     "id": 81,
-    "image_tier": "B",
-    "image_path": "images/card_83.webp"
+    "image_tier": "B"
   },
   {
     "german": "bisschen",
@@ -1472,8 +1391,7 @@
     "example_en": "I speak English, French and a little bit of German.",
     "image": "images/card_84.webp",
     "id": 82,
-    "image_tier": "B",
-    "image_path": "images/card_84.webp"
+    "image_tier": "B"
   },
   {
     "german": "bitte",
@@ -1490,8 +1408,7 @@
     "example_en": "A cup of coffee, please! Please speak quietly!",
     "image": "images/card_85.webp",
     "id": 83,
-    "image_tier": "B",
-    "image_path": "images/card_85.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Bitte",
@@ -1508,8 +1425,7 @@
     "example_en": "I still have a request.",
     "image": "images/card_86.webp",
     "id": 84,
-    "image_tier": "B",
-    "image_path": "images/card_86.webp"
+    "image_tier": "B"
   },
   {
     "german": "bitten",
@@ -1526,8 +1442,7 @@
     "example_en": "May I ask you for something?",
     "image": "images/card_87.webp",
     "id": 85,
-    "image_tier": "B",
-    "image_path": "images/card_87.webp"
+    "image_tier": "B"
   },
   {
     "german": "bitter",
@@ -1544,8 +1459,7 @@
     "example_en": "The coffee tastes bitter.",
     "image": "images/card_88.webp",
     "id": 86,
-    "image_tier": "B",
-    "image_path": "images/card_88.webp"
+    "image_tier": "B"
   },
   {
     "german": "bleiben",
@@ -1562,8 +1476,7 @@
     "example_en": "I am staying at home today. We are only staying until tomorrow.",
     "image": "images/card_89.webp",
     "id": 87,
-    "image_tier": "B",
-    "image_path": "images/card_89.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Bleistift",
@@ -1580,8 +1493,7 @@
     "example_en": "Do you have a pencil?",
     "image": "images/card_90.webp",
     "id": 88,
-    "image_tier": "B",
-    "image_path": "images/card_90.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Blick",
@@ -1598,8 +1510,7 @@
     "example_en": "From this hotel you have a good view of the Rhine.",
     "image": "images/card_91.webp",
     "id": 89,
-    "image_tier": "B",
-    "image_path": "images/card_91.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Blume",
@@ -1616,8 +1527,7 @@
     "example_en": "Do you like the flowers?",
     "image": "images/card_92.webp",
     "id": 90,
-    "image_tier": "B",
-    "image_path": "images/card_92.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Bogen",
@@ -1634,8 +1544,7 @@
     "example_en": "Please write your solutions on the answer sheet.",
     "image": "images/card_93.webp",
     "id": 91,
-    "image_tier": "B",
-    "image_path": "images/card_93.webp"
+    "image_tier": "B"
   },
   {
     "german": "brauchen",
@@ -1652,8 +1561,7 @@
     "example_en": "Do you still need the newspaper?",
     "image": "images/card_94.webp",
     "id": 92,
-    "image_tier": "B",
-    "image_path": "images/card_94.webp"
+    "image_tier": "B"
   },
   {
     "german": "breit",
@@ -1670,8 +1578,7 @@
     "example_en": "How wide is the cabinet?",
     "image": "images/card_95.webp",
     "id": 93,
-    "image_tier": "B",
-    "image_path": "images/card_95.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Brief",
@@ -1688,8 +1595,7 @@
     "example_en": "Do you have a letter for me?",
     "image": "images/card_96.webp",
     "id": 94,
-    "image_tier": "B",
-    "image_path": "images/card_96.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Briefmarke",
@@ -1706,8 +1612,7 @@
     "example_en": "Please buy stamps at the post office.",
     "image": "images/card_97.webp",
     "id": 95,
-    "image_tier": "B",
-    "image_path": "images/card_97.webp"
+    "image_tier": "B"
   },
   {
     "german": "bringen",
@@ -1724,8 +1629,7 @@
     "example_en": "Bring me another coffee, please! We have to take him to the doctor.",
     "image": "images/card_98.webp",
     "id": 96,
-    "image_tier": "B",
-    "image_path": "images/card_98.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Brot",
@@ -1742,8 +1646,7 @@
     "example_en": "Do you also have white bread? Take a few more sandwiches for the trip.",
     "image": "images/card_99.webp",
     "id": 97,
-    "image_tier": "B",
-    "image_path": "images/card_99.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Bruder",
@@ -1760,8 +1663,7 @@
     "example_en": "His brother also works here.",
     "image": "images/card_100.webp",
     "id": 98,
-    "image_tier": "B",
-    "image_path": "images/card_100.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Brötchen",
@@ -1778,8 +1680,7 @@
     "example_en": "Would you like bread rolls for breakfast?",
     "image": "images/card_101.webp",
     "id": 99,
-    "image_tier": "B",
-    "image_path": "images/card_101.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Buch",
@@ -1796,8 +1697,7 @@
     "example_en": "Good books are often very expensive. In this dictionary you will find more than 20,000 words.",
     "image": "images/card_102.webp",
     "id": 100,
-    "image_tier": "B",
-    "image_path": "images/card_102.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Buchstabe",
@@ -1814,8 +1714,7 @@
     "example_en": "This letter does not exist in my language.",
     "image": "images/card_103.webp",
     "id": 101,
-    "image_tier": "B",
-    "image_path": "images/card_103.webp"
+    "image_tier": "B"
   },
   {
     "german": "buchstabieren",
@@ -1832,8 +1731,7 @@
     "example_en": "Please spell your name.",
     "image": "images/card_104.webp",
     "id": 102,
-    "image_tier": "B",
-    "image_path": "images/card_104.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Bus",
@@ -1850,8 +1748,7 @@
     "example_en": "When is the next bus coming?",
     "image": "images/card_105.webp",
     "id": 103,
-    "image_tier": "B",
-    "image_path": "images/card_105.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Butter",
@@ -1868,8 +1765,7 @@
     "example_en": "A bread roll with butter and cheese for me, please.",
     "image": "images/card_106.webp",
     "id": 104,
-    "image_tier": "B",
-    "image_path": "images/card_106.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Bäckerei",
@@ -1886,8 +1782,7 @@
     "example_en": "I am going quickly to the bakery.",
     "image": "images/card_107.webp",
     "id": 105,
-    "image_tier": "B",
-    "image_path": "images/card_107.webp"
+    "image_tier": "B"
   },
   {
     "german": "böse",
@@ -1904,8 +1799,7 @@
     "example_en": "She is angry at me.",
     "image": "images/card_108.webp",
     "id": 106,
-    "image_tier": "B",
-    "image_path": "images/card_108.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Café",
@@ -1922,8 +1816,7 @@
     "example_en": "Should we meet in the café?",
     "image": "images/card_109.webp",
     "id": 107,
-    "image_tier": "B",
-    "image_path": "images/card_109.webp"
+    "image_tier": "B"
   },
   {
     "german": "die CD",
@@ -1940,8 +1833,7 @@
     "example_en": "Please bring your favorite CD.",
     "image": "images/card_110.webp",
     "id": 108,
-    "image_tier": "B",
-    "image_path": "images/card_110.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Chef",
@@ -1958,8 +1850,7 @@
     "example_en": "We have a new female boss.",
     "image": "images/card_111.webp",
     "id": 109,
-    "image_tier": "B",
-    "image_path": "images/card_111.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Computer",
@@ -1976,8 +1867,7 @@
     "example_en": "When do you get your new computer?",
     "image": "images/card_112.webp",
     "id": 110,
-    "image_tier": "B",
-    "image_path": "images/card_112.webp"
+    "image_tier": "B"
   },
   {
     "german": "da",
@@ -1994,8 +1884,7 @@
     "example_en": "There he is in the back. We are just talking about Paul. Here he comes right now. I will take that there. Is Mr. Klein already here?",
     "image": "images/card_113.webp",
     "id": 111,
-    "image_tier": "B",
-    "image_path": "images/card_113.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Dame",
@@ -2012,8 +1901,7 @@
     "example_en": "Ladies (at the toilet) Dear ladies and gentlemen!",
     "image": "images/card_114.webp",
     "id": 112,
-    "image_tier": "B",
-    "image_path": "images/card_114.webp"
+    "image_tier": "B"
   },
   {
     "german": "daneben",
@@ -2030,8 +1918,7 @@
     "example_en": "You know the post office. Next to it is the bank.",
     "image": "images/card_115.webp",
     "id": 113,
-    "image_tier": "B",
-    "image_path": "images/card_115.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Dank",
@@ -2048,8 +1935,7 @@
     "example_en": "Many thanks! Thank you very much!",
     "image": "images/card_116.webp",
     "id": 114,
-    "image_tier": "B",
-    "image_path": "images/card_116.webp"
+    "image_tier": "B"
   },
   {
     "german": "danke",
@@ -2066,8 +1952,7 @@
     "example_en": "Should I help you? - No, thank you!",
     "image": "images/card_117.webp",
     "id": 115,
-    "image_tier": "B",
-    "image_path": "images/card_117.webp"
+    "image_tier": "B"
   },
   {
     "german": "danken",
@@ -2084,8 +1969,7 @@
     "example_en": "I thank you for the invitation.",
     "image": "images/card_118.webp",
     "id": 116,
-    "image_tier": "B",
-    "image_path": "images/card_118.webp"
+    "image_tier": "B"
   },
   {
     "german": "dann",
@@ -2102,8 +1986,7 @@
     "example_en": "I still have to go quickly to the post office, then I am coming.",
     "image": "images/card_119.webp",
     "id": 117,
-    "image_tier": "B",
-    "image_path": "images/card_119.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Datum",
@@ -2120,8 +2003,7 @@
     "example_en": "Please also write the date on the form.",
     "image": "images/card_120.webp",
     "id": 118,
-    "image_tier": "B",
-    "image_path": "images/card_120.webp"
+    "image_tier": "B"
   },
   {
     "german": "dauern",
@@ -2138,8 +2020,7 @@
     "example_en": "How long does the film last?",
     "image": "images/card_121.webp",
     "id": 119,
-    "image_tier": "B",
-    "image_path": "images/card_121.webp"
+    "image_tier": "B"
   },
   {
     "german": "dein-",
@@ -2156,8 +2037,7 @@
     "example_en": "Is that your car? Is that yours?",
     "image": "images/card_122.webp",
     "id": 120,
-    "image_tier": "B",
-    "image_path": "images/card_122.webp"
+    "image_tier": "B"
   },
   {
     "german": "denn",
@@ -2174,8 +2054,7 @@
     "example_en": "I cannot come, because I am sick.",
     "image": "images/card_123.webp",
     "id": 121,
-    "image_tier": "B",
-    "image_path": "images/card_123.webp"
+    "image_tier": "B"
   },
   {
     "german": "dich",
@@ -2192,8 +2071,7 @@
     "example_en": "The flowers are for you.",
     "image": "images/card_124.webp",
     "id": 122,
-    "image_tier": "B",
-    "image_path": "images/card_124.webp"
+    "image_tier": "B"
   },
   {
     "german": "dies-",
@@ -2210,8 +2088,7 @@
     "example_en": "I prefer to take this cake.",
     "image": "images/card_125.webp",
     "id": 123,
-    "image_tier": "B",
-    "image_path": "images/card_125.webp"
+    "image_tier": "B"
   },
   {
     "german": "dir",
@@ -2228,8 +2105,7 @@
     "example_en": "Do you like the flowers?",
     "image": "images/card_126.webp",
     "id": 124,
-    "image_tier": "B",
-    "image_path": "images/card_126.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Disco",
@@ -2246,8 +2122,7 @@
     "example_en": "Tonight we are going dancing in the disco.",
     "image": "images/card_127.webp",
     "id": 125,
-    "image_tier": "B",
-    "image_path": "images/card_127.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Doktor",
@@ -2264,8 +2139,7 @@
     "example_en": "My daughter is sick. We are going to the doctor.",
     "image": "images/card_128.webp",
     "id": 126,
-    "image_tier": "B",
-    "image_path": "images/card_128.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Doppelzimmer",
@@ -2282,8 +2156,7 @@
     "example_en": "Do you want a double room or a single room?",
     "image": "images/card_129.webp",
     "id": 127,
-    "image_tier": "B",
-    "image_path": "images/card_129.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Dorf",
@@ -2300,8 +2173,7 @@
     "example_en": "My family lives in a village.",
     "image": "images/card_130.webp",
     "id": 128,
-    "image_tier": "B",
-    "image_path": "images/card_130.webp"
+    "image_tier": "B"
   },
   {
     "german": "draußen",
@@ -2318,8 +2190,7 @@
     "example_en": "Do we want to sit outside?",
     "image": "images/card_131.webp",
     "id": 129,
-    "image_tier": "B",
-    "image_path": "images/card_131.webp"
+    "image_tier": "B"
   },
   {
     "german": "drucken",
@@ -2336,8 +2207,7 @@
     "example_en": "Please print the form for me.",
     "image": "images/card_132.webp",
     "id": 130,
-    "image_tier": "B",
-    "image_path": "images/card_132.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Drucker",
@@ -2354,8 +2224,7 @@
     "example_en": "My printer is broken.",
     "image": "images/card_133.webp",
     "id": 131,
-    "image_tier": "B",
-    "image_path": "images/card_133.webp"
+    "image_tier": "B"
   },
   {
     "german": "drücken",
@@ -2372,8 +2241,7 @@
     "example_en": "Press here, then the computer turns on.",
     "image": "images/card_134.webp",
     "id": 132,
-    "image_tier": "B",
-    "image_path": "images/card_134.webp"
+    "image_tier": "B"
   },
   {
     "german": "durch",
@@ -2390,8 +2258,7 @@
     "example_en": "It is best to go through the Breite Straße.",
     "image": "images/card_135.webp",
     "id": 133,
-    "image_tier": "B",
-    "image_path": "images/card_135.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Durchsage",
@@ -2408,8 +2275,7 @@
     "example_en": "I did not understand the announcement.",
     "image": "images/card_136.webp",
     "id": 134,
-    "image_tier": "B",
-    "image_path": "images/card_136.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Durst",
@@ -2426,8 +2292,7 @@
     "example_en": "Do you have something to drink? I am very thirsty.",
     "image": "images/card_137.webp",
     "id": 135,
-    "image_tier": "B",
-    "image_path": "images/card_137.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Dusche",
@@ -2444,8 +2309,7 @@
     "example_en": "Our apartment only has one shower.",
     "image": "images/card_138.webp",
     "id": 136,
-    "image_tier": "B",
-    "image_path": "images/card_138.webp"
+    "image_tier": "B"
   },
   {
     "german": "dürfen",
@@ -2462,8 +2326,7 @@
     "example_en": "You are not allowed to smoke here. May I invite you to a coffee? It may not cost more than 15 euros.",
     "image": "images/card_139.webp",
     "id": 137,
-    "image_tier": "B",
-    "image_path": "images/card_139.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Ecke",
@@ -2480,8 +2343,7 @@
     "example_en": "At the next corner on the left.",
     "image": "images/card_140.webp",
     "id": 138,
-    "image_tier": "B",
-    "image_path": "images/card_140.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Ehefrau",
@@ -2498,8 +2360,7 @@
     "example_en": "This is my husband/my wife.",
     "image": "images/card_141.webp",
     "id": 139,
-    "image_tier": "B",
-    "image_path": "images/card_141.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Ehemann",
@@ -2516,8 +2377,7 @@
     "example_en": "This is my husband/my wife.",
     "image": "images/card_142.webp",
     "id": 140,
-    "image_tier": "B",
-    "image_path": "images/card_142.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Ei",
@@ -2534,8 +2394,7 @@
     "example_en": "Would you like an egg for breakfast?",
     "image": "images/card_143.webp",
     "id": 141,
-    "image_tier": "B",
-    "image_path": "images/card_143.webp"
+    "image_tier": "B"
   },
   {
     "german": "eilig",
@@ -2552,8 +2411,7 @@
     "example_en": "Are you in a hurry?",
     "image": "images/card_144.webp",
     "id": 142,
-    "image_tier": "B",
-    "image_path": "images/card_144.webp"
+    "image_tier": "B"
   },
   {
     "german": "ein-",
@@ -2570,8 +2428,7 @@
     "example_en": "I will take a beer. Do you want one too? Is there someone here who can do that?",
     "image": "images/card_145.webp",
     "id": 143,
-    "image_tier": "B",
-    "image_path": "images/card_145.webp"
+    "image_tier": "B"
   },
   {
     "german": "einfach",
@@ -2588,8 +2445,7 @@
     "example_en": "The exam is very easy. Round trip? - No, just one-way please. I only need a simple room.",
     "image": "images/card_146.webp",
     "id": 144,
-    "image_tier": "B",
-    "image_path": "images/card_146.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Eingang",
@@ -2606,8 +2462,7 @@
     "example_en": "The entrance is around the corner.",
     "image": "images/card_147.webp",
     "id": 145,
-    "image_tier": "B",
-    "image_path": "images/card_147.webp"
+    "image_tier": "B"
   },
   {
     "german": "einkaufen",
@@ -2624,8 +2479,7 @@
     "example_en": "I still need to shop for tomorrow.",
     "image": "images/card_148.webp",
     "id": 146,
-    "image_tier": "B",
-    "image_path": "images/card_148.webp"
+    "image_tier": "B"
   },
   {
     "german": "einladen",
@@ -2642,8 +2496,7 @@
     "example_en": "May I invite you to a coffee?",
     "image": "images/card_149.webp",
     "id": 147,
-    "image_tier": "B",
-    "image_path": "images/card_149.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Einladung",
@@ -2660,8 +2513,7 @@
     "example_en": "Thank you for the invitation!",
     "image": "images/card_150.webp",
     "id": 148,
-    "image_tier": "B",
-    "image_path": "images/card_150.webp"
+    "image_tier": "B"
   },
   {
     "german": "einmal",
@@ -2678,8 +2530,7 @@
     "example_en": "I am not taking this exam once again.",
     "image": "images/card_151.webp",
     "id": 149,
-    "image_tier": "B",
-    "image_path": "images/card_151.webp"
+    "image_tier": "B"
   },
   {
     "german": "einsteigen",
@@ -2696,8 +2547,7 @@
     "example_en": "Quick, get in, the train is leaving soon.",
     "image": "images/card_152.webp",
     "id": 150,
-    "image_tier": "B",
-    "image_path": "images/card_152.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Eintritt",
@@ -2714,8 +2564,7 @@
     "example_en": "The price for admission is 5 euros.",
     "image": "images/card_153.webp",
     "id": 151,
-    "image_tier": "B",
-    "image_path": "images/card_153.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Einzelzimmer",
@@ -2732,8 +2581,7 @@
     "example_en": "Do you still have a single room?",
     "image": "images/card_154.webp",
     "id": 152,
-    "image_tier": "B",
-    "image_path": "images/card_154.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Eltern",
@@ -2750,8 +2598,7 @@
     "example_en": "My parents live in Spain.",
     "image": "images/card_155.webp",
     "id": 153,
-    "image_tier": "B",
-    "image_path": "images/card_155.webp"
+    "image_tier": "B"
   },
   {
     "german": "die E-Mail",
@@ -2768,8 +2615,7 @@
     "example_en": "I did not receive your email.",
     "image": "images/card_156.webp",
     "id": 154,
-    "image_tier": "B",
-    "image_path": "images/card_156.webp"
+    "image_tier": "B"
   },
   {
     "german": "empfehlen",
@@ -2786,8 +2632,7 @@
     "example_en": "Which wine can you recommend to me?",
     "image": "images/card_157.webp",
     "id": 155,
-    "image_tier": "B",
-    "image_path": "images/card_157.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Empfänger",
@@ -2804,8 +2649,7 @@
     "example_en": "Your name is on the letter, so you are the recipient.",
     "image": "images/card_158.webp",
     "id": 156,
-    "image_tier": "B",
-    "image_path": "images/card_158.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Ende",
@@ -2822,8 +2666,7 @@
     "example_en": "She lives at the end of the street. He gets his money at the end of the month.",
     "image": "images/card_159.webp",
     "id": 157,
-    "image_tier": "B",
-    "image_path": "images/card_159.webp"
+    "image_tier": "B"
   },
   {
     "german": "enden",
@@ -2840,8 +2683,7 @@
     "example_en": "The street ends here.",
     "image": "images/card_160.webp",
     "id": 158,
-    "image_tier": "B",
-    "image_path": "images/card_160.webp"
+    "image_tier": "B"
   },
   {
     "german": "entschuldigen",
@@ -2858,8 +2700,7 @@
     "example_en": "Excuse me, please!",
     "image": "images/card_161.webp",
     "id": 159,
-    "image_tier": "B",
-    "image_path": "images/card_161.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Entschuldigung",
@@ -2876,8 +2717,7 @@
     "example_en": "Excuse me! - You're welcome.",
     "image": "images/card_162.webp",
     "id": 160,
-    "image_tier": "B",
-    "image_path": "images/card_162.webp"
+    "image_tier": "B"
   },
   {
     "german": "er",
@@ -2894,8 +2734,7 @@
     "example_en": "His name is Ali.",
     "image": "images/card_163.webp",
     "id": 161,
-    "image_tier": "B",
-    "image_path": "images/card_163.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Ergebnis",
@@ -2912,8 +2751,7 @@
     "example_en": "You will receive the result of the test in two weeks.",
     "image": "images/card_164.webp",
     "id": 162,
-    "image_tier": "B",
-    "image_path": "images/card_164.webp"
+    "image_tier": "B"
   },
   {
     "german": "erklären",
@@ -2930,8 +2768,7 @@
     "example_en": "Can you explain that to me?",
     "image": "images/card_165.webp",
     "id": 163,
-    "image_tier": "B",
-    "image_path": "images/card_165.webp"
+    "image_tier": "B"
   },
   {
     "german": "erlauben",
@@ -2948,8 +2785,7 @@
     "example_en": "Smoking is not allowed here.",
     "image": "images/card_166.webp",
     "id": 164,
-    "image_tier": "B",
-    "image_path": "images/card_166.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Erwachsene",
@@ -2966,8 +2802,7 @@
     "example_en": "This film is only for adults.",
     "image": "images/card_167.webp",
     "id": 165,
-    "image_tier": "B",
-    "image_path": "images/card_167.webp"
+    "image_tier": "B"
   },
   {
     "german": "erzählen",
@@ -2984,8 +2819,7 @@
     "example_en": "We have to tell you something!",
     "image": "images/card_168.webp",
     "id": 166,
-    "image_tier": "B",
-    "image_path": "images/card_168.webp"
+    "image_tier": "B"
   },
   {
     "german": "es",
@@ -3002,8 +2836,7 @@
     "example_en": "It is raining.",
     "image": "images/card_169.webp",
     "id": 167,
-    "image_tier": "B",
-    "image_path": "images/card_169.webp"
+    "image_tier": "B"
   },
   {
     "german": "essen",
@@ -3020,8 +2853,7 @@
     "example_en": "What is there to eat?",
     "image": "images/card_170.webp",
     "id": 168,
-    "image_tier": "B",
-    "image_path": "images/card_170.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Essen",
@@ -3038,8 +2870,7 @@
     "example_en": "The food is very good today.",
     "image": "images/card_171.webp",
     "id": 169,
-    "image_tier": "B",
-    "image_path": "images/card_171.webp"
+    "image_tier": "B"
   },
   {
     "german": "euer",
@@ -3056,8 +2887,7 @@
     "example_en": "Your course begins today.",
     "image": "images/card_172.webp",
     "id": 170,
-    "image_tier": "B",
-    "image_path": "images/card_172.webp"
+    "image_tier": "B"
   },
   {
     "german": "fahren",
@@ -3074,8 +2904,7 @@
     "example_en": "I drive to work by car.",
     "image": "images/card_173.webp",
     "id": 171,
-    "image_tier": "B",
-    "image_path": "images/card_173.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Fahrer",
@@ -3092,8 +2921,7 @@
     "example_en": "Please do not speak with the driver!",
     "image": "images/card_174.webp",
     "id": 172,
-    "image_tier": "B",
-    "image_path": "images/card_174.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Fahrkarte",
@@ -3110,8 +2938,7 @@
     "example_en": "Do you already have a ticket?",
     "image": "images/card_175.webp",
     "id": 173,
-    "image_tier": "B",
-    "image_path": "images/card_175.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Fahrrad",
@@ -3128,8 +2955,7 @@
     "example_en": "Do you travel by bicycle or by car?",
     "image": "images/card_176.webp",
     "id": 174,
-    "image_tier": "B",
-    "image_path": "images/card_176.webp"
+    "image_tier": "B"
   },
   {
     "german": "falsch",
@@ -3146,8 +2972,7 @@
     "example_en": "That is wrong.",
     "image": "images/card_177.webp",
     "id": 175,
-    "image_tier": "B",
-    "image_path": "images/card_177.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Familie",
@@ -3164,8 +2989,7 @@
     "example_en": "My family lives in Spain.",
     "image": "images/card_178.webp",
     "id": 176,
-    "image_tier": "B",
-    "image_path": "images/card_178.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Familienname",
@@ -3182,8 +3006,7 @@
     "example_en": "My family names are García González.",
     "image": "images/card_179.webp",
     "id": 177,
-    "image_tier": "B",
-    "image_path": "images/card_179.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Familienstand",
@@ -3200,8 +3023,7 @@
     "example_en": "For „marital status“ you have to check „single“.",
     "image": "images/card_180.webp",
     "id": 178,
-    "image_tier": "B",
-    "image_path": "images/card_180.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Farbe",
@@ -3218,8 +3040,7 @@
     "example_en": "I like the color.",
     "image": "images/card_181.webp",
     "id": 179,
-    "image_tier": "B",
-    "image_path": "images/card_181.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Fax",
@@ -3236,8 +3057,7 @@
     "example_en": "Simply send us a fax!",
     "image": "images/card_182.webp",
     "id": 180,
-    "image_tier": "B",
-    "image_path": "images/card_182.webp"
+    "image_tier": "B"
   },
   {
     "german": "fehlen",
@@ -3254,8 +3074,7 @@
     "example_en": "Mr. Müller is not here, he has been missing for three days. What is wrong with you?",
     "image": "images/card_183.webp",
     "id": 181,
-    "image_tier": "B",
-    "image_path": "images/card_183.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Fehler",
@@ -3272,8 +3091,7 @@
     "example_en": "I always make this mistake.",
     "image": "images/card_184.webp",
     "id": 182,
-    "image_tier": "B",
-    "image_path": "images/card_184.webp"
+    "image_tier": "B"
   },
   {
     "german": "feiern",
@@ -3290,8 +3108,7 @@
     "example_en": "We are celebrating my birthday today.",
     "image": "images/card_185.webp",
     "id": 183,
-    "image_tier": "B",
-    "image_path": "images/card_185.webp"
+    "image_tier": "B"
   },
   {
     "german": "fernsehen",
@@ -3308,8 +3125,7 @@
     "example_en": "Do we want to watch TV tonight?",
     "image": "images/card_186.webp",
     "id": 184,
-    "image_tier": "B",
-    "image_path": "images/card_186.webp"
+    "image_tier": "B"
   },
   {
     "german": "fertig",
@@ -3326,8 +3142,7 @@
     "example_en": "Are you ready? Is my car already finished?",
     "image": "images/card_187.webp",
     "id": 185,
-    "image_tier": "B",
-    "image_path": "images/card_187.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Feuer",
@@ -3344,8 +3159,7 @@
     "example_en": "Do you have a light?",
     "image": "images/card_188.webp",
     "id": 186,
-    "image_tier": "B",
-    "image_path": "images/card_188.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Fieber",
@@ -3362,8 +3176,7 @@
     "example_en": "My husband still has a fever.",
     "image": "images/card_189.webp",
     "id": 187,
-    "image_tier": "B",
-    "image_path": "images/card_189.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Film",
@@ -3380,8 +3193,7 @@
     "example_en": "I would like to see this movie.",
     "image": "images/card_190.webp",
     "id": 188,
-    "image_tier": "B",
-    "image_path": "images/card_190.webp"
+    "image_tier": "B"
   },
   {
     "german": "finden",
@@ -3398,8 +3210,7 @@
     "example_en": "We must find the key.",
     "image": "images/card_191.webp",
     "id": 189,
-    "image_tier": "B",
-    "image_path": "images/card_191.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Firma",
@@ -3416,8 +3227,7 @@
     "example_en": "He works at another company now.",
     "image": "images/card_192.webp",
     "id": 190,
-    "image_tier": "B",
-    "image_path": "images/card_192.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Fisch",
@@ -3434,8 +3244,7 @@
     "example_en": "I like to eat fish. I do not like meat.",
     "image": "images/card_193.webp",
     "id": 191,
-    "image_tier": "B",
-    "image_path": "images/card_193.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Flasche",
@@ -3452,8 +3261,7 @@
     "example_en": "A bottle of beer, please.",
     "image": "images/card_194.webp",
     "id": 192,
-    "image_tier": "B",
-    "image_path": "images/card_194.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Fleisch",
@@ -3470,8 +3278,7 @@
     "example_en": "I do not like meat.",
     "image": "images/card_195.webp",
     "id": 193,
-    "image_tier": "B",
-    "image_path": "images/card_195.webp"
+    "image_tier": "B"
   },
   {
     "german": "fliegen",
@@ -3488,8 +3295,7 @@
     "example_en": "I do not like to fly. Therefore I travel by train.",
     "image": "images/card_196.webp",
     "id": 194,
-    "image_tier": "B",
-    "image_path": "images/card_196.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Flughafen",
@@ -3506,8 +3312,7 @@
     "example_en": "Can you take me to the airport?",
     "image": "images/card_197.webp",
     "id": 195,
-    "image_tier": "B",
-    "image_path": "images/card_197.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Flugzeug",
@@ -3524,8 +3329,7 @@
     "example_en": "The airplane from Berlin arrives later today.",
     "image": "images/card_198.webp",
     "id": 196,
-    "image_tier": "B",
-    "image_path": "images/card_198.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Formular",
@@ -3542,8 +3346,7 @@
     "example_en": "You have to fill out this form.",
     "image": "images/card_199.webp",
     "id": 197,
-    "image_tier": "B",
-    "image_path": "images/card_199.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Foto",
@@ -3560,8 +3363,7 @@
     "example_en": "May I take a photo?",
     "image": "images/card_200.webp",
     "id": 198,
-    "image_tier": "B",
-    "image_path": "images/card_200.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Frage",
@@ -3578,8 +3380,7 @@
     "example_en": "I have a question.",
     "image": "images/card_201.webp",
     "id": 199,
-    "image_tier": "B",
-    "image_path": "images/card_201.webp"
+    "image_tier": "B"
   },
   {
     "german": "fragen",
@@ -3596,8 +3397,7 @@
     "example_en": "He would like to ask you something. When are you coming?",
     "image": "images/card_202.webp",
     "id": 200,
-    "image_tier": "B",
-    "image_path": "images/card_202.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Frau",
@@ -3614,8 +3414,7 @@
     "example_en": "This is Mrs. Becker. Good day, Mrs. Schmitt! More women work here than men.",
     "image": "images/card_203.webp",
     "id": 201,
-    "image_tier": "B",
-    "image_path": "images/card_203.webp"
+    "image_tier": "B"
   },
   {
     "german": "frei",
@@ -3632,8 +3431,7 @@
     "example_en": "Is the seat still free?",
     "image": "images/card_204.webp",
     "id": 202,
-    "image_tier": "B",
-    "image_path": "images/card_204.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Freizeit",
@@ -3650,8 +3448,7 @@
     "example_en": "In my free time I often play soccer.",
     "image": "images/card_205.webp",
     "id": 203,
-    "image_tier": "B",
-    "image_path": "images/card_205.webp"
+    "image_tier": "B"
   },
   {
     "german": "fremd",
@@ -3668,8 +3465,7 @@
     "example_en": "I do not know that; I am a stranger here.",
     "image": "images/card_206.webp",
     "id": 204,
-    "image_tier": "B",
-    "image_path": "images/card_206.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Freund",
@@ -3686,8 +3482,7 @@
     "example_en": "This is a friend of mine. This is my girlfriend.",
     "image": "images/card_207.webp",
     "id": 205,
-    "image_tier": "B",
-    "image_path": "images/card_207.webp"
+    "image_tier": "B"
   },
   {
     "german": "früher",
@@ -3704,8 +3499,7 @@
     "example_en": "In the past we were often together in the cinema.",
     "image": "images/card_208.webp",
     "id": 206,
-    "image_tier": "B",
-    "image_path": "images/card_208.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Frühstück",
@@ -3722,8 +3516,7 @@
     "example_en": "Would you like an egg for breakfast?",
     "image": "images/card_209.webp",
     "id": 207,
-    "image_tier": "B",
-    "image_path": "images/card_209.webp"
+    "image_tier": "B"
   },
   {
     "german": "frühstücken",
@@ -3740,8 +3533,7 @@
     "example_en": "On Sunday I like to have breakfast in bed.",
     "image": "images/card_210.webp",
     "id": 208,
-    "image_tier": "B",
-    "image_path": "images/card_210.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Fuß",
@@ -3758,8 +3550,7 @@
     "example_en": "My left foot hurts.",
     "image": "images/card_211.webp",
     "id": 209,
-    "image_tier": "B",
-    "image_path": "images/card_211.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Fußball",
@@ -3776,8 +3567,7 @@
     "example_en": "Do you like playing soccer?",
     "image": "images/card_212.webp",
     "id": 210,
-    "image_tier": "B",
-    "image_path": "images/card_212.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Führung",
@@ -3794,8 +3584,7 @@
     "example_en": "The guided tour through the house begins in 3 minutes.",
     "image": "images/card_213.webp",
     "id": 211,
-    "image_tier": "B",
-    "image_path": "images/card_213.webp"
+    "image_tier": "B"
   },
   {
     "german": "für",
@@ -3812,8 +3601,7 @@
     "example_en": "That is for you. That is the key for the front door. That is the bread for tomorrow.",
     "image": "images/card_214.webp",
     "id": 212,
-    "image_tier": "B",
-    "image_path": "images/card_214.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Garten",
@@ -3830,8 +3618,7 @@
     "example_en": "Unfortunately, we do not have a garden.",
     "image": "images/card_215.webp",
     "id": 213,
-    "image_tier": "B",
-    "image_path": "images/card_215.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Gast",
@@ -3848,8 +3635,7 @@
     "example_en": "At the weekend we have several guests.",
     "image": "images/card_216.webp",
     "id": 214,
-    "image_tier": "B",
-    "image_path": "images/card_216.webp"
+    "image_tier": "B"
   },
   {
     "german": "geben",
@@ -3866,8 +3652,7 @@
     "example_en": "Can you please give me your pen? There are no tickets left.",
     "image": "images/card_217.webp",
     "id": 215,
-    "image_tier": "B",
-    "image_path": "images/card_217.webp"
+    "image_tier": "B"
   },
   {
     "german": "geboren",
@@ -3884,8 +3669,7 @@
     "example_en": "I was born in Zagreb.",
     "image": "images/card_218.webp",
     "id": 216,
-    "image_tier": "B",
-    "image_path": "images/card_218.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Geburtsjahr",
@@ -3902,8 +3686,7 @@
     "example_en": "The year of birth of your son, please?",
     "image": "images/card_219.webp",
     "id": 217,
-    "image_tier": "B",
-    "image_path": "images/card_219.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Geburtsort",
@@ -3920,8 +3703,7 @@
     "example_en": "Please write your place of birth on the form.",
     "image": "images/card_220.webp",
     "id": 218,
-    "image_tier": "B",
-    "image_path": "images/card_220.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Geburtstag",
@@ -3938,8 +3720,7 @@
     "example_en": "Happy birthday!",
     "image": "images/card_221.webp",
     "id": 219,
-    "image_tier": "B",
-    "image_path": "images/card_221.webp"
+    "image_tier": "B"
   },
   {
     "german": "gefallen",
@@ -3956,8 +3737,7 @@
     "example_en": "I like that.",
     "image": "images/card_222.webp",
     "id": 220,
-    "image_tier": "B",
-    "image_path": "images/card_222.webp"
+    "image_tier": "B"
   },
   {
     "german": "gegen",
@@ -3974,8 +3754,7 @@
     "example_en": "Do not drive against the tree! I am against this solution. Who is playing against whom?",
     "image": "images/card_223.webp",
     "id": 221,
-    "image_tier": "B",
-    "image_path": "images/card_223.webp"
+    "image_tier": "B"
   },
   {
     "german": "gehen",
@@ -3992,8 +3771,7 @@
     "example_en": "I do not know how that works. How are you? Now I unfortunately have to go. I have to go to the doctor. That does not work!",
     "image": "images/card_224.webp",
     "id": 222,
-    "image_tier": "B",
-    "image_path": "images/card_224.webp"
+    "image_tier": "B"
   },
   {
     "german": "gehören",
@@ -4010,8 +3788,7 @@
     "example_en": "Who does that belong to?",
     "image": "images/card_225.webp",
     "id": 223,
-    "image_tier": "B",
-    "image_path": "images/card_225.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Geld",
@@ -4028,8 +3805,7 @@
     "example_en": "Do you still have money?",
     "image": "images/card_226.webp",
     "id": 224,
-    "image_tier": "B",
-    "image_path": "images/card_226.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Gemüse",
@@ -4046,8 +3822,7 @@
     "example_en": "We also need vegetables.",
     "image": "images/card_227.webp",
     "id": 225,
-    "image_tier": "B",
-    "image_path": "images/card_227.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Gepäck",
@@ -4064,8 +3839,7 @@
     "example_en": "Do you want to take your luggage with you?",
     "image": "images/card_228.webp",
     "id": 226,
-    "image_tier": "B",
-    "image_path": "images/card_228.webp"
+    "image_tier": "B"
   },
   {
     "german": "gerade",
@@ -4082,8 +3856,7 @@
     "example_en": "There he comes right now.",
     "image": "images/card_229.webp",
     "id": 227,
-    "image_tier": "B",
-    "image_path": "images/card_229.webp"
+    "image_tier": "B"
   },
   {
     "german": "geradeaus",
@@ -4100,8 +3873,7 @@
     "example_en": "Always go straight ahead!",
     "image": "images/card_230.webp",
     "id": 228,
-    "image_tier": "B",
-    "image_path": "images/card_230.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Geschenk",
@@ -4118,8 +3890,7 @@
     "example_en": "Thank you for the beautiful gift.",
     "image": "images/card_231.webp",
     "id": 229,
-    "image_tier": "B",
-    "image_path": "images/card_231.webp"
+    "image_tier": "B"
   },
   {
     "german": "geschlossen",
@@ -4136,8 +3907,7 @@
     "example_en": "The bank is closed on Saturday.",
     "image": "images/card_232.webp",
     "id": 230,
-    "image_tier": "B",
-    "image_path": "images/card_232.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Geschwister",
@@ -4154,8 +3924,7 @@
     "example_en": "Unfortunately, I have no siblings.",
     "image": "images/card_233.webp",
     "id": 231,
-    "image_tier": "B",
-    "image_path": "images/card_233.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Geschäft",
@@ -4172,8 +3941,7 @@
     "example_en": "The shops close at 6.30 pm.",
     "image": "images/card_234.webp",
     "id": 232,
-    "image_tier": "B",
-    "image_path": "images/card_234.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Gespräch",
@@ -4190,8 +3958,7 @@
     "example_en": "The conversation with Mrs. Kunz is at 2 pm.",
     "image": "images/card_235.webp",
     "id": 233,
-    "image_tier": "B",
-    "image_path": "images/card_235.webp"
+    "image_tier": "B"
   },
   {
     "german": "gestern",
@@ -4208,8 +3975,7 @@
     "example_en": "Yesterday I was sick.",
     "image": "images/card_236.webp",
     "id": 234,
-    "image_tier": "B",
-    "image_path": "images/card_236.webp"
+    "image_tier": "B"
   },
   {
     "german": "gestorben",
@@ -4226,8 +3992,7 @@
     "example_en": "My wife died yesterday.",
     "image": "images/card_237.webp",
     "id": 235,
-    "image_tier": "B",
-    "image_path": "images/card_237.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Getränk",
@@ -4244,8 +4009,7 @@
     "example_en": "My favorite drink is tomato juice.",
     "image": "images/card_238.webp",
     "id": 236,
-    "image_tier": "B",
-    "image_path": "images/card_238.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Gewicht",
@@ -4262,8 +4026,7 @@
     "example_en": "For „weight“ you write: 62 kilos.",
     "image": "images/card_239.webp",
     "id": 237,
-    "image_tier": "B",
-    "image_path": "images/card_239.webp"
+    "image_tier": "B"
   },
   {
     "german": "gewinnen",
@@ -4280,8 +4043,7 @@
     "example_en": "Who wins the game?",
     "image": "images/card_240.webp",
     "id": 238,
-    "image_tier": "B",
-    "image_path": "images/card_240.webp"
+    "image_tier": "B"
   },
   {
     "german": "geöffnet",
@@ -4298,8 +4060,7 @@
     "example_en": "The shop is open on Saturdays until 4.00 pm.",
     "image": "images/card_241.webp",
     "id": 239,
-    "image_tier": "B",
-    "image_path": "images/card_241.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Glas",
@@ -4316,8 +4077,7 @@
     "example_en": "Another glass of wine, please! We need three more glasses.",
     "image": "images/card_242.webp",
     "id": 240,
-    "image_tier": "B",
-    "image_path": "images/card_242.webp"
+    "image_tier": "B"
   },
   {
     "german": "glauben",
@@ -4334,8 +4094,7 @@
     "example_en": "You can believe me, it is so. I believe he is coming soon.",
     "image": "images/card_243.webp",
     "id": 241,
-    "image_tier": "B",
-    "image_path": "images/card_243.webp"
+    "image_tier": "B"
   },
   {
     "german": "gleich",
@@ -4352,8 +4111,7 @@
     "example_en": "That is the same to me. That is the same price. I am coming right away.",
     "image": "images/card_244.webp",
     "id": 242,
-    "image_tier": "B",
-    "image_path": "images/card_244.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Gleis",
@@ -4370,8 +4128,7 @@
     "example_en": "The ICE to Berlin stops today at track 12.",
     "image": "images/card_245.webp",
     "id": 243,
-    "image_tier": "B",
-    "image_path": "images/card_245.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Glück",
@@ -4388,8 +4145,7 @@
     "example_en": "Good luck!",
     "image": "images/card_246.webp",
     "id": 244,
-    "image_tier": "B",
-    "image_path": "images/card_246.webp"
+    "image_tier": "B"
   },
   {
     "german": "glücklich",
@@ -4406,8 +4162,7 @@
     "example_en": "My children are happily married.",
     "image": "images/card_247.webp",
     "id": 245,
-    "image_tier": "B",
-    "image_path": "images/card_247.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Glückwunsch",
@@ -4424,8 +4179,7 @@
     "example_en": "Happy birthday.",
     "image": "images/card_248.webp",
     "id": 246,
-    "image_tier": "B",
-    "image_path": "images/card_248.webp"
+    "image_tier": "B"
   },
   {
     "german": "gratulieren",
@@ -4442,8 +4196,7 @@
     "example_en": "I congratulate you!",
     "image": "images/card_249.webp",
     "id": 247,
-    "image_tier": "B",
-    "image_path": "images/card_249.webp"
+    "image_tier": "B"
   },
   {
     "german": "grillen",
@@ -4460,8 +4213,7 @@
     "example_en": "Today we are grilling in the garden.",
     "image": "images/card_250.webp",
     "id": 248,
-    "image_tier": "B",
-    "image_path": "images/card_250.webp"
+    "image_tier": "B"
   },
   {
     "german": "groß",
@@ -4478,8 +4230,7 @@
     "example_en": "My brother and I are the same height. Frankfurt is a big city.",
     "image": "images/card_251.webp",
     "id": 249,
-    "image_tier": "B",
-    "image_path": "images/card_251.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Großeltern",
@@ -4496,8 +4247,7 @@
     "example_en": "My grandparents live in Japan.",
     "image": "images/card_252.webp",
     "id": 250,
-    "image_tier": "B",
-    "image_path": "images/card_252.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Großmutter",
@@ -4514,8 +4264,7 @@
     "example_en": "My grandmother's name is Eva.",
     "image": "images/card_253.webp",
     "id": 251,
-    "image_tier": "B",
-    "image_path": "images/card_253.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Großvater",
@@ -4532,8 +4281,7 @@
     "example_en": "My grandfather is already 80.",
     "image": "images/card_254.webp",
     "id": 252,
-    "image_tier": "B",
-    "image_path": "images/card_254.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Gruppe",
@@ -4550,8 +4298,7 @@
     "example_en": "The first group begins at 4 pm.",
     "image": "images/card_255.webp",
     "id": 253,
-    "image_tier": "B",
-    "image_path": "images/card_255.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Gruß",
@@ -4568,8 +4315,7 @@
     "example_en": "Many greetings to your wife. With kind regards",
     "image": "images/card_256.webp",
     "id": 254,
-    "image_tier": "B",
-    "image_path": "images/card_256.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Größe",
@@ -4586,8 +4332,7 @@
     "example_en": "Do you also have that in size 40?",
     "image": "images/card_257.webp",
     "id": 255,
-    "image_tier": "B",
-    "image_path": "images/card_257.webp"
+    "image_tier": "B"
   },
   {
     "german": "gut",
@@ -4604,8 +4349,7 @@
     "example_en": "I find that good. I am coming at 1 pm. - Good! Good morning! A happy new year! Enjoy your meal!",
     "image": "images/card_258.webp",
     "id": 256,
-    "image_tier": "B",
-    "image_path": "images/card_258.webp"
+    "image_tier": "B"
   },
   {
     "german": "gültig",
@@ -4622,8 +4366,7 @@
     "example_en": "The passport is no longer valid.",
     "image": "images/card_259.webp",
     "id": 257,
-    "image_tier": "B",
-    "image_path": "images/card_259.webp"
+    "image_tier": "B"
   },
   {
     "german": "günstig",
@@ -4640,8 +4383,7 @@
     "example_en": "There are favorable offers there.",
     "image": "images/card_260.webp",
     "id": 258,
-    "image_tier": "B",
-    "image_path": "images/card_260.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Haar",
@@ -4658,8 +4400,7 @@
     "example_en": "She has long hair.",
     "image": "images/card_261.webp",
     "id": 259,
-    "image_tier": "B",
-    "image_path": "images/card_261.webp"
+    "image_tier": "B"
   },
   {
     "german": "haben",
@@ -4676,8 +4417,7 @@
     "example_en": "I have a new car.",
     "image": "images/card_262.webp",
     "id": 260,
-    "image_tier": "B",
-    "image_path": "images/card_262.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Halbpension",
@@ -4694,8 +4434,7 @@
     "example_en": "Would you like full board or half board?",
     "image": "images/card_263.webp",
     "id": 261,
-    "image_tier": "B",
-    "image_path": "images/card_263.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Halle",
@@ -4712,8 +4451,7 @@
     "example_en": "We will meet in hall B.",
     "image": "images/card_264.webp",
     "id": 262,
-    "image_tier": "B",
-    "image_path": "images/card_264.webp"
+    "image_tier": "B"
   },
   {
     "german": "hallo",
@@ -4730,8 +4468,7 @@
     "example_en": "Hello Inge! How are you?",
     "image": "images/card_265.webp",
     "id": 263,
-    "image_tier": "B",
-    "image_path": "images/card_265.webp"
+    "image_tier": "B"
   },
   {
     "german": "halten",
@@ -4748,8 +4485,7 @@
     "example_en": "This train does not stop in Rüdesheim.",
     "image": "images/card_266.webp",
     "id": 264,
-    "image_tier": "B",
-    "image_path": "images/card_266.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Haltestelle",
@@ -4766,8 +4502,7 @@
     "example_en": "You must get off at the next stop.",
     "image": "images/card_267.webp",
     "id": 265,
-    "image_tier": "B",
-    "image_path": "images/card_267.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Hand",
@@ -4784,8 +4519,7 @@
     "example_en": "He gives me his hand.",
     "image": "images/card_268.webp",
     "id": 266,
-    "image_tier": "B",
-    "image_path": "images/card_268.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Handy",
@@ -4802,8 +4536,7 @@
     "example_en": "Please turn off the mobile phones in school!",
     "image": "images/card_269.webp",
     "id": 267,
-    "image_tier": "B",
-    "image_path": "images/card_269.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Haus",
@@ -4820,8 +4553,7 @@
     "example_en": "In which house do you live? I am going home now. Paul is not at home.",
     "image": "images/card_270.webp",
     "id": 268,
-    "image_tier": "B",
-    "image_path": "images/card_270.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Hausaufgabe",
@@ -4838,8 +4570,7 @@
     "example_en": "Can you help me with the homework?",
     "image": "images/card_271.webp",
     "id": 269,
-    "image_tier": "B",
-    "image_path": "images/card_271.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Hausfrau",
@@ -4856,8 +4587,7 @@
     "example_en": "The housewife/househusband washes, cooks and shops.",
     "image": "images/card_272.webp",
     "id": 270,
-    "image_tier": "B",
-    "image_path": "images/card_272.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Hausmann",
@@ -4874,8 +4604,7 @@
     "example_en": "The housewife/househusband washes, cooks and shops.",
     "image": "images/card_273.webp",
     "id": 271,
-    "image_tier": "B",
-    "image_path": "images/card_273.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Heimat",
@@ -4892,8 +4621,7 @@
     "example_en": "I come from Switzerland. That is my homeland.",
     "image": "images/card_274.webp",
     "id": 272,
-    "image_tier": "B",
-    "image_path": "images/card_274.webp"
+    "image_tier": "B"
   },
   {
     "german": "heiraten",
@@ -4910,8 +4638,7 @@
     "example_en": "My sister is marrying a Japanese man.",
     "image": "images/card_275.webp",
     "id": 273,
-    "image_tier": "B",
-    "image_path": "images/card_275.webp"
+    "image_tier": "B"
   },
   {
     "german": "heißen",
@@ -4928,8 +4655,7 @@
     "example_en": "My name is Charlotte Meier. What is that called in German?",
     "image": "images/card_276.webp",
     "id": 274,
-    "image_tier": "B",
-    "image_path": "images/card_276.webp"
+    "image_tier": "B"
   },
   {
     "german": "helfen",
@@ -4946,8 +4672,7 @@
     "example_en": "Can you help me, please?",
     "image": "images/card_277.webp",
     "id": 275,
-    "image_tier": "B",
-    "image_path": "images/card_277.webp"
+    "image_tier": "B"
   },
   {
     "german": "hell",
@@ -4964,8 +4689,7 @@
     "example_en": "In summer it is light until 9 pm.",
     "image": "images/card_278.webp",
     "id": 276,
-    "image_tier": "B",
-    "image_path": "images/card_278.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Herd",
@@ -4982,8 +4706,7 @@
     "example_en": "The stove is still missing in the new kitchen.",
     "image": "images/card_279.webp",
     "id": 277,
-    "image_tier": "B",
-    "image_path": "images/card_279.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Herr",
@@ -5000,8 +4723,7 @@
     "example_en": "Good day, Mr. Sommer!",
     "image": "images/card_280.webp",
     "id": 278,
-    "image_tier": "B",
-    "image_path": "images/card_280.webp"
+    "image_tier": "B"
   },
   {
     "german": "herzlich",
@@ -5018,8 +4740,7 @@
     "example_en": "Congratulations!",
     "image": "images/card_281.webp",
     "id": 279,
-    "image_tier": "B",
-    "image_path": "images/card_281.webp"
+    "image_tier": "B"
   },
   {
     "german": "heute",
@@ -5036,8 +4757,7 @@
     "example_en": "Today is a beautiful day.",
     "image": "images/card_282.webp",
     "id": 280,
-    "image_tier": "B",
-    "image_path": "images/card_282.webp"
+    "image_tier": "B"
   },
   {
     "german": "hier",
@@ -5054,8 +4774,7 @@
     "example_en": "Here is 06131-553221, Pamela Linke. I live here.",
     "image": "images/card_283.webp",
     "id": 281,
-    "image_tier": "B",
-    "image_path": "images/card_283.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Hilfe",
@@ -5072,8 +4791,7 @@
     "example_en": "Help! Please help me! Do you need my help?",
     "image": "images/card_284.webp",
     "id": 282,
-    "image_tier": "B",
-    "image_path": "images/card_284.webp"
+    "image_tier": "B"
   },
   {
     "german": "hinten",
@@ -5090,8 +4808,7 @@
     "example_en": "The door for getting out is in the back.",
     "image": "images/card_285.webp",
     "id": 283,
-    "image_tier": "B",
-    "image_path": "images/card_285.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Hobby",
@@ -5108,8 +4825,7 @@
     "example_en": "My hobbies are hiking and swimming.",
     "image": "images/card_286.webp",
     "id": 284,
-    "image_tier": "B",
-    "image_path": "images/card_286.webp"
+    "image_tier": "B"
   },
   {
     "german": "hoch",
@@ -5126,8 +4842,7 @@
     "example_en": "Mount Everest is 8,880 meters high.",
     "image": "images/card_287.webp",
     "id": 285,
-    "image_tier": "B",
-    "image_path": "images/card_287.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Hochzeit",
@@ -5144,8 +4859,7 @@
     "example_en": "More than fifty guests are coming to this wedding.",
     "image": "images/card_288.webp",
     "id": 286,
-    "image_tier": "B",
-    "image_path": "images/card_288.webp"
+    "image_tier": "B"
   },
   {
     "german": "holen",
@@ -5162,8 +4876,7 @@
     "example_en": "I am fetching two bottles of water from the kitchen.",
     "image": "images/card_289.webp",
     "id": 287,
-    "image_tier": "B",
-    "image_path": "images/card_289.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Hotel",
@@ -5180,8 +4893,7 @@
     "example_en": "On vacation we are in a hotel by the sea.",
     "image": "images/card_290.webp",
     "id": 288,
-    "image_tier": "B",
-    "image_path": "images/card_290.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Hund",
@@ -5198,8 +4910,7 @@
     "example_en": "The dog is still young.",
     "image": "images/card_291.webp",
     "id": 289,
-    "image_tier": "B",
-    "image_path": "images/card_291.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Hunger",
@@ -5216,8 +4927,7 @@
     "example_en": "I am hungry! When is the food ready?",
     "image": "images/card_292.webp",
     "id": 290,
-    "image_tier": "B",
-    "image_path": "images/card_292.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Hähnchen",
@@ -5234,8 +4944,7 @@
     "example_en": "A chicken with fries, please!",
     "image": "images/card_293.webp",
     "id": 291,
-    "image_tier": "B",
-    "image_path": "images/card_293.webp"
+    "image_tier": "B"
   },
   {
     "german": "hören",
@@ -5252,8 +4961,7 @@
     "example_en": "Listen! What is that? I have heard the song before.",
     "image": "images/card_294.webp",
     "id": 292,
-    "image_tier": "B",
-    "image_path": "images/card_294.webp"
+    "image_tier": "B"
   },
   {
     "german": "ich",
@@ -5270,8 +4978,7 @@
     "example_en": "My name is Veronika.",
     "image": "images/card_295.webp",
     "id": 293,
-    "image_tier": "B",
-    "image_path": "images/card_295.webp"
+    "image_tier": "B"
   },
   {
     "german": "immer",
@@ -5288,8 +4995,7 @@
     "example_en": "Mrs. Bast always comes too late.",
     "image": "images/card_296.webp",
     "id": 294,
-    "image_tier": "B",
-    "image_path": "images/card_296.webp"
+    "image_tier": "B"
   },
   {
     "german": "in",
@@ -5306,8 +5012,7 @@
     "example_en": "I live in Wiesbaden. The train comes in five minutes. Mrs. Rausch works in a shop. Come, we are going to the cinema.",
     "image": "images/card_297.webp",
     "id": 295,
-    "image_tier": "B",
-    "image_path": "images/card_297.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Information",
@@ -5324,8 +5029,7 @@
     "example_en": "If you have questions, go to the information desk. We have important information for you here.",
     "image": "images/card_298.webp",
     "id": 296,
-    "image_tier": "B",
-    "image_path": "images/card_298.webp"
+    "image_tier": "B"
   },
   {
     "german": "international",
@@ -5342,8 +5046,7 @@
     "example_en": "Our German course is international: Silvana comes from Italy, Conchi from Spain, Yin from China ...",
     "image": "images/card_299.webp",
     "id": 297,
-    "image_tier": "B",
-    "image_path": "images/card_299.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Internet",
@@ -5360,8 +5063,7 @@
     "example_en": "You find that on the internet.",
     "image": "images/card_300.webp",
     "id": 298,
-    "image_tier": "B",
-    "image_path": "images/card_300.webp"
+    "image_tier": "B"
   },
   {
     "german": "ja",
@@ -5378,8 +5080,7 @@
     "example_en": "Are you Mr. Watanabe? - Yes.",
     "image": "images/card_301.webp",
     "id": 299,
-    "image_tier": "B",
-    "image_path": "images/card_301.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Jacke",
@@ -5396,8 +5097,7 @@
     "example_en": "Put on a jacket. It is cold.",
     "image": "images/card_302.webp",
     "id": 300,
-    "image_tier": "B",
-    "image_path": "images/card_302.webp"
+    "image_tier": "B"
   },
   {
     "german": "jed-",
@@ -5414,8 +5114,7 @@
     "example_en": "You can buy flowers in every station.",
     "image": "images/card_303.webp",
     "id": 301,
-    "image_tier": "B",
-    "image_path": "images/card_303.webp"
+    "image_tier": "B"
   },
   {
     "german": "jetzt",
@@ -5432,8 +5131,7 @@
     "example_en": "Now we are taking a break.",
     "image": "images/card_304.webp",
     "id": 302,
-    "image_tier": "B",
-    "image_path": "images/card_304.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Job",
@@ -5450,8 +5148,7 @@
     "example_en": "Jenny has a new job at the post office.",
     "image": "images/card_305.webp",
     "id": 303,
-    "image_tier": "B",
-    "image_path": "images/card_305.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Jugendliche",
@@ -5468,8 +5165,7 @@
     "example_en": "Many young people like to shop.",
     "image": "images/card_306.webp",
     "id": 304,
-    "image_tier": "B",
-    "image_path": "images/card_306.webp"
+    "image_tier": "B"
   },
   {
     "german": "jung",
@@ -5486,8 +5182,7 @@
     "example_en": "Claudia is 21. - What? Still so young?",
     "image": "images/card_307.webp",
     "id": 305,
-    "image_tier": "B",
-    "image_path": "images/card_307.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Junge",
@@ -5504,8 +5199,7 @@
     "example_en": "I have two children. A boy and a girl.",
     "image": "images/card_308.webp",
     "id": 306,
-    "image_tier": "B",
-    "image_path": "images/card_308.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Kaffee",
@@ -5522,8 +5216,7 @@
     "example_en": "For breakfast I always drink coffee.",
     "image": "images/card_309.webp",
     "id": 307,
-    "image_tier": "B",
-    "image_path": "images/card_309.webp"
+    "image_tier": "B"
   },
   {
     "german": "kaputt",
@@ -5540,8 +5233,7 @@
     "example_en": "The glass was expensive. It breaks very easily.",
     "image": "images/card_310.webp",
     "id": 308,
-    "image_tier": "B",
-    "image_path": "images/card_310.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Karte",
@@ -5558,8 +5250,7 @@
     "example_en": "I write my acquaintances a card from vacation. Do we want to play cards? I would also like to eat something. Bring me the menu, please.",
     "image": "images/card_311.webp",
     "id": 309,
-    "image_tier": "B",
-    "image_path": "images/card_311.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Kartoffel",
@@ -5576,8 +5267,7 @@
     "example_en": "For French fries you need potatoes.",
     "image": "images/card_312.webp",
     "id": 310,
-    "image_tier": "B",
-    "image_path": "images/card_312.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Kasse",
@@ -5594,8 +5284,7 @@
     "example_en": "Please pay at the cash register.",
     "image": "images/card_313.webp",
     "id": 311,
-    "image_tier": "B",
-    "image_path": "images/card_313.webp"
+    "image_tier": "B"
   },
   {
     "german": "kaufen",
@@ -5612,8 +5301,7 @@
     "example_en": "Tim buys himself a new car.",
     "image": "images/card_314.webp",
     "id": 312,
-    "image_tier": "B",
-    "image_path": "images/card_314.webp"
+    "image_tier": "B"
   },
   {
     "german": "kein",
@@ -5630,8 +5318,7 @@
     "example_en": "There are no admission tickets left.",
     "image": "images/card_315.webp",
     "id": 313,
-    "image_tier": "B",
-    "image_path": "images/card_315.webp"
+    "image_tier": "B"
   },
   {
     "german": "kennen",
@@ -5648,8 +5335,7 @@
     "example_en": "Do you know this woman? – No, unfortunately not.",
     "image": "images/card_316.webp",
     "id": 314,
-    "image_tier": "B",
-    "image_path": "images/card_316.webp"
+    "image_tier": "B"
   },
   {
     "german": "kennenlernen",
@@ -5666,8 +5352,7 @@
     "example_en": "We are new here. We would like to get to know you.",
     "image": "images/card_317.webp",
     "id": 315,
-    "image_tier": "B",
-    "image_path": "images/card_317.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Kind",
@@ -5684,8 +5369,7 @@
     "example_en": "How many children do you have?",
     "image": "images/card_318.webp",
     "id": 316,
-    "image_tier": "B",
-    "image_path": "images/card_318.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Kindergarten",
@@ -5702,8 +5386,7 @@
     "example_en": "Little Laura already goes to kindergarten.",
     "image": "images/card_319.webp",
     "id": 317,
-    "image_tier": "B",
-    "image_path": "images/card_319.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Kino",
@@ -5720,8 +5403,7 @@
     "example_en": "We are seeing a beautiful film in the cinema tonight.",
     "image": "images/card_320.webp",
     "id": 318,
-    "image_tier": "B",
-    "image_path": "images/card_320.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Kiosk",
@@ -5738,8 +5420,7 @@
     "example_en": "At the kiosk you get drinks, cigarettes and newspapers.",
     "image": "images/card_321.webp",
     "id": 319,
-    "image_tier": "B",
-    "image_path": "images/card_321.webp"
+    "image_tier": "B"
   },
   {
     "german": "klar",
@@ -5756,8 +5437,7 @@
     "example_en": "Are you coming along? - Sure!",
     "image": "images/card_322.webp",
     "id": 320,
-    "image_tier": "B",
-    "image_path": "images/card_322.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Klasse",
@@ -5774,8 +5454,7 @@
     "example_en": "In our class there are twenty-five students. On the train I always travel 2nd class.",
     "image": "images/card_323.webp",
     "id": 321,
-    "image_tier": "B",
-    "image_path": "images/card_323.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Kleidung",
@@ -5792,8 +5471,7 @@
     "example_en": "Where do I find clothes? - Jackets on the first floor, jeans on the second floor.",
     "image": "images/card_324.webp",
     "id": 322,
-    "image_tier": "B",
-    "image_path": "images/card_324.webp"
+    "image_tier": "B"
   },
   {
     "german": "klein",
@@ -5810,8 +5488,7 @@
     "example_en": "Eltville is a small town on the Rhine.",
     "image": "images/card_325.webp",
     "id": 323,
-    "image_tier": "B",
-    "image_path": "images/card_325.webp"
+    "image_tier": "B"
   },
   {
     "german": "kochen",
@@ -5828,8 +5505,7 @@
     "example_en": "Mr. Georgi can cook well.",
     "image": "images/card_326.webp",
     "id": 324,
-    "image_tier": "B",
-    "image_path": "images/card_326.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Koffer",
@@ -5846,8 +5522,7 @@
     "example_en": "Is that your suitcase?",
     "image": "images/card_327.webp",
     "id": 325,
-    "image_tier": "B",
-    "image_path": "images/card_327.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Kollege",
@@ -5864,8 +5539,7 @@
     "example_en": "What is the new colleague's name?",
     "image": "images/card_328.webp",
     "id": 326,
-    "image_tier": "B",
-    "image_path": "images/card_328.webp"
+    "image_tier": "B"
   },
   {
     "german": "kommen",
@@ -5882,8 +5556,7 @@
     "example_en": "Where do you come from? - From France. Are you coming along to the swimming pool?",
     "image": "images/card_329.webp",
     "id": 327,
-    "image_tier": "B",
-    "image_path": "images/card_329.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Konto",
@@ -5900,8 +5573,7 @@
     "example_en": "We will transfer the money to your account on the first of March.",
     "image": "images/card_330.webp",
     "id": 328,
-    "image_tier": "B",
-    "image_path": "images/card_330.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Kopf",
@@ -5918,8 +5590,7 @@
     "example_en": "My head hurts!",
     "image": "images/card_331.webp",
     "id": 329,
-    "image_tier": "B",
-    "image_path": "images/card_331.webp"
+    "image_tier": "B"
   },
   {
     "german": "kosten",
@@ -5936,8 +5607,7 @@
     "example_en": "How much does that cost? - 10 euros.",
     "image": "images/card_332.webp",
     "id": 330,
-    "image_tier": "B",
-    "image_path": "images/card_332.webp"
+    "image_tier": "B"
   },
   {
     "german": "krank",
@@ -5954,8 +5624,7 @@
     "example_en": "I cannot come to work today, I am sick and lying in bed.",
     "image": "images/card_333.webp",
     "id": 331,
-    "image_tier": "B",
-    "image_path": "images/card_333.webp"
+    "image_tier": "B"
   },
   {
     "german": "kriegen",
@@ -5972,8 +5641,7 @@
     "example_en": "I get 15 euros an hour for my work.",
     "image": "images/card_334.webp",
     "id": 332,
-    "image_tier": "B",
-    "image_path": "images/card_334.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Kuchen",
@@ -5990,8 +5658,7 @@
     "example_en": "I am taking a piece of cake.",
     "image": "images/card_335.webp",
     "id": 333,
-    "image_tier": "B",
-    "image_path": "images/card_335.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Kugelschreiber",
@@ -6008,8 +5675,7 @@
     "example_en": "Do you have a ballpoint pen for me?",
     "image": "images/card_336.webp",
     "id": 334,
-    "image_tier": "B",
-    "image_path": "images/card_336.webp"
+    "image_tier": "B"
   },
   {
     "german": "kulturell",
@@ -6026,8 +5692,7 @@
     "example_en": "I am culturally interested. I often go to the museum.",
     "image": "images/card_337.webp",
     "id": 335,
-    "image_tier": "B",
-    "image_path": "images/card_337.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Kunde",
@@ -6044,8 +5709,7 @@
     "example_en": "One moment, please. I have a customer.",
     "image": "images/card_338.webp",
     "id": 336,
-    "image_tier": "B",
-    "image_path": "images/card_338.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Kurs",
@@ -6062,8 +5726,7 @@
     "example_en": "The German course goes until summer.",
     "image": "images/card_339.webp",
     "id": 337,
-    "image_tier": "B",
-    "image_path": "images/card_339.webp"
+    "image_tier": "B"
   },
   {
     "german": "kurz",
@@ -6080,8 +5743,7 @@
     "example_en": "Ricardo has short hair.",
     "image": "images/card_340.webp",
     "id": 338,
-    "image_tier": "B",
-    "image_path": "images/card_340.webp"
+    "image_tier": "B"
   },
   {
     "german": "können",
@@ -6098,8 +5760,7 @@
     "example_en": "I can speak German and Russian. Can you help me?",
     "image": "images/card_341.webp",
     "id": 339,
-    "image_tier": "B",
-    "image_path": "images/card_341.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Küche",
@@ -6116,8 +5777,7 @@
     "example_en": "The new stove is going into the kitchen.",
     "image": "images/card_342.webp",
     "id": 340,
-    "image_tier": "B",
-    "image_path": "images/card_342.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Kühlschrank",
@@ -6134,8 +5794,7 @@
     "example_en": "Do we still have milk? - Yes, in the refrigerator.",
     "image": "images/card_343.webp",
     "id": 341,
-    "image_tier": "B",
-    "image_path": "images/card_343.webp"
+    "image_tier": "B"
   },
   {
     "german": "lachen",
@@ -6152,8 +5811,7 @@
     "example_en": "The children laugh a lot.",
     "image": "images/card_344.webp",
     "id": 342,
-    "image_tier": "B",
-    "image_path": "images/card_344.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Laden",
@@ -6170,8 +5828,7 @@
     "example_en": "In the bookstore you can buy books.",
     "image": "images/card_345.webp",
     "id": 343,
-    "image_tier": "B",
-    "image_path": "images/card_345.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Land",
@@ -6188,8 +5845,7 @@
     "example_en": "Italy is a beautiful country.",
     "image": "images/card_346.webp",
     "id": 344,
-    "image_tier": "B",
-    "image_path": "images/card_346.webp"
+    "image_tier": "B"
   },
   {
     "german": "lang",
@@ -6206,8 +5862,7 @@
     "example_en": "The jeans are too long.",
     "image": "images/card_347.webp",
     "id": 345,
-    "image_tier": "B",
-    "image_path": "images/card_347.webp"
+    "image_tier": "B"
   },
   {
     "german": "lange",
@@ -6224,8 +5879,7 @@
     "example_en": "How long does the train take from Hamburg to Berlin?",
     "image": "images/card_348.webp",
     "id": 346,
-    "image_tier": "B",
-    "image_path": "images/card_348.webp"
+    "image_tier": "B"
   },
   {
     "german": "langsam",
@@ -6242,8 +5896,7 @@
     "example_en": "Could you please speak a little slower?",
     "image": "images/card_349.webp",
     "id": 347,
-    "image_tier": "B",
-    "image_path": "images/card_349.webp"
+    "image_tier": "B"
   },
   {
     "german": "laufen",
@@ -6260,8 +5913,7 @@
     "example_en": "I do not want to drive a car, I want to walk.",
     "image": "images/card_350.webp",
     "id": 348,
-    "image_tier": "B",
-    "image_path": "images/card_350.webp"
+    "image_tier": "B"
   },
   {
     "german": "laut",
@@ -6278,8 +5930,7 @@
     "example_en": "Not so loud! The baby is sleeping.",
     "image": "images/card_351.webp",
     "id": 349,
-    "image_tier": "B",
-    "image_path": "images/card_351.webp"
+    "image_tier": "B"
   },
   {
     "german": "leben",
@@ -6296,8 +5947,7 @@
     "example_en": "She lives with her sister. Her parents are no longer alive.",
     "image": "images/card_352.webp",
     "id": 350,
-    "image_tier": "B",
-    "image_path": "images/card_352.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Leben",
@@ -6314,8 +5964,7 @@
     "example_en": "Life in this country is expensive.",
     "image": "images/card_353.webp",
     "id": 351,
-    "image_tier": "B",
-    "image_path": "images/card_353.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Lebensmittel",
@@ -6332,8 +5981,7 @@
     "example_en": "You get groceries in the supermarket.",
     "image": "images/card_354.webp",
     "id": 352,
-    "image_tier": "B",
-    "image_path": "images/card_354.webp"
+    "image_tier": "B"
   },
   {
     "german": "ledig",
@@ -6350,8 +5998,7 @@
     "example_en": "Are you married? - No. Single.",
     "image": "images/card_355.webp",
     "id": 353,
-    "image_tier": "B",
-    "image_path": "images/card_355.webp"
+    "image_tier": "B"
   },
   {
     "german": "legen",
@@ -6368,8 +6015,7 @@
     "example_en": "Put the book on the table.",
     "image": "images/card_356.webp",
     "id": 354,
-    "image_tier": "B",
-    "image_path": "images/card_356.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Lehrer",
@@ -6386,8 +6032,7 @@
     "example_en": "Our German teacher is Mrs. Müller.",
     "image": "images/card_357.webp",
     "id": 355,
-    "image_tier": "B",
-    "image_path": "images/card_357.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Lehrerin",
@@ -6404,8 +6049,7 @@
     "example_en": "Our German teacher is Mrs. Müller.",
     "image": "images/card_358.webp",
     "id": 356,
-    "image_tier": "B",
-    "image_path": "images/card_358.webp"
+    "image_tier": "B"
   },
   {
     "german": "leicht",
@@ -6422,8 +6066,7 @@
     "example_en": "The suitcase is light. German is not easy.",
     "image": "images/card_359.webp",
     "id": 357,
-    "image_tier": "B",
-    "image_path": "images/card_359.webp"
+    "image_tier": "B"
   },
   {
     "german": "leider",
@@ -6440,8 +6083,7 @@
     "example_en": "Unfortunately I cannot come. I have to go to the doctor.",
     "image": "images/card_360.webp",
     "id": 358,
-    "image_tier": "B",
-    "image_path": "images/card_360.webp"
+    "image_tier": "B"
   },
   {
     "german": "leise",
@@ -6458,8 +6100,7 @@
     "example_en": "Be quiet. The others are already sleeping.",
     "image": "images/card_361.webp",
     "id": 359,
-    "image_tier": "B",
-    "image_path": "images/card_361.webp"
+    "image_tier": "B"
   },
   {
     "german": "lernen",
@@ -6476,8 +6117,7 @@
     "example_en": "How long have you been learning German?",
     "image": "images/card_362.webp",
     "id": 360,
-    "image_tier": "B",
-    "image_path": "images/card_362.webp"
+    "image_tier": "B"
   },
   {
     "german": "lesen",
@@ -6494,8 +6134,7 @@
     "example_en": "I am reading a book by García Márquez.",
     "image": "images/card_363.webp",
     "id": 361,
-    "image_tier": "B",
-    "image_path": "images/card_363.webp"
+    "image_tier": "B"
   },
   {
     "german": "letzt-",
@@ -6512,8 +6151,7 @@
     "example_en": "Tomorrow is the last day of the course.",
     "image": "images/card_364.webp",
     "id": 362,
-    "image_tier": "B",
-    "image_path": "images/card_364.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Leute",
@@ -6530,8 +6168,7 @@
     "example_en": "There are many people in the disco.",
     "image": "images/card_365.webp",
     "id": 363,
-    "image_tier": "B",
-    "image_path": "images/card_365.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Licht",
@@ -6548,8 +6185,7 @@
     "example_en": "Where do you turn on the light here?",
     "image": "images/card_366.webp",
     "id": 364,
-    "image_tier": "B",
-    "image_path": "images/card_366.webp"
+    "image_tier": "B"
   },
   {
     "german": "lieb-",
@@ -6566,8 +6202,7 @@
     "example_en": "Dear Susanne, dear Hans,",
     "image": "images/card_367.webp",
     "id": 365,
-    "image_tier": "B",
-    "image_path": "images/card_367.webp"
+    "image_tier": "B"
   },
   {
     "german": "lieben",
@@ -6584,8 +6219,7 @@
     "example_en": "I love you!",
     "image": "images/card_368.webp",
     "id": 366,
-    "image_tier": "B",
-    "image_path": "images/card_368.webp"
+    "image_tier": "B"
   },
   {
     "german": "lieber",
@@ -6602,8 +6236,7 @@
     "example_en": "She prefers to travel by train.",
     "image": "images/card_369.webp",
     "id": 367,
-    "image_tier": "B",
-    "image_path": "images/card_369.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Lied",
@@ -6620,8 +6253,7 @@
     "example_en": "Which is your favorite song?",
     "image": "images/card_370.webp",
     "id": 368,
-    "image_tier": "B",
-    "image_path": "images/card_370.webp"
+    "image_tier": "B"
   },
   {
     "german": "liegen",
@@ -6638,8 +6270,7 @@
     "example_en": "At nine o'clock Judith is still lying in bed. Frankfurt is located on the Main.",
     "image": "images/card_371.webp",
     "id": 369,
-    "image_tier": "B",
-    "image_path": "images/card_371.webp"
+    "image_tier": "B"
   },
   {
     "german": "links",
@@ -6656,8 +6287,7 @@
     "example_en": "Take the next street on the left.",
     "image": "images/card_372.webp",
     "id": 370,
-    "image_tier": "B",
-    "image_path": "images/card_372.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Lkw",
@@ -6674,8 +6304,7 @@
     "example_en": "This truck is very big.",
     "image": "images/card_373.webp",
     "id": 371,
-    "image_tier": "B",
-    "image_path": "images/card_373.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Lokal",
@@ -6692,8 +6321,7 @@
     "example_en": "There is a new pub in our street.",
     "image": "images/card_374.webp",
     "id": 372,
-    "image_tier": "B",
-    "image_path": "images/card_374.webp"
+    "image_tier": "B"
   },
   {
     "german": "lustig",
@@ -6710,8 +6338,7 @@
     "example_en": "Mrs. Mertens is funny. She always laughs.",
     "image": "images/card_375.webp",
     "id": 373,
-    "image_tier": "B",
-    "image_path": "images/card_375.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Lösung",
@@ -6728,8 +6355,7 @@
     "example_en": "The solution is quite simple.",
     "image": "images/card_376.webp",
     "id": 374,
-    "image_tier": "B",
-    "image_path": "images/card_376.webp"
+    "image_tier": "B"
   },
   {
     "german": "machen",
@@ -6746,8 +6372,7 @@
     "example_en": "What are you doing tonight? I have to make the food now. That makes 5 euros 95. That does not matter.",
     "image": "images/card_377.webp",
     "id": 375,
-    "image_tier": "B",
-    "image_path": "images/card_377.webp"
+    "image_tier": "B"
   },
   {
     "german": "man",
@@ -6764,8 +6389,7 @@
     "example_en": "One is not allowed to smoke here.",
     "image": "images/card_378.webp",
     "id": 376,
-    "image_tier": "B",
-    "image_path": "images/card_378.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Mann",
@@ -6782,8 +6406,7 @@
     "example_en": "My husband works for the police.",
     "image": "images/card_379.webp",
     "id": 377,
-    "image_tier": "B",
-    "image_path": "images/card_379.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Maschine",
@@ -6800,8 +6423,7 @@
     "example_en": "The washing machine is cheap.",
     "image": "images/card_380.webp",
     "id": 378,
-    "image_tier": "B",
-    "image_path": "images/card_380.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Meer",
@@ -6818,8 +6440,7 @@
     "example_en": "We are taking a vacation by the sea.",
     "image": "images/card_381.webp",
     "id": 379,
-    "image_tier": "B",
-    "image_path": "images/card_381.webp"
+    "image_tier": "B"
   },
   {
     "german": "mehr",
@@ -6836,8 +6457,7 @@
     "example_en": "This car costs 1,000 euros more than the other.",
     "image": "images/card_382.webp",
     "id": 380,
-    "image_tier": "B",
-    "image_path": "images/card_382.webp"
+    "image_tier": "B"
   },
   {
     "german": "mein",
@@ -6854,8 +6474,7 @@
     "example_en": "My father is a doctor.",
     "image": "images/card_383.webp",
     "id": 381,
-    "image_tier": "B",
-    "image_path": "images/card_383.webp"
+    "image_tier": "B"
   },
   {
     "german": "meist-",
@@ -6872,8 +6491,7 @@
     "example_en": "Most North Germans are very tall.",
     "image": "images/card_384.webp",
     "id": 382,
-    "image_tier": "B",
-    "image_path": "images/card_384.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Mensch",
@@ -6890,8 +6508,7 @@
     "example_en": "The people here are different than where we live.",
     "image": "images/card_385.webp",
     "id": 383,
-    "image_tier": "B",
-    "image_path": "images/card_385.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Miete",
@@ -6908,8 +6525,7 @@
     "example_en": "The rent for this apartment is 600 euros.",
     "image": "images/card_386.webp",
     "id": 384,
-    "image_tier": "B",
-    "image_path": "images/card_386.webp"
+    "image_tier": "B"
   },
   {
     "german": "mieten",
@@ -6926,8 +6542,7 @@
     "example_en": "I would like to rent a car.",
     "image": "images/card_387.webp",
     "id": 385,
-    "image_tier": "B",
-    "image_path": "images/card_387.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Milch",
@@ -6944,8 +6559,7 @@
     "example_en": "The milk is in the refrigerator.",
     "image": "images/card_388.webp",
     "id": 386,
-    "image_tier": "B",
-    "image_path": "images/card_388.webp"
+    "image_tier": "B"
   },
   {
     "german": "mit",
@@ -6962,8 +6576,7 @@
     "example_en": "Do you drink the coffee with milk?",
     "image": "images/card_389.webp",
     "id": 387,
-    "image_tier": "B",
-    "image_path": "images/card_389.webp"
+    "image_tier": "B"
   },
   {
     "german": "mitbringen",
@@ -6980,8 +6593,7 @@
     "example_en": "I am going shopping. Should I bring you something?",
     "image": "images/card_390.webp",
     "id": 388,
-    "image_tier": "B",
-    "image_path": "images/card_390.webp"
+    "image_tier": "B"
   },
   {
     "german": "mitkommen",
@@ -6998,8 +6610,7 @@
     "example_en": "I am going to the cinema. Are you coming along?",
     "image": "images/card_391.webp",
     "id": 389,
-    "image_tier": "B",
-    "image_path": "images/card_391.webp"
+    "image_tier": "B"
   },
   {
     "german": "mitmachen",
@@ -7016,8 +6627,7 @@
     "example_en": "Why don't you join in?",
     "image": "images/card_392.webp",
     "id": 390,
-    "image_tier": "B",
-    "image_path": "images/card_392.webp"
+    "image_tier": "B"
   },
   {
     "german": "mitnehmen",
@@ -7034,8 +6644,7 @@
     "example_en": "Are we taking my sister along to the cinema?",
     "image": "images/card_393.webp",
     "id": 391,
-    "image_tier": "B",
-    "image_path": "images/card_393.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Mitte",
@@ -7052,8 +6661,7 @@
     "example_en": "The teacher stands in the middle of the classroom.",
     "image": "images/card_394.webp",
     "id": 392,
-    "image_tier": "B",
-    "image_path": "images/card_394.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Moment",
@@ -7070,8 +6678,7 @@
     "example_en": "Just a moment please! One moment please.",
     "image": "images/card_395.webp",
     "id": 393,
-    "image_tier": "B",
-    "image_path": "images/card_395.webp"
+    "image_tier": "B"
   },
   {
     "german": "morgen",
@@ -7088,8 +6695,7 @@
     "example_en": "Tomorrow school begins at 10 o'clock.",
     "image": "images/card_396.webp",
     "id": 394,
-    "image_tier": "B",
-    "image_path": "images/card_396.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Mund",
@@ -7106,8 +6712,7 @@
     "example_en": "Open your mouth.",
     "image": "images/card_397.webp",
     "id": 395,
-    "image_tier": "B",
-    "image_path": "images/card_397.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Mutter",
@@ -7124,8 +6729,7 @@
     "example_en": "Mrs. Berghäuser is the mother of Michaela.",
     "image": "images/card_398.webp",
     "id": 396,
-    "image_tier": "B",
-    "image_path": "images/card_398.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Mädchen",
@@ -7142,8 +6746,7 @@
     "example_en": "The Kurz family is having a baby. - Boy or girl?",
     "image": "images/card_399.webp",
     "id": 397,
-    "image_tier": "B",
-    "image_path": "images/card_399.webp"
+    "image_tier": "B"
   },
   {
     "german": "männlich",
@@ -7160,8 +6763,7 @@
     "example_en": "Please cross: \"female\" or \"male\".",
     "image": "images/card_400.webp",
     "id": 398,
-    "image_tier": "B",
-    "image_path": "images/card_400.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Möbel",
@@ -7178,8 +6780,7 @@
     "example_en": "Is the furniture new?",
     "image": "images/card_401.webp",
     "id": 399,
-    "image_tier": "B",
-    "image_path": "images/card_401.webp"
+    "image_tier": "B"
   },
   {
     "german": "möchten",
@@ -7196,8 +6797,7 @@
     "example_en": "What would you like to drink?",
     "image": "images/card_402.webp",
     "id": 400,
-    "image_tier": "B",
-    "image_path": "images/card_402.webp"
+    "image_tier": "B"
   },
   {
     "german": "mögen",
@@ -7214,8 +6814,7 @@
     "example_en": "Do you like coffee or tea?",
     "image": "images/card_403.webp",
     "id": 401,
-    "image_tier": "B",
-    "image_path": "images/card_403.webp"
+    "image_tier": "B"
   },
   {
     "german": "möglich",
@@ -7232,8 +6831,7 @@
     "example_en": "With this ticket the journey is possible from 9 o'clock.",
     "image": "images/card_404.webp",
     "id": 402,
-    "image_tier": "B",
-    "image_path": "images/card_404.webp"
+    "image_tier": "B"
   },
   {
     "german": "müde",
@@ -7250,8 +6848,7 @@
     "example_en": "I am tired. I am going to sleep.",
     "image": "images/card_405.webp",
     "id": 403,
-    "image_tier": "B",
-    "image_path": "images/card_405.webp"
+    "image_tier": "B"
   },
   {
     "german": "müssen",
@@ -7268,8 +6865,7 @@
     "example_en": "I must work every day from 8 am to 6 pm.",
     "image": "images/card_406.webp",
     "id": 404,
-    "image_tier": "B",
-    "image_path": "images/card_406.webp"
+    "image_tier": "B"
   },
   {
     "german": "nach",
@@ -7286,8 +6882,7 @@
     "example_en": "I am going home now. I am flying to Munich. It is already 5 past 12.",
     "image": "images/card_407.webp",
     "id": 405,
-    "image_tier": "B",
-    "image_path": "images/card_407.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Name",
@@ -7304,8 +6899,7 @@
     "example_en": "My name is Thomas Schmidt. My first name is Thomas; Schmidt is the family name.",
     "image": "images/card_408.webp",
     "id": 406,
-    "image_tier": "B",
-    "image_path": "images/card_408.webp"
+    "image_tier": "B"
   },
   {
     "german": "nehmen",
@@ -7322,8 +6916,7 @@
     "example_en": "Today there is chicken. I will take that. I am taking the bus.",
     "image": "images/card_409.webp",
     "id": 407,
-    "image_tier": "B",
-    "image_path": "images/card_409.webp"
+    "image_tier": "B"
   },
   {
     "german": "nein",
@@ -7340,8 +6933,7 @@
     "example_en": "Are you also driving to Munich? - No, I have no time.",
     "image": "images/card_410.webp",
     "id": 408,
-    "image_tier": "B",
-    "image_path": "images/card_410.webp"
+    "image_tier": "B"
   },
   {
     "german": "neu",
@@ -7358,8 +6950,7 @@
     "example_en": "I am the new colleague. We have a new apartment.",
     "image": "images/card_411.webp",
     "id": 409,
-    "image_tier": "B",
-    "image_path": "images/card_411.webp"
+    "image_tier": "B"
   },
   {
     "german": "nicht",
@@ -7376,8 +6967,7 @@
     "example_en": "That is not true. That is beautiful, isn't it?",
     "image": "images/card_412.webp",
     "id": 410,
-    "image_tier": "B",
-    "image_path": "images/card_412.webp"
+    "image_tier": "B"
   },
   {
     "german": "nichts",
@@ -7394,8 +6984,7 @@
     "example_en": "That does not matter. I buy nothing here. I do not like the store.",
     "image": "images/card_413.webp",
     "id": 411,
-    "image_tier": "B",
-    "image_path": "images/card_413.webp"
+    "image_tier": "B"
   },
   {
     "german": "nie",
@@ -7412,8 +7001,7 @@
     "example_en": "He never comes on time.",
     "image": "images/card_414.webp",
     "id": 412,
-    "image_tier": "B",
-    "image_path": "images/card_414.webp"
+    "image_tier": "B"
   },
   {
     "german": "noch",
@@ -7430,8 +7018,7 @@
     "example_en": "Maybe he is still coming. We are waiting another five minutes. I still have 20 euros.",
     "image": "images/card_415.webp",
     "id": 413,
-    "image_tier": "B",
-    "image_path": "images/card_415.webp"
+    "image_tier": "B"
   },
   {
     "german": "normal",
@@ -7448,8 +7035,7 @@
     "example_en": "75 kg. His weight is normal.",
     "image": "images/card_416.webp",
     "id": 414,
-    "image_tier": "B",
-    "image_path": "images/card_416.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Nummer",
@@ -7466,8 +7052,7 @@
     "example_en": "You have room number twelve. What house number do you have? Can you give me your number?",
     "image": "images/card_417.webp",
     "id": 415,
-    "image_tier": "B",
-    "image_path": "images/card_417.webp"
+    "image_tier": "B"
   },
   {
     "german": "nur",
@@ -7484,8 +7069,7 @@
     "example_en": "I would only like a glass of water.",
     "image": "images/card_418.webp",
     "id": 416,
-    "image_tier": "B",
-    "image_path": "images/card_418.webp"
+    "image_tier": "B"
   },
   {
     "german": "nächst-",
@@ -7502,8 +7086,7 @@
     "example_en": "Will we see each other next week?",
     "image": "images/card_419.webp",
     "id": 417,
-    "image_tier": "B",
-    "image_path": "images/card_419.webp"
+    "image_tier": "B"
   },
   {
     "german": "oben",
@@ -7520,8 +7103,7 @@
     "example_en": "I live upstairs.",
     "image": "images/card_420.webp",
     "id": 418,
-    "image_tier": "B",
-    "image_path": "images/card_420.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Obst",
@@ -7538,8 +7120,7 @@
     "example_en": "In summer fruit is cheap.",
     "image": "images/card_421.webp",
     "id": 419,
-    "image_tier": "B",
-    "image_path": "images/card_421.webp"
+    "image_tier": "B"
   },
   {
     "german": "oder",
@@ -7556,8 +7137,7 @@
     "example_en": "When can you come - today or tomorrow?",
     "image": "images/card_422.webp",
     "id": 420,
-    "image_tier": "B",
-    "image_path": "images/card_422.webp"
+    "image_tier": "B"
   },
   {
     "german": "oft",
@@ -7574,8 +7154,7 @@
     "example_en": "I meet Petra often.",
     "image": "images/card_423.webp",
     "id": 421,
-    "image_tier": "B",
-    "image_path": "images/card_423.webp"
+    "image_tier": "B"
   },
   {
     "german": "ohne",
@@ -7592,8 +7171,7 @@
     "example_en": "Without money he can buy nothing.",
     "image": "images/card_424.webp",
     "id": 422,
-    "image_tier": "B",
-    "image_path": "images/card_424.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Oma",
@@ -7610,8 +7188,7 @@
     "example_en": "My grandma is already dead.",
     "image": "images/card_425.webp",
     "id": 423,
-    "image_tier": "B",
-    "image_path": "images/card_425.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Opa",
@@ -7628,8 +7205,7 @@
     "example_en": "My grandpa's name is Hans.",
     "image": "images/card_426.webp",
     "id": 424,
-    "image_tier": "B",
-    "image_path": "images/card_426.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Ordnung",
@@ -7646,8 +7222,7 @@
     "example_en": "That is fine.",
     "image": "images/card_427.webp",
     "id": 425,
-    "image_tier": "B",
-    "image_path": "images/card_427.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Ort",
@@ -7664,8 +7239,7 @@
     "example_en": "The place is located by the sea.",
     "image": "images/card_428.webp",
     "id": 426,
-    "image_tier": "B",
-    "image_path": "images/card_428.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Papier",
@@ -7682,8 +7256,7 @@
     "example_en": "Here are paper and a pencil.",
     "image": "images/card_429.webp",
     "id": 427,
-    "image_tier": "B",
-    "image_path": "images/card_429.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Papiere",
@@ -7700,8 +7273,7 @@
     "example_en": "Do you have your papers with you?",
     "image": "images/card_430.webp",
     "id": 428,
-    "image_tier": "B",
-    "image_path": "images/card_430.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Partner",
@@ -7718,8 +7290,7 @@
     "example_en": "She is my partner.",
     "image": "images/card_431.webp",
     "id": 429,
-    "image_tier": "B",
-    "image_path": "images/card_431.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Partnerin",
@@ -7736,8 +7307,7 @@
     "example_en": "She is my partner.",
     "image": "images/card_432.webp",
     "id": 430,
-    "image_tier": "B",
-    "image_path": "images/card_432.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Party",
@@ -7754,8 +7324,7 @@
     "example_en": "Tonight we are having a party.",
     "image": "images/card_433.webp",
     "id": 431,
-    "image_tier": "B",
-    "image_path": "images/card_433.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Pass",
@@ -7772,8 +7341,7 @@
     "example_en": "In the hotel you need your passport.",
     "image": "images/card_434.webp",
     "id": 432,
-    "image_tier": "B",
-    "image_path": "images/card_434.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Pause",
@@ -7790,8 +7358,7 @@
     "example_en": "From 12.00 to 12.30 we have a lunch break.",
     "image": "images/card_435.webp",
     "id": 433,
-    "image_tier": "B",
-    "image_path": "images/card_435.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Plan",
@@ -7808,8 +7375,7 @@
     "example_en": "I am buying a city map.",
     "image": "images/card_436.webp",
     "id": 434,
-    "image_tier": "B",
-    "image_path": "images/card_436.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Platz",
@@ -7826,8 +7392,7 @@
     "example_en": "I am sorry, the seat is taken. Please take a seat! I live at Messeplatz 5.",
     "image": "images/card_437.webp",
     "id": 435,
-    "image_tier": "B",
-    "image_path": "images/card_437.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Polizei",
@@ -7844,8 +7409,7 @@
     "example_en": "Call the police!",
     "image": "images/card_438.webp",
     "id": 436,
-    "image_tier": "B",
-    "image_path": "images/card_438.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Pommes frites",
@@ -7862,8 +7426,7 @@
     "example_en": "The children eat chicken with French fries.",
     "image": "images/card_439.webp",
     "id": 437,
-    "image_tier": "B",
-    "image_path": "images/card_439.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Post",
@@ -7880,8 +7443,7 @@
     "example_en": "Where is the post office, please? Is there mail?",
     "image": "images/card_440.webp",
     "id": 438,
-    "image_tier": "B",
-    "image_path": "images/card_440.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Postleitzahl",
@@ -7898,8 +7460,7 @@
     "example_en": "What is your postal code?",
     "image": "images/card_441.webp",
     "id": 439,
-    "image_tier": "B",
-    "image_path": "images/card_441.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Praktikum",
@@ -7916,8 +7477,7 @@
     "example_en": "I am doing an internship at Siemens.",
     "image": "images/card_442.webp",
     "id": 440,
-    "image_tier": "B",
-    "image_path": "images/card_442.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Praxis",
@@ -7934,8 +7494,7 @@
     "example_en": "The practice is open from eight o'clock.",
     "image": "images/card_443.webp",
     "id": 441,
-    "image_tier": "B",
-    "image_path": "images/card_443.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Preis",
@@ -7952,8 +7511,7 @@
     "example_en": "The prices are high.",
     "image": "images/card_444.webp",
     "id": 442,
-    "image_tier": "B",
-    "image_path": "images/card_444.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Problem",
@@ -7970,8 +7528,7 @@
     "example_en": "My problem is the language.",
     "image": "images/card_445.webp",
     "id": 443,
-    "image_tier": "B",
-    "image_path": "images/card_445.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Prospekt",
@@ -7988,8 +7545,7 @@
     "example_en": "Please send me a brochure of your hotel.",
     "image": "images/card_446.webp",
     "id": 444,
-    "image_tier": "B",
-    "image_path": "images/card_446.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Prüfung",
@@ -8006,8 +7562,7 @@
     "example_en": "The exam is on Monday at 8.00 am.",
     "image": "images/card_447.webp",
     "id": 445,
-    "image_tier": "B",
-    "image_path": "images/card_447.webp"
+    "image_tier": "B"
   },
   {
     "german": "pünktlich",
@@ -8024,8 +7579,7 @@
     "example_en": "The bus departs punctually at eight o'clock. Mr. Müller is always punctual.",
     "image": "images/card_448.webp",
     "id": 446,
-    "image_tier": "B",
-    "image_path": "images/card_448.webp"
+    "image_tier": "B"
   },
   {
     "german": "rauchen",
@@ -8042,8 +7596,7 @@
     "example_en": "I do not smoke.",
     "image": "images/card_449.webp",
     "id": 447,
-    "image_tier": "B",
-    "image_path": "images/card_449.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Raum",
@@ -8060,8 +7613,7 @@
     "example_en": "The class is in room 332.",
     "image": "images/card_450.webp",
     "id": 448,
-    "image_tier": "B",
-    "image_path": "images/card_450.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Rechnung",
@@ -8078,8 +7630,7 @@
     "example_en": "The bill, please.",
     "image": "images/card_451.webp",
     "id": 449,
-    "image_tier": "B",
-    "image_path": "images/card_451.webp"
+    "image_tier": "B"
   },
   {
     "german": "rechts",
@@ -8096,8 +7647,7 @@
     "example_en": "Schillerstraße is here on the right.",
     "image": "images/card_452.webp",
     "id": 450,
-    "image_tier": "B",
-    "image_path": "images/card_452.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Regen",
@@ -8114,8 +7664,7 @@
     "example_en": "In this rain I am not going out.",
     "image": "images/card_453.webp",
     "id": 451,
-    "image_tier": "B",
-    "image_path": "images/card_453.webp"
+    "image_tier": "B"
   },
   {
     "german": "regnen",
@@ -8132,8 +7681,7 @@
     "example_en": "Today it is raining.",
     "image": "images/card_454.webp",
     "id": 452,
-    "image_tier": "B",
-    "image_path": "images/card_454.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Reis",
@@ -8150,8 +7698,7 @@
     "example_en": "I like to eat rice.",
     "image": "images/card_455.webp",
     "id": 453,
-    "image_tier": "B",
-    "image_path": "images/card_455.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Reise",
@@ -8168,8 +7715,7 @@
     "example_en": "We are taking a trip to Austria.",
     "image": "images/card_456.webp",
     "id": 454,
-    "image_tier": "B",
-    "image_path": "images/card_456.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Reisebüro",
@@ -8186,8 +7732,7 @@
     "example_en": "My husband works in the travel agency.",
     "image": "images/card_457.webp",
     "id": 455,
-    "image_tier": "B",
-    "image_path": "images/card_457.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Reiseführer",
@@ -8204,8 +7749,7 @@
     "example_en": "I am buying a travel guide for Berlin. Our tour guide is named Peter.",
     "image": "images/card_458.webp",
     "id": 456,
-    "image_tier": "B",
-    "image_path": "images/card_458.webp"
+    "image_tier": "B"
   },
   {
     "german": "reisen",
@@ -8222,8 +7766,7 @@
     "example_en": "I like to travel.",
     "image": "images/card_459.webp",
     "id": 457,
-    "image_tier": "B",
-    "image_path": "images/card_459.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Reparatur",
@@ -8240,8 +7783,7 @@
     "example_en": "The repair is very expensive.",
     "image": "images/card_460.webp",
     "id": 458,
-    "image_tier": "B",
-    "image_path": "images/card_460.webp"
+    "image_tier": "B"
   },
   {
     "german": "reparieren",
@@ -8258,8 +7800,7 @@
     "example_en": "He repaired the bicycle.",
     "image": "images/card_461.webp",
     "id": 459,
-    "image_tier": "B",
-    "image_path": "images/card_461.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Restaurant",
@@ -8276,8 +7817,7 @@
     "example_en": "We are eating in a restaurant today.",
     "image": "images/card_462.webp",
     "id": 460,
-    "image_tier": "B",
-    "image_path": "images/card_462.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Rezeption",
@@ -8294,8 +7834,7 @@
     "example_en": "Please ask at the reception in the hotel.",
     "image": "images/card_463.webp",
     "id": 461,
-    "image_tier": "B",
-    "image_path": "images/card_463.webp"
+    "image_tier": "B"
   },
   {
     "german": "richtig",
@@ -8312,8 +7851,7 @@
     "example_en": "Did I understand that correctly? That is correct.",
     "image": "images/card_464.webp",
     "id": 462,
-    "image_tier": "B",
-    "image_path": "images/card_464.webp"
+    "image_tier": "B"
   },
   {
     "german": "riechen",
@@ -8330,8 +7868,7 @@
     "example_en": "This wine smells good.",
     "image": "images/card_465.webp",
     "id": 463,
-    "image_tier": "B",
-    "image_path": "images/card_465.webp"
+    "image_tier": "B"
   },
   {
     "german": "ruhig",
@@ -8348,8 +7885,7 @@
     "example_en": "I would like a quiet room.",
     "image": "images/card_466.webp",
     "id": 464,
-    "image_tier": "B",
-    "image_path": "images/card_466.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Saft",
@@ -8366,8 +7902,7 @@
     "example_en": "Would you like an apple juice?",
     "image": "images/card_467.webp",
     "id": 465,
-    "image_tier": "B",
-    "image_path": "images/card_467.webp"
+    "image_tier": "B"
   },
   {
     "german": "sagen",
@@ -8384,8 +7919,7 @@
     "example_en": "Tell me, how are you doing?",
     "image": "images/card_468.webp",
     "id": 466,
-    "image_tier": "B",
-    "image_path": "images/card_468.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Salat",
@@ -8402,8 +7936,7 @@
     "example_en": "How does the salad taste to you?",
     "image": "images/card_469.webp",
     "id": 467,
-    "image_tier": "B",
-    "image_path": "images/card_469.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Salz",
@@ -8420,8 +7953,7 @@
     "example_en": "Waiter, can I please have some salt?",
     "image": "images/card_470.webp",
     "id": 468,
-    "image_tier": "B",
-    "image_path": "images/card_470.webp"
+    "image_tier": "B"
   },
   {
     "german": "die S-Bahn",
@@ -8438,8 +7970,7 @@
     "example_en": "I prefer to take the S-Bahn.",
     "image": "images/card_471.webp",
     "id": 469,
-    "image_tier": "B",
-    "image_path": "images/card_471.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Schalter",
@@ -8456,8 +7987,7 @@
     "example_en": "Please go to counter three!",
     "image": "images/card_472.webp",
     "id": 470,
-    "image_tier": "B",
-    "image_path": "images/card_472.webp"
+    "image_tier": "B"
   },
   {
     "german": "scheinen",
@@ -8474,8 +8004,7 @@
     "example_en": "The sun is shining.",
     "image": "images/card_473.webp",
     "id": 471,
-    "image_tier": "B",
-    "image_path": "images/card_473.webp"
+    "image_tier": "B"
   },
   {
     "german": "schicken",
@@ -8492,8 +8021,7 @@
     "example_en": "Please send me an e-mail.",
     "image": "images/card_474.webp",
     "id": 472,
-    "image_tier": "B",
-    "image_path": "images/card_474.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Schild",
@@ -8510,8 +8038,7 @@
     "example_en": "Did you not see the sign?",
     "image": "images/card_475.webp",
     "id": 473,
-    "image_tier": "B",
-    "image_path": "images/card_475.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Schinken",
@@ -8528,8 +8055,7 @@
     "example_en": "I would like a ham sandwich.",
     "image": "images/card_476.webp",
     "id": 474,
-    "image_tier": "B",
-    "image_path": "images/card_476.webp"
+    "image_tier": "B"
   },
   {
     "german": "schlafen",
@@ -8546,8 +8072,7 @@
     "example_en": "I usually sleep eight hours.",
     "image": "images/card_477.webp",
     "id": 475,
-    "image_tier": "B",
-    "image_path": "images/card_477.webp"
+    "image_tier": "B"
   },
   {
     "german": "schlecht",
@@ -8564,8 +8089,7 @@
     "example_en": "I feel sick! You look bad. We have bad weather.",
     "image": "images/card_478.webp",
     "id": 476,
-    "image_tier": "B",
-    "image_path": "images/card_478.webp"
+    "image_tier": "B"
   },
   {
     "german": "schließen",
@@ -8582,8 +8106,7 @@
     "example_en": "Please, close the door.",
     "image": "images/card_479.webp",
     "id": 477,
-    "image_tier": "B",
-    "image_path": "images/card_479.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Schluss",
@@ -8600,8 +8123,7 @@
     "example_en": "I must finish now. At the end he gives everyone his hand.",
     "image": "images/card_480.webp",
     "id": 478,
-    "image_tier": "B",
-    "image_path": "images/card_480.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Schlüssel",
@@ -8618,8 +8140,7 @@
     "example_en": "I will give you the room key.",
     "image": "images/card_481.webp",
     "id": 479,
-    "image_tier": "B",
-    "image_path": "images/card_481.webp"
+    "image_tier": "B"
   },
   {
     "german": "schmecken",
@@ -8636,8 +8157,7 @@
     "example_en": "Does that taste good?",
     "image": "images/card_482.webp",
     "id": 480,
-    "image_tier": "B",
-    "image_path": "images/card_482.webp"
+    "image_tier": "B"
   },
   {
     "german": "schnell",
@@ -8654,8 +8174,7 @@
     "example_en": "He drives fast.",
     "image": "images/card_483.webp",
     "id": 481,
-    "image_tier": "B",
-    "image_path": "images/card_483.webp"
+    "image_tier": "B"
   },
   {
     "german": "schon",
@@ -8672,8 +8191,7 @@
     "example_en": "Is the food already ready?",
     "image": "images/card_484.webp",
     "id": 482,
-    "image_tier": "B",
-    "image_path": "images/card_484.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Schrank",
@@ -8690,8 +8208,7 @@
     "example_en": "The glasses stand in the cupboard.",
     "image": "images/card_485.webp",
     "id": 483,
-    "image_tier": "B",
-    "image_path": "images/card_485.webp"
+    "image_tier": "B"
   },
   {
     "german": "schreiben",
@@ -8708,8 +8225,7 @@
     "example_en": "He writes fifty e-mails every day.",
     "image": "images/card_486.webp",
     "id": 484,
-    "image_tier": "B",
-    "image_path": "images/card_486.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Schuh",
@@ -8726,8 +8242,7 @@
     "example_en": "Take off your shoes!",
     "image": "images/card_487.webp",
     "id": 485,
-    "image_tier": "B",
-    "image_path": "images/card_487.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Schule",
@@ -8744,8 +8259,7 @@
     "example_en": "My daughter already goes to school. The school is right around the corner.",
     "image": "images/card_488.webp",
     "id": 486,
-    "image_tier": "B",
-    "image_path": "images/card_488.webp"
+    "image_tier": "B"
   },
   {
     "german": "schwer",
@@ -8762,8 +8276,7 @@
     "example_en": "Is your luggage very heavy? That is hard work.",
     "image": "images/card_489.webp",
     "id": 487,
-    "image_tier": "B",
-    "image_path": "images/card_489.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Schwester",
@@ -8780,8 +8293,7 @@
     "example_en": "My sister is coming on Tuesday.",
     "image": "images/card_490.webp",
     "id": 488,
-    "image_tier": "B",
-    "image_path": "images/card_490.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Schwimmbad",
@@ -8798,8 +8310,7 @@
     "example_en": "Are you coming to the swimming pool?",
     "image": "images/card_491.webp",
     "id": 489,
-    "image_tier": "B",
-    "image_path": "images/card_491.webp"
+    "image_tier": "B"
   },
   {
     "german": "schwimmen",
@@ -8816,8 +8327,7 @@
     "example_en": "I swim a kilometer every day.",
     "image": "images/card_492.webp",
     "id": 490,
-    "image_tier": "B",
-    "image_path": "images/card_492.webp"
+    "image_tier": "B"
   },
   {
     "german": "schön",
@@ -8834,8 +8344,7 @@
     "example_en": "Have a nice holiday! That is very beautiful.",
     "image": "images/card_493.webp",
     "id": 491,
-    "image_tier": "B",
-    "image_path": "images/card_493.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Schüler",
@@ -8852,8 +8361,7 @@
     "example_en": "In my course there are eight female students and five male students.",
     "image": "images/card_494.webp",
     "id": 492,
-    "image_tier": "B",
-    "image_path": "images/card_494.webp"
+    "image_tier": "B"
   },
   {
     "german": "der See",
@@ -8870,8 +8378,7 @@
     "example_en": "Come, we are driving to Lake Starnberg.",
     "image": "images/card_495.webp",
     "id": 493,
-    "image_tier": "B",
-    "image_path": "images/card_495.webp"
+    "image_tier": "B"
   },
   {
     "german": "sehen",
@@ -8888,8 +8395,7 @@
     "example_en": "I cannot see you. I have seen this boy once before.",
     "image": "images/card_496.webp",
     "id": 494,
-    "image_tier": "B",
-    "image_path": "images/card_496.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Sehenswürdigkeit",
@@ -8906,8 +8412,7 @@
     "example_en": "What sights are there in Frankfurt?",
     "image": "images/card_497.webp",
     "id": 495,
-    "image_tier": "B",
-    "image_path": "images/card_497.webp"
+    "image_tier": "B"
   },
   {
     "german": "sehr",
@@ -8924,8 +8429,7 @@
     "example_en": "Thank you very much! That is very heavy.",
     "image": "images/card_498.webp",
     "id": 496,
-    "image_tier": "B",
-    "image_path": "images/card_498.webp"
+    "image_tier": "B"
   },
   {
     "german": "sein",
@@ -8942,8 +8446,7 @@
     "example_en": "Mr. Müller is in his room. I am cold. I am twenty-three.",
     "image": "images/card_499.webp",
     "id": 497,
-    "image_tier": "B",
-    "image_path": "images/card_499.webp"
+    "image_tier": "B"
   },
   {
     "german": "seit",
@@ -8960,8 +8463,7 @@
     "example_en": "I have been living in Cologne for three years.",
     "image": "images/card_500.webp",
     "id": 498,
-    "image_tier": "B",
-    "image_path": "images/card_500.webp"
+    "image_tier": "B"
   },
   {
     "german": "selbstständig",
@@ -8978,8 +8480,7 @@
     "example_en": "He is self-employed.",
     "image": "images/card_501.webp",
     "id": 499,
-    "image_tier": "B",
-    "image_path": "images/card_501.webp"
+    "image_tier": "B"
   },
   {
     "german": "sich",
@@ -8996,8 +8497,7 @@
     "example_en": "You must register first.",
     "image": "images/card_502.webp",
     "id": 500,
-    "image_tier": "B",
-    "image_path": "images/card_502.webp"
+    "image_tier": "B"
   },
   {
     "german": "sich kümmern",
@@ -9014,8 +8514,7 @@
     "example_en": "Every mother takes care of her small children.",
     "image": "images/card_503.webp",
     "id": 501,
-    "image_tier": "B",
-    "image_path": "images/card_503.webp"
+    "image_tier": "B"
   },
   {
     "german": "sie / Sie",
@@ -9032,8 +8531,7 @@
     "example_en": "What is her name? What is your name, please?",
     "image": "images/card_504.webp",
     "id": 502,
-    "image_tier": "B",
-    "image_path": "images/card_504.webp"
+    "image_tier": "B"
   },
   {
     "german": "sitzen",
@@ -9050,8 +8548,7 @@
     "example_en": "Where are you sitting?",
     "image": "images/card_505.webp",
     "id": 503,
-    "image_tier": "B",
-    "image_path": "images/card_505.webp"
+    "image_tier": "B"
   },
   {
     "german": "so",
@@ -9068,8 +8565,7 @@
     "example_en": "You must do it like this! Please do not drive so fast!",
     "image": "images/card_506.webp",
     "id": 504,
-    "image_tier": "B",
-    "image_path": "images/card_506.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Sofa",
@@ -9086,8 +8582,7 @@
     "example_en": "The sofa is new.",
     "image": "images/card_507.webp",
     "id": 505,
-    "image_tier": "B",
-    "image_path": "images/card_507.webp"
+    "image_tier": "B"
   },
   {
     "german": "sofort",
@@ -9104,8 +8599,7 @@
     "example_en": "Please answer immediately.",
     "image": "images/card_508.webp",
     "id": 506,
-    "image_tier": "B",
-    "image_path": "images/card_508.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Sohn",
@@ -9122,8 +8616,7 @@
     "example_en": "That is Hans, my son.",
     "image": "images/card_509.webp",
     "id": 507,
-    "image_tier": "B",
-    "image_path": "images/card_509.webp"
+    "image_tier": "B"
   },
   {
     "german": "sollen",
@@ -9140,8 +8633,7 @@
     "example_en": "Should I come? What should I bring?",
     "image": "images/card_510.webp",
     "id": 508,
-    "image_tier": "B",
-    "image_path": "images/card_510.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Sonne",
@@ -9158,8 +8650,7 @@
     "example_en": "The sun is shining.",
     "image": "images/card_511.webp",
     "id": 509,
-    "image_tier": "B",
-    "image_path": "images/card_511.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Speisekarte",
@@ -9176,8 +8667,7 @@
     "example_en": "Bring me the menu, please.",
     "image": "images/card_512.webp",
     "id": 510,
-    "image_tier": "B",
-    "image_path": "images/card_512.webp"
+    "image_tier": "B"
   },
   {
     "german": "spielen",
@@ -9194,8 +8684,7 @@
     "example_en": "The children play outside. Do you play cards?",
     "image": "images/card_513.webp",
     "id": 511,
-    "image_tier": "B",
-    "image_path": "images/card_513.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Sport",
@@ -9212,8 +8701,7 @@
     "example_en": "I do a lot of sports.",
     "image": "images/card_514.webp",
     "id": 512,
-    "image_tier": "B",
-    "image_path": "images/card_514.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Sprache",
@@ -9230,8 +8718,7 @@
     "example_en": "Which languages do you speak?",
     "image": "images/card_515.webp",
     "id": 513,
-    "image_tier": "B",
-    "image_path": "images/card_515.webp"
+    "image_tier": "B"
   },
   {
     "german": "sprechen",
@@ -9248,8 +8735,7 @@
     "example_en": "Can I speak with Mr. Klein?",
     "image": "images/card_516.webp",
     "id": 514,
-    "image_tier": "B",
-    "image_path": "images/card_516.webp"
+    "image_tier": "B"
   },
   {
     "german": "spät",
@@ -9266,8 +8752,7 @@
     "example_en": "It is already late, I must go.",
     "image": "images/card_517.webp",
     "id": 515,
-    "image_tier": "B",
-    "image_path": "images/card_517.webp"
+    "image_tier": "B"
   },
   {
     "german": "später",
@@ -9284,8 +8769,7 @@
     "example_en": "We can do that later.",
     "image": "images/card_518.webp",
     "id": 516,
-    "image_tier": "B",
-    "image_path": "images/card_518.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Stadt",
@@ -9302,8 +8786,7 @@
     "example_en": "Heidelberg is an old city.",
     "image": "images/card_519.webp",
     "id": 517,
-    "image_tier": "B",
-    "image_path": "images/card_519.webp"
+    "image_tier": "B"
   },
   {
     "german": "stehen",
@@ -9320,8 +8803,7 @@
     "example_en": "I do not believe it, but it says so in the newspaper. The bus is already standing at the bus stop.",
     "image": "images/card_520.webp",
     "id": 518,
-    "image_tier": "B",
-    "image_path": "images/card_520.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Stelle",
@@ -9338,8 +8820,7 @@
     "example_en": "I have a new job.",
     "image": "images/card_521.webp",
     "id": 519,
-    "image_tier": "B",
-    "image_path": "images/card_521.webp"
+    "image_tier": "B"
   },
   {
     "german": "stellen",
@@ -9356,8 +8837,7 @@
     "example_en": "Put the bag in the corner on the right!",
     "image": "images/card_522.webp",
     "id": 520,
-    "image_tier": "B",
-    "image_path": "images/card_522.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Stock",
@@ -9374,8 +8854,7 @@
     "example_en": "Our apartment is on the first floor.",
     "image": "images/card_523.webp",
     "id": 521,
-    "image_tier": "B",
-    "image_path": "images/card_523.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Straße",
@@ -9392,8 +8871,7 @@
     "example_en": "What street do you live on?",
     "image": "images/card_524.webp",
     "id": 522,
-    "image_tier": "B",
-    "image_path": "images/card_524.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Straßenbahn",
@@ -9410,8 +8888,7 @@
     "example_en": "Where does the tram depart from?",
     "image": "images/card_525.webp",
     "id": 523,
-    "image_tier": "B",
-    "image_path": "images/card_525.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Student",
@@ -9428,8 +8905,7 @@
     "example_en": "I am a university student.",
     "image": "images/card_526.webp",
     "id": 524,
-    "image_tier": "B",
-    "image_path": "images/card_526.webp"
+    "image_tier": "B"
   },
   {
     "german": "studieren",
@@ -9446,8 +8922,7 @@
     "example_en": "I study in Mainz.",
     "image": "images/card_527.webp",
     "id": 525,
-    "image_tier": "B",
-    "image_path": "images/card_527.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Studium",
@@ -9464,8 +8939,7 @@
     "example_en": "The degree program begins in October.",
     "image": "images/card_528.webp",
     "id": 526,
-    "image_tier": "B",
-    "image_path": "images/card_528.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Stunde",
@@ -9482,8 +8956,7 @@
     "example_en": "I am back in an hour.",
     "image": "images/card_529.webp",
     "id": 527,
-    "image_tier": "B",
-    "image_path": "images/card_529.webp"
+    "image_tier": "B"
   },
   {
     "german": "suchen",
@@ -9500,8 +8973,7 @@
     "example_en": "Are you looking for something?",
     "image": "images/card_530.webp",
     "id": 528,
-    "image_tier": "B",
-    "image_path": "images/card_530.webp"
+    "image_tier": "B"
   },
   {
     "german": "tanzen",
@@ -9518,8 +8990,7 @@
     "example_en": "Do you like to dance?",
     "image": "images/card_531.webp",
     "id": 529,
-    "image_tier": "B",
-    "image_path": "images/card_531.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Tasche",
@@ -9536,8 +9007,7 @@
     "example_en": "I have the keys in the bag.",
     "image": "images/card_532.webp",
     "id": 530,
-    "image_tier": "B",
-    "image_path": "images/card_532.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Taxi",
@@ -9554,8 +9024,7 @@
     "example_en": "There is no bus anymore today. He is traveling by taxi.",
     "image": "images/card_533.webp",
     "id": 531,
-    "image_tier": "B",
-    "image_path": "images/card_533.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Tee",
@@ -9572,8 +9041,7 @@
     "example_en": "I always drink tea in the morning.",
     "image": "images/card_534.webp",
     "id": 532,
-    "image_tier": "B",
-    "image_path": "images/card_534.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Teil",
@@ -9590,8 +9058,7 @@
     "example_en": "Please read the second part too.",
     "image": "images/card_535.webp",
     "id": 533,
-    "image_tier": "B",
-    "image_path": "images/card_535.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Telefon",
@@ -9608,8 +9075,7 @@
     "example_en": "Do you have a telephone?",
     "image": "images/card_536.webp",
     "id": 534,
-    "image_tier": "B",
-    "image_path": "images/card_536.webp"
+    "image_tier": "B"
   },
   {
     "german": "telefonieren",
@@ -9626,8 +9092,7 @@
     "example_en": "May I make a phone call?",
     "image": "images/card_537.webp",
     "id": 535,
-    "image_tier": "B",
-    "image_path": "images/card_537.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Termin",
@@ -9644,8 +9109,7 @@
     "example_en": "It is best if we make an appointment immediately.",
     "image": "images/card_538.webp",
     "id": 536,
-    "image_tier": "B",
-    "image_path": "images/card_538.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Test",
@@ -9662,8 +9126,7 @@
     "example_en": "The test was easy.",
     "image": "images/card_539.webp",
     "id": 537,
-    "image_tier": "B",
-    "image_path": "images/card_539.webp"
+    "image_tier": "B"
   },
   {
     "german": "teuer",
@@ -9680,8 +9143,7 @@
     "example_en": "That is too expensive for me.",
     "image": "images/card_540.webp",
     "id": 538,
-    "image_tier": "B",
-    "image_path": "images/card_540.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Text",
@@ -9698,8 +9160,7 @@
     "example_en": "Please read this text.",
     "image": "images/card_541.webp",
     "id": 539,
-    "image_tier": "B",
-    "image_path": "images/card_541.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Thema",
@@ -9716,8 +9177,7 @@
     "example_en": "We are speaking today about the topic \"food and drink\".",
     "image": "images/card_542.webp",
     "id": 540,
-    "image_tier": "B",
-    "image_path": "images/card_542.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Ticket",
@@ -9734,8 +9194,7 @@
     "example_en": "How much does the ticket cost?",
     "image": "images/card_543.webp",
     "id": 541,
-    "image_tier": "B",
-    "image_path": "images/card_543.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Tisch",
@@ -9752,8 +9211,7 @@
     "example_en": "The photos are lying on the table.",
     "image": "images/card_544.webp",
     "id": 542,
-    "image_tier": "B",
-    "image_path": "images/card_544.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Tochter",
@@ -9770,8 +9228,7 @@
     "example_en": "That is my daughter Katharina.",
     "image": "images/card_545.webp",
     "id": 543,
-    "image_tier": "B",
-    "image_path": "images/card_545.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Toilette",
@@ -9788,8 +9245,7 @@
     "example_en": "Where is the toilet, please?",
     "image": "images/card_546.webp",
     "id": 544,
-    "image_tier": "B",
-    "image_path": "images/card_546.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Tomate",
@@ -9806,8 +9262,7 @@
     "example_en": "The tomato is still green.",
     "image": "images/card_547.webp",
     "id": 545,
-    "image_tier": "B",
-    "image_path": "images/card_547.webp"
+    "image_tier": "B"
   },
   {
     "german": "tot",
@@ -9824,8 +9279,7 @@
     "example_en": "His father has been dead for a long time.",
     "image": "images/card_548.webp",
     "id": 546,
-    "image_tier": "B",
-    "image_path": "images/card_548.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Treppe",
@@ -9842,8 +9296,7 @@
     "example_en": "The toilet? Up the stairs and then left.",
     "image": "images/card_549.webp",
     "id": 547,
-    "image_tier": "B",
-    "image_path": "images/card_549.webp"
+    "image_tier": "B"
   },
   {
     "german": "trinken",
@@ -9860,8 +9313,7 @@
     "example_en": "Would you like something to drink?",
     "image": "images/card_550.webp",
     "id": 548,
-    "image_tier": "B",
-    "image_path": "images/card_550.webp"
+    "image_tier": "B"
   },
   {
     "german": "tschüss",
@@ -9878,8 +9330,7 @@
     "example_en": "Young people mostly say \"bye!\" and not \"goodbye\".",
     "image": "images/card_551.webp",
     "id": 549,
-    "image_tier": "B",
-    "image_path": "images/card_551.webp"
+    "image_tier": "B"
   },
   {
     "german": "tun",
@@ -9896,8 +9347,7 @@
     "example_en": "I still have something to do. What does your husband do?",
     "image": "images/card_552.webp",
     "id": 550,
-    "image_tier": "B",
-    "image_path": "images/card_552.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Uhr",
@@ -9914,8 +9364,7 @@
     "example_en": "It is four o'clock.",
     "image": "images/card_553.webp",
     "id": 551,
-    "image_tier": "B",
-    "image_path": "images/card_553.webp"
+    "image_tier": "B"
   },
   {
     "german": "um",
@@ -9932,8 +9381,7 @@
     "example_en": "He is coming at seven o'clock. There he comes right around the corner.",
     "image": "images/card_554.webp",
     "id": 552,
-    "image_tier": "B",
-    "image_path": "images/card_554.webp"
+    "image_tier": "B"
   },
   {
     "german": "umziehen",
@@ -9950,8 +9398,7 @@
     "example_en": "Next month we are moving.",
     "image": "images/card_555.webp",
     "id": 553,
-    "image_tier": "B",
-    "image_path": "images/card_555.webp"
+    "image_tier": "B"
   },
   {
     "german": "und",
@@ -9968,8 +9415,7 @@
     "example_en": "Peter and Helmut are my sons.",
     "image": "images/card_557.webp",
     "id": 554,
-    "image_tier": "B",
-    "image_path": "images/card_557.webp"
+    "image_tier": "B"
   },
   {
     "german": "unser-",
@@ -9986,8 +9432,7 @@
     "example_en": "That is our teacher.",
     "image": "images/card_558.webp",
     "id": 555,
-    "image_tier": "B",
-    "image_path": "images/card_558.webp"
+    "image_tier": "B"
   },
   {
     "german": "unten",
@@ -10004,8 +9449,7 @@
     "example_en": "He lives right at the bottom of the house.",
     "image": "images/card_559.webp",
     "id": 556,
-    "image_tier": "B",
-    "image_path": "images/card_559.webp"
+    "image_tier": "B"
   },
   {
     "german": "unter",
@@ -10022,8 +9466,7 @@
     "example_en": "A family with three children lives below us.",
     "image": "images/card_560.webp",
     "id": 557,
-    "image_tier": "B",
-    "image_path": "images/card_560.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Unterricht",
@@ -10040,8 +9483,7 @@
     "example_en": "We have class from 8.00 to 12.00.",
     "image": "images/card_561.webp",
     "id": 558,
-    "image_tier": "B",
-    "image_path": "images/card_561.webp"
+    "image_tier": "B"
   },
   {
     "german": "unterschreiben",
@@ -10058,8 +9500,7 @@
     "example_en": "Where must I sign?",
     "image": "images/card_562.webp",
     "id": 559,
-    "image_tier": "B",
-    "image_path": "images/card_562.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Unterschrift",
@@ -10076,8 +9517,7 @@
     "example_en": "Your signature is still missing here.",
     "image": "images/card_563.webp",
     "id": 560,
-    "image_tier": "B",
-    "image_path": "images/card_563.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Urlaub",
@@ -10094,8 +9534,7 @@
     "example_en": "I am taking a vacation in September.",
     "image": "images/card_564.webp",
     "id": 561,
-    "image_tier": "B",
-    "image_path": "images/card_564.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Vater",
@@ -10112,8 +9551,7 @@
     "example_en": "My father is a worker.",
     "image": "images/card_565.webp",
     "id": 562,
-    "image_tier": "B",
-    "image_path": "images/card_565.webp"
+    "image_tier": "B"
   },
   {
     "german": "verboten",
@@ -10130,8 +9568,7 @@
     "example_en": "Smoking is forbidden here.",
     "image": "images/card_566.webp",
     "id": 563,
-    "image_tier": "B",
-    "image_path": "images/card_566.webp"
+    "image_tier": "B"
   },
   {
     "german": "verdienen",
@@ -10148,8 +9585,7 @@
     "example_en": "I earn 1,500 euros a month.",
     "image": "images/card_567.webp",
     "id": 564,
-    "image_tier": "B",
-    "image_path": "images/card_567.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Verein",
@@ -10166,8 +9602,7 @@
     "example_en": "There is a new sports club in the city.",
     "image": "images/card_568.webp",
     "id": 565,
-    "image_tier": "B",
-    "image_path": "images/card_568.webp"
+    "image_tier": "B"
   },
   {
     "german": "verheiratet",
@@ -10184,8 +9619,7 @@
     "example_en": "I am married and have three children.",
     "image": "images/card_569.webp",
     "id": 566,
-    "image_tier": "B",
-    "image_path": "images/card_569.webp"
+    "image_tier": "B"
   },
   {
     "german": "verkaufen",
@@ -10202,8 +9636,7 @@
     "example_en": "He is selling his old car.",
     "image": "images/card_570.webp",
     "id": 567,
-    "image_tier": "B",
-    "image_path": "images/card_570.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Verkäufer",
@@ -10220,8 +9653,7 @@
     "example_en": "My mother is a shop assistant in the department store.",
     "image": "images/card_571.webp",
     "id": 568,
-    "image_tier": "B",
-    "image_path": "images/card_571.webp"
+    "image_tier": "B"
   },
   {
     "german": "vermieten",
@@ -10238,8 +9670,7 @@
     "example_en": "The apartment is already rented out.",
     "image": "images/card_572.webp",
     "id": 569,
-    "image_tier": "B",
-    "image_path": "images/card_572.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Vermieter",
@@ -10256,8 +9687,7 @@
     "example_en": "Our landlord is called Huber. He lives here too.",
     "image": "images/card_573.webp",
     "id": 570,
-    "image_tier": "B",
-    "image_path": "images/card_573.webp"
+    "image_tier": "B"
   },
   {
     "german": "verstehen",
@@ -10274,8 +9704,7 @@
     "example_en": "Can you understand me?",
     "image": "images/card_574.webp",
     "id": 571,
-    "image_tier": "B",
-    "image_path": "images/card_574.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Verwandte",
@@ -10292,8 +9721,7 @@
     "example_en": "Peter is visiting his relatives in Poland.",
     "image": "images/card_575.webp",
     "id": 572,
-    "image_tier": "B",
-    "image_path": "images/card_575.webp"
+    "image_tier": "B"
   },
   {
     "german": "viel",
@@ -10310,8 +9738,7 @@
     "example_en": "It rains a lot here.",
     "image": "images/card_576.webp",
     "id": 573,
-    "image_tier": "B",
-    "image_path": "images/card_576.webp"
+    "image_tier": "B"
   },
   {
     "german": "vielleicht",
@@ -10328,8 +9755,7 @@
     "example_en": "I might come by bus.",
     "image": "images/card_577.webp",
     "id": 574,
-    "image_tier": "B",
-    "image_path": "images/card_577.webp"
+    "image_tier": "B"
   },
   {
     "german": "von",
@@ -10346,8 +9772,7 @@
     "example_en": "Felix's car is broken. He is just coming from Cologne/from home.",
     "image": "images/card_578.webp",
     "id": 575,
-    "image_tier": "B",
-    "image_path": "images/card_578.webp"
+    "image_tier": "B"
   },
   {
     "german": "vor",
@@ -10364,8 +9789,7 @@
     "example_en": "The appointment was an hour ago. The car is standing in front of the door.",
     "image": "images/card_579.webp",
     "id": 576,
-    "image_tier": "B",
-    "image_path": "images/card_579.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Vorname",
@@ -10382,8 +9806,7 @@
     "example_en": "My name is Müller, my first name is Eva.",
     "image": "images/card_580.webp",
     "id": 577,
-    "image_tier": "B",
-    "image_path": "images/card_580.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Vorsicht",
@@ -10400,8 +9823,7 @@
     "example_en": "Careful! A car is coming.",
     "image": "images/card_581.webp",
     "id": 578,
-    "image_tier": "B",
-    "image_path": "images/card_581.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Vorwahl",
@@ -10418,8 +9840,7 @@
     "example_en": "What is the area code of Munich?",
     "image": "images/card_582.webp",
     "id": 579,
-    "image_tier": "B",
-    "image_path": "images/card_582.webp"
+    "image_tier": "B"
   },
   {
     "german": "wandern",
@@ -10436,8 +9857,7 @@
     "example_en": "We are hiking around the Chiemsee.",
     "image": "images/card_583.webp",
     "id": 580,
-    "image_tier": "B",
-    "image_path": "images/card_583.webp"
+    "image_tier": "B"
   },
   {
     "german": "wann",
@@ -10454,8 +9874,7 @@
     "example_en": "When are you ready? When can I call you?",
     "image": "images/card_584.webp",
     "id": 581,
-    "image_tier": "B",
-    "image_path": "images/card_584.webp"
+    "image_tier": "B"
   },
   {
     "german": "warten",
@@ -10472,8 +9891,7 @@
     "example_en": "Can you wait a few minutes? Who are you waiting for?",
     "image": "images/card_585.webp",
     "id": 582,
-    "image_tier": "B",
-    "image_path": "images/card_585.webp"
+    "image_tier": "B"
   },
   {
     "german": "warum",
@@ -10490,8 +9908,7 @@
     "example_en": "Why is he not coming?",
     "image": "images/card_586.webp",
     "id": 583,
-    "image_tier": "B",
-    "image_path": "images/card_586.webp"
+    "image_tier": "B"
   },
   {
     "german": "was",
@@ -10508,8 +9925,7 @@
     "example_en": "What is that? What would you like?",
     "image": "images/card_587.webp",
     "id": 584,
-    "image_tier": "B",
-    "image_path": "images/card_587.webp"
+    "image_tier": "B"
   },
   {
     "german": "waschen",
@@ -10526,8 +9942,7 @@
     "example_en": "Where can I wash my hands? I must wash tomorrow.",
     "image": "images/card_588.webp",
     "id": 585,
-    "image_tier": "B",
-    "image_path": "images/card_588.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Wasser",
@@ -10544,8 +9959,7 @@
     "example_en": "A glass of water, please.",
     "image": "images/card_589.webp",
     "id": 586,
-    "image_tier": "B",
-    "image_path": "images/card_589.webp"
+    "image_tier": "B"
   },
   {
     "german": "weg sein",
@@ -10562,8 +9976,7 @@
     "example_en": "Mr. Meier is already gone.",
     "image": "images/card_590.webp",
     "id": 587,
-    "image_tier": "B",
-    "image_path": "images/card_590.webp"
+    "image_tier": "B"
   },
   {
     "german": "wehtun",
@@ -10580,8 +9993,7 @@
     "example_en": "I must go to the doctor. My leg hurts.",
     "image": "images/card_591.webp",
     "id": 588,
-    "image_tier": "B",
-    "image_path": "images/card_591.webp"
+    "image_tier": "B"
   },
   {
     "german": "weiblich",
@@ -10598,8 +10010,7 @@
     "example_en": "Please check: \"female\" or \"male\".",
     "image": "images/card_592.webp",
     "id": 589,
-    "image_tier": "B",
-    "image_path": "images/card_592.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Wein",
@@ -10616,8 +10027,7 @@
     "example_en": "No thank you, I do not want any wine.",
     "image": "images/card_593.webp",
     "id": 590,
-    "image_tier": "B",
-    "image_path": "images/card_593.webp"
+    "image_tier": "B"
   },
   {
     "german": "weit",
@@ -10634,8 +10044,7 @@
     "example_en": "It is not far to the train station.",
     "image": "images/card_594.webp",
     "id": 591,
-    "image_tier": "B",
-    "image_path": "images/card_594.webp"
+    "image_tier": "B"
   },
   {
     "german": "weiter",
@@ -10652,8 +10061,7 @@
     "example_en": "The bus does not go any further.",
     "image": "images/card_595.webp",
     "id": 592,
-    "image_tier": "B",
-    "image_path": "images/card_595.webp"
+    "image_tier": "B"
   },
   {
     "german": "welch-",
@@ -10670,8 +10078,7 @@
     "example_en": "Which book would you like?",
     "image": "images/card_596.webp",
     "id": 593,
-    "image_tier": "B",
-    "image_path": "images/card_596.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Welt",
@@ -10688,8 +10095,7 @@
     "example_en": "There are many problems in the world.",
     "image": "images/card_597.webp",
     "id": 594,
-    "image_tier": "B",
-    "image_path": "images/card_597.webp"
+    "image_tier": "B"
   },
   {
     "german": "wenig",
@@ -10706,8 +10112,7 @@
     "example_en": "Unfortunately I only understood a little. He earns little.",
     "image": "images/card_598.webp",
     "id": 595,
-    "image_tier": "B",
-    "image_path": "images/card_598.webp"
+    "image_tier": "B"
   },
   {
     "german": "wer",
@@ -10724,8 +10129,7 @@
     "example_en": "Who is that?",
     "image": "images/card_599.webp",
     "id": 596,
-    "image_tier": "B",
-    "image_path": "images/card_599.webp"
+    "image_tier": "B"
   },
   {
     "german": "werden",
@@ -10742,8 +10146,7 @@
     "example_en": "My son wants to become a doctor.",
     "image": "images/card_600.webp",
     "id": 597,
-    "image_tier": "B",
-    "image_path": "images/card_600.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Wetter",
@@ -10760,8 +10163,7 @@
     "example_en": "We had bad weather.",
     "image": "images/card_601.webp",
     "id": 598,
-    "image_tier": "B",
-    "image_path": "images/card_601.webp"
+    "image_tier": "B"
   },
   {
     "german": "wichtig",
@@ -10778,8 +10180,7 @@
     "example_en": "This form is very important.",
     "image": "images/card_602.webp",
     "id": 599,
-    "image_tier": "B",
-    "image_path": "images/card_602.webp"
+    "image_tier": "B"
   },
   {
     "german": "wie",
@@ -10796,8 +10197,7 @@
     "example_en": "What is your name? He writes like a child.",
     "image": "images/card_603.webp",
     "id": 600,
-    "image_tier": "B",
-    "image_path": "images/card_603.webp"
+    "image_tier": "B"
   },
   {
     "german": "wie viel",
@@ -10814,8 +10214,7 @@
     "example_en": "How much milk do you take?",
     "image": "images/card_604.webp",
     "id": 601,
-    "image_tier": "B",
-    "image_path": "images/card_604.webp"
+    "image_tier": "B"
   },
   {
     "german": "wiederholen",
@@ -10832,8 +10231,7 @@
     "example_en": "Can you please repeat that?",
     "image": "images/card_605.webp",
     "id": 602,
-    "image_tier": "B",
-    "image_path": "images/card_605.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Wiederhören",
@@ -10850,8 +10248,7 @@
     "example_en": "We must finish now. So goodbye!",
     "image": "images/card_606.webp",
     "id": 603,
-    "image_tier": "B",
-    "image_path": "images/card_606.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Wiedersehen",
@@ -10868,8 +10265,7 @@
     "example_en": "Goodbye!",
     "image": "images/card_607.webp",
     "id": 604,
-    "image_tier": "B",
-    "image_path": "images/card_607.webp"
+    "image_tier": "B"
   },
   {
     "german": "willkommen",
@@ -10886,8 +10282,7 @@
     "example_en": "Welcome!",
     "image": "images/card_608.webp",
     "id": 605,
-    "image_tier": "B",
-    "image_path": "images/card_608.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Wind",
@@ -10904,8 +10299,7 @@
     "example_en": "The wind comes from the east.",
     "image": "images/card_609.webp",
     "id": 606,
-    "image_tier": "B",
-    "image_path": "images/card_609.webp"
+    "image_tier": "B"
   },
   {
     "german": "wir",
@@ -10922,8 +10316,7 @@
     "example_en": "We are learning German.",
     "image": "images/card_610.webp",
     "id": 607,
-    "image_tier": "B",
-    "image_path": "images/card_610.webp"
+    "image_tier": "B"
   },
   {
     "german": "wissen",
@@ -10940,8 +10333,7 @@
     "example_en": "Do you know what his name is?",
     "image": "images/card_611.webp",
     "id": 608,
-    "image_tier": "B",
-    "image_path": "images/card_611.webp"
+    "image_tier": "B"
   },
   {
     "german": "wo",
@@ -10958,8 +10350,7 @@
     "example_en": "Where were you on vacation? Where is the post office? Where were you born?",
     "image": "images/card_612.webp",
     "id": 609,
-    "image_tier": "B",
-    "image_path": "images/card_612.webp"
+    "image_tier": "B"
   },
   {
     "german": "woher",
@@ -10976,8 +10367,7 @@
     "example_en": "Where do you come from?",
     "image": "images/card_613.webp",
     "id": 610,
-    "image_tier": "B",
-    "image_path": "images/card_613.webp"
+    "image_tier": "B"
   },
   {
     "german": "wohin",
@@ -10994,8 +10384,7 @@
     "example_en": "Where does this bus go? Where do you want to go on the weekend?",
     "image": "images/card_614.webp",
     "id": 611,
-    "image_tier": "B",
-    "image_path": "images/card_614.webp"
+    "image_tier": "B"
   },
   {
     "german": "wohnen",
@@ -11012,8 +10401,7 @@
     "example_en": "I live in Munich.",
     "image": "images/card_615.webp",
     "id": 612,
-    "image_tier": "B",
-    "image_path": "images/card_615.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Wohnung",
@@ -11030,8 +10418,7 @@
     "example_en": "Since when have you had this apartment?",
     "image": "images/card_616.webp",
     "id": 613,
-    "image_tier": "B",
-    "image_path": "images/card_616.webp"
+    "image_tier": "B"
   },
   {
     "german": "wollen",
@@ -11048,8 +10435,7 @@
     "example_en": "Do you want to drink a coffee?",
     "image": "images/card_617.webp",
     "id": 614,
-    "image_tier": "B",
-    "image_path": "images/card_617.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Wort",
@@ -11066,8 +10452,7 @@
     "example_en": "I do not know the word.",
     "image": "images/card_618.webp",
     "id": 615,
-    "image_tier": "B",
-    "image_path": "images/card_618.webp"
+    "image_tier": "B"
   },
   {
     "german": "wunderbar",
@@ -11084,8 +10469,7 @@
     "example_en": "The food tastes wonderful.",
     "image": "images/card_619.webp",
     "id": 616,
-    "image_tier": "B",
-    "image_path": "images/card_619.webp"
+    "image_tier": "B"
   },
   {
     "german": "zahlen",
@@ -11102,8 +10486,7 @@
     "example_en": "The bill, please!",
     "image": "images/card_620.webp",
     "id": 617,
-    "image_tier": "B",
-    "image_path": "images/card_620.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Zeit",
@@ -11120,8 +10503,7 @@
     "example_en": "I have no time today.",
     "image": "images/card_621.webp",
     "id": 618,
-    "image_tier": "B",
-    "image_path": "images/card_621.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Zeitung",
@@ -11138,8 +10520,7 @@
     "example_en": "I like to read the newspaper.",
     "image": "images/card_622.webp",
     "id": 619,
-    "image_tier": "B",
-    "image_path": "images/card_622.webp"
+    "image_tier": "B"
   },
   {
     "german": "die Zigarette",
@@ -11156,8 +10537,7 @@
     "example_en": "How expensive are the cigarettes?",
     "image": "images/card_623.webp",
     "id": 620,
-    "image_tier": "B",
-    "image_path": "images/card_623.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Zimmer",
@@ -11174,8 +10554,7 @@
     "example_en": "The room is big. Open the window in the bedroom, please! The apartment has three rooms. I have booked a room.",
     "image": "images/card_624.webp",
     "id": 621,
-    "image_tier": "B",
-    "image_path": "images/card_624.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Zoll",
@@ -11192,8 +10571,7 @@
     "example_en": "We still have to go through customs.",
     "image": "images/card_625.webp",
     "id": 622,
-    "image_tier": "B",
-    "image_path": "images/card_625.webp"
+    "image_tier": "B"
   },
   {
     "german": "zu",
@@ -11210,8 +10588,7 @@
     "example_en": "The bus goes to the train station. I am going on foot. I am at home.",
     "image": "images/card_626.webp",
     "id": 623,
-    "image_tier": "B",
-    "image_path": "images/card_626.webp"
+    "image_tier": "B"
   },
   {
     "german": "zu sein",
@@ -11228,8 +10605,7 @@
     "example_en": "The door is closed.",
     "image": "images/card_627.webp",
     "id": 624,
-    "image_tier": "B",
-    "image_path": "images/card_627.webp"
+    "image_tier": "B"
   },
   {
     "german": "zufrieden",
@@ -11246,8 +10622,7 @@
     "example_en": "I am satisfied with the apartment.",
     "image": "images/card_628.webp",
     "id": 625,
-    "image_tier": "B",
-    "image_path": "images/card_628.webp"
+    "image_tier": "B"
   },
   {
     "german": "der Zug",
@@ -11264,8 +10639,7 @@
     "example_en": "I like to travel by train.",
     "image": "images/card_629.webp",
     "id": 626,
-    "image_tier": "B",
-    "image_path": "images/card_629.webp"
+    "image_tier": "B"
   },
   {
     "german": "zum Beispiel (z. B.)",
@@ -11282,8 +10656,7 @@
     "example_en": "Many of my relatives, e.g. my two brothers, also work here.",
     "image": "images/card_630.webp",
     "id": 627,
-    "image_tier": "B",
-    "image_path": "images/card_630.webp"
+    "image_tier": "B"
   },
   {
     "german": "zurzeit",
@@ -11300,8 +10673,7 @@
     "example_en": "At the moment I have a lot to do.",
     "image": "images/card_631.webp",
     "id": 628,
-    "image_tier": "B",
-    "image_path": "images/card_631.webp"
+    "image_tier": "B"
   },
   {
     "german": "zurück",
@@ -11318,8 +10690,7 @@
     "example_en": "Frankfurt and back once. When are you coming back?",
     "image": "images/card_632.webp",
     "id": 629,
-    "image_tier": "B",
-    "image_path": "images/card_632.webp"
+    "image_tier": "B"
   },
   {
     "german": "zusammen",
@@ -11336,8 +10707,7 @@
     "example_en": "Should we go eat together? That makes 2 euros 80 together.",
     "image": "images/card_633.webp",
     "id": 630,
-    "image_tier": "B",
-    "image_path": "images/card_633.webp"
+    "image_tier": "B"
   },
   {
     "german": "zweit-",
@@ -11354,8 +10724,7 @@
     "example_en": "Please read the second part too.",
     "image": "images/card_634.webp",
     "id": 631,
-    "image_tier": "B",
-    "image_path": "images/card_634.webp"
+    "image_tier": "B"
   },
   {
     "german": "zwischen",
@@ -11372,8 +10741,7 @@
     "example_en": "Heidelberg lies between Frankfurt and Stuttgart. Between 8 and 10 o'clock I am at home.",
     "image": "images/card_635.webp",
     "id": 632,
-    "image_tier": "B",
-    "image_path": "images/card_635.webp"
+    "image_tier": "B"
   },
   {
     "german": "öffnen",
@@ -11390,8 +10758,7 @@
     "example_en": "I open the door.",
     "image": "images/card_636.webp",
     "id": 633,
-    "image_tier": "B",
-    "image_path": "images/card_636.webp"
+    "image_tier": "B"
   },
   {
     "german": "das Öl",
@@ -11408,8 +10775,7 @@
     "example_en": "We make the salad without oil.",
     "image": "images/card_637.webp",
     "id": 634,
-    "image_tier": "B",
-    "image_path": "images/card_637.webp"
+    "image_tier": "B"
   },
   {
     "german": "über",
@@ -11426,8 +10792,7 @@
     "example_en": "Go across the street here.",
     "image": "images/card_638.webp",
     "id": 635,
-    "image_tier": "B",
-    "image_path": "images/card_638.webp"
+    "image_tier": "B"
   },
   {
     "german": "übernachten",
@@ -11444,8 +10809,7 @@
     "example_en": "You can stay overnight at my place.",
     "image": "images/card_639.webp",
     "id": 636,
-    "image_tier": "B",
-    "image_path": "images/card_639.webp"
+    "image_tier": "B"
   },
   {
     "german": "überweisen",
@@ -11462,8 +10826,7 @@
     "example_en": "You can also transfer the money.",
     "image": "images/card_640.webp",
     "id": 637,
-    "image_tier": "B",
-    "image_path": "images/card_640.webp"
+    "image_tier": "B"
   },
   {
     "german": "ihr/ihm/ihn",
@@ -11480,7 +10843,6 @@
     "example_en": "Please give her the book. Please call him.",
     "image": null,
     "image_tier": "B",
-    "image_path": null,
     "id": 638
   },
   {
@@ -11498,7 +10860,6 @@
     "example_en": "From Mainz to Frankfurt it is approximately fifty kilometers.",
     "image": null,
     "image_tier": "B",
-    "image_path": null,
     "id": 639
   },
   {
@@ -11516,7 +10877,6 @@
     "example_en": "You have to click on that word there.",
     "image": null,
     "image_tier": "B",
-    "image_path": null,
     "id": 640
   },
   {
@@ -11534,7 +10894,6 @@
     "example_en": "On the form you must tick in several places.",
     "image": null,
     "image_tier": "B",
-    "image_path": null,
     "id": 641
   },
   {
@@ -11552,7 +10911,6 @@
     "example_en": "I still have to get dressed.",
     "image": null,
     "image_tier": "B",
-    "image_path": null,
     "id": 642
   },
   {
@@ -11570,7 +10928,6 @@
     "example_en": "Take your shoes off, please!",
     "image": null,
     "image_tier": "B",
-    "image_path": null,
     "id": 643
   },
   {
@@ -11588,7 +10945,6 @@
     "example_en": "The child can already ride a bike.",
     "image": null,
     "image_tier": "B",
-    "image_path": null,
     "id": 644
   },
   {
@@ -11606,7 +10962,6 @@
     "example_en": "Today it is thirty degrees.",
     "image": null,
     "image_tier": "B",
-    "image_path": null,
     "id": 645
   },
   {
@@ -11624,8 +10979,7 @@
     "example_en": "Starting tomorrow I must work again.",
     "image": null,
     "id": 646,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "aber",
@@ -11642,8 +10996,7 @@
     "example_en": "Today I cannot come, but tomorrow I have time.",
     "image": null,
     "id": 647,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "abfahren",
@@ -11660,8 +11013,7 @@
     "example_en": "Attention on track 17! The Munich - Paris train is departing now.",
     "image": null,
     "id": 648,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "die Abfahrt",
@@ -11678,8 +11030,7 @@
     "example_en": "We still have twenty minutes until departure.",
     "image": null,
     "id": 649,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "abgeben",
@@ -11696,8 +11047,7 @@
     "example_en": "I must hand in my key at the reception.",
     "image": null,
     "id": 650,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "abholen",
@@ -11714,8 +11064,7 @@
     "example_en": "When can I pick up the things from you?",
     "image": null,
     "id": 651,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "Achtung",
@@ -11732,8 +11081,7 @@
     "example_en": "Attention on track three: The doors are closing. The train is departing now.",
     "image": null,
     "id": 652,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "die Adresse",
@@ -11750,8 +11098,7 @@
     "example_en": "Can you give me your address?",
     "image": null,
     "id": 653,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "all-",
@@ -11768,8 +11115,7 @@
     "example_en": "I wish you all the best! Is everyone here?",
     "image": null,
     "id": 654,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "allein",
@@ -11786,8 +11132,7 @@
     "example_en": "Is his girlfriend coming along? - No, he is coming alone.",
     "image": null,
     "id": 655,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "also",
@@ -11804,8 +11149,7 @@
     "example_en": "He has time, so he can help us.",
     "image": null,
     "id": 656,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "alt",
@@ -11822,8 +11166,7 @@
     "example_en": "How old are you?",
     "image": null,
     "id": 657,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "das Alter",
@@ -11840,8 +11183,7 @@
     "example_en": "Age: 18 years.",
     "image": null,
     "id": 658,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "anbieten",
@@ -11858,8 +11200,7 @@
     "example_en": "He offered me a job as a shop assistant.",
     "image": null,
     "id": 659,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "ander-",
@@ -11876,8 +11217,7 @@
     "example_en": "Do you want this coat? - No, I would like the other one.",
     "image": null,
     "id": 660,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "der Anfang",
@@ -11894,8 +11234,7 @@
     "example_en": "She lives at the beginning of the street.",
     "image": null,
     "id": 661,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "anfangen",
@@ -11912,8 +11251,7 @@
     "example_en": "The lesson is starting right away.",
     "image": null,
     "id": 662,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "das Angebot",
@@ -11930,8 +11268,7 @@
     "example_en": "Today bananas are on special offer.",
     "image": null,
     "id": 663,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "ankommen",
@@ -11948,8 +11285,7 @@
     "example_en": "When does this train arrive in Hamburg?",
     "image": null,
     "id": 664,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "die Ankunft",
@@ -11966,8 +11302,7 @@
     "example_en": "On this timetable, only the arrival of the trains is listed.",
     "image": null,
     "id": 665,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "anmachen",
@@ -11984,8 +11319,7 @@
     "example_en": "Please turn the light on!",
     "image": null,
     "id": 666,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "die Anmeldung",
@@ -12002,8 +11336,7 @@
     "example_en": "Where do I get the form for the registration?",
     "image": null,
     "id": 667,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "der Anruf",
@@ -12020,8 +11353,7 @@
     "example_en": "Eva receives many calls from her friend Juan.",
     "image": null,
     "id": 668,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "der Anrufbeantworter",
@@ -12038,8 +11370,7 @@
     "example_en": "We are not here at the moment. Please leave a message on the answering machine.",
     "image": null,
     "id": 669,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "anrufen",
@@ -12056,8 +11387,7 @@
     "example_en": "Can I call you tonight?",
     "image": null,
     "id": 670,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "dort",
@@ -12074,8 +11404,7 @@
     "example_en": "We are meeting in front of the cinema. - Good, I will be there in five minutes. Our house is over there. You can put your bag over there. Are you coming along to the city? - No, I am just coming from there.",
     "image": null,
     "id": 671,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "gern",
@@ -12092,8 +11421,7 @@
     "example_en": "I gladly help you. Coffee or tea? - I prefer to drink a tea. I like drinking coffee best.",
     "image": null,
     "id": 672,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "Lieblings-",
@@ -12110,8 +11438,7 @@
     "example_en": "My favorite color is blue.",
     "image": null,
     "id": 673,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "der Satz",
@@ -12128,8 +11455,7 @@
     "example_en": "I do not understand the last sentence.",
     "image": null,
     "id": 674,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "sich anmelden",
@@ -12146,8 +11472,7 @@
     "example_en": "Where can I register?",
     "image": null,
     "id": 675,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "sich duschen",
@@ -12164,8 +11489,7 @@
     "example_en": "I do not like to bathe so much, I prefer to shower. Would you like to take a shower? The bathroom is back there on the left.",
     "image": null,
     "id": 676,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "sich freuen",
@@ -12182,8 +11506,7 @@
     "example_en": "I am very happy about the gift. The children are already looking forward to the holidays. I am glad!",
     "image": null,
     "id": 677,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "treffen (sich)",
@@ -12200,8 +11523,7 @@
     "example_en": "We always meet on Fridays.",
     "image": null,
     "id": 678,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "vorstellen (sich)",
@@ -12218,8 +11540,7 @@
     "example_en": "We want to get to know each other. Can you please introduce yourself? May I introduce my wife to you? I would like to introduce myself: My name is Schuster.",
     "image": null,
     "id": 679,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "der Absender",
@@ -12236,8 +11557,7 @@
     "example_en": "Send the package back to the sender.",
     "image": null,
     "id": 680,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "die Anrede",
@@ -12254,8 +11574,7 @@
     "example_en": "You must not forget the salutation in the letter.",
     "image": null,
     "id": 682,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "der Bekannte",
@@ -12272,8 +11591,7 @@
     "example_en": "Acquaintances of mine live in Hanover.",
     "image": null,
     "id": 683,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "der Feierabend",
@@ -12290,8 +11608,7 @@
     "example_en": "Have a nice evening / end of work.",
     "image": null,
     "id": 684,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   },
   {
     "german": "der Feiertag",
@@ -12308,7 +11625,6 @@
     "example_en": "Monday is a public holiday. Happy holidays.",
     "image": null,
     "id": 685,
-    "image_tier": "B",
-    "image_path": null
+    "image_tier": "B"
   }
 ]

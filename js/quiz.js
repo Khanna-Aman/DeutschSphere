@@ -135,7 +135,7 @@ export function loadQuizQuestion() {
 
   // Handle card illustration (restricted to Level A1 WebP cards 1-160; disabled for V1.0.0, coming in V1.0.1)
   if (elements.quizCardImageContainer && elements.quizCardImage) {
-    const activeImage = qCard.image_path || qCard.image;
+    const activeImage = qCard.image;
     const isImageAllowed = (state.currentLevel === 'a1' || state.currentLevel === 'a2');
     if (state.showImages && isImageAllowed && activeImage) {
       elements.quizCardImage.src = state.currentLevel + '/' + activeImage;

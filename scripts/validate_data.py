@@ -13,7 +13,8 @@ asserts, with no third-party dependencies:
 
   1. Every wordlist.json is valid JSON and a non-empty list of objects.
   2. Each entry has the required keys (id, german, english) and unique ids.
-  3. Every non-null image / image_path points to a file that exists on disk.
+  3. Every non-null 'image' reference points to a file that exists on disk
+     (and the deprecated 'image_path' field never reappears).
   4. No image file is referenced by more than one entry (no wrong-word images).
   5. `<level>/wordlist.csv` has exactly one data row per JSON entry.
   6. The computed total (and per-level counts) appear verbatim in the docs,
@@ -98,16 +99,15 @@ def validate_level(level: str, errors: list[str]) -> int:
             fail(errors, f"{level}/wordlist.json: duplicate id={eid}")
         seen_ids.add(eid)
 
-        # Image reference integrity. image and image_path are redundant; when
-        # both are present they must agree.
-        img = entry.get("image")
-        img_path = entry.get("image_path")
-        if img and img_path and img != img_path:
+        # Image reference: a single 'image' field. The legacy redundant
+        # 'image_path' field was collapsed into 'image'; flag any regression
+        # that reintroduces it so the schema stays single-source.
+        if "image_path" in entry:
             fail(
                 errors,
-                f"{level} id={eid}: image ({img!r}) != image_path ({img_path!r})",
+                f"{level} id={eid}: deprecated 'image_path' field present; use 'image' only",
             )
-        ref = img_path or img
+        ref = entry.get("image")
         if ref:
             disk = os.path.join(base, ref)
             if not os.path.exists(disk):
