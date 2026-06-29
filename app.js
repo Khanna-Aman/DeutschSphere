@@ -55,8 +55,11 @@ import {
 } from './js/search.js';
 
 // ⚠️  DATA UPDATE CHECKLIST — BUMP THIS VERSION whenever any /a1, /a2, or /b1
-// JSON data file is modified. Failing to bump invalidates all users' IDB wordlist
-// caches and causes them to see stale data until they manually clear storage.
+// JSON data file is modified. This is the single source of truth for DATA freshness:
+// it (1) invalidates each client's normalized IndexedDB cache, AND (2) is appended as
+// a ?v= query param to the wordlist fetch below, so the Service Worker's cache-first
+// DATA_CACHE treats a new version as a new URL and fetches fresh data over the network.
+// (Shell/code freshness is a separate concern — see CACHE_VERSION in sw.js.)
 // Format: 'v<major>.<minor>.<patch>'  e.g., v1.0.1 → v1.0.2
 const WORDLIST_CACHE_VERSION = 'v1.0.5'; // schema: collapsed redundant image_path field into single 'image' field across all levels
 
@@ -162,7 +165,7 @@ export async function fetchData() {
     
     if (!parsedCards) {
       console.log(`[IDB Cache] Cache miss for level ${level}. Fetching over HTTP...`);
-      const response = await fetch(`./${level}/wordlist.json`);
+      const response = await fetch(`./${level}/wordlist.json?v=${WORDLIST_CACHE_VERSION}`);
       if (!response.ok) throw new Error(`HTTP status error: ${response.status}`);
       const data = await response.json();
       if (!Array.isArray(data)) throw new Error("Invalid format: Wordlist must be a JSON array.");

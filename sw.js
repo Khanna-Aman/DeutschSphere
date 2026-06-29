@@ -2,6 +2,11 @@
 // Strategy: Cache-first for static assets, stale-while-revalidate for CDN resources.
 // NOTE: This SW only activates on HTTPS origins (GitHub Pages). It cannot run on file://.
 
+// CACHE_VERSION controls the app SHELL + CDN caches (HTML/CSS/JS/icons/fonts).
+// Bump it whenever code or static assets change. DATA freshness (wordlist JSON) is
+// handled independently by WORDLIST_CACHE_VERSION in app.js, which is appended as a
+// ?v= query param so cache-first DATA_CACHE entries are bypassed on a data change —
+// so a data-only update does NOT require bumping CACHE_VERSION, and vice versa.
 const CACHE_VERSION = 'v7.1.0'; // v7.1.0: ui — FSRS grade panel, swipe hints, mobile bottom nav, loader animation, quiz results polish, sidebar session stats
 const STATIC_CACHE = `deutschsphere-static-${CACHE_VERSION}`;
 const DATA_CACHE = `deutschsphere-data-${CACHE_VERSION}`;
