@@ -6,7 +6,7 @@ This document details the active technical roadmap, scope boundaries, and develo
 
 ## 🎯 The Core Mandate: Pure Cognitive Mastery
 
-DeutschSphere is designed to maximize vocabulary acquisition through distraction-free, clinical spaced repetition. The application focuses on high-signal cognitive retention of **3,921 validated German vocabulary words** via mathematical memory modeling (FSRS-5).
+DeutschSphere is designed to maximize vocabulary acquisition through distraction-free, clinical spaced repetition. The application focuses on high-signal cognitive retention of **2,627 validated German vocabulary words** via mathematical memory modeling (FSRS-5).
 
 ### 🛑 Strict Scope Enforcements
 * **Zero Gamification Bloat**: The interface excludes XP systems, progress metrics, artificial badges, and decorative animations. Cognitive engagement is driven purely by layout-stable feedback and objective retrievability projections.
@@ -31,14 +31,14 @@ DeutschSphere is designed to maximize vocabulary acquisition through distraction
 | **Developer Feedback Form** | **Active** | Zero-cost serverless FormSubmit integration sending user feedback direct to developer email. |
 | **Adaptive Layout & Safe-Area** | **Active** | Responsive single-column card view on all screens with Android navigation bar safe-area insets. |
 | **Card View Preferences** | **Active** | Persistent settings drawer toggles for Fast Read, Autoplay, Illustrations, and Example Sentences. |
-| **Visual Assets** | **Active** | High-fidelity WebP visual aids (<10KB) completed for A1 (640/640) and A2 (1,142/1,142) entries. |
+| **Visual Assets** | **Active** | High-fidelity WebP visual aids (<10KB) completed for A1 (637/684, 93%) and A2 (580/580, 100%). B1 in progress (371/1,363, 27%). |
 
 ---
 
 ## 🚀 Active Roadmap
 
 ### 🔜 Short-Term Milestones (v1.1.x)
-* **B1 Asset Rollout**: Complete the final integration of audited 3D glassmorphic WebP assets for the remaining B1 (2,139 words) vocabulary entries following strict anti-bleeding checks.
+* **B1 Asset Rollout**: Complete the final integration of audited 3D glassmorphic WebP assets for the remaining B1 entries (371/1,363 done, 992 outstanding) following strict anti-bleeding checks.
 * **IndexedDB Thread Tuning**: Debounce and stream asynchronous profile writes in `js/state.js` to eliminate micro-stutters during massive bulk updates (e.g. after a large quiz session).
 * **WCAG 2.2 AA Accessibility**: Audit and refine WAI-ARIA roles, ensuring keyboard-only and screen-reader accessibility across all view transitions and accordions.
 
@@ -51,7 +51,7 @@ DeutschSphere is designed to maximize vocabulary acquisition through distraction
 ---
 
 ## 📊 Technical Metrics Ledger
-* **Active Vocabulary Capacity**: 3,921 entries across CEFR A1, A2, and B1 levels.
+* **Active Vocabulary Capacity**: 2,627 entries across CEFR A1 (684), A2 (580), and B1 (1,363).
 * **Production Dependencies**: 0 npm modules (Tailwind utility engine, FontAwesome, and Google Fonts served via static CDN).
 * **Codebase Weight**: ~450KB modular ES6 files, 1 HTML shell, and 1 global stylesheet.
 * **State Engine**: Client-side IndexedDB persistence managed via an asynchronous debounced `idb-keyval` pipeline.

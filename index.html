@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="google" content="notranslate">
   <title>DeutschSphere — A1-B1 German</title>
-  <meta name="description" content="A zero-dependency, offline-first German vocabulary flashcard SPA covering 3,921 words across CEFR levels A1-B1, with SRS, quizzes, pronunciation coaching, and 5 premium themes.">
+  <meta name="description" content="A zero-dependency, offline-first German vocabulary flashcard SPA covering 2,627 words across CEFR levels A1-B1, with SRS, quizzes, pronunciation coaching, and 5 premium themes.">
   <meta name="theme-color" content="#020617">
   <!-- Content Security Policy -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: blob:; connect-src 'self' https://formsubmit.co; worker-src 'self'; media-src 'self' blob:;">
@@ -14,13 +14,13 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://khanna-aman.github.io/DeutschSphere/">
   <meta property="og:title" content="DeutschSphere — A1-B1 German">
-  <meta property="og:description" content="Master 3,921 German words with flashcards, spaced repetition, quizzes, pronunciation coaching, and grammar games. Offline-first, zero dependencies.">
+  <meta property="og:description" content="Master 2,627 German words with flashcards, spaced repetition, quizzes, pronunciation coaching, and grammar games. Offline-first, zero dependencies.">
   <meta property="og:image" content="https://khanna-aman.github.io/DeutschSphere/icons/icon-512.png">
   <meta property="og:locale" content="de_DE">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://khanna-aman.github.io/DeutschSphere/">
   <meta name="twitter:title" content="DeutschSphere — A1-B1 German">
-  <meta name="twitter:description" content="Master 3,921 German words with flashcards, spaced repetition, quizzes, pronunciation coaching, and grammar games.">
+  <meta name="twitter:description" content="Master 2,627 German words with flashcards, spaced repetition, quizzes, pronunciation coaching, and grammar games.">
   <meta name="twitter:image" content="https://khanna-aman.github.io/DeutschSphere/icons/icon-512.png">
   <!-- Structured Data / JSON-LD -->
   <script type="application/ld+json">
@@ -31,7 +31,7 @@
     "operatingSystem": "All",
     "applicationCategory": "EducationalApplication",
     "browserRequirements": "Requires HTML5, LocalStorage, IndexedDB",
-    "description": "A zero-dependency, offline-first German vocabulary flashcard SPA covering 3,921 words across CEFR levels A1-B1, with SRS, quizzes, pronunciation coaching, and premium themes.",
+    "description": "A zero-dependency, offline-first German vocabulary flashcard SPA covering 2,627 words across CEFR levels A1-B1, with SRS, quizzes, pronunciation coaching, and premium themes.",
     "offers": {
       "@type": "Offer",
       "price": "0",
@@ -307,6 +307,17 @@
       </div>
       <div class="w-full bg-slate-950 rounded-full h-2 overflow-hidden border border-slate-800">
         <div id="overall-progress-bar-fill" class="bg-gradient-to-r from-indigo-500 to-emerald-500 h-full w-0 transition-all duration-500"></div>
+      </div>
+      <!-- Session Mini Stats -->
+      <div class="grid grid-cols-2 gap-2 mt-3">
+        <div class="bg-slate-950/60 rounded-lg p-2 text-center border border-slate-800/60">
+          <span id="sidebar-session-reviewed" class="text-base font-black text-indigo-400 font-mono">0</span>
+          <p class="text-[9px] font-bold text-slate-600 uppercase tracking-wider mt-0.5">Reviewed</p>
+        </div>
+        <div class="bg-slate-950/60 rounded-lg p-2 text-center border border-slate-800/60">
+          <span id="sidebar-mastered-count" class="text-base font-black text-emerald-400 font-mono">0</span>
+          <p class="text-[9px] font-bold text-slate-600 uppercase tracking-wider mt-0.5">Mastered</p>
+        </div>
       </div>
       <div class="flex justify-end mt-2">
         <button id="reset-progress-btn" class="text-[10px] font-semibold text-slate-500 hover:text-rose-500 transition-colors flex items-center gap-1.5" title="Reset all progress tracking">
@@ -663,6 +674,20 @@
             <!-- Subtle Glow Overlay on hover -->
             <div class="absolute inset-0 bg-gradient-to-b from-white/[0.03] to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"></div>
 
+            <!-- Swipe direction indicators (shown during touch drag) -->
+            <div id="swipe-good-hint" class="absolute inset-0 flex items-center justify-start pl-8 pointer-events-none opacity-0 z-20 rounded-2xl">
+              <div class="flex flex-col items-start gap-0.5">
+                <span class="text-3xl font-black text-emerald-400 drop-shadow-lg tracking-tight">GOOD</span>
+                <span class="text-xs font-bold text-emerald-400/70">+days</span>
+              </div>
+            </div>
+            <div id="swipe-again-hint" class="absolute inset-0 flex items-center justify-end pr-8 pointer-events-none opacity-0 z-20 rounded-2xl">
+              <div class="flex flex-col items-end gap-0.5">
+                <span class="text-3xl font-black text-rose-400 drop-shadow-lg tracking-tight">AGAIN</span>
+                <span class="text-xs font-bold text-rose-400/70">Reset</span>
+              </div>
+            </div>
+
             <!-- Top metadata inside card (e.g. Word class / Gender Badge) -->
             <div class="flex items-center justify-between w-full z-10">
               <span id="card-index-indicator" class="text-xs font-semibold text-slate-500 font-mono tracking-wider">0 / 0</span>
@@ -836,6 +861,39 @@
 
               
             </div>
+          </div>
+        </div>
+
+        <!-- FSRS Grade Buttons (revealed after card flip — hotkeys 1–4) -->
+        <div id="fsrs-grade-panel" class="w-full hidden mt-2 mb-1">
+          <div class="flex items-center justify-between mb-2 px-0.5">
+            <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest flex items-center gap-1.5">
+              <i class="fa-solid fa-brain text-indigo-400/50 text-[9px]"></i> Rate your recall
+            </span>
+            <span class="text-[9px] text-slate-700 font-mono hidden sm:block">
+              <kbd class="px-1 py-0.5 bg-slate-900 border border-slate-800 rounded">1</kbd>
+              <kbd class="px-1 py-0.5 bg-slate-900 border border-slate-800 rounded">2</kbd>
+              <kbd class="px-1 py-0.5 bg-slate-900 border border-slate-800 rounded">3</kbd>
+              <kbd class="px-1 py-0.5 bg-slate-900 border border-slate-800 rounded">4</kbd>
+            </span>
+          </div>
+          <div class="grid grid-cols-4 gap-2">
+            <button data-rating="1" class="fsrs-grade-btn group flex flex-col items-center justify-center gap-0.5 py-3 rounded-xl bg-rose-950/20 border border-rose-500/25 hover:border-rose-500/60 hover:bg-rose-950/40 text-rose-400 active:scale-95 transition-all min-h-[52px]" title="Again — Reset (Hotkey: 1)">
+              <span class="text-sm font-black leading-none">Again</span>
+              <span class="text-[9px] font-bold text-rose-500/50 group-hover:text-rose-400/80 leading-none mt-0.5">Forgot</span>
+            </button>
+            <button data-rating="2" class="fsrs-grade-btn group flex flex-col items-center justify-center gap-0.5 py-3 rounded-xl bg-amber-950/20 border border-amber-500/25 hover:border-amber-500/60 hover:bg-amber-950/40 text-amber-400 active:scale-95 transition-all min-h-[52px]" title="Hard — Slight boost (Hotkey: 2)">
+              <span class="text-sm font-black leading-none">Hard</span>
+              <span class="text-[9px] font-bold text-amber-500/50 group-hover:text-amber-400/80 leading-none mt-0.5">~1d</span>
+            </button>
+            <button data-rating="3" class="fsrs-grade-btn group flex flex-col items-center justify-center gap-0.5 py-3 rounded-xl bg-emerald-950/20 border border-emerald-500/25 hover:border-emerald-500/60 hover:bg-emerald-950/40 text-emerald-400 active:scale-95 transition-all min-h-[52px]" title="Good — Normal recall (Hotkey: 3)">
+              <span class="text-sm font-black leading-none">Good</span>
+              <span class="text-[9px] font-bold text-emerald-500/50 group-hover:text-emerald-400/80 leading-none mt-0.5">~3d</span>
+            </button>
+            <button data-rating="4" class="fsrs-grade-btn group flex flex-col items-center justify-center gap-0.5 py-3 rounded-xl bg-sky-950/20 border border-sky-500/25 hover:border-sky-500/60 hover:bg-sky-950/40 text-sky-400 active:scale-95 transition-all min-h-[52px]" title="Easy — Long-term (Hotkey: 4)">
+              <span class="text-sm font-black leading-none">Easy</span>
+              <span class="text-[9px] font-bold text-sky-500/50 group-hover:text-sky-400/80 leading-none mt-0.5">15+d</span>
+            </button>
           </div>
         </div>
 
@@ -1028,28 +1086,45 @@
 
       <!-- Quiz Results Summary Panel -->
       <div id="quiz-results" class="hidden flex-1 flex flex-col justify-center items-center py-8 text-center max-w-md mx-auto">
-        <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-indigo-500 to-violet-600 flex items-center justify-center shadow-lg shadow-indigo-500/25 text-white text-3xl mb-6">
+        <!-- Dynamic result icon (color set by JS) -->
+        <div id="quiz-result-icon" class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-indigo-500 to-violet-600 flex items-center justify-center shadow-xl shadow-indigo-500/30 text-white text-4xl mb-5 transition-all duration-500">
           <i class="fa-solid fa-award"></i>
         </div>
-        <h3 class="text-2xl font-black font-display text-white">Round Completed!</h3>
-        <p class="text-sm text-slate-400 mt-2">Congratulations! You have successfully completed this practice round.</p>
+        <h3 class="text-2xl font-black font-display text-white">Round Complete!</h3>
+
+        <!-- Star rating row (filled by JS) -->
+        <div id="quiz-result-stars" class="flex gap-2 mt-3 mb-6">
+          <i class="fa-solid fa-star text-2xl text-slate-700"></i>
+          <i class="fa-solid fa-star text-2xl text-slate-700"></i>
+          <i class="fa-solid fa-star text-2xl text-slate-700"></i>
+        </div>
+
+        <!-- Big accuracy number -->
+        <div class="mb-6">
+          <span id="quiz-stats-accuracy" class="text-6xl font-black font-mono text-white">0%</span>
+          <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mt-1.5">Accuracy</p>
+        </div>
 
         <!-- Stats grid -->
-        <div class="grid grid-cols-2 gap-4 w-full my-8">
+        <div class="grid grid-cols-2 gap-4 w-full mb-8">
           <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4">
             <span class="text-2xl font-black text-white font-mono" id="quiz-stats-score">0 / 0</span>
             <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mt-1">Correct</p>
           </div>
-          <div class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4">
-            <span class="text-2xl font-black text-white font-mono" id="quiz-stats-accuracy">0%</span>
-            <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mt-1">Accuracy</p>
+          <div id="quiz-result-grade-box" class="bg-slate-900/60 border border-slate-800 rounded-2xl p-4">
+            <span id="quiz-result-grade" class="text-2xl font-black font-mono text-emerald-400">—</span>
+            <p class="text-xs text-slate-500 font-bold uppercase tracking-wider mt-1">Grade</p>
           </div>
         </div>
 
         <!-- Action buttons -->
         <div class="flex flex-col sm:flex-row gap-3 w-full">
-          <button id="quiz-retry-btn" class="flex-1 bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white py-3.5 rounded-xl font-bold transition-all shadow-lg shadow-indigo-600/20">Play Again</button>
-          <button id="quiz-quit-btn" class="flex-1 bg-slate-900 hover:bg-slate-850 active:scale-95 text-slate-300 border border-slate-800 py-3.5 rounded-xl font-bold transition-all">Back to Selection</button>
+          <button id="quiz-retry-btn" class="flex-1 bg-indigo-600 hover:bg-indigo-500 active:scale-95 text-white py-3.5 rounded-xl font-bold transition-all shadow-lg shadow-indigo-600/20 flex items-center justify-center gap-2">
+            <i class="fa-solid fa-rotate-right text-sm"></i> Play Again
+          </button>
+          <button id="quiz-quit-btn" class="flex-1 bg-slate-900/60 hover:bg-slate-900 active:scale-95 text-slate-300 border border-slate-800 py-3.5 rounded-xl font-bold transition-all flex items-center justify-center gap-2">
+            <i class="fa-solid fa-arrow-left text-sm"></i> Back
+          </button>
         </div>
       </div>
     </section> <!-- End of quiz-view -->
@@ -1099,16 +1174,43 @@
 
   </main>
 
-
+  <!-- Mobile Bottom Navigation Bar -->
+  <nav id="mobile-bottom-nav" class="md:hidden fixed bottom-0 left-0 right-0 z-30 bg-slate-900/96 border-t border-slate-800/80 backdrop-blur-xl flex items-stretch justify-around" style="padding-bottom: env(safe-area-inset-bottom)">
+    <a href="#/" id="mobile-nav-cards" class="mobile-bottom-tab flex flex-col items-center justify-center gap-0.5 px-3 py-2.5 flex-1 text-indigo-400 border-t-2 border-indigo-500 transition-all">
+      <i class="fa-solid fa-clone text-lg"></i>
+      <span class="text-[9px] font-bold tracking-wide">Cards</span>
+    </a>
+    <a href="#/quiz" id="mobile-nav-quiz-tab" class="mobile-bottom-tab flex flex-col items-center justify-center gap-0.5 px-3 py-2.5 flex-1 text-slate-500 border-t-2 border-transparent hover:text-slate-300 transition-all">
+      <i class="fa-solid fa-gamepad text-lg"></i>
+      <span class="text-[9px] font-bold tracking-wide">Quiz</span>
+    </a>
+    <a href="#/immersion" id="mobile-nav-immersion-tab" class="mobile-bottom-tab flex flex-col items-center justify-center gap-0.5 px-3 py-2.5 flex-1 text-slate-500 border-t-2 border-transparent hover:text-slate-300 transition-all">
+      <i class="fa-solid fa-flask text-lg"></i>
+      <span class="text-[9px] font-bold tracking-wide">Lab</span>
+    </a>
+    <button id="mobile-nav-menu-btn" class="mobile-bottom-tab flex flex-col items-center justify-center gap-0.5 px-3 py-2.5 flex-1 text-slate-500 border-t-2 border-transparent hover:text-slate-300 transition-all">
+      <i class="fa-solid fa-bars text-lg"></i>
+      <span class="text-[9px] font-bold tracking-wide">Menu</span>
+    </button>
+  </nav>
 
   <!-- Fullscreen Loading State Overlay -->
   <div id="loader-overlay" class="fixed inset-0 bg-slate-950 z-50 flex flex-col items-center justify-center transition-opacity duration-500">
-    <div class="relative w-20 h-20 mb-6">
-      <div class="absolute inset-0 rounded-full border-4 border-indigo-500/20"></div>
-      <div class="absolute inset-0 rounded-full border-4 border-t-indigo-500 animate-spin"></div>
+    <!-- Branded logo animation -->
+    <div class="relative mb-8">
+      <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-indigo-500 to-violet-600 flex items-center justify-center shadow-2xl shadow-indigo-500/30">
+        <i class="fa-solid fa-graduation-cap text-white text-4xl"></i>
+      </div>
+      <div class="absolute -inset-3 rounded-3xl border-2 border-indigo-500/20 loader-orbit-ring"></div>
+      <div class="absolute -inset-6 rounded-full border border-violet-500/10 loader-orbit-ring-slow"></div>
     </div>
-    <h3 class="font-display font-bold text-xl text-white tracking-wide">Loading Vocabulary</h3>
-    <p class="text-sm text-slate-400 mt-2">Please wait...</p>
+    <h3 class="font-display font-black text-2xl text-white tracking-tight">DeutschSphere</h3>
+    <p class="text-sm text-indigo-400/80 mt-1.5 font-medium tracking-wide">Loading vocabulary deck</p>
+    <div class="flex gap-1.5 mt-5">
+      <div class="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-bounce" style="animation-delay:0ms;animation-duration:0.8s"></div>
+      <div class="w-1.5 h-1.5 rounded-full bg-violet-500 animate-bounce" style="animation-delay:150ms;animation-duration:0.8s"></div>
+      <div class="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-bounce" style="animation-delay:300ms;animation-duration:0.8s"></div>
+    </div>
   </div>
 
   <!-- Fullscreen Error State Overlay -->

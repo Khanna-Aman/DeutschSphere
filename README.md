@@ -13,7 +13,7 @@
 ## ⚡ Core Pillars of v1.1.0
 
 ### 1. Spaced Repetition Engine (FSRS-5)
-Powered by a zero-dependency, pure client-side port of the **Free Spaced Repetition Scheduler (FSRS-5)**. It tracks individual word stability ($S$), difficulty ($D$), and retrievability ($R$) curves across **3,921 words**, outperforming traditional SM-2 algorithms by 20–30%.
+Powered by a zero-dependency, pure client-side port of the **Free Spaced Repetition Scheduler (FSRS-5)**. It tracks individual word stability ($S$), difficulty ($D$), and retrievability ($R$) curves across **2,627 words**, outperforming traditional SM-2 algorithms by 20–30%.
 * Navigated via pure card navigation swiping (swipe left for next card, swipe right for previous card) or desktop hotkeys (`1-4` for review grading, `Space` to flip, `Enter` to submit).
 * Dynamic glassmorphic panels adapt with deterministic noun-gender glows: 🔵 `der` (masculine), 🔴 `die` (feminine), 🟢 `das` (neuter), and 🟣 neutral/other.
 
@@ -54,20 +54,20 @@ Optimized display architecture across all viewport dimensions.
 ### 9. 100% Offline PWA & Instant Installation
 Full standalone application installation support across Android, iOS, and Desktop.
 * **Instant App Download**: Users can install DeutschSphere directly onto their mobile home screen via the in-app `📥 Install App (PWA)` button or browser menu.
-* **100% Offline Independence**: Pre-caches all 3,921 Goethe-verified vocabulary entries, Service Worker assets, and offline Web Speech API drivers so users experience complete functionality in Airplane Mode with zero network dependencies.
+* **100% Offline Independence**: Pre-caches all 2,627 Goethe-verified vocabulary entries, Service Worker assets, and offline Web Speech API drivers so users experience complete functionality in Airplane Mode with zero network dependencies.
 
 ---
 
 ## 📦 Vocabulary Schema & Coverage
 
-We cover **3,921 ground-truth entries** verified against official Goethe-Institut curricula:
+We cover **2,627 ground-truth entries** verified against official Goethe-Institut curricula:
 
 | Level | Entries | Classification | Verification Status & Asset Progress |
 | :--- | :---: | :--- | :--- |
-| **A1** | 640 | Beginner | ✅ 100% Verified | 🎨 640 / 640 Premium 3D WebP Assets Complete |
-| **A2** | 1,142 | Elementary | ✅ 100% Verified | 🎨 1,142 / 1,142 Premium 3D WebP Assets Complete |
-| **B1** | 2,139 | Intermediate | ✅ 100% Verified | 🚀 Complete Dataset Available |
-| **Total** | **3,921** | Goethe-Institut A1-B1 | **100% Pure Client-Side Execution** |
+| **A1** | 684 | Beginner | ✅ 100% Verified | 🎨 637 / 684 Premium 3D WebP Assets Complete (93%) |
+| **A2** | 580 | Elementary | ✅ 100% Verified | 🎨 580 / 580 Premium 3D WebP Assets Complete (100%) |
+| **B1** | 1,363 | Intermediate | ✅ 100% Verified | 🚧 371 / 1,363 WebP Assets In Progress (27%) |
+| **Total** | **2,627** | Goethe-Institut A1-B1 | **100% Pure Client-Side Execution** |
 
 > [!IMPORTANT]
 > **The Zero-Inference Clause & Grounding**: All vocabulary data is verified strictly against official Goethe-Institut curricula using **Google NotebookLM** to ensure absolute linguistic truth. If conjugation tables, plurals, or contextual examples are not present in our source data sheets, they are assigned to `null`. We strictly forbid generating speculative translations or synthesizing placeholder grammar using generic LLM weights.
@@ -118,7 +118,6 @@ A1-B1_German/
 │   ├── flashcards.js       # Spaced repetition card renderer & swipe haptics
 │   ├── quiz.js             # Multiple-choice & text spelling test controllers
 │   ├── immersion.js        # Immersion lab text analyzer view controller
-│   ├── stats.js            # Technical memory dashboard and technical charts renderer
 │   ├── router.js           # Client-side hash router
 │   ├── search.js           # Lexicon indexing and search sidebar categories
 │   ├── telemetry.js        # Structured logging, observability hooks, and error boundaries

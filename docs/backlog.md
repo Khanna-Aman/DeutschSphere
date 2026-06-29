@@ -47,12 +47,12 @@ Every word entry conforms to the following structure (actual field names from co
 
 ### Data Tier Summary
 
-| Level | Words | File Size | SVG Images | Adventure Scenarios |
-|-------|-------|-----------|------------|---------------------|
-| A1    | 640   | 315KB     | 640        | 2                   |
-| A2    | 1,142 | 626KB     | 1,142+     | 2                   |
-| B1    | 2,139 | 1,139KB   | 2,000+     | 2                   |
-| **Total** | **3,921** | **2.08MB** | **~3,900+** | **6**         |
+| Level | Words | File Size | WebP Images | Adventure Scenarios |
+|-------|-------|-----------|-------------|---------------------|
+| A1    | 684   | ~438KB    | 637 (93%)   | 2                   |
+| A2    | 580   | ~404KB    | 580 (100%)  | 2                   |
+| B1    | 1,363 | ~878KB    | 371 (27%)   | 2                   |
+| **Total** | **2,627** | **~1.7MB** | **1,588 (60%)** | **6**         |
 
 ### 12 Canonical Theme Categories
 Person & Familie, Wohnen & Haushalt, Gesundheit & Körper, Natur & Umwelt, Reise & Verkehr, Essen & Trinken, Einkaufen & Konsum, Dienstleistungen & Behörden, Ausbildung & Lernen, Arbeit & Beruf, Freizeit & Unterhaltung, Zeit, Maße & Basiswortschatz
@@ -183,7 +183,7 @@ Persisted via `localStorage.current_theme`. Each theme fully overrides: body bac
   - [x] Flashcard relative image pathing hotfix inside `js/flashcards.js` and `js/quiz.js` prepending `state.currentLevel` to prevent 404 image load errors
   - [x] **Premium Visual Strategy & Lottie Design Lock (SOTA)**: Fully finalized the V6.0 Universal 3D Claymation & Lottie sensory strategy. Configured the offline bulk generation pipeline to utilize Google's SOTA `imagen-3.0-generate-002` model (fully covered by Google Developer credits, $0 out-of-pocket). Programmed the chroma-key alpha masking (Pillow-based transparent floating icons), dynamic dual-tone theme-responsive SVG recoloring, Airbnb `lottie-web` async player, synchronized audio/haptic chimes, and PWA Level-Based Lazy Pre-caching in the system blueprints.
   - [x] **Comprehensive E2E Playwright Automation Suite**: Built and executed automated Playwright-based testing across multiple viewports (Desktop/Mobile) and all 5 premium design themes, achieving 100% clean test passes with 0 runtime console errors.
-  - [x] **Multi-Level NotebookLM Curriculum Verification**: Conducted automated high-speed parallel audits using the active 'Goethe-Zertifikat Wortliste' NotebookLM workspace to synchronize definitions, plurals, themes, and grammar rules with perfect fidelity:
+  - [x] **Multi-Level NotebookLM Curriculum Verification**: Conducted automated high-speed parallel audits using the active 'Goethe-Zertifikat Wortliste' NotebookLM workspace to synchronize definitions, plurals, themes, and grammar rules with perfect fidelity *(counts reflect pre-overhaul dataset size — current counts are A1 684, A2 580, B1 1,363)*:
     - **A1**: 640 words audited, 0 corrections.
     - **A2**: 1,142 words audited, 273 factual updates applied (e.g., correcting `'die Bank'` plural to `'die Banken'` and theme to `'Einkaufen, Geld & Konsum'`, and gender of `'das Glück'` to `'das'`).
     - **B1**: 2,139 words audited, 154 factual updates applied (e.g., aligned grammatical categories and verb/adjective forms).

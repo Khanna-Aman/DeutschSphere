@@ -8372,10 +8372,10 @@
     "antonym": null,
     "example_de": "Greifen Sie doch zu!",
     "example_en": "Please, help yourself!",
-    "image": "images/card_724.svg",
+    "image": null,
     "id": 470,
     "image_tier": "B",
-    "image_path": "images/card_724.svg"
+    "image_path": null
   },
   {
     "german": "gratis",
@@ -10346,10 +10346,10 @@
     "antonym": null,
     "example_de": "Die Kinder sind auf den Baum geklettert.",
     "example_en": "The children climbed the tree.",
-    "image": "images/card_918.svg",
+    "image": null,
     "id": 586,
     "image_tier": "B",
-    "image_path": "images/card_918.svg"
+    "image_path": null
   },
   {
     "german": "der Klick",
@@ -13935,10 +13935,10 @@
     "antonym": null,
     "example_de": "Ich bin Ober von Beruf.",
     "example_en": "I am a waiter by profession.",
-    "image": "images/card_1240.svg",
+    "image": null,
     "id": 797,
     "image_tier": "B",
-    "image_path": "images/card_1240.svg"
+    "image_path": null
   },
   {
     "german": "ober-",
@@ -17831,10 +17831,10 @@
     "antonym": "verlieren",
     "example_de": "Die Mannschaft siegte mit 2:0.",
     "example_en": "The team won 2:0.",
-    "image": "images/card_1593.svg",
+    "image": null,
     "id": 1026,
     "image_tier": "B",
-    "image_path": "images/card_1593.svg"
+    "image_path": null
   },
   {
     "german": "sichtbar",
@@ -23919,10 +23919,10 @@
     "antonym": null,
     "example_de": "Gestern hat ein Autofahrer einen Hund überfahren.",
     "example_en": "Yesterday a driver ran over a dog.",
-    "image": "images/card_2124.svg",
+    "image": null,
     "id": 1384,
     "image_tier": "B",
-    "image_path": "images/card_2124.svg"
+    "image_path": null
   },
   {
     "german": "überall",
@@ -23955,10 +23955,10 @@
     "antonym": null,
     "example_de": "Hier dürfen Lkws nicht überholen.",
     "example_en": "Trucks are not allowed to overtake here.",
-    "image": "images/card_2125.svg",
+    "image": null,
     "id": 1386,
     "image_tier": "B",
-    "image_path": "images/card_2125.svg"
+    "image_path": null
   },
   {
     "german": "überhaupt",
