@@ -49,6 +49,13 @@ function handleSRSUpdate(e) {
   if (srsUpdateTimeout) cancelAnimationFrame(srsUpdateTimeout);
   srsUpdateTimeout = requestAnimationFrame(() => {
     renderSidebarCategories();
+    // Update session stats widgets
+    if (elements.sidebarSessionReviewed) {
+      elements.sidebarSessionReviewed.textContent = state.session.cardsReviewed;
+    }
+    if (elements.sidebarMasteredCount) {
+      elements.sidebarMasteredCount.textContent = state.learnedCards.size;
+    }
   });
 }
 window.addEventListener('srs:card-updated', handleSRSUpdate);
@@ -195,6 +202,28 @@ export function setupEventListeners() {
 
   if (elements.toggleRevealBtn) elements.toggleRevealBtn.addEventListener('click', toggleAccordion);
   if (elements.learnedBtn) elements.learnedBtn.addEventListener('click', toggleLearned);
+
+  // FSRS Grade Buttons (Again=1, Hard=2, Good=3, Easy=4)
+  if (elements.fsrsGradePanel) {
+    elements.fsrsGradePanel.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-rating]');
+      if (!btn) return;
+      const rating = parseInt(btn.getAttribute('data-rating'), 10);
+      const card = state.currentDeck ? state.currentDeck[state.currentIndex] : null;
+      if (card) {
+        window.dispatchEvent(new CustomEvent('card:reviewed', { detail: { id: card.id, rating } }));
+        if (typeof window.triggerParticleBurst === 'function' && rating >= 3) {
+          window.triggerParticleBurst(window.innerWidth / 2, window.innerHeight / 2.3);
+        }
+        nextCard();
+      }
+    });
+  }
+
+  // Mobile Bottom Nav — Menu button opens sidebar
+  if (elements.mobileNavMenuBtn) {
+    elements.mobileNavMenuBtn.addEventListener('click', () => openMobileSidebar());
+  }
 
   if (elements.resetProgressBtn) elements.resetProgressBtn.addEventListener('click', resetProgress);
   if (elements.resetProgressBtnMain) elements.resetProgressBtnMain.addEventListener('click', resetProgress);
@@ -562,6 +591,19 @@ export function setupSwipeGestures() {
 
     currentDx = dx;
     flashcard.style.transform = `translate(${dx}px, ${dy}px) rotate(${dx * 0.08}deg)`;
+
+    // Show directional swipe hints proportional to drag distance
+    const hintOpacity = Math.min(Math.abs(dx) / 80, 0.9);
+    if (dx > 15) {
+      if (elements.swipeGoodHint) elements.swipeGoodHint.style.opacity = hintOpacity;
+      if (elements.swipeAgainHint) elements.swipeAgainHint.style.opacity = '0';
+    } else if (dx < -15) {
+      if (elements.swipeGoodHint) elements.swipeGoodHint.style.opacity = '0';
+      if (elements.swipeAgainHint) elements.swipeAgainHint.style.opacity = hintOpacity;
+    } else {
+      if (elements.swipeGoodHint) elements.swipeGoodHint.style.opacity = '0';
+      if (elements.swipeAgainHint) elements.swipeAgainHint.style.opacity = '0';
+    }
   };
 
   const onEnd = (e) => {
@@ -578,10 +620,15 @@ export function setupSwipeGestures() {
 
     const card = state.currentDeck ? state.currentDeck[state.currentIndex] : null;
 
+    // Reset swipe hints
+    if (elements.swipeGoodHint) elements.swipeGoodHint.style.opacity = '0';
+    if (elements.swipeAgainHint) elements.swipeAgainHint.style.opacity = '0';
+
     if (dx > threshold && card) {
       flashcard.classList.add('swipe-right');
       setTimeout(() => {
-        prevCard();
+        window.dispatchEvent(new CustomEvent('card:reviewed', { detail: { id: card.id, rating: 3 } }));
+        nextCard();
         flashcard.classList.remove('swipe-right');
         flashcard.style.transform = '';
         wasCardDragged = false;
@@ -589,6 +636,7 @@ export function setupSwipeGestures() {
     } else if (dx < -threshold && card) {
       flashcard.classList.add('swipe-left');
       setTimeout(() => {
+        window.dispatchEvent(new CustomEvent('card:reviewed', { detail: { id: card.id, rating: 1 } }));
         nextCard();
         flashcard.classList.remove('swipe-left');
         flashcard.style.transform = '';

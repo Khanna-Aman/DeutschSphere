@@ -2,7 +2,7 @@
 // Strategy: Cache-first for static assets, stale-while-revalidate for CDN resources.
 // NOTE: This SW only activates on HTTPS origins (GitHub Pages). It cannot run on file://.
 
-const CACHE_VERSION = 'v7.0.2'; // v7.0.2: data — surgical dictionary corrections & separated merged alphabetical word classes
+const CACHE_VERSION = 'v7.1.0'; // v7.1.0: ui — FSRS grade panel, swipe hints, mobile bottom nav, loader animation, quiz results polish, sidebar session stats
 const STATIC_CACHE = `deutschsphere-static-${CACHE_VERSION}`;
 const DATA_CACHE = `deutschsphere-data-${CACHE_VERSION}`;
 const CDN_CACHE = `deutschsphere-cdn-${CACHE_VERSION}`;

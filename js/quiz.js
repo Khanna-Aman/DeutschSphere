@@ -484,7 +484,6 @@ export function showQuizResults() {
   if (elements.quizFeedbackPanel) elements.quizFeedbackPanel.classList.add('hidden');
   if (elements.quizResults) elements.quizResults.classList.remove('hidden');
 
-  // Calculate stats based on active questions played
   const total = state.quiz.isEndless ? state.quiz.currentQuestionIndex : state.quiz.questions.length;
   const score = state.quiz.score;
   const accuracy = total > 0 ? Math.round((score / total) * 100) : 0;
@@ -492,11 +491,54 @@ export function showQuizResults() {
   if (elements.quizStatsScore) {
     elements.quizStatsScore.textContent = `${score} / ${total}`;
   }
+
+  // Accuracy with color coding
   if (elements.quizStatsAccuracy) {
     elements.quizStatsAccuracy.textContent = `${accuracy}%`;
+    const color = accuracy >= 80 ? 'text-emerald-400' : accuracy >= 60 ? 'text-amber-400' : 'text-rose-400';
+    elements.quizStatsAccuracy.className = `text-6xl font-black font-mono ${color}`;
   }
 
-  // Achievement checks removed
+  // Star rating
+  const starsEl = document.getElementById('quiz-result-stars');
+  if (starsEl) {
+    const starCount = accuracy >= 90 ? 3 : accuracy >= 70 ? 2 : accuracy >= 50 ? 1 : 0;
+    starsEl.innerHTML = [1, 2, 3].map(n =>
+      `<i class="fa-solid fa-star text-2xl ${n <= starCount ? 'text-amber-400' : 'text-slate-700'}"></i>`
+    ).join('');
+  }
+
+  // Letter grade
+  const gradeEl = document.getElementById('quiz-result-grade');
+  if (gradeEl) {
+    const grade = accuracy >= 90 ? 'A+' : accuracy >= 80 ? 'A' : accuracy >= 70 ? 'B' : accuracy >= 60 ? 'C' : accuracy >= 50 ? 'D' : 'F';
+    gradeEl.textContent = grade;
+    gradeEl.className = `text-2xl font-black font-mono ${accuracy >= 70 ? 'text-emerald-400' : accuracy >= 50 ? 'text-amber-400' : 'text-rose-400'}`;
+  }
+
+  // Dynamic result icon
+  const iconEl = document.getElementById('quiz-result-icon');
+  if (iconEl) {
+    if (accuracy >= 80) {
+      iconEl.className = 'w-20 h-20 rounded-2xl bg-gradient-to-tr from-emerald-500 to-teal-600 flex items-center justify-center shadow-xl shadow-emerald-500/30 text-white text-4xl mb-5 transition-all duration-500';
+      iconEl.innerHTML = '<i class="fa-solid fa-trophy"></i>';
+    } else if (accuracy >= 50) {
+      iconEl.className = 'w-20 h-20 rounded-2xl bg-gradient-to-tr from-indigo-500 to-violet-600 flex items-center justify-center shadow-xl shadow-indigo-500/30 text-white text-4xl mb-5 transition-all duration-500';
+      iconEl.innerHTML = '<i class="fa-solid fa-award"></i>';
+    } else {
+      iconEl.className = 'w-20 h-20 rounded-2xl bg-gradient-to-tr from-amber-500 to-orange-600 flex items-center justify-center shadow-xl shadow-amber-500/30 text-white text-4xl mb-5 transition-all duration-500';
+      iconEl.innerHTML = '<i class="fa-solid fa-dumbbell"></i>';
+    }
+  }
+
+  // Trigger confetti for great results
+  if (accuracy >= 80 && typeof window.triggerParticleBurst === 'function') {
+    setTimeout(() => {
+      window.triggerParticleBurst(window.innerWidth / 2, window.innerHeight / 3);
+      setTimeout(() => window.triggerParticleBurst(window.innerWidth / 3, window.innerHeight / 2.5), 200);
+      setTimeout(() => window.triggerParticleBurst(window.innerWidth * 2 / 3, window.innerHeight / 2.5), 400);
+    }, 300);
+  }
 }
 
 // Reset variables and replay active mode

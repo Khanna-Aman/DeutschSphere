@@ -23,13 +23,21 @@ export function handleRouting() {
  * Handles core routing, view display toggling, navigation tab active classes,
  * and audio/TTS state teardowns on route change.
  */
+const MOBILE_NAV_INACTIVE = 'mobile-bottom-tab flex flex-col items-center justify-center gap-0.5 px-3 py-2.5 flex-1 text-slate-500 border-t-2 border-transparent hover:text-slate-300 transition-all';
+const MOBILE_NAV_ACTIVE = 'mobile-bottom-tab flex flex-col items-center justify-center gap-0.5 px-3 py-2.5 flex-1 text-indigo-400 border-t-2 border-indigo-500 transition-all';
+
 export function handleRoutingCore() {
   const hash = window.location.hash || '#/';
-  
+
   // Reset navigation button classes
   elements.navFlashcards.className = "w-full px-3 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2.5 text-slate-400 hover:text-white hover:bg-slate-800/40 border border-transparent";
   if (elements.navQuiz) elements.navQuiz.className = "w-full px-3 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2.5 text-slate-400 hover:text-white hover:bg-slate-800/40 border border-transparent";
   if (elements.navImmersion) elements.navImmersion.className = "w-full px-3 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2.5 text-slate-400 hover:text-white hover:bg-slate-800/40 border border-transparent";
+
+  // Reset mobile bottom nav tabs
+  if (elements.mobileNavCards) elements.mobileNavCards.className = MOBILE_NAV_INACTIVE;
+  if (elements.mobileNavQuizTab) elements.mobileNavQuizTab.className = MOBILE_NAV_INACTIVE;
+  if (elements.mobileNavImmersionTab) elements.mobileNavImmersionTab.className = MOBILE_NAV_INACTIVE;
   
   // Hide all active view panels
   elements.flashcardsView.classList.add('hidden');
@@ -52,19 +60,22 @@ export function handleRoutingCore() {
   if (hash === '#/quiz') {
     if (elements.quizView) elements.quizView.classList.remove('hidden');
     if (elements.navQuiz) elements.navQuiz.className = "w-full px-3 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2.5 text-white bg-slate-800/50 border border-slate-700/50";
+    if (elements.mobileNavQuizTab) elements.mobileNavQuizTab.className = MOBILE_NAV_ACTIVE;
     document.title = `Quiz Arena — German ${levelUpper}`;
     initQuizView();
   } else if (hash === '#/immersion') {
     if (elements.immersionView) elements.immersionView.classList.remove('hidden');
     if (elements.navImmersion) elements.navImmersion.className = "w-full px-3 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2.5 text-white bg-slate-800/50 border border-slate-700/50";
+    if (elements.mobileNavImmersionTab) elements.mobileNavImmersionTab.className = MOBILE_NAV_ACTIVE;
     document.title = `Immersions-Labor — German ${levelUpper}`;
     initImmersionView();
   } else {
     // Default route: Flashcards view
     elements.flashcardsView.classList.remove('hidden');
     elements.navFlashcards.className = "w-full px-3 py-2.5 rounded-xl text-sm font-semibold transition-all flex items-center gap-2.5 text-white bg-slate-800/50 border border-slate-700/50";
+    if (elements.mobileNavCards) elements.mobileNavCards.className = MOBILE_NAV_ACTIVE;
     document.title = `German ${levelUpper} Flashcards`;
-    
+
     renderCard();
   }
 

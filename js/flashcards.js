@@ -24,6 +24,9 @@ export function openAccordion() {
   if (elements.accordionReveal) {
     elements.accordionReveal.classList.add('open');
   }
+  if (elements.fsrsGradePanel) {
+    elements.fsrsGradePanel.classList.remove('hidden');
+  }
   if (elements.toggleRevealIcon) {
     elements.toggleRevealIcon.className = "fa-solid fa-chevron-up text-xs";
   }
@@ -37,6 +40,9 @@ export function closeAccordion() {
   state.isAccordionOpen = false;
   if (elements.accordionReveal) {
     elements.accordionReveal.classList.remove('open');
+  }
+  if (elements.fsrsGradePanel) {
+    elements.fsrsGradePanel.classList.add('hidden');
   }
   if (elements.toggleRevealIcon) {
     elements.toggleRevealIcon.className = "fa-solid fa-chevron-down text-xs";
@@ -57,6 +63,9 @@ export function closeAccordionInstantly() {
         elements.accordionReveal.style.transition = '';
       }
     });
+  }
+  if (elements.fsrsGradePanel) {
+    elements.fsrsGradePanel.classList.add('hidden');
   }
   if (elements.toggleRevealIcon) {
     elements.toggleRevealIcon.className = "fa-solid fa-chevron-down text-xs";

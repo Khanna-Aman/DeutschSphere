@@ -282,6 +282,15 @@ export const elements = {
   cardImageContainer: document.getElementById('card-image-container'),
   cardImage: document.getElementById('card-image'),
 
+  fsrsGradePanel: document.getElementById('fsrs-grade-panel'),
+  swipeGoodHint: document.getElementById('swipe-good-hint'),
+  swipeAgainHint: document.getElementById('swipe-again-hint'),
+  mobileNavCards: document.getElementById('mobile-nav-cards'),
+  mobileNavQuizTab: document.getElementById('mobile-nav-quiz-tab'),
+  mobileNavImmersionTab: document.getElementById('mobile-nav-immersion-tab'),
+  mobileNavMenuBtn: document.getElementById('mobile-nav-menu-btn'),
+  sidebarSessionReviewed: document.getElementById('sidebar-session-reviewed'),
+  sidebarMasteredCount: document.getElementById('sidebar-mastered-count'),
   suffixHelperTrigger: document.getElementById('suffix-helper-trigger'),
   suffixDrawer: document.getElementById('suffix-drawer'),
   suffixDrawerBadge: document.getElementById('suffix-drawer-badge'),
@@ -616,7 +625,10 @@ export function reviewCardSRS(cardId, rating) {
   // Apply FSRS review
   const updated = fsrs.reviewCard(currentCard, rating, now);
   state.srs[cardId] = updated;
-  
+
+  // Track session analytics (Again=1 is a miss; Hard/Good/Easy counts as recalled)
+  recordAnswer(rating >= Rating.Hard);
+
   const newBox = updated.box;
   const action = rating === Rating.Again ? 'demote' : 'promote';
   

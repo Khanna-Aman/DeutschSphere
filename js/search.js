@@ -267,6 +267,17 @@ export function renderSidebarCategories() {
 
   const allLearned = state.learnedCards.size;
   const allTotal = state.allCards.length;
+
+  // Update overall progress bar and text in sidebar
+  if (elements.overallProgressText) {
+    const pct = allTotal > 0 ? Math.round((allLearned / allTotal) * 100) : 0;
+    elements.overallProgressText.textContent = `${allLearned} / ${allTotal} (${pct}%)`;
+  }
+  if (elements.overallProgressBarFill) {
+    const pct = allTotal > 0 ? (allLearned / allTotal) * 100 : 0;
+    elements.overallProgressBarFill.style.width = `${pct}%`;
+  }
+
   elements.categoriesContainer.innerHTML = `
     <div class="px-3 py-2 text-xs font-semibold text-slate-500 uppercase tracking-wider">Themen / Kategorien</div>
     <button data-category="All" class="w-full text-left px-3 py-2.5 rounded-xl text-sm font-medium transition-all flex items-center justify-between ${state.activeCategory === 'All' ? 'sidebar-active text-white' : 'text-slate-400 hover:text-slate-200 hover:bg-slate-800/40'}">
