@@ -11,7 +11,7 @@ DeutschSphere is designed to maximize vocabulary acquisition through distraction
 ### 🛑 Strict Scope Enforcements
 * **Zero Gamification Bloat**: The interface excludes XP systems, progress metrics, artificial badges, and decorative animations. Cognitive engagement is driven purely by layout-stable feedback and objective retrievability projections.
 * **No Structural Grammar Engines**: The application does not parse natural sentence syntax or conjugation trees. If conjugation tables, plurals, or contextual examples are not present in our ground-truth source layers, they are not inferred or generated (*The Zero-Inference Clause*).
-* **Decoupled Client-First Core**: No Node modules, bundling pipelines, or external databases. The SPA remains flat standard HTML, CSS, and modular JS.
+* **Decoupled Client-First Core**: No runtime framework, bundler, or external database — the deployed SPA is flat standard HTML, precompiled CSS, and modular JS with zero runtime npm dependencies. The single build-time tool is the Tailwind CLI, run on demand to regenerate the committed `tailwind.css`; the repo and runtime stay build-free.
 
 
 ---
@@ -52,6 +52,6 @@ DeutschSphere is designed to maximize vocabulary acquisition through distraction
 
 ## 📊 Technical Metrics Ledger
 * **Active Vocabulary Capacity**: 2,627 entries across CEFR A1 (684), A2 (580), and B1 (1,363).
-* **Production Dependencies**: 0 npm modules (Tailwind utility engine, FontAwesome, and Google Fonts served via static CDN).
+* **Production Dependencies**: 0 runtime npm modules. Tailwind is precompiled to a static, tree-shaken stylesheet (no runtime CDN); FontAwesome and Google Fonts are served via static CDN (with Subresource Integrity where the endpoint supports it).
 * **Codebase Weight**: ~450KB modular ES6 files, 1 HTML shell, and 1 global stylesheet.
 * **State Engine**: Client-side IndexedDB persistence managed via an asynchronous debounced `idb-keyval` pipeline.

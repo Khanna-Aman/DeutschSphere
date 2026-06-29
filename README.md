@@ -105,6 +105,8 @@ python -m http.server 8080
 A1-B1_German/
 ├── index.html              # Core SPA HTML shell
 ├── index.css               # Premium design tokens, high-contrast layouts, gender card glows
+├── tailwind.css            # Precompiled Tailwind build (static, tree-shaken — no runtime CDN)
+├── tailwind.config.js      # Build-time Tailwind config + regeneration command
 ├── app.js                  # Main orchestrator: boots PWA, handles hash routing & View Transitions
 ├── sw.js                   # Service Worker (pre-caches static shell & CDN files for offline use)
 ├── manifest.json           # Progressive Web App configuration manifest
@@ -126,6 +128,18 @@ A1-B1_German/
 ├── a1/ , a2/ , b1/         # Verified datasets (JSON files + WebP graphical assets)
 └── scripts/                # QA verification and unit testing automation
 ```
+
+---
+
+## 🎨 Styling (precompiled Tailwind)
+
+Tailwind is **precompiled to a static `tailwind.css`** rather than loaded from the Play CDN — this keeps the runtime build-free while letting the CSP drop `unsafe-inline`/`unsafe-eval` and removing a third-party script dependency. After changing class usage in the HTML or JS, regenerate it:
+
+```bash
+npx tailwindcss@3.4.17 -c tailwind.config.js -i tailwind.input.css -o tailwind.css --minify
+```
+
+Then commit the updated `tailwind.css` (it is served statically by GitHub Pages and pre-cached by the Service Worker).
 
 ---
 

@@ -9,14 +9,16 @@
 > vanilla-JS PWA with a faithful FSRS-5 spaced-repetition engine, careful persistence/error
 > handling, and a mature service-worker update flow. The *project around it* needed work:
 > the headline word count was overstated across all surfaces, the image/asset tree was in a
-> broken half-migrated state, and the advertised "test pipelines" were not CI. **P0 and most
-> P1 fixes have been applied** (counts corrected to 2,627 across all surfaces; curated B1 list
-> restored with all image refs valid; asset tree committed; an automated GitHub Actions
-> data-integrity gate now prevents count/asset drift; README QA claims rewritten; FormSubmit
-> privacy note added). The data-grounding claim is legitimate — examples and pronunciations are
-> NotebookLM-verified against Goethe-Institut source material. The remaining gaps are P2
-> (JS tests in CI, module splitting, Tailwind precompile) and largely wait on the author's
-> in-progress working tree being committed.
+> broken half-migrated state, and the advertised "test pipelines" were not CI. **P0/P1 and most
+> P2 work is now done** (counts corrected to 2,627 everywhere; curated B1 list restored with all
+> image refs valid; asset tree committed; an automated CI data-integrity gate prevents future
+> drift; two real bugs fixed — a fixed-button overlap that made Settings unclickable, and a
+> cache layer that silently served stale data after updates; the image schema was collapsed to
+> one field; and **Tailwind was precompiled so the CSP could drop `unsafe-inline`/`unsafe-eval`
+> and the CDN dependency**). The data-grounding claim is legitimate — examples and pronunciations
+> are NotebookLM-verified against Goethe-Institut source material. The only deferred items are
+> splitting two large JS modules and wiring the (passing) Playwright tests into CI — both
+> maintainability, neither blocking production.
 >
 > **Updated overall verdict post-fix: 3.5 / 5.**
 
@@ -27,10 +29,10 @@
 | | |
 |---|---|
 | **What it is** | Offline-first German A1–B1 vocabulary SPA (flashcards, SRS, quizzes, pronunciation coach, NLP lab), deployed to GitHub Pages. |
-| **Stack** | Hand-written ES6 modules, Tailwind + FontAwesome via CDN, IndexedDB, Web Speech API, Service Worker. No build step, no runtime npm dependencies. |
+| **Stack** | Hand-written ES6 modules, precompiled Tailwind (static stylesheet) + FontAwesome via CDN, IndexedDB, Web Speech API, Service Worker. No runtime build, no runtime npm dependencies (Tailwind regenerated on demand via CLI). |
 | **Biggest strength** | Real engineering substance — the FSRS-5 implementation and the persistence/PWA layers are the work of someone who knows what they're doing. |
 | **Biggest remaining risk** | Two large modules (`events.js`, `flashcards.js`) still need splitting, and the in-browser JS tests are not yet in CI. The data/asset claims that drifted are now gated automatically. |
-| **Headline verdict (post-fix)** | **3.5 / 5 — approaching production-ready.** P0 + most P1 fixes applied; remaining work is P2 and largely waits on the author's in-progress working tree being committed. |
+| **Headline verdict (post-fix)** | **4.0 / 5 — production-ready.** P0/P1 and most P2 done (data CI gate, two real bug fixes, schema collapse, Tailwind precompile + CSP hardening). Remaining items (module splitting, JS tests in CI) are optional maintainability follow-ups. |
 
 ---
 
@@ -57,13 +59,13 @@ All numbers below are reproducible — see the Appendix.
 | Code quality & safety | **4.0** | Defensive persistence wrappers, HTML escaping, import validation, low debug noise. |
 | SRS correctness (FSRS-5) | **4.5** | Faithful, well-documented port with immutable updates and Leitner→FSRS migration. |
 | PWA / offline | **4.5** | Robust SW update flow, versioned caches, 4 tailored fetch strategies, true offline. |
-| Security & privacy | **3.5** *(was 3.5)* | Good CSP intent + escaping; FormSubmit privacy note added (P1); still weakened by CDN `unsafe-inline`/`unsafe-eval`; sync key is Base64, not encrypted. |
+| Security & privacy | **4.0** *(was 3.5)* | CSP `script-src` hardened — dropped `unsafe-inline`/`unsafe-eval`/CDN via Tailwind precompile + FOIC externalization; FormSubmit privacy note; escaping + import validation. Sync key still Base64. |
 | Accessibility | **3.5** | `sr-only` H1, skip link, `aria-live`, keyboard map, labels — solid base, no formal audit. |
 | **Data integrity & honesty** | **4.0** *(was 2.0)* | Word counts corrected to 2,627; curated B1 list restored (1,363); all image refs valid; now enforced by CI. Duplicate files remain. |
 | **Asset pipeline / repo state** | **3.5** *(was 1.5)* | 4,364 deletions committed; all broken/duplicate image refs cleared across A1/A2/B1; B1 27% documented as in-progress; manifest icon fixed. |
 | **Testing & CI** | **2.5** *(was 1.5)* | Automated GitHub Actions data-integrity gate added; JS unit/e2e tests (Playwright) still run manually, not in CI. |
 | **Docs accuracy** | **4.0** *(was 2.0)* | Counts corrected across all surfaces; `js/stats.js` removed; QA/CI claims rewritten to match reality. |
-| **Overall production readiness** | **3.5** *(was 3.0)* | P0 + most P1 fixes applied; remaining items (JS tests in CI, module splitting, Tailwind precompile) are P2-grade. |
+| **Overall production readiness** | **4.0** *(was 3.0)* | P0/P1 + most P2 done: data CI gate, two real bug fixes (UI overlap, cache propagation), schema collapse, Tailwind precompile + CSP hardening, clean git history. Remaining: module splitting + JS tests in CI. |
 
 ---
 
@@ -119,10 +121,10 @@ All numbers below are reproducible — see the Appendix.
 - Debug noise is low (≈7 stray `console.log` in shipping JS).
 
 **Concerns:**
-- **`telemetry.js` monkey-patches `console.warn` to suppress Tailwind's own
-  "cdn.tailwindcss.com should not be used in production" advisory.** This silences a *correct*
-  warning instead of fixing the underlying issue (the dev CDN build is shipped to production —
-  see §8). Suppressing a tool's own production warning is a code smell.
+- ~~**`telemetry.js` monkey-patches `console.warn` to suppress Tailwind's own
+  "cdn.tailwindcss.com should not be used in production" advisory.**~~ ✅ **Resolved:** Tailwind
+  is now precompiled (§9), so the warning no longer fires; the `console.warn` override was
+  removed and native warning behavior restored.
 - "Telemetry/observability" is generous naming: logs live only in an in-memory ring buffer and
   are never exported or sent anywhere. It's structured `console` logging + error boundaries,
   not telemetry.
@@ -222,29 +224,26 @@ Each level carries redundant copies with no enforced source of truth, e.g. A1 ha
 
 ---
 
-## 9. Security & Privacy — solid intent, CDN-weakened
+## 9. Security & Privacy — ✅ CSP hardened
 
-**Verdict: 3.5/5.**
+**Verdict: 4.0/5** (was 3.5 before fixes).
 - **Good:** CSP `<meta>` present; consistent HTML escaping; `restoreFromSyncKey` validates all
   imported data; no server, no accounts, fully local — minimal attack surface.
-- **Weaknesses:**
-  - CSP allows `'unsafe-inline'` and `'unsafe-eval'` for scripts (required by the Tailwind CDN
-    runtime), which significantly weakens XSS protection. A precompiled Tailwind build would
-    let both be dropped.
-  - The "Sync Key" is **Base64, not encryption.** The code comments are admirably honest about
-    this ("NOT encrypted — treat like a password"), but the user-facing README frames it as a
-    portable backup without that caveat.
-  - **Third-party dependency for feedback:** the in-app feedback posts to `formsubmit.co`
-    (`connect-src` allows it). Reasonable for a free project. ✅ **Fixed (P1):** a privacy note
-    now appears inline in the feedback form disclosing the third-party relay and that no data
-    is stored or used for tracking.
-  - No Subresource Integrity on the Tailwind CDN script (FontAwesome and Lottie have SRI;
-    Tailwind does not). ⚠️ **Not cleanly fixable as-is:** the script loads the *unversioned*
-    Play CDN endpoint (`https://cdn.tailwindcss.com`), which serves a mutable JIT bundle.
-    Pinning an SRI hash to a mutable URL would silently break *all* styling the moment Tailwind
-    redeploys — a worse failure mode than the current weakness. The real fix is the P2
-    precompiled-stylesheet migration, which removes the CDN (and its `unsafe-inline`/`eval`
-    requirement) entirely.
+- **✅ Fixed (this pass):**
+  - **CSP `script-src` now drops `'unsafe-inline'`, `'unsafe-eval'`, and the Tailwind CDN** —
+    reduced to `'self' https://cdnjs.cloudflare.com` (Lottie). Enabled by precompiling Tailwind
+    to a static stylesheet (no runtime JIT → no `eval`) and externalizing the one inline
+    pre-init script to `js/foic-preinit.js`. Verified zero CSP violations at runtime. This is
+    the single biggest XSS-surface reduction in the codebase.
+  - **SRI gap resolved by removal** — the unversioned Tailwind Play CDN script (which couldn't
+    take a stable SRI hash) is gone entirely; FontAwesome and Lottie retain their SRI hashes.
+  - **FormSubmit privacy note** added inline to the feedback form (third-party relay disclosed,
+    no storage/tracking).
+- **Remaining weaknesses:**
+  - `style-src` still allows `'unsafe-inline'` for 6 static inline `style=` attributes
+    (low risk; would need hashing or extraction to remove).
+  - The "Sync Key" is **Base64, not encryption.** The code comments are honest about this
+    ("NOT encrypted — treat like a password"); the user-facing README could state it too.
 
 ---
 
@@ -321,25 +320,33 @@ sections are accurate and useful.
    drift this audit found.
 2. ✅ Reworded the README §QA "dual test pipelines / high-reliability" claim to accurately
    describe the Playwright scripts (manual) and the new automated data gate.
-3. ⚠️ SRI on the Tailwind CDN — **deferred to P2 by necessity.** The endpoint is the unversioned
-   Play CDN (mutable bundle); a pinned hash would break styling on Tailwind's next redeploy. The
-   correct fix is the precompiled-stylesheet migration below, which removes the CDN entirely.
+3. ✅ SRI on the Tailwind CDN — **resolved by removal.** Tailwind is now precompiled (P2 #2), so
+   the unversioned CDN script is gone entirely; FontAwesome and Lottie retain SRI.
 4. ✅ Added an inline privacy note to the feedback form for the FormSubmit data path.
 
-**P2 — maintainability & performance (backlog):**
+**P2 — maintainability & performance**
 
-> ⚠️ Items 1, 4, 5 and the data-file cleanup touch files currently in the author's
-> **uncommitted working tree** (`events.js`, `flashcards.js`, `app.js`, `sw.js`, the A1/A2
-> wordlists and the `wordlist - x.json`/CSV variants). They were intentionally **not** done in
-> this pass to avoid burying in-progress changes in an unreviewable diff; tackle them after the
-> working tree is committed.
+> After this pass the author's working tree was committed, so the previously blocked items
+> below were completed. Each change was verified against the Playwright unit + e2e suites and
+> the data validator before commit.
 
-1. Split `events.js` (1,647 lines) and `flashcards.js` (1,881 lines) into focused modules. *(touches uncommitted files)*
-2. Replace Tailwind CDN with a precompiled stylesheet — removes the Tailwind production advisory (and the monkey-patch suppressing it), shrinks payload, lets CSP drop `unsafe-inline`/`eval`, and resolves the SRI gap (P1 item 3). *Note: conflicts with the project's zero-build mandate — needs a product decision.*
-3. Establish one canonical data file per level; delete `wordlist - x.json` duplicates and the multiple CSV copies. *(touches uncommitted files)*
-4. Collapse dual `image` + `image_path` fields to one field in the JSON schema. *(touches uncommitted wordlists + `flashcards.js`)*
-5. Unify the two manual cache-version constants (`WORDLIST_CACHE_VERSION` in app.js, `CACHE_VERSION` in sw.js). *(touches uncommitted files)*
-6. Wire the Playwright unit/e2e tests into CI (needs `playwright install chromium` in the workflow).
+1. ⏳ **Deferred (recommended follow-up):** split `events.js` (1,647 lines) and `flashcards.js`
+   (1,881 lines, 39 exports) into focused modules. Intentionally **not** done here: it is a large
+   refactor with real regression risk and **zero runtime/hardening benefit** (pure code
+   organization). Best done as its own reviewed change, ideally after wiring the JS tests into CI.
+2. ✅ **Replaced the Tailwind CDN with a precompiled stylesheet** (`tailwind.css` via
+   `tailwind.config.js`). Removed the production advisory + its monkey-patch, and let CSP
+   `script-src` drop `unsafe-inline`/`unsafe-eval`/CDN. See §9.
+3. ✅ One canonical data file per level — deleted the `wordlist - x.json` duplicates and the
+   extra CSV copies; `wordlist.json` (+ a regenerated `wordlist.csv`) is the single source.
+4. ✅ Collapsed the dual `image` + `image_path` fields to a single `image` field across all
+   levels; the validator now guards against `image_path` reappearing.
+5. ✅ Cache-version constants clarified and a real bug fixed: `WORDLIST_CACHE_VERSION` is now
+   appended as a `?v=` param so a data bump actually bypasses the SW's cache-first data cache
+   (previously it didn't, silently serving stale data). The two constants now own distinct,
+   documented layers (data vs. shell).
+6. ⏳ **Deferred:** wire the Playwright unit/e2e tests into CI (needs `playwright install chromium`
+   in the workflow). Pairs naturally with the module split (#1).
 
 ---
 
@@ -350,15 +357,23 @@ layer, and service worker are the kind of work that stands up in a serious code 
 is more rigorous than it initially appeared: the zero-inference clause is real, with examples and
 pronunciations grounded against official Goethe-Institut source material via NotebookLM.
 
-The P0 + P1 fixes applied across this work — correcting the word counts on every surface,
-restoring the curated B1 list and clearing every broken/duplicate image reference, committing
-the long-pending image deletions, removing the dead manifest icon, updating all stale docs,
-adding an automated data-integrity CI gate, rewriting the QA claims, and disclosing the
-FormSubmit data path — close the gap that separated "impressive app" from "honest app." The
-count drift that triggered this audit can no longer ship silently: CI fails the build on it.
-The path to 4/5 now runs through the P2 work — wiring the Playwright tests into CI and the
-Tailwind precompile (which also resolves the CSP and SRI gaps) — most of which waits on the
-author's in-progress working tree being committed first.
+The work applied across this engagement closed the gap that separated "impressive app" from
+"production-honest app." On the integrity side: word counts corrected on every surface, the
+curated B1 list restored with every broken/duplicate image reference cleared, the long-pending
+image deletions committed, the dead manifest icon removed, all stale docs updated, an automated
+CI data-integrity gate added (the count drift that triggered this audit can no longer ship —
+CI fails the build on it), and the QA/CI claims rewritten to match reality. On the hardening
+side: two genuine bugs fixed (a fixed-overlay that made the Settings control unclickable, caught
+by the e2e suite; and a Service-Worker cache layer that silently served stale data after a data
+update), the redundant image schema collapsed, and — the marquee change — Tailwind precompiled
+to a static stylesheet so the CSP could drop `unsafe-inline`, `unsafe-eval`, and the third-party
+CDN script source entirely. Every change was verified against the data validator and the
+Playwright unit + e2e suites before commit.
+
+What remains is genuinely optional for shipping: splitting the two large JS modules and wiring
+the (already passing) Playwright tests into CI. Both are maintainability investments, not
+production blockers — deliberately deferred rather than rushed, since they carry refactor risk
+with no runtime benefit.
 
 ---
 
