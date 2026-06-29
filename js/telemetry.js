@@ -58,21 +58,9 @@ export const logger = new TelemetryLogger();
  * Initializes global error handling boundaries for uncaught JS errors and unhandled promise rejections.
  */
 export function initTelemetry() {
-  // Suppress the specific Tailwind CDN production-build advisory warning only.
-  // Using an exact known prefix avoids swallowing unrelated CDN warnings from other libs.
-  const TAILWIND_CDN_WARNING = 'cdn.tailwindcss.com should not be used in production';
-  const originalWarn = console.warn;
-  console.warn = function(...args) {
-    if (
-      args[0] &&
-      typeof args[0] === 'string' &&
-      args[0].includes(TAILWIND_CDN_WARNING)
-    ) {
-      return; // Suppress only this specific advisory
-    }
-    originalWarn.apply(console, args);
-  };
-
+  // (Removed the console.warn override that suppressed the Tailwind Play CDN
+  //  production advisory — Tailwind is now precompiled, so the warning no longer
+  //  fires and native console.warn is preserved for genuine warnings.)
   window.onerror = function (message, source, lineno, colno, error) {
     logger.error('GlobalErrorBoundary', message, { source, lineno, colno, stack: error ? error.stack : null });
     return false; // Allow standard browser reporting

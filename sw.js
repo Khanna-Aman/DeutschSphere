@@ -7,7 +7,7 @@
 // handled independently by WORDLIST_CACHE_VERSION in app.js, which is appended as a
 // ?v= query param so cache-first DATA_CACHE entries are bypassed on a data change —
 // so a data-only update does NOT require bumping CACHE_VERSION, and vice versa.
-const CACHE_VERSION = 'v7.2.0'; // v7.2.0: security/perf — precompiled Tailwind (dropped Play CDN + unsafe-inline/unsafe-eval from CSP), externalized FOIC pre-init
+const CACHE_VERSION = 'v7.2.1'; // v7.2.1: removed the now-dead console.warn override that suppressed the Tailwind CDN advisory
 const STATIC_CACHE = `deutschsphere-static-${CACHE_VERSION}`;
 const DATA_CACHE = `deutschsphere-data-${CACHE_VERSION}`;
 const CDN_CACHE = `deutschsphere-cdn-${CACHE_VERSION}`;
