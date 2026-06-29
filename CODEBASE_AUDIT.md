@@ -9,11 +9,14 @@
 > vanilla-JS PWA with a faithful FSRS-5 spaced-repetition engine, careful persistence/error
 > handling, and a mature service-worker update flow. The *project around it* needed work:
 > the headline word count was overstated across all surfaces, the image/asset tree was in a
-> broken half-migrated state, and the advertised "test pipelines" are not CI. **P0 fixes
-> have been applied** (counts corrected to 2,627, stale docs updated, asset tree committed,
-> 6 broken image refs nulled). The data-grounding claim is legitimate — examples and
-> pronunciations are NotebookLM-verified against Goethe-Institut source material. The
-> remaining gaps are P1/P2 (CI, module splitting, CDN hardening).
+> broken half-migrated state, and the advertised "test pipelines" were not CI. **P0 and most
+> P1 fixes have been applied** (counts corrected to 2,627 across all surfaces; curated B1 list
+> restored with all image refs valid; asset tree committed; an automated GitHub Actions
+> data-integrity gate now prevents count/asset drift; README QA claims rewritten; FormSubmit
+> privacy note added). The data-grounding claim is legitimate — examples and pronunciations are
+> NotebookLM-verified against Goethe-Institut source material. The remaining gaps are P2
+> (JS tests in CI, module splitting, Tailwind precompile) and largely wait on the author's
+> in-progress working tree being committed.
 >
 > **Updated overall verdict post-fix: 3.5 / 5.**
 
@@ -26,8 +29,8 @@
 | **What it is** | Offline-first German A1–B1 vocabulary SPA (flashcards, SRS, quizzes, pronunciation coach, NLP lab), deployed to GitHub Pages. |
 | **Stack** | Hand-written ES6 modules, Tailwind + FontAwesome via CDN, IndexedDB, Web Speech API, Service Worker. No build step, no runtime npm dependencies. |
 | **Biggest strength** | Real engineering substance — the FSRS-5 implementation and the persistence/PWA layers are the work of someone who knows what they're doing. |
-| **Biggest remaining risk** | No CI guards the data/asset claims, and two large modules need splitting. The word-count drift found in this audit was only caught manually. |
-| **Headline verdict (post-fix)** | **3.5 / 5 — approaching production-ready.** P0 fixes applied; P1/P2 items remain. |
+| **Biggest remaining risk** | Two large modules (`events.js`, `flashcards.js`) still need splitting, and the in-browser JS tests are not yet in CI. The data/asset claims that drifted are now gated automatically. |
+| **Headline verdict (post-fix)** | **3.5 / 5 — approaching production-ready.** P0 + most P1 fixes applied; remaining work is P2 and largely waits on the author's in-progress working tree being committed. |
 
 ---
 
@@ -54,13 +57,13 @@ All numbers below are reproducible — see the Appendix.
 | Code quality & safety | **4.0** | Defensive persistence wrappers, HTML escaping, import validation, low debug noise. |
 | SRS correctness (FSRS-5) | **4.5** | Faithful, well-documented port with immutable updates and Leitner→FSRS migration. |
 | PWA / offline | **4.5** | Robust SW update flow, versioned caches, 4 tailored fetch strategies, true offline. |
-| Security & privacy | **3.5** | Good CSP intent + escaping; weakened by CDN `unsafe-inline`/`unsafe-eval`; sync key is Base64, not encrypted. |
+| Security & privacy | **3.5** *(was 3.5)* | Good CSP intent + escaping; FormSubmit privacy note added (P1); still weakened by CDN `unsafe-inline`/`unsafe-eval`; sync key is Base64, not encrypted. |
 | Accessibility | **3.5** | `sr-only` H1, skip link, `aria-live`, keyboard map, labels — solid base, no formal audit. |
-| **Data integrity & honesty** | **3.5** *(was 2.0)* | Word counts now corrected to 2,627; zero-inference clause valid (NotebookLM-grounded). Duplicate files remain. |
-| **Asset pipeline / repo state** | **3.0** *(was 1.5)* | 4,364 deletions committed; 6 broken B1 refs fixed; B1 27% documented as in-progress; broken manifest icon removed. |
-| **Testing & CI** | **1.5** | No CI, no JS test runner; only ad-hoc Selenium Python scripts. |
-| **Docs accuracy** | **3.5** *(was 2.0)* | Counts corrected across all surfaces; `js/stats.js` removed from README; asset coverage now reflects reality. |
-| **Overall production readiness** | **3.5** *(was 3.0)* | P0 fixes applied; P1/P2 items (CI, module splitting, CDN hardening) remain. |
+| **Data integrity & honesty** | **4.0** *(was 2.0)* | Word counts corrected to 2,627; curated B1 list restored (1,363); all image refs valid; now enforced by CI. Duplicate files remain. |
+| **Asset pipeline / repo state** | **3.5** *(was 1.5)* | 4,364 deletions committed; all broken/duplicate image refs cleared across A1/A2/B1; B1 27% documented as in-progress; manifest icon fixed. |
+| **Testing & CI** | **2.5** *(was 1.5)* | Automated GitHub Actions data-integrity gate added; JS unit/e2e tests (Playwright) still run manually, not in CI. |
+| **Docs accuracy** | **4.0** *(was 2.0)* | Counts corrected across all surfaces; `js/stats.js` removed; QA/CI claims rewritten to match reality. |
+| **Overall production readiness** | **3.5** *(was 3.0)* | P0 + most P1 fixes applied; remaining items (JS tests in CI, module splitting, Tailwind precompile) are P2-grade. |
 
 ---
 
@@ -192,7 +195,7 @@ Each level carries redundant copies with no enforced source of truth, e.g. A1 ha
 
 ## 8. Asset Pipeline & Repository State — ✅ Reconciled
 
-**Verdict: 3.0/5** (was 1.5/5 before P0 fixes).
+**Verdict: 3.5/5** (was 1.5/5 before fixes).
 
 - **Image mapping integrity — ✅ Confirmed correct.** Full audit verified that images are
   assigned in monotonically consistent generation order with 0 orphaned files and 0
@@ -203,11 +206,13 @@ Each level carries redundant copies with no enforced source of truth, e.g. A1 ha
   Twemoji `.svg` approach (3,576 files) to Imagen 3 `.webp` (788 orphaned removals). All
   deletions were safe: not a single on-disk deletion was referenced by current data.
   `git clone` now matches the working copy.
-- **6 broken B1 image references — ✅ Fixed.** Entries id=470, 586, 797, 1026, 1384, 1386
-  had `image_path` pointing to `.svg` files that no longer exist. Both `image` and
-  `image_path` nulled in `b1/wordlist.json`.
+- **Broken B1 image references — ✅ Fixed.** A `git checkout` during the P0 pass had
+  regressed B1 to a stale 1,399-entry list with ~1,000 dead `.svg` refs; the curated
+  1,363-entry list was restored, 981 dead SVG-era refs nulled, and the id=82
+  (`der Ausdruck`) duplicate image cleared. Verified: **0 broken and 0 duplicate image
+  refs across A1, A2, and B1**, now enforced by CI.
 - **B1 illustration coverage is 27%** (371 / 1,363 words) — in-progress. All docs now
-  state this accurately. Remaining 992 entries will get WebP assets in future passes.
+  state this accurately. Remaining ~992 entries will get WebP assets in future passes.
 - **Broken manifest icon — ✅ Fixed.** Removed dead `twemoji_cache/1f393.svg` reference
   from `manifest.json`.
 - **Duplicate image references:** entries still carry both `image` and `image_path` with the
@@ -230,9 +235,16 @@ Each level carries redundant copies with no enforced source of truth, e.g. A1 ha
     this ("NOT encrypted — treat like a password"), but the user-facing README frames it as a
     portable backup without that caveat.
   - **Third-party dependency for feedback:** the in-app feedback posts to `formsubmit.co`
-    (`connect-src` allows it). Reasonable for a free project, but it's an external data path
-    worth disclosing in a privacy note.
-  - No Subresource Integrity on the Tailwind CDN script (FontAwesome has SRI; Tailwind does not).
+    (`connect-src` allows it). Reasonable for a free project. ✅ **Fixed (P1):** a privacy note
+    now appears inline in the feedback form disclosing the third-party relay and that no data
+    is stored or used for tracking.
+  - No Subresource Integrity on the Tailwind CDN script (FontAwesome and Lottie have SRI;
+    Tailwind does not). ⚠️ **Not cleanly fixable as-is:** the script loads the *unversioned*
+    Play CDN endpoint (`https://cdn.tailwindcss.com`), which serves a mutable JIT bundle.
+    Pinning an SRI hash to a mutable URL would silently break *all* styling the moment Tailwind
+    redeploys — a worse failure mode than the current weakness. The real fix is the P2
+    precompiled-stylesheet migration, which removes the CDN (and its `unsafe-inline`/`eval`
+    requirement) entirely.
 
 ---
 
@@ -247,17 +259,25 @@ guidelines; heavy reliance on color (gender glows) needs a non-color cue check.
 
 ---
 
-## 11. Testing & CI — oversold
+## 11. Testing & CI — ✅ data gate added; JS tests still manual
 
-**Verdict: 1.5/5.** The README advertises "dual test pipelines" and "high-reliability
-client-side state execution." Reality:
-- **No `.github/workflows`** — there is no CI of any kind.
-- **No JS test runner** (no Jest/Vitest/Playwright config, no `package.json`).
-- What exists is `scripts/run_unit_tests.py` and `scripts/debug_syntax.py` — Selenium-driven
-  browser scripts — plus ~13k lines of ad-hoc one-off Python tooling (including a
-  `scripts/scratch/` folder). Useful for the author, but not a reproducible, gated pipeline.
-- Crucially, **nothing automatically verifies the claims that have already drifted** (word
-  counts, asset coverage). A 10-line CI check would have caught the 3,921-vs-2,627 gap.
+**Verdict: 2.5/5** (was 1.5/5 before fixes). A GitHub Actions workflow now gates **data
+integrity** on every push/PR that touches a wordlist or a count-bearing doc
+([`.github/workflows/validate-data.yml`](.github/workflows/validate-data.yml) running
+[`scripts/validate_data.py`](scripts/validate_data.py)). It fails the build on invalid JSON,
+duplicate ids, broken or duplicated image references, CSV row-count drift, and — critically —
+any published word count that no longer matches the data. This closes the exact gap that let
+the 3,921-vs-2,627 drift ship (the check was verified to fail on a simulated `3,921` total).
+
+What remains for a higher score:
+- **JS logic is still not gated.** The genuine in-browser tests — `scripts/run_unit_tests.py`
+  (FSRS-5 math, Kölner Phonetik, lemmatization), `scripts/debug_syntax.py` (import/console
+  smoke), and `scripts/e2e_comprehensive_tests.py` (end-to-end flows) — are **Playwright**-driven
+  (the earlier "Selenium" description was wrong) and run on demand, not in CI.
+- Wiring those into CI needs a browser runner (`playwright install chromium` in the workflow);
+  it is the next step but heavier than the data gate.
+- ~13k lines of ad-hoc one-off Python tooling remain under `scripts/` (incl. a `scripts/scratch/`
+  folder) — useful for the author, but not part of any gated pipeline.
 
 ---
 
@@ -273,8 +293,11 @@ sections are accurate and useful.
 - ✅ Zero-inference clause confirmed valid (NotebookLM-grounded).
 - ✅ Historical NotebookLM audit counts in backlog annotated with pre-overhaul context note.
 
+**Fixed in P1 pass:**
+- ✅ The README §QA "dual test pipelines / high-reliability" claim was rewritten to accurately
+  describe the Playwright scripts (run manually) and the new automated data-integrity CI gate.
+
 **Still outstanding:**
-- The "dual test pipelines / high-reliability" claim in README §QA remains and is still oversold — there is no automated CI. Accurate phrasing would be "browser-driven Selenium scripts for syntax and unit verification." This is a P1 fix (add CI or reword).
 - `docs/walkthrough_a2.md` references 1,142 cards — historical document, accurately reflects the pre-overhaul A2 size. No change needed; context is clear.
 
 ---
@@ -284,24 +307,39 @@ sections are accurate and useful.
 **P0 — ✅ ALL DONE**
 1. ✅ Commit image deletions: reconciled SVG→WebP migration (4,364 files).
 2. ✅ Fix all word-count claims to real **2,627** across README, index.html, manifest.json, VISION.md, docs/backlog.md.
-3. ✅ Fix 6 broken B1 image references (dead SVG paths → null).
+3. ✅ Restored the curated B1 wordlist (1,363 entries) after a `git checkout` regression and cleared all dead image references (981 SVG-era paths nulled + the id=82 duplicate). All three levels now have zero broken or duplicated image refs.
 4. ✅ Remove dead `twemoji_cache/1f393.svg` icon from manifest.json.
 5. ✅ Remove non-existent `js/stats.js` from README file hierarchy.
 6. ✅ Update asset-coverage claims to real percentages (A1 93%, A2 100%, B1 27% in-progress).
 7. ✅ Zero-inference clause confirmed valid via NotebookLM; no rewrite needed.
 
-**P1 — credibility & safety (next sprint):**
-1. Add a minimal GitHub Actions CI: parse each `wordlist.json`, assert counts match documented numbers, assert every `image_path` reference exists on disk. One workflow prevents the entire class of drift this audit found.
-2. Reword the "dual test pipelines / high-reliability" README claim to accurately describe the Selenium scripts that exist.
-3. Add SRI to the Tailwind CDN `<script>` tag (FontAwesome already has it; Tailwind does not).
-4. Add a brief privacy note for the FormSubmit feedback data path.
+**P1 — credibility & safety — ✅ DONE**
+1. ✅ Added GitHub Actions CI ([`validate-data.yml`](.github/workflows/validate-data.yml) +
+   [`scripts/validate_data.py`](scripts/validate_data.py)): parses each `wordlist.json`, asserts
+   the published total matches the data across README/index.html/manifest.json/VISION.md, and
+   asserts every image reference exists on disk and is unique. Prevents the entire class of
+   drift this audit found.
+2. ✅ Reworded the README §QA "dual test pipelines / high-reliability" claim to accurately
+   describe the Playwright scripts (manual) and the new automated data gate.
+3. ⚠️ SRI on the Tailwind CDN — **deferred to P2 by necessity.** The endpoint is the unversioned
+   Play CDN (mutable bundle); a pinned hash would break styling on Tailwind's next redeploy. The
+   correct fix is the precompiled-stylesheet migration below, which removes the CDN entirely.
+4. ✅ Added an inline privacy note to the feedback form for the FormSubmit data path.
 
 **P2 — maintainability & performance (backlog):**
-1. Split `events.js` (1,647 lines) and `flashcards.js` (1,881 lines) into focused modules.
-2. Replace Tailwind CDN with a precompiled stylesheet — removes the Tailwind production advisory (and the monkey-patch suppressing it), shrinks payload, lets CSP drop `unsafe-inline`/`eval`.
-3. Establish one canonical data file per level; delete `wordlist - x.json` duplicates and the multiple CSV copies.
-4. Collapse dual `image` + `image_path` fields to one field in the JSON schema.
-5. Unify the two manual cache-version constants (`WORDLIST_CACHE_VERSION` in app.js, `CACHE_VERSION` in sw.js).
+
+> ⚠️ Items 1, 4, 5 and the data-file cleanup touch files currently in the author's
+> **uncommitted working tree** (`events.js`, `flashcards.js`, `app.js`, `sw.js`, the A1/A2
+> wordlists and the `wordlist - x.json`/CSV variants). They were intentionally **not** done in
+> this pass to avoid burying in-progress changes in an unreviewable diff; tackle them after the
+> working tree is committed.
+
+1. Split `events.js` (1,647 lines) and `flashcards.js` (1,881 lines) into focused modules. *(touches uncommitted files)*
+2. Replace Tailwind CDN with a precompiled stylesheet — removes the Tailwind production advisory (and the monkey-patch suppressing it), shrinks payload, lets CSP drop `unsafe-inline`/`eval`, and resolves the SRI gap (P1 item 3). *Note: conflicts with the project's zero-build mandate — needs a product decision.*
+3. Establish one canonical data file per level; delete `wordlist - x.json` duplicates and the multiple CSV copies. *(touches uncommitted files)*
+4. Collapse dual `image` + `image_path` fields to one field in the JSON schema. *(touches uncommitted wordlists + `flashcards.js`)*
+5. Unify the two manual cache-version constants (`WORDLIST_CACHE_VERSION` in app.js, `CACHE_VERSION` in sw.js). *(touches uncommitted files)*
+6. Wire the Playwright unit/e2e tests into CI (needs `playwright install chromium` in the workflow).
 
 ---
 
@@ -312,11 +350,15 @@ layer, and service worker are the kind of work that stands up in a serious code 
 is more rigorous than it initially appeared: the zero-inference clause is real, with examples and
 pronunciations grounded against official Goethe-Institut source material via NotebookLM.
 
-The P0 fixes applied in this session — correcting the word counts across every surface, committing
-the long-pending image deletions, fixing 6 broken B1 refs, removing the dead manifest icon, and
-updating all stale docs — close the gap that separated "impressive app" from "honest app." The
-path to 4/5 runs through a single CI workflow (to prevent count drift forever) and the Tailwind
-CDN swap (to fix the CSP and suppress the suppressed warning).
+The P0 + P1 fixes applied across this work — correcting the word counts on every surface,
+restoring the curated B1 list and clearing every broken/duplicate image reference, committing
+the long-pending image deletions, removing the dead manifest icon, updating all stale docs,
+adding an automated data-integrity CI gate, rewriting the QA claims, and disclosing the
+FormSubmit data path — close the gap that separated "impressive app" from "honest app." The
+count drift that triggered this audit can no longer ship silently: CI fails the build on it.
+The path to 4/5 now runs through the P2 work — wiring the Playwright tests into CI and the
+Tailwind precompile (which also resolves the CSP and SRI gaps) — most of which waits on the
+author's in-progress working tree being committed first.
 
 ---
 

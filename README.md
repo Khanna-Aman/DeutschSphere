@@ -129,8 +129,13 @@ A1-B1_German/
 
 ---
 
-## 📄 QA Verification & Test Suites
+## 📄 QA & Continuous Integration
 
-We enforce high-reliability client-side state execution via dual test pipelines:
-* **Syntax Verification**: Run `python scripts/debug_syntax.py` to launch an automated browser session, verify module imports, and assert console clarity.
-* **Unit Testing**: Run `python scripts/run_unit_tests.py` to execute core FSRS mathematical stability scheduling, Kölner Phonetik phonemic tests, and verb/noun lemmatization modules.
+**Automated (CI):** Every push or pull request that touches a wordlist or a doc that quotes counts runs [`scripts/validate_data.py`](scripts/validate_data.py) through GitHub Actions ([`.github/workflows/validate-data.yml`](.github/workflows/validate-data.yml)). Treating each `wordlist.json` as the source of truth, the build fails on invalid JSON, duplicate ids, broken or duplicated image references, CSV row-count drift, or any published word count that no longer matches the data.
+
+**Local (manual):** A set of [Playwright](https://playwright.dev/)-driven scripts run the app in a real browser. They require a one-time `pip install playwright && playwright install chromium`:
+* **Syntax smoke test** — `python scripts/debug_syntax.py` serves the app, loads it headless, and asserts every module imports with a clean console.
+* **Unit tests** — `python scripts/run_unit_tests.py` exercises the FSRS-5 stability/difficulty scheduling math, the Kölner Phonetik similarity algorithm, and German noun/verb lemmatization in-browser.
+* **End-to-end** — `python scripts/e2e_comprehensive_tests.py` walks the core user flows against a live local server.
+
+> The browser scripts are run on demand and are not yet wired into CI; today the automated gate is data integrity.
