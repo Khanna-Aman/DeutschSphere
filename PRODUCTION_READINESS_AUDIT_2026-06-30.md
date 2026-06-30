@@ -75,6 +75,13 @@
 - **Thematic word groups are missing.** Every Goethe list (NLM-confirmed) opens with a *Wortgruppenliste*: numbers, days, months, seasons, colours, countries, currencies, directions. The app ingested only the **alphabetical** section, so these are absent: **months 0/12, weekdays 0/7, seasons 0/4, country names 0/5**, and basic colours/cardinal-number words largely absent. For an A1 learner this is foundational vocabulary.
 - **B1 wordlist is materially incomplete.** App B1 = 1,363 vs the official ~2,400 lexical units. A deterministic diff flags 500+ official B1 headwords absent; an **NLM-verified sample confirmed 8/8** real (`ablehnen, absagen, annehmen, abnehmen, anschließen, Abschied, absolut, abwesend`). B1 therefore covers roughly **55–60% of the official B1 canon**.
 - **Image coverage:** A1 93% (637/684), A2 100% (580/580), **B1 27% (371/1,363)** — 992 B1 entries have no illustration. App degrades gracefully (null image), but the gap is large.
+- **Image↔word *semantic* mapping (first automated pass, 2026-06-30).** Beyond the structural check (every `image` ref exists, none shared — validator-confirmed), a free, local pipeline now checks whether each WebP actually *depicts* its word: `scripts/check_image_word_clip.py` (perceptual-hash duplicate sweep + open-source CLIP retrieval; runs in a D:-drive venv, no paid API). Full-corpus result over 1,588 images:
+  - **415 confident matches** (concrete nouns CLIP top-ranks against all glosses) — high confidence these are correctly mapped;
+  - **767 not image-verifiable** (678 non-nouns + 89 abstract nouns) — CLIP cannot judge metaphorical illustrations of "sometimes", "to justify", etc.; honestly excluded rather than guessed;
+  - **406 nouns flagged for human glance** (147 "mismatch" + 259 "weak") — *but* manual inspection of the strongest ones shows they are overwhelmingly **reasonable metaphors/metonyms, not errors** (`die Reise`→luggage, `die Einladung`/`der Brief`→envelope, `der Blick`→window, `die Chance`→door, `der Atem`→cloud). **No gross wrong-mapping surfaced.**
+  - **3 genuine near-duplicate image pairs** (different files, near-identical art): `das Licht`≈`die Erfindung` (both a lightbulb), `stressig`≈`der Augenblick`, `anwesend`≈`endgültig`.
+  - **Minor:** a few orphan/unreferenced WebP files exist (A1 640 on disk vs 637 referenced; A2 584 vs 580) — harmless, candidate for cleanup.
+  - **Open follow-up (later):** (a) human spot-check via the worst-first review sheet `scripts/image_check_review.html` + the 3 duplicate pairs; (b) optionally tighten the flag list with a *concreteness gate* (drop abstract nouns to "inconclusive") or a local vision-LLM (Ollama) layer to auto-describe flagged cards. Conclusion so far: **no evidence of systematic image mismapping; concrete cards verified, abstract cards need human judgment.**
 - **Counting model (clarified):** per-level counts only reconcile with official sizes because levels are **disjoint** (each word once, at introduction): A1+A2 = 1,264 ≈ official A2 ~1,300; total 2,627 ≈ official B1 ~2,400. "A2 100% complete" means *images for the 580 A2 entries*, not *the full official A2 list*.
 
 ### 4.3 Architecture & code quality — 80/100 ✅
@@ -147,7 +154,8 @@
 
 ### P2
 - ⏳ **B1 imagery** (992 missing) — bulk Imagen 3 generation needs GCP/Vertex creds (git-ignored) + cost; **out of scope for automatic remediation** unless access is provided.
-- Remove 619 orphaned legacy SVGs; add unit tests for `fsrs.js`/`nlp.js`; run an axe accessibility pass; add `CHANGELOG.md`; consider decomposing the two largest JS modules.
+- 🟡 **Image↔word semantic verification** — first automated pass done (`scripts/check_image_word_clip.py`, free/local CLIP + pHash). No systematic mismapping found; 415 concrete cards confirmed, 3 near-duplicate pairs and a worst-first review sheet (`scripts/image_check_review.html`) await a human spot-check. Optional later: concreteness gate / local-VLM layer to tighten the flag list. See §4.2.
+- Remove 619 orphaned legacy SVGs; clean up a handful of orphan WebP files (A1 3, A2 4 unreferenced); add unit tests for `fsrs.js`/`nlp.js`; run an axe accessibility pass; add `CHANGELOG.md`; consider decomposing the two largest JS modules.
 
 ---
 
