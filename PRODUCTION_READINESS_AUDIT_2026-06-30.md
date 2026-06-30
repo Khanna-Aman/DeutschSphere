@@ -127,7 +127,7 @@
 > Status legend: ✅ done this session · 🟡 in progress · ⏳ requires owner decision/credentials
 
 ### P0 — release blockers
-- 🟡 **Example-sentence copyright** — owner chose **replace with original sentences**. Pipeline built and verified: `scripts/check_example_originality.py` (gate) + `scripts/apply_examples.py` (merge). A1 ids 1–60 replaced (verbatim 632→573); A2/B1 + remaining A1 follow the same path. *Blocker stays open until the verbatim count reaches 0 across all levels.*
+- 🟡 **Example-sentence copyright** — owner chose **replace with original sentences**. Pipeline built and verified: `scripts/check_example_originality.py` (gate) + `scripts/apply_examples.py` (merge). **A1 complete: all 684 entries original, 0 verbatim copies (verified).** A2 (580) and B1 (1363) remain, same pipeline. *Blocker stays open until verbatim reaches 0 across all three levels.*
 - ✅ **Licensing/attribution** — `NOTICE` separates code (MIT) from content; non-affiliation/trademark disclaimer added; `LICENSE` scoped to source code; Imagen 3 terms flagged.
 - ✅ **Privacy** — `PRIVACY.md` added; fonts + FontAwesome **self-hosted** (no Google/Cloudflare calls), CSP tightened to self-only; `formsubmit.co` flow disclosed. *Remaining:* swap the personal feedback Gmail for a dedicated address / FormSubmit hashed token (owner action).
 
