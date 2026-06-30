@@ -151,6 +151,8 @@ A1-B1_German/
 ├── VISION.md               # Status & roadmap
 ├── CONTRIBUTING.md         # Contributor rules
 ├── NOTICE / LICENSE / PRIVACY.md   # Attribution, MIT (code), privacy policy
+├── CHANGELOG.md             # Notable changes
+├── backlog.md               # Feature/spec log (lags; audit + CHANGELOG are authoritative)
 ├── PRODUCTION_READINESS_AUDIT_2026-06-30.md   # Audit + remediation log
 │
 ├── fonts/                  # Self-hosted Inter, Outfit, Font Awesome (no CDN)
