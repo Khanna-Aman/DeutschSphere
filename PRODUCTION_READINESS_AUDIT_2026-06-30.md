@@ -4,7 +4,7 @@
 **Auditor:** Independent full-stack + linguistics review (Claude Opus 4.8)
 **Scope:** Entire repository, prepared for public release
 **Ground truth:** Official Goethe-Institut *Wortliste* PDFs (A1 *Start Deutsch 1*, A2, B1), cross-checked via NotebookLM notebook **`OpusAudit`** (`11fef2ec-4ada-414b-9648-e2fccd276d3f`) **and** by deterministic text extraction of the same PDFs (`.raw_resources/*.pdf`).
-**Relationship to prior work:** This audit *independently re-verifies* (does not inherit) the claims in `CODEBASE_AUDIT.md` (2026-06-29), and adds linguistic ground-truth, legal/IP, and privacy dimensions that prior audit did not cover.
+**Relationship to prior work:** This audit *independently re-verified* (did not inherit) the claims of the earlier **2026-06-29 codebase audit** — those claims are recorded and adjudicated in §5 below, and that prior report has since been folded into this one and removed. This audit also adds linguistic ground-truth, legal/IP, and privacy dimensions the prior audit did not cover.
 
 ---
 
@@ -123,7 +123,7 @@
 
 ---
 
-## 5. Independent re-verification of `CODEBASE_AUDIT.md` (2026-06-29)
+## 5. Independent re-verification of the prior (2026-06-29) codebase audit
 
 | Prior claim | Status this audit | Note |
 |---|---|---|
