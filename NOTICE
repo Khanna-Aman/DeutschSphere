@@ -1,0 +1,54 @@
+DeutschSphere — Attribution & Third-Party Notices
+==================================================
+
+The DeutschSphere SOURCE CODE is licensed under the MIT License (see LICENSE).
+The notices below cover content and third-party assets, whose terms are
+SEPARATE from the MIT license on the code. The MIT license does not, and
+cannot, grant rights to third-party material described here.
+
+--------------------------------------------------------------------------
+1. Vocabulary selection (CEFR levels A1–A2–B1)
+--------------------------------------------------------------------------
+The choice of which words appear at each level is informed by the publicly
+available official word lists ("Wortlisten") published by the Goethe-Institut
+for the Goethe-Zertifikat A1 (Start Deutsch 1), A2, and B1 examinations.
+
+These lists are used here only as a factual reference for vocabulary scope.
+The English translations and the pseudo-phonetic pronunciation hints in this
+app are original to the project and are NOT taken from those publications.
+
+--------------------------------------------------------------------------
+2. Example sentences  —  ⚠ ACTION REQUIRED BEFORE PUBLIC RELEASE
+--------------------------------------------------------------------------
+The German example sentences shipped in the current data files are, in large
+part, reproduced from the Goethe-Institut / Hueber Verlag / telc / ÖSD
+Wortliste publications, which are copyrighted ("urheberrechtlich geschützt").
+
+These sentences are being REPLACED with original example sentences authored
+for this project. Until that replacement is complete and verified, the data
+is NOT cleared for public redistribution. See
+PRODUCTION_READINESS_AUDIT_2026-06-30.md (§4.6) for details.
+
+--------------------------------------------------------------------------
+3. Illustrations
+--------------------------------------------------------------------------
+The card illustrations (.webp) were generated with Google Vertex AI's
+Imagen 3 model. Use and redistribution are subject to Google's generative-AI
+terms; confirm those terms permit redistribution before public release.
+
+--------------------------------------------------------------------------
+4. Fonts & icons (self-hosted under ./fonts)
+--------------------------------------------------------------------------
+- "Inter"  — SIL Open Font License 1.1 (© The Inter Project Authors)
+- "Outfit" — SIL Open Font License 1.1 (© The Outfit Project Authors)
+- Font Awesome Free 6.4.0 — icons: CC BY 4.0; fonts: SIL OFL 1.1;
+  code: MIT (https://fontawesome.com/license/free)
+
+--------------------------------------------------------------------------
+5. Non-affiliation / trademark disclaimer
+--------------------------------------------------------------------------
+"Goethe-Institut", "Goethe-Zertifikat", "Start Deutsch", "telc", "Hueber",
+and "ÖSD" are trademarks of their respective owners. DeutschSphere is an
+independent, unofficial study tool. It is NOT affiliated with, endorsed by,
+sponsored by, or certified by the Goethe-Institut or any of these
+organizations. References to their exams and curricula are descriptive only.

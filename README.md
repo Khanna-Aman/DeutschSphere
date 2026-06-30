@@ -109,7 +109,7 @@ A1-B1_German/
 ├── tailwind.css            # Precompiled Tailwind build (static, tree-shaken — no runtime CDN)
 ├── tailwind.config.js      # Build-time Tailwind config + regeneration command
 ├── app.js                  # Main orchestrator: boots PWA, handles hash routing & View Transitions
-├── sw.js                   # Service Worker (pre-caches static shell & CDN files for offline use)
+├── sw.js                   # Service Worker (pre-caches the self-hosted static shell for offline use)
 ├── manifest.json           # Progressive Web App configuration manifest
 │
 ├── js/                     # ES6 Modular controllers
@@ -159,3 +159,12 @@ Then commit the updated `tailwind.css` (it is served statically by GitHub Pages 
 * **End-to-end** — `python scripts/e2e_comprehensive_tests.py` walks the core user flows against a live local server.
 
 > The browser scripts are run on demand and are not yet wired into CI; today the automated gate is data integrity.
+
+---
+
+## 🔐 Privacy & Legal
+
+- **Privacy:** All learning data stays in your browser (localStorage + IndexedDB) — no accounts, no analytics, no trackers, no cookies. Fonts and icons are self-hosted (no third-party CDNs). The only optional outbound request is the feedback form, which you trigger explicitly. See [`PRIVACY.md`](PRIVACY.md).
+- **Attribution & licensing:** Source code is MIT; third-party content (vocabulary references, illustrations, fonts) has separate terms. See [`NOTICE`](NOTICE) and [`LICENSE`](LICENSE).
+- **Non-affiliation:** DeutschSphere is an independent, unofficial study tool. It is **not affiliated with, endorsed by, or certified by the Goethe-Institut** or any examination body. Exam/curriculum references are descriptive only.
+- **Release status:** A full production-readiness audit lives in [`PRODUCTION_READINESS_AUDIT_2026-06-30.md`](PRODUCTION_READINESS_AUDIT_2026-06-30.md). Note its open P0 items before any public release.
