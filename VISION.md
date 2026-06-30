@@ -21,13 +21,13 @@ DeutschSphere is designed to maximize vocabulary acquisition through distraction
 | Component | Status | Description |
 | :--- | :--- | :--- |
 | **FSRS-5 Spaced Repetition** | **Active** | Clinical scheduling using 19 stability parameters to model cognitive decay. |
-| **Phonetik-Spiegel** | **Active** | Speech recording and audio waveform analysis against native models using Kölner Phonetik. |
+| **Phonetik-Spiegel** | **Active** | Web Speech `SpeechRecognition` (de-DE) transcription scored against the target by Levenshtein distance, with a live waveform vs. a native-synthesis reference and static mouth-position guides. |
 | **Active Recall Quiz Arena** | **Active** | Bidirectional MC reservoir-sampled tests and text spelling with virtual keyboards. |
 | **Immersions-Labor** | **Active** | Custom local NLP for copy-pasted text block lemmatization and instant flashcard generation. |
 | **Sidebar Category Words** | **Active** | Collapsible sidebar panel for instant virtual-scroll quick-jumping across category words. |
 | **Zero-Touch PWA Updates** | **Active** | Automated Service Worker update propagation with client `controllerchange` auto-reload. |
 | **100% Offline PWA & Installation** | **Active** | In-app download button & native manifest for standalone home-screen installation with zero server dependency. |
-| **Sync & Backup Sync** | **Active** | Base64-compressed local IndexedDB profile copy/paste backup and restore. |
+| **Sync & Backup** | **Active** | Local IndexedDB profile backup/restore via a copy/paste Base64 Sync Key (a portable encoding, not encryption) or a raw JSON file. |
 | **Developer Feedback Form** | **Active** | Zero-cost serverless FormSubmit integration sending user feedback direct to developer email. |
 | **Adaptive Layout & Safe-Area** | **Active** | Responsive single-column card view on all screens with Android navigation bar safe-area insets. |
 | **Card View Preferences** | **Active** | Persistent settings drawer toggles for Fast Read, Autoplay, Illustrations, and Example Sentences. |

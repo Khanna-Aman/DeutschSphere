@@ -13,19 +13,19 @@
 ## ⚡ Core Pillars of v1.1.0
 
 ### 1. Spaced Repetition Engine (FSRS-5)
-Powered by a zero-dependency, pure client-side port of the **Free Spaced Repetition Scheduler (FSRS-5)**. It tracks individual word stability ($S$), difficulty ($D$), and retrievability ($R$) curves across **2,627 words**, outperforming traditional SM-2 algorithms by 20–30%.
-* Navigated via pure card navigation swiping (swipe left for next card, swipe right for previous card) or desktop hotkeys (`1-4` for review grading, `Space` to flip, `Enter` to submit).
-* Dynamic glassmorphic panels adapt with deterministic noun-gender glows: 🔵 `der` (masculine), 🔴 `die` (feminine), 🟢 `das` (neuter), and 🟣 neutral/other.
+Powered by a zero-dependency, pure client-side port of the **Free Spaced Repetition Scheduler (FSRS-5)**. It tracks individual word stability ($S$), difficulty ($D$), and retrievability ($R$) curves across **2,627 words**. *(FSRS's published benchmarks report roughly 20–30% fewer reviews than SM-2 for the same target retention.)*
+* Grade with a swipe — **swipe right for _Good_, swipe left for _Again_** (both advance, with directional hints) — or with desktop hotkeys (`1`–`4` to grade, `Space` to flip, `←` / `→` to move between cards).
+* Dynamic glassmorphic panels adapt with deterministic noun-gender glows: 🔵 `der` (masculine), 🩷 `die` (feminine), 🟢 `das` (neuter), and 🟣 neutral/other.
 
 ### 2. Phonetik-Spiegel (Pronunciation Trainer)
-An interactive speech coach that captures microphone streams and evaluates pronunciation accuracy.
-* Uses a pure-JS **Kölner Phonetik** matching algorithm to assert spoken matches by sound characteristics rather than flat orthography.
-* Compares audio waveforms against native synthesis models and displays high-fidelity static mouth positioning guides for challenging German phonemes (`ä`, `ö`, `ü`, `ch`, `sch`, `r`).
+An interactive speech coach that captures your microphone and scores pronunciation accuracy.
+* Transcribes your speech with the browser's **Web Speech `SpeechRecognition`** (German `de-DE`) and scores it against the target word via **Levenshtein distance**, returning a live `% Match` and flagging the specific phonemes you missed.
+* Renders a **live waveform** of your voice beside a native-synthesis reference, and shows static **mouth-position guides** for challenging German phonemes (`ä`, `ö`, `ü`, `ch`, `sch`, `r`).
 
 ### 3. Active Recall Quiz Arena
 A dedicated testing interface designed to challenge active vocabulary retention.
 * **Vokabel-Test (Multiple Choice)**: Generates DE ↔ EN challenges utilizing lightning-fast reservoir sampling to compile contextual distractors with zero runtime lag.
-* **Schreib-Arena (Active Spelling)**: Free-text spelling tests with an integrated virtual umlaut tray (`ä`, `ö`, `ü`, `ß`) and rapid-input shortcuts. Includes layout-stable feedback (muted green pulse on success, clean horizontal shake on error).
+* **Schreib-Arena (Active Spelling)**: Free-text spelling tests with an integrated virtual umlaut tray (`ä`, `ö`, `ü`, `ß`) and rapid-input shortcuts. Feedback is layout-stable and distraction-free — a muted green confirm on success and a red highlight on error, with no shakes, confetti, or score animations.
 
 ### 4. Audio Trainer (Dual-Voice System)
 Continuous speed-adjustable synthesis designed to anchor listening comprehension.
@@ -39,7 +39,7 @@ A lightweight client-side Natural Language Processing lab under `#/immersion`.
 
 ### 6. Portable Profile Sync & Backup
 Maintain complete data ownership without external server overhead.
-* Back up or restore your entire IndexedDB progress state instantly using a compressed, Base64-encoded copy/paste Sync Key or raw JSON profile files.
+* Back up or restore your entire IndexedDB progress state instantly using a copy/paste **Base64 Sync Key** (a portable encoding for transfer — not encryption) or a raw JSON profile file.
 
 ### 7. Zero-Cost Developer Feedback System
 Direct communication pipeline embedded in the client UI.
@@ -54,7 +54,7 @@ Optimized display architecture across all viewport dimensions.
 ### 9. 100% Offline PWA & Instant Installation
 Full standalone application installation support across Android, iOS, and Desktop.
 * **Instant App Download**: Users can install DeutschSphere directly onto their mobile home screen via the in-app `📥 Install App (PWA)` button or browser menu.
-* **100% Offline Independence**: Pre-caches all 2,627 Goethe-verified vocabulary entries, Service Worker assets, and offline Web Speech API drivers so users experience complete functionality in Airplane Mode with zero network dependencies.
+* **100% Offline Independence**: The Service Worker pre-caches the full app shell at install and caches all 2,627 vocabulary entries on first load, so the app runs with complete functionality in Airplane Mode — zero network dependencies — thereafter.
 
 ---
 
@@ -84,8 +84,9 @@ We cover **2,627 ground-truth entries** verified against official Goethe-Institu
 | `→` / `↓` | Next card | `A` | Toggle auto-play TTS |
 | `←` / `↑` | Previous card | `B` | Toggle card visual assets |
 | `1` - `4` | FSRS quality grades | `E` | Toggle example sentences |
-| `L` | Toggle learned status | `Esc` | Close panels / Exit quiz |
-| `S` | Toggle card shuffle | `?` | Toggle keyboard shortcuts |
+| `L` | Toggle learned status | `F` | Toggle Fast-Read mode |
+| `S` | Toggle card shuffle | `H` | Toggle hide-learned cards |
+| `Esc` | Close panels / Exit quiz | `?` | Toggle keyboard shortcuts |
 
 ---
 
@@ -115,18 +116,23 @@ A1-B1_German/
 │   ├── state.js            # Unified app state, DOM selector maps, and IndexedDB debouncing
 │   ├── idb-keyval.js       # Asynchronous key-value IndexedDB driver for heavy client profiles
 │   ├── fsrs.js             # FSRS-5 mathematical modeling engine
-│   ├── nlp.js              # Lemmatizer, suffix analyzer, and regex noun gender matches
-│   ├── audio.js            # TTS speaker and Web Audio oscillators
-│   ├── flashcards.js       # Spaced repetition card renderer & swipe haptics
-│   ├── quiz.js             # Multiple-choice & text spelling test controllers
+│   ├── nlp.js              # Lemmatizer, suffix analyzer, Kölner Phonetik & regex noun-gender rules
+│   ├── audio.js            # Dual-voice (DE/EN) TTS speaker and Web Audio oscillators
+│   ├── flashcards.js       # Card rendering, deck navigation, and preference toggles
+│   ├── phonetics.js        # Phonetik-Spiegel: speech recognition, waveforms & pronunciation scoring
+│   ├── phoneme_guides.js   # Static mouth-position guides for tricky German phonemes
+│   ├── quiz.js             # Multiple-choice & text-spelling test controllers
 │   ├── immersion.js        # Immersion lab text analyzer view controller
-│   ├── router.js           # Client-side hash router
-│   ├── search.js           # Lexicon indexing and search sidebar categories
+│   ├── router.js           # Client-side hash router & view transitions
+│   ├── search.js           # Lexicon indexing and sidebar category words
+│   ├── backup.js           # Profile export/import and Base64 Sync Key restore
 │   ├── telemetry.js        # Structured logging, observability hooks, and error boundaries
-│   └── events.js           # Global keyboard and mouse event handlers
+│   ├── foic-preinit.js     # Pre-paint level detection (blocking, runs before modules)
+│   └── events.js           # Hotkeys, swipe gestures, settings, and modal wiring
 │
 ├── a1/ , a2/ , b1/         # Verified datasets (JSON files + WebP graphical assets)
-└── scripts/                # QA verification and unit testing automation
+├── scripts/                # Data validator, JSON→CSV converter, and Playwright QA scripts
+└── .github/workflows/      # CI: data-integrity gate (validate-data.yml)
 ```
 
 ---

@@ -31,8 +31,8 @@
 | **What it is** | Offline-first German A1–B1 vocabulary SPA (flashcards, SRS, quizzes, pronunciation coach, NLP lab), deployed to GitHub Pages. |
 | **Stack** | Hand-written ES6 modules, precompiled Tailwind (static stylesheet) + FontAwesome via CDN, IndexedDB, Web Speech API, Service Worker. No runtime build, no runtime npm dependencies (Tailwind regenerated on demand via CLI). |
 | **Biggest strength** | Real engineering substance — the FSRS-5 implementation and the persistence/PWA layers are the work of someone who knows what they're doing. |
-| **Biggest remaining risk** | Two large modules (`events.js`, `flashcards.js`) still need splitting, and the in-browser JS tests are not yet in CI. The data/asset claims that drifted are now gated automatically. |
-| **Headline verdict (post-fix)** | **4.0 / 5 — production-ready.** P0/P1 and most P2 done (data CI gate, two real bug fixes, schema collapse, Tailwind precompile + CSP hardening). Remaining items (module splitting, JS tests in CI) are optional maintainability follow-ups. |
+| **Biggest remaining risk** | Low. The in-browser JS tests aren't yet wired into CI (run manually). The data/asset claims that drifted are now gated automatically, and the two oversized modules have been split. |
+| **Headline verdict (post-fix)** | **4.0 / 5 — production-ready.** P0/P1 and P2 done (data CI gate, three real bug fixes, schema collapse, Tailwind precompile + CSP hardening, oversized-module split, gamification removed for study focus). Only remaining item: wiring the (passing) JS tests into CI. |
 
 ---
 
@@ -55,7 +55,7 @@ All numbers below are reproducible — see the Appendix.
 
 | Dimension | Rating | Justification |
 |---|:---:|---|
-| Architecture & modularity | **4.0** | Clean ES6 modules, CustomEvent decoupling, no deps; two oversized modules drag it down. |
+| Architecture & modularity | **4.5** *(was 4.0)* | Clean ES6 modules, CustomEvent decoupling, no deps; the two oversized modules were split (phonetics.js, backup.js extracted). |
 | Code quality & safety | **4.0** | Defensive persistence wrappers, HTML escaping, import validation, low debug noise. |
 | SRS correctness (FSRS-5) | **4.5** | Faithful, well-documented port with immutable updates and Leitner→FSRS migration. |
 | PWA / offline | **4.5** | Robust SW update flow, versioned caches, 4 tailored fetch strategies, true offline. |
@@ -65,7 +65,7 @@ All numbers below are reproducible — see the Appendix.
 | **Asset pipeline / repo state** | **3.5** *(was 1.5)* | 4,364 deletions committed; all broken/duplicate image refs cleared across A1/A2/B1; B1 27% documented as in-progress; manifest icon fixed. |
 | **Testing & CI** | **2.5** *(was 1.5)* | Automated GitHub Actions data-integrity gate added; JS unit/e2e tests (Playwright) still run manually, not in CI. |
 | **Docs accuracy** | **4.0** *(was 2.0)* | Counts corrected across all surfaces; `js/stats.js` removed; QA/CI claims rewritten to match reality. |
-| **Overall production readiness** | **4.0** *(was 3.0)* | P0/P1 + most P2 done: data CI gate, two real bug fixes (UI overlap, cache propagation), schema collapse, Tailwind precompile + CSP hardening, clean git history. Remaining: module splitting + JS tests in CI. |
+| **Overall production readiness** | **4.0** *(was 3.0)* | P0/P1 + P2 done: data CI gate, three real bug fixes (UI overlap, cache propagation, gamification scope-creep), schema collapse, Tailwind precompile + CSP hardening, oversized-module split, clean git history. Remaining: JS tests in CI. |
 
 ---
 
@@ -92,10 +92,11 @@ All numbers below are reproducible — see the Appendix.
   is more sophisticated than most hobby PWAs and correctly solves the "stale SW" problem.
 
 **Weaknesses:**
-- `js/events.js` (1,647 lines) and `js/flashcards.js` (1,881 lines) are monoliths that mix
-  many concerns; they are the obvious refactor targets.
-- `index.html` is 1,705 lines of inline markup with heavy Tailwind class strings — hard to
-  diff and review.
+- ✅ **Resolved:** `js/events.js` (1,647 → 1,183) and `js/flashcards.js` (1,881 → 1,185) were
+  split along feature seams — the Phonetik-Spiegel moved to `js/phonetics.js` (701 lines) and
+  backup/sync to `js/backup.js` (461 lines), verified by the unit + e2e suites.
+- `index.html` is ~1,690 lines of inline markup with heavy Tailwind class strings — hard to
+  diff and review (acceptable for a single-shell SPA; not split this pass).
 - Cache invalidation depends on a **human remembering to bump a version constant**
   (`WORDLIST_CACHE_VERSION` in `app.js`, separate from `CACHE_VERSION` in `sw.js`). Two
   manual version knobs that must stay in sync is fragile.
@@ -330,10 +331,10 @@ sections are accurate and useful.
 > below were completed. Each change was verified against the Playwright unit + e2e suites and
 > the data validator before commit.
 
-1. ⏳ **Deferred (recommended follow-up):** split `events.js` (1,647 lines) and `flashcards.js`
-   (1,881 lines, 39 exports) into focused modules. Intentionally **not** done here: it is a large
-   refactor with real regression risk and **zero runtime/hardening benefit** (pure code
-   organization). Best done as its own reviewed change, ideally after wiring the JS tests into CI.
+1. ✅ **Split the two oversized modules.** `events.js` (1,647 → 1,183) and `flashcards.js`
+   (1,881 → 1,185) decomposed along feature seams: `js/phonetics.js` (701) for the Phonetik-Spiegel
+   and `js/backup.js` (461) for profile backup/sync. Behaviour-preserving, verified by unit + e2e.
+   (Companion sidebar intentionally left in flashcards.js to avoid a circular import.)
 2. ✅ **Replaced the Tailwind CDN with a precompiled stylesheet** (`tailwind.css` via
    `tailwind.config.js`). Removed the production advisory + its monkey-patch, and let CSP
    `script-src` drop `unsafe-inline`/`unsafe-eval`/CDN. See §9.
@@ -345,8 +346,17 @@ sections are accurate and useful.
    appended as a `?v=` param so a data bump actually bypasses the SW's cache-first data cache
    (previously it didn't, silently serving stale data). The two constants now own distinct,
    documented layers (data vs. shell).
-6. ⏳ **Deferred:** wire the Playwright unit/e2e tests into CI (needs `playwright install chromium`
-   in the workflow). Pairs naturally with the module split (#1).
+6. ⏳ **Deferred (only remaining item):** wire the Playwright unit/e2e tests into CI (needs
+   `playwright install chromium` in the workflow).
+
+**Scope cleanup (post-audit):** the app was re-scoped to study-only. All gamification
+(particle bursts, wrong-answer shake, quiz star ratings + letter grades) was stripped from the
+code so it matches the long-stated "zero gamification" principle, and every doc (README, VISION,
+GEMINI, CONTRIBUTING, docs/) was reconciled with the code — correcting the Phonetik-Spiegel
+algorithm (SpeechRecognition + Levenshtein, not Kölner), the "compressed/encrypted" Sync Key
+(plain Base64), the Tailwind-CDN references, a non-existent `stats.js`/`#/stats` route, and the
+swipe/hotkey behaviour. *(Note: the `getPhoneticSimilarity` Kölner routine in `nlp.js` is
+implemented and unit-tested but currently unwired — a candidate for future use or removal.)*
 
 ---
 
@@ -394,7 +404,7 @@ git status --short | grep -cE "^ ?D"     # -> 4364
 # Missing referenced module
 ls js/stats.js                            # -> No such file
 
-# Lines of code (largest modules)
-wc -l js/events.js js/flashcards.js index.html
-# -> 1647 / 1881 / 1705
+# Lines of code (largest modules, after the module split)
+wc -l js/events.js js/flashcards.js js/phonetics.js js/backup.js index.html
+# -> 1183 / 1185 / 701 / 461 / 1673  (was 1647 / 1881 before extracting phonetics.js + backup.js)
 ```

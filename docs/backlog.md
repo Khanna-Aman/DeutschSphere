@@ -2,7 +2,9 @@
 
 This backlog tracks implemented features, their technical specifications, and outstanding tasks for the multi-level (A1, A2, B1) German vocabulary flashcard application.
 
-> Last updated: 2026-06-27
+> Last updated: 2026-06-29
+>
+> ⚠️ **Scope note.** The project was re-scoped to a focused, **study-only** tool. Earlier planned/experimental features — the Deutsch-Abenteuer RPG, Grammatik-Weberei sentence builder, a Statistics Dashboard, an Achievements/streak engine, and all gamification (XP, particle bursts, star ratings) — are **out of scope and not in the codebase**. This document has been pruned to reflect what actually ships.
 
 ---
 
@@ -12,25 +14,23 @@ This backlog tracks implemented features, their technical specifications, and ou
 - **Hash-Based SPA Routing**: The app uses `window.location.hash` for client-side routing across active views: `#/` (flashcards), `#/quiz`, `#/immersion`.
 - **Relative Path Data Loading**: Vocabulary is fetched dynamically from `./${level}/wordlist.json` where `${level}` is `"a1"`, `"a2"`, or `"b1"`.
 - **Default Level**: A2 (hardcoded in HTML `<select>`, overridden by `localStorage.current_level` on return visits).
-- **ES6 Module Architecture**: Application logic split across 17 modules in `js/` directory, loaded via `<script type="module">`.
+- **ES6 Module Architecture**: Application logic split across 16 modules in `js/` directory, loaded via `<script type="module">`.
 
 ### Vocabulary Entry JSON Schema
-Every word entry conforms to the following structure (actual field names from codebase):
+Every word entry conforms to the following structure (actual field names from the codebase — there are no `verb_conjugation`/`adjective_forms` fields; per the Zero-Inference Clause, absent grammar is simply not stored):
 ```json
 {
   "german": "der Abflug",
   "word_class": "Nomen",
   "gender": "der",
   "plural": "die Abflüge",
-  "verb_conjugation": null,
-  "adjective_forms": null,
   "english": "departure (flight) / takeoff",
   "pronunciation": "ahp-flook",
   "theme": "Reise & Verkehr",
   "antonym": "die Ankunft",
   "example_de": "Der Abflug ist um 11.20 Uhr.",
   "example_en": "The departure is at 11:20 AM.",
-  "image": null,
+  "image": "images/card_2.webp",
   "id": 2
 }
 ```
@@ -40,19 +40,17 @@ Every word entry conforms to the following structure (actual field names from co
 - `word_class`: Nomen, Verb, Adjektiv, Adverb, Andere, Ausdruck, etc.
 - `gender`: `"der"` / `"die"` / `"das"` / `null` (non-nouns)
 - `plural`: Absolute form with `"die"` prefix, or `null`
-- `verb_conjugation`: `{ "present_3sg", "perfekt", "is_irregular" }` for verbs
-- `adjective_forms`: `{ "comparative", "superlative" }` for adjectives
 - `theme`: Raw category string, normalized client-side to 12 canonical categories
-- `image`: SVG path or `null`
+- `image`: Relative WebP path (e.g. `"images/card_2.webp"`) or `null` (single field; the former redundant `image_path` was collapsed into `image`)
 
 ### Data Tier Summary
 
-| Level | Words | File Size | WebP Images | Adventure Scenarios |
-|-------|-------|-----------|-------------|---------------------|
-| A1    | 684   | ~438KB    | 637 (93%)   | 2                   |
-| A2    | 580   | ~404KB    | 580 (100%)  | 2                   |
-| B1    | 1,363 | ~878KB    | 371 (27%)   | 2                   |
-| **Total** | **2,627** | **~1.7MB** | **1,588 (60%)** | **6**         |
+| Level | Words | WebP Images |
+|-------|-------|-------------|
+| A1    | 684   | 637 (93%)   |
+| A2    | 580   | 580 (100%)  |
+| B1    | 1,363 | 371 (27%)   |
+| **Total** | **2,627** | **1,588 (60%)** |
 
 ### 12 Canonical Theme Categories
 Person & Familie, Wohnen & Haushalt, Gesundheit & Körper, Natur & Umwelt, Reise & Verkehr, Essen & Trinken, Einkaufen & Konsum, Dienstleistungen & Behörden, Ausbildung & Lernen, Arbeit & Beruf, Freizeit & Unterhaltung, Zeit, Maße & Basiswortschatz
@@ -62,7 +60,7 @@ Person & Familie, Wohnen & Haushalt, Gesundheit & Körper, Natur & Umwelt, Reise
 ## 🎨 2. Design System & Interactive UI
 
 ### Theme Engine (5 Themes)
-Persisted via `localStorage.current_theme`. Each theme fully overrides: body background, glass effects, sidebar, inputs, buttons, adventure chips, weaver chips, phonetic panel.
+Persisted via `localStorage.current_theme`. Each theme fully overrides: body background, glass effects, sidebar, inputs, buttons, and the phonetic panel.
 
 | Theme | CSS Class | Description |
 |-------|-----------|-------------|
@@ -74,13 +72,13 @@ Persisted via `localStorage.current_theme`. Each theme fully overrides: body bac
 
 ### Gender-Themed Card Glows
 - 🔵 `der` → `.card-glow-der` (Blue neon border)
-- 🔴 `die` → `.card-glow-die` (Pink/rose neon border)
+- 🩷 `die` → `.card-glow-die` (Pink/rose neon border)
 - 🟢 `das` → `.card-glow-das` (Emerald neon border)
 - 🟣 Neutral/Other → `.card-glow-neutral` (Violet border)
 
 ### CSS Architecture
 - **Glassmorphism**: `.glass` class with `backdrop-blur`
-- **Custom animations**: shuffle, slideInRight/Left, shake, pulseGlowSuccess/Error, phonetic-pulse-ring, slide-in-right
+- **Custom animations**: shuffle, slideInRight/Left, phonetic-pulse-ring (no shake/confetti — distraction-free)
 - **Accordion transitions**: CSS Grid `grid-template-rows: 0fr→1fr` with `opacity` for fluid auto-height animation
 - **Custom scrollbar**: 5px thin scrollbar with rounded thumb
 - **Auto-hyphens**: For long German compound words
@@ -95,13 +93,13 @@ Persisted via `localStorage.current_theme`. Each theme fully overrides: body bac
 - **Level Selector**: Dropdown with A1/A2/B1 options, triggers full data reload
 - **Theme Selector**: 5-option dropdown, instant CSS class swap
 - **Search Bar**: Real-time filter by German word or English meaning
-- **Navigation Links**: 7 routes with bilingual labels and FontAwesome icons
+- **Navigation Links**: bilingual labels and FontAwesome icons for the active views (`#/` flashcards, `#/quiz`, `#/immersion`) plus feedback/help actions
 - **Category List**: Dynamically rendered from loaded data with learned/total counts
 - **Overall Progress Bar**: Gradient bar showing learned percentage across entire level
 - **Keyboard Shortcuts Guide**: Collapsible panel, scrollable
 
 ### B. Main Flashcard Area (`#/`)
-- **Card Display**: Large German word with gender glow, FSRS SRS badge, optional SVG illustration
+- **Card Display**: Large German word with gender glow, FSRS SRS badge, optional WebP illustration (A1/A2)
 - **Accordion Panel**: English meaning, word class tag, gender/plural badges, example sentences (DE bold, EN muted), pronunciation hint, antonym, TTS speaker button
 - **Deck Controls**: Unified "Einstellungen" dropdown (Shuffle, Hide Learned, Fast Read, Autoplay, Images, Reset — all with keyboard shortcut badges)
 - **Audio Trainer Panel**: Play/Pause, Prev/Next, Speed slider, Loop toggle, status indicator
@@ -116,28 +114,24 @@ Persisted via `localStorage.current_theme`. Each theme fully overrides: body bac
 - [x] Multi-level vocabulary loading (A1/A2/B1)
 - [x] Flashcard engine with gender glows and accordion reveal
 - [x] FSRS-5 SRS (Free Spaced Repetition Scheduler — 19-parameter model, migrated from Leitner)
-- [x] Quiz Arena (MC + Spelling, Endless Mode)
-- [x] Continuous Audio Trainer (dual-voice TTS)
-- [x] Phonetik-Spiegel (pronunciation coach)
-- [x] Deutsch-Abenteuer RPG (branching scenarios)
-- [x] Grammatik-Weberei (drag-and-drop sentence builder)
-- [x] Spickzettel (grammar cheatcodes)
-- [x] Immersions-Labor (offline NLP engine)
-- [x] Statistics Dashboard (rings, charts, forecasts)
-- [x] Achievements Engine (12 badges + toast + Web Audio chimes)
-- [x] 5 Premium Themes
-- [x] 13 Keyboard Shortcuts
-- [x] Responsive Design (mobile sidebar, touch targets)
-- [x] English-First Bilingual UI
-- [x] JSON Backup Export/Import
-- [x] E2E Test Suite (Playwright) — fully implemented via `scripts/e2e_comprehensive_tests.py`
+- [x] Quiz Arena (Multiple-Choice + Spelling, endless mode)
+- [x] Continuous Audio Trainer (dual-voice DE/EN TTS)
+- [x] Phonetik-Spiegel (Web Speech `SpeechRecognition` + Levenshtein scoring, waveforms, phoneme guides)
+- [x] Immersions-Labor (offline NLP: lemmatize, gender/POS, instant add-to-deck)
+- [x] 5 premium themes (Slate, Cyberpunk, Schwarzwald, Oktoberfest, Weimar)
+- [x] Keyboard shortcuts + mobile swipe-to-grade gestures
+- [x] Responsive design (mobile sidebar, safe-area insets, touch targets)
+- [x] English-first bilingual UI
+- [x] Profile backup: JSON file + Base64 Sync Key export/import
+- [x] Precompiled Tailwind + hardened CSP (no `unsafe-inline`/`unsafe-eval`/CDN)
+- [x] Data-integrity CI gate (`scripts/validate_data.py` via GitHub Actions)
+- [x] Playwright unit + E2E suites (`scripts/run_unit_tests.py`, `scripts/e2e_comprehensive_tests.py`)
 
-### ⚠️ Known Gaps
-- [x] B1 SVG images — **Complete (pipeline run, ~2,000+ SVGs generated)**
-- [ ] Adventure scenarios limited (2-3 per level)
-- [x] UTF-8 double-encoding in cheatcodes_db.js — **Fixed (56 sequences, 2026-06-14)**
-- [x] Service Worker for offline caching — **Implemented (sw.js v1.5.0, 4-strategy caching)**
-- [ ] Weaver sentences extracted at runtime from wordlist (quality varies)
+### ⚠️ Known Gaps / Outstanding
+- [ ] B1 illustrations: 371 / 1,363 WebP assets (27%) — rollout in progress (A1/A2 complete)
+- [ ] Wire the Playwright unit/E2E suites into CI (currently run manually)
+- [ ] Split-second follow-ups: further module decomposition if files grow again
+- [x] Service Worker offline caching — implemented (`sw.js`, 4-strategy caching, versioned)
 
 ---
 
@@ -173,13 +167,13 @@ Persisted via `localStorage.current_theme`. Each theme fully overrides: body bac
   - [x] Establishment of V6.0 Core Directives & Rules (AI Orchestration Directives)
   - [x] Service Worker module precaching of ESM modules (`sw.js` precaches `js/nlp.js`, `js/immersion.js`, `idb-keyval.js`)
   - [x] Kölner Phonetik algorithms & inline suffix parser rules (`js/nlp.js`)
-  - [x] Custom settings toggles in "Einstellungen" dropdown (SFX volume slider, Synthesized vs. Acoustic chimes, Toggle particle bursts)
-  - [x] Lightweight, non-blocking CSS/JS-driven full-screen particle burst engine
+  - [x] Custom settings toggles in "Einstellungen" dropdown (SFX volume slider, Synthesized vs. Acoustic sound style)
+  - [~] Particle burst engine — built then **removed** in the gamification cleanup (see scope note at top)
   - [x] Interactive click-to-explore Immersions-Labor grid (inspect parsed lemmas, load CEFR level, FSRS state, TTS voice, quick-add cards)
   - [x] Inline suffix lightbulb grammar guides on flashcards and quiz views
   - [x] Spaced Repetition deck rating hotkeys (`1-4`) and mobile-responsive kinetic swipe-to-rate gestures
   - [x] Scrambled word-chip hotkeys (`1-9` + `Enter`) for Grammar Weaver and Deutsch-Abenteuer RPG views
-  - [x] Copy-pasteable Base64 compressed IndexedDB progress backup sync keys
+  - [x] Copy-pasteable Base64-encoded IndexedDB progress backup sync keys (portable encoding, not compressed/encrypted)
   - [x] Flashcard relative image pathing hotfix inside `js/flashcards.js` and `js/quiz.js` prepending `state.currentLevel` to prevent 404 image load errors
   - [x] **Premium Visual Strategy & Lottie Design Lock (SOTA)**: Fully finalized the V6.0 Universal 3D Claymation & Lottie sensory strategy. Configured the offline bulk generation pipeline to utilize Google's SOTA `imagen-3.0-generate-002` model (fully covered by Google Developer credits, $0 out-of-pocket). Programmed the chroma-key alpha masking (Pillow-based transparent floating icons), dynamic dual-tone theme-responsive SVG recoloring, Airbnb `lottie-web` async player, synchronized audio/haptic chimes, and PWA Level-Based Lazy Pre-caching in the system blueprints.
   - [x] **Comprehensive E2E Playwright Automation Suite**: Built and executed automated Playwright-based testing across multiple viewports (Desktop/Mobile) and all 5 premium design themes, achieving 100% clean test passes with 0 runtime console errors.
@@ -213,12 +207,11 @@ Persisted via `localStorage.current_theme`. Each theme fully overrides: body bac
 | `current_theme` | string | Active theme name |
 | `learned_cards_{level}` | JSON array | Set of learned card IDs |
 | `srs_state_{level}` | JSON object | FSRS-5 SRS data per card (stability, difficulty, retrievability) |
-| `quiz_streak` | number | Current quiz streak |
-| `quiz_best_streak` | number | Best quiz streak ever |
 | `show_images` | boolean | Image visibility preference |
 | `visited_levels` | JSON array | Set of visited CEFR levels |
-| `streak_data` | JSON object | Daily study streak data |
 | `session_history` | JSON array | Study session log (capped at 50 entries) |
+
+> Note: most progress now lives in IndexedDB (via `idb-keyval`); `localStorage` holds lightweight preferences and is mirrored/migrated on load. Quiz "streak" keys were removed with the gamification cleanup.
 
 ## 🛡️ 8. Persistence Safety Layer (Added 2026-06-14)
 

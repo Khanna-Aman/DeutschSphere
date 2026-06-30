@@ -1,6 +1,8 @@
 # 🗺️ Walkthrough: Level A2 Manual & Programmatic Visual Audit Guide
 
-This document establishes the precise protocols and workflows to perform manual visual reviews and programmatic validation of the completed **Level A2 curriculum (1,142 cards)**.
+> ⚠️ **Historical record.** This walkthrough documents the visual audit of the **pre-overhaul A2 dataset (1,142 cards)**. The curriculum has since been re-scoped — the **current A2 deck is 580 cards** (`a2/wordlist.json`), and some referenced artifacts (collage sheets, `audit_a2.html`) were removed in that overhaul. The audit *protocols* below remain valid; the 1,142 counts are kept as a historical log, not a description of the current data.
+
+This document establishes the precise protocols and workflows to perform manual visual reviews and programmatic validation of the then-current **Level A2 curriculum (1,142 cards)**.
 
 ---
 
@@ -58,7 +60,7 @@ For real-time search, filter, and dynamic inspection, we have deployed a local w
 
 ### Features & Capabilities
 * **CEFR Counters**: Real-time stats counting completed WebP percentages.
-* **Deterministic Gender Glows**: Cards render with colored highlight borders corresponding to German genders (🔵 `der` for blue, 🔴 `die` for pink, 🟢 `das` for green, 🟣 other classes).
+* **Deterministic Gender Glows**: Cards render with colored highlight borders corresponding to German genders (🔵 `der` for blue, 🩷 `die` for pink, 🟢 `das` for green, 🟣 other classes).
 * **Fuzzy Search & Filters**: Live searching by German or English keywords combined with word class filtering (Verbs, Nouns, Adjectives).
 * **Image Fallbacks**: Graceful error handling for missing/misconfigured files.
 
