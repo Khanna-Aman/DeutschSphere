@@ -80,7 +80,7 @@
   - **767 not image-verifiable** (678 non-nouns + 89 abstract nouns) — CLIP cannot judge metaphorical illustrations of "sometimes", "to justify", etc.; honestly excluded rather than guessed;
   - **406 nouns flagged for human glance** (147 "mismatch" + 259 "weak") — *but* manual inspection of the strongest ones shows they are overwhelmingly **reasonable metaphors/metonyms, not errors** (`die Reise`→luggage, `die Einladung`/`der Brief`→envelope, `der Blick`→window, `die Chance`→door, `der Atem`→cloud). **No gross wrong-mapping surfaced.**
   - **3 genuine near-duplicate image pairs** (different files, near-identical art): `das Licht`≈`die Erfindung` (both a lightbulb), `stressig`≈`der Augenblick`, `anwesend`≈`endgültig`.
-  - **Minor:** a few orphan/unreferenced WebP files exist (A1 640 on disk vs 637 referenced; A2 584 vs 580) — harmless, candidate for cleanup.
+  - **No orphan WebPs:** A1 637/637 and A2 580/580 referenced images match exactly on disk (the only extras are the intentional `collages/` source sheets, not per-card art).
   - **Open follow-up (later):** (a) human spot-check via the worst-first review sheet `scripts/image_check_review.html` + the 3 duplicate pairs; (b) optionally tighten the flag list with a *concreteness gate* (drop abstract nouns to "inconclusive") or a local vision-LLM (Ollama) layer to auto-describe flagged cards. Conclusion so far: **no evidence of systematic image mismapping; concrete cards verified, abstract cards need human judgment.**
 - **Counting model (clarified):** per-level counts only reconcile with official sizes because levels are **disjoint** (each word once, at introduction): A1+A2 = 1,264 ≈ official A2 ~1,300; total 2,627 ≈ official B1 ~2,400. "A2 100% complete" means *images for the 580 A2 entries*, not *the full official A2 list*.
 
@@ -132,7 +132,7 @@
 | Word counts corrected across docs | ✅ Confirmed | CI guards them. |
 | Tailwind precompiled (no CDN runtime) | ✅ Confirmed | `index.html:47`. |
 | "Examples/pronunciation NotebookLM-grounded, not LLM inference" | ⚠️ **Refuted/Reframed** | Examples are **verbatim copied** from copyrighted Goethe text — not "generated," and a copyright issue the prior audit treated as resolved. |
-| Asset tree "clean" / production-ready | ⚠️ Partly | Image refs are clean, but 619 orphaned legacy SVGs remain; **content coverage** (thematic groups, B1) was not assessed. |
+| Asset tree "clean" / production-ready | ⚠️ Partly | Image refs are clean (verified); the 619 "orphaned SVGs" are a **git-ignored local twemoji cache** (`twemoji_cache/`), not in the repo. Real gap is **content coverage** (thematic groups, B1), not assessed by the prior audit. |
 | Overall trajectory "ready pending assets" | ⚠️ Disagree | Legal/IP + privacy are unaddressed P0s; coverage gaps larger than stated. |
 
 ---
@@ -155,7 +155,8 @@
 ### P2
 - ⏳ **B1 imagery** (992 missing) — bulk Imagen 3 generation needs GCP/Vertex creds (git-ignored) + cost; **out of scope for automatic remediation** unless access is provided.
 - 🟡 **Image↔word semantic verification** — first automated pass done (`scripts/check_image_word_clip.py`, free/local CLIP + pHash). No systematic mismapping found; 415 concrete cards confirmed, 3 near-duplicate pairs and a worst-first review sheet (`scripts/image_check_review.html`) await a human spot-check. Optional later: concreteness gate / local-VLM layer to tighten the flag list. See §4.2.
-- Remove 619 orphaned legacy SVGs; clean up a handful of orphan WebP files (A1 3, A2 4 unreferenced); add unit tests for `fsrs.js`/`nlp.js`; run an axe accessibility pass; add `CHANGELOG.md`; consider decomposing the two largest JS modules.
+- **Test suite** — delete the three rotted Playwright/unit scripts and rebuild from scratch (FSRS-5 + NLP unit tests, smoke + key e2e flows), then wire the deterministic ones into CI. (`scripts/` also holds ~30 one-off generation/migration scripts that are now cruft.)
+- Run an axe/WCAG accessibility pass; consider decomposing the two largest JS modules (`flashcards.js`, `events.js`). *(Done this session: `CHANGELOG.md` added; the "619 orphaned SVGs" were a git-ignored local twemoji cache and no orphan WebPs exist — see §4.2.)*
 
 ---
 
