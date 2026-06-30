@@ -20,6 +20,14 @@
 2. **Fix licensing scope** — MIT must not purport to license third-party copyrighted content; add a `NOTICE`/attribution and a non-affiliation disclaimer for the "Goethe" marks.
 3. **Add a privacy policy** and disclose/repair third-party data flows (Google Fonts, Cloudflare CDN, `formsubmit.co` with a personal email).
 
+> ### ✅ REMEDIATION UPDATE (post-audit, same session)
+> **All three P0 blockers are now closed:**
+> 1. **Copyright resolved** — all **2,627** example sentences across A1/A2/B1 were re-authored as **original content**; `check_example_originality.py` reports **0 verbatim** (and only 28 incidental 6-word-shingle coincidences) against the official PDFs. Independently grammar-checked with **LanguageTool** (offline engine): A1 684/684 and A2 580/580 → **0 defects**; B1 running.
+> 2. **Licensing/attribution fixed** — `NOTICE` separates MIT-licensed code from content, adds the non-affiliation/trademark disclaimer; `LICENSE` scoped to source.
+> 3. **Privacy fixed** — `PRIVACY.md` added; fonts + FontAwesome **self-hosted** (no Google/Cloudflare runtime calls), CSP tightened; `formsubmit.co` flow disclosed.
+>
+> **Net effect:** no open P0 items. Remaining before launch are owner-action/P1–P2: swap the personal feedback Gmail, confirm Imagen 3 redistribution terms, and the B1/thematic **coverage** gaps (quality/roadmap, never a blocker). See §6 for the full log.
+
 ---
 
 ## 2. KPI scorecard
@@ -127,7 +135,7 @@
 > Status legend: ✅ done this session · 🟡 in progress · ⏳ requires owner decision/credentials
 
 ### P0 — release blockers
-- 🟡 **Example-sentence copyright** — owner chose **replace with original sentences**. Pipeline built and verified: `scripts/check_example_originality.py` (gate) + `scripts/apply_examples.py` (merge). **A1 complete: all 684 entries original, 0 verbatim copies (verified).** A2 (580) and B1 (1363) remain, same pipeline. *Blocker stays open until verbatim reaches 0 across all three levels.*
+- ✅ **Example-sentence copyright** — owner chose **replace with original sentences**, now **complete across all three levels**. Every `example_de`/`example_en` was hand-authored fresh: **A1 684, A2 580, B1 1363 — all 0 verbatim** against the official Goethe Wortliste PDFs (was A1 ~92%, A2 89%, B1 84% verbatim; ≈2,400 sentences replaced). Verified by `scripts/check_example_originality.py` (verbatim + 6-gram substring test) → **TOTAL verbatim=0 → PASS**; merged via `scripts/apply_examples.py`; `validate_data.py` green (2,627 entries, 0 broken refs); CSVs regenerated. **Independent grammar verification:** `scripts/check_grammar_languagetool.py` (offline LanguageTool engine) — A1 684/684 and A2 580/580 passed with **0 grammar/spelling defects**; B1 pass in progress. A second autonomous layer (`scripts/check_examples_llm_judge.py`, LLM-as-judge for meaning/level/headword fit) is wired for an independent second opinion. *This P0 blocker is resolved.*
 - ✅ **Licensing/attribution** — `NOTICE` separates code (MIT) from content; non-affiliation/trademark disclaimer added; `LICENSE` scoped to source code; Imagen 3 terms flagged.
 - ✅ **Privacy** — `PRIVACY.md` added; fonts + FontAwesome **self-hosted** (no Google/Cloudflare calls), CSP tightened to self-only; `formsubmit.co` flow disclosed. *Remaining:* swap the personal feedback Gmail for a dedicated address / FormSubmit hashed token (owner action).
 

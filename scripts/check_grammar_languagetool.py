@@ -38,8 +38,11 @@ except Exception: pass
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LEVELS = ["a1", "a2", "b1"]
 
-# LanguageTool rule issue types we treat as real defects.
+# LanguageTool rule issue types / categories we treat as real defects.
+# NB: many real grammar rules (e.g. DE_AGREEMENT) report rule_issue_type
+# "uncategorized" but category "GRAMMAR", so we check the category too.
 HARD_ISSUE_TYPES = {"grammar", "misspelling"}
+HARD_CATEGORIES = {"GRAMMAR", "TYPOS"}
 # Specific rule IDs that are noise for short, correctly-capitalised flashcard
 # sentences and are demoted to advisory regardless of issue type.
 SOFT_RULE_IDS = {
@@ -69,13 +72,13 @@ def load_examples(level):
 
 def flagged_word(match, text):
     try:
-        return text[match.offset:match.offset + match.errorLength]
+        return text[match.offset:match.offset + match.error_length]
     except Exception:
         return ""
 
 
 def is_allowlisted_spelling(match, text):
-    rid = (match.ruleId or "")
+    rid = (match.rule_id or "")
     if not rid.startswith(SPELL_RULE_PREFIXES):
         return False
     return flagged_word(match, text).strip(".,!?;:") in ALLOW_WORDS
@@ -83,12 +86,13 @@ def is_allowlisted_spelling(match, text):
 
 def classify(match, text):
     """Return 'hard' | 'soft' for a LanguageTool match."""
-    if match.ruleId in SOFT_RULE_IDS:
+    if match.rule_id in SOFT_RULE_IDS:
         return "soft"
     if is_allowlisted_spelling(match, text):
         return "soft"
-    itype = (getattr(match, "ruleIssueType", "") or "").lower()
-    return "hard" if itype in HARD_ISSUE_TYPES else "soft"
+    itype = (getattr(match, "rule_issue_type", "") or "").lower()
+    cat = (getattr(match, "category", "") or "").upper()
+    return "hard" if (itype in HARD_ISSUE_TYPES or cat in HARD_CATEGORIES) else "soft"
 
 
 def get_tool(remote):
@@ -133,8 +137,9 @@ def main():
             for m in matches:
                 kind = classify(m, de)
                 rec = {
-                    "id": wid, "de": de, "rule": m.ruleId,
-                    "type": getattr(m, "ruleIssueType", ""),
+                    "id": wid, "de": de, "rule": m.rule_id,
+                    "type": getattr(m, "rule_issue_type", ""),
+                    "category": getattr(m, "category", ""),
                     "msg": m.message,
                     "suggest": (m.replacements or [])[:3],
                     "context": m.context,
