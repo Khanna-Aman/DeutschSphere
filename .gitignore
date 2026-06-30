@@ -42,6 +42,10 @@ gcp-key.json
 scripts/backups/
 scripts/logs/
 
+# Image↔word verification output (regenerable; can be large with thumbnails)
+scripts/image_check_report.json
+scripts/image_check_review.html
+
 # AI Orchestrations & Agent Planning
 # (AGENTS.md is the tracked, authoritative agent charter — intentionally NOT ignored)
 implementation_plan.md
