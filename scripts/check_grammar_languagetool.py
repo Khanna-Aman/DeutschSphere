@@ -50,13 +50,23 @@ SOFT_RULE_IDS = {
     "COMMA_PARENTHESIS_WHITESPACE",
     "WHITESPACE_RULE",
     "DE_CASE",                    # often false-positives on flashcard fragments
+    # "richtig zu machen" etc.: adverb+infinitive written apart is correct
+    # German; this rule over-triggers on it. Demote to advisory.
+    "COMPOUND_INFINITIV_RULE",
 }
-# Proper nouns / loanwords we intentionally use that the spell rule may not know.
+# Proper nouns / loanwords / regional headwords we intentionally use that
+# LanguageTool's standard German dictionary does not know. These are official
+# Goethe A1-B1 vocabulary (incl. Swiss/Austrian variants), not typos.
 ALLOW_WORDS = {
     "Anna", "Lena", "Anto", "Tom", "Lisa", "Max", "Mehmet", "Ali",
     "Deutschsphere", "DeutschSphere", "Pommes", "S-Bahn", "Lkw",
+    # Swiss/Austrian regional headwords from the official lists:
+    "Abwart", "Abwartin", "Pöstler", "Rüebli", "e-card", "E-Card",
+    "Hendl", "Schwammerl", "Paradeiser", "Erdapfel", "Marille", "Obers",
+    "Rahm", "Glace", "Velo", "Billett", "Couvert", "Matura", "Jause",
+    "Stiegenhaus", "Trottoir", "Fauteuil", "Bancomat", "Bankomat",
 }
-SPELL_RULE_PREFIXES = ("MORFOLOGIK", "GERMAN_SPELLING", "HUNSPELL")
+SPELL_RULE_PREFIXES = ("MORFOLOGIK", "GERMAN_SPELL", "HUNSPELL")
 
 
 def load_examples(level):
