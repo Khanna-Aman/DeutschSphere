@@ -1,28 +1,75 @@
-# AGENTS.md — Operating Manual & Engineering Directives
+# AGENTS.md — Vision, Operating Manual & Engineering Directives
 
-You are working on **DeutschSphere**, an open-source, study-focused, offline-first **German A1–B1 vocabulary PWA**. This file is the authoritative charter for any AI agent (or human contributor) touching this repository. Read it before you write code or edit data. Its single most important job is to **stop scope creep**: this is a *flashcard spaced-repetition tool*, not a grammar engine, not a chatbot, not a game.
+You are working on **DeutschSphere** — built to be **the best German A1–B1 flashcard tool in the world, and a free gift to learners.** Hyper-premium, state-of-the-art, offline-first, study-focused. No paywall, no ads, no tracking, ever.
 
-When in doubt, do less. Honest, narrow, and correct beats broad and speculative.
+This file is the authoritative charter for any AI agent (or human contributor) touching this repository. Read it before you write code or edit data. It has two jobs that pull in opposite directions, and both are sacred:
+
+1. **Relentless excellence** — every detail held to a SOTA bar. "Best" is the standard, not a slogan.
+2. **Ruthless restraint** — this is a *flashcard spaced-repetition tool*, not a grammar engine, not a chatbot, not a game. We get to "best" by perfecting a narrow thing, not by piling on features.
+
+When those two collide, the answer is almost always: **make the core flawless, and say no to the new feature.** Best = flawless, not bigger.
 
 ---
 
-## 1. Identity & the hard scope boundary
+## 1. The vision
 
-DeutschSphere is a **flashcard-first** cognitive utility: the user masters official Goethe A1–B1 vocabulary through distraction-free, client-side spaced repetition (FSRS-5), pronunciation practice, quizzes, and a lightweight NLP immersion lab. Everything serves vocabulary retention.
+A learner anywhere in the world — on a cheap phone, on a train with no signal, with no account and no money — can open DeutschSphere and get a **world-class, distraction-free** vocabulary-mastery experience grounded in the official Goethe A1–B1 curriculum. It is fast, calm, accessible, and honest. It respects their attention and their privacy. It is given freely.
+
+That is the whole product. Everything below protects it.
+
+**The "perfect the core" doctrine.** We do not chase feature parity with bloated apps. We win by executing the core — spaced repetition (FSRS-5), card UX, pronunciation, quizzes, offline delivery — better than anyone. Before adding anything, ask: *does this make the core more flawless, or just bigger?* If it's "bigger," decline and say so. A rejected feature that protects focus is a win, not a gap.
+
+---
+
+## 2. Identity & the hard scope boundary
+
+DeutschSphere is a **flashcard-first** cognitive utility. Mastery comes from client-side spaced repetition (FSRS-5), pronunciation practice (Phonetik-Spiegel), active-recall quizzes, and a lightweight NLP immersion lab. Everything serves vocabulary retention.
 
 **Do NOT build (out of scope — do not add, scaffold, or "improve toward" these):**
 
-- **No grammar / conjugation engine.** No sentence-syntax parser, conjugation tables, declension trees, or case-drill generators. Deterministic suffix/gender *hints* in `js/nlp.js` (e.g. `-ung`/`-heit`/`-keit` → *die*) are the ceiling — do not grow them into a grammar system.
-- **No gamification.** No XP, levels, streaks, leaderboards, badges, medals, star ratings, letter grades, confetti, particle bursts, sound chimes, or screen-shake. Feedback stays calm and study-relevant (FSRS grade cues, accuracy %, plain correct/incorrect colour).
+- **No grammar / conjugation engine.** No sentence-syntax parser, conjugation/declension tables, or case-drill generators. The deterministic suffix/gender *hints* in `js/nlp.js` (e.g. `-ung`/`-heit`/`-keit` → *die*) are the ceiling — never grow them into a grammar system.
+- **No gamification — zero, by principle.** No XP, levels, streaks, leaderboards, badges, medals, star ratings, letter grades, confetti, particle bursts, sound chimes, or screen-shake. The only progress signal is **honest retention/stability visualization** (FSRS state, accuracy %, words due). The calm, clinical focus *is* the premium differentiator — protect it.
 - **No chatbot / roleplay / open-ended translation playground.** This is not an LLM frontend.
-- **No runtime AI calls.** Nothing in the shipped app calls an LLM or paid API at runtime. Verification tooling that uses models is a *dev-time, offline-capable script*, never part of the client.
-- **No invented linguistic facts.** See §3.
+- **No runtime AI or paid-API calls — ever.** Nothing in the shipped app calls an LLM, a cloud service, or any paid/metered API at runtime. (Model-based *verification* tooling is a dev-time, offline-capable script, never part of the client.) This keeps the tool free, private, and offline.
+- **No invented linguistic facts.** See §6.
 
-If a request would push past these lines, say so and propose the in-scope version instead.
+If a request would cross these lines, say so plainly and propose the in-scope version instead.
 
 ---
 
-## 2. Architecture invariants (do not violate)
+## 3. The free-forever pledge (permanent, non-negotiable)
+
+These are promises to the people we built this for. They are not to be eroded, A/B-tested, or "revisited for monetization." Treat any change that weakens them as a bug:
+
+1. **Forever free — no paywall, no paid tiers, no locked features.** The entire tool is free.
+2. **No ads, ever.** No advertising, no embedded sponsorships, no affiliate hooks in the learning experience.
+3. **No tracking.** No analytics, no third-party trackers, no cookies, no telemetry that leaves the device. (`js/telemetry.js` is local-only structured logging/error boundaries — keep it that way.)
+4. **No account required; data is the user's.** No sign-up. All learning state lives on-device (IndexedDB + localStorage) and is fully portable via the Base64 Sync Key / JSON backup.
+5. **Open by default.** Source code is MIT; content carries its own honest attribution (`NOTICE`). The project is a gift — keep it forkable and self-hostable.
+
+---
+
+## 4. SOTA quality bars (enforced standards, not aspirations)
+
+Every change is held to these. They are the operational meaning of "hyper-premium." Where a bar is not yet fully met, it is a **prioritized gap to close**, not an excuse to lower the bar (see §11 for honest current status).
+
+- **Accessibility — WCAG 2.2 AA.** Full keyboard operability, screen-reader semantics (ARIA, `lang`), visible focus management across view transitions/accordions, sufficient contrast on the dark theme, `prefers-reduced-motion` honored. The tool must be usable by everyone.
+- **Performance budget.** Fast first paint and interaction; capped/optimized asset weight (WebP < 10 KB each; lazy + precached); 60 fps, jank-free interactions and animations even on low-end Android. No layout shift (CLS ≈ 0). Measure before/after on weighty changes.
+- **Offline integrity.** Full functionality in airplane mode after first load — verified, with **zero runtime network dependency** (self-hosted fonts/icons, precached shell, cached data). A change that adds an external request fails this bar.
+- **Correctness — core-engine tests in CI.** FSRS-5 scheduling math and the NLP lemmatizer/phonetik logic must have automated tests wired into CI as real gates (alongside the data-integrity gate). Scheduling changes require matching FSRS-5 spec tests.
+- **Cross-device & cross-browser correctness.** Verified on Android, iOS (incl. safe-area insets), and desktop, on current Chrome/Firefox/Safari. Graceful degradation where a Web API (e.g. SpeechRecognition) is unavailable — never a broken view.
+- **Data durability — never lose a learner's progress.** IndexedDB writes are debounced and resilient; backup/restore round-trips losslessly; schema/version migrations are non-destructive. Treat user progress as sacred.
+- **Security.** Strict CSP (no `unsafe-eval`); all dynamic content rendered through XSS-safe escaping (`escapeHtml`), never raw `innerHTML` of untrusted input; no secrets in the repo; no `eval`.
+- **PWA robustness.** Installable; Service Worker updates propagate cleanly (cache-version discipline, §8); offline fallback; no stale-asset traps after deploy.
+- **Honest UX — no dark patterns.** No manipulative nudges, fake urgency, guilt mechanics, or attention traps. Feedback is layout-stable and calm. Respect the learner's time and agency.
+- **Linguistic & content accuracy.** Vocabulary fidelity to the official Goethe lists; example sentences original, idiomatic, level-appropriate, and gated (§6–§7).
+- **Documentation honesty.** Docs never overstate coverage, offline behavior, or grounding. If reality changes, docs change in the same commit. No marketing fiction.
+
+> "any other SOTA bar": if you spot a dimension of excellence not listed here that a best-in-class tool should meet, raise it and, once agreed, add it to this section. This list is meant to grow toward perfection, never to be trimmed for convenience.
+
+---
+
+## 5. Architecture invariants (do not violate)
 
 - **Zero runtime dependencies.** The deployed app is flat `index.html` + precompiled CSS + native ES6 modules under `js/`. No runtime framework, bundler, or npm package ships to the client. `node_modules` is dev-only and git-ignored.
 - **Precompiled Tailwind, never the Play CDN.** Tailwind ships as a static, tree-shaken `tailwind.css`. After changing utility classes, regenerate and commit it:
@@ -30,67 +77,65 @@ If a request would push past these lines, say so and propose the in-scope versio
   npx tailwindcss@3.4.17 -c tailwind.config.js -i tailwind.input.css -o tailwind.css --minify
   ```
   Do **not** reintroduce the Play CDN — it forces `unsafe-inline`/`unsafe-eval` back into the CSP.
-- **Self-hosted fonts & icons.** Inter, Outfit, and Font Awesome are served from `./fonts` (no Google Fonts / Cloudflare / cdnjs calls). The app makes **zero third-party network requests** on load. Keep it that way; do not relink a CDN.
-- **Strict CSP.** `index.html` ships a tight Content-Security-Policy (`default-src 'self'`, `script-src 'self'`, no `unsafe-eval`). Any change that would require loosening it needs an explicit, justified decision — default is don't.
-- **Offline-first.** Data layers (`a1/wordlist.json`, `a2/`, `b1/`) are fetched at runtime and cached; the Service Worker pre-caches the app shell. The app must run fully in Airplane Mode after first load.
-- **Client-only persistence.** Progress lives in IndexedDB (+ localStorage), via the debounced `js/idb-keyval.js` pipeline. No accounts, no servers, no analytics, no trackers, no cookies. The only optional outbound request is the user-triggered feedback form.
+- **Self-hosted fonts & icons.** Inter, Outfit, and Font Awesome are served from `./fonts` (no Google Fonts / Cloudflare / cdnjs). The app makes **zero third-party requests** on load. Keep it that way.
+- **Strict CSP & client-only persistence.** Tight `Content-Security-Policy` in `index.html`; progress in IndexedDB via the debounced `js/idb-keyval.js` pipeline; the only optional outbound request is the user-triggered feedback form.
 
 ---
 
-## 3. Data policy — the corrected Zero-Inference Clause
+## 6. Data policy — the corrected Zero-Inference Clause
 
-Two different rules apply to two different kinds of data. **Do not conflate them.**
+Two rules for two kinds of data. **Do not conflate them.**
 
-### 3.1 Factual linguistic fields → zero-inference, null-if-unattested
-Gender (`der/die/das`), plural, and verb-conjugation fields are **facts**. They are grounded in the official Goethe-Institut *Wortliste* PDFs in `.raw_resources/` (the ground truth). **Never guess, generate, or infer them from model weights.** If a value is not attested in the source, leave the field `null` — do not fabricate it. Honesty outranks completeness.
+### 6.1 Factual linguistic fields → zero-inference, null-if-unattested
+Gender (`der/die/das`), plural, and conjugation are **facts**, grounded in the official Goethe-Institut *Wortliste* PDFs in `.raw_resources/` (the ground truth). **Never guess or generate them.** If a value is not attested in the source, leave the field `null`. Honesty outranks completeness. Do not use model weights to invent grammar profiles.
 
-### 3.2 Example sentences → original authored content, gated
-This is the deliberate exception, and it reverses the project's earlier "never write example sentences" rule. Earlier versions reproduced the copyrighted Goethe/Hueber example sentences verbatim — a legal blocker. **All 2,627 `example_de`/`example_en` pairs are now original content authored for this project.** When you add or edit an example sentence it must:
+### 6.2 Example sentences → original authored content, gated
+The deliberate exception (this reverses the project's earlier "never write example sentences" rule, which existed because the data once copied copyrighted Goethe/Hueber examples verbatim — a legal blocker). **All 2,627 `example_de`/`example_en` pairs are now original content authored for this project.** New/edited example sentences must:
 
-1. **Use the entry's headword** naturally and illustrate its meaning, at an appropriate CEFR level.
-2. **Be original** — not copied from the source PDFs. Run `python scripts/check_example_originality.py`; **verbatim must stay 0** (it also reports incidental 6-word-shingle coincidences).
-3. **Be grammatical** — run `python scripts/check_grammar_languagetool.py` (offline LanguageTool engine; A1/A2 currently pass with 0 defects).
+1. **Use the entry's headword** naturally and illustrate its meaning, at the right CEFR level.
+2. **Be original** — `python scripts/check_example_originality.py`; **verbatim must stay 0**.
+3. **Be grammatical** — `python scripts/check_grammar_languagetool.py` (offline LanguageTool).
 
-A second, optional layer (`scripts/check_examples_llm_judge.py`) gives an independent meaning/level/headword check via an LLM judge when an API key is supplied.
+Optional second opinion: `scripts/check_examples_llm_judge.py` (meaning/level/headword via an LLM judge, when an API key is supplied — dev-time only).
 
-### 3.3 Other generated fields
-English translations and the pseudo-phonetic pronunciation hints are **original to this project** (not from the Goethe lists, which contain neither). State this accurately in docs; never imply they are sourced.
+### 6.3 Other generated fields
+English translations and the pseudo-phonetic pronunciation hints are **original to this project** (the Goethe lists contain neither). State this accurately; never imply they are sourced.
 
-> Note on history: an earlier directive mandated routing all verification through a NotebookLM MCP notebook. The current, authoritative ground truth is the **PDFs in `.raw_resources/` plus the repo's own gates** (`validate_data.py`, `check_example_originality.py`, `check_grammar_languagetool.py`). NotebookLM may be used as an optional corroboration aid, but it is not required and is not the source of truth.
+> Ground truth is the **PDFs in `.raw_resources/` + the repo's own gates** (`validate_data.py`, `check_example_originality.py`, `check_grammar_languagetool.py`). NotebookLM may corroborate but is not required and is not the source of truth.
 
 ---
 
-## 4. Data integrity & verification gates
+## 7. Data integrity & verification gates
 
-`wordlist.json` per level is the **single source of truth** (there is no CSV export — it was removed as an unused derived artifact). Before declaring any data change done:
+`wordlist.json` per level is the **single source of truth** (no CSV export exists — it was removed as an unused derived artifact). Before declaring a data change done:
 
-- `python scripts/validate_data.py` — valid JSON, required keys, **unique ids**, every `image` ref exists on disk, no image shared by two entries, and the published total (**2,627** = A1 684 / A2 580 / B1 1,363) appears verbatim in the docs that quote it.
+- `python scripts/validate_data.py` — valid JSON, required keys, **unique ids**, every `image` ref exists, no image shared by two entries, and the published total (**2,627** = A1 684 / A2 580 / B1 1,363) appears verbatim in the docs that quote it.
 - `python scripts/check_example_originality.py` — **0 verbatim** vs. the source PDFs.
 - `python scripts/check_grammar_languagetool.py` — grammar/spelling.
 
-**Surgical data partitioning:** when bulk-editing a data layer, work in clean blocks (e.g. ~40–90 entries) and keep each patch a structurally valid JSON array. **Key every entry off the actual `id` field, never a line number** — the `id` columns have gaps, and mis-keying silently maps sentences to the wrong words.
+**Surgical data partitioning:** bulk-edit in clean blocks (~40–90 entries), each a valid JSON array. **Key every entry off the actual `id` field, never a line number** — id columns have gaps, and mis-keying silently maps sentences to the wrong words.
 
 ---
 
-## 5. Cache-version discipline (two independent layers)
+## 8. Cache-version discipline (two independent layers)
 
-- **`WORDLIST_CACHE_VERSION`** (`app.js`) owns **data** freshness. Bump it whenever any `a1`/`a2`/`b1` `wordlist.json` changes — it clears the normalized IndexedDB cache **and** is appended as `?v=` to the fetch so the SW's `DATA_CACHE` re-fetches.
-- **`CACHE_VERSION`** (`sw.js`) owns **shell** freshness (HTML/CSS/JS/icons/fonts). Bump it whenever code or static assets change, and register any new JS module in `APP_SHELL`.
-- They are independent: a data-only change bumps only `WORDLIST_CACHE_VERSION`; a code-only change bumps only `CACHE_VERSION`.
+- **`WORDLIST_CACHE_VERSION`** (`app.js`) owns **data** freshness — bump on any `a1`/`a2`/`b1` `wordlist.json` change (clears the IndexedDB cache and `?v=`-busts the fetch).
+- **`CACHE_VERSION`** (`sw.js`) owns **shell** freshness (HTML/CSS/JS/icons/fonts) — bump on any code/asset change, and register new JS modules in `APP_SHELL`.
+- Independent: data-only change bumps only the former; code-only change bumps only the latter.
 
 ---
 
-## 6. Execution & workflow rules
+## 9. Execution & workflow rules
 
-- **Deliberate pacing.** Work carefully and verify; don't flood concurrent tool calls or rush past edge cases. Quality over token-saving — never truncate analysis or emit `// rest unchanged…` placeholders. Rewrite files fully enough to paste cleanly.
-- **Documentation sync.** If a change alters architecture, data policy, workflows, or styling constraints, update the relevant `.md` files (`README.md`, `VISION.md`, `CONTRIBUTING.md`, this file, `NOTICE`, `PRIVACY.md`) in the same change. No documentation rot.
-- **Git.** Commit logically with `<type>(<scope>): <description>` messages (e.g. `content(b1): …`, `fix(scripts): …`). Don't end a turn with unrelated uncommitted churn. **Never `git push` unless the user explicitly asks** — stage and commit locally and wait.
+- **Deliberate pacing.** Work carefully and verify; don't rush past edge cases or flood concurrent tool calls. Quality over token-saving — no `// rest unchanged…` placeholders; rewrite enough to paste cleanly.
+- **Documentation sync.** Any change to architecture, data policy, scope, or quality bars updates the relevant `.md` files (`README.md`, `VISION.md`, `CONTRIBUTING.md`, this file, `NOTICE`, `PRIVACY.md`) in the same commit. No documentation rot, no overclaiming.
+- **Git.** Commit logically with `<type>(<scope>): <description>` messages. Don't end a turn with unrelated uncommitted churn. **Never `git push` unless the user explicitly asks.**
 - **Visual constraints.** Preserve the gender-glow classes — 🔵 `der` (`.card-glow-der`), 🩷 `die` (`.card-glow-die`), 🟢 `das` (`.card-glow-das`), 🟣 neutral/other. No layout-shifting effects.
-- **Legal hygiene.** Keep `NOTICE` (content attribution + non-affiliation/trademark disclaimer) and `PRIVACY.md` accurate. "Goethe-Institut", "Goethe-Zertifikat", "telc", "Hueber", "ÖSD" are third-party marks — DeutschSphere is independent and unofficial; references are descriptive only.
+- **Legal hygiene.** Keep `NOTICE` and `PRIVACY.md` accurate. "Goethe-Institut", "Goethe-Zertifikat", "telc", "Hueber", "ÖSD" are third-party marks — DeutschSphere is independent and unofficial; references are descriptive only.
 
 ---
 
-## 7. Directory blueprint
+## 10. Directory blueprint
 
 ```text
 A1-B1_German/
@@ -101,7 +146,7 @@ A1-B1_German/
 ├── app.js                  # Orchestrator: data load/normalize, hash routing, boot (WORDLIST_CACHE_VERSION)
 ├── sw.js                   # Service Worker: offline shell caching (CACHE_VERSION)
 ├── manifest.json           # PWA manifest
-├── AGENTS.md               # You are here — operating manual & directives
+├── AGENTS.md               # You are here — vision, operating manual & directives
 ├── README.md               # Public-facing documentation
 ├── VISION.md               # Status & roadmap
 ├── CONTRIBUTING.md         # Contributor rules
@@ -121,10 +166,11 @@ A1-B1_German/
 
 ---
 
-## 8. Current status (keep honest)
+## 11. Current status (keep honest)
 
 - **2,627 entries**: A1 684, A2 580, B1 1,363. Headword/gender/plural ≈ 99.6% fidelity to the official lists.
 - **Example sentences: 100% original, 0 verbatim** across all three levels (was ~90%+ copied). P0 copyright blocker **resolved**.
-- **Fonts self-hosted; privacy policy in place; licensing/attribution corrected.** All three original-audit P0 blockers are closed.
-- **Honest coverage gaps (not blockers):** B1 is a curated subset (~57% of the ~2,400 official B1 units); B1 imagery 27% (371/1,363); thematic word groups (days, months, seasons, colours, numbers, countries) not yet included. Don't overstate these in docs.
-- **Open owner-action items:** swap the personal feedback email in `js/events.js`; confirm Imagen 3 redistribution terms; image↔word mapping verification (in progress).
+- **Fonts self-hosted; privacy policy in place; licensing/attribution corrected.** All three original-audit P0 blockers closed; the free-forever pledge (§3) already holds today.
+- **Quality-bar gaps to close (honest):** formal WCAG 2.2 AA audit not yet done; performance budget not yet formalized/measured; **core-engine tests exist (Playwright) but are not yet wired into CI**; image↔word mapping verification in progress.
+- **Coverage gaps (not blockers, don't overstate):** B1 is a curated subset (~57% of the ~2,400 official B1 units); B1 imagery 27% (371/1,363); thematic word groups (days, months, seasons, colours, numbers, countries) not yet included.
+- **Open owner-action items:** swap the personal feedback email in `js/events.js`; confirm Imagen 3 redistribution terms.
