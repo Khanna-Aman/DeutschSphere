@@ -1,6 +1,7 @@
 // js/router.js — SPA client-side routing, view transitions, and route guards
 import { state, elements } from './state.js';
-import { renderCard, closePhoneticMirror } from './flashcards.js';
+import { renderCard } from './flashcards.js';
+import { closePhoneticMirror } from './phonetics.js';
 import { stopAudioTrainer } from './audio.js';
 import { initQuizView } from './quiz.js';
 import { initImmersionView } from './immersion.js';

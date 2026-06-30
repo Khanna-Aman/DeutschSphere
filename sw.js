@@ -7,7 +7,7 @@
 // handled independently by WORDLIST_CACHE_VERSION in app.js, which is appended as a
 // ?v= query param so cache-first DATA_CACHE entries are bypassed on a data change —
 // so a data-only update does NOT require bumping CACHE_VERSION, and vice versa.
-const CACHE_VERSION = 'v7.2.1'; // v7.2.1: removed the now-dead console.warn override that suppressed the Tailwind CDN advisory
+const CACHE_VERSION = 'v7.3.0'; // v7.3.0: refactor — split phonetics.js (Phonetik-Spiegel) and backup.js out of flashcards.js/events.js
 const STATIC_CACHE = `deutschsphere-static-${CACHE_VERSION}`;
 const DATA_CACHE = `deutschsphere-data-${CACHE_VERSION}`;
 const CDN_CACHE = `deutschsphere-cdn-${CACHE_VERSION}`;
@@ -22,6 +22,8 @@ const APP_SHELL = [
   './js/state.js',
   './js/audio.js',
   './js/flashcards.js',
+  './js/phonetics.js',
+  './js/backup.js',
   './js/quiz.js',
   './js/fsrs.js',
   './js/nlp.js',
