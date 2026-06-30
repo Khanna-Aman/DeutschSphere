@@ -7,8 +7,8 @@
   <title>DeutschSphere — A1-B1 German</title>
   <meta name="description" content="A zero-dependency, offline-first German vocabulary flashcard SPA covering 2,627 words across CEFR levels A1-B1, with SRS, quizzes, pronunciation coaching, and 5 premium themes.">
   <meta name="theme-color" content="#020617">
-  <!-- Content Security Policy -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: blob:; connect-src 'self' https://formsubmit.co; worker-src 'self'; media-src 'self' blob:;">
+  <!-- Content Security Policy — all assets self-hosted (no third-party CDNs). -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob:; connect-src 'self' https://formsubmit.co; worker-src 'self'; media-src 'self' blob:;">
   <link rel="canonical" href="https://khanna-aman.github.io/DeutschSphere/">
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
@@ -39,15 +39,12 @@
     }
   }
   </script>
-  <!-- CDN Preconnect Hints (Lighthouse LCP optimization) -->
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Tailwind CSS — precompiled static build (regenerate via tailwind.config.js) -->
   <link rel="stylesheet" href="./tailwind.css">
-  <!-- FontAwesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha384-iw3OoTErCYJJB9mCa8LNS2hbsQ7M3C0EpIsO/H5+EGAkPGc6rk+V8i04oW/K5xq0" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap">
+  <!-- FontAwesome Icons — self-hosted (vendored via scripts/vendor_fonts.py) -->
+  <link rel="stylesheet" href="./fonts/fontawesome.min.css">
+  <!-- Inter + Outfit — self-hosted (no Google Fonts CDN; privacy/offline) -->
+  <link rel="stylesheet" href="./fonts/google-fonts.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="index.css">
   <!-- C2: PWA Manifest & Icons -->

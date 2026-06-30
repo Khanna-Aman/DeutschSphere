@@ -1,5 +1,6 @@
 // sw.js — Service Worker for DeutschSphere (A1-B1 German)
-// Strategy: Cache-first for static assets, stale-while-revalidate for CDN resources.
+// Strategy: Cache-first for static assets. All fonts/icons are now self-hosted
+// (no third-party CDNs), so the app is genuinely offline-capable after first load.
 // NOTE: This SW only activates on HTTPS origins (GitHub Pages). It cannot run on file://.
 
 // CACHE_VERSION controls the app SHELL + CDN caches (HTML/CSS/JS/icons/fonts).
@@ -7,7 +8,7 @@
 // handled independently by WORDLIST_CACHE_VERSION in app.js, which is appended as a
 // ?v= query param so cache-first DATA_CACHE entries are bypassed on a data change —
 // so a data-only update does NOT require bumping CACHE_VERSION, and vice versa.
-const CACHE_VERSION = 'v7.4.0'; // v7.4.0: removed gamification (particle bursts, wrong-answer shake, quiz star ratings + letter grades) — pure study-focus
+const CACHE_VERSION = 'v7.5.0'; // v7.5.0: self-hosted fonts (Inter/Outfit/FontAwesome) + tightened CSP (no third-party CDNs)
 const STATIC_CACHE = `deutschsphere-static-${CACHE_VERSION}`;
 const DATA_CACHE = `deutschsphere-data-${CACHE_VERSION}`;
 const CDN_CACHE = `deutschsphere-cdn-${CACHE_VERSION}`;
@@ -17,6 +18,8 @@ const APP_SHELL = [
   './index.html',
   './index.css',
   './tailwind.css',
+  './fonts/fontawesome.min.css',
+  './fonts/google-fonts.css',
   './app.js',
   './js/foic-preinit.js',
   './js/state.js',
