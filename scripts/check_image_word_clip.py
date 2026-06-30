@@ -86,6 +86,7 @@ def load_entries(level):
             "level": level, "id": e.get("id"),
             "german": (e.get("german") or "").strip(),
             "english": (e.get("english") or "").strip(),
+            "word_class": (e.get("word_class") or "").strip(),
             "gloss": clean_gloss(e.get("english") or ""),
             "image": img, "path": disk,
         })
@@ -94,24 +95,25 @@ def load_entries(level):
 
 # ---------- Layer 1: perceptual-hash duplicate sweep ----------
 def duplicate_sweep(entries, Image, imagehash):
-    hashes = {}
+    # NB: entry ids are NOT unique across levels — index every item by its
+    # position so a1/a2/b1 entries that share an id are never confused.
+    items = []  # (entry, phash)
     for it in entries:
         try:
             with Image.open(it["path"]) as im:
-                hashes[it["id"]] = imagehash.phash(im.convert("RGB"))
+                items.append((it, imagehash.phash(im.convert("RGB"))))
         except Exception:
-            hashes[it["id"]] = None
+            pass
     dupes = []
-    ids = [it["id"] for it in entries if hashes.get(it["id"]) is not None]
-    by_id = {it["id"]: it for it in entries}
-    for i in range(len(ids)):
-        for j in range(i + 1, len(ids)):
-            a, b = ids[i], ids[j]
-            d = hashes[a] - hashes[b]
+    for i in range(len(items)):
+        a, ha = items[i]
+        for j in range(i + 1, len(items)):
+            b, hb = items[j]
+            d = ha - hb
             if d <= PHASH_NEAR:
                 dupes.append({
-                    "a_id": a, "a_word": by_id[a]["german"], "a_image": by_id[a]["image"],
-                    "b_id": b, "b_word": by_id[b]["german"], "b_image": by_id[b]["image"],
+                    "a": f"{a['level']}#{a['id']}", "a_word": a["german"], "a_image": f"{a['level']}/{a['image']}",
+                    "b": f"{b['level']}#{b['id']}", "b_word": b["german"], "b_image": f"{b['level']}/{b['image']}",
                     "distance": int(d),
                 })
     return dupes
@@ -159,7 +161,7 @@ def clip_verify(entries, torch, model, processor):
             self_rank = ranking.index(idx) + 1             # 1-based rank of own gloss
             top_i = ranking[0]
             rec = {
-                **{k: it[k] for k in ("level", "id", "german", "english", "gloss", "image")},
+                **{k: it[k] for k in ("level", "id", "german", "english", "word_class", "gloss", "image")},
                 "self_sim": round(float(sims[idx]), 4),
                 "self_rank": self_rank,
                 "top_word": entries[top_i]["german"],
@@ -179,23 +181,33 @@ def clip_verify(entries, torch, model, processor):
 def classify_verdict(r):
     """High-precision buckets, tuned on CLIP ViT-B/32 cosine ranges.
 
-    The signal for a REAL mismatch is not just a poor self-rank — abstract
-    words (prepositions, 'information', 'foreign') rank poorly because the
-    image weakly matches *everything*. A genuine wrong-image shows a *large
-    margin*: a different, concrete word matches with confidence while the
-    mapped word does not.
+    Honest limitation: with one image per word, low self-similarity can mean
+    either a wrong image OR an un-depictable word (CLIP can't draw 'sometimes'
+    or 'to justify'). We use the dataset's own `word_class` to separate them:
+
+      - Non-nouns (verbs/adjectives/adverbs/function words): not literally
+        depictable. If CLIP strongly matches anyway, great; otherwise the
+        illustration is a metaphor only a human can judge -> 'abstract'.
+      - Nouns: CLIP is reliable for the concrete ones. A poor self-rank with a
+        confident, clearly-better competing word -> 'review_mismatch'. Abstract
+        nouns ('meaning', 'upbringing') may still appear; the review sheet is
+        ordered by the competitor's confidence so concrete suspects rise first.
     """
     rank, self_sim, top_sim = r["self_rank"], r["self_sim"], r["top_sim"]
     margin = top_sim - self_sim
     CONFIDENT = 0.27          # a concrete word CLIP is confident about
+    is_noun = (r.get("word_class") or "").lower().startswith("nomen")
+
     if rank == 1:
         return "match_strong"
     if rank <= 5:
         return "match_ok"
+    if not is_noun:
+        return "abstract"          # verb/adj/adv/function word -> human judgment, not auto-verifiable
     if rank > 10 and margin >= 0.05 and top_sim >= CONFIDENT:
         return "review_mismatch"   # a different concrete word fits clearly better -> check
     if top_sim < CONFIDENT:
-        return "inconclusive"      # weak everywhere -> abstract/un-depictable, can't verify
+        return "inconclusive"      # weak everywhere -> abstract noun, can't verify
     return "review_weak"           # mild ambiguity worth a glance
 
 
@@ -213,9 +225,11 @@ def thumb_data_uri(path, Image, size=140):
 
 
 def write_html(records, dupes, path, Image):
-    order = {"review_mismatch": 0, "review_weak": 1, "inconclusive": 2, "error": 3}
+    # Only the genuinely actionable buckets get thumbnails; ordered so the
+    # most confident concrete suspects (high competing-word similarity) rise.
+    order = {"review_mismatch": 0, "review_weak": 1, "error": 2}
     review = [r for r in records if r.get("verdict") in order]
-    review.sort(key=lambda r: (order.get(r["verdict"], 9), -r.get("self_rank", 0)))
+    review.sort(key=lambda r: (order.get(r["verdict"], 9), -r.get("top_sim", 0)))
     counts = {}
     for r in records:
         counts[r.get("verdict", "?")] = counts.get(r.get("verdict", "?"), 0) + 1
@@ -236,8 +250,8 @@ def write_html(records, dupes, path, Image):
         </div>""")
 
     dupe_rows = "".join(
-        f"<li>{html.escape(d['a_word'])} (id {d['a_id']}, {d['a_image']}) ≈ "
-        f"{html.escape(d['b_word'])} (id {d['b_id']}, {d['b_image']}) — dist {d['distance']}</li>"
+        f"<li>{html.escape(d['a_word'])} ({d['a_image']}) ≈ "
+        f"{html.escape(d['b_word'])} ({d['b_image']}) — dist {d['distance']}</li>"
         for d in dupes
     )
     summary = " · ".join(f"{k}: {v}" for k, v in sorted(counts.items()))
@@ -306,9 +320,12 @@ def main():
     for r in records:
         counts[r.get("verdict", "?")] = counts.get(r.get("verdict", "?"), 0) + 1
     print("\nVerdict summary:")
-    for k in ("match_strong", "match_ok", "review_weak", "review_mismatch", "inconclusive", "error"):
+    for k in ("match_strong", "match_ok", "review_weak", "review_mismatch",
+              "inconclusive", "abstract", "error"):
         if k in counts:
             print(f"  {k:16s} {counts[k]}")
+    print("  (review_mismatch + review_weak = the cards to eyeball; "
+          "abstract/inconclusive = not image-verifiable by CLIP)")
 
     json.dump({"counts": counts, "near_duplicates": dupes, "records": records},
               open(args.report, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
