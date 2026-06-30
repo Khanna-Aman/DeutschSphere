@@ -75,7 +75,7 @@ We cover **2,627 ground-truth entries** verified against official Goethe-Institu
 > [!IMPORTANT]
 > **Data provenance & grounding**: Vocabulary *scope* — which words appear at each level — is grounded in the publicly available official Goethe-Institut *Wortlisten* (A1/A2/B1), used as a factual reference and cross-checked with **Google NotebookLM**. Independent verification puts headword/gender/plural fidelity at ≈ 99.6%. English translations and the pseudo-phonetic pronunciation hints are **original to this project**. Grammar fields (gender, plural, etc.) are left `null` where not attested, rather than guessed.
 >
-> **Example sentences** are being rewritten as **original content** authored for this project, replacing earlier text that reproduced the copyrighted Goethe/Hueber source. See [`NOTICE`](NOTICE) and [`PRODUCTION_READINESS_AUDIT_2026-06-30.md`](PRODUCTION_READINESS_AUDIT_2026-06-30.md) (§4.6).
+> **Example sentences** are **100% original content** authored for this project. All 2,627 example sentences across A1/A2/B1 were rewritten to replace earlier text that reproduced the copyrighted Goethe/Hueber source; an automated originality gate ([`scripts/check_example_originality.py`](scripts/check_example_originality.py)) confirms **0 verbatim** matches against the official PDFs, and an independent offline grammar pass ([`scripts/check_grammar_languagetool.py`](scripts/check_grammar_languagetool.py), LanguageTool) checks them. See [`NOTICE`](NOTICE) and [`PRODUCTION_READINESS_AUDIT_2026-06-30.md`](PRODUCTION_READINESS_AUDIT_2026-06-30.md) (§4.6).
 >
 > **Curated Visual Assets**: The illustrations were generated using Google Vertex AI's **Imagen 3** model, compressed to under 10KB each to maintain zero-latency offline loading.
 
@@ -135,8 +135,8 @@ A1-B1_German/
 │   ├── foic-preinit.js     # Pre-paint level detection (blocking, runs before modules)
 │   └── events.js           # Hotkeys, swipe gestures, settings, and modal wiring
 │
-├── a1/ , a2/ , b1/         # Verified datasets (JSON files + WebP graphical assets)
-├── scripts/                # Data validator, JSON→CSV converter, and Playwright QA scripts
+├── a1/ , a2/ , b1/         # Verified datasets (wordlist.json + WebP graphical assets)
+├── scripts/                # Data validator, originality/grammar gates, and Playwright QA scripts
 └── .github/workflows/      # CI: data-integrity gate (validate-data.yml)
 ```
 
@@ -156,7 +156,7 @@ Then commit the updated `tailwind.css` (it is served statically by GitHub Pages 
 
 ## 📄 QA & Continuous Integration
 
-**Automated (CI):** Every push or pull request that touches a wordlist or a doc that quotes counts runs [`scripts/validate_data.py`](scripts/validate_data.py) through GitHub Actions ([`.github/workflows/validate-data.yml`](.github/workflows/validate-data.yml)). Treating each `wordlist.json` as the source of truth, the build fails on invalid JSON, duplicate ids, broken or duplicated image references, CSV row-count drift, or any published word count that no longer matches the data.
+**Automated (CI):** Every push or pull request that touches a wordlist or a doc that quotes counts runs [`scripts/validate_data.py`](scripts/validate_data.py) through GitHub Actions ([`.github/workflows/validate-data.yml`](.github/workflows/validate-data.yml)). Treating each `wordlist.json` as the source of truth, the build fails on invalid JSON, duplicate ids, broken or duplicated image references, or any published word count that no longer matches the data.
 
 **Local (manual):** A set of [Playwright](https://playwright.dev/)-driven scripts run the app in a real browser. They require a one-time `pip install playwright && playwright install chromium`:
 * **Syntax smoke test** — `python scripts/debug_syntax.py` serves the app, loads it headless, and asserts every module imports with a clean console.
@@ -172,4 +172,4 @@ Then commit the updated `tailwind.css` (it is served statically by GitHub Pages 
 - **Privacy:** All learning data stays in your browser (localStorage + IndexedDB) — no accounts, no analytics, no trackers, no cookies. Fonts and icons are self-hosted (no third-party CDNs). The only optional outbound request is the feedback form, which you trigger explicitly. See [`PRIVACY.md`](PRIVACY.md).
 - **Attribution & licensing:** Source code is MIT; third-party content (vocabulary references, illustrations, fonts) has separate terms. See [`NOTICE`](NOTICE) and [`LICENSE`](LICENSE).
 - **Non-affiliation:** DeutschSphere is an independent, unofficial study tool. It is **not affiliated with, endorsed by, or certified by the Goethe-Institut** or any examination body. Exam/curriculum references are descriptive only.
-- **Release status:** A full production-readiness audit lives in [`PRODUCTION_READINESS_AUDIT_2026-06-30.md`](PRODUCTION_READINESS_AUDIT_2026-06-30.md). Note its open P0 items before any public release.
+- **Release status:** A full production-readiness audit lives in [`PRODUCTION_READINESS_AUDIT_2026-06-30.md`](PRODUCTION_READINESS_AUDIT_2026-06-30.md). All three original-audit **P0 blockers are now resolved** (example-sentence copyright → 0 verbatim; licensing/attribution; privacy/self-hosted fonts). Remaining items are owner-action P1/P2: swap the personal feedback email, confirm Imagen 3 redistribution terms, and close the B1/thematic **coverage** gaps.

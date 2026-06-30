@@ -16,8 +16,7 @@ asserts, with no third-party dependencies:
   3. Every non-null 'image' reference points to a file that exists on disk
      (and the deprecated 'image_path' field never reappears).
   4. No image file is referenced by more than one entry (no wrong-word images).
-  5. `<level>/wordlist.csv` has exactly one data row per JSON entry.
-  6. The computed total (and per-level counts) appear verbatim in the docs,
+  5. The computed total (and per-level counts) appear verbatim in the docs,
      so a data change that forgets to update the docs fails the build.
 
 Exit code is non-zero if any check fails. Run from the repo root:
@@ -27,7 +26,6 @@ Exit code is non-zero if any check fails. Run from the repo root:
 
 from __future__ import annotations
 
-import csv
 import json
 import os
 import sys
@@ -36,7 +34,7 @@ LEVELS = ["a1", "a2", "b1"]
 
 # Docs that quote the total vocabulary count. If the data changes, these
 # must be updated in lockstep or CI fails.
-DOCS_WITH_TOTAL = ["README.md", "index.html", "manifest.json", "VISION.md"]
+DOCS_WITH_TOTAL = ["README.md", "index.html", "manifest.json", "VISION.md", "AGENTS.md"]
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -56,22 +54,10 @@ def load_json(path: str, errors: list[str]):
     return None
 
 
-def csv_data_row_count(path: str, errors: list[str]) -> int | None:
-    try:
-        # utf-8-sig strips the BOM the converter writes for Excel.
-        with open(path, encoding="utf-8-sig", newline="") as f:
-            rows = list(csv.reader(f))
-    except FileNotFoundError:
-        fail(errors, f"{path}: file not found")
-        return None
-    return len(rows) - 1  # minus header
-
-
 def validate_level(level: str, errors: list[str]) -> int:
     """Validate one level; return its entry count (0 if unloadable)."""
     base = os.path.join(REPO_ROOT, level)
     json_path = os.path.join(base, "wordlist.json")
-    csv_path = os.path.join(base, "wordlist.csv")
 
     data = load_json(json_path, errors)
     if data is None:
@@ -125,18 +111,9 @@ def validate_level(level: str, errors: list[str]) -> int:
         more = f" (+{len(broken) - 8} more)" if len(broken) > 8 else ""
         fail(errors, f"{level}: {len(broken)} broken image refs: {sample}{more}")
 
-    csv_rows = csv_data_row_count(csv_path, errors)
-    if csv_rows is not None and csv_rows != len(data):
-        fail(
-            errors,
-            f"{level}: wordlist.csv has {csv_rows} rows but wordlist.json has "
-            f"{len(data)} entries (regenerate with scripts/convert_json_to_csv.js)",
-        )
-
     print(
         f"  {level}: {len(data):4d} entries | "
-        f"{len(image_owner):4d} image refs | {len(broken)} broken | "
-        f"csv {'OK' if csv_rows == len(data) else 'MISMATCH'}"
+        f"{len(image_owner):4d} image refs | {len(broken)} broken"
     )
     return len(data)
 

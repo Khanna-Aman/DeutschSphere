@@ -10,13 +10,11 @@ on:
       - "a1/wordlist.json"
       - "a2/wordlist.json"
       - "b1/wordlist.json"
-      - "a1/wordlist.csv"
-      - "a2/wordlist.csv"
-      - "b1/wordlist.csv"
       - "README.md"
       - "index.html"
       - "manifest.json"
       - "VISION.md"
+      - "AGENTS.md"
       - "scripts/validate_data.py"
       - ".github/workflows/validate-data.yml"
   pull_request:
@@ -24,13 +22,11 @@ on:
       - "a1/wordlist.json"
       - "a2/wordlist.json"
       - "b1/wordlist.json"
-      - "a1/wordlist.csv"
-      - "a2/wordlist.csv"
-      - "b1/wordlist.csv"
       - "README.md"
       - "index.html"
       - "manifest.json"
       - "VISION.md"
+      - "AGENTS.md"
       - "scripts/validate_data.py"
       - ".github/workflows/validate-data.yml"
   workflow_dispatch:
@@ -47,5 +43,5 @@ jobs:
 
       - name: Validate wordlist data integrity
         # Validates JSON, schema, unique ids, image references (exist + no
-        # duplicates), CSV row-count parity, and doc/data count consistency.
+        # duplicates), and doc/data count consistency.
         run: python scripts/validate_data.py

@@ -18,15 +18,22 @@ The English translations and the pseudo-phonetic pronunciation hints in this
 app are original to the project and are NOT taken from those publications.
 
 --------------------------------------------------------------------------
-2. Example sentences  —  ⚠ ACTION REQUIRED BEFORE PUBLIC RELEASE
+2. Example sentences  —  original content
 --------------------------------------------------------------------------
-The German example sentences shipped in the current data files are, in large
-part, reproduced from the Goethe-Institut / Hueber Verlag / telc / ÖSD
-Wortliste publications, which are copyrighted ("urheberrechtlich geschützt").
+The German example sentences (example_de) and their English translations
+(example_en) shipped in the data files are ORIGINAL CONTENT authored for this
+project. Earlier versions reproduced sentences from the Goethe-Institut /
+Hueber Verlag / telc / ÖSD Wortliste publications (copyrighted,
+"urheberrechtlich geschützt"); all of those have been replaced.
 
-These sentences are being REPLACED with original example sentences authored
-for this project. Until that replacement is complete and verified, the data
-is NOT cleared for public redistribution. See
+All 2,627 example sentences across A1/A2/B1 were re-authored and verified:
+  - scripts/check_example_originality.py reports 0 verbatim matches (and no
+    6-word shingle copies) against the official source PDFs;
+  - scripts/check_grammar_languagetool.py independently grammar-checks them
+    with the offline LanguageTool engine.
+
+These sentences are therefore original to the project and are not subject to
+the source publishers' copyright. See
 PRODUCTION_READINESS_AUDIT_2026-06-30.md (§4.6) for details.
 
 --------------------------------------------------------------------------

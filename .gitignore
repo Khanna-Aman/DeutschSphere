@@ -43,7 +43,7 @@ scripts/backups/
 scripts/logs/
 
 # AI Orchestrations & Agent Planning
-GEMINI.md
+# (AGENTS.md is the tracked, authoritative agent charter — intentionally NOT ignored)
 implementation_plan.md
 sprint_handoff_a2_b1.md
 audit_a2.html
