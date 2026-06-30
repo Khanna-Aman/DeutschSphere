@@ -69,10 +69,15 @@ We cover **2,627 ground-truth entries** verified against official Goethe-Institu
 | **B1** | 1,363 | Intermediate | ✅ 100% Verified | 🚧 371 / 1,363 WebP Assets In Progress (27%) |
 | **Total** | **2,627** | Goethe-Institut A1-B1 | **100% Pure Client-Side Execution** |
 
+> [!NOTE]
+> **What "Verified" means here:** each entry's German headword, gender, and plural were cross-checked against the official Goethe lists (≈ 99.6% fidelity). It does **not** mean full coverage of those lists. B1 is a **curated subset** — about 57% of the ~2,400 official B1 lexical units — with imagery still in progress (27%), and the thematic word groups (days, months, seasons, colours, numbers, countries) are **not yet included**. See the production-readiness audit for the full coverage breakdown.
+
 > [!IMPORTANT]
-> **The Zero-Inference Clause & Grounding**: All vocabulary data is verified strictly against official Goethe-Institut curricula using **Google NotebookLM** to ensure absolute linguistic truth. If conjugation tables, plurals, or contextual examples are not present in our source data sheets, they are assigned to `null`. We strictly forbid generating speculative translations or synthesizing placeholder grammar using generic LLM weights.
+> **Data provenance & grounding**: Vocabulary *scope* — which words appear at each level — is grounded in the publicly available official Goethe-Institut *Wortlisten* (A1/A2/B1), used as a factual reference and cross-checked with **Google NotebookLM**. Independent verification puts headword/gender/plural fidelity at ≈ 99.6%. English translations and the pseudo-phonetic pronunciation hints are **original to this project**. Grammar fields (gender, plural, etc.) are left `null` where not attested, rather than guessed.
 >
-> **Curated Visual Assets**: The premium 3D illustrations for the active vocabulary lists were generated using Google Vertex AI's **Imagen 3** model, compressed to under 10KB each to maintain zero-latency offline loading.
+> **Example sentences** are being rewritten as **original content** authored for this project, replacing earlier text that reproduced the copyrighted Goethe/Hueber source. See [`NOTICE`](NOTICE) and [`PRODUCTION_READINESS_AUDIT_2026-06-30.md`](PRODUCTION_READINESS_AUDIT_2026-06-30.md) (§4.6).
+>
+> **Curated Visual Assets**: The illustrations were generated using Google Vertex AI's **Imagen 3** model, compressed to under 10KB each to maintain zero-latency offline loading.
 
 ---
 

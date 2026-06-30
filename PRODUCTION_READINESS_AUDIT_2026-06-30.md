@@ -127,13 +127,13 @@
 > Status legend: ✅ done this session · 🟡 in progress · ⏳ requires owner decision/credentials
 
 ### P0 — release blockers
-- ⏳ **Example-sentence copyright** — decide: (a) license from Goethe/Hueber, (b) **replace with original sentences** (LLM-generated + reviewed; ~2,400), or (c) remove. *Recommend (b).* Bulk regeneration needs owner sign-off on approach; this audit sets up the path.
-- 🟡 **Licensing/attribution** — add a `NOTICE` separating code (MIT) from data provenance; add a **non-affiliation disclaimer** for the Goethe marks; document Imagen 3 image terms.
-- 🟡 **Privacy** — add `PRIVACY.md`; **self-host fonts + FontAwesome** to stop Google/Cloudflare IP leakage and tighten CSP; replace the personal feedback email with a non-personal/obfuscated channel and disclose `formsubmit.co`.
+- 🟡 **Example-sentence copyright** — owner chose **replace with original sentences**. Pipeline built and verified: `scripts/check_example_originality.py` (gate) + `scripts/apply_examples.py` (merge). A1 ids 1–60 replaced (verbatim 632→573); A2/B1 + remaining A1 follow the same path. *Blocker stays open until the verbatim count reaches 0 across all levels.*
+- ✅ **Licensing/attribution** — `NOTICE` separates code (MIT) from content; non-affiliation/trademark disclaimer added; `LICENSE` scoped to source code; Imagen 3 terms flagged.
+- ✅ **Privacy** — `PRIVACY.md` added; fonts + FontAwesome **self-hosted** (no Google/Cloudflare calls), CSP tightened to self-only; `formsubmit.co` flow disclosed. *Remaining:* swap the personal feedback Gmail for a dedicated address / FormSubmit hashed token (owner action).
 
 ### P1
-- 🟡 **CI** — wire `validate_data.py` to trigger on `js/**` too; add Playwright + an ESLint gate.
-- 🟡 **Docs** — restate "zero-inference/NotebookLM-generated" and "100% offline" accurately; document the disjoint-level counting model and the real B1/thematic coverage.
+- ✅ **CI** — added `.github/workflows/js-checks.yml`: blocking `node --check` syntax gate on all `js/**` changes + advisory ESLint (`eslint.config.js`, dev-only).
+- ✅ **Docs** — README now states offline accurately (true after self-hosting), reframes grounding honestly, and documents the disjoint-level counting model + real B1/thematic coverage.
 - ✅ **Data integrity** — verified: no shipped duplicates (the `der Ausdruck` pair is intentional polysemy). Optionally regenerate the build-only `scripts/words_*.tsv` to drop its artifact duplicates.
 - 🟡 **Coverage plan** — add the missing thematic groups (days/months/seasons/colours/numbers/countries) as A1 content; publish an honest B1 completeness roadmap.
 
