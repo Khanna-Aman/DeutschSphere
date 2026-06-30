@@ -60,7 +60,7 @@
 - **App→official fidelity: 99.6%** (2,616 / 2,627). Per level: A1 99.3% (5 unmatched), A2 99.1% (5), B1 99.9% (1). Every unmatched item is a **parser-normalization artifact**, not a scope error — e.g. stem entries `best-`, `jed-`, `unser-`, `welch-`, and alternations like `weglaufen / wegmachen`, `(an-)/(aus)ziehen`. NotebookLM confirmed the flagged B1 item `die Geschwindigkeitsbeschränkung` is legitimate.
 - **Gender/plural: no genuine errors.** The 7 flagged "mismatches" are all linguistically valid: nominalized adjectives with both genders (`der/die Angehörige, Angestellte, Kranke, Studierende, Tote`), the homonym **`Leiter`** (der Leiter = manager / die Leiter = ladder — NLM-confirmed), and `das Lebensmittel` (correct singular; the official list only gives the plural `die Lebensmittel`).
 - **Encoding:** perfect UTF-8 across ä/ö/ü/ß; no stray whitespace; all IDs unique per level.
-- **P2 defect:** B1 contains a **duplicate headword `der Ausdruck`** (two entries).
+- **No duplicate defects.** The two B1 `der Ausdruck` entries are **intentional polysemy** (id 81 "expression/phrase"; id 82 "printout"), not a duplicate — the second correctly carries no image to keep image refs unique. The only literal duplicates found were in the build-only artifact `scripts/words_a1.tsv` (`auf sein`, `aus`), which does not ship.
 - **Field population:** `pronunciation`, `example_de`, `example_en` are 100% populated; `gender/plural/antonym` nulls are correct-by-design (verbs/adjectives/etc.). *Caveat:* the 100% example population is a consequence of copying (see §4.6), not generation.
 
 ### 4.2 Content coverage & completeness — 50/100 ⚠️ (P1)
@@ -134,7 +134,7 @@
 ### P1
 - 🟡 **CI** — wire `validate_data.py` to trigger on `js/**` too; add Playwright + an ESLint gate.
 - 🟡 **Docs** — restate "zero-inference/NotebookLM-generated" and "100% offline" accurately; document the disjoint-level counting model and the real B1/thematic coverage.
-- ✅ **Data integrity** — de-duplicate B1 `der Ausdruck`; regenerate `scripts/words_*.tsv` without duplicates.
+- ✅ **Data integrity** — verified: no shipped duplicates (the `der Ausdruck` pair is intentional polysemy). Optionally regenerate the build-only `scripts/words_*.tsv` to drop its artifact duplicates.
 - 🟡 **Coverage plan** — add the missing thematic groups (days/months/seasons/colours/numbers/countries) as A1 content; publish an honest B1 completeness roadmap.
 
 ### P2
