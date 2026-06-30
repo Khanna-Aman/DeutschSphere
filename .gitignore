@@ -55,3 +55,7 @@ audit*.html
 # Node tooling (dev-only; runtime stays zero-dependency)
 node_modules/
 package-lock.json
+
+# JVM crash dumps (e.g. from LanguageTool grammar gate)
+hs_err_pid*.log
+replay_pid*.log
