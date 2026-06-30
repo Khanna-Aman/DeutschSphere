@@ -2,7 +2,9 @@
 
 This backlog tracks implemented features, their technical specifications, and outstanding tasks for the multi-level (A1, A2, B1) German vocabulary flashcard application.
 
-> Last updated: 2026-06-29
+> Last updated: 2026-06-30
+>
+> ⚠️ **Authoritative sources.** This backlog may lag the live state. For current status and the open-items roadmap, see **`PRODUCTION_READINESS_AUDIT_2026-06-30.md`** (§6) and **`CHANGELOG.md`**; for policy/scope, see **`AGENTS.md`**. Key deltas since the 2026-06-29 snapshot below: **all example sentences are now original (0 verbatim — copyright resolved)**; fonts/icons **self-hosted** (no CDN); the per-level `wordlist.csv` was removed; the rotted Playwright suites are **slated for a from-scratch rebuild + CI wiring**.
 >
 > ⚠️ **Scope note.** The project was re-scoped to a focused, **study-only** tool. Earlier planned/experimental features — the Deutsch-Abenteuer RPG, Grammatik-Weberei sentence builder, a Statistics Dashboard, an Achievements/streak engine, and all gamification (XP, particle bursts, star ratings) — are **out of scope and not in the codebase**. This document has been pruned to reflect what actually ships.
 
@@ -28,8 +30,8 @@ Every word entry conforms to the following structure (actual field names from th
   "pronunciation": "ahp-flook",
   "theme": "Reise & Verkehr",
   "antonym": "die Ankunft",
-  "example_de": "Der Abflug ist um 11.20 Uhr.",
-  "example_en": "The departure is at 11:20 AM.",
+  "example_de": "Wir warten am Flughafen auf den Abflug.",
+  "example_en": "We are waiting at the airport for the departure.",
   "image": "images/card_2.webp",
   "id": 2
 }
@@ -82,8 +84,8 @@ Persisted via `localStorage.current_theme`. Each theme fully overrides: body bac
 - **Accordion transitions**: CSS Grid `grid-template-rows: 0fr→1fr` with `opacity` for fluid auto-height animation
 - **Custom scrollbar**: 5px thin scrollbar with rounded thumb
 - **Auto-hyphens**: For long German compound words
-- **Fonts**: Inter (body), Outfit (display/headings)
-- **Icons**: FontAwesome 6.4.0
+- **Fonts**: Inter (body), Outfit (display/headings) — **self-hosted under `./fonts`** (no Google Fonts CDN)
+- **Icons**: FontAwesome 6.4.0 — **self-hosted** (no cdnjs)
 
 ---
 
@@ -125,11 +127,13 @@ Persisted via `localStorage.current_theme`. Each theme fully overrides: body bac
 - [x] Profile backup: JSON file + Base64 Sync Key export/import
 - [x] Precompiled Tailwind + hardened CSP (no `unsafe-inline`/`unsafe-eval`/CDN)
 - [x] Data-integrity CI gate (`scripts/validate_data.py` via GitHub Actions)
-- [x] Playwright unit + E2E suites (`scripts/run_unit_tests.py`, `scripts/e2e_comprehensive_tests.py`)
+- [x] **Original example sentences** — all 2,627 hand-authored, **0 verbatim** vs. the official PDFs; gated by `scripts/check_example_originality.py` + `scripts/check_grammar_languagetool.py`
+- [~] Playwright unit + E2E suites exist (`scripts/run_unit_tests.py`, `scripts/e2e_comprehensive_tests.py`) — **rotted; slated for a from-scratch rebuild + CI wiring** (see audit §6, dimension 10)
 
 ### ⚠️ Known Gaps / Outstanding
 - [ ] B1 illustrations: 371 / 1,363 WebP assets (27%) — rollout in progress (A1/A2 complete)
-- [ ] Wire the Playwright unit/E2E suites into CI (currently run manually)
+- [ ] **Rebuild the test suite from scratch and wire deterministic tests (FSRS/NLP) into CI** (the suites are currently rotted and run only manually)
+- [ ] Thematic word groups (days/months/seasons/colours/numbers/countries) not yet ingested
 - [ ] Split-second follow-ups: further module decomposition if files grow again
 - [x] Service Worker offline caching — implemented (`sw.js`, 4-strategy caching, versioned)
 
@@ -195,7 +199,7 @@ Persisted via `localStorage.current_theme`. Each theme fully overrides: body bac
 - [x] **PWA Packaging**: manifest.json, Service Worker, beforeinstallprompt install banner — needs maskable icons
 - [x] **Offline NLP Ingestion Engine**: Immersions-Labor implemented to let users paste raw German text and cross-reference against their learned FSRS profile.
 - [ ] **Multi-Language Support**: Architecture supports additional language pairs
-- [ ] **AI Sentence Generation**: Level-appropriate custom example sentences via NotebookLM
+- [x] **Original example sentences** (2026-06-30): all 2,627 example sentences hand-authored as original content (replacing the earlier copyrighted Goethe text), verified 0 verbatim + grammar-checked. *(Superseded the earlier "AI Sentence Generation via NotebookLM" idea — examples are original-authored and copyright-clean, not sourced.)*
 
 ---
 
