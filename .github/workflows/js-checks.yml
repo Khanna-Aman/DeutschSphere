@@ -1,0 +1,49 @@
+name: JS checks
+
+# Complements validate-data.yml (which guards the data). This guards the
+# JavaScript: a blocking syntax gate on every code change, plus an advisory
+# ESLint pass. Previously, changes under js/ triggered no CI at all.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.js"
+      - "package.json"
+      - "eslint.config.js"
+      - ".github/workflows/js-checks.yml"
+  pull_request:
+    paths:
+      - "**/*.js"
+      - "package.json"
+      - "eslint.config.js"
+      - ".github/workflows/js-checks.yml"
+  workflow_dispatch:
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Syntax check (node --check) on all app modules
+        run: |
+          set -e
+          for f in app.js sw.js js/*.js; do
+            node --check "$f"
+          done
+          echo "All JS modules parsed cleanly."
+
+  lint:
+    runs-on: ubuntu-latest
+    # Advisory for now: surfaces issues without blocking while the codebase
+    # adopts lint. Flip to blocking once the baseline is clean.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm install
+      - run: npm run lint

@@ -51,3 +51,7 @@ audit*.html
 
 
 
+
+# Node tooling (dev-only; runtime stays zero-dependency)
+node_modules/
+package-lock.json

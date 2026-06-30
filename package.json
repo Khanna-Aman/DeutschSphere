@@ -1,0 +1,16 @@
+{
+  "name": "deutschsphere",
+  "version": "1.1.0",
+  "description": "Study-focused, offline-first German A1-B1 vocabulary PWA. Zero RUNTIME dependencies; the packages below are dev tooling only.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "for f in app.js sw.js js/*.js; do node --check \"$f\"; done",
+    "lint": "eslint app.js sw.js \"js/**/*.js\""
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "eslint": "^9.13.0",
+    "globals": "^15.11.0"
+  }
+}
