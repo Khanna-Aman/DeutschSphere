@@ -165,7 +165,7 @@ export function playSuccessArpeggio() {
   // Silent no-op for zero-distraction focus
 }
 
-// Descending pitch sweep accompanied by wrong-shake animation
+// Error-feedback hook for wrong answers (currently a silent no-op)
 export function playErrorGlide() {
   // Silent no-op for zero-distraction focus
 }

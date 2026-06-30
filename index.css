@@ -269,16 +269,6 @@ h1, h2, h3, h4, h5, h6 {
   animation: slideInLeft 0.65s linear(0.083, 0.215, 0.369, 0.523, 0.666, 0.79, 0.889, 0.965, 1.018, 1.052, 1.071, 1.077, 1.075, 1.067, 1.056, 1.045, 1.033, 1.022, 1.014, 1.007, 1.001, 0.998, 0.996, 0.994, 0.994, 0.994, 0.995, 0.996, 0.997, 0.998, 0.999, 0.999, 1, 1, 1, 1, 1, 1) both;
 }
 
-/* Shake Animation for Wrong Answers (Phase 2: Spelling & Quiz feedback) */
-@keyframes shake {
-  0%, 100% { transform: translateX(0); }
-  10%, 30%, 50%, 70%, 90% { transform: translateX(-6px); }
-  20%, 40%, 60%, 80% { transform: translateX(6px); }
-}
-
-.shake-anim {
-  animation: shake 0.45s cubic-bezier(.36,.07,.19,.97) both;
-}
 
 /* ==========================================
    THEME CUSTOMIZATION ENGINE OVERRIDES
@@ -1065,7 +1055,6 @@ body.theme-weimar #phonetic-mirror-panel .bg-slate-950 {
   .slide-in-right,
   .slide-in-left,
   .shuffle-anim,
-  .shake-anim,
   .phonetic-pulse-active {
     animation: none !important;
   }

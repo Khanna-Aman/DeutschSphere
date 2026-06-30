@@ -193,7 +193,6 @@ export function loadQuizQuestion() {
       elements.quizSpellingInput.value = '';
       elements.quizSpellingInput.disabled = false;
       elements.quizSpellingInput.classList.remove('border-emerald-500', 'bg-emerald-950/15', 'border-rose-500', 'bg-rose-950/15');
-      elements.quizSpellingInput.parentElement.classList.remove('shake-anim');
       setTimeout(() => elements.quizSpellingInput.focus(), 50);
     }
 
@@ -296,10 +295,6 @@ export function handleMCOptionClick(opt, clickedBtn) {
     // C3: Haptic feedback on correct answer (short pulse)
     if (navigator.vibrate) navigator.vibrate(30);
     playSuccessArpeggio();
-    if (typeof window.triggerParticleBurst === 'function' && clickedBtn) {
-      const rect = clickedBtn.getBoundingClientRect();
-      window.triggerParticleBurst(rect.left + rect.width / 2, rect.top + rect.height / 2);
-    }
     state.quiz.score++;
 
     clickedBtn.classList.remove('border-white/10', 'bg-white/5');
@@ -328,7 +323,7 @@ export function handleMCOptionClick(opt, clickedBtn) {
     playErrorGlide();
 
     clickedBtn.classList.remove('border-white/10', 'bg-white/5');
-    clickedBtn.classList.add('border-rose-500', 'bg-rose-950/20', 'text-rose-400', 'shake-anim');
+    clickedBtn.classList.add('border-rose-500', 'bg-rose-950/20', 'text-rose-400');
     clickedBtn.querySelector('span').classList.add('bg-rose-500/20', 'text-rose-400');
 
     // Highlight correct option
@@ -390,10 +385,6 @@ export function checkSpellingAnswer() {
 
   if (isCorrect) {
     playSuccessArpeggio();
-    if (typeof window.triggerParticleBurst === 'function' && elements.quizSpellingInput) {
-      const rect = elements.quizSpellingInput.getBoundingClientRect();
-      window.triggerParticleBurst(rect.left + rect.width / 2, rect.top + rect.height / 2);
-    }
     state.quiz.score++;
 
     if (elements.quizSpellingInput) {
@@ -420,7 +411,6 @@ export function checkSpellingAnswer() {
 
     if (elements.quizSpellingInput) {
       elements.quizSpellingInput.classList.add('border-rose-500', 'bg-rose-950/15');
-      elements.quizSpellingInput.parentElement.classList.add('shake-anim');
     }
 
     if (elements.quizFeedbackPanel) {
@@ -499,23 +489,6 @@ export function showQuizResults() {
     elements.quizStatsAccuracy.className = `text-6xl font-black font-mono ${color}`;
   }
 
-  // Star rating
-  const starsEl = document.getElementById('quiz-result-stars');
-  if (starsEl) {
-    const starCount = accuracy >= 90 ? 3 : accuracy >= 70 ? 2 : accuracy >= 50 ? 1 : 0;
-    starsEl.innerHTML = [1, 2, 3].map(n =>
-      `<i class="fa-solid fa-star text-2xl ${n <= starCount ? 'text-amber-400' : 'text-slate-700'}"></i>`
-    ).join('');
-  }
-
-  // Letter grade
-  const gradeEl = document.getElementById('quiz-result-grade');
-  if (gradeEl) {
-    const grade = accuracy >= 90 ? 'A+' : accuracy >= 80 ? 'A' : accuracy >= 70 ? 'B' : accuracy >= 60 ? 'C' : accuracy >= 50 ? 'D' : 'F';
-    gradeEl.textContent = grade;
-    gradeEl.className = `text-2xl font-black font-mono ${accuracy >= 70 ? 'text-emerald-400' : accuracy >= 50 ? 'text-amber-400' : 'text-rose-400'}`;
-  }
-
   // Dynamic result icon
   const iconEl = document.getElementById('quiz-result-icon');
   if (iconEl) {
@@ -531,14 +504,6 @@ export function showQuizResults() {
     }
   }
 
-  // Trigger confetti for great results
-  if (accuracy >= 80 && typeof window.triggerParticleBurst === 'function') {
-    setTimeout(() => {
-      window.triggerParticleBurst(window.innerWidth / 2, window.innerHeight / 3);
-      setTimeout(() => window.triggerParticleBurst(window.innerWidth / 3, window.innerHeight / 2.5), 200);
-      setTimeout(() => window.triggerParticleBurst(window.innerWidth * 2 / 3, window.innerHeight / 2.5), 400);
-    }, 300);
-  }
 }
 
 // Reset variables and replay active mode

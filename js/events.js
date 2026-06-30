@@ -214,9 +214,6 @@ export function setupEventListeners() {
       const card = state.currentDeck ? state.currentDeck[state.currentIndex] : null;
       if (card) {
         window.dispatchEvent(new CustomEvent('card:reviewed', { detail: { id: card.id, rating } }));
-        if (typeof window.triggerParticleBurst === 'function' && rating >= 3) {
-          window.triggerParticleBurst(window.innerWidth / 2, window.innerHeight / 2.3);
-        }
         nextCard();
       }
     });
@@ -749,9 +746,6 @@ export function handleKeyboardShortcuts(e) {
         const card = state.currentDeck[state.currentIndex];
         const rating = parseInt(e.key, 10);
         window.dispatchEvent(new CustomEvent('card:reviewed', { detail: { id: card.id, rating: rating } }));
-        if (typeof window.triggerParticleBurst === 'function') {
-          window.triggerParticleBurst(window.innerWidth / 2, window.innerHeight / 2.3);
-        }
         nextCard();
       }
       break;

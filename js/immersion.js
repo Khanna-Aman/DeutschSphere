@@ -312,12 +312,7 @@ export function openWordExplorer(item) {
         state.learnedCards.add(Number(card.id));
         // Add to SRS state
         state.reviewCardSRS(card.id, 3); // Automatically review with 3 (Good) as first steps
-        
-        // Success indications
-        if (typeof window.triggerParticleBurst === 'function') {
-          window.triggerParticleBurst(window.innerWidth / 2, window.innerHeight / 2);
-        }
-        
+
         // Re-analyze and re-render to sync card status
         const text = elements.immersionTextarea.value.trim();
         immersionResults = analyzeText(text, state.allCards, state.learnedCards);
@@ -351,10 +346,6 @@ export function openWordExplorer(item) {
         // Also mark it learned immediately in SRS
         state.learnedCards.add(Number(newCard.id));
         state.reviewCardSRS(newCard.id, 3);
-
-        if (typeof window.triggerParticleBurst === 'function') {
-          window.triggerParticleBurst(window.innerWidth / 2, window.innerHeight / 2);
-        }
 
         const text = elements.immersionTextarea.value.trim();
         immersionResults = analyzeText(text, state.allCards, state.learnedCards);

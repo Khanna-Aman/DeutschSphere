@@ -931,16 +931,4 @@ export function shuffleArray(array) {
   return array;
 }
 
-// Global high-performance Canvas-based Star-Glitter Particle Burst Engine
-// Redefined as silent no-op to support zero-distraction focus
-window.triggerParticleBurst = function(x, y) {
-  // Silent no-op
-};
-
-// Redefined as silent no-op to support zero-distraction focus
-window.triggerPremiumAnimation = function(type) {
-  // Silent no-op
-};
-
-
 
