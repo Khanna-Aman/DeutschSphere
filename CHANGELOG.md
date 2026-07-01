@@ -33,6 +33,20 @@ the release **GO (conditional), ≈85/100**.
 - **Scheduler relabeled "FSRS-inspired (FSRS-5-based)"** in `js/fsrs.js` + docs, with the
   three deliberate simplifications from reference FSRS-5 documented in the module header
   (honesty fix — no behavior change; `w17/w18` marked reserved).
+- **Data cache propagation** — bumped `WORDLIST_CACHE_VERSION` (`v1.0.7`) so returning
+  visitors re-fetch the corrected 2,660-entry dataset instead of serving stale cache.
+
+### UI
+- Recall buttons now show their **1/2/3/4 hotkey** as a color-matched keycap; tightened the
+  gap between the word card and the meaning box; made the Phonetik spectrogram labels
+  ("Reference / Your Spectrogram") readable (backing pill, no waveform strike-through).
+  Shell cache bumped to `v7.5.1`.
+
+### Public launch
+- Repo made public with a clean root: **SVG hero banner**, CI status badges, `SECURITY.md`,
+  `CODE_OF_CONDUCT.md`, issue/PR templates, `.gitattributes`, `.nojekyll`. Internal
+  maintainer docs and the one-off generation pipeline are kept local (not published).
+  Imagery cleared for redistribution (Google Cloud Vertex AI terms). Live on GitHub Pages.
 
 ### Changed
 - Docs synced (README/VISION/AGENTS/backlog/CONTRIBUTING) to the new counts, the FSRS
