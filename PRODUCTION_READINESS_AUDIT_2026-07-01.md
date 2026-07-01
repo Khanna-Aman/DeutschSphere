@@ -105,10 +105,10 @@ Weighted mean ≈ **85/100**.
 ### 3 — Example sentences  *(PASS)*
 - `check_example_originality.py`: **verbatim = 0** across all 2,660 (one new example, `nächst-`, collided
   and was rewritten; re-run clean). 29 near-6-gram overlaps flagged advisory-only.
-- Grammar: the **33 newly-authored split examples pass LanguageTool (de-DE) with 0 grammar defects**
-  (targeted offline run over the new + adjacent entries: 0/88). Pre-existing examples were gated at 0
-  genuine defects in prior passes. Full-corpus re-run available via `check_grammar_languagetool.py`
-  (local LanguageTool-6.8, offline).
+- Grammar: **full-corpus offline LanguageTool gate (`check_grammar_languagetool.py`, LanguageTool-6.8) →
+  0 grammar/spell defects** (a1 684 / a2 580 / b1 1,394 checked; 12 advisory style/typography items,
+  non-blocking; VERDICT PASS). This pass covered all 31 new B1 split examples; the 2 new A2 examples were
+  separately verified clean (0/88 targeted run). Whole 2,660-entry corpus is grammar-clean.
 
 ### 4 — Architecture & code quality  *(P2)*
 - Clean ESM boundaries; `fsrs.js`/`nlp.js` import cleanly in Node. Largest modules `flashcards.js`
