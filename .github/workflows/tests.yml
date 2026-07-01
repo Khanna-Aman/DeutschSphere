@@ -1,0 +1,55 @@
+name: tests
+
+# Deterministic test gate. The `unit` job runs the pure-logic suite
+# (tests/*.test.mjs) on Node's built-in runner — zero dependencies, no browser —
+# and is a HARD gate on every code change: it guards the FSRS-5 scheduler and the
+# German NLP layer against regressions. The `e2e` job boots the real app in
+# headless Chromium (Playwright) and is advisory for now (browser flakiness);
+# flip continue-on-error off once it has proven stable in CI.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.js"
+      - "tests/**"
+      - "package.json"
+      - ".github/workflows/tests.yml"
+  pull_request:
+    paths:
+      - "**/*.js"
+      - "tests/**"
+      - "package.json"
+      - ".github/workflows/tests.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Deterministic unit tests (FSRS-5 + NLP) — node --test
+        run: npm test
+
+  e2e:
+    runs-on: ubuntu-latest
+    # Advisory until proven stable: browser-driven, subject to headless flakiness.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Playwright + Chromium
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Boot / smoke + scheduler round-trip
+        run: python tests/smoke_e2e.py
