@@ -137,7 +137,7 @@ A1-B1_German/
 │
 ├── a1/ , a2/ , b1/         # Verified datasets (wordlist.json + WebP graphical assets)
 ├── scripts/                # Data validator, originality/grammar gates, and Playwright QA scripts
-└── .github/workflows/      # CI: data-integrity gate (validate-data.yml)
+└── .github/workflows/      # CI: validate-data.yml (data) · js-checks.yml (JS) · quality.yml (Lighthouse a11y/SEO)
 ```
 
 ---
@@ -158,12 +158,14 @@ Then commit the updated `tailwind.css` (it is served statically by GitHub Pages 
 
 **Automated (CI):** Every push or pull request that touches a wordlist or a doc that quotes counts runs [`scripts/validate_data.py`](scripts/validate_data.py) through GitHub Actions ([`.github/workflows/validate-data.yml`](.github/workflows/validate-data.yml)). Treating each `wordlist.json` as the source of truth, the build fails on invalid JSON, duplicate ids, broken or duplicated image references, or any published word count that no longer matches the data.
 
+Two further gates run on every push and pull request: [`js-checks.yml`](.github/workflows/js-checks.yml) (`node --check` on all `js/**` plus advisory ESLint) and [`quality.yml`](.github/workflows/quality.yml), which runs Lighthouse (axe-core under the hood) and **fails the build if accessibility, best-practices, or SEO fall below the verified 100 / 95 / 100 bars** (performance is tracked as an advisory warning). Run the checks locally with `npm run check`, `npm run lint`, and `npm run audit:lighthouse`.
+
 **Local (manual):** A set of [Playwright](https://playwright.dev/)-driven scripts run the app in a real browser. They require a one-time `pip install playwright && playwright install chromium`:
 * **Syntax smoke test** — `python scripts/debug_syntax.py` serves the app, loads it headless, and asserts every module imports with a clean console.
 * **Unit tests** — `python scripts/run_unit_tests.py` exercises the FSRS-5 stability/difficulty scheduling math, the Kölner Phonetik similarity algorithm, and German noun/verb lemmatization in-browser.
 * **End-to-end** — `python scripts/e2e_comprehensive_tests.py` walks the core user flows against a live local server.
 
-> The browser scripts are run on demand and are not yet wired into CI; today the automated gate is data integrity.
+> These Playwright scripts are legacy and slated for a from-scratch rebuild; they run on demand only. The wired-in automated gates today are **data integrity**, **JS syntax + lint**, and the **Lighthouse accessibility / best-practices / SEO gate**.
 
 ---
 

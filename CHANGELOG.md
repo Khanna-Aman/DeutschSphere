@@ -73,7 +73,8 @@ Closed all three P0 release blockers identified in
 - Coverage: add thematic word groups (days/months/seasons/colours/numbers/
   countries); B1 is a curated subset (~57% of canon); B1 imagery 27%.
 - Quality bars: rebuild the test suite from scratch and wire FSRS/NLP tests into
-  CI; formal WCAG 2.2 AA audit; performance budget.
+  CI; formal **manual** WCAG 2.2 AA sign-off (the automated axe/Lighthouse pass is
+  now CI-gated at a11y 100); production performance budget.
 - Image↔word: human spot-check of the review sheet + 3 near-duplicate pairs.
 
 ## [1.1.0] and earlier

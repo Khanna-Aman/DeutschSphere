@@ -40,10 +40,10 @@
 | 4 | Security | **75** | ★★★½ | P1 | CSP + `escapeHtml` + SRI + no secrets/eval; `unsafe-inline` styles, external CDNs. |
 | 5 | Privacy & data protection | **45** | ★★ | **P0** | Google Fonts + Cloudflare IP leakage; `formsubmit.co` + personal email; **no privacy policy**. |
 | 6 | Legal / IP & licensing | **20** | ★ | **P0** | Verbatim copyrighted examples under MIT; "Goethe" marks w/o disclaimer; Imagen terms unaddressed. |
-| 7 | Accessibility | **75** | ★★★½ | P2 | Skip link, `sr-only`, `lang="de"`, focus mgmt, ARIA; no formal axe pass. |
+| 7 | Accessibility | **75** | ★★★½ | P2 | Skip link, `sr-only`, `lang="de"`, focus mgmt, ARIA; no formal axe pass. *(Since remediated → Lighthouse/axe a11y **100**, CI-gated; §6.)* |
 | 8 | Performance & offline | **72** | ★★★½ | P1 | Precompiled Tailwind, lazy/precached images; CDN deps break true offline first-load; 19.7 MB images. |
 | 9 | PWA robustness | **82** | ★★★★ | P2 | Manifest + SW with dual cache-versioning + install prompt + offline fallback. |
-| 10 | Testing & CI | **50** | ★★½ | P1 | `validate_data.py` gate is good; Playwright/JS tests not wired; CI ignores `js/` changes. |
+| 10 | Testing & CI | **50** | ★★½ | P1 | `validate_data.py` gate is good; Playwright/JS tests not wired; CI ignores `js/` changes. *(Since remediated → `js-checks.yml` + `quality.yml` added; Playwright rebuild still pending, §6.)* |
 | 11 | Documentation honesty | **62** | ★★★ | P1 | Counts corrected; but "zero-inference / NotebookLM-generated" and "100% offline" misrepresent reality. |
 | 12 | UX & pedagogy (SRS) | **88** | ★★★★½ | P2 | FSRS-5, quizzes, pronunciation coaching, immersion, themes, no gamification (study focus). |
 | | **Weighted overall** | **63** | | | Gated by P0 legal/privacy. |
@@ -105,6 +105,7 @@
 
 ### 4.7 Accessibility — 75/100 ✅
 - `lang="de"`, skip link (`index.html:68`), single `sr-only` `h1`, ARIA roles, focus management on route changes (`router.js`), `noscript` fallback. **Not yet** validated with an automated axe pass or contrast audit on the `#020617` palette.
+- **Post-audit remediation:** an automated Lighthouse/axe pass now runs in CI (`quality.yml` + `lighthouserc.json`); **accessibility scores 100** (best-practices 100, SEO 100) after fixing five issues (help-modal close-button name, trainer speed-slider label, a loop-toggle name/label mismatch, the deck-prefs `role="menu"`→labelled `role="group"` disclosure, and heading order) plus an invalid `manifest.json` (trailing comma → console error). A full **manual** WCAG 2.2 AA sign-off (contrast, keyboard-only + screen-reader walkthroughs) remains outstanding.
 
 ### 4.8 Performance & offline — 72/100 ✅ (P1)
 - Precompiled Tailwind, `modulepreload` hints, lazy + on-demand-precached images, SW cache-first for data/images, stale-while-revalidate for CDNs. **But "100% offline" is false on first load**: FontAwesome + Google Fonts are network-required until the SW caches them. 19.7 MB of images are committed and ship with the site.
@@ -114,6 +115,7 @@
 
 ### 4.10 Testing & CI — 50/100 ⚠️ (P1)
 - `.github/workflows/validate-data.yml` runs `validate_data.py` (JSON, unique IDs, image refs, CSV parity, doc/data count consistency) — a genuine, valuable gate. **But** it triggers only on data/doc paths, so **JS changes run no CI at all**; Playwright unit/e2e suites and any linting are not wired in.
+- **Post-audit remediation:** `js-checks.yml` (`node --check` + advisory ESLint on all `js/**`) and `quality.yml` (Lighthouse a11y/best-practices/SEO) now run on every push/PR, so JS changes are gated. **Still pending:** rebuilding the rotted Playwright/unit suites and wiring the deterministic FSRS-5/NLP tests into CI.
 
 ### 4.11 Documentation honesty — 62/100 ⚠️ (P1)
 - Word counts were corrected (3,921 → 2,627) and are CI-guarded — good. **But** two framings misrepresent reality: (a) "**zero-inference / examples produced via NotebookLM**" — the examples are *extracted verbatim* from Goethe, not generated; (b) "**100% offline PWA**" — untrue on first load (CDN fonts). README/VISION/CONTRIBUTING should be restated precisely.
@@ -153,10 +155,10 @@
 - 🟡 **Coverage plan** — add the missing thematic groups (days/months/seasons/colours/numbers/countries) as A1 content; publish an honest B1 completeness roadmap.
 
 ### P2
-- ⏳ **B1 imagery** (992 missing) — bulk Imagen 3 generation needs GCP/Vertex creds (git-ignored) + cost; **out of scope for automatic remediation** unless access is provided.
+- ⏳ **B1 imagery** — the honest target is the **concrete-noun subset (~300–450), not 992** (many missing entries are abstract nouns/adjectives/verbs that dual-coding shouldn't force-image). Free, redistributable path identified: **FLUX.1 [schnell]** (Apache-2.0) locally or via Cloudflare Workers AI's free tier, each image QA'd through `check_image_word_clip.py`. Needs one owner input (a free Cloudflare token **or** GPU confirmation). See `COMPETITIVE_ANALYSIS_2026-06-30.md` §6 and `backlog.md` §9. *(Supersedes the prior Imagen-3-only framing.)*
 - 🟡 **Image↔word semantic verification** — first automated pass done (`scripts/check_image_word_clip.py`, free/local CLIP + pHash). No systematic mismapping found; 415 concrete cards confirmed, 3 near-duplicate pairs and a worst-first review sheet (`scripts/image_check_review.html`) await a human spot-check. Optional later: concreteness gate / local-VLM layer to tighten the flag list. See §4.2.
 - **Test suite** — delete the three rotted Playwright/unit scripts and rebuild from scratch (FSRS-5 + NLP unit tests, smoke + key e2e flows), then wire the deterministic ones into CI. (`scripts/` also holds ~30 one-off generation/migration scripts that are now cruft.)
-- Run an axe/WCAG accessibility pass; consider decomposing the two largest JS modules (`flashcards.js`, `events.js`). *(Done this session: `CHANGELOG.md` added; the "619 orphaned SVGs" were a git-ignored local twemoji cache and no orphan WebPs exist — see §4.2.)*
+- ✅ **axe/WCAG accessibility pass — done:** Lighthouse/axe **a11y 100** (best-practices 100, SEO 100), CI-gated via `quality.yml` + `lighthouserc.json`; invalid `manifest.json` fixed. *(Also this cycle: `CHANGELOG.md` + `COMPETITIVE_ANALYSIS_2026-06-30.md` added; the "619 orphaned SVGs" were a git-ignored local twemoji cache and no orphan WebPs exist — see §4.2.)* **Still open:** full manual WCAG 2.2 AA sign-off; decomposing the two largest JS modules (`flashcards.js`, `events.js`).
 
 ---
 

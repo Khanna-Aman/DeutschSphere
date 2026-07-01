@@ -19,17 +19,17 @@ Then navigate to `http://localhost:8080`.
 
 ## Testing
 
-Data integrity is enforced automatically in CI (`.github/workflows/validate-data.yml`). Before submitting a Pull Request, run it locally along with the in-browser suites:
+Data integrity, JS syntax/lint, and accessibility are all enforced automatically in CI (`validate-data.yml`, `js-checks.yml`, `quality.yml`). Before submitting a Pull Request, run them locally:
 
 ```bash
 # Data integrity — counts, image refs, doc consistency (no deps)
 python scripts/validate_data.py
 
-# In-browser unit tests — FSRS-5 math, Kölner Phonetik, lemmatization
-python scripts/run_unit_tests.py
+# JS syntax check + lint
+npm run check && npm run lint
 
-# End-to-end user-journey checks
-python scripts/e2e_comprehensive_tests.py
+# Accessibility / best-practices / SEO (Lighthouse, axe-core) — must stay 100 / 95 / 100
+npm run audit:lighthouse
 ```
 
-The browser suites require a one-time `pip install playwright && playwright install chromium`.
+The Playwright browser scripts (`scripts/run_unit_tests.py`, `scripts/e2e_comprehensive_tests.py`) are **legacy and slated for a from-scratch rebuild**; they require a one-time `pip install playwright && playwright install chromium` and are run on demand only.

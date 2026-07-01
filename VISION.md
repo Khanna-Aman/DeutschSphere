@@ -40,12 +40,12 @@ DeutschSphere is designed to maximize vocabulary acquisition through distraction
 ### 🔜 Short-Term Milestones (v1.1.x)
 * **B1 Asset Rollout**: Complete the final integration of audited 3D glassmorphic WebP assets for the remaining B1 entries (371/1,363 done, 992 outstanding) following strict anti-bleeding checks.
 * **IndexedDB Thread Tuning**: Debounce and stream asynchronous profile writes in `js/state.js` to eliminate micro-stutters during massive bulk updates (e.g. after a large quiz session).
-* **WCAG 2.2 AA Accessibility**: Audit and refine WAI-ARIA roles, ensuring keyboard-only and screen-reader accessibility across all view transitions and accordions.
+* **WCAG 2.2 AA Accessibility**: ✅ Automated pass complete — Lighthouse/axe **accessibility 100** (best-practices 100, SEO 100), enforced by the `quality.yml` CI gate. Remaining: the full *manual* AA sign-off (keyboard-only and screen-reader walkthrough of every view transition and accordion) that automation cannot cover.
 
 ### 🔮 Medium-Term Evolutions (v1.2.0)
 * **Customizable FSRS-5 Parameters & Timing Weights**: Advanced power-user configuration console under Settings allowing users to customize FSRS-5 matrix weights, target request retention rates (e.g., 85%–95%), custom interval caps, and timing multipliers.
-* **High-Fidelity TTS Voices**: Transition from browser-specific speech synthesis to pre-rendered neural voice grids using Google Cloud Text-to-Speech (Studio voice layers) managed within free character tiers.
-* **Advanced Pronunciation Analytics**: Refine speech analysis by mapping local microphone recordings against Google's USM (Universal Speech Model - Chirp v2) for syllable-level coaching.
+* **Native-Speaker Audio**: Replace browser speech synthesis with **free, redistributable, offline** audio — real native recordings from Lingua Libre (CC-BY-SA) where available, filled by Piper TTS + the CC0 Thorsten voice — bundled and Service-Worker-precached (no runtime cloud call, preserving the offline pledge).
+* **On-Device Pronunciation Analytics**: Move pronunciation scoring fully on-device with an offline recognizer (Vosk, Apache-2.0, or whisper.cpp) — removing the cloud `SpeechRecognition` dependency and keeping the privacy pledge intact.
 * **Double-Sided Printable Flashcard Sheets**: Render a clean printable table of highly critical vocabulary ($D > 7$ under FSRS-5) with native CSS printing rules for physical spaced repetition review.
 
 ---
