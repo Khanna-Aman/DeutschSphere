@@ -1,6 +1,19 @@
-// js/fsrs.js — Free Spaced Repetition Scheduler (FSRS-5) Pure Client-Side Implementation
-// Zero dependencies. Models each card with Stability (S), Difficulty (D), and State.
+// js/fsrs.js — FSRS-inspired Spaced Repetition Scheduler (based on the FSRS-5 model).
+// Zero dependencies. Models each card with Stability (S), Difficulty (D), and State,
+// using the FSRS-5 19-parameter weight vector.
 // Reference: https://github.com/open-spaced-repetition/fsrs4anki/wiki/The-Algorithm
+//
+// HONEST SCOPE — this is FSRS-5-*based*, not a byte-for-byte port. Known, deliberate
+// simplifications from the reference FSRS-5 algorithm (documented so the label stays honest):
+//   1. Difficulty update (_nextDifficulty) mean-reverts toward D0(Good) and omits the
+//      FSRS-5 linear-damping term (10−D)/9; reference FSRS-5 reverts toward D0(Easy).
+//   2. Forgetting curve (getRetrievability) uses R = (1 + t/(9S))^-1 (the simpler FSRS-4.x
+//      form), not the FSRS-5 power curve R = (1 + (19/81)·t/S)^-0.5; _nextInterval is the
+//      consistent inverse of this curve.
+//   3. The short-term stability step (weights w17/w18) is NOT implemented; those two
+//      weights are reserved (see DEFAULT_WEIGHTS) for a future spec-complete pass.
+// The scheduler is internally consistent, monotonic, bounded and deterministic
+// (see tests/fsrs.test.mjs). A fully spec-compliant FSRS-5 rewrite is tracked as a follow-up.
 
 // ==========================================
 // FSRS CARD STATES
@@ -43,8 +56,8 @@ const DEFAULT_WEIGHTS = [
   2.2700,   // w14 — failure stability power
   0.2000,   // w15 — hard penalty
   2.9466,   // w16 — easy bonus
-  0.5100,   // w17 — short-term stability modifier
-  0.6400    // w18 — short-term stability modifier
+  0.5100,   // w17 — short-term stability modifier (RESERVED — short-term step not implemented)
+  0.6400    // w18 — short-term stability modifier (RESERVED — short-term step not implemented)
 ];
 
 // ==========================================

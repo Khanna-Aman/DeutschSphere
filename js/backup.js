@@ -274,7 +274,7 @@ export async function restoreSyncKey() {
             <span class="text-[10px] font-black uppercase tracking-wider text-slate-500">Metric</span>
             <span class="text-xs font-bold text-slate-300 border-l-2 border-indigo-500/30 pl-2">Learned Cards</span>
             <span class="text-xs font-bold text-slate-300 border-l-2 border-indigo-500/30 pl-2">Custom Cards</span>
-            <span class="text-xs font-bold text-slate-300 border-l-2 border-indigo-500/30 pl-2">FSRS-5 Cards</span>
+            <span class="text-xs font-bold text-slate-300 border-l-2 border-indigo-500/30 pl-2">FSRS Cards</span>
           </div>
 
           <!-- Local Profile Column -->
