@@ -1,4 +1,10 @@
-# 🇩🇪 DeutschSphere
+<div align="center">
+
+<a href="https://khanna-aman.github.io/DeutschSphere/">
+  <img src=".github/banner.svg" alt="DeutschSphere — German A1–B1 vocabulary flashcards that remember what you forget" width="100%">
+</a>
+
+<br/>
 
 [![Live Web App](https://img.shields.io/badge/Launch%20App-DeutschSphere-FF007F?style=for-the-badge&logo=google-translate&logoColor=white&labelColor=020617)](https://khanna-aman.github.io/DeutschSphere/)
 [![Deploy Status](https://img.shields.io/badge/Deploy-GitHub%20Pages-00F0FF?style=for-the-badge&logo=github&logoColor=white&labelColor=020617)](https://khanna-aman.github.io/DeutschSphere/)
@@ -9,6 +15,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-informational.svg)](LICENSE)
 ![PWA offline-ready](https://img.shields.io/badge/PWA-offline--ready-5A0FC8?logo=pwa&logoColor=white)
 ![Runtime dependencies: 0](https://img.shields.io/badge/runtime%20deps-0-success)
+
+</div>
 
 **Learn German A1–B1 vocabulary with flashcards that actually remember what you
 forget.** DeutschSphere is a free, offline-first study app built around proven

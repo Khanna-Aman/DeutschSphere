@@ -1,0 +1,82 @@
+<svg width="1280" height="360" viewBox="0 0 1280 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DeutschSphere — German A1 to B1 vocabulary that remembers what you forget">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#020617"/>
+      <stop offset="0.55" stop-color="#0a1128"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1280" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF007F"/>
+      <stop offset="1" stop-color="#00F0FF"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#6366f1" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="title" x1="360" y1="0" x2="920" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c7d2fe"/>
+    </linearGradient>
+    <style>
+      .t { font-family: 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+
+  <!-- backdrop -->
+  <rect width="1280" height="360" rx="16" fill="url(#bg)"/>
+  <ellipse cx="960" cy="120" rx="520" ry="360" fill="url(#glow)"/>
+
+  <!-- top accent bar -->
+  <rect x="0" y="0" width="1280" height="6" rx="3" fill="url(#accent)"/>
+
+  <!-- decorative "sphere" orbit motif -->
+  <g stroke="#1e293b" stroke-width="1.5" fill="none" opacity="0.9">
+    <circle cx="180" cy="180" r="118"/>
+    <ellipse cx="180" cy="180" rx="118" ry="44"/>
+    <ellipse cx="180" cy="180" rx="70" ry="118"/>
+  </g>
+  <circle cx="180" cy="180" r="70" fill="#0b1220" stroke="#233046" stroke-width="1.5"/>
+  <text x="180" y="200" text-anchor="middle" class="t" font-size="56" font-weight="800" fill="url(#accent)">DE</text>
+  <circle cx="298" cy="180" r="7" fill="#FF007F"/>
+  <circle cx="180" cy="62" r="6" fill="#00F0FF"/>
+  <circle cx="62" cy="180" r="5" fill="#6366f1"/>
+
+  <!-- German flag pill -->
+  <g transform="translate(360,74)">
+    <rect x="0" y="0" width="66" height="22" rx="6" fill="#111827" stroke="#233046"/>
+    <rect x="8"  y="6" width="16" height="10" rx="2" fill="#000000"/>
+    <rect x="25" y="6" width="16" height="10" rx="2" fill="#DD0000"/>
+    <rect x="42" y="6" width="16" height="10" rx="2" fill="#FFCE00"/>
+  </g>
+  <text x="438" y="91" class="t" font-size="15" font-weight="600" letter-spacing="3" fill="#94a3b8">A1 · A2 · B1  VOCABULARY</text>
+
+  <!-- title -->
+  <text x="360" y="182" class="t" font-size="82" font-weight="800" fill="url(#title)">DeutschSphere</text>
+
+  <!-- tagline -->
+  <text x="362" y="228" class="t" font-size="26" font-weight="500" fill="#cbd5e1">Flashcards that remember what you forget.</text>
+
+  <!-- feature chips -->
+  <g class="t" font-size="16" font-weight="600">
+    <g transform="translate(362,262)">
+      <rect width="168" height="38" rx="19" fill="#0b1220" stroke="#233046"/>
+      <circle cx="22" cy="19" r="4" fill="#FF007F"/>
+      <text x="40" y="24" fill="#e2e8f0">Spaced repetition</text>
+    </g>
+    <g transform="translate(544,262)">
+      <rect width="132" height="38" rx="19" fill="#0b1220" stroke="#233046"/>
+      <circle cx="22" cy="19" r="4" fill="#00F0FF"/>
+      <text x="40" y="24" fill="#e2e8f0">Offline PWA</text>
+    </g>
+    <g transform="translate(690,262)">
+      <rect width="132" height="38" rx="19" fill="#0b1220" stroke="#233046"/>
+      <circle cx="22" cy="19" r="4" fill="#6366f1"/>
+      <text x="40" y="24" fill="#e2e8f0">Zero tracking</text>
+    </g>
+    <g transform="translate(836,262)">
+      <rect width="126" height="38" rx="19" fill="#0b1220" stroke="#233046"/>
+      <circle cx="22" cy="19" r="4" fill="#22c55e"/>
+      <text x="40" y="24" fill="#e2e8f0">Free forever</text>
+    </g>
+  </g>
+</svg>
