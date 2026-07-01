@@ -155,6 +155,8 @@ A1-B1_German/
 ├── CONTRIBUTING.md         # Contribution workflow
 ├── DEVELOPMENT.md          # Build, run, architecture & CI (developer guide)
 ├── NOTICE / LICENSE / PRIVACY.md   # Attribution, MIT (code), privacy policy
+├── SECURITY.md / CODE_OF_CONDUCT.md   # Vuln-reporting policy; Contributor Covenant
+├── .gitattributes / .nojekyll  # LF normalization; disable Jekyll on GitHub Pages
 ├── CHANGELOG.md             # Notable changes
 ├── backlog.md               # Feature/spec log (lags; audit + CHANGELOG are authoritative)
 ├── PRODUCTION_READINESS_AUDIT_2026-07-01.md   # Current audit (GO/NO-GO, confirm/refute, findings)
@@ -169,7 +171,8 @@ A1-B1_German/
 │                           #   check_grammar_languagetool.py, check_examples_llm_judge.py,
 │                           #   apply_examples.py, vendor_fonts.py, check_image_word_clip.py
 ├── tests/                  # fsrs.test.mjs + nlp.test.mjs (node --test) + smoke_e2e.py (Playwright)
-└── .github/workflows/      # CI: validate-data.yml + js-checks.yml + quality.yml + tests.yml (unit gate + e2e)
+└── .github/                # workflows/ (validate-data · js-checks · tests · quality) +
+                            #   ISSUE_TEMPLATE/ + PULL_REQUEST_TEMPLATE.md
 ```
 
 ---

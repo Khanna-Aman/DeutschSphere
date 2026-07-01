@@ -1,0 +1,28 @@
+# Normalize line endings: store text as LF in the repo, check out native.
+* text=auto eol=lf
+
+# Explicitly treat binary assets as binary (never diff or eol-convert).
+*.webp binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.woff binary
+*.woff2 binary
+*.ttf  binary
+*.otf  binary
+*.eot  binary
+*.mp3  binary
+*.mp4  binary
+*.pdf  binary
+
+# Keep shell scripts LF regardless of platform.
+*.sh text eol=lf
+
+# Collapse large generated/data files in diffs and language stats.
+*.json linguist-generated=false
+a1/wordlist.json linguist-generated=true
+a2/wordlist.json linguist-generated=true
+b1/wordlist.json linguist-generated=true
+tailwind.css linguist-generated=true

@@ -3,6 +3,13 @@
 [![Live Web App](https://img.shields.io/badge/Launch%20App-DeutschSphere-FF007F?style=for-the-badge&logo=google-translate&logoColor=white&labelColor=020617)](https://khanna-aman.github.io/DeutschSphere/)
 [![Deploy Status](https://img.shields.io/badge/Deploy-GitHub%20Pages-00F0FF?style=for-the-badge&logo=github&logoColor=white&labelColor=020617)](https://khanna-aman.github.io/DeutschSphere/)
 
+[![Tests](https://github.com/Khanna-Aman/DeutschSphere/actions/workflows/tests.yml/badge.svg)](https://github.com/Khanna-Aman/DeutschSphere/actions/workflows/tests.yml)
+[![Data integrity](https://github.com/Khanna-Aman/DeutschSphere/actions/workflows/validate-data.yml/badge.svg)](https://github.com/Khanna-Aman/DeutschSphere/actions/workflows/validate-data.yml)
+[![Quality (Lighthouse)](https://github.com/Khanna-Aman/DeutschSphere/actions/workflows/quality.yml/badge.svg)](https://github.com/Khanna-Aman/DeutschSphere/actions/workflows/quality.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-informational.svg)](LICENSE)
+![PWA offline-ready](https://img.shields.io/badge/PWA-offline--ready-5A0FC8?logo=pwa&logoColor=white)
+![Runtime dependencies: 0](https://img.shields.io/badge/runtime%20deps-0-success)
+
 **Learn German A1–B1 vocabulary with flashcards that actually remember what you
 forget.** DeutschSphere is a free, offline-first study app built around proven
 spaced repetition — 2,660 curated words with illustrations, audio, quizzes, and a
@@ -84,7 +91,7 @@ the official Goethe-Institut *Wortlisten*.
 > **An honest word on coverage.** Each entry's German headword, gender, and plural
 > were cross-checked against the official Goethe lists (~99.6% fidelity). That is
 > **not** the same as covering those lists in full: B1 is a **curated subset**
-> (about 57% of the ~2,400 official B1 units), B1 illustrations are still rolling
+> (about 58% of the ~2,400 official B1 units), B1 illustrations are still rolling
 > out, and some thematic groups (days, months, seasons, colours, numbers, countries)
 > aren't in yet. We'd rather tell you exactly where we stand than round up.
 

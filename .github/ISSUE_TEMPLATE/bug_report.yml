@@ -1,0 +1,39 @@
+name: 🐛 Bug report
+description: Something isn't working as expected in the app
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve DeutschSphere! Please include enough detail to reproduce.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+      placeholder: "When I graded a card as 'Good', it…"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the app
+        2. Go to level B1
+        3. …
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Device / browser
+      placeholder: "e.g. Android 14 / Chrome 126, or Windows / Firefox 128"
+    validations:
+      required: true
+  - type: textarea
+    id: console
+    attributes:
+      label: Console errors (optional)
+      description: If you can, open DevTools → Console and paste any red errors.
+      render: shell

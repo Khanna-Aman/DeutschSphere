@@ -1,0 +1,37 @@
+name: 📚 Data correction
+description: Report an inaccurate headword, gender, plural, translation, or example
+labels: ["data"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Vocabulary facts are sourced from the official Goethe Wortlisten. If something
+        looks wrong, please point to the exact entry so we can verify against the source.
+  - type: input
+    id: headword
+    attributes:
+      label: Word (German headword) and level
+      placeholder: "die Lippe — B1"
+    validations:
+      required: true
+  - type: dropdown
+    id: field
+    attributes:
+      label: Which field is wrong?
+      options:
+        - Gender (der/die/das)
+        - Plural
+        - Word class
+        - English translation
+        - Example sentence
+        - Pronunciation hint
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What should it be, and why?
+      description: Include a reference (e.g. the Goethe Wortliste, Duden) if you can.
+    validations:
+      required: true

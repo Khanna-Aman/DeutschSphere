@@ -48,6 +48,8 @@ Deployment-specific checks beyond the code audit (verified 2026-07-01):
 | Canonical / Open-Graph / manifest URLs match the deploy target | ✅ `khanna-aman.github.io/DeutschSphere` matches remote `Khanna-Aman/DeutschSphere` |
 | Offline integrity (SW precache + IndexedDB) | ✅ verified by `tests/smoke_e2e.py` |
 | Data / originality / grammar / unit gates | ✅ all green (2,660 entries; 0 verbatim; 0 grammar defects; 22/22 tests) |
+| **Secret scan (current tree + full git history)** | ✅ no API keys/tokens/private keys/cookies ever committed; `.env`/`*key.json` untracked; no GCP id or local paths leaked |
+| **SOTA repo hygiene** | ✅ `SECURITY.md`, `CODE_OF_CONDUCT.md`, `.gitattributes`, issue/PR templates, CI status badges |
 
 **Owner acknowledgements (not blockers, but decide before launch):**
 - The feedback form posts to `formsubmit.co/…/2002aman.khanna@gmail.com` — a **personal email that
