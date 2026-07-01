@@ -51,8 +51,8 @@ original P0s remain closed. Full report: `PRODUCTION_READINESS_AUDIT_2026-07-01.
 
 ## 2026-06-30 (production-readiness remediation)
 
-Closed all three P0 release blockers identified in
-`PRODUCTION_READINESS_AUDIT_2026-06-30.md`.
+Closed all three P0 release blockers identified in the prior production-readiness
+audit (since superseded by `PRODUCTION_READINESS_AUDIT_2026-07-01.md`).
 
 ### Changed
 - **All 2,627 example sentences (A1/A2/B1) rewritten as original content**,

@@ -1,7 +1,7 @@
 # DeutschSphere — Competitive Analysis & KPI Benchmark (2026-06-30)
 
 **Status:** Strategic assessment — informational, not a release gate.
-**Companion docs:** `PRODUCTION_READINESS_AUDIT_2026-06-30.md` (internal quality),
+**Companion docs:** `PRODUCTION_READINESS_AUDIT_2026-07-01.md` (internal quality),
 `AGENTS.md` (vision & scope), `VISION.md` (roadmap).
 
 ---

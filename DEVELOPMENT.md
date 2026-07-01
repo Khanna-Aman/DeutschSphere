@@ -88,17 +88,19 @@ npx tailwindcss@3.4.17 -c tailwind.config.js -i tailwind.input.css -o tailwind.c
 
 ## Quality gates & CI
 
-Three GitHub Actions workflows gate every push and pull request:
+Four GitHub Actions workflows gate every push and pull request:
 
 | Workflow | What it checks |
 | :--- | :--- |
-| `validate-data.yml` | `validate_data.py` — treats each `wordlist.json` as source of truth; fails on invalid JSON, duplicate ids, broken/duplicated image refs, or any published word count that drifts from the data. |
+| `validate-data.yml` | `validate_data.py` — treats each `wordlist.json` as source of truth; fails on invalid JSON, duplicate ids, broken/duplicated image refs, merged/unrelated-lemma headwords, or any published word count that drifts from the data. |
 | `js-checks.yml` | `node --check` syntax on all `js/**` + advisory ESLint. |
+| `tests.yml` | **Hard gate:** deterministic FSRS + NLP unit tests (`node --test`, `tests/*.test.mjs`). Plus an advisory Playwright boot/smoke (`tests/smoke_e2e.py`). |
 | `quality.yml` | Lighthouse (axe-core under the hood). **Hard gate**: accessibility / best-practices / SEO must stay at the verified **100 / 95 / 100** bars. Performance is advisory (CI throttles unminified dev assets). |
 
 Run the same checks locally:
 
 ```bash
+npm test                             # deterministic FSRS + NLP unit tests (no deps)
 python scripts/validate_data.py     # data integrity
 npm run check && npm run lint        # JS syntax + lint
 npm run audit:lighthouse             # accessibility / best-practices / SEO
@@ -108,13 +110,32 @@ npm run audit:lighthouse             # accessibility / best-practices / SEO
 (0-verbatim copyright gate), `check_grammar_languagetool.py` (offline LanguageTool),
 and `check_image_word_clip.py` (free local CLIP + perceptual-hash image↔word check).
 
-**Legacy tests.** The Playwright scripts (`scripts/run_unit_tests.py`,
-`scripts/e2e_comprehensive_tests.py`) are **slated for a from-scratch rebuild** and
-run on demand only (`pip install playwright && playwright install chromium`).
+**Tests.** Deterministic units live in `tests/` and run on Node's built-in runner
+(`npm test`, zero deps). A browser-driven boot/smoke (`tests/smoke_e2e.py`) needs a
+one-time `pip install playwright && playwright install chromium`, then `npm run test:e2e`.
+
+## Deploying to GitHub Pages
+
+The app is a static site with **no build step** — GitHub Pages serves the repo as-is.
+
+1. Push your branch and merge to **`main`** (Pages deploys from `main`).
+2. Repo **Settings → Pages → Build and deployment → Source: "Deploy from a branch"**,
+   branch **`main`**, folder **`/ (root)`**. Save.
+3. Wait ~1 minute; the site goes live at
+   **`https://<user>.github.io/<repo>/`** (for this repo: `https://khanna-aman.github.io/DeutschSphere/`).
+
+Notes:
+- A committed **`.nojekyll`** disables Jekyll so every file/folder is published verbatim.
+- All asset paths are **relative** and the service-worker scope is `./`, so the app works
+  correctly under the `/<repo>/` subpath — no config needed.
+- If you fork/rename, update the canonical + Open Graph URLs in `index.html` and the
+  badges in `README.md` to your `https://<user>.github.io/<repo>/`.
+- The Goethe source PDFs/MP3s in `.raw_resources/` are **git-ignored** and never
+  published; only the original, gated app content ships.
 
 ## Further reading
 
 - [AGENTS.md](AGENTS.md) — vision, scope boundaries, and engineering directives (read first).
-- [PRODUCTION_READINESS_AUDIT_2026-06-30.md](PRODUCTION_READINESS_AUDIT_2026-06-30.md) — full audit + remediation log.
+- [PRODUCTION_READINESS_AUDIT_2026-07-01.md](PRODUCTION_READINESS_AUDIT_2026-07-01.md) — full audit + remediation log.
 - [COMPETITIVE_ANALYSIS_2026-06-30.md](COMPETITIVE_ANALYSIS_2026-06-30.md) — KPI benchmark + in-bounds roadmap.
 - [CHANGELOG.md](CHANGELOG.md) · [backlog.md](backlog.md) — history and feature/spec log.

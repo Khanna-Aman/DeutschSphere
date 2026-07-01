@@ -157,8 +157,7 @@ A1-B1_German/
 ├── NOTICE / LICENSE / PRIVACY.md   # Attribution, MIT (code), privacy policy
 ├── CHANGELOG.md             # Notable changes
 ├── backlog.md               # Feature/spec log (lags; audit + CHANGELOG are authoritative)
-├── PRODUCTION_READINESS_AUDIT_2026-07-01.md   # Latest audit (GO/NO-GO, confirm/refute, findings)
-├── PRODUCTION_READINESS_AUDIT_2026-06-30.md   # Prior audit baseline (superseded)
+├── PRODUCTION_READINESS_AUDIT_2026-07-01.md   # Current audit (GO/NO-GO, confirm/refute, findings)
 ├── COMPETITIVE_ANALYSIS_2026-06-30.md         # Competitor KPI benchmark + in-bounds roadmap
 │
 ├── fonts/                  # Self-hosted Inter, Outfit, Font Awesome (no CDN)

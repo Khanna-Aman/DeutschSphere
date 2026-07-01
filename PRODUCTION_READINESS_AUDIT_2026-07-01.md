@@ -5,7 +5,8 @@
 suite into a CI gate, relabeled the scheduler honestly, and **split a systemic data defect** (33
 merged wordlist entries) into correct separate lemmas. Feature TODOs (audio, B1 imagery, thematic
 groups, module decomposition, manual WCAG sign-off, perf budget) remain **audited but deferred**.
-**Prior baseline (not overwritten):** `PRODUCTION_READINESS_AUDIT_2026-06-30.md`.
+**Supersedes** the prior 2026-06-30 baseline audit (its claims are carried into the confirm/refute
+table below; the old file was removed to keep the public repo root clean).
 
 > Every number below was produced by running the code/gates this session. Where a check was sampled
 > rather than exhaustive, it says so. **Corpus is now 2,660 entries** (was 2,627 — see §1).
@@ -31,6 +32,32 @@ re-confirmed**.
 4. **Real performance budget + minification** (§10) — assets are unminified; CI perf is advisory only.
 
 **Overall weighted score: ≈ 85 / 100.**
+
+---
+
+## Public-launch readiness (GitHub Pages) — **GO**
+
+Deployment-specific checks beyond the code audit (verified 2026-07-01):
+
+| Check | Result |
+|---|---|
+| Copyrighted source material not published | ✅ `.raw_resources/` (Goethe PDFs/MP3s) is git-ignored & untracked |
+| No secrets in the repo | ✅ `.env` untracked (only holds a GCP project id/region, no keys); `*key.json` ignored |
+| Works under a project subpath `/<repo>/` | ✅ all asset paths relative; SW scope `./`; manifest scope `./` |
+| Jekyll won't mangle the static site | ✅ `.nojekyll` added; no underscore-prefixed files |
+| Canonical / Open-Graph / manifest URLs match the deploy target | ✅ `khanna-aman.github.io/DeutschSphere` matches remote `Khanna-Aman/DeutschSphere` |
+| Offline integrity (SW precache + IndexedDB) | ✅ verified by `tests/smoke_e2e.py` |
+| Data / originality / grammar / unit gates | ✅ all green (2,660 entries; 0 verbatim; 0 grammar defects; 22/22 tests) |
+
+**Owner acknowledgements (not blockers, but decide before launch):**
+- The feedback form posts to `formsubmit.co/…/2002aman.khanna@gmail.com` — a **personal email that
+  will be visible in public source** and will receive submissions (formsubmit.co needs a one-time
+  email confirmation on first use). Swap or accept.
+- Illustrations were generated with Imagen 3; confirm redistribution terms or migrate to FLUX.1
+  [schnell] (§8) — low risk for a free, non-commercial study tool, but unresolved.
+
+**Verdict: cleared for public release.** The two remaining P1 items (manual WCAG 2.2 AA, performance
+budget) are post-launch polish, not launch blockers for a free study tool.
 
 ---
 

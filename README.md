@@ -13,6 +13,16 @@ browser and works without an internet connection once loaded.
 
 ---
 
+## How to use it (60 seconds)
+
+1. **Open the app** — [tap here](https://khanna-aman.github.io/DeutschSphere/). Nothing to install, no sign-up, no cookie banner.
+2. **Pick a level** (A1 / A2 / B1) and start flipping cards. Tap a card (or press `Space`) to reveal the meaning, then say how well you knew it — **Again · Hard · Good · Easy** (or keys `1`–`4`). That's the whole loop.
+3. **Come back tomorrow.** The app quietly schedules each word for the moment you're about to forget it, so you only review what you actually need.
+
+**Optional:** tap **Install** (or your browser's "Add to Home Screen") to use it like a native app, fully offline. Your progress lives only on your device — to move it to another phone or computer, use **Settings → Backup** to copy a Sync Key.
+
+---
+
 ## Why DeutschSphere
 
 - **🎯 Remembers for you.** A modern spaced-repetition engine (FSRS-inspired, based
@@ -121,7 +131,7 @@ curriculum references are descriptive only. Source code is released under the
 fonts) carries its own terms, documented in [NOTICE](NOTICE).
 
 Curious how production-ready it is? We keep an honest, independent
-[production-readiness audit](PRODUCTION_READINESS_AUDIT_2026-06-30.md) in the open.
+[production-readiness audit](PRODUCTION_READINESS_AUDIT_2026-07-01.md) in the open.
 
 ---
 
