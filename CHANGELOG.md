@@ -5,7 +5,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/); this project use
 date-stamped sections rather than strict SemVer releases (it ships continuously
 to GitHub Pages). For full detail, see the git history.
 
-## [Unreleased] — 2026-07-01 (test-suite rebuild + data-integrity fixes + re-audit)
+## v1.1.0 — 2026-07-01 (test-suite rebuild + data-integrity fixes + public launch)
 
 Independent re-verification pass **plus remediation**. No new P0 blockers; the three
 original P0s remain closed. The maintainers' internal production-readiness audit rates
