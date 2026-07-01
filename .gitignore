@@ -38,13 +38,21 @@ gcp-key.json
 *key.json
 *-key.json
 
-# Backup files
-scripts/backups/
-scripts/logs/
+# scripts/ — the public repo ships only the active gates/tools that CI and
+# contributors actually use. The one-off data-generation pipeline, migration
+# scripts, and large intermediate artifacts are archived locally (kept on the
+# maintainer's disk, not published). Whitelist the keepers:
+scripts/*
+!scripts/validate_data.py
+!scripts/check_example_originality.py
+!scripts/check_grammar_languagetool.py
+!scripts/check_image_word_clip.py
+!scripts/check_examples_llm_judge.py
+!scripts/apply_examples.py
+!scripts/vendor_fonts.py
 
-# Image↔word verification output (regenerable; can be large with thumbnails)
-scripts/image_check_report.json
-scripts/image_check_review.html
+# Orphaned config template (only the archived generation scripts used it)
+.env.example
 
 # Internal working docs — kept locally, NOT published to the public repo.
 # (The public repo ships only what helps users/contributors; these are for maintainers.)
