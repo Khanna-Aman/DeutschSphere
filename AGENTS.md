@@ -128,8 +128,11 @@ English translations and the pseudo-phonetic pronunciation hints are **original 
 ## 9. Execution & workflow rules
 
 - **Deliberate pacing.** Work carefully and verify; don't rush past edge cases or flood concurrent tool calls. Quality over token-saving — no `// rest unchanged…` placeholders; rewrite enough to paste cleanly.
-- **Documentation sync.** Any change to architecture, data policy, scope, or quality bars updates the relevant `.md` files (`README.md`, `VISION.md`, `CONTRIBUTING.md`, this file, `NOTICE`, `PRIVACY.md`) in the same commit. No documentation rot, no overclaiming.
-- **Git.** Commit logically with `<type>(<scope>): <description>` messages. Don't end a turn with unrelated uncommitted churn. **Never `git push` unless the user explicitly asks.**
+- **Definition of done.** A task is not finished until three things are true: the change works and is verified; **every affected document is updated** so no doc lags the code; and the work is **committed to git**. Make a documentation sweep the last step of each task, then commit — never leave the repo with docs out of sync or the change uncommitted (unless the user is still mid-review).
+- **Documentation sync & audience.** Any change to architecture, data policy, scope, or quality bars updates the relevant docs in the same commit — no rot, no overclaiming. Respect each doc's audience:
+  - **`README.md` is user-first** — written for learners and visitors (what the app is, how to use it, honest coverage, privacy/trust). Keep build, architecture, CI, and internal-checklist detail **out** of it.
+  - Developer/build/CI/architecture detail → **`DEVELOPMENT.md`**; contribution workflow → **`CONTRIBUTING.md`**; vision/roadmap → **`VISION.md`**; attribution/law → **`NOTICE`**/**`PRIVACY.md`**; internal status & history → the audit, **`CHANGELOG.md`**, **`backlog.md`**; charter/scope → this file.
+- **Git.** Commit logically with `<type>(<scope>): <description>` messages, and commit at the end of every task so work is never lost. Don't end a turn with unrelated uncommitted churn. **Never `git push` unless the user explicitly asks.**
 - **Visual constraints.** Preserve the gender-glow classes — 🔵 `der` (`.card-glow-der`), 🩷 `die` (`.card-glow-die`), 🟢 `das` (`.card-glow-das`), 🟣 neutral/other. No layout-shifting effects.
 - **Legal hygiene.** Keep `NOTICE` and `PRIVACY.md` accurate. "Goethe-Institut", "Goethe-Zertifikat", "telc", "Hueber", "ÖSD" are third-party marks — DeutschSphere is independent and unofficial; references are descriptive only.
 
@@ -147,9 +150,10 @@ A1-B1_German/
 ├── sw.js                   # Service Worker: offline shell caching (CACHE_VERSION)
 ├── manifest.json           # PWA manifest
 ├── AGENTS.md               # You are here — vision, operating manual & directives
-├── README.md               # Public-facing documentation
+├── README.md               # User-first guide (learners/visitors) — no dev/CI detail
 ├── VISION.md               # Status & roadmap
-├── CONTRIBUTING.md         # Contributor rules
+├── CONTRIBUTING.md         # Contribution workflow
+├── DEVELOPMENT.md          # Build, run, architecture & CI (developer guide)
 ├── NOTICE / LICENSE / PRIVACY.md   # Attribution, MIT (code), privacy policy
 ├── CHANGELOG.md             # Notable changes
 ├── backlog.md               # Feature/spec log (lags; audit + CHANGELOG are authoritative)
