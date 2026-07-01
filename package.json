@@ -6,10 +6,12 @@
   "type": "module",
   "scripts": {
     "check": "for f in app.js sw.js js/*.js; do node --check \"$f\"; done",
-    "lint": "eslint app.js sw.js \"js/**/*.js\""
+    "lint": "eslint app.js sw.js \"js/**/*.js\"",
+    "audit:lighthouse": "lhci autorun"
   },
   "devDependencies": {
     "@eslint/js": "^9.13.0",
+    "@lhci/cli": "^0.14.0",
     "eslint": "^9.13.0",
     "globals": "^15.11.0"
   }

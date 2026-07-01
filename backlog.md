@@ -235,3 +235,65 @@ All localStorage operations now go through a safety abstraction in `state.js`:
 ### ID Normalization
 
 All card IDs in the `learnedCards` Set are now stored as `Number` only. The previous dual-type pattern (`add(Number(id))` + `add(String(id))`) caused the Set's `.size` to report 2× the actual count, inflating progress statistics.
+
+---
+
+## 🎯 9. Competitive Quality Roadmap (2026-06-30)
+
+Derived from `COMPETITIVE_ANALYSIS_2026-06-30.md` §6 — moves that beat competitors
+**within our scope pledges** (no gamification, no grammar engine, no accounts, no
+tracking, no paid/runtime AI). Everything below uses **free, local, redistributable**
+tooling only.
+
+### ✅ Done this pass — Accessibility & quality gate
+- **Accessibility raised to a verified Lighthouse 100** (from 86). Fixed: missing
+  accessible name on `#help-modal-close`; unlabeled `#trainer-speed-slider`;
+  label/name mismatch on `#trainer-loop-btn`; the deck-preferences popover
+  re-modelled from a faux `role="menu"` (which failed `aria-required-children`)
+  to a labelled `role="group"` disclosure with `aria-controls`; demoted a
+  stray `<h4>` micro-label to fix heading order.
+- **Best-Practices raised to 100** — fixed an **invalid `manifest.json`** (trailing
+  comma before `]`) that browsers logged as a console error and that could break
+  PWA install/parse. SEO already 100.
+- **New CI gate:** `.github/workflows/quality.yml` + `lighthouserc.json` run
+  Lighthouse (axe-core under the hood) on every push/PR. a11y / best-practices /
+  SEO are **hard gates** (≥100/95/100); performance is **advisory** (CI throttles
+  unminified dev assets — not representative of the Pages build). Local run:
+  `npm run audit:lighthouse`.
+- Baseline scores captured: **a11y 100 · best-practices 100 · SEO 100 · perf ~57 (dev)**.
+
+### ⏭️ Queued — content moves (free tooling; some need one owner setup step)
+
+**Native-speaker audio** (attacks our weakest KPI — Audio; beats Seedlang/Memrise/Babbel):
+- **Lingua Libre** (Wikimedia) — real native-speaker word recordings, **CC-BY-SA**
+  (redistributable with attribution + share-alike). Bulk dataset download, matched
+  to headwords.
+- **Piper TTS + Thorsten voice** — **CC0**, offline neural TTS (~15M ONNX, runs on
+  CPU) to fill gaps + example sentences. Fully autonomous.
+- Bundle as compressed audio, precache in the service worker → offline pledge intact.
+  `NOTICE`/`PRIVACY.md` to gain a CC-BY-SA attribution block (CC0 needs none).
+
+**On-device pronunciation** (turns our one privacy caveat into a flex):
+- Replace cloud `SpeechRecognition` with **Vosk** (German model, Apache-2.0) or
+  whisper.cpp (MIT) — bundled, offline scoring.
+
+**B1 imagery — honest scope.** The "992 missing" is misleading: it's 664 nouns,
+118 adjectives, 105 other, 100 verbs, 5 adverbs. Per our CLIP analysis, abstract
+words should **not** be force-imaged (dual-coding helps concrete concepts only).
+Real target = the **concrete-noun subset (~300–450)**, not 992.
+- Generator: **FLUX.1 [schnell]** — **Apache-2.0**, generated images are freely
+  redistributable (unlike Imagen 3, whose redistribution terms are still an open
+  owner action). Run locally (needs a GPU) **or** via **Cloudflare Workers AI free
+  tier** (10k neurons/day ≈ dozens of images/day, no GPU — fits the "slow &
+  thorough" cadence). *Owner setup:* a free Cloudflare token, or confirm local GPU.
+- QA every generated image through the existing `scripts/check_image_word_clip.py`
+  (CLIP + pHash) before committing. Lock one style prompt for batch consistency;
+  do **not** regenerate the 1,588 existing images.
+
+**Formal WCAG 2.2 AA sign-off & performance budget** (already scaffolded above):
+- Extend the Lighthouse gate with a production-build performance budget once a
+  minify step exists; keep axe/pa11y coverage for manual AA criteria.
+
+> Autonomy note: audio (Piper/Lingua Libre), Vosk STT, and the a11y/CI work are
+> fully autonomous. Image generation needs **one** owner input (Cloudflare token
+> **or** GPU confirmation) before it can run.

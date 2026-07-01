@@ -30,12 +30,21 @@ Closed all three P0 release blockers identified in
 - **`PRIVACY.md`** and a corrected **`NOTICE`** (content attribution +
   non-affiliation/trademark disclaimer; `LICENSE` scoped to source code).
 - **`CHANGELOG.md`** (this file).
+- **`COMPETITIVE_ANALYSIS_2026-06-30.md`** — KPI benchmark against Anki, Duolingo,
+  Memrise, Babbel, and Seedlang (DeutschSphere figures verified from the repo;
+  competitor figures are informed estimates), plus an **in-scope roadmap** to
+  category leadership that adds no gamification, grammar engine, accounts, or
+  tracking.
 - Verification gates in `scripts/`: `check_example_originality.py` (0-verbatim
   copyright gate), `check_grammar_languagetool.py` (offline LanguageTool),
   `check_examples_llm_judge.py` (optional LLM second opinion),
   `check_image_word_clip.py` (free local CLIP + perceptual-hash image↔word
   verification), and `apply_examples.py` / `vendor_fonts.py`.
 - CI: `js-checks.yml` (`node --check` + advisory ESLint).
+- **Accessibility / quality CI gate** — `.github/workflows/quality.yml` +
+  `lighthouserc.json` run Lighthouse (axe-core) on every push/PR. Accessibility,
+  best-practices, and SEO are hard gates (100/95/100); performance is advisory.
+  Local run: `npm run audit:lighthouse`.
 
 ### Removed
 - Per-level `wordlist.csv` files and the JSON→CSV converter — an unused derived
@@ -50,6 +59,13 @@ Closed all three P0 release blockers identified in
   `formsubmit.co` feedback flow disclosed.
 - Internal: a B1 example-sentence id mis-keying bug (line-number vs `id` column)
   caught before it reached the data; LanguageTool gate attribute/version fixes.
+- **Accessibility → verified Lighthouse 100** (from 86): accessible name for the
+  help-modal close button, a label for the trainer speed slider, resolved a
+  visible-text/name mismatch on the loop toggle, re-modelled the deck-preferences
+  popover from an invalid `role="menu"` to a labelled `role="group"` disclosure,
+  and fixed heading order.
+- **Best-Practices → 100**: repaired an invalid `manifest.json` (trailing comma)
+  that browsers logged as a console error and that could break PWA parsing/install.
 
 ### Known follow-ups (see audit §6)
 - Owner actions: swap the personal feedback email (`js/events.js`); confirm

@@ -154,6 +154,7 @@ A1-B1_German/
 ├── CHANGELOG.md             # Notable changes
 ├── backlog.md               # Feature/spec log (lags; audit + CHANGELOG are authoritative)
 ├── PRODUCTION_READINESS_AUDIT_2026-06-30.md   # Audit + remediation log
+├── COMPETITIVE_ANALYSIS_2026-06-30.md         # Competitor KPI benchmark + in-bounds roadmap
 │
 ├── fonts/                  # Self-hosted Inter, Outfit, Font Awesome (no CDN)
 ├── js/                     # ES6 modules: state, fsrs, nlp, audio, flashcards,
@@ -163,7 +164,7 @@ A1-B1_German/
 ├── scripts/                # validate_data.py, check_example_originality.py,
 │                           #   check_grammar_languagetool.py, check_examples_llm_judge.py,
 │                           #   apply_examples.py, vendor_fonts.py, Playwright QA
-└── .github/workflows/      # CI: data-integrity gate (validate-data.yml) + js-checks.yml
+└── .github/workflows/      # CI: validate-data.yml (data) + js-checks.yml (JS) + quality.yml (Lighthouse a11y/SEO)
 ```
 
 ---
@@ -173,7 +174,8 @@ A1-B1_German/
 - **2,627 entries**: A1 684, A2 580, B1 1,363. Headword/gender/plural ≈ 99.6% fidelity to the official lists.
 - **Example sentences: 100% original, 0 verbatim** across all three levels (was ~90%+ copied). P0 copyright blocker **resolved**.
 - **Fonts self-hosted; privacy policy in place; licensing/attribution corrected.** All three original-audit P0 blockers closed; the free-forever pledge (§3) already holds today.
-- **Quality-bar gaps to close (honest):** formal WCAG 2.2 AA audit not yet done; performance budget not yet formalized/measured; **core-engine tests exist (Playwright) but are not yet wired into CI**.
+- **Accessibility: verified Lighthouse 100** (a11y), 100 (best-practices), 100 (SEO), enforced by a CI gate (`quality.yml` + `lighthouserc.json`, axe-core under the hood). A full manual WCAG 2.2 AA sign-off (criteria automation can't cover) is still outstanding.
+- **Quality-bar gaps to close (honest):** production performance budget not yet formalized/measured (CI perf is advisory — dev assets are unminified); **core-engine tests exist (Playwright) but are not yet wired into CI**.
 - **Image↔word verification:** first automated pass done (`scripts/check_image_word_clip.py`, free local CLIP + perceptual hash). No systematic mismapping found — 415 concrete cards confirmed, abstract words aren't auto-verifiable, 3 near-duplicate pairs + a review sheet (`scripts/image_check_review.html`) await a human spot-check. Optional refinement (concreteness gate / local VLM) noted in the audit §4.2.
 - **Coverage gaps (not blockers, don't overstate):** B1 is a curated subset (~57% of the ~2,400 official B1 units); B1 imagery 27% (371/1,363); thematic word groups (days, months, seasons, colours, numbers, countries) not yet included.
 - **Open owner-action items:** swap the personal feedback email in `js/events.js`; confirm Imagen 3 redistribution terms.

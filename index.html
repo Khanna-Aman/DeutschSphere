@@ -387,22 +387,22 @@
       <div class="flex gap-2 relative" id="deck-control-deck">
         <!-- Unified Preferences Menu — All deck controls consolidated here -->
         <div class="relative inline-block text-left" id="deck-preferences-menu">
-          <button id="deck-prefs-toggle-btn" class="flex items-center gap-2 bg-slate-900/80 border border-slate-800 hover:border-indigo-500 hover:bg-indigo-950/30 text-slate-300 hover:text-indigo-400 px-4 py-2.5 rounded-xl text-sm font-medium transition-all shadow-md shadow-slate-950/20" title="Settings (Preferences)" aria-haspopup="true" aria-expanded="false">
+          <button id="deck-prefs-toggle-btn" class="flex items-center gap-2 bg-slate-900/80 border border-slate-800 hover:border-indigo-500 hover:bg-indigo-950/30 text-slate-300 hover:text-indigo-400 px-4 py-2.5 rounded-xl text-sm font-medium transition-all shadow-md shadow-slate-950/20" title="Settings (Preferences)" aria-expanded="false" aria-controls="deck-prefs-dropdown">
             <i class="fa-solid fa-sliders text-xs"></i>
             <span>Settings</span>
             <i class="fa-solid fa-chevron-down text-[8px] ml-0.5 opacity-50"></i>
           </button>
           
           <!-- Unified Dropdown Menu -->
-          <div id="deck-prefs-dropdown" class="absolute right-0 mt-2 w-80 origin-top-right rounded-2xl border border-slate-800 bg-slate-950/95 backdrop-blur-xl shadow-2xl transition-all duration-200 transform scale-95 opacity-0 pointer-events-none z-50 p-4 space-y-1" role="menu">
+          <div id="deck-prefs-dropdown" class="absolute right-0 mt-2 w-80 origin-top-right rounded-2xl border border-slate-800 bg-slate-950/95 backdrop-blur-xl shadow-2xl transition-all duration-200 transform scale-95 opacity-0 pointer-events-none z-50 p-4 space-y-1" role="group" aria-label="Card preferences | Karteneinstellungen">
             <!-- Header -->
             <div class="flex items-center justify-between border-b border-slate-800 pb-2.5 mb-2">
-              <h4 class="text-xs font-bold uppercase tracking-widest text-slate-400">Settings</h4>
+              <p class="text-xs font-bold uppercase tracking-widest text-slate-400">Settings</p>
               <span class="text-[9px] text-slate-500 font-medium font-sans uppercase">Card Preferences</span>
             </div>
             
             <!-- Action 1: Shuffle — most frequently used, at top -->
-            <button id="shuffle-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 border border-transparent transition-all group" title="Shuffle card order randomly">
+            <button id="shuffle-btn" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 border border-transparent transition-all group" title="Shuffle card order randomly">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:border-indigo-500/40 transition-colors">
                   <i class="fa-solid fa-shuffle text-xs"></i>
@@ -416,7 +416,7 @@
             </button>
 
             <!-- Action 2: Hide Learned -->
-            <button id="hide-learned-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 border border-transparent transition-all group" title="Hide learned cards">
+            <button id="hide-learned-btn" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 border border-transparent transition-all group" title="Hide learned cards">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:border-indigo-500/40 transition-colors">
                   <i class="fa-solid fa-eye-slash text-xs"></i>
@@ -433,7 +433,7 @@
             <div class="border-t border-slate-800/60 my-1"></div>
 
             <!-- Toggle 1: Schnell-Lesen -->
-            <button id="read-mode-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 border border-transparent transition-all group text-left" title="Toggle read mode (F)">
+            <button id="read-mode-btn" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 border border-transparent transition-all group text-left" title="Toggle read mode (F)">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 group-hover:border-amber-500/40 transition-colors">
                   <i class="fa-solid fa-bolt text-xs"></i>
@@ -453,7 +453,7 @@
             </button>
 
             <!-- Toggle 2: Autoplay -->
-            <button id="autoplay-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 border border-transparent transition-all group text-left" title="Toggle pronunciation autoplay (A)">
+            <button id="autoplay-btn" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 border border-transparent transition-all group text-left" title="Toggle pronunciation autoplay (A)">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:border-emerald-500/40 transition-colors">
                   <i class="fa-solid fa-circle-play text-xs"></i>
@@ -473,7 +473,7 @@
             </button>
 
             <!-- Toggle 3: Bilder anzeigen -->
-            <button id="toggle-images-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 border border-transparent transition-all group text-left" title="Show/hide images (B)">
+            <button id="toggle-images-btn" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 border border-transparent transition-all group text-left" title="Show/hide images (B)">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-lg bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400 group-hover:border-pink-500/40 transition-colors">
                   <i class="fa-solid fa-image text-xs"></i>
@@ -493,7 +493,7 @@
             </button>
 
             <!-- Toggle 4: Beispielsätze -->
-            <button id="toggle-examples-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 border border-transparent transition-all group text-left" title="Show/hide example sentences (E)">
+            <button id="toggle-examples-btn" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 border border-transparent transition-all group text-left" title="Show/hide example sentences (E)">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-lg bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400 group-hover:border-pink-500/40 transition-colors">
                   <i class="fa-solid fa-quote-left text-xs"></i>
@@ -534,7 +534,7 @@
             </div>
 
             <!-- Klang-Stil Switcher -->
-            <button id="sound-style-btn" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group text-left" title="Toggle sound style">
+            <button id="sound-style-btn" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group text-left" title="Toggle sound style">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:border-indigo-500/40 transition-colors">
                   <i class="fa-solid fa-music text-xs"></i>
@@ -550,7 +550,7 @@
               </div>
             </button>
             <!-- Action: Send Feedback -->
-            <button id="feedback-btn-settings" role="menuitem" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group text-left cursor-pointer" title="Send feedback directly to developer">
+            <button id="feedback-btn-settings" class="w-full flex items-center justify-between py-2 px-2 rounded-xl hover:bg-slate-900/80 transition-all group text-left cursor-pointer" title="Send feedback directly to developer">
               <div class="flex items-center gap-3">
                 <div class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:border-indigo-500/40 transition-colors">
                   <i class="fa-solid fa-comment-dots text-xs"></i>
@@ -625,12 +625,12 @@
             <div class="flex items-center gap-3 w-full md:w-auto justify-between md:justify-end">
               <!-- Speed Control -->
               <div class="flex items-center gap-2 bg-slate-950/40 px-2.5 py-1.5 rounded-xl border border-slate-900/80 text-[11px] text-slate-400">
-                <span>Speed:</span>
-                <input id="trainer-speed-slider" type="range" min="0.7" max="1.5" step="0.1" value="1.0" class="w-16 md:w-20 accent-indigo-500 h-1 bg-slate-800 rounded-lg cursor-pointer">
+                <label for="trainer-speed-slider">Speed:</label>
+                <input id="trainer-speed-slider" type="range" min="0.7" max="1.5" step="0.1" value="1.0" aria-label="Trainer-Geschwindigkeit | Trainer speed" class="w-16 md:w-20 accent-indigo-500 h-1 bg-slate-800 rounded-lg cursor-pointer">
                 <span id="trainer-speed-val" class="font-mono text-indigo-400 w-7 text-right">1.0x</span>
               </div>
               <!-- Loop Mode Toggle -->
-              <button id="trainer-loop-btn" aria-label="Toggle loop" class="flex items-center gap-1.5 bg-slate-950/40 border border-slate-900/80 text-slate-400 hover:text-indigo-400 hover:border-indigo-500/30 px-2.5 py-1.5 rounded-xl text-[11px] font-semibold transition-all" title="Repeat category in infinite loop">
+              <button id="trainer-loop-btn" class="flex items-center gap-1.5 bg-slate-950/40 border border-slate-900/80 text-slate-400 hover:text-indigo-400 hover:border-indigo-500/30 px-2.5 py-1.5 rounded-xl text-[11px] font-semibold transition-all" title="Repeat category in infinite loop">
                 <i class="fa-solid fa-rotate text-[10px]"></i>
                 <span id="trainer-loop-text">Loop off</span>
               </button>
@@ -1219,7 +1219,7 @@
             <span class="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Learn all features of DeutschSphere</span>
           </div>
         </div>
-        <button id="help-modal-close" class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-white flex items-center justify-center text-sm transition-all active:scale-95 cursor-pointer">
+        <button id="help-modal-close" aria-label="Hilfe schließen | Close help" class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-white flex items-center justify-center text-sm transition-all active:scale-95 cursor-pointer">
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
