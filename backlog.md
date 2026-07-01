@@ -294,8 +294,10 @@ tooling only.
 words should **not** be force-imaged (dual-coding helps concrete concepts only).
 Real target = the **concrete-noun subset (~300–450)**, not 992.
 - Generator: **FLUX.1 [schnell]** — **Apache-2.0**, generated images are freely
-  redistributable (unlike Imagen 3, whose redistribution terms are still an open
-  owner action). Run locally (needs a GPU) **or** via **Cloudflare Workers AI free
+  redistributable. (Note: the *existing* Imagen 3 illustrations are also cleared for
+  redistribution — confirmed under Google Cloud Vertex AI terms, `NOTICE` §3, 2026-07-01 —
+  so FLUX is the choice for *new* B1 imagery, not a required migration of existing assets.)
+  Run locally (needs a GPU) **or** via **Cloudflare Workers AI free
   tier** (10k neurons/day ≈ dozens of images/day, no GPU — fits the "slow &
   thorough" cadence). *Owner setup:* a free Cloudflare token, or confirm local GPU.
 - QA every generated image through the existing `scripts/check_image_word_clip.py`

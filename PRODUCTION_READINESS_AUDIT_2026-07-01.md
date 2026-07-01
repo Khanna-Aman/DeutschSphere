@@ -53,8 +53,9 @@ Deployment-specific checks beyond the code audit (verified 2026-07-01):
 - The feedback form posts to `formsubmit.co/…/2002aman.khanna@gmail.com` — a **personal email that
   will be visible in public source** and will receive submissions (formsubmit.co needs a one-time
   email confirmation on first use). Swap or accept.
-- Illustrations were generated with Imagen 3; confirm redistribution terms or migrate to FLUX.1
-  [schnell] (§8) — low risk for a free, non-commercial study tool, but unresolved.
+- ~~Illustrations / Imagen 3 redistribution terms~~ — **RESOLVED**: Google Cloud Vertex AI grants
+  customer ownership of generated output with the right to publish/redistribute (§8); NOTICE updated,
+  no FLUX migration needed.
 
 **Verdict: cleared for public release.** The two remaining P1 items (manual WCAG 2.2 AA, performance
 budget) are post-launch polish, not launch blockers for a free study tool.
@@ -72,7 +73,7 @@ budget) are post-launch polish, not launch blockers for a free study tool.
 | 5 | Correctness deep-dives | 4.0 | 80 | Scheduler now honestly labeled + documented; NLP heuristics have known misses |
 | 6 | Security | 4.5 | 90 | Strong CSP (`script-src 'self'`), no eval, escaping at data sinks incl. user input |
 | 7 | Privacy | 4.5 | 90 | Zero third-party on load; formsubmit.co only on explicit feedback; SpeechRecognition caveat |
-| 8 | Legal / IP | 4.0 | 80 | Code MIT + NOTICE non-affiliation solid; imagery redistribution terms still open |
+| 8 | Legal / IP | 4.5 | 90 | Code MIT + NOTICE non-affiliation solid; **imagery (Imagen 3) redistribution confirmed permitted** & documented |
 | 9 | Accessibility | 4.0 | 80 | Automated Lighthouse a11y 100; **manual** WCAG 2.2 AA not yet done |
 | 10 | Performance | 3.5 | 70 | Unminified assets; fonts 1.3 MB; CI perf advisory only |
 | 11 | PWA robustness | 4.5 | 90 | Valid manifest; sound SW strategies; offline boot verified this session |
@@ -169,8 +170,14 @@ cleanup correct.
   action, deferred). Disclose the browser `SpeechRecognition` cloud caveat in `PRIVACY.md`.
 
 ### 8 — Legal / IP  *(P2)*
-- `LICENSE` (MIT) scoped to code; `NOTICE` states Goethe non-affiliation. **Open:** imagery (Imagen 3)
-  redistribution terms — confirm or migrate to FLUX.1 [schnell]. Deferred.
+- `LICENSE` (MIT) scoped to code; `NOTICE` states Goethe non-affiliation. **Imagery — RESOLVED:** the
+  card illustrations were generated with Google Cloud Vertex AI Imagen 3 (`imagen-3.0-generate-002`).
+  Under Google Cloud's Service Specific Terms for AI/ML Services, Google does not assert ownership of a
+  customer's generated output and customers may use it commercially and disclose it to third parties
+  (publish/redistribute), subject to the Prohibited-Use policy; output is also covered by Google's
+  generative-AI copyright indemnity. The competing-model restriction is inapplicable (static study
+  illustrations, not model training). No FLUX migration needed; `NOTICE` §3 documents this + the SynthID
+  watermark. Refs: cloud.google.com/terms/service-terms and /terms/generative-ai-indemnified-services.
 
 ### 9 — Accessibility  *(P1 — manual pass pending)*
 - Automated Lighthouse a11y = 100 (not re-run this session). **Manual WCAG 2.2 AA walkthrough not done** —
@@ -224,7 +231,7 @@ cleanup correct.
 - Thematic word groups; module decomposition (`flashcards.js`, `events.js`).
 - Editorial pass on remaining borderline slash-pairs + the `Fantasie/Phantasie` duplicate (§1);
   full 2,660-row linguistic diff vs the Goethe PDFs.
-- Swap hardcoded feedback email; confirm imagery redistribution terms.
+- Hardcoded feedback email — owner elected to **keep as-is**. (Imagery redistribution: **resolved**, §8.)
 
 ---
 
