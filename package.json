@@ -7,7 +7,7 @@
   "scripts": {
     "check": "for f in app.js sw.js js/*.js; do node --check \"$f\"; done",
     "lint": "eslint app.js sw.js \"js/**/*.js\"",
-    "test": "node --test \"tests/**/*.test.mjs\"",
+    "test": "node --test tests/fsrs.test.mjs tests/nlp.test.mjs",
     "test:e2e": "python tests/smoke_e2e.py",
     "audit:lighthouse": "lhci autorun"
   },
