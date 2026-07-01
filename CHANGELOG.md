@@ -8,8 +8,8 @@ to GitHub Pages). For full detail, see the git history.
 ## [Unreleased] — 2026-07-01 (test-suite rebuild + data-integrity fixes + re-audit)
 
 Independent re-verification pass **plus remediation**. No new P0 blockers; the three
-original P0s remain closed. Full report: `PRODUCTION_READINESS_AUDIT_2026-07-01.md`
-(GO conditional; ≈85/100).
+original P0s remain closed. The maintainers' internal production-readiness audit rates
+the release **GO (conditional), ≈85/100**.
 
 ### Added
 - **Rebuilt, deterministic test suite** under `tests/`:
@@ -20,8 +20,8 @@ original P0s remain closed. Full report: `PRODUCTION_READINESS_AUDIT_2026-07-01.
 - **CI test gate:** `.github/workflows/tests.yml` — blocking `unit` job (`npm test`) +
   advisory `e2e` job. `package.json` gains `test` / `test:e2e` scripts.
 - **Merged-headword regression guard** in `scripts/validate_data.py` (slash-headword allowlist).
-- **`PRODUCTION_READINESS_AUDIT_2026-07-01.md`** — 14-dimension scorecard, GO/NO-GO,
-  confirm/refute of the prior audit, findings with `file:line` evidence.
+- SOTA repo hygiene: `SECURITY.md`, `CODE_OF_CONDUCT.md`, `.gitattributes`, `.nojekyll`,
+  issue/PR templates, and CI status badges.
 
 ### Fixed
 - **Systemic data corruption split (2,627 → 2,660 entries).** 33 B1/A2 rows that merged two

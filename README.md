@@ -137,9 +137,6 @@ curriculum references are descriptive only. Source code is released under the
 [MIT license](LICENSE); third-party content (vocabulary references, illustrations,
 fonts) carries its own terms, documented in [NOTICE](NOTICE).
 
-Curious how production-ready it is? We keep an honest, independent
-[production-readiness audit](PRODUCTION_READINESS_AUDIT_2026-07-01.md) in the open.
-
 ---
 
 ## For developers
@@ -147,4 +144,3 @@ Curious how production-ready it is? We keep an honest, independent
 DeutschSphere is a zero-dependency vanilla-JS PWA — the source you see is what runs.
 - **Build, run & architecture:** [DEVELOPMENT.md](DEVELOPMENT.md)
 - **Contributing:** [CONTRIBUTING.md](CONTRIBUTING.md)
-- **Project charter & scope:** [AGENTS.md](AGENTS.md)

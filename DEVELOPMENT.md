@@ -2,9 +2,7 @@
 
 Technical guide for anyone building, running, or auditing DeutschSphere. If you're
 here to **use** the app, the [README](README.md) is the place to start. If you're
-here to **contribute**, read [CONTRIBUTING.md](CONTRIBUTING.md) as well. The
-authoritative engineering charter (vision, scope boundaries, quality bars) is
-[AGENTS.md](AGENTS.md).
+here to **contribute**, read [CONTRIBUTING.md](CONTRIBUTING.md) as well.
 
 ## Tech stack & principles
 
@@ -70,9 +68,8 @@ Each level's `wordlist.json` is the **source of truth**. Every entry follows a f
 schema (`german`, `word_class`, `gender`, `plural`, `english`, `pronunciation`,
 `theme`, `antonym`, `example_de`, `example_en`, `image`, `id`). Factual grammar
 fields are left `null` where the official lists don't attest them (zero-inference);
-example sentences are original-authored and copyright-gated. See
-[AGENTS.md](AGENTS.md) §6 and [backlog.md](backlog.md) §1 for the full schema and
-data policy.
+example sentences are original-authored and copyright-gated. `scripts/validate_data.py`
+enforces the schema, unique ids, image refs, and headword integrity.
 
 ## Styling (precompiled Tailwind)
 
@@ -135,7 +132,7 @@ Notes:
 
 ## Further reading
 
-- [AGENTS.md](AGENTS.md) — vision, scope boundaries, and engineering directives (read first).
-- [PRODUCTION_READINESS_AUDIT_2026-07-01.md](PRODUCTION_READINESS_AUDIT_2026-07-01.md) — full audit + remediation log.
-- [COMPETITIVE_ANALYSIS_2026-06-30.md](COMPETITIVE_ANALYSIS_2026-06-30.md) — KPI benchmark + in-bounds roadmap.
-- [CHANGELOG.md](CHANGELOG.md) · [backlog.md](backlog.md) — history and feature/spec log.
+- [README.md](README.md) — what the app is and how to use it.
+- [CONTRIBUTING.md](CONTRIBUTING.md) — contribution workflow and gates.
+- [VISION.md](VISION.md) — product vision and roadmap.
+- [CHANGELOG.md](CHANGELOG.md) — notable changes.

@@ -46,8 +46,14 @@ scripts/logs/
 scripts/image_check_report.json
 scripts/image_check_review.html
 
+# Internal working docs — kept locally, NOT published to the public repo.
+# (The public repo ships only what helps users/contributors; these are for maintainers.)
+AGENTS.md
+backlog.md
+PRODUCTION_READINESS_AUDIT_*.md
+COMPETITIVE_ANALYSIS_*.md
+
 # AI Orchestrations & Agent Planning
-# (AGENTS.md is the tracked, authoritative agent charter — intentionally NOT ignored)
 implementation_plan.md
 sprint_handoff_a2_b1.md
 audit_a2.html

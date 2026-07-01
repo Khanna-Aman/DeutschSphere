@@ -34,7 +34,7 @@ LEVELS = ["a1", "a2", "b1"]
 
 # Docs that quote the total vocabulary count. If the data changes, these
 # must be updated in lockstep or CI fails.
-DOCS_WITH_TOTAL = ["README.md", "index.html", "manifest.json", "VISION.md", "AGENTS.md"]
+DOCS_WITH_TOTAL = ["README.md", "index.html", "manifest.json", "VISION.md"]
 
 # Merged-headword guard (added 2026-07-01). The B1/A2 wordlist generator once
 # glued alphabetically-adjacent but *unrelated* lemmas into one row (e.g.

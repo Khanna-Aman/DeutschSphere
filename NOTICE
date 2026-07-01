@@ -33,8 +33,9 @@ All 2,627 example sentences across A1/A2/B1 were re-authored and verified:
     with the offline LanguageTool engine.
 
 These sentences are therefore original to the project and are not subject to
-the source publishers' copyright. See
-PRODUCTION_READINESS_AUDIT_2026-07-01.md (§3) for details.
+the source publishers' copyright. The originality and grammar gates
+(scripts/check_example_originality.py and scripts/check_grammar_languagetool.py)
+can be re-run at any time to re-verify this.
 
 --------------------------------------------------------------------------
 3. Illustrations
