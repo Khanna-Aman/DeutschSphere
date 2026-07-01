@@ -5,7 +5,51 @@ Format follows [Keep a Changelog](https://keepachangelog.com/); this project use
 date-stamped sections rather than strict SemVer releases (it ships continuously
 to GitHub Pages). For full detail, see the git history.
 
-## [Unreleased] — 2026-06-30 (production-readiness remediation)
+## [Unreleased] — 2026-07-01 (test-suite rebuild + data-integrity fixes + re-audit)
+
+Independent re-verification pass **plus remediation**. No new P0 blockers; the three
+original P0s remain closed. Full report: `PRODUCTION_READINESS_AUDIT_2026-07-01.md`
+(GO conditional; ≈85/100).
+
+### Added
+- **Rebuilt, deterministic test suite** under `tests/`:
+  - `tests/fsrs.test.mjs` + `tests/nlp.test.mjs` — scheduler + German NLP on Node's
+    built-in runner (`node --test`), **zero dependencies, 22 tests**.
+  - `tests/smoke_e2e.py` — Playwright boot/smoke: no uncaught errors, a real card
+    renders, IndexedDB round-trip, scheduler advances in the shipped ESM runtime.
+- **CI test gate:** `.github/workflows/tests.yml` — blocking `unit` job (`npm test`) +
+  advisory `e2e` job. `package.json` gains `test` / `test:e2e` scripts.
+- **Merged-headword regression guard** in `scripts/validate_data.py` (slash-headword allowlist).
+- **`PRODUCTION_READINESS_AUDIT_2026-07-01.md`** — 14-dimension scorecard, GO/NO-GO,
+  confirm/refute of the prior audit, findings with `file:line` evidence.
+
+### Fixed
+- **Systemic data corruption split (2,627 → 2,660 entries).** 33 B1/A2 rows that merged two
+  *unrelated* lemmas into one headword (e.g. `bevor / bewegen`, `singen / sinken`,
+  `link- / die Lippe`, `nass / national / die Natur`) were split into correct separate
+  entries — facts source-grounded from the Goethe Wortlisten, one original grammar-gated
+  example authored per new lemma, `word_class`/gender/plural corrected. Also fixed a doubled
+  `das Hähnchen` headword. All counts synced to **2,660** (A1 684 / A2 582 / B1 1,394).
+- **Scheduler relabeled "FSRS-inspired (FSRS-5-based)"** in `js/fsrs.js` + docs, with the
+  three deliberate simplifications from reference FSRS-5 documented in the module header
+  (honesty fix — no behavior change; `w17/w18` marked reserved).
+
+### Changed
+- Docs synced (README/VISION/AGENTS/backlog/CONTRIBUTING) to the new counts, the FSRS
+  relabel, and the rebuilt test architecture; corrected a **stale** backlog claim of a
+  passing "Comprehensive E2E Playwright suite."
+
+### Removed
+- Old test harness (`scripts/run_unit_tests.py`, `scripts/e2e_comprehensive_tests.py`)
+  and reviewed one-off cruft (`debug_syntax.py`, `test_network.py`, two `scratch/test_*.py`).
+
+### Audit notes
+- **Refuted** the carried-forward "test suite is rotted" claim — `run_unit_tests.py` passed
+  clean; rebuilt anyway for a cleaner gate.
+- **Self-corrected** the audit's own first pass: B1 ids 81/82 (`der Ausdruck`) are NOT a
+  duplicate but two legitimate senses (plurals *Ausdrücke* vs *Ausdrucke*).
+
+## 2026-06-30 (production-readiness remediation)
 
 Closed all three P0 release blockers identified in
 `PRODUCTION_READINESS_AUDIT_2026-06-30.md`.

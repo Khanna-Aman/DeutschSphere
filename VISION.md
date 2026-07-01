@@ -6,7 +6,7 @@ This document details the active technical roadmap, scope boundaries, and develo
 
 ## 🎯 The Core Mandate: Pure Cognitive Mastery
 
-DeutschSphere is designed to maximize vocabulary acquisition through distraction-free, clinical spaced repetition. The application focuses on high-signal cognitive retention of **2,627 validated German vocabulary words** via mathematical memory modeling (FSRS-5).
+DeutschSphere is designed to maximize vocabulary acquisition through distraction-free, clinical spaced repetition. The application focuses on high-signal cognitive retention of **2,660 validated German vocabulary words** via mathematical memory modeling (an FSRS-inspired scheduler based on the FSRS-5 model — see `js/fsrs.js` for its documented simplifications).
 
 ### 🛑 Strict Scope Enforcements
 * **Zero Gamification Bloat**: The interface excludes XP systems, progress metrics, artificial badges, and decorative animations. Cognitive engagement is driven purely by layout-stable feedback and objective retrievability projections.
@@ -20,7 +20,7 @@ DeutschSphere is designed to maximize vocabulary acquisition through distraction
 
 | Component | Status | Description |
 | :--- | :--- | :--- |
-| **FSRS-5 Spaced Repetition** | **Active** | Clinical scheduling using 19 stability parameters to model cognitive decay. |
+| **FSRS-inspired Spaced Repetition** | **Active** | Clinical scheduling using the FSRS-5 19-parameter stability/difficulty model to project cognitive decay (with documented simplifications; see `js/fsrs.js`). |
 | **Phonetik-Spiegel** | **Active** | Web Speech `SpeechRecognition` (de-DE) transcription scored against the target by Levenshtein distance, with a live waveform vs. a native-synthesis reference and static mouth-position guides. |
 | **Active Recall Quiz Arena** | **Active** | Bidirectional MC reservoir-sampled tests and text spelling with virtual keyboards. |
 | **Immersions-Labor** | **Active** | Custom local NLP for copy-pasted text block lemmatization and instant flashcard generation. |
@@ -31,14 +31,14 @@ DeutschSphere is designed to maximize vocabulary acquisition through distraction
 | **Developer Feedback Form** | **Active** | Zero-cost serverless FormSubmit integration sending user feedback direct to developer email. |
 | **Adaptive Layout & Safe-Area** | **Active** | Responsive single-column card view on all screens with Android navigation bar safe-area insets. |
 | **Card View Preferences** | **Active** | Persistent settings drawer toggles for Fast Read, Autoplay, Illustrations, and Example Sentences. |
-| **Visual Assets** | **Active** | High-fidelity WebP visual aids (<10KB) completed for A1 (637/684, 93%) and A2 (580/580, 100%). B1 in progress (371/1,363, 27%). |
+| **Visual Assets** | **Active** | High-fidelity WebP visual aids (<10KB) completed for A1 (637/684, 93%) and A2 (580/582, ~100%). B1 in progress (371/1,394, 27%). |
 
 ---
 
 ## 🚀 Active Roadmap
 
 ### 🔜 Short-Term Milestones (v1.1.x)
-* **B1 Asset Rollout**: Complete the final integration of audited 3D glassmorphic WebP assets for the remaining B1 entries (371/1,363 done, 992 outstanding) following strict anti-bleeding checks.
+* **B1 Asset Rollout**: Complete the final integration of audited 3D glassmorphic WebP assets for the remaining B1 entries (371/1,394 done, 1,023 outstanding) following strict anti-bleeding checks.
 * **IndexedDB Thread Tuning**: Debounce and stream asynchronous profile writes in `js/state.js` to eliminate micro-stutters during massive bulk updates (e.g. after a large quiz session).
 * **WCAG 2.2 AA Accessibility**: ✅ Automated pass complete — Lighthouse/axe **accessibility 100** (best-practices 100, SEO 100), enforced by the `quality.yml` CI gate. Remaining: the full *manual* AA sign-off (keyboard-only and screen-reader walkthrough of every view transition and accordion) that automation cannot cover.
 
@@ -51,7 +51,7 @@ DeutschSphere is designed to maximize vocabulary acquisition through distraction
 ---
 
 ## 📊 Technical Metrics Ledger
-* **Active Vocabulary Capacity**: 2,627 entries across CEFR A1 (684), A2 (580), and B1 (1,363).
+* **Active Vocabulary Capacity**: 2,660 entries across CEFR A1 (684), A2 (582), and B1 (1,394).
 * **Production Dependencies**: 0 runtime npm modules. Tailwind is precompiled to a static, tree-shaken stylesheet (no runtime CDN); the Inter/Outfit web fonts and FontAwesome icons are **self-hosted under `./fonts`** (no third-party CDN calls), so the app makes zero external requests on load.
 * **Codebase Weight**: ~450KB modular ES6 files, 1 HTML shell, and 1 global stylesheet.
 * **State Engine**: Client-side IndexedDB persistence managed via an asynchronous debounced `idb-keyval` pipeline.

@@ -17,13 +17,13 @@ A learner anywhere in the world — on a cheap phone, on a train with no signal,
 
 That is the whole product. Everything below protects it.
 
-**The "perfect the core" doctrine.** We do not chase feature parity with bloated apps. We win by executing the core — spaced repetition (FSRS-5), card UX, pronunciation, quizzes, offline delivery — better than anyone. Before adding anything, ask: *does this make the core more flawless, or just bigger?* If it's "bigger," decline and say so. A rejected feature that protects focus is a win, not a gap.
+**The "perfect the core" doctrine.** We do not chase feature parity with bloated apps. We win by executing the core — spaced repetition (FSRS-inspired, FSRS-5-based), card UX, pronunciation, quizzes, offline delivery — better than anyone. Before adding anything, ask: *does this make the core more flawless, or just bigger?* If it's "bigger," decline and say so. A rejected feature that protects focus is a win, not a gap.
 
 ---
 
 ## 2. Identity & the hard scope boundary
 
-DeutschSphere is a **flashcard-first** cognitive utility. Mastery comes from client-side spaced repetition (FSRS-5), pronunciation practice (Phonetik-Spiegel), active-recall quizzes, and a lightweight NLP immersion lab. Everything serves vocabulary retention.
+DeutschSphere is a **flashcard-first** cognitive utility. Mastery comes from client-side spaced repetition (FSRS-inspired, FSRS-5-based), pronunciation practice (Phonetik-Spiegel), active-recall quizzes, and a lightweight NLP immersion lab. Everything serves vocabulary retention.
 
 **Do NOT build (out of scope — do not add, scaffold, or "improve toward" these):**
 
@@ -56,7 +56,7 @@ Every change is held to these. They are the operational meaning of "hyper-premiu
 - **Accessibility — WCAG 2.2 AA.** Full keyboard operability, screen-reader semantics (ARIA, `lang`), visible focus management across view transitions/accordions, sufficient contrast on the dark theme, `prefers-reduced-motion` honored. The tool must be usable by everyone.
 - **Performance budget.** Fast first paint and interaction; capped/optimized asset weight (WebP < 10 KB each; lazy + precached); 60 fps, jank-free interactions and animations even on low-end Android. No layout shift (CLS ≈ 0). Measure before/after on weighty changes.
 - **Offline integrity.** Full functionality in airplane mode after first load — verified, with **zero runtime network dependency** (self-hosted fonts/icons, precached shell, cached data). A change that adds an external request fails this bar.
-- **Correctness — core-engine tests in CI.** FSRS-5 scheduling math and the NLP lemmatizer/phonetik logic must have automated tests wired into CI as real gates (alongside the data-integrity gate). Scheduling changes require matching FSRS-5 spec tests.
+- **Correctness — core-engine tests in CI.** The FSRS-inspired scheduling math (FSRS-5-based, `js/fsrs.js`) and the NLP lemmatizer/phonetik logic must have automated tests wired into CI as real gates (alongside the data-integrity gate) — done via `tests/*.test.mjs` + `tests.yml`. Any scheduling change must keep `tests/fsrs.test.mjs` green and document the deviation.
 - **Cross-device & cross-browser correctness.** Verified on Android, iOS (incl. safe-area insets), and desktop, on current Chrome/Firefox/Safari. Graceful degradation where a Web API (e.g. SpeechRecognition) is unavailable — never a broken view.
 - **Data durability — never lose a learner's progress.** IndexedDB writes are debounced and resilient; backup/restore round-trips losslessly; schema/version migrations are non-destructive. Treat user progress as sacred.
 - **Security.** Strict CSP (no `unsafe-eval`); all dynamic content rendered through XSS-safe escaping (`escapeHtml`), never raw `innerHTML` of untrusted input; no secrets in the repo; no `eval`.
@@ -90,7 +90,7 @@ Two rules for two kinds of data. **Do not conflate them.**
 Gender (`der/die/das`), plural, and conjugation are **facts**, grounded in the official Goethe-Institut *Wortliste* PDFs in `.raw_resources/` (the ground truth). **Never guess or generate them.** If a value is not attested in the source, leave the field `null`. Honesty outranks completeness. Do not use model weights to invent grammar profiles.
 
 ### 6.2 Example sentences → original authored content, gated
-The deliberate exception (this reverses the project's earlier "never write example sentences" rule, which existed because the data once copied copyrighted Goethe/Hueber examples verbatim — a legal blocker). **All 2,627 `example_de`/`example_en` pairs are now original content authored for this project.** New/edited example sentences must:
+The deliberate exception (this reverses the project's earlier "never write example sentences" rule, which existed because the data once copied copyrighted Goethe/Hueber examples verbatim — a legal blocker). **All 2,660 `example_de`/`example_en` pairs are now original content authored for this project.** New/edited example sentences must:
 
 1. **Use the entry's headword** naturally and illustrate its meaning, at the right CEFR level.
 2. **Be original** — `python scripts/check_example_originality.py`; **verbatim must stay 0**.
@@ -109,7 +109,7 @@ English translations and the pseudo-phonetic pronunciation hints are **original 
 
 `wordlist.json` per level is the **single source of truth** (no CSV export exists — it was removed as an unused derived artifact). Before declaring a data change done:
 
-- `python scripts/validate_data.py` — valid JSON, required keys, **unique ids**, every `image` ref exists, no image shared by two entries, and the published total (**2,627** = A1 684 / A2 580 / B1 1,363) appears verbatim in the docs that quote it.
+- `python scripts/validate_data.py` — valid JSON, required keys, **unique ids**, every `image` ref exists, no image shared by two entries, **no merged/unrelated-lemma headwords** (slash-headword allowlist), and the published total (**2,660** = A1 684 / A2 582 / B1 1,394) appears verbatim in the docs that quote it.
 - `python scripts/check_example_originality.py` — **0 verbatim** vs. the source PDFs.
 - `python scripts/check_grammar_languagetool.py` — grammar/spelling.
 
@@ -157,7 +157,8 @@ A1-B1_German/
 ├── NOTICE / LICENSE / PRIVACY.md   # Attribution, MIT (code), privacy policy
 ├── CHANGELOG.md             # Notable changes
 ├── backlog.md               # Feature/spec log (lags; audit + CHANGELOG are authoritative)
-├── PRODUCTION_READINESS_AUDIT_2026-06-30.md   # Audit + remediation log
+├── PRODUCTION_READINESS_AUDIT_2026-07-01.md   # Latest audit (GO/NO-GO, confirm/refute, findings)
+├── PRODUCTION_READINESS_AUDIT_2026-06-30.md   # Prior audit baseline (superseded)
 ├── COMPETITIVE_ANALYSIS_2026-06-30.md         # Competitor KPI benchmark + in-bounds roadmap
 │
 ├── fonts/                  # Self-hosted Inter, Outfit, Font Awesome (no CDN)
@@ -167,19 +168,22 @@ A1-B1_German/
 ├── a1/ , a2/ , b1/         # Per-level datasets: wordlist.json + WebP assets
 ├── scripts/                # validate_data.py, check_example_originality.py,
 │                           #   check_grammar_languagetool.py, check_examples_llm_judge.py,
-│                           #   apply_examples.py, vendor_fonts.py, Playwright QA
-└── .github/workflows/      # CI: validate-data.yml (data) + js-checks.yml (JS) + quality.yml (Lighthouse a11y/SEO)
+│                           #   apply_examples.py, vendor_fonts.py, check_image_word_clip.py
+├── tests/                  # fsrs.test.mjs + nlp.test.mjs (node --test) + smoke_e2e.py (Playwright)
+└── .github/workflows/      # CI: validate-data.yml + js-checks.yml + quality.yml + tests.yml (unit gate + e2e)
 ```
 
 ---
 
 ## 11. Current status (keep honest)
 
-- **2,627 entries**: A1 684, A2 580, B1 1,363. Headword/gender/plural ≈ 99.6% fidelity to the official lists.
+- **2,660 entries**: A1 684, A2 582, B1 1,394. Headword/gender/plural fidelity to the official lists; 33 systemically-merged B1/A2 entries were split into correct separate lemmas (2026-07-01, audit §1).
 - **Example sentences: 100% original, 0 verbatim** across all three levels (was ~90%+ copied). P0 copyright blocker **resolved**.
 - **Fonts self-hosted; privacy policy in place; licensing/attribution corrected.** All three original-audit P0 blockers closed; the free-forever pledge (§3) already holds today.
 - **Accessibility: verified Lighthouse 100** (a11y), 100 (best-practices), 100 (SEO), enforced by a CI gate (`quality.yml` + `lighthouserc.json`, axe-core under the hood). A full manual WCAG 2.2 AA sign-off (criteria automation can't cover) is still outstanding.
-- **Quality-bar gaps to close (honest):** production performance budget not yet formalized/measured (CI perf is advisory — dev assets are unminified); **core-engine tests exist (Playwright) but are not yet wired into CI**.
+- **Testing/CI (rebuilt 2026-07-01):** deterministic scheduler + NLP units on `node --test` (`tests/*.test.mjs`, 22 tests, zero deps) + a Playwright boot/smoke (`tests/smoke_e2e.py`), wired into CI as a **hard gate** (`tests.yml`, `npm test`). Replaces the old, un-gated Playwright scripts.
+- **Fixed 2026-07-01:** the scheduler is now honestly labeled **"FSRS-inspired (FSRS-5-based)"** with its simplifications documented in `js/fsrs.js` (a fully spec-compliant rewrite is a deferred P2); a **systemic 33-entry merge defect** (unrelated lemmas glued into one headword) was split into correct entries + a validator guard.
+- **Quality-bar gaps to close (honest):** production performance budget not yet formalized/measured (CI perf is advisory — dev assets are unminified); **manual WCAG 2.2 AA** sign-off pending; fully spec-compliant FSRS-5 math is deferred (audit 2026-07-01 §5).
 - **Image↔word verification:** first automated pass done (`scripts/check_image_word_clip.py`, free local CLIP + perceptual hash). No systematic mismapping found — 415 concrete cards confirmed, abstract words aren't auto-verifiable, 3 near-duplicate pairs + a review sheet (`scripts/image_check_review.html`) await a human spot-check. Optional refinement (concreteness gate / local VLM) noted in the audit §4.2.
-- **Coverage gaps (not blockers, don't overstate):** B1 is a curated subset (~57% of the ~2,400 official B1 units); B1 imagery 27% (371/1,363); thematic word groups (days, months, seasons, colours, numbers, countries) not yet included.
+- **Coverage gaps (not blockers, don't overstate):** B1 is a curated subset (~58% of the ~2,400 official B1 units); B1 imagery 27% (371/1,394); thematic word groups (days, months, seasons, colours, numbers, countries) not yet included.
 - **Open owner-action items:** swap the personal feedback email in `js/events.js`; confirm Imagen 3 redistribution terms.

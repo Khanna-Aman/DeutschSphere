@@ -5,7 +5,7 @@
 
 **Learn German A1–B1 vocabulary with flashcards that actually remember what you
 forget.** DeutschSphere is a free, offline-first study app built around proven
-spaced repetition — 2,627 curated words with illustrations, audio, quizzes, and a
+spaced repetition — 2,660 curated words with illustrations, audio, quizzes, and a
 pronunciation coach. No ads, no account, no tracking. It runs entirely in your
 browser and works without an internet connection once loaded.
 
@@ -15,9 +15,9 @@ browser and works without an internet connection once loaded.
 
 ## Why DeutschSphere
 
-- **🎯 Remembers for you.** A modern spaced-repetition engine (FSRS-5) schedules
-  each word for review right before you'd forget it — so you study less and retain
-  more.
+- **🎯 Remembers for you.** A modern spaced-repetition engine (FSRS-inspired, based
+  on the FSRS-5 model) schedules each word for review right before you'd forget it —
+  so you study less and retain more.
 - **🆓 Free, forever.** No subscription, no ads, no paywalled features. It's a gift
   to learners.
 - **🔒 Private by design.** Your progress never leaves your device. No account, no
@@ -31,8 +31,8 @@ browser and works without an internet connection once loaded.
 
 ## What's inside
 
-**🧠 Spaced-repetition flashcards.** Every word is scheduled by the FSRS-5 algorithm,
-which models how your memory of it decays over time. Grade a card with a swipe (or
+**🧠 Spaced-repetition flashcards.** Every word is scheduled by an FSRS-inspired
+algorithm (based on the FSRS-5 model), which models how your memory of it decays over time. Grade a card with a swipe (or
 `1`–`4` on desktop) and it reappears at the perfect moment. Cards glow by noun
 gender — 🔵 *der*, 🩷 *die*, 🟢 *das* — to build gender intuition as you go.
 
@@ -60,15 +60,15 @@ desktop and it behaves like a native app — fully offline.
 
 ## Vocabulary & coverage
 
-DeutschSphere covers **2,627 words** across CEFR levels A1–B1, with scope grounded in
+DeutschSphere covers **2,660 words** across CEFR levels A1–B1, with scope grounded in
 the official Goethe-Institut *Wortlisten*.
 
 | Level | Words | Illustrations |
 | :--- | :---: | :--- |
 | **A1** — Beginner | 684 | 637 / 684 (93%) |
-| **A2** — Elementary | 580 | 580 / 580 (100%) |
-| **B1** — Intermediate | 1,363 | 371 / 1,363 (27%, in progress) |
-| **Total** | **2,627** | 1,588 (60%) |
+| **A2** — Elementary | 582 | 580 / 582 (99.7%) |
+| **B1** — Intermediate | 1,394 | 371 / 1,394 (27%, in progress) |
+| **Total** | **2,660** | 1,588 (60%) |
 
 > [!NOTE]
 > **An honest word on coverage.** Each entry's German headword, gender, and plural

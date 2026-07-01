@@ -4,7 +4,7 @@ This backlog tracks implemented features, their technical specifications, and ou
 
 > Last updated: 2026-06-30
 >
-> ⚠️ **Authoritative sources.** This backlog may lag the live state. For current status and the open-items roadmap, see **`PRODUCTION_READINESS_AUDIT_2026-06-30.md`** (§6) and **`CHANGELOG.md`**; for policy/scope, see **`AGENTS.md`**. Key deltas since the 2026-06-29 snapshot below: **all example sentences are now original (0 verbatim — copyright resolved)**; fonts/icons **self-hosted** (no CDN); the per-level `wordlist.csv` was removed; the rotted Playwright suites are **slated for a from-scratch rebuild + CI wiring**.
+> ⚠️ **Authoritative sources.** This backlog may lag the live state. For current status and the open-items roadmap, see the latest audit **`PRODUCTION_READINESS_AUDIT_2026-07-01.md`** (§ findings + remediation) and **`CHANGELOG.md`**; for policy/scope, see **`AGENTS.md`**. Key deltas since the 2026-06-29 snapshot below: **all example sentences are now original (0 verbatim — copyright resolved)**; fonts/icons **self-hosted** (no CDN); the per-level `wordlist.csv` was removed; the **test suite was rebuilt from scratch and wired into CI** (2026-07-01) — deterministic FSRS/NLP units (`node --test`) + a Playwright boot/smoke.
 >
 > ⚠️ **Scope note.** The project was re-scoped to a focused, **study-only** tool. Earlier planned/experimental features — the Deutsch-Abenteuer RPG, Grammatik-Weberei sentence builder, a Statistics Dashboard, an Achievements/streak engine, and all gamification (XP, particle bursts, star ratings) — are **out of scope and not in the codebase**. This document has been pruned to reflect what actually ships.
 
@@ -49,10 +49,10 @@ Every word entry conforms to the following structure (actual field names from th
 
 | Level | Words | WebP Images |
 |-------|-------|-------------|
-| A1    | 684   | 637 (93%)   |
-| A2    | 580   | 580 (100%)  |
-| B1    | 1,363 | 371 (27%)   |
-| **Total** | **2,627** | **1,588 (60%)** |
+| A1    | 684   | 637 (93%)    |
+| A2    | 582   | 580 (99.7%)  |
+| B1    | 1,394 | 371 (27%)    |
+| **Total** | **2,660** | **1,588 (60%)** |
 
 ### 12 Canonical Theme Categories
 Person & Familie, Wohnen & Haushalt, Gesundheit & Körper, Natur & Umwelt, Reise & Verkehr, Essen & Trinken, Einkaufen & Konsum, Dienstleistungen & Behörden, Ausbildung & Lernen, Arbeit & Beruf, Freizeit & Unterhaltung, Zeit, Maße & Basiswortschatz
@@ -127,12 +127,11 @@ Persisted via `localStorage.current_theme`. Each theme fully overrides: body bac
 - [x] Profile backup: JSON file + Base64 Sync Key export/import
 - [x] Precompiled Tailwind + hardened CSP (no `unsafe-inline`/`unsafe-eval`/CDN)
 - [x] Data-integrity CI gate (`scripts/validate_data.py` via GitHub Actions)
-- [x] **Original example sentences** — all 2,627 hand-authored, **0 verbatim** vs. the official PDFs; gated by `scripts/check_example_originality.py` + `scripts/check_grammar_languagetool.py`
-- [~] Playwright unit + E2E suites exist (`scripts/run_unit_tests.py`, `scripts/e2e_comprehensive_tests.py`) — **rotted; slated for a from-scratch rebuild + CI wiring** (see audit §6, dimension 10)
+- [x] **Original example sentences** — all 2,660 hand-authored, **0 verbatim** vs. the official PDFs; gated by `scripts/check_example_originality.py` + `scripts/check_grammar_languagetool.py`
+- [x] **Test suite rebuilt from scratch (2026-07-01)** — deterministic FSRS/NLP units on Node's built-in runner (`tests/fsrs.test.mjs` + `tests/nlp.test.mjs`, 22 tests, zero deps) + a Playwright boot/smoke (`tests/smoke_e2e.py`); wired into CI as a hard gate (`.github/workflows/tests.yml`, `npm test`). The old `scripts/run_unit_tests.py` + `scripts/e2e_comprehensive_tests.py` were deleted. (Note: the "rotted" label was **stale** — `run_unit_tests.py` actually passed clean; rebuilt anyway for a cleaner CI gate. See `PRODUCTION_READINESS_AUDIT_2026-07-01.md` §12.)
 
 ### ⚠️ Known Gaps / Outstanding
-- [ ] B1 illustrations: 371 / 1,363 WebP assets (27%) — rollout in progress (A1/A2 complete)
-- [ ] **Rebuild the test suite from scratch and wire deterministic tests (FSRS/NLP) into CI** (the suites are currently rotted and run only manually)
+- [ ] B1 illustrations: 371 / 1,394 WebP assets (27%) — rollout in progress (A1/A2 complete)
 - [ ] Thematic word groups (days/months/seasons/colours/numbers/countries) not yet ingested
 - [ ] Split-second follow-ups: further module decomposition if files grow again
 - [x] Service Worker offline caching — implemented (`sw.js`, 4-strategy caching, versioned)
@@ -180,7 +179,7 @@ Persisted via `localStorage.current_theme`. Each theme fully overrides: body bac
   - [x] Copy-pasteable Base64-encoded IndexedDB progress backup sync keys (portable encoding, not compressed/encrypted)
   - [x] Flashcard relative image pathing hotfix inside `js/flashcards.js` and `js/quiz.js` prepending `state.currentLevel` to prevent 404 image load errors
   - [x] **Premium Visual Strategy & Lottie Design Lock (SOTA)**: Fully finalized the V6.0 Universal 3D Claymation & Lottie sensory strategy. Configured the offline bulk generation pipeline to utilize Google's SOTA `imagen-3.0-generate-002` model (fully covered by Google Developer credits, $0 out-of-pocket). Programmed the chroma-key alpha masking (Pillow-based transparent floating icons), dynamic dual-tone theme-responsive SVG recoloring, Airbnb `lottie-web` async player, synchronized audio/haptic chimes, and PWA Level-Based Lazy Pre-caching in the system blueprints.
-  - [x] **Comprehensive E2E Playwright Automation Suite**: Built and executed automated Playwright-based testing across multiple viewports (Desktop/Mobile) and all 5 premium design themes, achieving 100% clean test passes with 0 runtime console errors.
+  - [x] ~~**Comprehensive E2E Playwright Automation Suite**: automated Playwright testing across viewports/themes.~~ **Superseded 2026-07-01** — that suite (`scripts/e2e_comprehensive_tests.py`) was deleted and replaced by the rebuilt `tests/` suite (deterministic FSRS/NLP units + `tests/smoke_e2e.py`) wired into CI. See `PRODUCTION_READINESS_AUDIT_2026-07-01.md` §12.
   - [x] **Multi-Level NotebookLM Curriculum Verification**: Conducted automated high-speed parallel audits using the active 'Goethe-Zertifikat Wortliste' NotebookLM workspace to synchronize definitions, plurals, themes, and grammar rules with perfect fidelity *(counts reflect pre-overhaul dataset size — current counts are A1 684, A2 580, B1 1,363)*:
     - **A1**: 640 words audited, 0 corrections.
     - **A2**: 1,142 words audited, 273 factual updates applied (e.g., correcting `'die Bank'` plural to `'die Banken'` and theme to `'Einkaufen, Geld & Konsum'`, and gender of `'das Glück'` to `'das'`).
@@ -261,6 +260,19 @@ tooling only.
   unminified dev assets — not representative of the Pages build). Local run:
   `npm run audit:lighthouse`.
 - Baseline scores captured: **a11y 100 · best-practices 100 · SEO 100 · perf ~57 (dev)**.
+
+### ✅ Done this pass — Test suite rebuild + CI gate (2026-07-01)
+- **Deleted** the old harness (`scripts/run_unit_tests.py`, `scripts/e2e_comprehensive_tests.py`)
+  and reviewed one-off cruft (`debug_syntax.py`, `test_network.py`, two `scratch/test_*.py`).
+- **Rebuilt** under `tests/`: `fsrs.test.mjs` + `nlp.test.mjs` (deterministic FSRS-5 + NLP,
+  Node built-in runner, **zero deps, 22 tests green**) and `smoke_e2e.py` (Playwright boot/smoke:
+  zero uncaught errors, real card renders, IndexedDB round-trip, scheduler advances in-browser).
+- **CI:** `.github/workflows/tests.yml` — `unit` job (`npm test`) is a **hard blocking gate**;
+  `e2e` job advisory until stable. `package.json` gains `test` + `test:e2e`.
+- **Audit note:** the carried-forward "rotted" label was **stale** (`run_unit_tests.py` passed clean);
+  rebuilt anyway. Full re-audit: `PRODUCTION_READINESS_AUDIT_2026-07-01.md`. New P1 items surfaced:
+  relabel/repair the "FSRS-5" scheduler (spec deviations), fix B1 data defects (ids 81/82 dup, 682
+  malformed), finish manual WCAG 2.2 AA + a real perf budget.
 
 ### ⏭️ Queued — content moves (free tooling; some need one owner setup step)
 

@@ -36,6 +36,36 @@ LEVELS = ["a1", "a2", "b1"]
 # must be updated in lockstep or CI fails.
 DOCS_WITH_TOTAL = ["README.md", "index.html", "manifest.json", "VISION.md", "AGENTS.md"]
 
+# Merged-headword guard (added 2026-07-01). The B1/A2 wordlist generator once
+# glued alphabetically-adjacent but *unrelated* lemmas into one row (e.g.
+# "bevor / bewegen", "link- / die Lippe", "singen / sinken"). Those were split
+# into correct separate entries. A slash in a headword is now only permitted for
+# the curated legitimate cases below — spelling/regional variants, dual-gender
+# nouns, gendered pairs, phrase alternations, and prefix groupings. Any OTHER
+# slash headword is treated as a regression (a new unrelated-lemma merge) and
+# fails the gate, forcing review. Keep this list in sync when adding a genuine
+# variant entry.
+ALLOWED_SLASH_HEADWORDS = {
+    # a1
+    "circa/ca.", "ihr/ihm/ihn", "sie / Sie",
+    # a2
+    "(an-)/(aus)ziehen", "(an/aus)gezogen", "Bescheid geben / sagen",
+    "der/das Laptop", "der/die Bekannte", "der/die Jugendliche",
+    "einen Vorschlag haben / machen", "gehängt / gehangen (hängen)",
+    "her / her-", "heraus / raus", "herein / rein", "leidtun / leid tun",
+    "lieb- / lieber", "mal / das Mal",
+    # b1
+    "Elektro- / elektronisch", "Speise-/-speise", "das Müsli / Müesli",
+    "das Portemonnaie / das Portmonee", "das Schlagobers / die Schlagsahne",
+    "der Bancomat/Bankomat", "der Ofen / der Backofen", "der Ski / Schi",
+    "der/das (Schlag-)Obers", "die Fantasie / Phantasie",
+    "die Glace / das Glacé (CH)", "die Hausfrau / der Hausmann",
+    "die Nordsee / die Ostsee", "die Phantasie / Fantasie",
+    "die Rezeption / Reception", "die Soße / die Sauce",
+    "die Zahncreme / die Zahnpasta", "die ec-Karte / EC-Karte",
+    "in Pension gehen / sein", "in Rente gehen / sein", "so viel/so viel wie",
+}
+
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -84,6 +114,17 @@ def validate_level(level: str, errors: list[str]) -> int:
         if eid in seen_ids:
             fail(errors, f"{level}/wordlist.json: duplicate id={eid}")
         seen_ids.add(eid)
+
+        # Merged-headword regression guard: a '/' in the headword is only allowed
+        # for the curated legitimate variants/pairs; anything else is a suspected
+        # unrelated-lemma merge (see ALLOWED_SLASH_HEADWORDS).
+        german = entry.get("german") or ""
+        if "/" in german and german not in ALLOWED_SLASH_HEADWORDS:
+            fail(
+                errors,
+                f"{level} id={eid}: suspected merged headword {german!r} "
+                f"(not in the legitimate-variant allowlist) — split into separate entries",
+            )
 
         # Image reference: a single 'image' field. The legacy redundant
         # 'image_path' field was collapsed into 'image'; flag any regression
