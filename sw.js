@@ -8,7 +8,7 @@
 // handled independently by WORDLIST_CACHE_VERSION in app.js, which is appended as a
 // ?v= query param so cache-first DATA_CACHE entries are bypassed on a data change —
 // so a data-only update does NOT require bumping CACHE_VERSION, and vice versa.
-const CACHE_VERSION = 'v7.5.0'; // v7.5.0: self-hosted fonts (Inter/Outfit/FontAwesome) + tightened CSP (no third-party CDNs)
+const CACHE_VERSION = 'v7.5.1'; // v7.5.1: UI polish — rating-key badges, tighter card spacing, readable spectrogram labels
 const STATIC_CACHE = `deutschsphere-static-${CACHE_VERSION}`;
 const DATA_CACHE = `deutschsphere-data-${CACHE_VERSION}`;
 const CDN_CACHE = `deutschsphere-cdn-${CACHE_VERSION}`;

@@ -638,7 +638,7 @@
           </div> <!-- End of audio-trainer-panel -->
 
           <!-- The Core Card Display Area -->
-          <div id="card-display-area" class="w-full space-y-4 transition-all duration-300">
+          <div id="card-display-area" class="w-full space-y-2 transition-all duration-300">
           <!-- The Core Card Element (M6: aria-live for screen reader announcements) -->
           <div id="flashcard" role="region" aria-live="polite" aria-label="Current flashcard" class="glass border rounded-2xl p-6 md:py-6 md:px-10 min-h-[220px] sm:min-h-[240px] md:min-h-[280px] flex flex-col justify-between cursor-pointer transition-all duration-300 select-none relative group overflow-hidden card-glow-neutral">
             <!-- Subtle Glow Overlay on hover -->
@@ -742,7 +742,7 @@
                   </div>
                   <div class="h-16 relative overflow-hidden rounded-lg bg-slate-950 border border-slate-900/50 flex items-center justify-center">
                     <canvas id="phonetic-spec-native" class="absolute inset-0 w-full h-full"></canvas>
-                    <span id="native-spec-hint" class="text-[10px] text-slate-600 font-semibold uppercase tracking-widest z-10">Reference Spectrogram</span>
+                    <span id="native-spec-hint" class="text-[9px] text-slate-400 font-semibold uppercase tracking-[0.15em] z-10 px-2 py-1 rounded-md bg-slate-950/85 backdrop-blur-sm whitespace-nowrap">Reference Spectrogram</span>
                   </div>
                 </div>
 
@@ -754,7 +754,7 @@
                   </div>
                   <div class="h-16 relative overflow-hidden rounded-lg bg-slate-950 border border-slate-900/50 flex items-center justify-center">
                     <canvas id="phonetic-spec-learner" class="absolute inset-0 w-full h-full"></canvas>
-                    <span id="learner-spec-hint" class="text-[10px] text-slate-600 font-semibold uppercase tracking-widest z-10">Your Spectrogram</span>
+                    <span id="learner-spec-hint" class="text-[9px] text-slate-400 font-semibold uppercase tracking-[0.15em] z-10 px-2 py-1 rounded-md bg-slate-950/85 backdrop-blur-sm whitespace-nowrap">Your Spectrogram</span>
                   </div>
                 </div>
               </div>
@@ -840,27 +840,26 @@
             <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest flex items-center gap-1.5">
               <i class="fa-solid fa-brain text-indigo-400/50 text-[9px]"></i> Rate your recall
             </span>
-            <span class="text-[9px] text-slate-700 font-mono hidden sm:block">
-              <kbd class="px-1 py-0.5 bg-slate-900 border border-slate-800 rounded">1</kbd>
-              <kbd class="px-1 py-0.5 bg-slate-900 border border-slate-800 rounded">2</kbd>
-              <kbd class="px-1 py-0.5 bg-slate-900 border border-slate-800 rounded">3</kbd>
-              <kbd class="px-1 py-0.5 bg-slate-900 border border-slate-800 rounded">4</kbd>
-            </span>
+            <span class="text-[9px] text-slate-600 font-medium hidden sm:block">press <span class="font-mono text-slate-500">1</span>–<span class="font-mono text-slate-500">4</span></span>
           </div>
           <div class="grid grid-cols-4 gap-2">
-            <button data-rating="1" class="fsrs-grade-btn group flex flex-col items-center justify-center gap-0.5 py-3 rounded-xl bg-rose-950/20 border border-rose-500/25 hover:border-rose-500/60 hover:bg-rose-950/40 text-rose-400 active:scale-95 transition-all min-h-[52px]" title="Again — Reset (Hotkey: 1)">
+            <button data-rating="1" class="fsrs-grade-btn group relative flex flex-col items-center justify-center gap-0.5 py-3 rounded-xl bg-rose-950/20 border border-rose-500/25 hover:border-rose-500/60 hover:bg-rose-950/40 text-rose-400 active:scale-95 transition-all min-h-[52px]" title="Again — Reset (Hotkey: 1)">
+              <kbd class="absolute top-1.5 left-1.5 text-[9px] font-mono leading-none px-1 py-0.5 rounded bg-rose-950/40 border border-rose-500/25 text-rose-500/60 group-hover:text-rose-400/90">1</kbd>
               <span class="text-sm font-black leading-none">Again</span>
               <span class="text-[9px] font-bold text-rose-500/50 group-hover:text-rose-400/80 leading-none mt-0.5">Forgot</span>
             </button>
-            <button data-rating="2" class="fsrs-grade-btn group flex flex-col items-center justify-center gap-0.5 py-3 rounded-xl bg-amber-950/20 border border-amber-500/25 hover:border-amber-500/60 hover:bg-amber-950/40 text-amber-400 active:scale-95 transition-all min-h-[52px]" title="Hard — Slight boost (Hotkey: 2)">
+            <button data-rating="2" class="fsrs-grade-btn group relative flex flex-col items-center justify-center gap-0.5 py-3 rounded-xl bg-amber-950/20 border border-amber-500/25 hover:border-amber-500/60 hover:bg-amber-950/40 text-amber-400 active:scale-95 transition-all min-h-[52px]" title="Hard — Slight boost (Hotkey: 2)">
+              <kbd class="absolute top-1.5 left-1.5 text-[9px] font-mono leading-none px-1 py-0.5 rounded bg-amber-950/40 border border-amber-500/25 text-amber-500/60 group-hover:text-amber-400/90">2</kbd>
               <span class="text-sm font-black leading-none">Hard</span>
               <span class="text-[9px] font-bold text-amber-500/50 group-hover:text-amber-400/80 leading-none mt-0.5">~1d</span>
             </button>
-            <button data-rating="3" class="fsrs-grade-btn group flex flex-col items-center justify-center gap-0.5 py-3 rounded-xl bg-emerald-950/20 border border-emerald-500/25 hover:border-emerald-500/60 hover:bg-emerald-950/40 text-emerald-400 active:scale-95 transition-all min-h-[52px]" title="Good — Normal recall (Hotkey: 3)">
+            <button data-rating="3" class="fsrs-grade-btn group relative flex flex-col items-center justify-center gap-0.5 py-3 rounded-xl bg-emerald-950/20 border border-emerald-500/25 hover:border-emerald-500/60 hover:bg-emerald-950/40 text-emerald-400 active:scale-95 transition-all min-h-[52px]" title="Good — Normal recall (Hotkey: 3)">
+              <kbd class="absolute top-1.5 left-1.5 text-[9px] font-mono leading-none px-1 py-0.5 rounded bg-emerald-950/40 border border-emerald-500/25 text-emerald-500/60 group-hover:text-emerald-400/90">3</kbd>
               <span class="text-sm font-black leading-none">Good</span>
               <span class="text-[9px] font-bold text-emerald-500/50 group-hover:text-emerald-400/80 leading-none mt-0.5">~3d</span>
             </button>
-            <button data-rating="4" class="fsrs-grade-btn group flex flex-col items-center justify-center gap-0.5 py-3 rounded-xl bg-sky-950/20 border border-sky-500/25 hover:border-sky-500/60 hover:bg-sky-950/40 text-sky-400 active:scale-95 transition-all min-h-[52px]" title="Easy — Long-term (Hotkey: 4)">
+            <button data-rating="4" class="fsrs-grade-btn group relative flex flex-col items-center justify-center gap-0.5 py-3 rounded-xl bg-sky-950/20 border border-sky-500/25 hover:border-sky-500/60 hover:bg-sky-950/40 text-sky-400 active:scale-95 transition-all min-h-[52px]" title="Easy — Long-term (Hotkey: 4)">
+              <kbd class="absolute top-1.5 left-1.5 text-[9px] font-mono leading-none px-1 py-0.5 rounded bg-sky-950/40 border border-sky-500/25 text-sky-500/60 group-hover:text-sky-400/90">4</kbd>
               <span class="text-sm font-black leading-none">Easy</span>
               <span class="text-[9px] font-bold text-sky-500/50 group-hover:text-sky-400/80 leading-none mt-0.5">15+d</span>
             </button>
