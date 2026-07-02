@@ -2,7 +2,7 @@ name: tests
 
 # Deterministic test gate. The `unit` job runs the pure-logic suite
 # (tests/*.test.mjs) on Node's built-in runner — zero dependencies, no browser —
-# and is a HARD gate on every code change: it guards the FSRS-5 scheduler and the
+# and is a HARD gate on every code change: it guards the FSRS-inspired scheduler and the
 # German NLP layer against regressions. The `e2e` job boots the real app in
 # headless Chromium (Playwright) and is advisory for now (browser flakiness);
 # flip continue-on-error off once it has proven stable in CI.
@@ -34,7 +34,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: Deterministic unit tests (FSRS-5 + NLP) — node --test
+      - name: Deterministic unit tests (FSRS-inspired scheduler + NLP) — node --test
         run: npm test
 
   e2e:

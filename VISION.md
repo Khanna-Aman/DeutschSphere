@@ -20,7 +20,7 @@ DeutschSphere is designed to maximize vocabulary acquisition through distraction
 
 | Component | Status | Description |
 | :--- | :--- | :--- |
-| **FSRS-inspired Spaced Repetition** | **Active** | Clinical scheduling using the FSRS-5 19-parameter stability/difficulty model to project cognitive decay (with documented simplifications; see `js/fsrs.js`). |
+| **FSRS-inspired Spaced Repetition** | **Active** | Clinical scheduling with an FSRS-inspired stability/difficulty model (based on FSRS-5, with documented simplifications; see `js/fsrs.js`) to project cognitive decay. |
 | **Phonetik-Spiegel** | **Active** | Web Speech `SpeechRecognition` (de-DE) transcription scored against the target by Levenshtein distance, with a live waveform vs. a native-synthesis reference and static mouth-position guides. |
 | **Active Recall Quiz Arena** | **Active** | Bidirectional MC reservoir-sampled tests and text spelling with virtual keyboards. |
 | **Immersions-Labor** | **Active** | Custom local NLP for copy-pasted text block lemmatization and instant flashcard generation. |
