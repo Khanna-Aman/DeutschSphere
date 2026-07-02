@@ -98,10 +98,13 @@ the official Goethe-Institut *Wortlisten*.
 > [!NOTE]
 > **An honest word on coverage.** Each entry's German headword, gender, and plural
 > were cross-checked against the official Goethe lists (~99.6% fidelity). That is
-> **not** the same as covering those lists in full: B1 is a **curated subset**
-> (about 58% of the ~2,400 official B1 units), B1 illustrations are still rolling
-> out, and some thematic groups (days, months, seasons, colours, numbers, countries)
-> aren't in yet. We'd rather tell you exactly where we stand than round up.
+> **not** the same as covering those lists in full. **B1 is under active
+> development:** measured against the official (cumulative) Goethe B1 *Wortliste*,
+> the deck currently covers roughly **80–85%** of it (~84% of B1 nouns), with the
+> remaining everyday words — plus a few thematic groups (days, months, seasons,
+> colours, numbers, countries) — being **backfilled in ongoing releases**. B1
+> illustrations are also still rolling out (27%). We'd rather tell you exactly where
+> we stand than round up.
 
 **Where the content comes from.** Word *scope* references the publicly available
 Goethe-Institut *Wortlisten* (A1/A2/B1). English translations and pronunciation hints

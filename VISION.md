@@ -37,7 +37,15 @@ DeutschSphere is designed to maximize vocabulary acquisition through distraction
 
 ## 🚀 Active Roadmap
 
-### 🔜 Short-Term Milestones (v1.1.x)
+### ✅ Pre-Launch Hardening (done)
+Honesty/safety batch shipped before going public:
+* **Privacy disclosure** — documented the optional cloud `SpeechRecognition` microphone data flow in `PRIVACY.md`.
+* **Real CI copyright gate** — `check_example_originality.py` gained a committed, non-copyrighted fingerprint (salted hashes of the official 6-word shingles) so `validate-data.yml` blocks any verbatim Goethe sentence **in CI**, without redistributing the source PDFs. This also closed a per-level blind spot that had let **5 cross-level verbatim example sentences** slip through; those were re-authored to original, grammar-checked sentences.
+* **XSS hardening** — custom/imported card fields are now HTML-escaped at every render sink.
+* **UI fix** — restored the rating-key badge offsets missing from the purged `tailwind.css`.
+
+### 🔜 Short-Term Milestones (v1.1.x — post-launch rollout)
+* **B1 Vocabulary Backfill**: B1 is **under active development** — the deck currently covers ~80–85% of the official (cumulative) Goethe B1 *Wortliste*. Add the remaining ~150–180 everyday nouns (e.g. *Gefühl, Gefahr, Boot, Bär, Demokratie*) and common verbs (*aufgeben, abnehmen, atmen*), plus the missing thematic groups (days, months, seasons), each with an original grammar-gated example.
 * **B1 Asset Rollout**: Complete the final integration of audited 3D glassmorphic WebP assets for the remaining B1 entries (371/1,394 done, 1,023 outstanding) following strict anti-bleeding checks.
 * **IndexedDB Thread Tuning**: Debounce and stream asynchronous profile writes in `js/state.js` to eliminate micro-stutters during massive bulk updates (e.g. after a large quiz session).
 * **WCAG 2.2 AA Accessibility**: ✅ Automated pass complete — Lighthouse/axe **accessibility 100** (best-practices 100, SEO 100), enforced by the `quality.yml` CI gate. Remaining: the full *manual* AA sign-off (keyboard-only and screen-reader walkthrough of every view transition and accordion) that automation cannot cover.
@@ -51,7 +59,7 @@ DeutschSphere is designed to maximize vocabulary acquisition through distraction
 ---
 
 ## 📊 Technical Metrics Ledger
-* **Active Vocabulary Capacity**: 2,660 entries across CEFR A1 (684), A2 (582), and B1 (1,394).
+* **Active Vocabulary Capacity**: 2,660 entries across CEFR A1 (684), A2 (582), and B1 (1,394). B1 is **under active development** — currently ~80–85% of the official (cumulative) Goethe B1 *Wortliste* (~84% of B1 nouns); remaining everyday words are being backfilled in post-launch releases.
 * **Production Dependencies**: 0 runtime npm modules. Tailwind is precompiled to a static, tree-shaken stylesheet (no runtime CDN); the Inter/Outfit web fonts and FontAwesome icons are **self-hosted under `./fonts`** (no third-party CDN calls), so the app makes zero external requests on load.
 * **Codebase Weight**: ~450KB modular ES6 files, 1 HTML shell, and 1 global stylesheet.
 * **State Engine**: Client-side IndexedDB persistence managed via an asynchronous debounced `idb-keyval` pipeline.

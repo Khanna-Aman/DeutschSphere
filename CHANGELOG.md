@@ -5,6 +5,32 @@ Format follows [Keep a Changelog](https://keepachangelog.com/); this project use
 date-stamped sections rather than strict SemVer releases (it ships continuously
 to GitHub Pages). For full detail, see the git history.
 
+## v1.1.1 — 2026-07-02 (pre-launch hardening)
+
+Honesty/safety batch before going public. No new features.
+
+### Added
+- **Real CI copyright gate.** `scripts/check_example_originality.py` gained `--build-fingerprint`
+  and `--fingerprint` modes: a committed, non-copyrighted fingerprint (salted SHA-256 of the
+  official Goethe 6-word shingles) lets `validate-data.yml` block any verbatim source sentence
+  **in CI** without shipping the copyrighted PDFs. Wired as a blocking step in the data workflow.
+- **Privacy — "Pronunciation & microphone" section** in `PRIVACY.md` disclosing that the optional
+  pronunciation trainer's Web Speech API streams microphone audio to the browser vendor's cloud
+  (the one path where data can leave the device). `SECURITY.md` now links to it.
+
+### Fixed
+- **5 verbatim Goethe example sentences** (a1 #542/#547, a2 #251/#364/#590) that reproduced
+  copyrighted source sentences were re-authored to original, grammar-checked sentences. These had
+  slipped past the originality gate, which only compared each level against **its own** PDF; the
+  gate now checks the **cumulative** source across all levels (verbatim = a ≥7-word span; shorter
+  generic phrases stay advisory).
+- **XSS hardening** — custom/imported card fields (`word`, `meaning`, `wordClass`) are now
+  HTML-escaped at their render sinks in `js/flashcards.js` (defense-in-depth beyond the CSP).
+- **Rating-key badges** (Again/Hard/Good/Easy) no longer overlap their labels — restored the
+  `top-1.5`/`left-1.5` offsets missing from the purged `tailwind.css` (patched in `index.css`).
+- **Docs honesty** — `NOTICE` example count 2,627 → 2,660; README/VISION now state B1 is under
+  active development at ~80–85% of the official B1 list (backfill ongoing).
+
 ## v1.1.0 — 2026-07-01 (test-suite rebuild + data-integrity fixes + public launch)
 
 Independent re-verification pass **plus remediation**. No new P0 blockers; the three

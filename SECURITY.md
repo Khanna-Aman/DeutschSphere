@@ -37,4 +37,5 @@ prioritized over features.
   data beyond what the user types).
 - The browser `SpeechRecognition` (Web Speech API) sending audio to the browser
   vendor's service during pronunciation practice — this is a browser behavior,
-  disclosed in [PRIVACY.md](PRIVACY.md), not an app data flow.
+  disclosed under [PRIVACY.md → Pronunciation & microphone](PRIVACY.md#pronunciation--microphone),
+  not an app data flow.

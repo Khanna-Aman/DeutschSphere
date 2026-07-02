@@ -19,6 +19,14 @@ There are **no user accounts, no logins, and no analytics or advertising tracker
 - **App assets** (HTML/CSS/JS, fonts, icons, vocabulary data, images) are served from the app's own origin. Fonts (Inter, Outfit) and icons (FontAwesome) are **self-hosted** — the app does **not** call Google Fonts, Cloudflare, or any third-party CDN at runtime. After the first load, the app works fully offline.
 - **Feedback form (optional, only if you use it):** if you open the in-app feedback form and submit it, your message — and the name/email you choose to type — is sent to **[FormSubmit](https://formsubmit.co)** (a third-party form-relay service), which forwards it to the maintainer by email. This happens **only when you explicitly submit** the form. Do not include sensitive personal information. See FormSubmit's own privacy terms for how they process submissions. Submitting without an email address is supported.
 
+## Pronunciation & microphone
+
+The optional **pronunciation trainer** uses your browser's built-in **Web Speech API** (`SpeechRecognition`) to listen to you say a word and compare it to the target. This is the **one feature where audio can leave your device**, and it depends on your browser:
+
+- In **Chromium-based browsers (Chrome, Edge)**, the Web Speech API streams the captured microphone audio to the **browser vendor's own cloud service** for transcription. That audio is processed under **your browser vendor's** privacy policy, not ours.
+- DeutschSphere itself never receives, stores, or transmits your audio — it only reads the text transcript the browser returns, on your device.
+- This happens **only while you actively use a pronunciation exercise** and after your browser's microphone permission prompt. If you never start a pronunciation exercise (or deny the mic), no audio is ever captured. Browsers that don't support the API simply disable the feature.
+
 ## Hosting
 
 The app is distributed as static files (e.g. via GitHub Pages). The host may collect standard server logs (such as IP address and user-agent) for any static request, as is typical for any website. We do not control or receive those logs.

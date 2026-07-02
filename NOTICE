@@ -26,7 +26,7 @@ project. Earlier versions reproduced sentences from the Goethe-Institut /
 Hueber Verlag / telc / ÖSD Wortliste publications (copyrighted,
 "urheberrechtlich geschützt"); all of those have been replaced.
 
-All 2,627 example sentences across A1/A2/B1 were re-authored and verified:
+All 2,660 example sentences across A1/A2/B1 were re-authored and verified:
   - scripts/check_example_originality.py reports 0 verbatim matches (and no
     6-word shingle copies) against the official source PDFs;
   - scripts/check_grammar_languagetool.py independently grammar-checks them
