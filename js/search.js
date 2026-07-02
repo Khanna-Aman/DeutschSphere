@@ -91,11 +91,11 @@ const documentsEn = ['office', 'authorit', 'police', 'post', 'telecom', 'bank', 
 // Helper to precompile RegExp objects once upon module load
 const makeRegExpDe = (stems) => stems.map(stem => ({
   stem,
-  re: new RegExp('\\b' + stem.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'))
+  re: new RegExp('\\b' + stem.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&'))
 }));
 
 const makeRegExpEn = (keywords) => keywords.map(kw => 
-  new RegExp('\\b' + kw.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&') + '\\b')
+  new RegExp('\\b' + kw.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&') + '\\b')
 );
 
 // Pre-compiled regular expressions caches

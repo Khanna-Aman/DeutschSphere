@@ -131,16 +131,16 @@ const IRREGULAR_VERB_MAP = {
   'esse': 'essen', 'isst': 'essen', 'essen': 'essen', 'esst': 'essen',
   'aß': 'essen', 'aßen': 'essen', 'aßt': 'essen', 'gegessen': 'essen',
   // gehen
-  'gehe': 'gehen', 'gehst': 'gehen', 'geht': 'gehen', 'gehen': 'gehen', 'geht': 'gehen',
+  'gehe': 'gehen', 'gehst': 'gehen', 'geht': 'gehen', 'gehen': 'gehen',
   'ging': 'gehen', 'gingst': 'gehen', 'gingen': 'gehen', 'gingt': 'gehen', 'gegangen': 'gehen',
   // kommen
-  'komme': 'kommen', 'kommst': 'kommen', 'kommt': 'kommen', 'kommen': 'kommen', 'kommt': 'kommen',
+  'komme': 'kommen', 'kommst': 'kommen', 'kommt': 'kommen', 'kommen': 'kommen',
   'kam': 'kommen', 'kamst': 'kommen', 'kamen': 'kommen', 'kamt': 'kommen', 'gekommen': 'kommen',
   // tun
-  'tue': 'tun', 'tust': 'tun', 'tut': 'tun', 'tun': 'tun', 'tut': 'tun',
+  'tue': 'tun', 'tust': 'tun', 'tut': 'tun', 'tun': 'tun',
   'tat': 'tun', 'tatst': 'tun', 'taten': 'tun', 'tatet': 'tun', 'getan': 'tun',
   // schreiben
-  'schreibe': 'schreiben', 'schreibst': 'schreiben', 'schreibt': 'schreiben', 'schreiben': 'schreiben', 'schreibt': 'schreiben',
+  'schreibe': 'schreiben', 'schreibst': 'schreiben', 'schreibt': 'schreiben', 'schreiben': 'schreiben',
   'schrieb': 'schreiben', 'schriebst': 'schreiben', 'schrieben': 'schreiben', 'schriebt': 'schreiben', 'geschrieben': 'schreiben'
 };
 

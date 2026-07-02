@@ -37,9 +37,8 @@ jobs:
 
   lint:
     runs-on: ubuntu-latest
-    # Advisory for now: surfaces issues without blocking while the codebase
-    # adopts lint. Flip to blocking once the baseline is clean.
-    continue-on-error: true
+    # Blocking: the baseline is clean (0 errors), so lint errors now fail the
+    # check. Warnings still pass (eslint exits 0 on warnings only).
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
