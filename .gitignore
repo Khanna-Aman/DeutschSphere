@@ -45,6 +45,7 @@ gcp-key.json
 scripts/*
 !scripts/validate_data.py
 !scripts/check_example_originality.py
+!scripts/originality_fingerprint.json
 !scripts/check_grammar_languagetool.py
 !scripts/check_image_word_clip.py
 !scripts/check_examples_llm_judge.py

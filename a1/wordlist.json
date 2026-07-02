@@ -9207,8 +9207,8 @@
     "pronunciation": "tish",
     "theme": "Wohnen, Haus & Haushalt",
     "antonym": null,
-    "example_de": "Das Essen steht schon auf dem Tisch.",
-    "example_en": "The food is already on the table.",
+    "example_de": "Wir haben einen großen Tisch in der Küche.",
+    "example_en": "We have a big table in the kitchen.",
     "image": "images/card_544.webp",
     "id": 542,
     "image_tier": "B"
@@ -9292,8 +9292,8 @@
     "pronunciation": "trep-peh",
     "theme": "Wohnen, Haus & Haushalt",
     "antonym": "der Aufzug",
-    "example_de": "Ich nehme die Treppe, nicht den Aufzug.",
-    "example_en": "I'll take the stairs, not the elevator.",
+    "example_de": "Ich gehe langsam die Treppe hinunter.",
+    "example_en": "I walk slowly down the stairs.",
     "image": "images/card_549.webp",
     "id": 547,
     "image_tier": "B"

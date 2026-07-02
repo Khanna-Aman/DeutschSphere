@@ -15,6 +15,8 @@ on:
       - "manifest.json"
       - "VISION.md"
       - "scripts/validate_data.py"
+      - "scripts/check_example_originality.py"
+      - "scripts/originality_fingerprint.json"
       - ".github/workflows/validate-data.yml"
   pull_request:
     paths:
@@ -26,6 +28,8 @@ on:
       - "manifest.json"
       - "VISION.md"
       - "scripts/validate_data.py"
+      - "scripts/check_example_originality.py"
+      - "scripts/originality_fingerprint.json"
       - ".github/workflows/validate-data.yml"
   workflow_dispatch:
 
@@ -43,3 +47,12 @@ jobs:
         # Validates JSON, schema, unique ids, image references (exist + no
         # duplicates), and doc/data count consistency.
         run: python scripts/validate_data.py
+
+      - name: Guard example-sentence originality (copyright)
+        # Hard-fails if any example_de reproduces a verbatim (>=7-word) sentence
+        # from the copyrighted Goethe/Hueber/telc/OeSD Wortliste. The source PDFs
+        # are git-ignored, so CI checks against a committed, non-copyrighted
+        # fingerprint (salted hashes of the official 6-word shingles). Regenerate
+        # locally with: python scripts/check_example_originality.py --build-fingerprint
+        # scripts/originality_fingerprint.json
+        run: python scripts/check_example_originality.py --fingerprint scripts/originality_fingerprint.json
