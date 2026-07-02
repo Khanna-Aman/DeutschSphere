@@ -1899,4 +1899,19 @@ input:focus-visible {
   }
 }
 
+/* ==========================================================================
+   Utility patch — position offsets missing from the purged tailwind.css build.
+   These classes are used in index.html (e.g. the rating-key <kbd> badges on the
+   Again/Hard/Good/Easy buttons) but were added after tailwind.css was last
+   generated, so `position:absolute` applied with no offsets and the badge fell
+   back to its in-flow spot, overlapping the button label. Defining them here
+   restores the intended top-left corner placement.
+   ========================================================================== */
+.top-1\.5  { top: 0.375rem; }
+.left-1\.5 { left: 0.375rem; }
+.right-12  { right: 3rem; }
+@media (min-width: 1024px) {
+  .lg\:right-12 { right: 3rem; }
+}
+
 
