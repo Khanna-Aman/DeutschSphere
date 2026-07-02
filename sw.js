@@ -8,7 +8,7 @@
 // handled independently by WORDLIST_CACHE_VERSION in app.js, which is appended as a
 // ?v= query param so cache-first DATA_CACHE entries are bypassed on a data change —
 // so a data-only update does NOT require bumping CACHE_VERSION, and vice versa.
-const CACHE_VERSION = 'v7.5.3'; // v7.5.3: label B1 "under development" in the level selector; lint cleanup (nlp.js/search.js)
+const CACHE_VERSION = 'v7.5.4'; // v7.5.4: post-launch hardening — CSP base-uri/object-src/form-action; a11y input labels + quiz image alt
 const STATIC_CACHE = `deutschsphere-static-${CACHE_VERSION}`;
 const DATA_CACHE = `deutschsphere-data-${CACHE_VERSION}`;
 const CDN_CACHE = `deutschsphere-cdn-${CACHE_VERSION}`;

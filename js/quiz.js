@@ -139,6 +139,9 @@ export function loadQuizQuestion() {
     const isImageAllowed = (state.currentLevel === 'a1' || state.currentLevel === 'a2');
     if (state.showImages && isImageAllowed && activeImage) {
       elements.quizCardImage.src = state.currentLevel + '/' + activeImage;
+      // Accessible equivalent: describe the picture by its English meaning (what a
+      // sighted user infers from it) — not the German word the quiz is testing.
+      elements.quizCardImage.alt = qCard.meaning ? `Picture clue: ${qCard.meaning}` : 'Picture clue for the current word';
       elements.quizCardImage.onerror = () => {
         elements.quizCardImageContainer.classList.add('hidden');
       };

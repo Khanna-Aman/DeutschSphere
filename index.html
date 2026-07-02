@@ -7,8 +7,11 @@
   <title>DeutschSphere — A1-B1 German</title>
   <meta name="description" content="A zero-dependency, offline-first German vocabulary flashcard SPA covering 2,660 words across CEFR levels A1-B1, with SRS, quizzes, pronunciation coaching, and 5 premium themes.">
   <meta name="theme-color" content="#020617">
-  <!-- Content Security Policy — all assets self-hosted (no third-party CDNs). -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob:; connect-src 'self' https://formsubmit.co; worker-src 'self'; media-src 'self' blob:;">
+  <!-- Content Security Policy — all assets self-hosted (no third-party CDNs).
+       Note: frame-ancestors / X-Frame-Options are omitted on purpose — they are
+       ignored in a <meta> CSP and GitHub Pages cannot send custom HTTP headers.
+       base-uri, object-src and form-action DO take effect via <meta>. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob:; connect-src 'self' https://formsubmit.co; worker-src 'self'; media-src 'self' blob:; base-uri 'self'; object-src 'none'; form-action 'self';">
   <link rel="canonical" href="https://khanna-aman.github.io/DeutschSphere/">
   <!-- Open Graph / Social Sharing -->
   <meta property="og:type" content="website">
@@ -193,7 +196,7 @@
           <i class="fa-solid fa-magnifying-glass text-sm"></i>
         </button>
         <label for="search-input" class="sr-only">Search dictionary (German or English)</label>
-        <input type="text" id="search-input" class="w-full bg-slate-950/60 border border-slate-800 rounded-xl py-2.5 pl-10 pr-10 text-sm placeholder-slate-500 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-medium" placeholder="Search dictionary (German or English)..." autocomplete="off">
+        <input type="text" id="search-input" aria-label="Search dictionary (German or English)" class="w-full bg-slate-950/60 border border-slate-800 rounded-xl py-2.5 pl-10 pr-10 text-sm placeholder-slate-500 text-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-medium" placeholder="Search dictionary (German or English)..." autocomplete="off">
         <button id="search-clear" aria-label="Clear search" class="absolute inset-y-0 right-0 flex items-center pr-3 text-slate-500 hover:text-slate-300 hidden">
           <i class="fa-solid fa-circle-xmark text-sm"></i>
         </button>
@@ -1000,7 +1003,7 @@
         <div class="w-full glass border border-slate-800/80 rounded-2xl p-6 md:p-8 flex flex-col items-center mb-6 relative overflow-hidden">
           <!-- Question illustration (svg) -->
           <div id="quiz-card-image-container" class="w-full h-32 md:h-40 flex items-center justify-center mb-6 hidden transition-all duration-300 hover:scale-[1.05]">
-            <img id="quiz-card-image" class="max-h-full max-w-full object-contain pointer-events-none drop-shadow-md transition-opacity duration-300" />
+            <img id="quiz-card-image" alt="Picture clue for the current word" class="max-h-full max-w-full object-contain pointer-events-none drop-shadow-md transition-opacity duration-300" />
           </div>
           <span id="quiz-word-class" class="px-2 py-0.5 bg-slate-800/80 border border-slate-700/60 text-slate-400 text-[10px] uppercase font-bold tracking-wider rounded-md mb-2">Noun</span>
           <h3 id="quiz-question-prompt" class="text-2xl sm:text-3xl font-black font-display text-white text-center leading-tight notranslate">German Word</h3>
@@ -1016,7 +1019,7 @@
         <div id="quiz-spelling-container" class="w-full flex flex-col space-y-4 mb-6 hidden">
           <div class="relative">
             <label for="quiz-spelling-input" class="sr-only">Type your answer</label>
-            <input type="text" id="quiz-spelling-input" class="w-full bg-slate-950/60 border border-slate-800 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 rounded-xl py-3.5 px-4 text-slate-200 placeholder-slate-600 focus:outline-none transition-all font-semibold text-lg text-center" placeholder="Type your answer here..." autocomplete="off">
+            <input type="text" id="quiz-spelling-input" aria-label="Type the German word" class="w-full bg-slate-950/60 border border-slate-800 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 rounded-xl py-3.5 px-4 text-slate-200 placeholder-slate-600 focus:outline-none transition-all font-semibold text-lg text-center" placeholder="Type your answer here..." autocomplete="off">
           </div>
           
           <!-- Virtual Umlaut / Gender Keyboard -->
@@ -1564,7 +1567,7 @@
               <span>Send Anonymously</span>
             </label>
           </div>
-          <input type="text" id="feedback-name" placeholder="Enter your name..." class="w-full px-3.5 py-2.5 bg-slate-950/50 border border-slate-800 rounded-xl text-xs text-slate-200 focus:outline-none focus:border-indigo-500 transition-all">
+          <input type="text" id="feedback-name" aria-label="Your name (optional)" placeholder="Enter your name..." class="w-full px-3.5 py-2.5 bg-slate-950/50 border border-slate-800 rounded-xl text-xs text-slate-200 focus:outline-none focus:border-indigo-500 transition-all">
         </div>
 
         <!-- Category Dropdown -->
