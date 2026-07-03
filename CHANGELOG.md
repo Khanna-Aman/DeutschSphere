@@ -5,6 +5,35 @@ Format follows [Keep a Changelog](https://keepachangelog.com/); this project use
 date-stamped sections rather than strict SemVer releases (it ships continuously
 to GitHub Pages). For full detail, see the git history.
 
+## v1.1.2 — 2026-07-03 (post-launch hardening + B1 backfill Phase 1) — on `dev`
+
+### Added
+- **B1 vocabulary backfill, Phase 1 (2,660 → 2,721).** 61 entries missing from the app but
+  present in the official Goethe B1 Wortliste: 52 everyday nouns (incl. *Abend, Gefühl,
+  Gefahr, Boden, Boot, Bär, Elefant, Ente, Biene, Affe, Fliege, Demokratie, Tod, Kindheit*)
+  and 9 common verbs (*abnehmen, aufgeben, ansprechen, anmelden, atmen, auffallen,
+  aufnehmen, zunehmen, gießen*). Gender/plural are source-grounded from the official list
+  (plural null where the source shows no form — zero-inference); every example sentence is
+  original (originality gates: 0 verbatim) and LanguageTool-checked (0 defects).
+  `WORDLIST_CACHE_VERSION` → v1.0.8. Next phases: remaining ~90 alphabetical nouns,
+  thematic groups, `-in` doublets/regional policy.
+- **Tailwind build restored** — `npm run build:css` regenerates `tailwind.css`
+  (tailwindcss@3.4.17); regenerated with 0 coverage regressions; hand-patch removed
+  from `index.css`; DEVELOPMENT.md documents the silent-no-op failure mode.
+- **Dedicated maskable PWA icons** (192/512) with safe-zone padding; manifest + SW precache.
+
+### Fixed / hardened
+- **CSP**: added `base-uri 'self'`, `object-src 'none'`, `form-action 'self'`.
+- **Language semantics (WCAG 3.1.1/3.1.2)**: `<html lang="en">` (English UI) with `lang="de"`
+  on all German content surfaces (card word, examples, quiz prompts/options/feedback —
+  dynamic where direction flips —, immersion, badges); `card.plural` render sink escaped.
+- **A11y**: aria-labels on the search/quiz/feedback inputs; quiz image alt (dynamic meaning).
+- **Service worker**: removed the dead cross-origin CDN strategy; fixed the `/sw.js` cache
+  guard for subpath deploys; offline round-trip verified.
+- **Copy honesty**: pronunciation wording (browser transcription + Kölner-Phonetik
+  comparison, no "native models"); "FSRS-5" → "FSRS-inspired" for current state in CI/VISION.
+- **Lint**: cleared the 6 baseline eslint errors; the CI `lint` job is now blocking.
+
 ## v1.1.1 — 2026-07-02 (pre-launch hardening)
 
 Honesty/safety batch before going public. No new features.
