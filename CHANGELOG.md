@@ -8,15 +8,20 @@ to GitHub Pages). For full detail, see the git history.
 ## v1.1.2 — 2026-07-03 (post-launch hardening + B1 backfill Phase 1) — on `dev`
 
 ### Added
-- **B1 vocabulary backfill, Phase 1 (2,660 → 2,721).** 61 entries missing from the app but
-  present in the official Goethe B1 Wortliste: 52 everyday nouns (incl. *Abend, Gefühl,
-  Gefahr, Boden, Boot, Bär, Elefant, Ente, Biene, Affe, Fliege, Demokratie, Tod, Kindheit*)
-  and 9 common verbs (*abnehmen, aufgeben, ansprechen, anmelden, atmen, auffallen,
-  aufnehmen, zunehmen, gießen*). Gender/plural are source-grounded from the official list
-  (plural null where the source shows no form — zero-inference); every example sentence is
-  original (originality gates: 0 verbatim) and LanguageTool-checked (0 defects).
-  `WORDLIST_CACHE_VERSION` → v1.0.8. Next phases: remaining ~90 alphabetical nouns,
-  thematic groups, `-in` doublets/regional policy.
+- **B1 vocabulary backfill, Phases 1–2 (2,660 → 3,054, +394 entries).** Every headword in
+  the official Goethe B1 Wortliste's alphabetical section that was missing from the app:
+  Phase 1 — 61 everyday entries (52 nouns incl. *Abend, Gefühl, Gefahr, Boden, Boot, Bär,
+  Demokratie* + 9 verbs). Phase 2 — 333 more: 27 nouns (incl. *Magazin, Metall, Verlag*),
+  ~255 verbs (incl. *ablehnen, annehmen, sich bewerben, entscheiden, sich erinnern, sich
+  freuen, geschehen, verlassen, versprechen, überlegen*), and 51 adjectives/adverbs/particles
+  (incl. *höflich, lecker, stolz, unterwegs, zuständig*). A position-independent completeness
+  sweep (entry signatures, any column) closed the shifted-column extraction blind spot.
+  Gender/plural are source-grounded (null where unattested — zero-inference); every example
+  is original and LanguageTool-gated (0 defects); presence + facts double-checked against
+  the official lists via the OpusAudit NotebookLM notebook (nlm CLI) — the originality gate
+  even caught and fixed one accidentally-reproduced source sentence. `WORDLIST_CACHE_VERSION`
+  → v1.0.8. Remaining phases: thematic groups (months/days/loanwords), `-in` doublets,
+  regional (A/CH) variants.
 - **Tailwind build restored** — `npm run build:css` regenerates `tailwind.css`
   (tailwindcss@3.4.17); regenerated with 0 coverage regressions; hand-patch removed
   from `index.css`; DEVELOPMENT.md documents the silent-no-op failure mode.
