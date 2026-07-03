@@ -38,7 +38,9 @@ const APP_SHELL = [
   './js/phoneme_guides.js',
   './manifest.json',
   './icons/icon-192.png',
-  './icons/icon-512.png'
+  './icons/icon-512.png',
+  './icons/icon-192-maskable.png',
+  './icons/icon-512-maskable.png'
 ];
 
 // Install: precache core app shell
