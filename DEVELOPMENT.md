@@ -80,8 +80,15 @@ regenerate it and commit the result (it is served statically and precached by th
 Service Worker):
 
 ```bash
-npx tailwindcss@3.4.17 -c tailwind.config.js -i tailwind.input.css -o tailwind.css --minify
+npm run build:css   # = npx tailwindcss@3.4.17 -c tailwind.config.js -i tailwind.input.css -o tailwind.css --minify
 ```
+
+> ⚠️ **If you skip this, new utility classes silently do nothing** — the class sits
+> in the DOM with no matching rule in the purged build. This has bitten us before
+> (the rating-key badges rendered unpositioned because `top-1.5`/`left-1.5` were
+> missing). If a Tailwind class has no visible effect, check it exists:
+> `grep -F '.top-1\.5{' tailwind.css` — and regenerate if absent. Remember
+> `tailwind.css` is precached: bump `CACHE_VERSION` in `sw.js` when it changes.
 
 ## Quality gates & CI
 
