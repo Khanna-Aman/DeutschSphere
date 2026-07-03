@@ -166,10 +166,16 @@ export function loadQuizQuestion() {
     qCard.direction = Math.random() < 0.5 ? 'de-to-en' : 'en-to-de';
 
     if (qCard.direction === 'de-to-en') {
-      if (elements.quizQuestionPrompt) elements.quizQuestionPrompt.textContent = qCard.word;
+      if (elements.quizQuestionPrompt) {
+        elements.quizQuestionPrompt.textContent = qCard.word;
+        elements.quizQuestionPrompt.lang = 'de'; // prompt shows the German word
+      }
       if (elements.quizQuestionSubprompt) elements.quizQuestionSubprompt.textContent = 'Choose the English meaning';
     } else {
-      if (elements.quizQuestionPrompt) elements.quizQuestionPrompt.textContent = qCard.meaning;
+      if (elements.quizQuestionPrompt) {
+        elements.quizQuestionPrompt.textContent = qCard.meaning;
+        elements.quizQuestionPrompt.lang = 'en'; // prompt shows the English meaning
+      }
       if (elements.quizQuestionSubprompt) elements.quizQuestionSubprompt.textContent = 'Choose the matching German word';
     }
 
@@ -182,7 +188,10 @@ export function loadQuizQuestion() {
     if (elements.quizSpellingContainer) elements.quizSpellingContainer.classList.remove('hidden');
 
     // Render English definition and prompt spelling the German headword
-    if (elements.quizQuestionPrompt) elements.quizQuestionPrompt.textContent = qCard.meaning;
+    if (elements.quizQuestionPrompt) {
+      elements.quizQuestionPrompt.textContent = qCard.meaning;
+      elements.quizQuestionPrompt.lang = 'en';
+    }
 
     // Set appropriate placeholder text / prompt hints for article-based nouns
     let promptHint = 'Type the German translation';
@@ -270,7 +279,7 @@ export function generateMCOptions(qCard, direction) {
     btn.innerHTML = `
       <div class="flex items-center gap-3">
         <span class="w-7 h-7 rounded-lg bg-white/10 group-hover:bg-indigo-500/20 group-hover:text-indigo-400 flex items-center justify-center text-xs font-bold border border-white/5 transition-colors">${idx + 1}</span>
-        <span class="text-base">${escapeHtml(opt.text)}</span>
+        <span class="text-base"${direction === 'en-to-de' ? ' lang="de"' : ''}>${escapeHtml(opt.text)}</span>
       </div>
       <i class="fa-solid fa-chevron-right text-slate-400 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all"></i>
     `;
@@ -311,9 +320,9 @@ export function handleMCOptionClick(opt, clickedBtn) {
       elements.quizFeedbackTitle.className = 'text-lg font-bold text-emerald-400 font-display';
       elements.quizFeedbackPanel.className = 'mt-6 p-4 rounded-2xl border border-emerald-500/20 bg-emerald-950/10 flex items-start gap-4 transition-all duration-300';
       
-      let feedbackHtml = `<strong>${escapeHtml(qCard.word)}</strong>: ${escapeHtml(qCard.meaning)}`;
+      let feedbackHtml = `<strong lang="de">${escapeHtml(qCard.word)}</strong>: ${escapeHtml(qCard.meaning)}`;
       if (qCard.exampleDe) {
-        feedbackHtml += `<br><span class="text-xs text-slate-400 font-normal italic mt-1 block">"${escapeHtml(qCard.exampleDe)}" ${qCard.exampleEn ? `(${escapeHtml(qCard.exampleEn)})` : ''}</span>`;
+        feedbackHtml += `<br><span class="text-xs text-slate-400 font-normal italic mt-1 block"><span lang="de">"${escapeHtml(qCard.exampleDe)}"</span> ${qCard.exampleEn ? `(${escapeHtml(qCard.exampleEn)})` : ''}</span>`;
       }
       elements.quizFeedbackText.innerHTML = feedbackHtml;
       elements.quizFeedbackPanel.classList.remove('hidden');
@@ -345,9 +354,9 @@ export function handleMCOptionClick(opt, clickedBtn) {
       elements.quizFeedbackTitle.className = 'text-lg font-bold text-rose-400 font-display';
       elements.quizFeedbackPanel.className = 'mt-6 p-4 rounded-2xl border border-rose-500/20 bg-rose-950/10 flex items-start gap-4 transition-all duration-300';
       
-      let feedbackHtml = `<strong>${escapeHtml(qCard.word)}</strong>: ${escapeHtml(qCard.meaning)}`;
+      let feedbackHtml = `<strong lang="de">${escapeHtml(qCard.word)}</strong>: ${escapeHtml(qCard.meaning)}`;
       if (qCard.exampleDe) {
-        feedbackHtml += `<br><span class="text-xs text-slate-400 font-normal italic mt-1 block">"${escapeHtml(qCard.exampleDe)}" ${qCard.exampleEn ? `(${escapeHtml(qCard.exampleEn)})` : ''}</span>`;
+        feedbackHtml += `<br><span class="text-xs text-slate-400 font-normal italic mt-1 block"><span lang="de">"${escapeHtml(qCard.exampleDe)}"</span> ${qCard.exampleEn ? `(${escapeHtml(qCard.exampleEn)})` : ''}</span>`;
       }
       elements.quizFeedbackText.innerHTML = feedbackHtml;
       elements.quizFeedbackPanel.classList.remove('hidden');
@@ -400,9 +409,9 @@ export function checkSpellingAnswer() {
       elements.quizFeedbackTitle.className = 'text-lg font-bold text-emerald-400 font-display';
       elements.quizFeedbackPanel.className = 'mt-6 p-4 rounded-2xl border border-emerald-500/20 bg-emerald-950/10 flex items-start gap-4 transition-all duration-300';
       
-      let feedbackHtml = `<strong>${escapeHtml(qCard.word)}</strong>: ${escapeHtml(qCard.meaning)}`;
+      let feedbackHtml = `<strong lang="de">${escapeHtml(qCard.word)}</strong>: ${escapeHtml(qCard.meaning)}`;
       if (qCard.exampleDe) {
-        feedbackHtml += `<br><span class="text-xs text-slate-400 font-normal italic mt-1 block">"${escapeHtml(qCard.exampleDe)}" ${qCard.exampleEn ? `(${escapeHtml(qCard.exampleEn)})` : ''}</span>`;
+        feedbackHtml += `<br><span class="text-xs text-slate-400 font-normal italic mt-1 block"><span lang="de">"${escapeHtml(qCard.exampleDe)}"</span> ${qCard.exampleEn ? `(${escapeHtml(qCard.exampleEn)})` : ''}</span>`;
       }
       elements.quizFeedbackText.innerHTML = feedbackHtml;
       elements.quizFeedbackPanel.classList.remove('hidden');
@@ -422,9 +431,9 @@ export function checkSpellingAnswer() {
       elements.quizFeedbackTitle.className = 'text-lg font-bold text-rose-400 font-display';
       elements.quizFeedbackPanel.className = 'mt-6 p-4 rounded-2xl border border-rose-500/20 bg-rose-950/10 flex items-start gap-4 transition-all duration-300';
       
-      let feedbackHtml = `Your Input: <span class="line-through text-rose-400">${escapeHtml(typed) || '(empty)'}</span><br>Correct Answer: <span class="font-extrabold text-emerald-400">${escapeHtml(correct)}</span>`;
+      let feedbackHtml = `Your Input: <span lang="de" class="line-through text-rose-400">${escapeHtml(typed) || '(empty)'}</span><br>Correct Answer: <span lang="de" class="font-extrabold text-emerald-400">${escapeHtml(correct)}</span>`;
       if (qCard.exampleDe) {
-        feedbackHtml += `<br><span class="text-xs text-slate-400 font-normal italic mt-1 block">"${escapeHtml(qCard.exampleDe)}" ${qCard.exampleEn ? `(${escapeHtml(qCard.exampleEn)})` : ''}</span>`;
+        feedbackHtml += `<br><span class="text-xs text-slate-400 font-normal italic mt-1 block"><span lang="de">"${escapeHtml(qCard.exampleDe)}"</span> ${qCard.exampleEn ? `(${escapeHtml(qCard.exampleEn)})` : ''}</span>`;
       }
       elements.quizFeedbackText.innerHTML = feedbackHtml;
       elements.quizFeedbackPanel.classList.remove('hidden');

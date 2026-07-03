@@ -143,7 +143,7 @@ function enableNavigationControls() {
 function renderCardMetadataBadges(card, deckLength) {
   let badgesHTML = '';
   if (card.wordClass) {
-    badgesHTML += `<span class="px-2 py-0.5 bg-slate-800 border border-slate-700 text-slate-300 text-[10px] uppercase font-bold tracking-wider rounded-md">${escapeHtml(card.wordClass)}</span>`;
+    badgesHTML += `<span lang="de" class="px-2 py-0.5 bg-slate-800 border border-slate-700 text-slate-300 text-[10px] uppercase font-bold tracking-wider rounded-md">${escapeHtml(card.wordClass)}</span>`;
   }
   
   if (card.verified) {
@@ -170,7 +170,7 @@ function renderCardMetadataBadges(card, deckLength) {
   }
 
   if (card.plural) {
-    badgesHTML += `<span class="px-2 py-0.5 bg-slate-900 border border-indigo-950 text-indigo-400 text-[10px] font-semibold rounded-md">Plural: ${card.plural}</span>`;
+    badgesHTML += `<span class="px-2 py-0.5 bg-slate-900 border border-indigo-950 text-indigo-400 text-[10px] font-semibold rounded-md">Plural: <span lang="de">${escapeHtml(card.plural)}</span></span>`;
   }
 
   // Add FSRS Spaced Repetition (SRS) scheduling badge
@@ -1100,7 +1100,7 @@ function updateCompanionVirtualScrollForContainer(container, scrollerHeightId, v
 
     itemBtn.innerHTML = `
       <div class="flex flex-col gap-0.5 max-w-[70%] overflow-hidden">
-        <span class="text-xs font-black tracking-wide truncate ${genderGlowClass}">${escapeHtml(card.word)}</span>
+        <span lang="de" class="text-xs font-black tracking-wide truncate ${genderGlowClass}">${escapeHtml(card.word)}</span>
         <span class="text-[10px] font-bold text-slate-500 truncate">${escapeHtml(card.meaning)}</span>
       </div>
       <div class="flex items-center gap-1.5 flex-shrink-0">

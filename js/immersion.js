@@ -119,10 +119,10 @@ function renderImmersionResults() {
             <div class="flex flex-col gap-1.5 min-w-0 mr-3">
                 <div class="flex items-center gap-2">
                     ${genderTag}
-                    <h3 class="text-lg font-bold text-slate-100 notranslate truncate">${escapeHtml(item.lemma)}</h3>
+                    <h3 lang="de" class="text-lg font-bold text-slate-100 notranslate truncate">${escapeHtml(item.lemma)}</h3>
                 </div>
                 <div class="flex items-center gap-2">
-                    <span class="text-xs text-slate-400 italic truncate">in text as "${escapeHtml(item.original)}"</span>
+                    <span class="text-xs text-slate-400 italic truncate">in text as "<span lang="de">${escapeHtml(item.original)}</span>"</span>
                 </div>
                 ${item.translation ? `<p class="text-sm font-medium text-slate-300 mt-1 truncate">${escapeHtml(item.translation)}</p>` : ''}
             </div>

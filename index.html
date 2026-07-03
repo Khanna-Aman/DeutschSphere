@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="de" class="dark">
+<!-- Page chrome (buttons, help, labels) is English -> lang="en"; German learning
+     content is marked lang="de" per element/renderer so screen readers switch voices
+     (WCAG 3.1.1/3.1.2). -->
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -677,7 +680,7 @@
               </div>
 
               <div class="flex flex-wrap items-baseline justify-center gap-3 relative">
-                <h2 id="card-word" class="text-3xl sm:text-4xl md:text-5xl font-black font-display tracking-tight text-white drop-shadow-md group-hover:scale-[1.02] transition-transform duration-300 leading-tight notranslate" aria-live="polite" role="status">Word</h2>
+                <h2 id="card-word" lang="de" class="text-3xl sm:text-4xl md:text-5xl font-black font-display tracking-tight text-white drop-shadow-md group-hover:scale-[1.02] transition-transform duration-300 leading-tight notranslate" aria-live="polite" role="status">Word</h2>
                 <button id="suffix-helper-trigger" aria-label="Show Grammar Tip" class="hidden p-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 hover:bg-amber-500/20 active:scale-95 transition-all text-xs z-20" title="Toggle Grammar Panel">
                   <i class="fa-solid fa-lightbulb"></i>
                 </button>
@@ -819,7 +822,7 @@
                   <i class="fa-solid fa-quote-left text-xs"></i> Beispielsatz | Example Sentence
                 </h4>
                 <div class="bg-slate-950/40 border border-slate-900 rounded-xl p-4 md:p-5 space-y-2">
-                  <p id="card-example-de" class="text-base md:text-lg font-medium text-slate-200 leading-relaxed pl-1 notranslate">German example</p>
+                  <p id="card-example-de" lang="de" class="text-base md:text-lg font-medium text-slate-200 leading-relaxed pl-1 notranslate">German example</p>
                   <p id="card-example-en" class="text-sm text-slate-400 leading-relaxed pl-1">English example translation</p>
                 </div>
               </div>
@@ -1019,7 +1022,7 @@
         <div id="quiz-spelling-container" class="w-full flex flex-col space-y-4 mb-6 hidden">
           <div class="relative">
             <label for="quiz-spelling-input" class="sr-only">Type your answer</label>
-            <input type="text" id="quiz-spelling-input" aria-label="Type the German word" class="w-full bg-slate-950/60 border border-slate-800 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 rounded-xl py-3.5 px-4 text-slate-200 placeholder-slate-600 focus:outline-none transition-all font-semibold text-lg text-center" placeholder="Type your answer here..." autocomplete="off">
+            <input type="text" id="quiz-spelling-input" lang="de" aria-label="Type the German word" class="w-full bg-slate-950/60 border border-slate-800 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 rounded-xl py-3.5 px-4 text-slate-200 placeholder-slate-600 focus:outline-none transition-all font-semibold text-lg text-center" placeholder="Type your answer here..." autocomplete="off">
           </div>
           
           <!-- Virtual Umlaut / Gender Keyboard -->
@@ -1107,7 +1110,7 @@
               <h2 class="text-sm font-bold uppercase tracking-wider text-slate-300">Paste Raw Text</h2>
           </div>
           <label for="immersion-textarea" class="sr-only">Paste German text for analysis</label>
-          <textarea id="immersion-textarea" class="w-full h-48 bg-slate-900/60 border border-slate-700 rounded-xl p-4 text-slate-200 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-medium resize-y" placeholder="Paste German text here (news, book excerpt, chat history)..."></textarea>
+          <textarea id="immersion-textarea" lang="de" aria-label="German text to analyze" class="w-full h-48 bg-slate-900/60 border border-slate-700 rounded-xl p-4 text-slate-200 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all font-medium resize-y" placeholder="Paste German text here (news, book excerpt, chat history)..."></textarea>
           <div class="flex justify-end">
               <button id="immersion-analyze-btn" class="px-6 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold transition-all shadow-[0_0_15px_rgba(79,70,229,0.3)] hover:shadow-[0_0_20px_rgba(79,70,229,0.5)] transform active:scale-95 flex items-center">
                   <i class="fa-solid fa-magnifying-glass mr-2"></i> Analyze Text
@@ -1477,7 +1480,7 @@
           </div>
 
           <!-- Base word/lemma and type -->
-          <h2 id="explorer-german-word" class="text-3xl font-black font-display text-white tracking-tight notranslate">Wort</h2>
+          <h2 id="explorer-german-word" lang="de" class="text-3xl font-black font-display text-white tracking-tight notranslate">Wort</h2>
           <span id="explorer-word-class" class="mt-2 px-2.5 py-0.5 bg-slate-800 text-slate-400 text-[10px] font-extrabold uppercase rounded-lg border border-slate-700/60 tracking-wider">Nomen</span>
           
           <!-- Meaning -->
