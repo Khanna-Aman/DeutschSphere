@@ -3,15 +3,14 @@
 // (no third-party CDNs), so the app is genuinely offline-capable after first load.
 // NOTE: This SW only activates on HTTPS origins (GitHub Pages). It cannot run on file://.
 
-// CACHE_VERSION controls the app SHELL + CDN caches (HTML/CSS/JS/icons/fonts).
+// CACHE_VERSION controls the app SHELL cache (HTML/CSS/JS/icons/fonts).
 // Bump it whenever code or static assets change. DATA freshness (wordlist JSON) is
 // handled independently by WORDLIST_CACHE_VERSION in app.js, which is appended as a
 // ?v= query param so cache-first DATA_CACHE entries are bypassed on a data change —
 // so a data-only update does NOT require bumping CACHE_VERSION, and vice versa.
-const CACHE_VERSION = 'v7.5.4'; // v7.5.4: post-launch hardening — CSP base-uri/object-src/form-action; a11y input labels + quiz image alt
+const CACHE_VERSION = 'v7.5.4'; // v7.5.4: post-launch hardening — CSP tightening; a11y labels/alt; SW cleanup (drop dead CDN strategy, fix sw.js guard)
 const STATIC_CACHE = `deutschsphere-static-${CACHE_VERSION}`;
 const DATA_CACHE = `deutschsphere-data-${CACHE_VERSION}`;
-const CDN_CACHE = `deutschsphere-cdn-${CACHE_VERSION}`;
 
 const APP_SHELL = [
   './',
@@ -57,7 +56,7 @@ self.addEventListener('activate', (event) => {
     caches.keys().then(cacheNames => {
       return Promise.all(
         cacheNames
-          .filter(name => (name.startsWith('german-master-') || name.startsWith('deutschsphere-')) && name !== STATIC_CACHE && name !== DATA_CACHE && name !== CDN_CACHE)
+          .filter(name => (name.startsWith('german-master-') || name.startsWith('deutschsphere-')) && name !== STATIC_CACHE && name !== DATA_CACHE)
           .map(name => caches.delete(name))
       );
     }).then(() => self.clients.claim())
@@ -76,6 +75,11 @@ self.addEventListener('fetch', (event) => {
 
   // Skip non-GET requests
   if (event.request.method !== 'GET') return;
+
+  // Skip cross-origin requests entirely — everything the app loads is self-hosted
+  // (the only cross-origin call is the FormSubmit feedback POST, non-GET anyway).
+  // Let the browser handle any stray cross-origin GET natively, uncached.
+  if (url.origin !== location.origin) return;
 
   // Strategy 1: CACHE-FIRST for vocabulary JSON data files (rarely change)
   if (url.pathname.endsWith('.json') && (url.pathname.includes('/a1/') || url.pathname.includes('/a2/') || url.pathname.includes('/b1/'))) {
@@ -113,30 +117,14 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Strategy 3: STALE-WHILE-REVALIDATE for CDN resources (Tailwind, FontAwesome, Google Fonts)
-  if (url.hostname !== location.hostname) {
-    event.respondWith(
-      caches.open(CDN_CACHE).then(cache => {
-        return cache.match(event.request).then(cached => {
-          const fetchPromise = fetch(event.request).then(response => {
-            if (response.ok) {
-              cache.put(event.request, response.clone());
-            }
-            return response;
-          }).catch(() => cached || new Response('', { status: 503 }));
-          return cached || fetchPromise;
-        });
-      })
-    );
-    return;
-  }
-
-  // Strategy 4: CACHE-FIRST for app shell files, NETWORK fallback
+  // Strategy 3: CACHE-FIRST for app shell files, NETWORK fallback
   event.respondWith(
     caches.match(event.request).then(cached => {
       if (cached) return cached;
       return fetch(event.request).then(response => {
-        if (response.ok && url.pathname !== '/sw.js') {
+        // Never cache the SW script itself (endsWith: the app is served from a
+        // subpath on GitHub Pages, so an absolute '/sw.js' compare never matches).
+        if (response.ok && !url.pathname.endsWith('/sw.js')) {
           const responseClone = response.clone();
           caches.open(STATIC_CACHE).then(cache => {
             cache.put(event.request, responseClone);
