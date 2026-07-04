@@ -5,10 +5,10 @@ Format follows [Keep a Changelog](https://keepachangelog.com/); this project use
 date-stamped sections rather than strict SemVer releases (it ships continuously
 to GitHub Pages). For full detail, see the git history.
 
-## v1.1.2 — 2026-07-03 (post-launch hardening + B1 backfill Phases 1–4) — on `dev`
+## v1.1.2 — 2026-07-03 (post-launch hardening + B1 backfill Phases 1–5) — on `dev`
 
 ### Added
-- **B1 vocabulary backfill, Phases 1–4 (2,660 → 3,218, +558 entries).** Every headword in
+- **B1 vocabulary backfill, Phases 1–5 (2,660 → 3,228, +568 entries).** Every headword in
   the official Goethe B1 Wortliste's alphabetical section that was missing from the app:
   Phase 1 — 61 everyday entries (52 nouns incl. *Abend, Gefühl, Gefahr, Boden, Boot, Bär,
   Demokratie* + 9 verbs). Phase 2 — 333 more: 27 nouns (incl. *Magazin, Metall, Verlag*),
@@ -30,8 +30,14 @@ to GitHub Pages). For full detail, see the git history.
   19 Austrian/Swiss regional variants (Brötli, Bub, Knödel, Marille, Perron, Stiege, Pfanne,
   Kasten…) and common abbreviations (PC, TV, WG, Kfz, Modul, Spot). **B1 noun coverage vs the
   official list is now ~99% (1,597/1,621)** — only Swiss-only political terms (Ständerat,
-  Regierungsrat) and a few multi-word entries (Europäische Union) remain. The originality gate
-  caught two more accidental source-sentence reproductions during Phases 2 & 4, both re-authored.
+  Regierungsrat) and a few multi-word entries (Europäische Union) remain. Phase 5 added the final tail — Struktur, Textaufbau, die Europäische Union, and Swiss/Austrian
+  institutional terms (Stadtpräsident, Ständerat, Regierungsrat, Volksschule, Primarschule,
+  Pädagogische Hochschule, AHS, BHS) — bringing **B1 noun coverage to 99% (1,604/1,621)**; the
+  remainder are pure extraction fragments already present in full form. Two verification tools
+  earned their keep: the originality gate caught 3 accidental source-sentence reproductions
+  (re-authored), and the OpusAudit NotebookLM cross-check caught 3 non-headwords I'd wrongly added
+  from example text (die Fahrt, der/die Mitschüler[in]) — removed after confirming at the source
+  column level.
 - **Tailwind build restored** — `npm run build:css` regenerates `tailwind.css`
   (tailwindcss@3.4.17); regenerated with 0 coverage regressions; hand-patch removed
   from `index.css`; DEVELOPMENT.md documents the silent-no-op failure mode.
