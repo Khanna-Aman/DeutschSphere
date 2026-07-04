@@ -6,7 +6,7 @@ This document details the active technical roadmap, scope boundaries, and develo
 
 ## 🎯 The Core Mandate: Pure Cognitive Mastery
 
-DeutschSphere is designed to maximize vocabulary acquisition through distraction-free, clinical spaced repetition. The application focuses on high-signal cognitive retention of **3,228 validated German vocabulary words** via mathematical memory modeling (an FSRS-inspired scheduler based on the FSRS-5 model — see `js/fsrs.js` for its documented simplifications).
+DeutschSphere is designed to maximize vocabulary acquisition through distraction-free, clinical spaced repetition. The application focuses on high-signal cognitive retention of **3,231 validated German vocabulary words** via mathematical memory modeling (an FSRS-inspired scheduler based on the FSRS-5 model — see `js/fsrs.js` for its documented simplifications).
 
 ### 🛑 Strict Scope Enforcements
 * **Zero Gamification Bloat**: The interface excludes XP systems, progress metrics, artificial badges, and decorative animations. Cognitive engagement is driven purely by layout-stable feedback and objective retrievability projections.
@@ -59,7 +59,7 @@ Honesty/safety batch shipped before going public:
 ---
 
 ## 📊 Technical Metrics Ledger
-* **Active Vocabulary Capacity**: 3,228 entries across CEFR A1 (721), A2 (582), and B1 (1,925). B1 noun coverage vs the official (cumulative) Goethe B1 *Wortliste* is now **~99%** (1,604/1,621) — Phases 1–4 completed the alphabetical section, thematic groups, feminine `-in` doublets, regional (A/CH) variants and abbreviations. The last ~1% are Swiss-only political terms and multi-word entries.
+* **Active Vocabulary Capacity**: 3,231 entries across CEFR A1 (722), A2 (584), and B1 (1,925). B1 noun coverage vs the official (cumulative) Goethe B1 *Wortliste* is now **~99%** (1,604/1,621) — Phases 1–4 completed the alphabetical section, thematic groups, feminine `-in` doublets, regional (A/CH) variants and abbreviations. The last ~1% are Swiss-only political terms and multi-word entries.
 * **Production Dependencies**: 0 runtime npm modules. Tailwind is precompiled to a static, tree-shaken stylesheet (no runtime CDN); the Inter/Outfit web fonts and FontAwesome icons are **self-hosted under `./fonts`** (no third-party CDN calls), so the app makes zero external requests on load.
 * **Codebase Weight**: ~450KB modular ES6 files, 1 HTML shell, and 1 global stylesheet.
 * **State Engine**: Client-side IndexedDB persistence managed via an asynchronous debounced `idb-keyval` pipeline.

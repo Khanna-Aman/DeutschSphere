@@ -9891,5 +9891,39 @@
     "image": null,
     "id": 605,
     "image_tier": "B"
+  },
+  {
+    "german": "das Handtuch",
+    "word_class": "Nomen",
+    "gender": "das",
+    "plural": "die Handtücher",
+    "verb_conjugation": null,
+    "adjective_forms": null,
+    "english": "towel",
+    "pronunciation": "hahnt-tookh",
+    "theme": "Wohnen, Haus & Haushalt",
+    "antonym": null,
+    "example_de": "Nach dem Duschen nehme ich ein frisches Handtuch.",
+    "example_en": "After showering I take a fresh towel.",
+    "image": null,
+    "id": 606,
+    "image_tier": null
+  },
+  {
+    "german": "das Schlafzimmer",
+    "word_class": "Nomen",
+    "gender": "das",
+    "plural": "die Schlafzimmer",
+    "verb_conjugation": null,
+    "adjective_forms": null,
+    "english": "bedroom",
+    "pronunciation": "shlahf-tsim-mer",
+    "theme": "Wohnen, Haus & Haushalt",
+    "antonym": null,
+    "example_de": "Unser Schlafzimmer ist ruhig und liegt nach hinten.",
+    "example_en": "Our bedroom is quiet and faces the back.",
+    "image": null,
+    "id": 607,
+    "image_tier": null
   }
 ]

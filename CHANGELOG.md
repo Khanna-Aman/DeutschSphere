@@ -8,7 +8,7 @@ to GitHub Pages). For full detail, see the git history.
 ## v1.1.2 — 2026-07-03 (post-launch hardening + B1 backfill Phases 1–5) — on `dev`
 
 ### Added
-- **B1 vocabulary backfill, Phases 1–5 (2,660 → 3,228, +568 entries).** Every headword in
+- **Vocabulary backfill, Phases 1–5 + A1/A2 gap fill (2,660 → 3,231, +571 entries).** Every headword in
   the official Goethe B1 Wortliste's alphabetical section that was missing from the app:
   Phase 1 — 61 everyday entries (52 nouns incl. *Abend, Gefühl, Gefahr, Boden, Boot, Bär,
   Demokratie* + 9 verbs). Phase 2 — 333 more: 27 nouns (incl. *Magazin, Metall, Verlag*),
@@ -33,7 +33,10 @@ to GitHub Pages). For full detail, see the git history.
   Regierungsrat) and a few multi-word entries (Europäische Union) remain. Phase 5 added the final tail — Struktur, Textaufbau, die Europäische Union, and Swiss/Austrian
   institutional terms (Stadtpräsident, Ständerat, Regierungsrat, Volksschule, Primarschule,
   Pädagogische Hochschule, AHS, BHS) — bringing **B1 noun coverage to 99% (1,604/1,621)**; the
-  remainder are pure extraction fragments already present in full form. Two verification tools
+  remainder are pure extraction fragments already present in full form. A parallel signature-based
+  audit of A1/A2 against their own Wortlisten (same rigor) surfaced 3 genuinely-missing basic
+  headwords — **das Jahr** (A1!), **das Handtuch** and **das Schlafzimmer** (A2) — now added and
+  OpusAudit-confirmed. Two verification tools
   earned their keep: the originality gate caught 3 accidental source-sentence reproductions
   (re-authored), and the OpusAudit NotebookLM cross-check caught 3 non-headwords I'd wrongly added
   from example text (die Fahrt, der/die Mitschüler[in]) — removed after confirming at the source

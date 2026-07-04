@@ -12255,5 +12255,22 @@
     "image": null,
     "id": 722,
     "image_tier": null
+  },
+  {
+    "german": "das Jahr",
+    "word_class": "Nomen",
+    "gender": "das",
+    "plural": "die Jahre",
+    "verb_conjugation": null,
+    "adjective_forms": null,
+    "english": "year",
+    "pronunciation": "yahr",
+    "theme": "Uhrzeit, Datum & Kalender",
+    "antonym": null,
+    "example_de": "Meine Tochter ist letztes Jahr in die Schule gekommen.",
+    "example_en": "My daughter started school last year.",
+    "image": null,
+    "id": 723,
+    "image_tier": null
   }
 ]
