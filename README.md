@@ -20,7 +20,7 @@
 
 **Learn German A1–B1 vocabulary with flashcards that actually remember what you
 forget.** DeutschSphere is a free, offline-first study app built around proven
-spaced repetition — 3,218 curated words with illustrations, audio, quizzes, and a
+spaced repetition — 3,217 curated words with illustrations, audio, quizzes, and a
 pronunciation coach. No ads, no account, no tracking. It runs entirely in your
 browser and works without an internet connection once loaded.
 
@@ -85,15 +85,15 @@ desktop and it behaves like a native app — fully offline.
 
 ## Vocabulary & coverage
 
-DeutschSphere covers **3,218 words** across CEFR levels A1–B1, with scope grounded in
+DeutschSphere covers **3,217 words** across CEFR levels A1–B1, with scope grounded in
 the official Goethe-Institut *Wortlisten*.
 
 | Level | Words | Illustrations |
 | :--- | :---: | :--- |
 | **A1** — Beginner | 721 | 637 / 721 (88%) |
 | **A2** — Elementary | 582 | 580 / 582 (99.7%) |
-| **B1** — Intermediate | 1,915 | 371 / 1,915 (19%, in progress) |
-| **Total** | **3,218** | 1,588 (49%) |
+| **B1** — Intermediate | 1,914 | 371 / 1,914 (19%, in progress) |
+| **Total** | **3,217** | 1,588 (49%) |
 
 > [!NOTE]
 > **An honest word on coverage.** Each entry's German headword, gender, and plural
