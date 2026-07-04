@@ -20,7 +20,7 @@
 
 **Learn German A1–B1 vocabulary with flashcards that actually remember what you
 forget.** DeutschSphere is a free, offline-first study app built around proven
-spaced repetition — 3,141 curated words with illustrations, audio, quizzes, and a
+spaced repetition — 3,218 curated words with illustrations, audio, quizzes, and a
 pronunciation coach. No ads, no account, no tracking. It runs entirely in your
 browser and works without an internet connection once loaded.
 
@@ -85,26 +85,26 @@ desktop and it behaves like a native app — fully offline.
 
 ## Vocabulary & coverage
 
-DeutschSphere covers **3,141 words** across CEFR levels A1–B1, with scope grounded in
+DeutschSphere covers **3,218 words** across CEFR levels A1–B1, with scope grounded in
 the official Goethe-Institut *Wortlisten*.
 
 | Level | Words | Illustrations |
 | :--- | :---: | :--- |
 | **A1** — Beginner | 721 | 637 / 721 (88%) |
 | **A2** — Elementary | 582 | 580 / 582 (99.7%) |
-| **B1** — Intermediate | 1,838 | 371 / 1,838 (20%, in progress) |
-| **Total** | **3,141** | 1,588 (51%) |
+| **B1** — Intermediate | 1,915 | 371 / 1,915 (19%, in progress) |
+| **Total** | **3,218** | 1,588 (49%) |
 
 > [!NOTE]
 > **An honest word on coverage.** Each entry's German headword, gender, and plural
 > were cross-checked against the official Goethe lists (~99.6% fidelity). That is
 > **not** the same as covering those lists in full. **B1 is under active
 > development:** measured against the official (cumulative) Goethe B1 *Wortliste*,
-> the deck currently covers roughly **92%** of it (~94% of B1 nouns) — everyday
-> nouns, verbs and adjectives plus the calendar, animal, direction and loanword
-> groups are now in. The remaining gaps are feminine job-title doublets (e.g.
-> *Kellnerin*), Austrian/Swiss regional variants and a few abbreviations, being
-> **backfilled in ongoing releases**. B1 illustrations are also still rolling out (20%). We'd rather tell you exactly where
+> the deck currently covers about **99%** of its noun headwords — the alphabetical
+> section, thematic groups, feminine job-title forms (e.g. *Kellnerin*), Austrian/
+> Swiss regional variants (*Brötli, Marille, Perron*) and common abbreviations
+> (*PC, TV, WG*) are all in now. The last ~1% are a few Swiss-only political terms
+> and multi-word entries. B1 illustrations are still rolling out (19%). We'd rather tell you exactly where
 > we stand than round up.
 
 **Where the content comes from.** Word *scope* references the publicly available

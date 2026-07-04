@@ -5,10 +5,10 @@ Format follows [Keep a Changelog](https://keepachangelog.com/); this project use
 date-stamped sections rather than strict SemVer releases (it ships continuously
 to GitHub Pages). For full detail, see the git history.
 
-## v1.1.2 — 2026-07-03 (post-launch hardening + B1 backfill Phases 1–3) — on `dev`
+## v1.1.2 — 2026-07-03 (post-launch hardening + B1 backfill Phases 1–4) — on `dev`
 
 ### Added
-- **B1 vocabulary backfill, Phases 1–3 (2,660 → 3,141, +481 entries).** Every headword in
+- **B1 vocabulary backfill, Phases 1–4 (2,660 → 3,218, +558 entries).** Every headword in
   the official Goethe B1 Wortliste's alphabetical section that was missing from the app:
   Phase 1 — 61 everyday entries (52 nouns incl. *Abend, Gefühl, Gefahr, Boden, Boot, Bär,
   Demokratie* + 9 verbs). Phase 2 — 333 more: 27 nouns (incl. *Magazin, Metall, Verlag*),
@@ -25,7 +25,13 @@ to GitHub Pages). For full detail, see the git history.
   list doesn't repeat — months, weekdays, seasons, times of day, animals, compass
   directions, loanwords (Smartphone, Akku, DVD…) and political terms (Staat, Regierung,
   Bundeskanzler…) — placed at their correct CEFR level (37 → A1, 50 → B1). B1 noun
-  coverage vs the official list is now 94%.
+  coverage vs the official list is now 94%. Phase 4 completed the long tail: 58 feminine
+  `-in` job-title doublets (die Kellnerin, die Ärztin-style forms; regular `-innen` plural),
+  19 Austrian/Swiss regional variants (Brötli, Bub, Knödel, Marille, Perron, Stiege, Pfanne,
+  Kasten…) and common abbreviations (PC, TV, WG, Kfz, Modul, Spot). **B1 noun coverage vs the
+  official list is now ~99% (1,597/1,621)** — only Swiss-only political terms (Ständerat,
+  Regierungsrat) and a few multi-word entries (Europäische Union) remain. The originality gate
+  caught two more accidental source-sentence reproductions during Phases 2 & 4, both re-authored.
 - **Tailwind build restored** — `npm run build:css` regenerates `tailwind.css`
   (tailwindcss@3.4.17); regenerated with 0 coverage regressions; hand-patch removed
   from `index.css`; DEVELOPMENT.md documents the silent-no-op failure mode.
