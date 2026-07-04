@@ -5,10 +5,10 @@ Format follows [Keep a Changelog](https://keepachangelog.com/); this project use
 date-stamped sections rather than strict SemVer releases (it ships continuously
 to GitHub Pages). For full detail, see the git history.
 
-## v1.1.2 — 2026-07-03 (post-launch hardening + B1 backfill Phase 1) — on `dev`
+## v1.1.2 — 2026-07-03 (post-launch hardening + B1 backfill Phases 1–3) — on `dev`
 
 ### Added
-- **B1 vocabulary backfill, Phases 1–2 (2,660 → 3,054, +394 entries).** Every headword in
+- **B1 vocabulary backfill, Phases 1–3 (2,660 → 3,141, +481 entries).** Every headword in
   the official Goethe B1 Wortliste's alphabetical section that was missing from the app:
   Phase 1 — 61 everyday entries (52 nouns incl. *Abend, Gefühl, Gefahr, Boden, Boot, Bär,
   Demokratie* + 9 verbs). Phase 2 — 333 more: 27 nouns (incl. *Magazin, Metall, Verlag*),
@@ -21,7 +21,11 @@ to GitHub Pages). For full detail, see the git history.
   the official lists via the OpusAudit NotebookLM notebook (nlm CLI) — the originality gate
   even caught and fixed one accidentally-reproduced source sentence. `WORDLIST_CACHE_VERSION`
   → v1.0.8. Remaining phases: thematic groups (months/days/loanwords), `-in` doublets,
-  regional (A/CH) variants.
+  regional (A/CH) variants. Phase 3 added the 87 thematic-section words the alphabetical
+  list doesn't repeat — months, weekdays, seasons, times of day, animals, compass
+  directions, loanwords (Smartphone, Akku, DVD…) and political terms (Staat, Regierung,
+  Bundeskanzler…) — placed at their correct CEFR level (37 → A1, 50 → B1). B1 noun
+  coverage vs the official list is now 94%.
 - **Tailwind build restored** — `npm run build:css` regenerates `tailwind.css`
   (tailwindcss@3.4.17); regenerated with 0 coverage regressions; hand-patch removed
   from `index.css`; DEVELOPMENT.md documents the silent-no-op failure mode.

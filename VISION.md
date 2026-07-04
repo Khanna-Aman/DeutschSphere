@@ -6,7 +6,7 @@ This document details the active technical roadmap, scope boundaries, and develo
 
 ## 🎯 The Core Mandate: Pure Cognitive Mastery
 
-DeutschSphere is designed to maximize vocabulary acquisition through distraction-free, clinical spaced repetition. The application focuses on high-signal cognitive retention of **3,054 validated German vocabulary words** via mathematical memory modeling (an FSRS-inspired scheduler based on the FSRS-5 model — see `js/fsrs.js` for its documented simplifications).
+DeutschSphere is designed to maximize vocabulary acquisition through distraction-free, clinical spaced repetition. The application focuses on high-signal cognitive retention of **3,141 validated German vocabulary words** via mathematical memory modeling (an FSRS-inspired scheduler based on the FSRS-5 model — see `js/fsrs.js` for its documented simplifications).
 
 ### 🛑 Strict Scope Enforcements
 * **Zero Gamification Bloat**: The interface excludes XP systems, progress metrics, artificial badges, and decorative animations. Cognitive engagement is driven purely by layout-stable feedback and objective retrievability projections.
@@ -31,7 +31,7 @@ DeutschSphere is designed to maximize vocabulary acquisition through distraction
 | **Developer Feedback Form** | **Active** | Zero-cost serverless FormSubmit integration sending user feedback direct to developer email. |
 | **Adaptive Layout & Safe-Area** | **Active** | Responsive single-column card view on all screens with Android navigation bar safe-area insets. |
 | **Card View Preferences** | **Active** | Persistent settings drawer toggles for Fast Read, Autoplay, Illustrations, and Example Sentences. |
-| **Visual Assets** | **Active** | High-fidelity WebP visual aids (<10KB) completed for A1 (637/684, 93%) and A2 (580/582, ~100%). B1 in progress (371/1,788, 21%). |
+| **Visual Assets** | **Active** | High-fidelity WebP visual aids (<10KB) completed for A1 (637/721, 88%) and A2 (580/582, ~100%). B1 in progress (371/1,838, 20%). |
 
 ---
 
@@ -45,8 +45,8 @@ Honesty/safety batch shipped before going public:
 * **UI fix** — restored the rating-key badge offsets missing from the purged `tailwind.css`.
 
 ### 🔜 Short-Term Milestones (v1.1.x — post-launch rollout)
-* **B1 Vocabulary Backfill**: B1 is **under active development** — currently ~85% of the official (cumulative) Goethe B1 *Wortliste* (~87% of B1 nouns). **Phase 1 shipped 2026-07-03**: 61 everyday entries added (52 nouns incl. *Gefühl, Gefahr, Boot, Bär, Demokratie* + 9 verbs incl. *aufgeben, abnehmen, atmen*), each source-grounded (gender/plural from the official list, null where unattested) with an original LanguageTool-gated example. **Next phases**: remaining ~90 alphabetical nouns, thematic groups (days, months, seasons), feminine `-in` doublets + regional-variant policy.
-* **B1 Asset Rollout**: Complete the final integration of audited 3D glassmorphic WebP assets for the remaining B1 entries (371/1,788 done, 1,417 outstanding) following strict anti-bleeding checks.
+* **B1 Vocabulary Backfill**: B1 is **under active development** — now ~92% of the official (cumulative) Goethe B1 *Wortliste* (~94% of B1 nouns). **Phases 1–3 shipped 2026-07-03** (+481 entries, 2,660→3,141): the entire alphabetical section (nouns, verbs, adjectives) plus the thematic groups the list doesn't repeat (months, weekdays, seasons, times of day, animals, compass directions, loanwords, political terms), each source-grounded (gender/plural null where unattested) with an original LanguageTool-gated example, cross-checked via the OpusAudit NotebookLM notebook. **Phase 4 (remaining)**: feminine `-in` job-title doublets, Austrian/Swiss regional variants, a few abbreviations (PC/TV/WG).
+* **B1 Asset Rollout**: Complete the final integration of audited 3D glassmorphic WebP assets for the remaining B1 entries (371/1,838 done, 1,467 outstanding) following strict anti-bleeding checks.
 * **IndexedDB Thread Tuning**: Debounce and stream asynchronous profile writes in `js/state.js` to eliminate micro-stutters during massive bulk updates (e.g. after a large quiz session).
 * **WCAG 2.2 AA Accessibility**: ✅ Automated pass complete — Lighthouse/axe **accessibility 100** (best-practices 100, SEO 100), enforced by the `quality.yml` CI gate. Remaining: the full *manual* AA sign-off (keyboard-only and screen-reader walkthrough of every view transition and accordion) that automation cannot cover.
 
@@ -59,7 +59,7 @@ Honesty/safety batch shipped before going public:
 ---
 
 ## 📊 Technical Metrics Ledger
-* **Active Vocabulary Capacity**: 3,054 entries across CEFR A1 (684), A2 (582), and B1 (1,788). B1 is **under active development** — currently ~90% of the official (cumulative) Goethe B1 *Wortliste* (~89% of B1 nouns; everyday verb/adjective gaps closed in Phase 2); remaining thematic groups, `-in` doublets and regional variants are being backfilled in post-launch releases.
+* **Active Vocabulary Capacity**: 3,141 entries across CEFR A1 (721), A2 (582), and B1 (1,838). B1 is **under active development** — currently ~92% of the official (cumulative) Goethe B1 *Wortliste* (~94% of B1 nouns); Phase 3 added the calendar/animal/direction/loanword thematic groups. Remaining: feminine `-in` doublets, regional (A/CH) variants and a few abbreviations.
 * **Production Dependencies**: 0 runtime npm modules. Tailwind is precompiled to a static, tree-shaken stylesheet (no runtime CDN); the Inter/Outfit web fonts and FontAwesome icons are **self-hosted under `./fonts`** (no third-party CDN calls), so the app makes zero external requests on load.
 * **Codebase Weight**: ~450KB modular ES6 files, 1 HTML shell, and 1 global stylesheet.
 * **State Engine**: Client-side IndexedDB persistence managed via an asynchronous debounced `idb-keyval` pipeline.
