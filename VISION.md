@@ -11,7 +11,7 @@ DeutschSphere is designed to maximize vocabulary acquisition through distraction
 ### 🛑 Strict Scope Enforcements
 * **Zero Gamification Bloat**: The interface excludes XP systems, progress metrics, artificial badges, and decorative animations. Cognitive engagement is driven purely by layout-stable feedback and objective retrievability projections.
 * **No Structural Grammar Engines**: The application does not parse natural sentence syntax or conjugation trees. **The Zero-Inference Clause** governs *factual linguistic data only* — genders, plurals, and conjugations are taken from the official Goethe wordlists and left `null` where not attested, never guessed. Example sentences are a separate category: they are **original content authored for this project** (to avoid reproducing copyrighted source examples) and are gated for originality (0 verbatim vs. the source PDFs) and grammar (offline LanguageTool), not extracted from a source layer.
-* **Decoupled Client-First Core**: No runtime framework, bundler, or external database — the deployed SPA is flat standard HTML, precompiled CSS, and modular JS with zero runtime npm dependencies. The single build-time tool is the Tailwind CLI, run on demand to regenerate the committed `tailwind.css`; the repo and runtime stay build-free.
+* **Decoupled Client-First Core**: No runtime framework, bundler, or external database — the deployed SPA is flat standard HTML, precompiled CSS, and modular JS with zero runtime npm dependencies. The build-time tools (Tailwind CLI, esbuild for `index.css`, `fonttools` for icon subsetting) run on demand to regenerate committed output; the repo and runtime stay build-free.
 
 
 ---
