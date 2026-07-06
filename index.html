@@ -45,13 +45,20 @@
     }
   }
   </script>
+  <!-- Preload the above-the-fold variable fonts (body/heading text renders
+       immediately on first paint) so the browser fetches them in parallel
+       with CSSOM construction instead of discovering them only after
+       google-fonts.css parses. crossorigin is required even same-origin —
+       fonts fetch in CORS mode, so omitting it causes a double fetch. -->
+  <link rel="preload" as="font" type="font/woff2" href="./fonts/files/inter-variable-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="./fonts/files/outfit-variable-latin.woff2" crossorigin>
   <!-- Tailwind CSS — precompiled static build (regenerate via tailwind.config.js) -->
   <link rel="stylesheet" href="./tailwind.css">
-  <!-- FontAwesome Icons — self-hosted (vendored via scripts/vendor_fonts.py) -->
+  <!-- FontAwesome Icons — self-hosted, glyph-subset to used icons only (scripts/vendor_fonts.py + scripts/subset_fontawesome.py) -->
   <link rel="stylesheet" href="./fonts/fontawesome.min.css">
-  <!-- Inter + Outfit — self-hosted (no Google Fonts CDN; privacy/offline) -->
+  <!-- Inter + Outfit — self-hosted variable fonts, latin-only (no Google Fonts CDN; privacy/offline) -->
   <link rel="stylesheet" href="./fonts/google-fonts.css">
-  <!-- Custom CSS -->
+  <!-- Custom CSS (generated: index.src.css minified via esbuild — npm run build:css:index) -->
   <link rel="stylesheet" href="index.css">
   <!-- C2: PWA Manifest & Icons -->
   <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
@@ -137,7 +144,7 @@
 
   <!-- Offline Status Indicator -->
   <div id="offline-indicator" class="hidden fixed top-0 left-0 right-0 z-[60] bg-amber-600/95 backdrop-blur-sm text-center py-1.5 px-4 text-xs font-bold text-white shadow-lg offline-slide-down">
-    <i class="fa-solid fa-wifi-slash mr-1.5"></i> Offline-Modus aktiv — Alle Funktionen verfügbar
+    <i class="fa-solid fa-plug-circle-xmark mr-1.5"></i> Offline-Modus aktiv — Alle Funktionen verfügbar
   </div>
 
   <!-- Left Sidebar Panel (Categories & Navigation) -->

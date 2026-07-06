@@ -1,5 +1,5 @@
 {
-  "//": "Lighthouse CI config — quality gate for DeutschSphere. Accessibility, best-practices, and SEO are hard gates (must stay at the bars we verified on 2026-06-30: a11y 100, best-practices 100, seo 100). Performance is advisory only: CI runs under simulated-mobile throttling on unminified dev assets, so its score is not representative of the GitHub Pages production build — it is tracked as a warning, not a blocker.",
+  "//": "Lighthouse CI config — quality gate for DeutschSphere. Accessibility, best-practices, and SEO are hard gates (must stay at the bars we verified on 2026-06-30: a11y 100, best-practices 100, seo 100). Performance is advisory only: fonts/icons (v1.1.2, see VISION.md) and index.css are pre-minified and committed as-shipped, but js/*.js is still hand-authored source (no build step, by design — see DEVELOPMENT.md), and CI runs under simulated-mobile throttling, so the score here is a useful trend signal but not identical to a real-device production measurement — it is tracked as a warning, not a blocker.",
   "ci": {
     "collect": {
       "staticDistDir": ".",

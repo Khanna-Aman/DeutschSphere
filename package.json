@@ -6,6 +6,8 @@
   "type": "module",
   "scripts": {
     "build:css": "npx tailwindcss@3.4.17 -c tailwind.config.js -i tailwind.input.css -o tailwind.css --minify",
+    "build:css:index": "npx esbuild@0.28.1 index.src.css --minify --outfile=index.css",
+    "build:icons": "python scripts/subset_fontawesome.py",
     "check": "for f in app.js sw.js js/*.js; do node --check \"$f\"; done",
     "lint": "eslint app.js sw.js \"js/**/*.js\"",
     "test": "node --test tests/fsrs.test.mjs tests/nlp.test.mjs",

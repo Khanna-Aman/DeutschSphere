@@ -5,7 +5,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/); this project use
 date-stamped sections rather than strict SemVer releases (it ships continuously
 to GitHub Pages). For full detail, see the git history.
 
-## v1.1.2 — 2026-07-03 (post-launch hardening + B1 backfill Phases 1–5) — on `dev`
+## v1.1.2 — 2026-07-03 to 2026-07-06 (post-launch hardening + B1 backfill Phases 1–5 + performance) — on `dev`
 
 ### Added
 - **Vocabulary backfill, Phases 1–5 + A1/A2 gap fill (2,660 → 3,231, +571 entries).** Every headword in
@@ -45,6 +45,36 @@ to GitHub Pages). For full detail, see the git history.
   (tailwindcss@3.4.17); regenerated with 0 coverage regressions; hand-patch removed
   from `index.css`; DEVELOPMENT.md documents the silent-no-op failure mode.
 - **Dedicated maskable PWA icons** (192/512) with safe-zone padding; manifest + SW precache.
+- **Performance: font/icon subsetting + minified CSS (2026-07-06).** Researched current
+  (2026) best practice for a zero-runtime-dependency static PWA and applied the
+  zero-infra-risk asset-level wins: Inter/Outfit switched from 5 static weights x 2
+  Unicode subsets (10 files/family) to **one self-hosted variable-weight woff2 per
+  family** (`fvar` wght 100–900), `latin`-subset only — German + all UI text fall
+  inside `U+0000-00FF`/`U+2000-206F`, `latin-ext` is never rendered by this app.
+  Font Awesome's solid/brands webfonts are now **glyph-subset to the ~90 icon
+  codepoints actually referenced** in `index.html`/`js/*.js` via a new repeatable
+  script (`scripts/subset_fontawesome.py`, `npm run build:icons`, needs `fonttools`);
+  the unused `fa-regular-400`/`fa-v4compatibility` webfonts were dropped entirely
+  (no `.fa-regular`/`far`/v4-style classes anywhere in this codebase). Combined
+  self-hosted font payload: **~1.45MB → ~90KB**. `scripts/vendor_fonts.py` (the
+  from-scratch re-vendoring script) was rewritten to produce this same optimized
+  state directly, so re-running it can't silently regress the optimization —
+  verified idempotent (re-run reproduces byte-identical output). `index.css` is now
+  a generated, esbuild-minified build artifact (~61KB → ~41KB) from a new source
+  file, `index.src.css` (same "readable source, minified committed output" pattern
+  `tailwind.css` already used; `npm run build:css:index`). Font preload hints added
+  for both variable fonts (LCP). The icon-usage scan **caught two real pre-existing
+  bugs**: `fa-wifi-slash` (offline banner) and `fa-sparkles` (immersion "New Word"
+  badge) aren't real Font Awesome Free 6 icons and were rendering as invisible
+  glyphs in production — fixed to `fa-plug-circle-xmark` and `fa-wand-magic-sparkles`.
+  Verified via Playwright (fonts resolve to Inter/Outfit, icon glyphs render
+  correctly, zero console/JS errors) plus the full gate suite (`validate_data`,
+  22/22 unit tests, lint, smoke e2e, Lighthouse). Local Lighthouse performance
+  0.77 (informational only — CI's throttled/advisory number, see `lighthouserc.json`).
+  Scope note: `js/*.js` stays unminified hand-authored source by design — minifying
+  it would require an Actions-based build/deploy pipeline (a bigger infrastructure
+  change, touching the live GitHub Pages source setting), intentionally left as a
+  separate, explicitly-authorized decision rather than bundled into this pass.
 
 ### Fixed / hardened
 - **CSP**: added `base-uri 'self'`, `object-src 'none'`, `form-action 'self'`.

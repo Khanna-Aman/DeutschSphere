@@ -94,7 +94,7 @@ function renderImmersionResults() {
           statusHtml = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/10 text-amber-400 border border-amber-500/20 flex-shrink-0"><i class="fa-solid fa-book-open mr-1"></i>A1-B1 Archive</span>`;
           borderClass = 'border-amber-900/40 bg-amber-950/10';
       } else {
-          statusHtml = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 flex-shrink-0"><i class="fa-solid fa-sparkles mr-1"></i>New Word</span>`;
+          statusHtml = `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 flex-shrink-0"><i class="fa-solid fa-wand-magic-sparkles mr-1"></i>New Word</span>`;
           borderClass = 'border-indigo-900/40 bg-indigo-950/10 shadow-[0_0_15px_rgba(99,102,241,0.1)]';
       }
       

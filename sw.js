@@ -8,7 +8,7 @@
 // handled independently by WORDLIST_CACHE_VERSION in app.js, which is appended as a
 // ?v= query param so cache-first DATA_CACHE entries are bypassed on a data change —
 // so a data-only update does NOT require bumping CACHE_VERSION, and vice versa.
-const CACHE_VERSION = 'v7.5.4'; // v7.5.4: post-launch hardening — CSP tightening; a11y labels/alt; SW cleanup (drop dead CDN strategy, fix sw.js guard)
+const CACHE_VERSION = 'v7.6.0'; // v7.6.0: performance — variable Inter/Outfit fonts (latin-only, ~1.19MB->80KB), Font Awesome glyph-subset to used icons (~258KB->~10KB), minified index.css (esbuild), font preload hints; fixed 2 invalid fa-* icon classes
 const STATIC_CACHE = `deutschsphere-static-${CACHE_VERSION}`;
 const DATA_CACHE = `deutschsphere-data-${CACHE_VERSION}`;
 
