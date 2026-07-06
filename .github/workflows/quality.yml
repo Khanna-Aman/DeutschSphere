@@ -2,12 +2,12 @@ name: quality
 
 # Accessibility / best-practices / SEO / performance gate.
 # Runs Lighthouse (which uses axe-core for accessibility) against the static
-# site on every push to main and every PR. a11y/best-practices/seo are hard
-# gates; performance is advisory (see lighthouserc.json for why).
+# site on every push to main/dev and every PR. a11y/best-practices/seo are
+# hard gates; performance is advisory (see lighthouserc.json for why).
 
 on:
   push:
-    branches: [main]
+    branches: [main, dev]
   pull_request:
   workflow_dispatch:
 

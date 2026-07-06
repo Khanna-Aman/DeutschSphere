@@ -5,7 +5,7 @@ name: Validate data integrity
 # touches the data, the docs that quote counts, or the validator itself.
 on:
   push:
-    branches: [main]
+    branches: [main, dev]
     paths:
       - "a1/wordlist.json"
       - "a2/wordlist.json"

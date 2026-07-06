@@ -87,8 +87,13 @@ to GitHub Pages). For full detail, see the git history.
 - **Copy honesty**: pronunciation wording (browser transcription + Kölner-Phonetik
   comparison, no "native models"); "FSRS-5" → "FSRS-inspired" for current state in CI/VISION.
 - **Lint**: cleared the 6 baseline eslint errors; the CI `lint` job is now blocking.
-
-## v1.1.1 — 2026-07-02 (pre-launch hardening)
+- **CI wasn't actually running on `dev` (2026-07-06).** All four workflows
+  (`js-checks`, `quality`, `tests`, `validate-data`) push-triggered on `main`
+  only — direct pushes to `dev` (the norm all session) triggered **no CI at
+  all**; `gh run list` was silently showing stale runs from an old PR, so
+  every "verified CI green after push" check this session had actually been
+  re-confirming a run from days earlier, not gating the new commit. Added
+  `dev` to each workflow's `push.branches`.
 
 Honesty/safety batch before going public. No new features.
 
