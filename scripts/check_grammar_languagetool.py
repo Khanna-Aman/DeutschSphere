@@ -65,6 +65,7 @@ ALLOW_WORDS = {
     "Hendl", "Schwammerl", "Paradeiser", "Erdapfel", "Marille", "Obers",
     "Rahm", "Glace", "Velo", "Billett", "Couvert", "Matura", "Jause",
     "Stiegenhaus", "Trottoir", "Fauteuil", "Bancomat", "Bankomat",
+    "Brötli", "Perron", "Stiege", "Bub", "Kasten",
 }
 SPELL_RULE_PREFIXES = ("MORFOLOGIK", "GERMAN_SPELL", "HUNSPELL")
 

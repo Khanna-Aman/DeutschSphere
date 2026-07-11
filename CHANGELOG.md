@@ -24,6 +24,19 @@ to GitHub Pages). For full detail, see the git history.
   `german`/`english` (the wordlist field names) while every card and render/search sink uses
   `word`/`meaning`, so every user-added card was silently rejected. Validation now matches the card
   schema; custom cards add and render correctly (still `escapeHtml`-sanitised against injection).
+- **Cross-platform `npm run check`** — replaced the bash-only `for f in …` loop (which failed on
+  Windows cmd.exe) with `scripts/check_syntax.mjs`. CI unaffected.
+
+### Changed
+- **ESLint: 0 warnings** (was 39) — removed unused imports/vars and dead assignments; empty/unused
+  catch bindings became optional-catch `catch { … }`. No behaviour change (node --test 22/22,
+  smoke_e2e, and the UI walkthrough all still pass).
+- **3 example sentences reworded** (a1 *Hausmann*, b1 *Turm*, b1 *Tierpark*) to drop the last
+  multi-word overlaps with the Goethe example column — near-ngram overlaps 31 → 28 (all remaining are
+  incidental common phrases; verbatim reproductions stay at 0).
+- **LanguageTool grammar gate: 0 hard defects across all 3,231 examples** — allow-listed `Brötli`
+  (+ Perron/Stiege/Bub/Kasten), legitimate Swiss/Austrian regional headwords the Standard-German
+  dictionary mis-flagged as typos.
 
 ### Added (backfill + hardening, previously staged as v1.1.2 on `dev`)
 - **Vocabulary backfill, Phases 1–5 + A1/A2 gap fill (2,660 → 3,231, +571 entries).** Every headword in
