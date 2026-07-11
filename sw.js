@@ -8,7 +8,7 @@
 // handled independently by WORDLIST_CACHE_VERSION in app.js, which is appended as a
 // ?v= query param so cache-first DATA_CACHE entries are bypassed on a data change —
 // so a data-only update does NOT require bumping CACHE_VERSION, and vice versa.
-const CACHE_VERSION = 'v7.6.0'; // v7.6.0: performance — variable Inter/Outfit fonts (latin-only, ~1.19MB->80KB), Font Awesome glyph-subset to used icons (~258KB->~10KB), minified index.css (esbuild), font preload hints; fixed 2 invalid fa-* icon classes
+const CACHE_VERSION = 'v7.7.0'; // v7.7.0: fix custom-card "Add to Deck" validation (word/meaning schema); purge old DATA_CACHE so the 9 regenerated/flipped B1+A1 illustrations (same paths, new bytes) refresh for returning users
 const STATIC_CACHE = `deutschsphere-static-${CACHE_VERSION}`;
 const DATA_CACHE = `deutschsphere-data-${CACHE_VERSION}`;
 

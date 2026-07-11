@@ -5,9 +5,27 @@ Format follows [Keep a Changelog](https://keepachangelog.com/); this project use
 date-stamped sections rather than strict SemVer releases (it ships continuously
 to GitHub Pages). For full detail, see the git history.
 
-## v1.1.2 — 2026-07-03 to 2026-07-06 (post-launch hardening + B1 backfill Phases 1–5 + performance) — on `dev`
+## v1.2.0 — 2026-07-03 to 2026-07-11 (100% B1 imagery + vocab backfill Phases 1–5 + performance + a11y/security hardening)
 
 ### Added
+- **100% B1 illustration coverage — every B1 entry now illustrated (1,925/1,925).** The final 1,554
+  B1 WebP illustrations were generated with **free FLUX.1-schnell** (Kaggle T4 GPU) from curated
+  per-word metaphor prompts, then run through the anti-bleeding transparent-background
+  post-processing. Total illustrated across A1–B1: **3,142 / 3,231 (97%)**.
+- **Manual eyes-on review of all 3,142 illustrations** (262 contact-sheet montages, 12/sheet). Nine
+  hard defects found and fixed: 2 mirrored-arrow errors (`link-` "left", `zurück` "back") corrected
+  by a local horizontal flip; 7 B1 images regenerated — 3 blank + 2 near-blank that the black-background
+  strip had wiped, plus `die Aprikose` (was rendering as goggles → real apricot) and `das Pech`
+  (was a *good-luck* four-leaf clover, the opposite meaning → shattered mirror). `b1/curated_metaphors.json`
+  gained 609 curated prompts.
+
+### Fixed
+- **Custom-card "Add to Deck" was completely non-functional.** `addCustomCard` validated
+  `german`/`english` (the wordlist field names) while every card and render/search sink uses
+  `word`/`meaning`, so every user-added card was silently rejected. Validation now matches the card
+  schema; custom cards add and render correctly (still `escapeHtml`-sanitised against injection).
+
+### Added (backfill + hardening, previously staged as v1.1.2 on `dev`)
 - **Vocabulary backfill, Phases 1–5 + A1/A2 gap fill (2,660 → 3,231, +571 entries).** Every headword in
   the official Goethe B1 Wortliste's alphabetical section that was missing from the app:
   Phase 1 — 61 everyday entries (52 nouns incl. *Abend, Gefühl, Gefahr, Boden, Boot, Bär,

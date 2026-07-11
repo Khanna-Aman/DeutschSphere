@@ -13,7 +13,8 @@ can prove:
   3. The wordlist survives an IndexedDB round-trip (antigravity-store / keyval).
   4. The FSRS-5 scheduler advances a card's due date inside the shipped ESM runtime.
 
-Image 404s (B1 is only partially illustrated) are treated as advisory, not failures.
+Image 404s are treated as advisory, not failures (B1 is now fully illustrated and
+A1/A2 nearly so; this just keeps the boot smoke test resilient to asset-path issues).
 
 Run:  python tests/smoke_e2e.py
 Exit: 0 = pass, 1 = fail. Requires playwright (`pip install playwright && playwright install chromium`).

@@ -61,7 +61,7 @@ import {
 // DATA_CACHE treats a new version as a new URL and fetches fresh data over the network.
 // (Shell/code freshness is a separate concern — see CACHE_VERSION in sw.js.)
 // Format: 'v<major>.<minor>.<patch>'  e.g., v1.0.1 → v1.0.2
-const WORDLIST_CACHE_VERSION = 'v1.1.2'; // v1.1.2: B1 Phases 1-5 + A1/A2 gap fill (Jahr/Handtuch/Schlafzimmer) — 3,231 entries; B1 nouns ~99% — clients must re-fetch
+const WORDLIST_CACHE_VERSION = 'v1.2.0'; // v1.2.0: release — 3,231 entries, 100% B1 illustration coverage (1,925/1,925); B1 nouns ~99% — clients must re-fetch
 
 // Global hooks for early-paint theme execution inside HTML Head
 window.applyTheme = applyTheme;

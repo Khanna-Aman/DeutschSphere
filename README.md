@@ -92,8 +92,8 @@ the official Goethe-Institut *Wortlisten*.
 | :--- | :---: | :--- |
 | **A1** — Beginner | 722 | 637 / 722 (88%) |
 | **A2** — Elementary | 584 | 580 / 584 (99.3%) |
-| **B1** — Intermediate | 1,925 | 371 / 1,925 (19%, in progress) |
-| **Total** | **3,231** | 1,588 (49%) |
+| **B1** — Intermediate | 1,925 | 1,925 / 1,925 (100%) |
+| **Total** | **3,231** | 3,142 (97%) |
 
 > [!NOTE]
 > **An honest word on coverage.** Each entry's German headword, gender, and plural
@@ -104,15 +104,17 @@ the official Goethe-Institut *Wortlisten*.
 > section, thematic groups, feminine job-title forms (e.g. *Kellnerin*), Austrian/
 > Swiss regional variants (*Brötli, Marille, Perron*) and common abbreviations
 > (*PC, TV, WG*) are all in now. The last ~1% are a few Swiss-only political terms
-> and multi-word entries. B1 illustrations are still rolling out (19%). We'd rather tell you exactly where
-> we stand than round up.
+> and multi-word entries. **Every B1 entry is now illustrated (100%)**; A1/A2 illustration
+> stands at 88% / 99%. We'd rather tell you exactly where we stand than round up.
 
 **Where the content comes from.** Word *scope* references the publicly available
 Goethe-Institut *Wortlisten* (A1/A2/B1). English translations and pronunciation hints
 are original to this project. **Every example sentence is 100% original**, written
 for DeutschSphere — an automated check confirms zero verbatim matches against the
 source lists, and an offline grammar pass reviews them. Illustrations were generated
-with Google Imagen 3 and compressed to under 10 KB each for instant offline loading.
+with Google Imagen 3 (A1/A2 and the original B1 set) and the Apache-2.0 FLUX.1-schnell
+model (the rest of B1), then compressed to under 10 KB each for instant offline loading
+— see [NOTICE](NOTICE) for per-source licensing.
 
 ---
 

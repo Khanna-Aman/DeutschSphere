@@ -65,6 +65,12 @@ AGENTS.md
 backlog.md
 PRODUCTION_READINESS_AUDIT_*.md
 COMPETITIVE_ANALYSIS_*.md
+IMAGE_WORD_AUDIT_*.md
+RELEASE_CHECKLIST_*.md
+
+# B1 image-generation pipeline + intermediate artifacts (archived locally, not published)
+b1/generate_assets.py
+b1/b1_images_kaggle*
 
 # AI Orchestrations & Agent Planning
 implementation_plan.md
