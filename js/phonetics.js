@@ -216,7 +216,7 @@ export function stopPhoneticRecording() {
   if (state.phonetic.recognition) {
     try {
       state.phonetic.recognition.stop();
-    } catch (e) {}
+    } catch { /* ignore */ }
     state.phonetic.recognition = null;
   }
 
@@ -224,7 +224,7 @@ export function stopPhoneticRecording() {
     state.phonetic.microphoneStream.getTracks().forEach(track => {
       try {
         track.stop();
-      } catch (e) {}
+      } catch { /* ignore */ }
     });
     state.phonetic.microphoneStream = null;
   }
@@ -233,7 +233,7 @@ export function stopPhoneticRecording() {
   if (state.phonetic.micSourceNode) {
     try {
       state.phonetic.micSourceNode.disconnect();
-    } catch (e) {}
+    } catch { /* ignore */ }
     state.phonetic.micSourceNode = null;
   }
   // Clear analyser reference but preserve the shared AudioContext

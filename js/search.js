@@ -8,7 +8,6 @@ import {
   shuffleArray
 } from './state.js';
 import { renderCard } from './flashcards.js';
-import { closeMobileSidebar } from './router.js';
 
 // Module-level static collections
 const canonicalCategories = [

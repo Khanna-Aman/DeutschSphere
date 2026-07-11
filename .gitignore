@@ -55,6 +55,7 @@ scripts/*
 !scripts/apply_examples.py
 !scripts/vendor_fonts.py
 !scripts/subset_fontawesome.py
+!scripts/check_syntax.mjs
 
 # Orphaned config template (only the archived generation scripts used it)
 .env.example

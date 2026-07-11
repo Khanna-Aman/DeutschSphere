@@ -1,6 +1,6 @@
 // js/flashcards.js — FSRS SRS Flashcards, Preferences & Phonetik-Spiegel Module
 
-import { state, elements, categoryTranslations, getSRSInfo, getCategoryIcon, saveSRSState, shuffleArray, safeSetItem, schedulePersist, escapeHtml } from './state.js';
+import { state, elements, categoryTranslations, getSRSInfo, saveSRSState, shuffleArray, safeSetItem, schedulePersist, escapeHtml } from './state.js';
 import { prepareUtterance, speakWord, warmUpTTS } from './audio.js';
 import { getSuffixRule } from './nlp.js';
 
@@ -140,7 +140,7 @@ function enableNavigationControls() {
 /**
  * Sub-renderer: Build and inject metadata badges for the card.
  */
-function renderCardMetadataBadges(card, deckLength) {
+function renderCardMetadataBadges(card) {
   let badgesHTML = '';
   if (card.wordClass) {
     badgesHTML += `<span lang="de" class="px-2 py-0.5 bg-slate-800 border border-slate-700 text-slate-300 text-[10px] uppercase font-bold tracking-wider rounded-md">${escapeHtml(card.wordClass)}</span>`;
@@ -432,7 +432,7 @@ function renderCardAntonyms(card) {
  * Sub-renderer: Generate and bind conjugation/declension tables.
  * Purged to maintain distraction-free vocabulary first paradigm.
  */
-function renderGrammarMatrix(card) {
+function renderGrammarMatrix() {
   // Purged to enforce zero-distraction focus
 }
 
@@ -1034,7 +1034,6 @@ export function initSidebarCategoryWords() {
   });
 }
 
-let companionScrollListenerAdded = false;
 
 /**
  * Virtual-scroll renderer for the sidebar category word list.

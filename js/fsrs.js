@@ -122,7 +122,6 @@ export class FSRS {
   reviewCard(card, rating, now = Date.now()) {
     // Clone card to avoid mutation
     const updated = { ...card };
-    const elapsedDays = card.lastReview > 0 ? daysBetween(card.lastReview, now) : 0;
 
     updated.reps = (card.reps || 0) + 1;
     updated.lastReview = now;

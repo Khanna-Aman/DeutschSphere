@@ -1,6 +1,6 @@
 // js/state.js — Global State & DOM Elements Selector Module
 
-import { FSRS, fsrs, State as FSRSState, Rating } from './fsrs.js';
+import { fsrs, State as FSRSState, Rating } from './fsrs.js';
 import * as idb from './idb-keyval.js';
 
 // ==========================================
@@ -648,7 +648,6 @@ export function reviewCardSRS(cardId, rating) {
 
 // Sort cards based on FSRS retrievability (lowest retrievability first = most urgent)
 export function sortDeckBySRS(cards) {
-  const now = Date.now();
   // Schwartzian transform: pre-compute SRS info once per card instead of per-comparison.
   const infoCache = new Map();
   cards.forEach(c => infoCache.set(c.id, getSRSInfo(c.id)));
@@ -706,7 +705,7 @@ export function migrateToFSRS() {
 }
 
 // Centralized XP addition helper (unifies weaver and adventure XP)
-export function addXP(amount) {
+export function addXP() {
   // Silent no-op to support de-gamified focus
 }
 
@@ -849,7 +848,6 @@ export async function restoreFromSyncKey(base64Str) {
     const isPlainObject = (obj) => obj !== null && typeof obj === 'object' && !Array.isArray(obj);
     const isArrayOfObjects = (arr) => Array.isArray(arr) && arr.every(v => isPlainObject(v));
     const isSafeString = (val) => typeof val === 'string' && val.length < 256;
-    const isSafeNumber = (val) => typeof val === 'number' && isFinite(val);
     const VALID_LEVELS = ['a1', 'a2', 'b1'];
     const VALID_THEMES = ['default', 'cyberpunk', 'schwarzwald', 'oktoberfest', 'weimar'];
 

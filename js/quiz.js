@@ -1,6 +1,6 @@
 // js/quiz.js — Interactive Quiz & Spelling Arena Module
 
-import { state, elements, shuffleArray, safeSetItem, safeGetItem, escapeHtml } from './state.js';
+import { state, elements, shuffleArray, escapeHtml } from './state.js';
 import { speakText, playSuccessArpeggio, playErrorGlide } from './audio.js';
 
 // escapeHtml imported from state.js (shared utility)
@@ -8,7 +8,6 @@ import { speakText, playSuccessArpeggio, playErrorGlide } from './audio.js';
 // Pre-built distractor indexes (populated once per quiz session)
 let categoryIndex = null;  // Map<category, card[]>
 let wordClassIndex = null; // Map<wordClass, card[]>
-let allCardsExclude = null; // Full card pool for universal fallback
 
 // Initialize/Reset the Quiz View Dashboard
 export function initQuizView() {

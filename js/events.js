@@ -1,13 +1,12 @@
 // js/events.js — Handlers for hotkeys, swipes, settings sliders, help modals, and custom dialogs
-import { state, elements, safeSetItem, safeGetItem, safeJsonParse, resetActiveLevelProgress } from './state.js';
+import { state, elements, safeSetItem, resetActiveLevelProgress } from './state.js';
 import { handleRouting, closeMobileSidebar, openMobileSidebar } from './router.js';
 import { renderSidebarCategories, filterDeck } from './search.js';
 import {
   speakWord,
   toggleAudioTrainer,
   stopAudioTrainer,
-  playSnapHaptic,
-  warmUpTTS
+  playSnapHaptic
 } from './audio.js';
 import {
   renderCard,
@@ -47,7 +46,7 @@ import { exportBackup, importBackup, copySyncKey, restoreSyncKey } from './backu
 
 // Custom Event listeners for module decoupling (replaces window.* bridges)
 let srsUpdateTimeout = null;
-function handleSRSUpdate(e) {
+function handleSRSUpdate() {
   if (srsUpdateTimeout) cancelAnimationFrame(srsUpdateTimeout);
   srsUpdateTimeout = requestAnimationFrame(() => {
     renderSidebarCategories();
@@ -164,7 +163,7 @@ export function setupEventListeners() {
 
 
   if (elements.flashcard) {
-    elements.flashcard.addEventListener('click', (e) => {
+    elements.flashcard.addEventListener('click', () => {
       if (wasCardDragged) {
         wasCardDragged = false;
         return;
@@ -569,7 +568,7 @@ export function setupSwipeGestures() {
     startY = pos.y;
 
     if (e.pointerId !== undefined && typeof flashcard.setPointerCapture === 'function') {
-      try { flashcard.setPointerCapture(e.pointerId); } catch (_) {}
+      try { flashcard.setPointerCapture(e.pointerId); } catch { /* ignore */ }
     }
 
     flashcard.classList.add('drag-touch');
@@ -610,7 +609,7 @@ export function setupSwipeGestures() {
     isDragging = false;
 
     if (e.pointerId !== undefined && typeof flashcard.releasePointerCapture === 'function') {
-      try { flashcard.releasePointerCapture(e.pointerId); } catch (_) {}
+      try { flashcard.releasePointerCapture(e.pointerId); } catch { /* ignore */ }
     }
     flashcard.classList.remove('drag-touch');
 
@@ -1124,7 +1123,7 @@ export function initFeedbackModal() {
         } else {
           throw new Error('Network error');
         }
-      } catch (err) {
+      } catch {
         if (statusMsg) {
           statusMsg.className = 'text-xs font-semibold text-center text-rose-400 mt-2';
           statusMsg.textContent = '✕ Error sending feedback. Please try again.';

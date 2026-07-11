@@ -157,7 +157,7 @@ export function playSnapHaptic() {
       osc.start(now);
       osc.stop(now + 0.06);
     }
-  } catch (e) {}
+  } catch { /* ignore */ }
 }
 
 // Ascending C-Major chord cascade arpeggio on correct answer
@@ -349,7 +349,7 @@ export function speakText(text, lang = 'de-DE', rate = 1.0) {
     } else {
       window.speechSynthesis.speak(utt);
     }
-  } catch (err) {
+  } catch {
     window.speechSynthesis.speak(utt);
   }
 }
@@ -666,10 +666,10 @@ export function stopFocusSound() {
     activeFocusNodes.forEach(node => {
       try {
         node.stop();
-      } catch (e) {}
+      } catch { /* ignore */ }
       try {
         node.disconnect();
-      } catch (e) {}
+      } catch { /* ignore */ }
     });
     activeFocusNodes = [];
   }

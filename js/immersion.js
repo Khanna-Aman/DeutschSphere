@@ -1,6 +1,6 @@
 // js/immersion.js — Immersions-Labor (NLP Engine) UI Logic
 
-import { state, elements, escapeHtml, getGlobalLearnedCount } from './state.js';
+import { state, elements, escapeHtml } from './state.js';
 import { analyzeText, getSuffixRule } from './nlp.js';
 import { speakText } from './audio.js';
 
@@ -290,7 +290,6 @@ export function openWordExplorer(item) {
 
   // Setup Quick Add / Learn Button
   const addBtn = elements.explorerAddBtn;
-  const addBtnText = elements.explorerAddBtnText;
   if (addBtn) {
     const newAddBtn = addBtn.cloneNode(true);
     addBtn.parentNode.replaceChild(newAddBtn, addBtn);

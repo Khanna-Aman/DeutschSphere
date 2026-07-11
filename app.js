@@ -7,8 +7,7 @@ import {
   startSession,
   reviewCardSRS,
   safeSetItem,
-  safeGetItem,
-  safeJsonParse
+  safeGetItem
 } from './js/state.js';
 
 import {

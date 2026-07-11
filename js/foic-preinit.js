@@ -8,7 +8,7 @@
     document.title = 'German ' + level + ' Flashcards';
     // Set global so body-level elements can read it before ES6 modules load
     window.__initialLevel = level;
-  } catch (e) {
+  } catch {
     window.__initialLevel = 'A1';
   }
 })();
