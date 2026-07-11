@@ -17,7 +17,8 @@ to GitHub Pages). For full detail, see the git history.
   by a local horizontal flip; 7 B1 images regenerated — 3 blank + 2 near-blank that the black-background
   strip had wiped, plus `die Aprikose` (was rendering as goggles → real apricot) and `das Pech`
   (was a *good-luck* four-leaf clover, the opposite meaning → shattered mirror). `b1/curated_metaphors.json`
-  gained 609 curated prompts.
+  gained 609 curated prompts. One borderline A2 image was also regenerated: `der Weg` (way/path) had
+  rendered the adverb *weg* ("away") chair-and-star metaphor → now a clear winding stepping-stone path.
 
 ### Fixed
 - **Custom-card "Add to Deck" was completely non-functional.** `addCustomCard` validated
