@@ -777,11 +777,13 @@ export async function getCustomCards(level) {
 
 // Add a custom card to a level and save to IndexedDB
 export async function addCustomCard(level, card) {
-  // Validate card schema — reject objects missing required fields
+  // Validate card schema — reject objects missing required fields.
+  // Cards use the parsed shape (word/meaning), NOT the wordlist shape (german/english);
+  // every render/search sink and the only caller (immersion "Add to Deck") use word/meaning.
   if (!card || typeof card !== 'object' ||
-      typeof card.german !== 'string' || !card.german.trim() ||
-      typeof card.english !== 'string' || !card.english.trim()) {
-    console.error('[state] addCustomCard rejected: card must have non-empty german and english string fields', card);
+      typeof card.word !== 'string' || !card.word.trim() ||
+      typeof card.meaning !== 'string' || !card.meaning.trim()) {
+    console.error('[state] addCustomCard rejected: card must have non-empty word and meaning string fields', card);
     return;
   }
   const customCards = await getCustomCards(level);
