@@ -113,8 +113,8 @@ are original to this project. **Every example sentence is 100% original**, writt
 for DeutschSphere — an automated check confirms zero verbatim matches against the
 source lists, and an offline grammar pass reviews them. Illustrations were generated
 with Google Imagen 3 (A1/A2 and the original B1 set) and the Apache-2.0 FLUX.1-schnell
-model (the rest of B1), then compressed to under 10 KB each for instant offline loading
-— see [NOTICE](NOTICE) for per-source licensing.
+model (the rest of B1, plus one regenerated A2 image), as compact WebP (median ~9 KB) for
+fast offline loading — see [NOTICE](NOTICE) for per-source licensing.
 
 ---
 

@@ -1,9 +1,9 @@
 # Changelog
 
 All notable changes to DeutschSphere are documented here.
-Format follows [Keep a Changelog](https://keepachangelog.com/); this project uses
-date-stamped sections rather than strict SemVer releases (it ships continuously
-to GitHub Pages). For full detail, see the git history.
+Format follows [Keep a Changelog](https://keepachangelog.com/). The app ships
+continuously to GitHub Pages; sections are versioned and date-stamped, and tagged
+GitHub Releases began with v1.2.0. For full detail, see the git history.
 
 ## v1.2.1 — 2026-07-12 (UI copy fix)
 

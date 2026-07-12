@@ -31,7 +31,7 @@ DeutschSphere is designed to maximize vocabulary acquisition through distraction
 | **Developer Feedback Form** | **Active** | Zero-cost serverless FormSubmit integration sending user feedback direct to developer email. |
 | **Adaptive Layout & Safe-Area** | **Active** | Responsive single-column card view on all screens with Android navigation bar safe-area insets. |
 | **Card View Preferences** | **Active** | Persistent settings drawer toggles for Fast Read, Autoplay, Illustrations, and Example Sentences. |
-| **Visual Assets** | **Active** | High-fidelity WebP visual aids (<10KB): A1 (637/722, 88%), A2 (580/584, ~99%), and **B1 (1,925/1,925, 100%)** — every B1 entry illustrated; all 3,142 images manually eyes-on reviewed. |
+| **Visual Assets** | **Active** | Compact WebP visual aids (median ~9KB, most under ~16KB): A1 (637/722, 88%), A2 (580/584, ~99%), and **B1 (1,925/1,925, 100%)** — every B1 entry illustrated; all 3,142 images manually eyes-on reviewed. |
 
 ---
 
@@ -54,12 +54,12 @@ B1 was completed to **~99% noun coverage** of the official (cumulative) Goethe B
 * **Font preload hints**: both variable fonts are preloaded in `<head>` (`rel=preload as=font`) since body/heading text renders above the fold on first paint.
 * **Scope note**: `js/*.js` remains hand-authored, unminified source by design (see "Decoupled Client-First Core" above) — minifying it would require a build-step deploy pipeline (e.g. GitHub Actions building to a separate Pages artifact instead of deploying `main`'s root directly), which is a bigger infrastructure change than asset-level optimization and is intentionally left as a separate, explicitly-authorized decision rather than bundled into this pass.
 
-### 🔜 Short-Term Milestones (v1.1.x — post-launch rollout)
-* **B1 Asset Rollout**: ✅ **Complete** — all 1,925 B1 entries illustrated (the final 1,554 generated via free FLUX.1-schnell on Kaggle), every image through strict anti-bleeding post-processing, and all 3,142 A1–B1 images manually eyes-on reviewed (9 defects found & fixed).
+### 🔜 Short-Term Milestones (post-launch rollout)
+* **B1 Asset Rollout**: ✅ **Complete** — all 1,925 B1 entries illustrated (the final 1,554 generated via free FLUX.1-schnell on Kaggle), every image through strict anti-bleeding post-processing, and all 3,142 A1–B1 images manually eyes-on reviewed (10 images fixed: 9 hard defects + 1 borderline A2 "der Weg").
 * **IndexedDB Thread Tuning**: Debounce and stream asynchronous profile writes in `js/state.js` to eliminate micro-stutters during massive bulk updates (e.g. after a large quiz session).
 * **WCAG 2.2 AA Accessibility**: ✅ Automated pass complete — Lighthouse/axe **accessibility 100** (best-practices 100, SEO 100), enforced by the `quality.yml` CI gate. Remaining: the full *manual* AA sign-off (keyboard-only and screen-reader walkthrough of every view transition and accordion) that automation cannot cover.
 
-### 🔮 Medium-Term Evolutions (v1.2.0)
+### 🔮 Medium-Term Evolutions (planned — post-v1.2, not yet shipped)
 * **Customizable FSRS-5 Parameters & Timing Weights**: Advanced power-user configuration console under Settings allowing users to customize FSRS-5 matrix weights, target request retention rates (e.g., 85%–95%), custom interval caps, and timing multipliers.
 * **Native-Speaker Audio**: Replace browser speech synthesis with **free, redistributable, offline** audio — real native recordings from Lingua Libre (CC-BY-SA) where available, filled by Piper TTS + the CC0 Thorsten voice — bundled and Service-Worker-precached (no runtime cloud call, preserving the offline pledge).
 * **On-Device Pronunciation Analytics**: Move pronunciation scoring fully on-device with an offline recognizer (Vosk, Apache-2.0, or whisper.cpp) — removing the cloud `SpeechRecognition` dependency and keeping the privacy pledge intact.

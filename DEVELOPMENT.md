@@ -145,7 +145,7 @@ Four GitHub Actions workflows gate every push and pull request:
 | `validate-data.yml` | `validate_data.py` — treats each `wordlist.json` as source of truth; fails on invalid JSON, duplicate ids, broken/duplicated image refs, merged/unrelated-lemma headwords, or any published word count that drifts from the data. |
 | `js-checks.yml` | `node --check` syntax on all `js/**` + advisory ESLint. |
 | `tests.yml` | **Hard gate:** deterministic FSRS + NLP unit tests (`node --test`, `tests/*.test.mjs`). Plus an advisory Playwright boot/smoke (`tests/smoke_e2e.py`). |
-| `quality.yml` | Lighthouse (axe-core under the hood). **Hard gate**: accessibility / best-practices / SEO must stay at the verified **100 / 95 / 100** bars. Performance is advisory (CI throttles unminified dev assets). |
+| `quality.yml` | Lighthouse (axe-core under the hood). **Hard gate**: accessibility / best-practices / SEO must stay at the **100 / 95 / 100** gate floors (all three verified at 100 on 2026-06-30; best-practices keeps a 5-pt margin). Performance is advisory (CI throttles unminified dev assets). |
 
 Run the same checks locally:
 
