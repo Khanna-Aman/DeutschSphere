@@ -8,7 +8,7 @@
 // handled independently by WORDLIST_CACHE_VERSION in app.js, which is appended as a
 // ?v= query param so cache-first DATA_CACHE entries are bypassed on a data change —
 // so a data-only update does NOT require bumping CACHE_VERSION, and vice versa.
-const CACHE_VERSION = 'v7.7.0'; // v7.7.0: fix custom-card "Add to Deck" validation (word/meaning schema); purge old DATA_CACHE so the 10 regenerated/flipped illustrations (9 B1+A1 + 1 A2 "der Weg", same paths, new bytes) refresh for returning users
+const CACHE_VERSION = 'v7.7.1'; // v7.7.1: drop the stale "under development" tag on the B1 level option (B1 is 100% complete) — shell bump so the precached index.html refreshes for returning users. v7.7.0: fix custom-card "Add to Deck" validation (word/meaning schema); purge old DATA_CACHE so the 10 regenerated/flipped illustrations (9 B1+A1 + 1 A2 "der Weg", same paths, new bytes) refresh for returning users
 const STATIC_CACHE = `deutschsphere-static-${CACHE_VERSION}`;
 const DATA_CACHE = `deutschsphere-data-${CACHE_VERSION}`;
 

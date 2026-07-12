@@ -5,6 +5,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/); this project use
 date-stamped sections rather than strict SemVer releases (it ships continuously
 to GitHub Pages). For full detail, see the git history.
 
+## v1.2.1 — 2026-07-12 (UI copy fix)
+
+### Fixed
+- **Level selector**: removed the stale "— under development" tag from the B1 option. B1 has been
+  100% complete (1,925/1,925 entries illustrated, full vocabulary backfill) since v1.2.0. Service
+  worker bumped to `v7.7.1` so the precached `index.html` refreshes for returning users.
+
 ## v1.2.0 — 2026-07-03 to 2026-07-11 (100% B1 imagery + vocab backfill Phases 1–5 + performance + a11y/security hardening)
 
 ### Added
